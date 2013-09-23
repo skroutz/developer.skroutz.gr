@@ -1,0 +1,58 @@
+---
+:request:
+  :verb: GET
+  :path: /categories/40/skus?manufacturer_ids[]=28&manufacturer_ids[]=2
+  :params:
+    per: 4
+    oauth_token: Vr/AzbfQt3ywQlKUonZk25VqRg2ILFAFV/voi69FD9xlJl5Yp9DmDWb6PAEsVwuI1KckH3aa1/vxRaj/Mbwg==
+:status: 200
+:headers:
+  link: <http://localhost:3000/api/categories/40/skus?manufacturer_ids%5B%5D=28&manufacturer_ids%5B%5D=2&oauth_token=Vr%2FAzbfQt3ywQlKUonZk25VqRg2ILFAFV%2Fvoi69FD9xlJl5Yp9DmDWb6PAEsVwuI1KckH3aa1%2FvxRaj%2FMbwg%3D%3D&page=5&per=4>;
+    rel="last", <http://localhost:3000/api/categories/40/skus?manufacturer_ids%5B%5D=28&manufacturer_ids%5B%5D=2&oauth_token=Vr%2FAzbfQt3ywQlKUonZk25VqRg2ILFAFV%2Fvoi69FD9xlJl5Yp9DmDWb6PAEsVwuI1KckH3aa1%2FvxRaj%2FMbwg%3D%3D&page=2&per=4>;
+    rel="next"
+  content-type: application/json; charset=utf-8
+  x-meta-request-version: 0.2.1
+  x-ua-compatible: IE=Edge,chrome=1
+  etag: ! '"9473b3ab21ab23b6f2ba19feeae9804c"'
+  cache-control: max-age=0, private, must-revalidate
+  x-request-id: db04970307093b04f05e08826c778f84
+  x-runtime: '0.068299'
+  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
+  date: Fri, 20 Dec 2013 10:53:53 GMT
+  content-length: '5819'
+  connection: close
+  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTJmMDVlOGU0MmZmZThhNzE0YmZjMDFkY2JlMmI0OTM3BjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--6ce249ab5183d9c7239d8d09218429d88d96a947;
+    path=/; expires=Thu, 20-Feb-2014 10:53:53 GMT; HttpOnly
+:body: ! '{"skus":[{"id":328970,"ean":"","pn":"E1050","name":"E1050","display_name":"Samsung
+  E1050","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":24.99,"price_min":15.99,"reviewscore":5.0,"shop_count":12,"plain_spec_summary":"Single
+  SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
+  2G,   \u039f\u03b8\u03cc\u03bd\u03b7: 1.43\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7:
+  128 x 128 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2: \u03a6\u03c5\u03c3\u03b9\u03ba\u03cc
+  \u03a0\u03bb\u03b7\u03ba\u03c4\u03c1\u03bf\u03bb\u03cc\u03b3\u03b9\u03bf,    \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
+  \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: N/A, SAR: 0.789 W/kg, \u0388\u03c4\u03bf\u03c2
+  \u039a\u03c5\u03ba\u03bb\u03bf\u03c6\u03bf\u03c1\u03af\u03b1\u03c2: 2011, Feature
+  Phone","active_products_count":12,"main_picture":{"small_url":"http://c.scdn.gr/images/sku_main_images/000328/328970/small_sku_picture_5c590d.jpg.jpg","original_url":"http://a.scdn.gr/images/sku_main_images/000328/328970/medium_sku_picture_5c590d.jpg.jpg","tiny_url":"http://b.scdn.gr/images/sku_main_images/000328/328970/tiny_sku_picture_5c590d.jpg.jpg","medium_url":"http://a.scdn.gr/images/sku_main_images/000328/328970/medium_sku_picture_5c590d.jpg.jpg","datamart_url":"http://c.scdn.gr/images/sku_main_images/000328/328970/sku_picture_5c590d.jpg.jpg"},"manufacturer_id":28},{"id":337548,"ean":"","pn":"E1182","name":"E1182","display_name":"Samsung
+  E1182","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":31.98,"price_min":16.0,"reviewscore":4.28571,"shop_count":19,"plain_spec_summary":"Dual
+  SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
+  2G,   \u039f\u03b8\u03cc\u03bd\u03b7: 1.52\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7:
+  128 x 128 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2: \u03a6\u03c5\u03c3\u03b9\u03ba\u03cc
+  \u03a0\u03bb\u03b7\u03ba\u03c4\u03c1\u03bf\u03bb\u03cc\u03b3\u03b9\u03bf,    \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
+  \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: N/A, SAR: 0.99 W/kg, \u0388\u03c4\u03bf\u03c2
+  \u039a\u03c5\u03ba\u03bb\u03bf\u03c6\u03bf\u03c1\u03af\u03b1\u03c2: 2011, Feature
+  Phone","active_products_count":19,"main_picture":{"small_url":"http://b.scdn.gr/images/sku_main_images/000337/337548/small_sku_picture_d81fbb.jpg.jpg","original_url":"http://c.scdn.gr/images/sku_main_images/000337/337548/medium_sku_picture_d81fbb.jpg.jpg","tiny_url":"http://d.scdn.gr/images/sku_main_images/000337/337548/tiny_sku_picture_d81fbb.jpg.jpg","medium_url":"http://c.scdn.gr/images/sku_main_images/000337/337548/medium_sku_picture_d81fbb.jpg.jpg","datamart_url":"http://c.scdn.gr/images/sku_main_images/000337/337548/sku_picture_d81fbb.jpg.jpg"},"manufacturer_id":28},{"id":2119391,"ean":"","pn":"","name":"E1200","display_name":"Samsung
+  E1200","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":46.8,"price_min":17.03,"reviewscore":4.0,"shop_count":5,"plain_spec_summary":"Single
+  SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
+  2G,   \u039f\u03b8\u03cc\u03bd\u03b7: 1.52\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7:
+  128 x 128 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2: \u03a6\u03c5\u03c3\u03b9\u03ba\u03cc
+  \u03a0\u03bb\u03b7\u03ba\u03c4\u03c1\u03bf\u03bb\u03cc\u03b3\u03b9\u03bf,  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
+  \u039c\u03bd\u03ae\u03bc\u03b7: 100 MB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
+  \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: N/A, SAR: 0.81 W/kg, \u0388\u03c4\u03bf\u03c2
+  \u039a\u03c5\u03ba\u03bb\u03bf\u03c6\u03bf\u03c1\u03af\u03b1\u03c2: 2012, Feature
+  Phone","active_products_count":5,"main_picture":{"small_url":"http://b.scdn.gr/images/sku_main_images/002119/2119391/small_8806071935041.jpg","original_url":"http://d.scdn.gr/images/sku_main_images/002119/2119391/medium_8806071935041.jpg","tiny_url":"http://d.scdn.gr/images/sku_main_images/002119/2119391/tiny_8806071935041.jpg","medium_url":"http://d.scdn.gr/images/sku_main_images/002119/2119391/medium_8806071935041.jpg","datamart_url":"http://b.scdn.gr/images/sku_main_images/002119/2119391/8806071935041.jpg"},"manufacturer_id":28},{"id":3287073,"ean":"","pn":"GT-E1280","name":"E1280","display_name":"Samsung
+  E1280","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":32.0,"price_min":18.96,"reviewscore":0.0,"shop_count":5,"plain_spec_summary":"Single
+  SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
+  2G,   \u039f\u03b8\u03cc\u03bd\u03b7: 1.8\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7:
+  160 x 128 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2: \u03a6\u03c5\u03c3\u03b9\u03ba\u03cc
+  \u03a0\u03bb\u03b7\u03ba\u03c4\u03c1\u03bf\u03bb\u03cc\u03b3\u03b9\u03bf,    \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
+  \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: N/A, \u0388\u03c4\u03bf\u03c2 \u039a\u03c5\u03ba\u03bb\u03bf\u03c6\u03bf\u03c1\u03af\u03b1\u03c2:
+  2013, Feature Phone","active_products_count":5,"main_picture":{"small_url":"http://c.scdn.gr/images/sku_main_images/003287/3287073/small_pl_GT-E1280BKAXEO_001_Front_black","original_url":"http://b.scdn.gr/images/sku_main_images/003287/3287073/medium_pl_GT-E1280BKAXEO_001_Front_black","tiny_url":"http://a.scdn.gr/images/sku_main_images/003287/3287073/tiny_pl_GT-E1280BKAXEO_001_Front_black","medium_url":"http://b.scdn.gr/images/sku_main_images/003287/3287073/medium_pl_GT-E1280BKAXEO_001_Front_black","datamart_url":"http://d.scdn.gr/images/sku_main_images/003287/3287073/pl_GT-E1280BKAXEO_001_Front_black"},"manufacturer_id":28}]}'

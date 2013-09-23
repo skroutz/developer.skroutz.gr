@@ -1,0 +1,23 @@
+---
+:request:
+  :verb: GET
+  :path: /notifications/3642082
+:status: 200
+:headers:
+  content-type: application/json; charset=utf-8
+  x-meta-request-version: 0.2.1
+  x-ua-compatible: IE=Edge,chrome=1
+  etag: ! '"30f7548beb3e498e85f6e3e6c6fd6c6e"'
+  cache-control: max-age=0, private, must-revalidate
+  x-request-id: beeabb2b207ab27b2c839ca3763878ff
+  x-runtime: '0.047828'
+  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
+  date: Thu, 16 Jan 2014 13:10:09 GMT
+  content-length: '573'
+  connection: close
+  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTUxMDg5YzNmZWY3ZjRmYzFiNTc2ZDQzZDMyYmRhOGY3BjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--48a160d18e5eb6de5376e9242d8ffac9ea82227a;
+    path=/; expires=Sun, 16-Mar-2014 13:10:09 GMT; HttpOnly
+:body: ! '{"notification":{"confirmed":true,"created_at":"2014-01-16T15:07:52+02:00","etype":"generic","eventable_id":37,"eventable_type":"UserSkuAd","id":3642082,"is_viewed":false,"mail_event":false,"snapshot":{"event_text":"\u0397
+  \u03b1\u03b3\u03b3\u03b5\u03bb\u03af\u03b1 \u03c3\u03b1\u03c2 \"Logitech M185\"
+  \u03bc\u03b5 \u03c4\u03b9\u03bc\u03ae 8,99 \u20ac \u03ad\u03bb\u03b7\u03be\u03b5
+  \u03c3\u03c4\u03b9\u03c2 26/04/2013 00:44","eventable_path":"/account/inactive_ads"},"subscription_id":null,"updated_at":"2014-01-16T15:07:57+02:00","user_id":132950,"user_notified":false}}'

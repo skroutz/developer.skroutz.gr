@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="Content-Language" content="en-us" />
+  <meta http-equiv="imagetoolbar" content="false" />
+  <meta name="MSSmartTagsPreventParsing" content="true" />
+  <title>Sku | Skroutz API</title>
+  <link rel="icon" href="../../assets/images/favicon.png" type="image/png" />
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400' rel='stylesheet' type='text/css'>
+  <link rel="alternate" type="application/atom+xml" title="API Changes" href="../changes.atom" />
+  <link href="../../css/reset.css" rel="stylesheet" type="text/css" />
+  <link href="../../css/960.css" rel="stylesheet" type="text/css" />
+  <link href="../../css/uv_active4d.css" rel="stylesheet" type="text/css" />
+  <link href="../../shared/css/documentation.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="../../shared/css/pygments.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="../../assets/stylesheets/skroutz.css" media="screen" rel="stylesheet" type="text/css">
+  <script src="../../shared/js/jquery.js" type="text/javascript"></script>
+  <script src="../../shared/js/documentation.js" type="text/javascript"></script>
+</head>
+<body class="api" id="v3-sku">
+  <header>
+  <div class="content">
+    <a href="../../">for Developers [beta]</a>
+    <form class="search">
+        <input type="text" id="st-search-input" class="st-search-input"/>
+    </form>
+  </div>
+</header>
+
+
+  <div id="main" class="cf">
+    <div class="content cf">
+      <div id="right_container">
+        <div class="container">
+          <h1 id="sku-api">Sku API</h1>
+
+<ul id="markdown-toc">
+<li><a href="#about">About</a></li>
+  <li><a href="#list-skus">List SKUs</a></li>
+  <li><a href="#list-skus-of-specific-category">List SKUS of specific category</a></li>
+  <li><a href="#retrieve-a-single-sku">Retrieve a single SKU</a></li>
+  <li><a href="#retrieve-a-skus-products">Retrieve a SKU’s products</a></li>
+  <li><a href="#retrieve-a-skus-reviews">Retrieve a SKU’s reviews</a></li>
+  <li><a href="#filtering">Filtering</a></li>
+  <li><a href="#meta">Meta</a></li>
+</ul><h2 id="about">About</h2>
+
+<p>A SKU (Stock Keeping Unit) is an aggregation of products.<br><a href="..#linked-resources">Linked resources</a>: <a href="../product">product</a></p>
+
+<h2 id="list-skus">List SKUs</h2>
+
+<pre class="terminal">
+  GET /skus
+</pre>
+
+<div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/skus</span>
+        </p>
+<a href="javascript:void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"skus"</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">224</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"H 500"</span><span class="p">,</span>
+      <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"Motorola H 500"</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">435</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="s2">"870|Media-ram"</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">47.71</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">32.63</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">0.0</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/000000/224/small_Motorola-H-500.jpeg"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/000000/224/medium_Motorola-H-500.jpeg"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/000000/224/tiny_Motorola-H-500.jpeg"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/000000/224/medium_Motorola-H-500.jpeg"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/000000/224/Motorola-H-500.jpeg"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">27</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">403</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"T-104"</span><span class="p">,</span>
+      <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"Brother T-104"</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">66</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">73.9</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">69.9</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">0.0</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/000000/403/small_Brother-T-104.jpeg"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/000000/403/medium_Brother-T-104.jpeg"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/000000/403/tiny_Brother-T-104.jpeg"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/000000/403/medium_Brother-T-104.jpeg"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/000000/403/Brother-T-104.jpeg"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">46</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">404</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"T-106"</span><span class="p">,</span>
+      <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"Brother T-106"</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">66</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">122.9</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">122.0</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">0.0</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/000000/404/small_Brother-T-106.jpeg"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/000000/404/medium_Brother-T-106.jpeg"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/000000/404/tiny_Brother-T-106.jpeg"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/000000/404/medium_Brother-T-106.jpeg"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/000000/404/Brother-T-106.jpeg"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">46</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span></code></pre>
+</div>
+</div>
+
+<h2 id="list-skus-of-specific-category">List SKUS of specific category</h2>
+
+<pre class="terminal">
+  GET /categories/:category_id/skus
+</pre>
+
+<div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/categories/1442/skus</span>
+        </p>
+<a href="javascript:void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"skus"</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">2583612</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"ΞΑΠΛΩΣΤΡΑ"</span><span class="p">,</span>
+      <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"ΞΑΠΛΩΣΤΡΑ"</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">1442</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="s2">"1800|Prasopouloshomeart"</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="s2">"http://www.skroutz.gr/products/show/10668542"</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">35.9</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">35.9</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">0.0</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/002583/2583612/small_10668542-orig.jpg"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/002583/2583612/medium_10668542-orig.jpg"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/002583/2583612/tiny_10668542-orig.jpg"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/002583/2583612/medium_10668542-orig.jpg"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/002583/2583612/10668542-orig.jpg"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">0</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">2583613</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"ΞΑΠΛΩΣΤΡΑ"</span><span class="p">,</span>
+      <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"ΞΑΠΛΩΣΤΡΑ"</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">1442</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="s2">"1800|Prasopouloshomeart"</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="s2">"http://www.skroutz.gr/products/show/10668543"</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">35.9</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">35.9</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">0.0</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/002583/2583613/small_10668543-orig.jpg"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/002583/2583613/medium_10668543-orig.jpg"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/002583/2583613/tiny_10668543-orig.jpg"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/002583/2583613/medium_10668543-orig.jpg"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/002583/2583613/10668543-orig.jpg"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">0</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">3395746</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Ξαπλώστρα 88x60x99 cm Ξύλινη με Ύφασμα Πορτοκαλί - Σε 6 άτοκες δόσεις"</span><span class="p">,</span>
+      <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"Ξαπλώστρα 88x60x99 cm Ξύλινη με Ύφασμα Πορτοκαλί - Σε 6 άτοκες δόσεις"</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">1442</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="s2">"1981|Diathesimo"</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="s2">"http://www.skroutz.gr/products/show/12710846"</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">36.0</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">36.0</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">0.0</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/003395/3395746/small_12710846-orig.jpg"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/003395/3395746/medium_12710846-orig.jpg"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/003395/3395746/tiny_12710846-orig.jpg"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/003395/3395746/medium_12710846-orig.jpg"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/003395/3395746/12710846-orig.jpg"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">0</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"available_filters"</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">"filters"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"407918"</span><span class="o">:</span> <span class="mi">69</span><span class="p">,</span>
+        <span class="s2">"407919"</span><span class="o">:</span> <span class="mi">61</span><span class="p">,</span>
+        <span class="s2">"407920"</span><span class="o">:</span> <span class="mi">46</span><span class="p">,</span>
+        <span class="s2">"407921"</span><span class="o">:</span> <span class="mi">25</span><span class="p">,</span>
+        <span class="s2">"407922"</span><span class="o">:</span> <span class="mi">21</span><span class="p">,</span>
+        <span class="s2">"407923"</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="s2">"407924"</span><span class="o">:</span> <span class="mi">3</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturers"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"0"</span><span class="o">:</span> <span class="mi">223</span><span class="p">,</span>
+        <span class="s2">"11251"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">"7086"</span><span class="o">:</span> <span class="mi">1</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s2">"pagination"</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">"total_results"</span><span class="o">:</span> <span class="mi">18</span><span class="p">,</span>
+      <span class="s2">"total_pages"</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
+      <span class="s2">"page"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"per"</span><span class="o">:</span> <span class="mi">3</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre>
+</div>
+</div>
+
+<h2 id="retrieve-a-single-sku">Retrieve a single SKU</h2>
+
+<pre class="terminal">
+  GET /skus/:id
+</pre>
+
+<div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/skus/3703742</span>
+        </p>
+<a href="javascript:void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"sku"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"id"</span><span class="o">:</span> <span class="mi">3703742</span><span class="p">,</span>
+    <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+    <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+    <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Μπλούζα Κοντομάνικη 2nd Skin  SS201-4113 navy-ss2013 Ανδρικό"</span><span class="p">,</span>
+    <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"Μπλούζα Κοντομάνικη 2nd Skin  SS201-4113 navy-ss2013 Ανδρικό"</span><span class="p">,</span>
+    <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">1066</span><span class="p">,</span>
+    <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="s2">"821|Z-mall"</span><span class="p">,</span>
+    <span class="s2">"click_url"</span><span class="o">:</span> <span class="s2">"http://www.skroutz.gr/products/show/13313785"</span><span class="p">,</span>
+    <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">11.7</span><span class="p">,</span>
+    <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">11.7</span><span class="p">,</span>
+    <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">0.0</span><span class="p">,</span>
+    <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+    <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/003703/3703742/small_13313785-orig.jpg"</span><span class="p">,</span>
+      <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/003703/3703742/medium_13313785-orig.jpg"</span><span class="p">,</span>
+      <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/003703/3703742/tiny_13313785-orig.jpg"</span><span class="p">,</span>
+      <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/003703/3703742/medium_13313785-orig.jpg"</span><span class="p">,</span>
+      <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/003703/3703742/13313785-orig.jpg"</span>
+    <span class="p">},</span>
+    <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">0</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre>
+</div>
+</div>
+
+<h2 id="retrieve-a-skus-products">Retrieve a SKU’s products</h2>
+
+<pre class="terminal">
+  GET /skus/:id/products
+</pre>
+
+<div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/skus/3703742/products</span>
+        </p>
+<a href="javascript:void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"products"</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">13313785</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Μπλούζα Κοντομάνικη 2nd Skin  SS201-4113 navy-ss2013 Ανδρικό"</span><span class="p">,</span>
+      <span class="s2">"sku_id"</span><span class="o">:</span> <span class="mi">3703742</span><span class="p">,</span>
+      <span class="s2">"shop_id"</span><span class="o">:</span> <span class="mi">821</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">1066</span><span class="p">,</span>
+      <span class="s2">"visible"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"availability"</span><span class="o">:</span> <span class="s2">"ΑΜΕΣΗ ΠΑΡΑΔΟΣΗ"</span><span class="p">,</span>
+      <span class="s2">"price"</span><span class="o">:</span> <span class="mf">11.7</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://www.z-mall.gr/ItemsContent/0012961/1260094/0012961_1260094_altex-ss2013_navy-ss2013_0_4.jpg"</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span></code></pre>
+</div>
+</div>
+
+<h2 id="retrieve-a-skus-reviews">Retrieve a SKU’s reviews</h2>
+
+<pre class="terminal">
+  GET /skus/:id/reviews
+</pre>
+
+<div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/skus/355766/reviews</span>
+        </p>
+<a href="javascript:void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"reviews"</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">10875</span><span class="p">,</span>
+      <span class="s2">"user_id"</span><span class="o">:</span> <span class="mi">147596</span><span class="p">,</span>
+      <span class="s2">"review"</span><span class="o">:</span> <span class="s2">"Επιλέξτε το !  Τα τρόφιμα διατηρούνται χωρίς το παραμικρό πρόβλημα. Το νερό το κρυώνει, δεν το παγώνει, για να το πίνεις ευχάριστα. Μεγάλη ευκολία το δοχείο νερού 3,5 λίτρων ! (για να μην ανοίγεις συχνά την πόρτα). Ο καταψύκτης φοβερός. Τρως το παγωτό σου, όπως στο σερβίρουν στην αγορά (καφετέρια ή χωνάκι). Αθόρυβο. Το μόνο μή άριστο είναι η χωρητικότητά του. Με λίγα παραπάνω λίτρα θα ήταν τέλειο."</span><span class="p">,</span>
+      <span class="s2">"rating"</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+      <span class="s2">"created_at"</span><span class="o">:</span> <span class="s2">"2013-08-13T22:00:24+03:00"</span><span class="p">,</span>
+      <span class="s2">"collapsed"</span><span class="o">:</span> <span class="kc">false</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"pagination"</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">"total_results"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"total_pages"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"page"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"per"</span><span class="o">:</span> <span class="mi">25</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre>
+</div>
+</div>
+
+<h2 id="filtering">Filtering</h2>
+
+<p>You have to specify a category in order to perform filtering.<br>
+You may supply the optional parameter <code>include_meta[]=available_filters</code>
+to get meta information about the filters that can be applied.</p>
+
+<h2 id="meta">Meta</h2>
+<p>You may choose to include extra meta information using the following parameters:</p>
+
+<table>
+<thead><tr>
+<th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr></thead>
+<tbody><tr>
+<td><code>include_meta</code></td>
+      <td><code>Array</code></td>
+      <td><code>Extra meta info to be included in the response</code></td>
+    </tr></tbody>
+</table><div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/categories/279/skus</span>
+        </p>
+<a href="javascript:void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"skus"</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">1086074</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Χάντρες Ματάκια (ΣΕΤ 100 ΤΜΧ)"</span><span class="p">,</span>
+      <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"Χάντρες Ματάκια (ΣΕΤ 100 ΤΜΧ)"</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">279</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="s2">"1349|MegaMall"</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="s2">"http://www.skroutz.gr/products/show/7935185"</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">0.04</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">0.04</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">0.0</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"Είδος: Μπομπονιέρες"</span><span class="p">,</span>
+      <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/001086/1086074/small_1086074.jpg"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/001086/1086074/medium_1086074.jpg"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/001086/1086074/tiny_1086074.jpg"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/001086/1086074/medium_1086074.jpg"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/001086/1086074/1086074.jpg"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">7224</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"available_filters"</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">"filters"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"342829"</span><span class="o">:</span> <span class="mi">748</span><span class="p">,</span>
+        <span class="s2">"342830"</span><span class="o">:</span> <span class="mi">305</span><span class="p">,</span>
+        <span class="s2">"342827"</span><span class="o">:</span> <span class="mi">250</span><span class="p">,</span>
+        <span class="s2">"342834"</span><span class="o">:</span> <span class="mi">203</span><span class="p">,</span>
+        <span class="s2">"342832"</span><span class="o">:</span> <span class="mi">188</span><span class="p">,</span>
+        <span class="s2">"342833"</span><span class="o">:</span> <span class="mi">55</span><span class="p">,</span>
+        <span class="s2">"342831"</span><span class="o">:</span> <span class="mi">36</span><span class="p">,</span>
+        <span class="s2">"342828"</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">"408161"</span><span class="o">:</span> <span class="mi">593</span><span class="p">,</span>
+        <span class="s2">"408164"</span><span class="o">:</span> <span class="mi">414</span><span class="p">,</span>
+        <span class="s2">"408163"</span><span class="o">:</span> <span class="mi">283</span><span class="p">,</span>
+        <span class="s2">"408162"</span><span class="o">:</span> <span class="mi">277</span><span class="p">,</span>
+        <span class="s2">"408165"</span><span class="o">:</span> <span class="mi">209</span><span class="p">,</span>
+        <span class="s2">"408166"</span><span class="o">:</span> <span class="mi">124</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturers"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"0"</span><span class="o">:</span> <span class="mi">986</span><span class="p">,</span>
+        <span class="s2">"7224"</span><span class="o">:</span> <span class="mi">435</span><span class="p">,</span>
+        <span class="s2">"10179"</span><span class="o">:</span> <span class="mi">165</span><span class="p">,</span>
+        <span class="s2">"1649"</span><span class="o">:</span> <span class="mi">78</span><span class="p">,</span>
+        <span class="s2">"9912"</span><span class="o">:</span> <span class="mi">70</span><span class="p">,</span>
+        <span class="s2">"10645"</span><span class="o">:</span> <span class="mi">28</span><span class="p">,</span>
+        <span class="s2">"7998"</span><span class="o">:</span> <span class="mi">21</span><span class="p">,</span>
+        <span class="s2">"10180"</span><span class="o">:</span> <span class="mi">12</span><span class="p">,</span>
+        <span class="s2">"10181"</span><span class="o">:</span> <span class="mi">9</span><span class="p">,</span>
+        <span class="s2">"10644"</span><span class="o">:</span> <span class="mi">7</span><span class="p">,</span>
+        <span class="s2">"7931"</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
+        <span class="s2">"1299"</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
+        <span class="s2">"11154"</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="s2">"1318"</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="s2">"10654"</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s2">"7032"</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s2">"7558"</span><span class="o">:</span> <span class="mi">1</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s2">"pagination"</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">"total_results"</span><span class="o">:</span> <span class="mi">18</span><span class="p">,</span>
+      <span class="s2">"total_pages"</span><span class="o">:</span> <span class="mi">18</span><span class="p">,</span>
+      <span class="s2">"page"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"per"</span><span class="o">:</span> <span class="mi">1</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre>
+</div>
+</div>
+<p>As you can see above the available_filters object contains two objects
+(filters, manufacturers) each of which has as keys the ids of the
+entities that can be applied and as values the number of skus that match
+the filter/manufacturer.</p>
+
+<h3 id="by-manufacturers">By manufacturers</h3>
+
+<table>
+<thead><tr>
+<th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr></thead>
+<tbody><tr>
+<td><code>manufacturer_ids</code></td>
+      <td><code>Array</code></td>
+      <td>The ids of the manufacturers of the skus</td>
+    </tr></tbody>
+</table><div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/categories/40/skus?manufacturer_ids[]=28&amp;manufacturer_ids[]=2</span>
+        </p>
+<a href="javascript:void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"skus"</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">328970</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">"E1050"</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"E1050"</span><span class="p">,</span>
+      <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"Samsung E1050"</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">24.99</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">15.99</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">5.0</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">12</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"Single SIM, Δίκτυο Σύνδεσης: 2G,   Οθόνη: 1.43\" , Ανάλυση: 128 x 128 pixels, Χειρισμός: Φυσικό Πληκτρολόγιο,    Λειτουργικό Σύστημα: N/A, SAR: 0.789 W/kg, Έτος Κυκλοφορίας: 2011, Feature Phone"</span><span class="p">,</span>
+      <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">12</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/000328/328970/small_sku_picture_5c590d.jpg.jpg"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/000328/328970/medium_sku_picture_5c590d.jpg.jpg"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/000328/328970/tiny_sku_picture_5c590d.jpg.jpg"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/000328/328970/medium_sku_picture_5c590d.jpg.jpg"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/000328/328970/sku_picture_5c590d.jpg.jpg"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">28</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">337548</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">"E1182"</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"E1182"</span><span class="p">,</span>
+      <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"Samsung E1182"</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">31.98</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">16.0</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">4.28571</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">19</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"Dual SIM, Δίκτυο Σύνδεσης: 2G,   Οθόνη: 1.52\" , Ανάλυση: 128 x 128 pixels, Χειρισμός: Φυσικό Πληκτρολόγιο,    Λειτουργικό Σύστημα: N/A, SAR: 0.99 W/kg, Έτος Κυκλοφορίας: 2011, Feature Phone"</span><span class="p">,</span>
+      <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">19</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/000337/337548/small_sku_picture_d81fbb.jpg.jpg"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/000337/337548/medium_sku_picture_d81fbb.jpg.jpg"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/000337/337548/tiny_sku_picture_d81fbb.jpg.jpg"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/000337/337548/medium_sku_picture_d81fbb.jpg.jpg"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/000337/337548/sku_picture_d81fbb.jpg.jpg"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">28</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">2119391</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"E1200"</span><span class="p">,</span>
+      <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"Samsung E1200"</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">46.8</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">17.03</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">4.0</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"Single SIM, Δίκτυο Σύνδεσης: 2G,   Οθόνη: 1.52\" , Ανάλυση: 128 x 128 pixels, Χειρισμός: Φυσικό Πληκτρολόγιο,  Εσωτερική Μνήμη: 100 MB,  Λειτουργικό Σύστημα: N/A, SAR: 0.81 W/kg, Έτος Κυκλοφορίας: 2012, Feature Phone"</span><span class="p">,</span>
+      <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/002119/2119391/small_8806071935041.jpg"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/002119/2119391/medium_8806071935041.jpg"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/002119/2119391/tiny_8806071935041.jpg"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/002119/2119391/medium_8806071935041.jpg"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/002119/2119391/8806071935041.jpg"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">28</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">3287073</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">"GT-E1280"</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"E1280"</span><span class="p">,</span>
+      <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"Samsung E1280"</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">32.0</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">18.96</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">0.0</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"Single SIM, Δίκτυο Σύνδεσης: 2G,   Οθόνη: 1.8\" , Ανάλυση: 160 x 128 pixels, Χειρισμός: Φυσικό Πληκτρολόγιο,    Λειτουργικό Σύστημα: N/A, Έτος Κυκλοφορίας: 2013, Feature Phone"</span><span class="p">,</span>
+      <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/003287/3287073/small_pl_GT-E1280BKAXEO_001_Front_black"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/003287/3287073/medium_pl_GT-E1280BKAXEO_001_Front_black"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/003287/3287073/tiny_pl_GT-E1280BKAXEO_001_Front_black"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/003287/3287073/medium_pl_GT-E1280BKAXEO_001_Front_black"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/003287/3287073/pl_GT-E1280BKAXEO_001_Front_black"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">28</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span></code></pre>
+</div>
+</div>
+
+<h3 id="by-filters">By filters</h3>
+
+<table>
+<thead><tr>
+<th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr></thead>
+<tbody><tr>
+<td><code>filter_ids</code></td>
+      <td><code>Array</code></td>
+      <td>The ids of the filters to be applied on the skus</td>
+    </tr></tbody>
+</table><div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/categories/40/skus?filter_ids[]=6282&amp;filter_ids[]=6284</span>
+        </p>
+<a href="javascript:void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"skus"</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">2141062</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Mimosa Mini"</span><span class="p">,</span>
+      <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"ZTE Mimosa Mini"</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">59.0</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">59.0</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">0.0</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"Single SIM, Δίκτυο Σύνδεσης: 2G, Κάμερα: 2.0 MP,  Οθόνη: 2.8\" , Ανάλυση: 320 x 240 pixels, Χειρισμός: Οθόνη αφής (Touch screen),    Ασύρματο Δίκτυο: Wi-Fi, Λειτουργικό Σύστημα: Android, Έτος Κυκλοφορίας: 2011, SmartPhone"</span><span class="p">,</span>
+      <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/002141/2141062/small_ZTE_Mimosa_Mini_4ffb13abecf34.png"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/002141/2141062/medium_ZTE_Mimosa_Mini_4ffb13abecf34.png"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/002141/2141062/tiny_ZTE_Mimosa_Mini_4ffb13abecf34.png"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/002141/2141062/medium_ZTE_Mimosa_Mini_4ffb13abecf34.png"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/002141/2141062/ZTE_Mimosa_Mini_4ffb13abecf34.png"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">4834</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">2564748</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">"OT-903D"</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"One Touch 903D"</span><span class="p">,</span>
+      <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"Alcatel One Touch 903D"</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">79.99</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">71.09</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">4.16667</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">12</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"Dual SIM, Δίκτυο Σύνδεσης: 3G, Κάμερα: 2 MP,  Οθόνη: 2.8\" , Ανάλυση: 320 x 240 pixels, Χειρισμός: Οθόνη αφής (Touch screen),    Ασύρματο Δίκτυο: Wi-Fi, Λειτουργικό Σύστημα: Android, SAR: 0.891 W/kg, Έτος Κυκλοφορίας: 2012, SmartPhone"</span><span class="p">,</span>
+      <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">12</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/002564/2564748/small_alcatel-903d.jpg"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/002564/2564748/medium_alcatel-903d.jpg"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/002564/2564748/tiny_alcatel-903d.jpg"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/002564/2564748/medium_alcatel-903d.jpg"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/002564/2564748/alcatel-903d.jpg"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">417</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">389499</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"U8350"</span><span class="p">,</span>
+      <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"Huawei U8350"</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">77.0</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">73.0</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">4.0</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"Single SIM, Δίκτυο Σύνδεσης: 3G, Κάμερα: 3.2 MP,  Οθόνη: 2.6\" , Ανάλυση: 320 x 240 pixels, Χειρισμός: Οθόνη αφής (Touch screen) / Φυσικό Πληκτρολόγιο,  Εσωτερική Μνήμη: 512 MB,  Ασύρματο Δίκτυο: Wi-Fi, Λειτουργικό Σύστημα: Android, Έτος Κυκλοφορίας: 2011, SmartPhone"</span><span class="p">,</span>
+      <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/000389/389499/small_huawei-boulder-u8350.jpg"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/000389/389499/medium_huawei-boulder-u8350.jpg"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/000389/389499/tiny_huawei-boulder-u8350.jpg"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/000389/389499/medium_huawei-boulder-u8350.jpg"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/000389/389499/huawei-boulder-u8350.jpg"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">2159</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">388525</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">"Galaxy Y S5360"</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Galaxy Y S5360"</span><span class="p">,</span>
+      <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"Samsung Galaxy Y S5360"</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">129.9</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">77.8</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">2.89474</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">18</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"Single SIM, Δίκτυο Σύνδεσης: 3G, Κάμερα: 2 MP,  Οθόνη: 3.0\" , Ανάλυση: 320 x 240 pixels, Χειρισμός: Οθόνη αφής (Touch screen),  Εσωτερική Μνήμη: 180 MB,  Ασύρματο Δίκτυο: Wi-Fi, Λειτουργικό Σύστημα: Android, SAR: 0.66 W/kg, Έτος Κυκλοφορίας: 2011, SmartPhone"</span><span class="p">,</span>
+      <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">18</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/000388/388525/small_samsung-galaxy-y-s5360.jpg"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/000388/388525/medium_samsung-galaxy-y-s5360.jpg"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/000388/388525/tiny_samsung-galaxy-y-s5360.jpg"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/000388/388525/medium_samsung-galaxy-y-s5360.jpg"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/000388/388525/samsung-galaxy-y-s5360.jpg"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">28</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span></code></pre>
+</div>
+</div>
+        </div>
+      </div>
+      <div id="js-sidebar" class="sidebar-shell">
+  <nav class="js-toggle-list sidebar-module expandable">
+
+    <h3>
+      <a href="../../">Home</a>
+    </h3>
+
+    <h2 class="guides">Development Guides</h2>
+
+    <ul>
+      <li class="js-topic">
+        <h3>
+          <a href="../../guides/getting-started">Getting Started</a>
+        </h3>
+      </li>
+      <li class="js-topic">
+        <h3>
+          <a href="../../guides/authentication">Authentication</a>
+        </h3>
+      </li>
+      <li class="js-topic">
+        <h3>
+          <a href="../../authentication/permissions">Permissions</a>
+        </h3>
+      </li>
+    </ul>
+
+    <h2 class="manual">API Manual</h2>
+
+    <ul>
+      <li class="js-topic">
+        <h3>
+          <a href="../">Overview</a>
+        </h3>
+      </li>
+      <li class="js-topic">
+        <h3>
+          <a href="../category/">Category</a>
+        </h3>
+      </li>
+      <li class="js-topic">
+        <h3>
+          <a href="./">Sku</a>
+        </h3>
+      </li>
+      <li class="js-topic">
+        <h3>
+          <a href="../product/">Product</a>
+        </h3>
+      </li>
+      <li class="js-topic">
+        <h3>
+          <a href="../shop/">Shop</a>
+        </h3>
+      </li>
+      <li class="js-topic">
+        <h3>
+          <a href="../manufacturer/">Manufacturer</a>
+        </h3>
+      <li class="js-topic">
+        <h3>
+          <a href="../search/">Search</a>
+        </h3>
+      </li>
+      </li>
+      <li class="js-topic">
+        <h3>
+          <a href="../filter_groups/">Filter Groups</a>
+        </h3>
+      </li>
+      <li class="js-topic user">
+        <h3>
+          <a href="../favorites/">User Favorites</a>
+        </h3>
+      </li>
+      <li class="js-topic user">
+        <h3>
+          <a href="../notifications/">User Notifications</a>
+        </h3>
+      </li>
+    </ul>
+
+    <h3>
+      <a href="../../help">Help</a>
+    </h3>
+
+   </nav>
+
+  <footer>
+  <p>
+    &copy; 20[0-9]{2} Skroutz A.E. All Rights and Lefts reserved.
+    <br />
+    <a href="#">Terms of Service</a>
+  </p>
+
+  <script type="text/javascript">
+  var Swiftype = window.Swiftype || {};
+  (function() {
+    Swiftype.key = 'qbNiqUVxzUseXtdSCSUy';
+
+    /** DO NOT EDIT BELOW THIS LINE **/
+    var script = document.createElement('script'); script.type =
+      'text/javascript'; script.async = true;
+    script.src = "//s.swiftypecdn.com/embed.js";
+    var entry = document.getElementsByTagName('script')[0];
+    entry.parentNode.insertBefore(script, entry);
+  }());
+</script>
+
+</footer>
+
+
+</div> <!-- /sidebar-module -->
+
+    </div>
+  </div>
+</body>
+</html>

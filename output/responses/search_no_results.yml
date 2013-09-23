@@ -1,0 +1,23 @@
+---
+:request:
+  :verb: GET
+  :path: /search
+  :params:
+    q: asdasdsagjgjgjweigrweji
+    oauth_token: Vr/AzbfQt3ywQlKUonZk25VqRg2ILFAFV/voi69FD9xlJl5Yp9DmDWb6PAEsVwuI1KckH3aa1/vxRaj/Mbwg==
+:status: 200
+:headers:
+  content-type: application/json; charset=utf-8
+  x-meta-request-version: 0.2.1
+  x-ua-compatible: IE=Edge,chrome=1
+  etag: ! '"37819d6fdb643f4f291ffdafee805503"'
+  cache-control: max-age=0, private, must-revalidate
+  x-request-id: 2ed05fff19f17dd55fd06c6d09cf1d56
+  x-runtime: '0.044891'
+  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
+  date: Fri, 20 Dec 2013 10:53:51 GMT
+  content-length: '37'
+  connection: close
+  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTNiNGVkMDg0NDI4ODg3ZWJiZTE3YzNjYjIzODlmZDE1BjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--9c8d6841a6c2dd80dee90e1ac23bf98bc7077c9b;
+    path=/; expires=Thu, 20-Feb-2014 10:53:51 GMT; HttpOnly
+:body: ! '{"meta":{"result_type":"no_results"}}'
