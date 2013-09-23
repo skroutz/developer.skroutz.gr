@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="Content-Language" content="en-us" />
+  <meta http-equiv="imagetoolbar" content="false" />
+  <meta name="MSSmartTagsPreventParsing" content="true" />
+  <title>Getting Started | Skroutz API</title>
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400' rel='stylesheet' type='text/css'>
+  <link rel="alternate" type="application/atom+xml" title="API Changes" href="../changes.atom" />
+  <link href="../../css/reset.css" rel="stylesheet" type="text/css" />
+  <link href="../../css/960.css" rel="stylesheet" type="text/css" />
+  <link href="../../css/uv_active4d.css" rel="stylesheet" type="text/css" />
+  <link href="../../shared/css/documentation.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="../../shared/css/pygments.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="../../assets/stylesheets/skroutz.css" media="screen" rel="stylesheet" type="text/css">
+  <script src="../../shared/js/jquery.js" type="text/javascript"></script>
+  <script src="../../shared/js/documentation.js" type="text/javascript"></script>
+</head>
+<body class="api" id="guides-getting-started">
+  <header>
+  <div class="content">
+    <a href="../../">for Developers [beta]</a>
+    <form class="search">
+        <input type="text" id="st-search-input" class="st-search-input"/>
+    </form>
+  </div>
+</header>
+
+
+    <div id="main" class="cf">
+      <div class="content cf">
+        <div id="right_container">
+          <div class="container">
+            <h1 id="getting-started">Getting Started</h1>
+
+<p>Follow the steps below to build your first succesful application using
+Skroutz API.</p>
+
+<h2 id="authenticate">Authenticate</h2>
+<p>Before you perform any api request make sure you read <a href="../authentication">authentication</a></p>
+
+<p>Make sure you have installed to your system a tool to perform request to
+our API.</p>
+
+<p>Some suggested tools:</p>
+
+<ul class="api-tools">
+<li><a href="http://curl.haxx.se/">curl</a></li>
+  <li>
+    <a href="https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm">postman
+    </a>
+  </li>
+  <li><a href="https://github.com/Zorbash/response_mate">response_mate</a></li>
+</ul><h2 id="your-first-request">Your First Request</h2>
+
+<p>Supposing that you have successfuly obtained a valid access token you can use it to perform requests.
+As mentioned in <a href="../authentication">authentication</a> there are 2 ways to specify your access token.</p>
+
+<h3 id="via-the-oauthtoken-parameter">Via the oauth_token parameter</h3>
+<p>You may add the oauth_token parameter obtained above as access_token.</p>
+
+<p>Example Request</p>
+
+<pre class="terminal">
+GET http://skroutz.gr/api/categories/40?oauth_token=your_token
+</pre>
+
+<h3 id="via-authorization-http-header">Via Authorization HTTP header</h3>
+<p>You have to add the following header:</p>
+
+<pre class="terminal">
+Authorization: Bearer your_token
+</pre>
+
+<h3 id="point-to-the-right-version">Point to the right version</h3>
+<p>There are 2 version of the Skroutz API:
+<a href="http://docs.skroutz.gr/apiv2/">v2</a> and <a href="../../v3">v3</a>.
+<a href="http://docs.skroutz.gr/apiv2/">v2</a> is to be deprecated at 2014-01-01.</p>
+
+<p>To use v3 you have to explicitly request the API v3 media type in the
+<code>Accept</code> header:</p>
+
+<pre class="terminal">
+application/vnd.skroutz+json;version=3
+</pre>
+
+<p>Also you are suggested to specify the <code>User-Agent</code> header to match your application’s name.</p>
+          </div>
+        </div>
+        <div id="js-sidebar" class="sidebar-shell">
+  <nav class="js-toggle-list sidebar-module expandable">
+
+    <h3>
+      <a href="../../">Home</a>
+    </h3>
+
+    <h2 class="guides">Development Guides</h2>
+
+    <ul>
+      <li class="js-topic">
+        <h3>
+          <a href=".">Getting Started</a>
+        </h3>
+      </li>
+      <li class="js-topic">
+        <h3>
+          <a href="../authentication">Authentication</a>
+        </h3>
+      </li>
+      <li class="js-topic">
+        <h3>
+          <a href="../../authentication/permissions">Permissions</a>
+        </h3>
+      </li>
+    </ul>
+
+    <h2 class="manual">API Manual</h2>
+
+    <ul>
+      <li class="js-topic">
+        <h3>
+          <a href="../../v3/">Overview</a>
+        </h3>
+      </li>
+      <li class="js-topic">
+        <h3>
+          <a href="../../v3/category/">Category</a>
+        </h3>
+      </li>
+      <li class="js-topic">
+        <h3>
+          <a href="../../v3/sku/">Sku</a>
+        </h3>
+      </li>
+      <li class="js-topic">
+        <h3>
+          <a href="../../v3/product/">Product</a>
+        </h3>
+      </li>
+      <li class="js-topic">
+        <h3>
+          <a href="../../v3/shop/">Shop</a>
+        </h3>
+      </li>
+      <li class="js-topic">
+        <h3>
+          <a href="../../v3/manufacturer/">Manufacturer</a>
+        </h3>
+      <li class="js-topic">
+        <h3>
+          <a href="../../v3/search/">Search</a>
+        </h3>
+      </li>
+      </li>
+      <li class="js-topic">
+        <h3>
+          <a href="../../v3/filter_groups/">Filter Groups</a>
+        </h3>
+      </li>
+      <li class="js-topic user">
+        <h3>
+          <a href="../../v3/favorites/">User Favorites</a>
+        </h3>
+      </li>
+      <li class="js-topic user">
+        <h3>
+          <a href="../../v3/notifications/">User Notifications</a>
+        </h3>
+      </li>
+    </ul>
+
+    <h3>
+      <a href="../../help">Help</a>
+    </h3>
+
+   </nav>
+
+  <footer>
+  <p>
+    &copy; 20[0-9]{2} Skroutz A.E. All Rights and Lefts reserved.
+    <br />
+    <a href="#">Terms of Service</a>
+  </p>
+
+  <script type="text/javascript">
+  var Swiftype = window.Swiftype || {};
+  (function() {
+    Swiftype.key = 'qbNiqUVxzUseXtdSCSUy';
+
+    /** DO NOT EDIT BELOW THIS LINE **/
+    var script = document.createElement('script'); script.type =
+      'text/javascript'; script.async = true;
+    script.src = "//s.swiftypecdn.com/embed.js";
+    var entry = document.getElementsByTagName('script')[0];
+    entry.parentNode.insertBefore(script, entry);
+  }());
+</script>
+
+</footer>
+
+
+</div> <!-- /sidebar-module -->
+
+      </div>
+  </div>
+</body>
+</html>

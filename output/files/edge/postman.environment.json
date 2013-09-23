@@ -1,0 +1,17 @@
+{
+  "id": "68c2d127-fe27-4e71-96c8-f63b65307cfa",
+  "name": "exported_environment",
+  "values": [
+    {
+      "key": "oauth_token",
+      "value": "teh_token",
+      "type": "text"
+    },
+    {
+      "key": "base_url",
+      "value": "http://skroutz.gr/api",
+      "type": "text"
+    }
+  ],
+  "timestamp": 1389959368
+}

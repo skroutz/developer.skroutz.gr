@@ -1,0 +1,27 @@
+---
+:request:
+  :verb: GET
+  :path: /shops
+  :params:
+    per: 2
+    oauth_token: Vr/AzbfQt3ywQlKUonZk25VqRg2ILFAFV/voi69FD9xlJl5Yp9DmDWb6PAEsVwuI1KckH3aa1/vxRaj/Mbwg==
+:status: 200
+:headers:
+  link: <http://localhost:3000/api/shops?oauth_token=Vr%2FAzbfQt3ywQlKUonZk25VqRg2ILFAFV%2Fvoi69FD9xlJl5Yp9DmDWb6PAEsVwuI1KckH3aa1%2FvxRaj%2FMbwg%3D%3D&page=902&per=2>;
+    rel="last", <http://localhost:3000/api/shops?oauth_token=Vr%2FAzbfQt3ywQlKUonZk25VqRg2ILFAFV%2Fvoi69FD9xlJl5Yp9DmDWb6PAEsVwuI1KckH3aa1%2FvxRaj%2FMbwg%3D%3D&page=2&per=2>;
+    rel="next"
+  content-type: application/json; charset=utf-8
+  x-meta-request-version: 0.2.1
+  x-ua-compatible: IE=Edge,chrome=1
+  etag: ! '"9d042d82ce6ac410ee0b720cd38683e5"'
+  cache-control: max-age=0, private, must-revalidate
+  x-request-id: 353ef6cab78483e5a0bce624ba1d0312
+  x-runtime: '0.105362'
+  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
+  date: Fri, 20 Dec 2013 10:53:50 GMT
+  content-length: '385'
+  connection: close
+  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWE2YTU5MmI5NTMyZjliOTY5Yzk0NjQzZDBjZjc1NjdkBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--a30ac3b504382201e0f34209d2e898b70cca9f93;
+    path=/; expires=Thu, 20-Feb-2014 10:53:50 GMT; HttpOnly
+:body: ! '{"shops":[{"id":3,"name":"E-shop","phone":"2115000500","image_url":"http://d.scdn.gr/assets/merchants/el/no_logo.png","thumbshot_url":"http://a.scdn.gr/assets/helmet/el/no_scr_image_medium.png"},{"id":7,"name":"MG
+  Manager","phone":"2103817992","image_url":"http://d.scdn.gr/assets/merchants/el/no_logo.png","thumbshot_url":"http://a.scdn.gr/assets/helmet/el/no_scr_image_medium.png"}]}'

@@ -1,0 +1,92 @@
+#!/usr/bin/env ruby
+
+# A few helpful tips about the Rules file:
+#
+# * The order of rules is important: for each item, only the first matching
+#   rule is applied.
+#
+# * Item identifiers start and end with a slash (e.g. “/about/” for the file
+#   “content/about.html”). To select all children, grandchildren, … of an
+#   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
+#   because “*” matches zero or more characters.
+
+compile '/static/*' do
+end
+
+compile '/CNAME/' do
+end
+
+# To be used if hosted on github-pages
+route '/CNAME/' do
+  '/CNAME'
+end
+
+# This rule is for the index page, the introduction on the platform
+compile '/' do
+  filter :erb
+end
+
+route '/' do
+  '/index.html'
+end
+
+route '/terms' do
+  '/terms/index.html'
+end
+
+route '/v3/*' do
+  item.identifier + 'index.html'
+end
+
+route '/v3/*' do
+  item.identifier + 'index.html'
+end
+
+route '/authentication/*' do
+  item.identifier + 'index.html'
+end
+
+route '/guides/*' do
+  item.identifier + 'index.html'
+end
+
+route '/help/*' do
+  item.identifier + 'index.html'
+end
+
+compile '*' do
+  next if item[:extension] =~ /(png)|(jpe?g)|(gif)|(svg)/
+  filter :erb
+  case item[:extension]
+  when 'md'
+    filter :kramdown, :toc_levels => [2]
+    filter :colorize_syntax,
+      :colorizers => {:javascript => :pygmentsrb}
+    # Only markdown files get the default layout, as html pages are mostly
+    # made to be complete.
+    if item.identifier =~ /^\/guides\//
+      layout 'guides'
+    elsif item.identifier =~ /^\/authentication\//
+      layout 'authentication'
+    elsif item.identifier =~ /^\/terms\//
+      layout 'statics'
+    elsif item.identifier =~ /^\/help\//
+      layout 'help'
+    else
+      layout 'default'
+    end
+  when 'scss'
+    filter :sass, syntax: :scss
+  end
+end
+
+# Output *.scss files are placed under output/assets/stylesheets/
+route '/assets/stylesheets/*' do
+  item.identifier.chop + '.css'
+end
+
+route '/assets/images/*/' do
+  item.identifier.chop + '.' + item[:extension]
+end
+
+layout '*', :erb

@@ -1,0 +1,639 @@
+{
+  "id": "e64e21b1-3f6a-489d-8480-9233b3fdcd91",
+  "name": "apiv3",
+  "requests": [
+    {
+      "id": "263667c3-6dae-4c3b-bef0-21036e122354",
+      "collectionId": "e64e21b1-3f6a-489d-8480-9233b3fdcd91",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "categories_index",
+      "url": "{{base_url}}/categories?page=1&per=5",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "88c2d7fc-332d-4c40-bf77-d0e77b4b7e3f",
+      "collectionId": "e64e21b1-3f6a-489d-8480-9233b3fdcd91",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "categories_top_level",
+      "url": "{{base_url}}/categories/top_level",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "acb1d12f-326a-4d92-8025-37fcf314d2d8",
+      "collectionId": "e64e21b1-3f6a-489d-8480-9233b3fdcd91",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "categories_root",
+      "url": "{{base_url}}/categories/root",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "165702ab-d972-4b20-8533-b3e58955c622",
+      "collectionId": "e64e21b1-3f6a-489d-8480-9233b3fdcd91",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "categories_show",
+      "url": "{{base_url}}/categories/1442",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "695d53ea-284c-4faf-82ef-cf573048c5d4",
+      "collectionId": "e64e21b1-3f6a-489d-8480-9233b3fdcd91",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "children_api_category",
+      "url": "{{base_url}}/categories/73/children",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "40214750-dc76-40f7-88ac-febb622e1e19",
+      "collectionId": "e64e21b1-3f6a-489d-8480-9233b3fdcd91",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "category_skus",
+      "url": "{{base_url}}/categories/1442/skus?page=1&per=3",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "ace58eb7-0c90-4c93-9d29-178d527da946",
+      "collectionId": "e64e21b1-3f6a-489d-8480-9233b3fdcd91",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "category_parent",
+      "url": "{{base_url}}/categories/1442/parent",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "a8e76067-dc0a-44f2-9286-676ab3592587",
+      "collectionId": "e64e21b1-3f6a-489d-8480-9233b3fdcd91",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "shops_index",
+      "url": "{{base_url}}/shops?per=2",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "0fa5a485-1219-4606-91c5-fad86dcb840a",
+      "collectionId": "e64e21b1-3f6a-489d-8480-9233b3fdcd91",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "shops_show",
+      "url": "{{base_url}}/shops/3",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "61ad79db-8d74-43d4-9553-3794ad1b3576",
+      "collectionId": "e64e21b1-3f6a-489d-8480-9233b3fdcd91",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "manufacturers_show",
+      "url": "{{base_url}}/manufacturers/12907",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "ad6c0126-7f21-4f27-8479-bc008d83ca75",
+      "collectionId": "e64e21b1-3f6a-489d-8480-9233b3fdcd91",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "manufacturers_index",
+      "url": "{{base_url}}/manufacturers?per=2",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "60fdca50-15b0-4cf6-8bda-a0dbe6b56dca",
+      "collectionId": "e64e21b1-3f6a-489d-8480-9233b3fdcd91",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "autocomplete",
+      "url": "{{base_url}}/autocomplete?keyphrase=iph",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "1143b77f-e899-4947-9c04-f04679bcfd27",
+      "collectionId": "e64e21b1-3f6a-489d-8480-9233b3fdcd91",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "search_invalid",
+      "url": "{{base_url}}/search?q=a",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "efae7b4c-f361-4758-bbad-7d5088def739",
+      "collectionId": "e64e21b1-3f6a-489d-8480-9233b3fdcd91",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "search_category_match",
+      "url": "{{base_url}}/search?per=2&q=computers",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "f0d269bd-e5da-4daf-9da0-5d9f32f030f9",
+      "collectionId": "e64e21b1-3f6a-489d-8480-9233b3fdcd91",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "search_manufacturer_match",
+      "url": "{{base_url}}/search?q=apple",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "ba5d35eb-2512-4230-a68f-f89d3cd62cab",
+      "collectionId": "e64e21b1-3f6a-489d-8480-9233b3fdcd91",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "search_latin_mapping",
+      "url": "{{base_url}}/search?page=1&per=2&q=%CE%B9%CF%80%CE%B7%CE%BF%CE%BD%CE%B5",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "a04a73e5-38fa-4c02-bb26-df3cf2b17790",
+      "collectionId": "e64e21b1-3f6a-489d-8480-9233b3fdcd91",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "search_drop",
+      "url": "{{base_url}}/search?q=wrong+iphone",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "6042e8b3-fc7b-4ccd-aa5a-c4876796ac8a",
+      "collectionId": "e64e21b1-3f6a-489d-8480-9233b3fdcd91",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "search_no_results",
+      "url": "{{base_url}}/search?q=asdasdsagjgjgjweigrweji",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "069b36d4-40db-4b14-9772-722218973a5c",
+      "collectionId": "e64e21b1-3f6a-489d-8480-9233b3fdcd91",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "search_category_facade",
+      "url": "{{base_url}}/search?page=1&per=2&q=iphone",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "7e3219fb-2c68-41c3-bf1f-80c204a4f7e4",
+      "collectionId": "e64e21b1-3f6a-489d-8480-9233b3fdcd91",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "search_sku_match",
+      "url": "{{base_url}}/search?q=Dimage+2300",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "356f2a1c-0145-4e60-b7c3-a8d50fe6431c",
+      "collectionId": "e64e21b1-3f6a-489d-8480-9233b3fdcd91",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "search_skus_match",
+      "url": "{{base_url}}/search?page=1&per=2&q=Cubieboard2",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "88c1ebb4-8f82-411b-a63a-e47ed12f4469",
+      "collectionId": "e64e21b1-3f6a-489d-8480-9233b3fdcd91",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "autocomplete",
+      "url": "{{base_url}}/autocomplete?q=iphone",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "06ba9ae4-cd7e-4ac3-b1c4-2c236352af35",
+      "collectionId": "e64e21b1-3f6a-489d-8480-9233b3fdcd91",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "skus_index",
+      "url": "{{base_url}}/skus?page=1&per=3",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "0e530cd1-eec6-494a-926e-d4368e774b58",
+      "collectionId": "e64e21b1-3f6a-489d-8480-9233b3fdcd91",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "skus_show",
+      "url": "{{base_url}}/skus/3703742",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "7e531ab2-1339-42de-be02-68869714774c",
+      "collectionId": "e64e21b1-3f6a-489d-8480-9233b3fdcd91",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "skus_products",
+      "url": "{{base_url}}/skus/3703742/products",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "1ab35597-59ab-4ce4-a025-0d55eb30849a",
+      "collectionId": "e64e21b1-3f6a-489d-8480-9233b3fdcd91",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "products_index",
+      "url": "{{base_url}}/products?page=1&per=2",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "1b620a1a-d211-4bc8-afeb-2b60e934a60e",
+      "collectionId": "e64e21b1-3f6a-489d-8480-9233b3fdcd91",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "products_show",
+      "url": "{{base_url}}/products/13313788",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "98fb17b0-231d-40ad-a657-f057ac6e0dfc",
+      "collectionId": "e64e21b1-3f6a-489d-8480-9233b3fdcd91",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "favorites_index",
+      "url": "{{base_url}}/favorites",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "16947d97-d319-471c-8b52-a3a01d9495dc",
+      "collectionId": "e64e21b1-3f6a-489d-8480-9233b3fdcd91",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "favorites_show",
+      "url": "{{base_url}}/favorites/252116",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "47e2226e-68d0-46d0-805d-d649f7f9d4bf",
+      "collectionId": "e64e21b1-3f6a-489d-8480-9233b3fdcd91",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "filter_groups_index",
+      "url": "{{base_url}}/categories/40/filter_groups?per=2",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "3ed7d0fe-e9db-4531-a8af-f0ad764a8f47",
+      "collectionId": "e64e21b1-3f6a-489d-8480-9233b3fdcd91",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "category_skus_manufacturers",
+      "url": "{{base_url}}/categories/40/skus?manufacturer_ids[]=28&manufacturer_ids[]=2?per=4",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "e4010848-5540-4dc9-800b-fdb3309641ab",
+      "collectionId": "e64e21b1-3f6a-489d-8480-9233b3fdcd91",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "category_skus_filters",
+      "url": "{{base_url}}/categories/40/skus?filter_ids[]=6282&filter_ids[]=6284?per=4",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "9ef8789b-9fb3-40fe-8d7b-518259f5bfcd",
+      "collectionId": "e64e21b1-3f6a-489d-8480-9233b3fdcd91",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "category_skus_with_available_filters",
+      "url": "{{base_url}}/categories/279/skus?include_meta%5B%5D=available_filters&per=1",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "94bbe8b5-adfc-49ad-9bb7-2c2fad8d2c81",
+      "collectionId": "e64e21b1-3f6a-489d-8480-9233b3fdcd91",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "notifications_index",
+      "url": "{{base_url}}/notifications?per=1",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "1290a3b7-c216-404c-8abc-e6ec0c32dc57",
+      "collectionId": "e64e21b1-3f6a-489d-8480-9233b3fdcd91",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "notifications_show",
+      "url": "{{base_url}}/notifications/3642082",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    }
+  ],
+  "order": [
+    "263667c3-6dae-4c3b-bef0-21036e122354",
+    "88c2d7fc-332d-4c40-bf77-d0e77b4b7e3f",
+    "acb1d12f-326a-4d92-8025-37fcf314d2d8",
+    "165702ab-d972-4b20-8533-b3e58955c622",
+    "695d53ea-284c-4faf-82ef-cf573048c5d4",
+    "40214750-dc76-40f7-88ac-febb622e1e19",
+    "ace58eb7-0c90-4c93-9d29-178d527da946",
+    "a8e76067-dc0a-44f2-9286-676ab3592587",
+    "0fa5a485-1219-4606-91c5-fad86dcb840a",
+    "61ad79db-8d74-43d4-9553-3794ad1b3576",
+    "ad6c0126-7f21-4f27-8479-bc008d83ca75",
+    "60fdca50-15b0-4cf6-8bda-a0dbe6b56dca",
+    "1143b77f-e899-4947-9c04-f04679bcfd27",
+    "efae7b4c-f361-4758-bbad-7d5088def739",
+    "f0d269bd-e5da-4daf-9da0-5d9f32f030f9",
+    "ba5d35eb-2512-4230-a68f-f89d3cd62cab",
+    "a04a73e5-38fa-4c02-bb26-df3cf2b17790",
+    "6042e8b3-fc7b-4ccd-aa5a-c4876796ac8a",
+    "069b36d4-40db-4b14-9772-722218973a5c",
+    "7e3219fb-2c68-41c3-bf1f-80c204a4f7e4",
+    "356f2a1c-0145-4e60-b7c3-a8d50fe6431c",
+    "88c1ebb4-8f82-411b-a63a-e47ed12f4469",
+    "06ba9ae4-cd7e-4ac3-b1c4-2c236352af35",
+    "0e530cd1-eec6-494a-926e-d4368e774b58",
+    "7e531ab2-1339-42de-be02-68869714774c",
+    "1ab35597-59ab-4ce4-a025-0d55eb30849a",
+    "1b620a1a-d211-4bc8-afeb-2b60e934a60e",
+    "98fb17b0-231d-40ad-a657-f057ac6e0dfc",
+    "16947d97-d319-471c-8b52-a3a01d9495dc",
+    "47e2226e-68d0-46d0-805d-d649f7f9d4bf",
+    "3ed7d0fe-e9db-4531-a8af-f0ad764a8f47",
+    "e4010848-5540-4dc9-800b-fdb3309641ab",
+    "9ef8789b-9fb3-40fe-8d7b-518259f5bfcd",
+    "94bbe8b5-adfc-49ad-9bb7-2c2fad8d2c81",
+    "1290a3b7-c216-404c-8abc-e6ec0c32dc57"
+  ],
+  "timestamp": 1389958720
+}

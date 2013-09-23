@@ -1,0 +1,31 @@
+---
+:request:
+  :verb: GET
+  :path: /categories/279/skus
+  :params:
+    per: 1
+    include_meta:
+    - available_filters
+    oauth_token: Vr/AzbfQt3ywQlKUonZk25VqRg2ILFAFV/voi69FD9xlJl5Yp9DmDWb6PAEsVwuI1KckH3aa1/vxRaj/Mbwg==
+:status: 200
+:headers:
+  link: <http://localhost:3000/api/categories/279/skus?include_meta%5B%5D=available_filters&oauth_token=Vr%2FAzbfQt3ywQlKUonZk25VqRg2ILFAFV%2Fvoi69FD9xlJl5Yp9DmDWb6PAEsVwuI1KckH3aa1%2FvxRaj%2FMbwg%3D%3D&page=18&per=1>;
+    rel="last", <http://localhost:3000/api/categories/279/skus?include_meta%5B%5D=available_filters&oauth_token=Vr%2FAzbfQt3ywQlKUonZk25VqRg2ILFAFV%2Fvoi69FD9xlJl5Yp9DmDWb6PAEsVwuI1KckH3aa1%2FvxRaj%2FMbwg%3D%3D&page=2&per=1>;
+    rel="next"
+  content-type: application/json; charset=utf-8
+  x-meta-request-version: 0.2.1
+  x-ua-compatible: IE=Edge,chrome=1
+  etag: ! '"9107138fb8d313b66c6c72bc246b3906"'
+  cache-control: max-age=0, private, must-revalidate
+  x-request-id: 762f0df633448edd8745ac6d1aced161
+  x-runtime: '0.141081'
+  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
+  date: Tue, 24 Dec 2013 11:21:12 GMT
+  content-length: '1618'
+  connection: close
+  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTNjY2MzZTQ4ZTkwY2UzNzUzOTI3MzdkNDBiYjJlNWYxBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--35d9c70ad58caa8dc70d9e214355423eda056556;
+    path=/; expires=Mon, 24-Feb-2014 11:21:12 GMT; HttpOnly
+:body: ! '{"skus":[{"id":1086074,"ean":"","pn":"","name":"\u03a7\u03ac\u03bd\u03c4\u03c1\u03b5\u03c2
+  \u039c\u03b1\u03c4\u03ac\u03ba\u03b9\u03b1 (\u03a3\u0395\u03a4 100 \u03a4\u039c\u03a7)","display_name":"\u03a7\u03ac\u03bd\u03c4\u03c1\u03b5\u03c2
+  \u039c\u03b1\u03c4\u03ac\u03ba\u03b9\u03b1 (\u03a3\u0395\u03a4 100 \u03a4\u039c\u03a7)","category_id":279,"first_product_shop_info":"1349|MegaMall","click_url":"http://www.skroutz.gr/products/show/7935185","price_max":0.04,"price_min":0.04,"reviewscore":0.0,"shop_count":1,"plain_spec_summary":"\u0395\u03af\u03b4\u03bf\u03c2:
+  \u039c\u03c0\u03bf\u03bc\u03c0\u03bf\u03bd\u03b9\u03ad\u03c1\u03b5\u03c2","active_products_count":1,"main_picture":{"small_url":"http://c.scdn.gr/images/sku_main_images/001086/1086074/small_1086074.jpg","original_url":"http://b.scdn.gr/images/sku_main_images/001086/1086074/medium_1086074.jpg","tiny_url":"http://d.scdn.gr/images/sku_main_images/001086/1086074/tiny_1086074.jpg","medium_url":"http://b.scdn.gr/images/sku_main_images/001086/1086074/medium_1086074.jpg","datamart_url":"http://d.scdn.gr/images/sku_main_images/001086/1086074/1086074.jpg"},"manufacturer_id":7224}],"meta":{"available_filters":{"filters":{"342829":748,"342830":305,"342827":250,"342834":203,"342832":188,"342833":55,"342831":36,"342828":2,"408161":593,"408164":414,"408163":283,"408162":277,"408165":209,"408166":124},"manufacturers":{"0":986,"7224":435,"10179":165,"1649":78,"9912":70,"10645":28,"7998":21,"10180":12,"10181":9,"10644":7,"7931":6,"1299":6,"11154":4,"1318":4,"10654":3,"7032":3,"7558":1}},"pagination":{"total_results":18,"total_pages":18,"page":1,"per":1}}}'
