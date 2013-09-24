@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'pp'
 require 'yajl/json_gem'
 require 'stringio'
@@ -63,8 +64,9 @@ module Skroutz
           end
         end
 
-        lines << "X-RateLimit-Limit: 5000" unless head.has_key?('X-RateLimit-Limit')
-        lines << "X-RateLimit-Remaining: 4999" unless head.has_key?('X-RateLimit-Remaining')
+        # TODO: When Rate limit is enabled uncomment the following
+        #lines << "X-RateLimit-Limit: 5000" unless head.has_key?('X-RateLimit-Limit')
+        #lines << "X-RateLimit-Remaining: 4999" unless head.has_key?('X-RateLimit-Remaining')
 
         %(<pre class="#{css_class}"><code>#{lines * "\n"}</code></pre>\n)
       end
@@ -91,6 +93,41 @@ module Skroutz
         res = CGI.escapeHTML(response)
         hs + %(<pre class="highlight"><code>) + res + "</code></pre>"
       end
+
+
+      SINGLE_CATEGORY = {
+        "category" => {
+          "children_count" => 0,
+          "family_id" => 11,
+          "id" => 1442,
+          "name" => "Ξαπλώστρες Κήπου & Βεράντας",
+          "image_url" => "http://b.scdn.gr/images/categories/large/1442.jpg"
+        }
+      }
+
+      CATEGORY_SKUS = {
+        "skus" => [
+          {
+            "id" => 3407669,
+            "ean" => "",
+            "pn" => "",
+            "first_product_shop_info" => nil,
+            "click_url" => "http://www.skroutz.gr/products/show/12718505",
+            "price_max" => nil,
+            "price_min" => nil,
+            "reviewscore" => 0,
+            "shop_count" => 0,
+            "plain_spec_summary" => "Τύπος: Ξαπλώστρες Κήπου & Βεράντας",
+            "active_products_count" => 0,
+            "main_picture" => {
+              "small_url" => "http://b.scdn.gr/images/sku_main_images/003407/3407669/small_12718505-orig.jpg",
+              "original_url" => "http://c.scdn.gr/images/sku_main_images/003407/3407669/medium_12718505-orig.jpg",
+              "tiny_url" => "http://a.scdn.gr/images/sku_main_images/003407/3407669/tiny_12718505-orig.jpg",
+              "medium_url" => "http://c.scdn.gr/images/sku_main_images/003407/3407669/medium_12718505-orig.jpg"
+            }
+          }
+        ]
+      }
     end
   end
 end
