@@ -21,12 +21,12 @@ planned changes to the API.
 
 These changes are _not_ implemented, just planned.
 
-* `[]` Implement category endpoints.
-* `[]` Implement shop endpoints.
-* `[]` Implement manufacturer endpoints.
-* `[]` Implement sku endpoints.
-* `[]` Implement search endpoints. 
-* `[]` Provide search autocomplete resource.
+* `[✓]` Implement category endpoints.
+* `[ ]` Implement shop endpoints.
+* `[ ]` Implement manufacturer endpoints.
+* `[ ]` Implement sku endpoints.
+* `[ ]` Implement search endpoints.
+* `[ ]` Provide search autocomplete resource.
 
 ### Breaking Changes
 
