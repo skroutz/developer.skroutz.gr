@@ -15,14 +15,15 @@ title: Categories | Skroutz API
 
     GET /categories/:id
 
-## Get the root category
-
-    GET /categories/root
-
 ### Response
 
 <%= headers 200 %>
 <%= json :single_category %>
+
+## Get the root category
+
+    GET /categories/root
+
 
 ## List the skus of a category
 
