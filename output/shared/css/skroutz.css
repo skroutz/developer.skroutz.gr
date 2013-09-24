@@ -1,0 +1,8 @@
+#header .logo {
+  font-size: 25px;
+  color: #222;
+}
+
+#header .logo img {
+  margin-right: 15px;
+}
