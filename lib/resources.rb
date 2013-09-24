@@ -26,6 +26,10 @@ module Skroutz
         500 => '500 Server Error'
       }
 
+      AUTHORS = {
+        :zorbash => '0fd95d31561c422c72926fcdc8e73114'
+      }
+
       DefaultTimeFormat = "%B %-d, %Y".freeze
 
       def post_date(item)
@@ -34,6 +38,17 @@ module Skroutz
 
       def strftime(time, format = DefaultTimeFormat)
         attribute_to_time(time).strftime(format)
+      end
+
+      def gravatar_for(login)
+        %(<img height="16" width="16" src="%s" />) % gravatar_url_for(login)
+      end
+
+      def gravatar_url_for(login)
+        md5 = AUTHORS[login.to_sym]
+        default = "https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"
+        "https://secure.gravatar.com/avatar/%s?s=20&d=%s" %
+          [md5, default]
       end
 
       def headers(status, head = {})
