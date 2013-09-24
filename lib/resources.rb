@@ -128,6 +128,25 @@ module Skroutz
           }
         ]
       }
+
+      SHOPS_LETTER = {
+        "shops" => [
+          {
+            "id" => 1080,
+            "name" => "A-anastasiadisbros",
+            "phone" => "2104943444",
+            "image_url" => "http://d.scdn.gr/assets/merchants/el/no_logo.png",
+            "thumbshot_url" => "http://b.scdn.gr/images/shops/screens/1080.png"
+          },
+          {
+            "id" => 990,
+            "name" => "A1shop",
+            "phone" => "2310700504",
+            "image_url" => "http://d.scdn.gr/assets/merchants/el/no_logo.png",
+            "thumbshot_url" => "http://c.scdn.gr/images/shops/screens/990.png"
+          }
+        ]
+      }
     end
   end
 end
