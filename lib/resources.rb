@@ -147,6 +147,14 @@ module Skroutz
           }
         ]
       }
+
+      SINGLE_MANUFACTURER = {
+        "manufacturer " => {
+          "id " => 12907,
+          "name " => "Rapala",
+          "image_url " => nil
+        }
+      }
     end
   end
 end
