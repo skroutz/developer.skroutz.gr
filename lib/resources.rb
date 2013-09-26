@@ -155,6 +155,28 @@ module Skroutz
           "image_url " => nil
         }
       }
+
+      SINGLE_SKU = {
+        "sku" => {
+          "id" => 3703639,
+          "ean" => "0046838067518",
+          "pn" => "HASR44X",
+          "first_product_shop_info" => "1844|Homelike",
+          "click_url" => nil,
+          "price_max" => 52,
+          "price_min" => 52,
+          "reviewscore" => 0,
+          "shop_count" => 1,
+          "plain_spec_summary" => "Τύπος: Headset, Μήκος Καλωδίου: 1.2 m",
+          "active_products_count" => 1,
+          "main_picture" => {
+            "small_url" => "http://a.scdn.gr/images/sku_main_images/003703/3703639/small_18136468-328.jpg",
+            "original_url" => "http://d.scdn.gr/images/sku_main_images/003703/3703639/medium_18136468-328.jpg",
+            "tiny_url" => "http://a.scdn.gr/images/sku_main_images/003703/3703639/tiny_18136468-328.jpg",
+            "medium_url" => "http://d.scdn.gr/images/sku_main_images/003703/3703639/medium_18136468-328.jpg"
+          }
+        }
+      }
     end
   end
 end
