@@ -7,6 +7,11 @@ title: Categories | Skroutz API
 * TOC
 {:toc}
 
+## About
+
+Categories are organized in a tree-like structure.  
+A product/sku belongs to a leaf category.
+
 ## List categories
 
     GET /categories
@@ -28,6 +33,10 @@ title: Categories | Skroutz API
 ## List the skus of a category
 
     GET /categories/:category_id/skus
+
+### Note 
+Only leaf categories have skus.  
+If you request the skus of a non-leaf category you'll get a `404 Not Found` response.
 
 ### Response
 The example response is paginated with `per=1` for the sake of brevity
