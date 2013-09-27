@@ -10,10 +10,12 @@ gem 'nanoc'
 gem 'nokogiri', '~> 1.4.4'
 gem 'pygments.rb'
 gem 'rake', '~> 0.9.2'
+gem 'faraday'
 gem 'thin'
 
 group :development do
   gem 'adsf'
   gem 'fssm'
   gem 'pry'
+  gem 'awesome_print'
 end

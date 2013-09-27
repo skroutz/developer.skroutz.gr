@@ -3,6 +3,7 @@ GEM
   specs:
     adsf (1.1.1)
       rack (>= 1.0.0)
+    awesome_print (1.1.0)
     builder (3.2.2)
     coderay (1.1.0)
     colored (1.2)
@@ -10,10 +11,13 @@ GEM
       colored (>= 1.2)
     daemons (1.1.9)
     eventmachine (1.0.3)
+    faraday (0.8.8)
+      multipart-post (~> 1.2.0)
     fssm (0.2.10)
     kramdown (0.13.8)
     method_source (0.8.2)
     mime-types (1.25)
+    multipart-post (1.2.0)
     nanoc (3.6.4)
       cri (~> 2.3)
     nokogiri (1.4.7)
@@ -43,8 +47,10 @@ PLATFORMS
 
 DEPENDENCIES
   adsf
+  awesome_print
   builder
   coderay
+  faraday
   fssm
   kramdown (~> 0.13.2)
   mime-types (~> 1.16)
