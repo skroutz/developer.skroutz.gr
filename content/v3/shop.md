@@ -19,8 +19,7 @@ the given value
 
 ### Response
 
-<%= headers 200 %>
-<%= json :shops_letter %>
+<%= prepared_response :shops %>
 
 ## Get a single shop
 

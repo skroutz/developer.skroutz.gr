@@ -1,0 +1,20 @@
+base_url: http://localhost:5555/api
+requests: 
+  -
+    key: single_category
+    request: 'GET /categories/1442'
+  -
+    key: category_children
+    request: 'GET /categories/73/children'
+  -
+    key: shops
+    request: 'GET /shops?page=1&per=4'
+  -
+    key: single_shop
+    request: 'GET /shops/3'
+  -
+    key: single_manufacturer
+    request: 'GET /manufacturers/12907'
+  -
+    key: autocomplete
+    request: 'GET /autocomplete?keyphrase=iph'

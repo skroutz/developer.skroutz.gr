@@ -88,6 +88,16 @@ module Skroutz
           JSON.pretty_generate(hash) + "</code></pre>"
       end
 
+      def prepared_response(key)
+        response = YAML.load_file("./output/responses/#{key}.yml")
+        headers_output = headers(response[:status])
+        body_content = JSON.pretty_generate(JSON.parse(response[:body]))
+        body_output = %(<pre class="highlight"><code class="language-javascript">) +
+          body_content + "</code></pre>"
+
+        headers_output + body_output
+      end
+
       def text_html(response, status, head = {})
         hs = headers(status, head.merge('Content-Type' => 'text/html'))
         res = CGI.escapeHTML(response)
