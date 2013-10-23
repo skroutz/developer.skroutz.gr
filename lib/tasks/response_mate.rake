@@ -1,3 +1,5 @@
+require './lib/response_mate/recorder'
+
 desc 'Generate API responses'
 namespace :response_mate do
   task :record, :base_url, :requests_filename do |t, args|
@@ -8,7 +10,7 @@ namespace :response_mate do
 
     requests = YAML.load_file(requests_filename)
 
-    mate = ResponseMate.new args[:base_url] || requests['base_url']
+    mate = ResponseMate::Recorder.new args[:base_url] || requests['base_url']
     requests['requests'].each do |request|
       mate.process request['key'], request['request']
     end
