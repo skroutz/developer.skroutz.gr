@@ -17,15 +17,10 @@ letter
 : _Optional_ **string** Filter shops of which the first letter matches
 the given value
 
-### Response
-
-<%= prepared_response :shops %>
+<%= render_recording :shops %>
 
 ## Get a single shop
 
     GET /shops/:id
 
-### Response
-
-<%= headers 200 %>
-<%= json :single_category %>
+<%= render_recording :single_shop %>
