@@ -17,7 +17,13 @@ module ResponseMate
         JSON.pretty_generate(JSON.parse(recording[:body]))
     end
 
-    def load_recording(key); YAML.load_file("./output/responses/#{key}.yml") end
+    def load_recording(key)
+      YAML.load_file("./output/responses/#{key}.yml")
+    rescue Errno::ENOENT
+      STDOUT.print key.to_s.red << " key was not found, \n\t" <<
+      "try Running " << "rake response_mate:record\n\t".green <<
+      "Use " << "rake response_mate:list".green << " to view available keys\n"
+    end
   end
 end
 
