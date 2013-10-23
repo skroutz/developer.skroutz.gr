@@ -7,8 +7,8 @@ module ResponseMate
     attr_accessor :output_dir, :requests_manifest
 
     def initialize
-      @output_dir = '../../output/responses/'
-      @requests_manifest = '../../requests.yml'
+      @output_dir = './output/responses/'
+      @requests_manifest = './requests.yml'
     end
   end
 
@@ -17,3 +17,5 @@ module ResponseMate
     yield(configuration) if block_given?
   end
 end
+
+ResponseMate.setup

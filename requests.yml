@@ -1,4 +1,4 @@
-base_url: http://localhost:5555/api
+base_url: http://localhost:3000/api
 requests: 
   -
     key: single_category
@@ -18,3 +18,30 @@ requests:
   -
     key: autocomplete
     request: 'GET /autocomplete?keyphrase=iph'
+  -
+    key: search_short_term
+    request: 'GET /search?q=a'
+  -
+    key: search_category_match
+    request: 'GET /search?q=computers'
+  -
+    key: search_manufacturer_match
+    request: 'GET /search?q=apple'
+  -
+    key: search_latin_mapping
+    request: 'GET /search?q=ιπηονε'
+  -
+    key: search_drop
+    request: 'GET /search?q=wrong%20iphone'
+  -
+    key: search_no_results
+    request: 'GET /search?q=asdasdsagjgjgjweigrweji'
+  - 
+    key: search_category_facade
+    request: 'GET /search?q=iphone'
+  -
+    key: search_sku_match
+    request: 'GET /search?q=Dimage%202300'
+  - 
+    key: search_skus_match
+    request: 'GET /search?q=Cubieboard2'
