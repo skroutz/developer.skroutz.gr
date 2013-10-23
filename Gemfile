@@ -15,6 +15,7 @@ gem 'faraday_middleware'
 gem 'thin'
 gem 'guard'
 gem 'guard-nanoc'
+gem 'colored'
 
 group :development do
   gem 'adsf'

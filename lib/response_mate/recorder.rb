@@ -22,6 +22,9 @@ module ResponseMate
     end
 
     def record
+      STDOUT.print "Base URL: #{@base_url}\n"
+      STDOUT.print "Recording..\n"
+
       @manifest['requests'].each do |request|
         process request['key'], request['request']
       end
@@ -29,20 +32,20 @@ module ResponseMate
 
     private
     def parse_requests_manifest
-      p "Reading request manifest: #{@requests_manifest}"
+      STDOUT.print "Reading request manifest: #{@requests_manifest}\n".underline
       @manifest = YAML.load_file(@requests_manifest)
     end
 
     def process(key, request)
       request = parse_request_string(request) if request.is_a?(String)
-      p "Processing: #{request[:verb]} #{request[:path]}"
+      STDOUT.print "#{request[:verb]}".cyan_on_black.bold <<  " #{request[:path]}\n"
       write_to_file(key, fetch(request))
     end
 
     def fetch(request)
-      require 'pry'; binding.pry
-
       @conn.send request[:verb].downcase.to_sym, "#{base_url}#{request[:path]}"
+    rescue Faraday::Error::ConnectionFailed
+      STDOUT.print "Is a server up and running at #{@base_url}?\n".red
     end
 
     def parse_request_string(request_string)

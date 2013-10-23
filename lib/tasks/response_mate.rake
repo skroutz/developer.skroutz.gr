@@ -9,6 +9,14 @@ namespace :response_mate do
   task :clear do
     FileUtils.rm_rf('output/responses/.')
     FileUtils.rm('tmp/compiled_content') if File.exist?('tmp/compiled_content')
-    p "All clean and shiny!"
+    STDOUT.print "All clean and shiny!\n"
+  end
+
+  task :list do
+    STDOUT.print "Listing available responses\n"
+    STDOUT.print "---------------------------\n"
+    Dir.glob('output/**/*.yml').each do |k| 
+      STDOUT.print k.split('/').last.gsub('.yml', '') << "\n"
+    end
   end
 end

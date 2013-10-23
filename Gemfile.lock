@@ -58,6 +58,7 @@ DEPENDENCIES
   awesome_print
   builder
   coderay
+  colored
   faraday
   faraday_middleware
   fssm
