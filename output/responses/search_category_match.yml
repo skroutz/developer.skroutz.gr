@@ -1,0 +1,4 @@
+---
+:status: 200
+:body: ! '{"categories":[{"children_count":0,"id":115,"name":"\u0395\u03c6\u03b1\u03c1\u03bc\u03bf\u03b3\u03ad\u03c2
+  \u0393\u03c1\u03b1\u03c6\u03b5\u03af\u03bf\u03c5","image_url":"http://d.scdn.gr/images/categories/large/115.jpg","leaf":true,"match_count":1},{"children_count":0,"id":37,"name":"Gadgets","image_url":"http://a.scdn.gr/images/categories/large/37.jpg","leaf":true,"match_count":1}],"meta":{"result_type":"category_facade"}}'

@@ -1,0 +1,4 @@
+---
+:status: 200
+:body: ! '{"shops":[{"id":3,"name":"E-shop","phone":"2115000500","image_url":"http://d.scdn.gr/assets/merchants/el/no_logo.png","thumbshot_url":"http://a.scdn.gr/assets/helmet/el/no_scr_image_medium.png"},{"id":7,"name":"MG
+  Manager","phone":"2103817992","image_url":"http://d.scdn.gr/assets/merchants/el/no_logo.png","thumbshot_url":"http://a.scdn.gr/assets/helmet/el/no_scr_image_medium.png"},{"id":8,"name":"My-Shop","phone":"2118002616","image_url":"http://d.scdn.gr/assets/merchants/el/no_logo.png","thumbshot_url":"http://a.scdn.gr/assets/helmet/el/no_scr_image_medium.png"},{"id":9,"name":"PriveShop","phone":"2108629945","image_url":"http://d.scdn.gr/assets/merchants/el/no_logo.png","thumbshot_url":"http://a.scdn.gr/assets/helmet/el/no_scr_image_medium.png"}]}'

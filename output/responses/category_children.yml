@@ -1,0 +1,7 @@
+---
+:status: 200
+:body: ! '{"categories":[{"children_count":0,"id":365,"name":"\u0394\u03b9\u03ac\u03c6\u03bf\u03c1\u03b5\u03c2
+  \u03a5\u03c0\u03b7\u03c1\u03b5\u03c3\u03af\u03b5\u03c2","image_url":"http://c.scdn.gr/images/categories/large/365.jpg","leaf":true},{"children_count":0,"id":107,"name":"\u0395\u03c0\u03b5\u03ba\u03c4\u03ac\u03c3\u03b5\u03b9\u03c2
+  \u0395\u03b3\u03b3\u03cd\u03b7\u03c3\u03b7\u03c2","image_url":"http://c.scdn.gr/images/categories/large/107.jpg","leaf":true},{"children_count":0,"id":106,"name":"\u03a3\u03c5\u03bd\u03b4\u03ad\u03c3\u03b5\u03b9\u03c2
+  Internet","image_url":"http://c.scdn.gr/images/categories/large/106.jpg","leaf":true},{"children_count":0,"id":364,"name":"\u03a5\u03c0\u03b7\u03c1\u03b5\u03c3\u03af\u03b5\u03c2
+  Internet","image_url":"http://c.scdn.gr/images/categories/large/364.jpg","leaf":true}]}'

@@ -1,0 +1,3 @@
+---
+:status: 200
+:body: ! '{"proposals":["wrong","iphone"],"meta":{"result_type":"drop"}}'
