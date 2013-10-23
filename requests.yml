@@ -14,7 +14,7 @@ requests:
     request: 'GET /shops/3'
   -
     key: single_manufacturer
-    request: 'GET /manufacturers/12907'
+    request: 'GET /manufacturers/12906'
   -
     key: autocomplete
     request: 'GET /autocomplete?keyphrase=iph'
