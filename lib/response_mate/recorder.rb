@@ -1,4 +1,5 @@
 require 'faraday'
+require 'faraday_middleware'
 
 module ResponseMate
   class Recorder
@@ -8,11 +9,28 @@ module ResponseMate
     Api_accept_header = 'application/vnd.skroutz+json; version=3'
     User_agent = 'Response-Mate'
 
-    attr_accessor :base_url, :conn
+    attr_accessor :base_url, :conn, :manifest
 
-    def initialize(base_url)
-      @base_url = base_url
+    def initialize(args)
+      @requests_manifest = args[:requests_manifest] || ResponseMate.configuration.
+        requests_manifest
+
+      parse_requests_manifest
+
+      @base_url = args[:base_url] || @manifest['base_url']
       initialize_connection
+    end
+
+    def record
+      @manifest['requests'].each do |request|
+        process request['key'], request['request']
+      end
+    end
+
+    private
+    def parse_requests_manifest
+      p "Reading request manifest: #{@requests_manifest}"
+      @manifest = YAML.load_file(@requests_manifest)
     end
 
     def process(key, request)
@@ -22,10 +40,11 @@ module ResponseMate
     end
 
     def fetch(request)
+      require 'pry'; binding.pry
+
       @conn.send request[:verb].downcase.to_sym, "#{base_url}#{request[:path]}"
     end
 
-    private
     def parse_request_string(request_string)
       raise InvalidRequestStringError if request_string !~ Request_matcher
       {
@@ -39,7 +58,11 @@ module ResponseMate
     end
 
     def initialize_connection
-      @conn = Faraday.new
+      @conn = Faraday.new do |c|
+        c.use FaradayMiddleware::FollowRedirects, limit: 5
+        c.adapter Faraday.default_adapter
+      end
+
       @conn.headers['User-Agent'] = User_agent
       @conn.headers['Accept'] = Api_accept_header
       @conn.url_prefix = base_url

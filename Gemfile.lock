@@ -13,6 +13,8 @@ GEM
     eventmachine (1.0.3)
     faraday (0.8.8)
       multipart-post (~> 1.2.0)
+    faraday_middleware (0.9.0)
+      faraday (>= 0.7.4, < 0.9)
     ffi (1.9.0)
     fssm (0.2.10)
     guard (1.0.1)
@@ -57,6 +59,7 @@ DEPENDENCIES
   builder
   coderay
   faraday
+  faraday_middleware
   fssm
   guard
   guard-nanoc
