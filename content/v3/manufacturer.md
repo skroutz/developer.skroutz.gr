@@ -13,5 +13,4 @@ title: Manufacturers | Skroutz API
 
 ### Response
 
-<%= headers 200 %>
-<%= json :single_manufacturer %>
+<%= render_recording :single_manufacturer %>
