@@ -1,6 +1,8 @@
 require 'nanoc3/tasks'
 require './lib/response_mate'
 
+Dir.glob('lib/tasks/*.rake').each {|r| import r}
+
 desc "Compile the site"
 task :compile do
   `nanoc compile`
