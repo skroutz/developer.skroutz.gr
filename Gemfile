@@ -12,6 +12,8 @@ gem 'pygments.rb'
 gem 'rake', '~> 0.9.2'
 gem 'faraday'
 gem 'thin'
+gem 'guard'
+gem 'guard-nanoc'
 
 group :development do
   gem 'adsf'
