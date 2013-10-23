@@ -16,19 +16,21 @@ A product/sku belongs to a leaf category.
 
     GET /categories
 
+  
+<%= render_recording :categories %>
+
 ## Get a single category
 
     GET /categories/:id
 
-### Response
-
-<%= headers 200 %>
-<%= json :single_category %>
+<%= render_recording :single_category %>
 
 ## Get the root category
 
     GET /categories/root
 
+
+<%= render_recording :categories_root %>
 
 ## List the skus of a category
 
@@ -39,7 +41,6 @@ Only leaf categories have skus.
 If you request the skus of a non-leaf category you'll get a `404 Not Found` response.
 
 ### Response
-The example response is paginated with `per=1` for the sake of brevity
+The example response is paginated with `per=3` for the sake of brevity
 
-<%= headers 200 %>
-<%= json :category_skus %>
+<%= render_recording :category_skus %>
