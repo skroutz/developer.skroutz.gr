@@ -1,6 +1,6 @@
 desc 'Generate API responses'
 namespace :response_mate do
-  task :fetch, :base_url, :requests_filename do |t, args|
+  task :record, :base_url, :requests_filename do |t, args|
     p "Generating responses for #{args[:base_url]}"
 
     requests_filename = args[:requests_filename] || './requests.yml'
