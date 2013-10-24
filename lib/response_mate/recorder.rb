@@ -102,7 +102,7 @@ module ResponseMate
     def write_to_file(key, request, response)
       File.open("#{ResponseMate.configuration.output_dir}#{key}.yml", 'w') do |f|
         f << {
-          request: request,
+          request: request.select { |_, v| !v.nil? },
           status: response.status,
           headers: response.headers,
           body: response.body
