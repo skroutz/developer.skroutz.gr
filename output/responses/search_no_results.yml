@@ -1,16 +1,21 @@
 ---
+:request:
+  :verb: GET
+  :path: /search
+  :params:
+    :q: asdasdsagjgjgjweigrweji
 :status: 404
 :headers: !ruby/hash:Faraday::Utils::Headers
   content-type: application/json; charset=utf-8
   x-meta-request-version: 0.2.1
   x-ua-compatible: IE=Edge,chrome=1
   cache-control: no-cache
-  x-request-id: ce390e22fe1dd3ee7ccc675242d8d8dc
-  x-runtime: '0.029789'
+  x-request-id: fecfec7b32bc5a6d19c7660829776107
+  x-runtime: '0.026794'
   server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
-  date: Thu, 24 Oct 2013 14:56:03 GMT
+  date: Thu, 24 Oct 2013 16:02:20 GMT
   content-length: '37'
   connection: close
-  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWY0ZGIxZjBjZTZkMGQ3ODljZWU5ODJjMDYxZjdiNjcwBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--4357f6a4d28d388f45324810a37efb49ddceadb7;
-    path=/; expires=Tue, 24-Dec-2013 15:56:03 GMT; HttpOnly
+  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWMzMWRkNzdmZDIxZWVmYmRlMDcxNzJlYmY4NjhhNzI3BjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--0c06ce01a7cb553cd5ffb2e640b544d1f0a090a3;
+    path=/; expires=Tue, 24-Dec-2013 17:02:20 GMT; HttpOnly
 :body: ! '{"meta":{"result_type":"no_results"}}'

@@ -16,6 +16,7 @@ gem 'thin'
 gem 'guard'
 gem 'guard-nanoc'
 gem 'colored'
+gem 'addressable'
 
 group :development do
   gem 'adsf'

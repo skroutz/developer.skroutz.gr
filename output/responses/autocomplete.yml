@@ -1,4 +1,9 @@
 ---
+:request:
+  :verb: GET
+  :path: /autocomplete
+  :params:
+    :keyphrase: iph
 :status: 200
 :headers: !ruby/hash:Faraday::Utils::Headers
   content-type: application/json; charset=utf-8
@@ -6,14 +11,14 @@
   x-meta-request-version: 0.2.1
   x-ua-compatible: IE=Edge,chrome=1
   etag: ! '"3399d3553336499c337e67c6374e94d1"'
-  x-request-id: 0d50b988644981fa9c35b03606178529
-  x-runtime: '0.024659'
+  x-request-id: 032124b8709a6be6be8d709082e7eb1e
+  x-runtime: '0.027816'
   server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
-  date: Thu, 24 Oct 2013 14:56:03 GMT
+  date: Thu, 24 Oct 2013 16:02:19 GMT
   content-length: '399'
   connection: close
-  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTAzNzlmOWM2OTRiOWRkNWQ0MDY4MWQ4YzliNjk4MjQzBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--112f971711aa773ceb3eff1a825e8b73a895f2f3;
-    path=/; expires=Tue, 24-Dec-2013 15:56:03 GMT; HttpOnly
+  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTkzZWZmMzc2ZWY0NGIwMjA4MWU0OWY2Y2EyMTBiNzllBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--9cddf522064939248da83e8820fcec6d1f8bb684;
+    path=/; expires=Tue, 24-Dec-2013 17:02:19 GMT; HttpOnly
 :body: ! '{"autocomplete":[{"k":"iphone 5c"},{"k":"iphone 5c","d":{"n":"\u039a\u03b9\u03bd\u03b7\u03c4\u03ac
   \u03a4\u03b7\u03bb\u03ad\u03c6\u03c9\u03bd\u03b1","u":"/c/40/kinhta-thlefwna.html"}},{"k":"iphone
   5s 16gb"},{"k":"iphone 5 s"},{"k":"iphone 5 c"},{"k":"iphone5c"},{"k":"iphone 3

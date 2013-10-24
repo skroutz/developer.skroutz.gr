@@ -1,12 +1,17 @@
 ---
+:request:
+  :verb: GET
+  :path: /search
+  :params:
+    :q: Dimage 2300
 :status: 500
 :headers: !ruby/hash:Faraday::Utils::Headers
   content-type: text/html; charset=utf-8
   content-length: '18850'
-  x-request-id: 7b2e08607bc55923d365c9f25637706c
-  x-runtime: '0.063024'
+  x-request-id: 2e58aa07420ae1817d03b678efede805
+  x-runtime: '0.064294'
   server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
-  date: Thu, 24 Oct 2013 14:56:03 GMT
+  date: Thu, 24 Oct 2013 16:02:20 GMT
   connection: close
 :body: ! "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\" />\n
   \ <title>Action Controller: Exception caught</title>\n  <style>\n    body { background-color:
@@ -197,7 +202,7 @@
   2300&quot;,\n &quot;vendor_string&quot;=&gt;&quot;skroutz&quot;,\n &quot;default_version&quot;=&gt;3}</pre></p>\n\n<p><a
   href=\"#\" onclick=\"document.getElementById('session_dump').style.display='block';
   return false;\">Show session dump</a></p>\n<div id=\"session_dump\" style=\"display:none\"><pre>locale:
-  &quot;el_GR&quot;\nsession_id: &quot;b8fc020a999e5231cbd9a8cba70ba8e1&quot;</pre></div>\n\n<p><a
+  &quot;el_GR&quot;\nsession_id: &quot;6dec4f473df0980dc24fbb8a467d92d3&quot;</pre></div>\n\n<p><a
   href=\"#\" onclick=\"document.getElementById('env_dump').style.display='block';
   return false;\">Show env dump</a></p>\n<div id=\"env_dump\" style=\"display:none\"><pre>GATEWAY_INTERFACE:
   &quot;CGI/1.1&quot;\nHTTP_ACCEPT: &quot;application/json,application/vnd.skroutz+json;

@@ -1,5 +1,6 @@
 require 'faraday'
 require 'faraday_middleware'
+require 'addressable/uri'
 
 module ResponseMate
   class Recorder
@@ -46,7 +47,7 @@ module ResponseMate
       request = parse_request_hash(request) if request.is_a? Hash
       STDOUT.print "#{request[:verb]}".cyan_on_black.bold <<  " #{request[:path]}\n"
       STDOUT.print "\tWith params #{request[:params]}\n" if !request[:params].nil?
-      write_to_file(key, fetch(request))
+      write_to_file(key, request, fetch(request))
     end
 
     def fetch(request)
@@ -58,9 +59,14 @@ module ResponseMate
 
     def parse_request_string(request_string)
       raise InvalidRequestStringError if request_string !~ REQUEST_MATCHER
+      { verb: $~[:verb] || DEFAULT_REQUEST[:verb] }.merge(extract_path_query($~[:path]))
+    end
+
+    def extract_path_query(str)
+      parsed = Addressable::URI.parse(str)
       {
-        verb: $~[:verb] || DEFAULT_REQUEST[:verb],
-        path: $~[:path]
+        path: parsed.path,
+        params: parsed.query_values
       }
     end
 
@@ -93,9 +99,10 @@ module ResponseMate
       end
     end
 
-    def write_to_file(filename, response)
-      File.open("#{ResponseMate.configuration.output_dir}#{filename}.yml", 'w') do |f|
+    def write_to_file(key, request, response)
+      File.open("#{ResponseMate.configuration.output_dir}#{key}.yml", 'w') do |f|
         f << {
+          request: request,
           status: response.status,
           headers: response.headers,
           body: response.body
