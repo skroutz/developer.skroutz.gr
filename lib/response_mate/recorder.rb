@@ -5,9 +5,11 @@ module ResponseMate
   class Recorder
     class InvalidRequestStringError < ArgumentError; end
 
-    Request_matcher = /^(?<verb>(GET|POST|PUT|PATCH|DELETE|OPTIONS)) (?<path>(.)*)$/im
-    Api_accept_header = 'application/vnd.skroutz+json; version=3'
-    User_agent = 'Response-Mate'
+    HTTP_VERBS = %w(GET POST PUT PATCH HEAD DELETE OPTIONS)
+    REQUEST_MATCHER = /^(?<verb>(#{HTTP_VERBS.join('|')})) (?<path>(.)*)$/im
+    DEFAULT_HEADERS = {
+      'User-Agent' => 'Response-Mate'
+    }
 
     attr_accessor :base_url, :conn, :manifest
 
@@ -25,7 +27,7 @@ module ResponseMate
       STDOUT.print "Base URL: #{@base_url}\n"
       STDOUT.print "Recording..\n"
 
-      @manifest['requests'].each do |request|
+      @manifest['requests'].compact.each do |request|
         process request['key'], request['request']
       end
     end
@@ -49,7 +51,7 @@ module ResponseMate
     end
 
     def parse_request_string(request_string)
-      raise InvalidRequestStringError if request_string !~ Request_matcher
+      raise InvalidRequestStringError if request_string !~ REQUEST_MATCHER
       {
         verb: $~[:verb],
         path: $~[:path]
@@ -66,10 +68,19 @@ module ResponseMate
         c.adapter Faraday.default_adapter
       end
 
-      @conn.headers['User-Agent'] = User_agent
-      @conn.headers['Accept'] = Api_accept_header
+      @conn.headers.merge(DEFAULT_HEADERS)
+      set_default_headers_from_manifest
       @conn.url_prefix = base_url
       @conn
+    end
+
+    def set_default_headers_from_manifest
+      if !@manifest['default_headers'].nil?
+        @manifest['default_headers'].each_pair do |k, v|
+          header_key = headerize(k)
+          @conn.headers[header_key] = v
+        end
+      end
     end
 
     def write_to_file(filename, response)
@@ -81,5 +92,7 @@ module ResponseMate
         }.to_yaml
       end
     end
+
+    def headerize(string); string.split('_').map(&:capitalize).join('-') end
   end
 end
