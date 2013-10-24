@@ -4,10 +4,13 @@ desc 'Generate API responses'
 namespace :response_mate do
   task :record, :base_url, :requests_manifest do |t, args|
     ResponseMate::Recorder.new(args).record
+    File.open(ResponseMate.configuration.output_dir + '.last_recording', 'w') do |f|
+      f << Time.now
+    end
   end
 
   task :clear do
-    FileUtils.rm_rf('output/responses/.')
+    FileUtils.rm_rf(ResponseMate.configuration.output_dir + '.')
     FileUtils.rm('tmp/compiled_content') if File.exist?('tmp/compiled_content')
     STDOUT.print "All clean and shiny!\n"
   end
