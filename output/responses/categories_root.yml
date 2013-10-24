@@ -6,12 +6,12 @@
   x-ua-compatible: IE=Edge,chrome=1
   etag: ! '"794cc8378b16d6f3efc6f9939fb15a6d"'
   cache-control: max-age=0, private, must-revalidate
-  x-request-id: 639c82bbb2d903657e8c767c35d130c5
-  x-runtime: '0.021134'
+  x-request-id: 01c2b4c91f6f4feffa5cea4d7cbc69f0
+  x-runtime: '0.028716'
   server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
-  date: Thu, 24 Oct 2013 09:11:33 GMT
+  date: Thu, 24 Oct 2013 14:56:02 GMT
   content-length: '133'
   connection: close
-  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTc4Y2FjN2Y0ODkzY2Y0MWVkMTRmODk5ZTY0ODVkMjRjBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--dad951ec37d2f8935180189279ba459a70c65122;
-    path=/; expires=Tue, 24-Dec-2013 10:11:33 GMT; HttpOnly
+  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTBkMjZiYTljNGE0ZjQ1NDM1ZmZiZDU4NDFjZjFlY2I1BjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--255962580475d41c1d5bff9df3089804d0418a09;
+    path=/; expires=Tue, 24-Dec-2013 15:56:02 GMT; HttpOnly
 :body: ! '{"category":{"children_count":6,"id":76,"name":"Skroutz","image_url":"http://c.scdn.gr/images/categories/large/76.jpg","leaf":false}}'

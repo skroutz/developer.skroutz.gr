@@ -1,4 +1,6 @@
 base_url: http://localhost:3000/api
+default_headers:
+  accept: 'application/vnd.skroutz+json; version=3'
 requests: 
   -
     key: categories
@@ -17,13 +19,17 @@ requests:
     request: 'GET /categories/1442/skus?page=1&per=3'
   -
     key: shops
-    request: 'GET /shops?page=1&per=4'
+    request:
+      path: '/shops'
+      params:
+        page: 1
+        per:  2
   -
     key: single_shop
     request: 'GET /shops/3'
   -
     key: single_manufacturer
-    request: 'GET /manufacturers/12906'
+    request: 'GET /manufacturers/12907'
   -
     key: autocomplete
     request: 'GET /autocomplete?keyphrase=iph'
@@ -32,10 +38,18 @@ requests:
     request: 'GET /search?q=a'
   -
     key: search_category_match
-    request: 'GET /search?q=computers&page=1&per=2'
+    request:
+      path: '/search'
+      params:
+        q: 'computers'
+        page: 1
+        per:  2
   -
     key: search_manufacturer_match
-    request: 'GET /search?q=apple'
+    request:
+      path: '/search'
+      params:
+        q: 'apple'
   -
     key: search_latin_mapping
     request: 'GET /search?q=ιπηονε&page=1&per=2'

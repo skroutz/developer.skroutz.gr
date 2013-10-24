@@ -5,10 +5,13 @@ module ResponseMate
   class Recorder
     class InvalidRequestStringError < ArgumentError; end
 
-    HTTP_VERBS = %w(GET POST PUT PATCH HEAD DELETE OPTIONS)
+    HTTP_VERBS = %w(GET POST PUT PATCH DELETE HEAD OPTIONS)
     REQUEST_MATCHER = /^(?<verb>(#{HTTP_VERBS.join('|')})) (?<path>(.)*)$/im
     DEFAULT_HEADERS = {
       'User-Agent' => 'Response-Mate'
+    }
+    DEFAULT_REQUEST = {
+      verb:'GET'
     }
 
     attr_accessor :base_url, :conn, :manifest
@@ -39,12 +42,15 @@ module ResponseMate
     end
 
     def process(key, request)
-      request = parse_request_string(request) if request.is_a?(String)
+      request = parse_request_string(request) if request.is_a? String
+      request = parse_request_hash(request) if request.is_a? Hash
       STDOUT.print "#{request[:verb]}".cyan_on_black.bold <<  " #{request[:path]}\n"
+      STDOUT.print "\tWith params #{request[:params]}\n" if !request[:params].nil?
       write_to_file(key, fetch(request))
     end
 
     def fetch(request)
+      @conn.params = request[:params] if !request[:params].nil?
       @conn.send request[:verb].downcase.to_sym, "#{base_url}#{request[:path]}"
     rescue Faraday::Error::ConnectionFailed
       STDOUT.print "Is a server up and running at #{@base_url}?\n".red
@@ -53,9 +59,13 @@ module ResponseMate
     def parse_request_string(request_string)
       raise InvalidRequestStringError if request_string !~ REQUEST_MATCHER
       {
-        verb: $~[:verb],
+        verb: $~[:verb] || DEFAULT_REQUEST[:verb],
         path: $~[:path]
       }
+    end
+
+    def parse_request_hash(hash)
+      DEFAULT_REQUEST.merge(hash.symbolize_keys)
     end
 
     def format_request_string(request)

@@ -6,13 +6,13 @@
   x-ua-compatible: IE=Edge,chrome=1
   etag: ! '"30e281c7d387d226e61451426860efdc"'
   cache-control: max-age=0, private, must-revalidate
-  x-request-id: b301f2ec87cff911ff30021c864803a5
-  x-runtime: '0.047464'
+  x-request-id: ff41bdac4f4717f42366c51ad09cf115
+  x-runtime: '0.042011'
   server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
-  date: Thu, 24 Oct 2013 09:11:33 GMT
+  date: Thu, 24 Oct 2013 14:56:03 GMT
   content-length: '427'
   connection: close
-  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWZiOTJiODJjZDk3MTljMDljNDc2NTYzYzAzZTZkODBhBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--4419e363170e8a0ab3eaab5a2e05b7a1136b2786;
-    path=/; expires=Tue, 24-Dec-2013 10:11:33 GMT; HttpOnly
+  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTI2MTJhMGI4NTNmNTkwODcxNjU0ZWZiOGIxN2NmYWMwBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--fddabaf52ba161ee653052159b01922ce1165d2c;
+    path=/; expires=Tue, 24-Dec-2013 15:56:03 GMT; HttpOnly
 :body: ! '{"categories":[{"children_count":0,"id":115,"name":"\u0395\u03c6\u03b1\u03c1\u03bc\u03bf\u03b3\u03ad\u03c2
   \u0393\u03c1\u03b1\u03c6\u03b5\u03af\u03bf\u03c5","image_url":"http://d.scdn.gr/images/categories/large/115.jpg","leaf":true,"match_count":1},{"children_count":0,"id":37,"name":"Gadgets","image_url":"http://a.scdn.gr/images/categories/large/37.jpg","leaf":true,"match_count":1}],"meta":{"result_type":"category_facade"}}'
