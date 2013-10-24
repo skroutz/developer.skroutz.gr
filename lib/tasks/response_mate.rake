@@ -18,7 +18,7 @@ namespace :response_mate do
   task :list do
     STDOUT.print "Listing available responses\n"
     STDOUT.print "---------------------------\n"
-    Dir.glob('output/**/*.yml').map { |k| 
+    Dir.glob(ResponseMate.configuration.output_dir[2..-1] + ' /*.yml').map { |k|
       k.split('/').last.gsub('.yml', '') << "\n"
     }.sort.each { |k| STDOUT.print k }
   end
