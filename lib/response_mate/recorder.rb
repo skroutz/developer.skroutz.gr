@@ -76,6 +76,7 @@ module ResponseMate
       File.open("./output/responses/#{filename}.yml", 'w') do |f|
         f << {
           status: response.status,
+          headers: response.headers,
           body: response.body
         }.to_yaml
       end

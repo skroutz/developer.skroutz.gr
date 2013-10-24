@@ -1,4 +1,18 @@
 ---
 :status: 200
+:headers: !ruby/hash:Faraday::Utils::Headers
+  content-type: application/json; charset=utf-8
+  x-meta-request-version: 0.2.1
+  x-ua-compatible: IE=Edge,chrome=1
+  etag: ! '"337c053d143e4fd19ab6b9d15b4a73cb"'
+  cache-control: max-age=0, private, must-revalidate
+  x-request-id: 3ea98a96e6a14c3a78a1da5f93c2ea04
+  x-runtime: '0.017923'
+  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
+  date: Thu, 24 Oct 2013 09:11:33 GMT
+  content-length: '271'
+  connection: close
+  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTdhOTAxMWRlMWY0YzE3ZmQ1NDEyZWYxZDA5YzYxZjA2BjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--34119dabfa5813e82c6dbb1cca287a276feae2a1;
+    path=/; expires=Tue, 24-Dec-2013 10:11:33 GMT; HttpOnly
 :body: ! '{"category":{"children_count":0,"id":1442,"name":"\u039e\u03b1\u03c0\u03bb\u03ce\u03c3\u03c4\u03c1\u03b5\u03c2
   \u039a\u03ae\u03c0\u03bf\u03c5 & \u0392\u03b5\u03c1\u03ac\u03bd\u03c4\u03b1\u03c2","image_url":"http://b.scdn.gr/images/categories/large/1442.jpg","leaf":true}}'

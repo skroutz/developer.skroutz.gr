@@ -1,3 +1,17 @@
 ---
 :status: 200
+:headers: !ruby/hash:Faraday::Utils::Headers
+  content-type: application/json; charset=utf-8
+  x-meta-request-version: 0.2.1
+  x-ua-compatible: IE=Edge,chrome=1
+  etag: ! '"35357afc601f1407a6cd956dd56a87cb"'
+  cache-control: max-age=0, private, must-revalidate
+  x-request-id: 4e7004659d7eef6942276f57a06079bc
+  x-runtime: '0.052260'
+  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
+  date: Thu, 24 Oct 2013 09:11:34 GMT
+  content-length: '268'
+  connection: close
+  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTM1ZTQ5OWY0MzgwZWQ1OWE1MmQyNGE2NmViN2JiMzIyBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--1f99d44d27696f2ec43d51af51b562bf98f8d2f2;
+    path=/; expires=Tue, 24-Dec-2013 10:11:34 GMT; HttpOnly
 :body: ! '{"category":{"children_count":0,"id":146,"name":"\u039c\u03b9\u03ba\u03c1\u03bf\u03b7\u03bb\u03b5\u03ba\u03c4\u03c1\u03bf\u03bd\u03b9\u03ba\u03ac","image_url":"http://a.scdn.gr/images/categories/large/146.jpg","leaf":true},"meta":{"result_type":"category_skus_match"}}'
