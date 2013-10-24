@@ -22,4 +22,13 @@ namespace :response_mate do
       k.split('/').last.gsub('.yml', '') << "\n"
     }.sort.each { |k| STDOUT.print k }
   end
+
+  task :last_recording_time do
+    begin
+      STDOUT.print 'Last was recording occured at: '
+      STDOUT.print File.new(ResponseMate.configuration.output_dir + '.last_recording').read
+    rescue Errno::ENOENT
+      STDOUT.print "\n\tNo recording information present".red
+    end
+  end
 end
