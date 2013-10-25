@@ -9,8 +9,15 @@ module ResponseMate
 
     private
     def format_request(recording)
+      format_params(recording[:request])
+    end
+
+    def format_params(hash)
       output = "<ul>"
-      output << recording[:request].map { |k, v| "<li>#{k.capitalize}: #{v}</li>" }.join()
+      output << hash.map { |k, v|
+        val = v.is_a?(Hash) ? format_params(v) : v
+        "<li>#{k}: #{val}</li>"
+      }.join()
       output << "</ul>"
     end
 

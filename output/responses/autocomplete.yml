@@ -11,14 +11,14 @@
   x-meta-request-version: 0.2.1
   x-ua-compatible: IE=Edge,chrome=1
   etag: ! '"3399d3553336499c337e67c6374e94d1"'
-  x-request-id: 032124b8709a6be6be8d709082e7eb1e
-  x-runtime: '0.027816'
+  x-request-id: 79ac6d8679f1715b9d382a0c117ea0ac
+  x-runtime: '0.031442'
   server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
-  date: Thu, 24 Oct 2013 16:02:19 GMT
+  date: Thu, 24 Oct 2013 16:49:49 GMT
   content-length: '399'
   connection: close
-  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTkzZWZmMzc2ZWY0NGIwMjA4MWU0OWY2Y2EyMTBiNzllBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--9cddf522064939248da83e8820fcec6d1f8bb684;
-    path=/; expires=Tue, 24-Dec-2013 17:02:19 GMT; HttpOnly
+  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWY5NTZmMDg1MzkwOTQ5MmM4Y2U2YTI5NzA0YjNjMTE1BjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--9c5f147886ff2b37f364b876dc10e4cf225a72a0;
+    path=/; expires=Tue, 24-Dec-2013 17:49:49 GMT; HttpOnly
 :body: ! '{"autocomplete":[{"k":"iphone 5c"},{"k":"iphone 5c","d":{"n":"\u039a\u03b9\u03bd\u03b7\u03c4\u03ac
   \u03a4\u03b7\u03bb\u03ad\u03c6\u03c9\u03bd\u03b1","u":"/c/40/kinhta-thlefwna.html"}},{"k":"iphone
   5s 16gb"},{"k":"iphone 5 s"},{"k":"iphone 5 c"},{"k":"iphone5c"},{"k":"iphone 3

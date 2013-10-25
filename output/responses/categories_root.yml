@@ -2,7 +2,6 @@
 :request:
   :verb: GET
   :path: /categories/root
-  :params: 
 :status: 200
 :headers: !ruby/hash:Faraday::Utils::Headers
   content-type: application/json; charset=utf-8
@@ -10,12 +9,12 @@
   x-ua-compatible: IE=Edge,chrome=1
   etag: ! '"794cc8378b16d6f3efc6f9939fb15a6d"'
   cache-control: max-age=0, private, must-revalidate
-  x-request-id: d1b717158f751beb1e4b1dfc1af2d288
-  x-runtime: '0.086168'
+  x-request-id: 132d60b4127c6271a7f73e9f47696267
+  x-runtime: '0.024564'
   server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
-  date: Thu, 24 Oct 2013 16:02:19 GMT
+  date: Thu, 24 Oct 2013 16:49:48 GMT
   content-length: '133'
   connection: close
-  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTNmZGVmMWNiOGUwMGQwZmMwYWMxMDY1MDkzYWRiNDkyBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--bff80f01ec1884efbf9ffda3e2245898cd697d00;
-    path=/; expires=Tue, 24-Dec-2013 17:02:19 GMT; HttpOnly
+  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWY2MzllZDAxM2U4YTQ0OTc5MmIzNWUzNDk1OTQzZjM5BjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--38c4a4559bcbea03bdb711b538f76629a21e57e4;
+    path=/; expires=Tue, 24-Dec-2013 17:49:48 GMT; HttpOnly
 :body: ! '{"category":{"children_count":6,"id":76,"name":"Skroutz","image_url":"http://c.scdn.gr/images/categories/large/76.jpg","leaf":false}}'
