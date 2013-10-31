@@ -68,3 +68,6 @@ requests:
   - 
     key: search_skus_match
     request: 'GET /search?q=Cubieboard2&page=1&per=2'
+  - 
+    key: autocomplete
+    request: 'GET /autocomplete?q=iphone'

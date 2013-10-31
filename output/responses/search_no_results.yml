@@ -10,12 +10,12 @@
   x-meta-request-version: 0.2.1
   x-ua-compatible: IE=Edge,chrome=1
   cache-control: no-cache
-  x-request-id: 51d82a1409d3ea84beba404f66ca2f06
-  x-runtime: '0.024945'
+  x-request-id: 25d84f5621db3148884c87a995d9e900
+  x-runtime: '0.032605'
   server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
-  date: Thu, 24 Oct 2013 16:49:49 GMT
+  date: Thu, 31 Oct 2013 10:58:17 GMT
   content-length: '37'
   connection: close
-  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTA5M2U3NTA5N2Y3MmUyNzc4N2MzODdmNmI3ZjhmYWIyBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--bf88552f76608cc445ed60f4b2f70f80c1f34988;
-    path=/; expires=Tue, 24-Dec-2013 17:49:49 GMT; HttpOnly
+  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTdlM2Y1MTQxODhiM2YwYzdkOTNiOTI1NDQwYTVjYjk1BjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--d32e0436ebc8bcab6550a3c78eca8bdcc29b57cf;
+    path=/; expires=Tue, 31-Dec-2013 10:58:17 GMT; HttpOnly
 :body: ! '{"meta":{"result_type":"no_results"}}'

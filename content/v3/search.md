@@ -55,3 +55,13 @@ Case: `drop` *Your query has no results but the proposals in the
 response have*
 
 <%= render_recording :search_drop %>
+
+## Autocomplete
+
+      GET /autocomplete
+
+### Parameters
+q  
+: **Required** **string** The keyphrase to search by
+
+<%= render_recording :autocomplete %>
