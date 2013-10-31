@@ -71,3 +71,12 @@ requests:
   - 
     key: autocomplete
     request: 'GET /autocomplete?q=iphone'
+  -
+    key: skus_index
+    request: 'GET /skus?page=1&per=3'
+  -
+    key: skus_show
+    request: 'GET /skus/3703742'
+  -
+    key: skus_products
+    request: 'GET /skus/3703742/products'

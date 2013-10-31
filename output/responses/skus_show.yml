@@ -1,0 +1,20 @@
+---
+:request:
+  :verb: GET
+  :path: /skus/3703742
+:status: 200
+:headers: !ruby/hash:Faraday::Utils::Headers
+  content-type: application/json; charset=utf-8
+  x-meta-request-version: 0.2.1
+  x-ua-compatible: IE=Edge,chrome=1
+  etag: ! '"f46a3f31e7c12c5d1de8c8e757f33a7e"'
+  cache-control: max-age=0, private, must-revalidate
+  x-request-id: 9c53c8bb5016ac0fe723b5a53f0a94b9
+  x-runtime: '0.023505'
+  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
+  date: Thu, 31 Oct 2013 13:26:09 GMT
+  content-length: '647'
+  connection: close
+  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTk5MDFhZDNmNTlkODFmODU3NWVjNGY3ZmUxYzNjMzRkBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--a38e79ca23f4a79b4434502ed4e82b51998d0958;
+    path=/; expires=Tue, 31-Dec-2013 13:26:09 GMT; HttpOnly
+:body: ! '{"sku":{"id":3703742,"ean":"","pn":"","first_product_shop_info":"821|Z-mall","click_url":"http://www.skroutz.gr/products/show/13313785","price_max":11.7,"price_min":11.7,"reviewscore":0.0,"shop_count":1,"plain_spec_summary":"","active_products_count":1,"main_picture":{"small_url":"http://b.scdn.gr/images/sku_main_images/003703/3703742/small_13313785-orig.jpg","original_url":"http://c.scdn.gr/images/sku_main_images/003703/3703742/medium_13313785-orig.jpg","tiny_url":"http://c.scdn.gr/images/sku_main_images/003703/3703742/tiny_13313785-orig.jpg","medium_url":"http://c.scdn.gr/images/sku_main_images/003703/3703742/medium_13313785-orig.jpg"}}}'
