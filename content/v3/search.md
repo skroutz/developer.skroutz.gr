@@ -28,7 +28,7 @@ Case: `category_match` *When your query matched a category*
 
 <%= render_recording :search_category_match %>
 
-Case: `category_facade` *When your query matched many categories category*
+Case: `category_facade` *When your query matched many categories*
 
 <%= render_recording :search_category_facade %>
 
