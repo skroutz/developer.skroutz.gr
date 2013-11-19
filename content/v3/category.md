@@ -12,35 +12,27 @@ title: Categories | Skroutz API
 Categories are organized in a tree-like structure.  
 A product/sku belongs to a leaf category.
 
-## List categories
+## List all categories
 
-    GET /categories
-
-  
-<%= render_recording :categories %>
+<%= render_recording :categories_index %>
 
 ## Get a single category
 
-    GET /categories/:id
-
-<%= render_recording :single_category %>
+<%= render_recording :categories_show %>
 
 ## Get the root category
-
-    GET /categories/root
-
 
 <%= render_recording :categories_root %>
 
 ## List the skus of a category
 
-    GET /categories/:category_id/skus
-
 ### Note 
 Only leaf categories have skus.  
 If you request the skus of a non-leaf category you'll get a `404 Not Found` response.
 
-### Response
-The example response is paginated with `per=3` for the sake of brevity
-
 <%= render_recording :category_skus %>
+
+## List the children categories of a category
+
+<%= render_recording :category_children %>
+

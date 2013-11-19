@@ -1,15 +1,15 @@
 base_url: http://localhost:3000/api
 default_headers:
   accept: 'application/vnd.skroutz+json; version=3'
-requests: 
+requests:
   -
-    key: categories
+    key: categories_index
     request: 'GET /categories?page=1&per=5'
   -
     key: categories_root
     request: 'GET /categories/root'
   -
-    key: single_category
+    key: categories_show
     request: 'GET /categories/1442'
   -
     key: category_children
