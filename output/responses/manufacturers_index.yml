@@ -1,0 +1,19 @@
+---
+:request:
+  :verb: GET
+  :path: /manufactures
+:status: 404
+:headers: !ruby/hash:Faraday::Utils::Headers
+  content-type: application/json; charset=utf-8
+  x-meta-request-version: 0.2.1
+  x-ua-compatible: IE=Edge,chrome=1
+  cache-control: no-cache
+  x-request-id: 7c80ec3a22c0496a9e3b1e1adebcac1f
+  x-runtime: '0.612041'
+  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
+  date: Fri, 15 Nov 2013 16:38:58 GMT
+  content-length: '0'
+  connection: close
+  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTBiZDIyOTc2ZTMwNzA4Zjk5MTQ5NDZjZDYwZjQ4YjM3BjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--e7bf2dc3083270e061d7d063e8ded17c841bd466;
+    path=/; expires=Wed, 15-Jan-2014 16:38:58 GMT; HttpOnly
+:body: ''

@@ -7,10 +7,10 @@ title: Manufacturers | Skroutz API
 * TOC
 {:toc}
 
-## Get a single manufacturer
+## List manufacturers
 
-    GET /manufacturers/:id
+<%= render_recording :manufacturers_index %>
 
-### Response
+## Retrieve a single manufacturer
 
-<%= render_recording :single_manufacturer %>
+<%= render_recording :manufacturers_show %>
