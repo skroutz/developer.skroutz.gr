@@ -7,9 +7,7 @@ title: Shops | Skroutz API
 * TOC
 {:toc}
 
-## List shops 
-
-    GET /shops
+## List shops
 
 ### Parameters
 
@@ -17,10 +15,8 @@ letter
 : _Optional_ **string** Filter shops of which the first letter matches
 the given value
 
-<%= render_recording :shops %>
+<%= render_recording :shops_index %>
 
-## Get a single shop
+## Retrieve a single shop
 
-    GET /shops/:id
-
-<%= render_recording :single_shop %>
+<%= render_recording :shops_show %>
