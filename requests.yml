@@ -92,3 +92,9 @@ requests:
   -
     key: products_show
     request: 'GET /products/13313788'
+  -
+    key: favorites_index
+    request: 'GET /favorites?oauth_token=PfmMB26BZ8gcA3bMpZXc/6AIZmPCbEZ9wvkDr7A8Vu31GwDSoeBD6xaezCLaqPa/wejrDMWDHbuvVJUZBKxfQ=='
+  -
+    key: favorites_show
+    request: 'GET /favorites/254728?oauth_token=PfmMB26BZ8gcA3bMpZXc/6AIZmPCbEZ9wvkDr7A8Vu31GwDSoeBD6xaezCLaqPa/wejrDMWDHbuvVJUZBKxfQ=='
