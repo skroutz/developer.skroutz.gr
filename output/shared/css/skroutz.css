@@ -8,3 +8,7 @@
   font-weight: 300;
   font-family: "ubuntu", sans-serif;
 }
+
+#main ul.request-params {
+  list-style: none;
+}

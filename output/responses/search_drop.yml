@@ -11,12 +11,12 @@
   x-ua-compatible: IE=Edge,chrome=1
   etag: ! '"46d9f5f8501f0fbd6720ff256ea7ed15"'
   cache-control: max-age=0, private, must-revalidate
-  x-request-id: fca1358863f6ada073284630f05721cc
-  x-runtime: '0.074058'
+  x-request-id: fb3e673ae216a1d0535ff54760f1e454
+  x-runtime: '0.070799'
   server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
-  date: Thu, 31 Oct 2013 12:25:26 GMT
+  date: Fri, 15 Nov 2013 16:38:58 GMT
   content-length: '62'
   connection: close
-  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTBkZDg4ODM1ZDE3MjZhNmRlODE5OGRiZmI2ZDU4NzEyBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--f31aa4bfc9c22e0ccba928451a818eb9bac60bc9;
-    path=/; expires=Tue, 31-Dec-2013 12:25:26 GMT; HttpOnly
+  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTEzMjhiYzU4NjQ2MDk4OTg4MjlkMmU2NTQ0MGRjNTYwBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--dca11980e1c2a9956ad78f2bee0de8d9f52a60b2;
+    path=/; expires=Wed, 15-Jan-2014 16:38:58 GMT; HttpOnly
 :body: ! '{"proposals":["wrong","iphone"],"meta":{"result_type":"drop"}}'

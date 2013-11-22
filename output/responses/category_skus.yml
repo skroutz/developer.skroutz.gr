@@ -12,14 +12,14 @@
   x-ua-compatible: IE=Edge,chrome=1
   etag: ! '"9deb047d7c99881edaf82308566b5599"'
   cache-control: max-age=0, private, must-revalidate
-  x-request-id: 2c622993e670cc425005de818d94b09c
-  x-runtime: '0.266549'
+  x-request-id: 467d1890e14c20299ad8fc2163017cd7
+  x-runtime: '0.158709'
   server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
-  date: Thu, 31 Oct 2013 12:25:25 GMT
+  date: Fri, 15 Nov 2013 16:38:57 GMT
   content-length: '2423'
   connection: close
-  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTdiNzFhYmFlNjlmMDQ3N2IxMjNlZGY3NGU5MzI4NWMwBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--18c93e2457af8e2ee92e35073a12cd9614a2533b;
-    path=/; expires=Tue, 31-Dec-2013 12:25:25 GMT; HttpOnly
+  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWFjNWZjZmM0ZGRiMzg1ZmYyYTY5YmJjOWI2MmRkNTBmBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--3b1d784572e5894a55386b235dc36f8f7230324b;
+    path=/; expires=Wed, 15-Jan-2014 16:38:57 GMT; HttpOnly
 :body: ! '{"skus":[{"id":3407669,"ean":"","pn":"","first_product_shop_info":null,"click_url":"http://www.skroutz.gr/products/show/12718505","price_max":null,"price_min":null,"reviewscore":0.0,"shop_count":0,"plain_spec_summary":"\u03a4\u03cd\u03c0\u03bf\u03c2:
   \u039e\u03b1\u03c0\u03bb\u03ce\u03c3\u03c4\u03c1\u03b5\u03c2 \u039a\u03ae\u03c0\u03bf\u03c5
   & \u0392\u03b5\u03c1\u03ac\u03bd\u03c4\u03b1\u03c2","active_products_count":0,"main_picture":{"small_url":"http://b.scdn.gr/images/sku_main_images/003407/3407669/small_12718505-orig.jpg","original_url":"http://c.scdn.gr/images/sku_main_images/003407/3407669/medium_12718505-orig.jpg","tiny_url":"http://a.scdn.gr/images/sku_main_images/003407/3407669/tiny_12718505-orig.jpg","medium_url":"http://c.scdn.gr/images/sku_main_images/003407/3407669/medium_12718505-orig.jpg"}},{"id":3407670,"ean":"","pn":"","first_product_shop_info":null,"click_url":"http://www.skroutz.gr/products/show/12718504","price_max":null,"price_min":null,"reviewscore":0.0,"shop_count":0,"plain_spec_summary":"\u03a4\u03cd\u03c0\u03bf\u03c2:

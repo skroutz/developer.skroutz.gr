@@ -18,18 +18,21 @@ requests:
     key: category_skus
     request: 'GET /categories/1442/skus?page=1&per=3'
   -
-    key: shops
+    key: shops_index
     request:
       path: '/shops'
       params:
         page: 1
         per:  2
   -
-    key: single_shop
+    key: shops_show
     request: 'GET /shops/3'
   -
-    key: single_manufacturer
+    key: manufacturers_show
     request: 'GET /manufacturers/12907'
+  -
+    key: manufacturers_index
+    request: 'GET /manufactures'
   -
     key: autocomplete
     request: 'GET /autocomplete?keyphrase=iph'
@@ -59,16 +62,16 @@ requests:
   -
     key: search_no_results
     request: 'GET /search?q=asdasdsagjgjgjweigrweji'
-  - 
+  -
     key: search_category_facade
     request: 'GET /search?q=iphone&page=1&per=2'
   -
     key: search_sku_match
     request: 'GET /search?q=Dimage%202300'
-  - 
+  -
     key: search_skus_match
     request: 'GET /search?q=Cubieboard2&page=1&per=2'
-  - 
+  -
     key: autocomplete
     request: 'GET /autocomplete?q=iphone'
   -
@@ -80,3 +83,9 @@ requests:
   -
     key: skus_products
     request: 'GET /skus/3703742/products'
+  -
+    key: products_index
+    request: 'GET /products'
+  -
+    key: products_show
+    request: 'GET /products/13313788'

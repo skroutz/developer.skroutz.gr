@@ -13,10 +13,10 @@ module ResponseMate
     end
 
     def format_params(hash)
-      output = "<ul>"
+      output = '<ul class="request-params">'
       output << hash.map { |k, v|
         val = v.is_a?(Hash) ? format_params(v) : v
-        "<li>#{k}: #{val}</li>"
+        "<li><span class=\"label\">#{k}</span>: #{val}</li>"
       }.join()
       output << "</ul>"
     end

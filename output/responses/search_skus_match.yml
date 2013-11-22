@@ -13,12 +13,12 @@
   x-ua-compatible: IE=Edge,chrome=1
   etag: ! '"35357afc601f1407a6cd956dd56a87cb"'
   cache-control: max-age=0, private, must-revalidate
-  x-request-id: 9f563b8742d9b8e57c6236592a392377
-  x-runtime: '0.127043'
+  x-request-id: 2f185b68a07bf51184fd3c6c6eb17d7d
+  x-runtime: '0.049222'
   server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
-  date: Thu, 31 Oct 2013 12:25:26 GMT
+  date: Fri, 15 Nov 2013 16:38:59 GMT
   content-length: '268'
   connection: close
-  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTlkMjI1YWU3NTNiNmU2NzNjMTFkMzY4ZTFmZDFlYWQzBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--0079d983ee49683c39bca08ef0dab9dcf75db029;
-    path=/; expires=Tue, 31-Dec-2013 12:25:26 GMT; HttpOnly
+  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTkwYWQ4ZWMwOGUyMGU5ZWY0YTNlNmY4MTBlZTg1NjhhBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--00825e040f24edf23ea4dc4584737fe76ec19132;
+    path=/; expires=Wed, 15-Jan-2014 16:38:59 GMT; HttpOnly
 :body: ! '{"category":{"children_count":0,"id":146,"name":"\u039c\u03b9\u03ba\u03c1\u03bf\u03b7\u03bb\u03b5\u03ba\u03c4\u03c1\u03bf\u03bd\u03b9\u03ba\u03ac","image_url":"http://a.scdn.gr/images/categories/large/146.jpg","leaf":true},"meta":{"result_type":"category_skus_match"}}'
