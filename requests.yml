@@ -12,7 +12,6 @@ requests:
     key: categories_show
     request: 'GET /categories/1442'
   -
-    key: category_children
     request: 'GET /categories/73/children'
   -
     key: category_skus
@@ -32,7 +31,11 @@ requests:
     request: 'GET /manufacturers/12907'
   -
     key: manufacturers_index
-    request: 'GET /manufactures'
+    request:
+      path: '/manufacturers'
+      params:
+        page: 1
+        per:  2
   -
     key: autocomplete
     request: 'GET /autocomplete?keyphrase=iph'

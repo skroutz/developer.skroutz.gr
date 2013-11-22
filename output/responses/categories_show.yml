@@ -9,13 +9,13 @@
   x-ua-compatible: IE=Edge,chrome=1
   etag: ! '"337c053d143e4fd19ab6b9d15b4a73cb"'
   cache-control: max-age=0, private, must-revalidate
-  x-request-id: 7908b3d04985d42b4be53de96dcaf843
-  x-runtime: '0.021468'
+  x-request-id: c855473c1b5241b814bef15cccb65380
+  x-runtime: '0.019079'
   server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
-  date: Fri, 15 Nov 2013 16:38:57 GMT
+  date: Fri, 22 Nov 2013 10:06:13 GMT
   content-length: '271'
   connection: close
-  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTA4NzNkMTU5ODE3NWYzYzU0ZDQ1NDk3YWQ4N2I5MTQxBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--b0c7f4dcc74249fe2e9d3c8344d41fcdc2491444;
-    path=/; expires=Wed, 15-Jan-2014 16:38:57 GMT; HttpOnly
+  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWU5MjZhYmVjYmI3ODU3YTYwMjhkMmY2MzRiZTRjZGQ1BjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--d86a488e5e9a32a705c108557b82c7d6b3e451cd;
+    path=/; expires=Wed, 22-Jan-2014 10:06:13 GMT; HttpOnly
 :body: ! '{"category":{"children_count":0,"id":1442,"name":"\u039e\u03b1\u03c0\u03bb\u03ce\u03c3\u03c4\u03c1\u03b5\u03c2
   \u039a\u03ae\u03c0\u03bf\u03c5 & \u0392\u03b5\u03c1\u03ac\u03bd\u03c4\u03b1\u03c2","image_url":"http://b.scdn.gr/images/categories/large/1442.jpg","leaf":true}}'

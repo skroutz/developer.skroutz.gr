@@ -9,12 +9,12 @@
   x-ua-compatible: IE=Edge,chrome=1
   etag: ! '"29eda015fe3d564135c31149a7a3172e"'
   cache-control: max-age=0, private, must-revalidate
-  x-request-id: 809fe15d6b6b93a37e01ac8113d0cdb6
-  x-runtime: '0.027449'
+  x-request-id: a7f94a723e8a1adf429d93833069c5aa
+  x-runtime: '0.018261'
   server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
-  date: Fri, 15 Nov 2013 16:38:57 GMT
+  date: Fri, 22 Nov 2013 10:06:14 GMT
   content-length: '62'
   connection: close
-  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTc2ZjBlNTQ1ZmViM2I4ZmJiZjA3OTU1NWYwMDkwNzIzBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--4c4831cc1a4c3fcc7fc969c4f845b19ed4c7a731;
-    path=/; expires=Wed, 15-Jan-2014 16:38:57 GMT; HttpOnly
+  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTg5ZDY5ZjJlNmNiNDllZTg5NmM3ZTIwYzVlNDE1ZjA1BjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--23d24a6ff78ab42021f1de04388c0eafa8954f6f;
+    path=/; expires=Wed, 22-Jan-2014 10:06:14 GMT; HttpOnly
 :body: ! '{"manufacturer":{"id":12907,"name":"Rapala","image_url":null}}'

@@ -9,14 +9,14 @@
   x-ua-compatible: IE=Edge,chrome=1
   etag: ! '"ec448f736aa3c5416ef6fb595b870aff"'
   cache-control: max-age=0, private, must-revalidate
-  x-request-id: 28711c628d91358ecc3e0c0db35730cc
-  x-runtime: '0.030109'
+  x-request-id: 058ec1dd55c5138e4d0e9e9d55730099
+  x-runtime: '0.034707'
   server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
-  date: Fri, 15 Nov 2013 16:38:57 GMT
+  date: Fri, 22 Nov 2013 09:59:28 GMT
   content-length: '814'
   connection: close
-  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTc5N2UxMWRkNDFiYTUwZWQxODU3NGUzMjc5YjE0MmVmBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--28166ed6b6389100907bdfa201cff36f9a1388bc;
-    path=/; expires=Wed, 15-Jan-2014 16:38:57 GMT; HttpOnly
+  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTIyZTkwNzZlNGY0NDM5MDc0OTRhOTJmZWIxZWE5NWM3BjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--19d9d9b3c102d5a704c895bf8ba9b48a548dd999;
+    path=/; expires=Wed, 22-Jan-2014 09:59:28 GMT; HttpOnly
 :body: ! '{"categories":[{"children_count":0,"id":365,"name":"\u0394\u03b9\u03ac\u03c6\u03bf\u03c1\u03b5\u03c2
   \u03a5\u03c0\u03b7\u03c1\u03b5\u03c3\u03af\u03b5\u03c2","image_url":"http://c.scdn.gr/images/categories/large/365.jpg","leaf":true},{"children_count":0,"id":107,"name":"\u0395\u03c0\u03b5\u03ba\u03c4\u03ac\u03c3\u03b5\u03b9\u03c2
   \u0395\u03b3\u03b3\u03cd\u03b7\u03c3\u03b7\u03c2","image_url":"http://c.scdn.gr/images/categories/large/107.jpg","leaf":true},{"children_count":0,"id":106,"name":"\u03a3\u03c5\u03bd\u03b4\u03ad\u03c3\u03b5\u03b9\u03c2

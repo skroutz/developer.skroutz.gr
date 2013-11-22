@@ -7,19 +7,21 @@
     :per: '3'
 :status: 200
 :headers: !ruby/hash:Faraday::Utils::Headers
+  link: <http://localhost:3000/api/skus?page=738701&per=3>; rel="last", <http://localhost:3000/api/skus?page=2&per=3>;
+    rel="next"
   content-type: application/json; charset=utf-8
   x-meta-request-version: 0.2.1
   x-ua-compatible: IE=Edge,chrome=1
   etag: ! '"e176e3188cbb947b73675b6ad644a9f2"'
   cache-control: max-age=0, private, must-revalidate
-  x-request-id: 84f206dc0dc68cdeb75e338568f2349e
-  x-runtime: '0.026908'
+  x-request-id: dc23ffe45077df651150f084249a99f7
+  x-runtime: '0.271594'
   server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
-  date: Fri, 15 Nov 2013 16:38:59 GMT
+  date: Fri, 22 Nov 2013 10:06:15 GMT
   content-length: '2161'
   connection: close
-  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTBjZjdiNWE1Yzg0ODE0NDQyZTY4ZDc2N2MzMTEwYTFkBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--a344ac570078f23707182aad80f397e4a87cba04;
-    path=/; expires=Wed, 15-Jan-2014 16:38:59 GMT; HttpOnly
+  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWYxMGRkN2Y4MWRhNjU2ZDhlYzYyMmU1NmU2OTVmNjBlBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--6caaf9a86914bbb00080b57116ed85174f6a4c57;
+    path=/; expires=Wed, 22-Jan-2014 10:06:15 GMT; HttpOnly
 :body: ! '{"skus":[{"id":105,"ean":"","pn":"","first_product_shop_info":null,"click_url":null,"price_max":127.07,"price_min":127.07,"reviewscore":0.0,"shop_count":0,"plain_spec_summary":"","active_products_count":0,"main_picture":{"small_url":"http://b.scdn.gr/assets/helmet/el/no_sku_image_small.png","original_url":"http://b.scdn.gr/assets/helmet/el/no_sku_image_medium.png","tiny_url":"http://a.scdn.gr/assets/helmet/el/no_sku_image_tiny.png","medium_url":"http://b.scdn.gr/assets/helmet/el/no_sku_image_medium.png"}},{"id":107,"ean":"0735858212816
   5032037010566","pn":"BX80571E6600","first_product_shop_info":null,"click_url":null,"price_max":63.9,"price_min":63.9,"reviewscore":0.0,"shop_count":0,"plain_spec_summary":"Intel
   Pentium Dual Core,  64-bit, Socket: 775,  \u03a4\u03b1\u03c7\u03cd\u03c4\u03b7\u03c4\u03b1

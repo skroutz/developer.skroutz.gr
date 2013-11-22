@@ -8,19 +8,21 @@
     :per: '2'
 :status: 200
 :headers: !ruby/hash:Faraday::Utils::Headers
+  link: <http://localhost:3000/api/search?page=50&per=2&q=iphone>; rel="last", <http://localhost:3000/api/search?page=2&per=2&q=iphone>;
+    rel="next"
   content-type: application/json; charset=utf-8
   x-meta-request-version: 0.2.1
   x-ua-compatible: IE=Edge,chrome=1
   etag: ! '"ce101084daabe437ced7f7cef904e874"'
   cache-control: max-age=0, private, must-revalidate
-  x-request-id: 8d05e1361401c570169adc85204ef6d3
-  x-runtime: '0.068516'
+  x-request-id: ae72c2aaa9ef449a02db64af93eb2d2b
+  x-runtime: '0.057193'
   server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
-  date: Fri, 15 Nov 2013 16:38:59 GMT
+  date: Fri, 22 Nov 2013 10:06:14 GMT
   content-length: '533'
   connection: close
-  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWFmNjNkZjk5NzgxYWExY2JhNzRlMDNmYWViMTJjNzE0BjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--15b87c58de109558fc2826b0437cc31d3854bac1;
-    path=/; expires=Wed, 15-Jan-2014 16:38:59 GMT; HttpOnly
+  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWY0ZDhiNzEwYzFiMmY0NzY3MzNiZGNiNWM4MjY0ZmYzBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--b400fff1d91c1952bc095105736a464eff6e5d64;
+    path=/; expires=Wed, 22-Jan-2014 10:06:14 GMT; HttpOnly
 :body: ! '{"categories":[{"children_count":0,"id":40,"name":"\u039a\u03b9\u03bd\u03b7\u03c4\u03ac
   \u03a4\u03b7\u03bb\u03ad\u03c6\u03c9\u03bd\u03b1","image_url":"http://a.scdn.gr/images/categories/large/40.jpg","leaf":true,"match_count":8},{"children_count":0,"id":579,"name":"\u0398\u03ae\u03ba\u03b5\u03c2
   \u03ba\u03b9\u03bd\u03b7\u03c4\u03ce\u03bd \u03c4\u03b7\u03bb\u03b5\u03c6\u03ce\u03bd\u03c9\u03bd","image_url":"http://a.scdn.gr/images/categories/large/579.jpg","leaf":true,"match_count":2937}],"meta":{"result_type":"category_facade"}}'
