@@ -1,5 +1,9 @@
 module ResponseMate
   module Formatter
+    FILTERED_PARAMS = [
+      :oauth_token
+    ]
+
     def render_recording(key)
       recording = load_recording key
       format_request(recording) << format_status(recording) << format_body(recording)
@@ -16,6 +20,8 @@ module ResponseMate
       output = '<ul class="request-params">'
       output << hash.map { |k, v|
         val = v.is_a?(Hash) ? format_params(v) : v
+        val = '[FILTERED]' if FILTERED_PARAMS.include? k
+
         "<li><span class=\"label\">#{k}</span>: #{val}</li>"
       }.join()
       output << "</ul>"
