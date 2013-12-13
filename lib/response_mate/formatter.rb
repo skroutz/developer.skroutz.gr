@@ -45,8 +45,8 @@ module ResponseMate
       YAML.load_file(ResponseMate.configuration.output_dir + "#{key}.yml")
     rescue Errno::ENOENT
       STDOUT.print key.to_s.red << " key was not found, \n\t" <<
-      "try Running " << "rake response_mate:record\n\t".green <<
-      "Use " << "rake response_mate:list".green << " to view available keys\n"
+      "try Running " << "response_mate record\n\t".green <<
+      "Use " << "response_mate list".green << " to view available keys\n"
     end
   end
 end

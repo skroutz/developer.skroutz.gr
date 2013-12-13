@@ -26,7 +26,7 @@ A product/sku belongs to a leaf category.
 
 ## List the children categories of a category
 
-<%= render_recording :category_children %>
+<%= render_recording :children_api_category %>
 
 ## List the skus of a category
 
