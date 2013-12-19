@@ -1,3 +1,5 @@
 crash.log
 .ruby-version
 .ruby-gemset
+oauth.yml
+tmp
