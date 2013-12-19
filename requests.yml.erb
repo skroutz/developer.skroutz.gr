@@ -1,0 +1,104 @@
+base_url: http://localhost:3000/api
+default_headers:
+  accept: 'application/vnd.skroutz+json; version=3'
+requests:
+  -
+    key: categories_index
+    request: 'GET /categories?page=1&per=5'
+  -
+    key: categories_root
+    request: 'GET /categories/root'
+  -
+    key: categories_show
+    request: 'GET /categories/1442'
+  -
+    key: children_api_category
+    request: 'GET /categories/73/children'
+  -
+    key: category_skus
+    request: 'GET /categories/1442/skus?page=1&per=3'
+  -
+    key: shops_index
+    request:
+      path: '/shops'
+      params:
+        per:  2
+  -
+    key: shops_show
+    request: 'GET /shops/3'
+  -
+    key: manufacturers_show
+    request: 'GET /manufacturers/12907'
+  -
+    key: manufacturers_index
+    request:
+      path: '/manufacturers'
+      params:
+        per:  2
+  -
+    key: autocomplete
+    request: 'GET /autocomplete?keyphrase=iph'
+  -
+    key: search_invalid
+    request: 'GET /search?q=a'
+  -
+    key: search_category_match
+    request:
+      path: '/search'
+      params:
+        q: 'computers'
+        per:  2
+  -
+    key: search_manufacturer_match
+    request:
+      path: '/search'
+      params:
+        q: 'apple'
+  -
+    key: search_latin_mapping
+    request: 'GET /search?q=ιπηονε&page=1&per=2'
+  -
+    key: search_drop
+    request: 'GET /search?q=wrong%20iphone'
+  -
+    key: search_no_results
+    request: 'GET /search?q=asdasdsagjgjgjweigrweji'
+  -
+    key: search_category_facade
+    request: 'GET /search?q=iphone&page=1&per=2'
+  -
+    key: search_sku_match
+    request: 'GET /search?q=Dimage%202300'
+  -
+    key: search_skus_match
+    request: 'GET /search?q=Cubieboard2&page=1&per=2'
+  -
+    key: autocomplete
+    request: 'GET /autocomplete?q=iphone'
+  -
+    key: skus_index
+    request: 'GET /skus?page=1&per=3'
+  -
+    key: skus_show
+    request: 'GET /skus/3703742'
+  -
+    key: skus_products
+    request: 'GET /skus/3703742/products'
+  -
+    key: products_index
+    request: 'GET /products'
+  -
+    key: products_show
+    request: 'GET /products/13313788'
+  -
+    key: favorites_index
+    request: 'GET /favorites'
+  -
+    key: favorites_show
+    request: 'GET /favorites/252116'
+  -
+    key: filter_groups_index
+    request:
+      path: '/categories/40/filter_groups'
+      params:
+        per: 2
