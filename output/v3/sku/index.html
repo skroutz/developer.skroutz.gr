@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="Content-Language" content="en-us" />
+  <meta http-equiv="imagetoolbar" content="false" />
+  <meta name="MSSmartTagsPreventParsing" content="true" />
+  <title>Sku | Skroutz API</title>
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400' rel='stylesheet' type='text/css'>
+  <link rel="alternate" type="application/atom+xml" title="API Changes" href="../../changes.atom" />
+  <link href="../../css/reset.css" rel="stylesheet" type="text/css" />
+  <link href="../../css/960.css" rel="stylesheet" type="text/css" />
+  <link href="../../css/uv_active4d.css" rel="stylesheet" type="text/css" />
+  <link href="../../shared/css/documentation.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="../../shared/css/pygments.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="../../shared/css/skroutz.css" media="screen" rel="stylesheet" type="text/css">
+  <script src="../../shared/js/jquery.js" type="text/javascript"></script>
+  <script src="../../shared/js/documentation.js" type="text/javascript"></script>
+</head>
+<body class="api">
+    <div id="header-wrapper">
+      <div id="header">
+        <div>
+          <a class="logo" href="../../">for Developers</a>
+          <ul class="nav">
+            <li class="api-status"></li>
+            <li><a href="../">API v3</a></li>
+            <li><a href="../../changes/">Changes</a></li>
+            <li><a href="https://skroutz.gr/contact">Support</a></li>
+            <li><a href="../../changes.atom">
+              <img src="../../images/feed-icon-28x28.png" width="16"
+              height="16" alt="Skroutz API Changes Feed" />
+            </a></li>
+          </ul>
+        </div>
+      </div><!-- #header -->
+    </div><!-- #header-wrapper -->
+
+    <div id="main">
+    <div id="wrapper">
+      <div id="js-sidebar" class="sidebar-shell">
+        <div class="js-toggle-list sidebar-module expandable">
+          <ul>
+            <li class="js-topic">
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="../">Overview</a></h3>
+              <ul class="js-guides">
+                <li><a href="../troubleshooting/">Troubleshooting</a></li>
+              </ul>
+            </li>
+            <li class="js-topic">
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a>
+                <a href="../category/">Category</a></h3>
+            </li>
+            <li class="js-topic">
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a>
+                <a href="./">Sku</a></h3>
+            </li>
+            <li class="js-topic">
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a>
+                <a href="../product/">Product</a></h3>
+            </li>
+            <li class="js-topic">
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a>
+                <a href="../shop/">Shop</a></h3>
+            </li>
+            <li class="js-topic">
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a>
+                <a href="../manufacturer/">Manufacturer</a></h3>
+            </li>
+            <li class="js-topic">
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a>
+                <a href="../filter_groups/">Filter Groups</a></h3>
+            </li>
+            <li class="js-topic">
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a>
+                <a href="../search/">Search</a></h3>
+            </li>
+            <li class="js-topic">
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a>
+                <a href="../favorites/">User Favorites</a></h3>
+            </li>
+          </ul>
+        </div> <!-- /sidebar-module -->
+        <div class="sidebar-module">
+          <p>This website is a
+            <a href="https://github.com/skroutz/developer.skroutz.gr" target="_blank">public GitHub repository</a>.
+             Please help us by forking the project and adding to it.</p>
+        </div>
+      </div><!-- /sidebar-shell -->
+
+      <div class="content">
+        <h1 id="sku-api">Sku API</h1>
+
+<ul id="markdown-toc">
+<li><a href="#about">About</a></li>
+  <li><a href="#list-skus">List SKUs</a></li>
+  <li><a href="#retrieve-a-single-sku">Retrieve a single SKU</a></li>
+  <li><a href="#retrieve-a-skus-products">Retrieve a SKU’s products</a></li>
+</ul><h2 id="about">About</h2>
+
+<p>A SKU (Stock Keeping Unit) is an aggregation of products.</p>
+
+<h2 id="list-skus">List SKUs</h2>
+
+<ul class="request-params">
+<li>
+<span class="label">verb</span>: GET</li>
+<li>
+<span class="label">path</span>: /skus</li>
+<li>
+<span class="label">params</span>: <ul class="request-params">
+<li>
+<span class="label">page</span>: 1</li>
+<li>
+<span class="label">per</span>: 3</li>
+<li>
+<span class="label">oauth_token</span>: [FILTERED]</li>
+</ul>
+</li>
+</ul><pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"skus"</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">105</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">127.07</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">127.07</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">0.0</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/assets/helmet/el/no_sku_image_small.png"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/assets/helmet/el/no_sku_image_medium.png"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/assets/helmet/el/no_sku_image_tiny.png"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/assets/helmet/el/no_sku_image_medium.png"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http:"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">22</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">107</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">"0735858212816 5032037010566"</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">"BX80571E6600"</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">63.9</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">63.9</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">0.0</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"Intel Pentium Dual Core,  64-bit, Socket: 775,  Ταχύτητα ρολογιού: 3060 MHz,  Πυρήνες: 2, L2 Cache: 2 MB"</span><span class="p">,</span>
+      <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/000000/107/small_15743_5821554-5289.jpg"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/000000/107/medium_15743_5821554-5289.jpg"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/000000/107/tiny_15743_5821554-5289.jpg"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/000000/107/medium_15743_5821554-5289.jpg"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/000000/107/15743_5821554-5289.jpg"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">22</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">109</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">173.43</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">173.43</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">0.0</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"17 in, Μέγ.Ανάλυση: 1280x1024,  Χρόνος απόκρισης: 8 ms, Αντίθεση: 500:1:1, Συνδέσεις: VGA"</span><span class="p">,</span>
+      <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/assets/helmet/el/no_sku_image_small.png"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/assets/helmet/el/no_sku_image_medium.png"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/assets/helmet/el/no_sku_image_tiny.png"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/assets/helmet/el/no_sku_image_medium.png"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http:"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">23</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span></code></pre>
+
+<h2 id="retrieve-a-single-sku">Retrieve a single SKU</h2>
+
+<ul class="request-params">
+<li>
+<span class="label">verb</span>: GET</li>
+<li>
+<span class="label">path</span>: /skus/3703742</li>
+<li>
+<span class="label">params</span>: <ul class="request-params"><li>
+<span class="label">oauth_token</span>: [FILTERED]</li></ul>
+</li>
+</ul><pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"sku"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"id"</span><span class="o">:</span> <span class="mi">3703742</span><span class="p">,</span>
+    <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+    <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+    <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="s2">"821|Z-mall"</span><span class="p">,</span>
+    <span class="s2">"click_url"</span><span class="o">:</span> <span class="s2">"http://www.skroutz.gr/products/show/13313785"</span><span class="p">,</span>
+    <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">11.7</span><span class="p">,</span>
+    <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">11.7</span><span class="p">,</span>
+    <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">0.0</span><span class="p">,</span>
+    <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+    <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/003703/3703742/small_13313785-orig.jpg"</span><span class="p">,</span>
+      <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/003703/3703742/medium_13313785-orig.jpg"</span><span class="p">,</span>
+      <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/003703/3703742/tiny_13313785-orig.jpg"</span><span class="p">,</span>
+      <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/003703/3703742/medium_13313785-orig.jpg"</span><span class="p">,</span>
+      <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/003703/3703742/13313785-orig.jpg"</span>
+    <span class="p">},</span>
+    <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">0</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre>
+
+<h2 id="retrieve-a-skus-products">Retrieve a SKU’s products</h2>
+
+<ul class="request-params">
+<li>
+<span class="label">verb</span>: GET</li>
+<li>
+<span class="label">path</span>: /skus/3703742/products</li>
+<li>
+<span class="label">params</span>: <ul class="request-params"><li>
+<span class="label">oauth_token</span>: [FILTERED]</li></ul>
+</li>
+</ul><pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"products"</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">13313785</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Μπλούζα Κοντομάνικη 2nd Skin  SS201-4113 navy-ss2013 Ανδρικό"</span><span class="p">,</span>
+      <span class="s2">"sku_id"</span><span class="o">:</span> <span class="mi">3703742</span><span class="p">,</span>
+      <span class="s2">"shop_id"</span><span class="o">:</span> <span class="mi">821</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">1066</span><span class="p">,</span>
+      <span class="s2">"visible"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"availability"</span><span class="o">:</span> <span class="s2">"ΑΜΕΣΗ ΠΑΡΑΔΟΣΗ"</span><span class="p">,</span>
+      <span class="s2">"price"</span><span class="o">:</span> <span class="mf">11.7</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://www.z-mall.gr/ItemsContent/0012961/1260094/0012961_1260094_altex-ss2013_navy-ss2013_0_4.jpg"</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span></code></pre>
+      </div>
+    </div><!-- #wrapper -->
+  </div>
+
+    <div id="footer" >
+      <div class="upper_footer">
+        <div class="footer_inner clearfix">
+
+        <ul class="footer_nav">
+          <li><h4>Skroutz</h4></li>
+          <li><a href="https://skroutz.gr/blog/projects">About</a></li>
+          <li><a href="https://skroutz.gr/blog">Blog</a></li>
+          <li><a href="https://skroutz.gr/contact">Contact</a></li>
+        </ul>
+
+
+        </div><!-- /.site -->
+      </div><!-- /.upper_footer -->
+
+      <div class="lower_footer">
+        <a class="footer_faq" href="http://skroutz.gr/faq/">F.A.Q - Terms of Service</a>
+        <p class="footer-cell">
+          Design &copy; <span class="js-year">2013</span> Skroutz S.A, Inc. All rights reserved.
+          <br />
+          Except where otherwise noted, content on this site is licensed under a
+          <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons CC-BY license</a>.
+        </p>
+      </div>
+
+    </div><!-- /#footer -->
+</body>
+</html>

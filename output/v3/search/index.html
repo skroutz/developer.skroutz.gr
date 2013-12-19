@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="Content-Language" content="en-us" />
+  <meta http-equiv="imagetoolbar" content="false" />
+  <meta name="MSSmartTagsPreventParsing" content="true" />
+  <title>Search | Skroutz API</title>
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400' rel='stylesheet' type='text/css'>
+  <link rel="alternate" type="application/atom+xml" title="API Changes" href="../../changes.atom" />
+  <link href="../../css/reset.css" rel="stylesheet" type="text/css" />
+  <link href="../../css/960.css" rel="stylesheet" type="text/css" />
+  <link href="../../css/uv_active4d.css" rel="stylesheet" type="text/css" />
+  <link href="../../shared/css/documentation.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="../../shared/css/pygments.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="../../shared/css/skroutz.css" media="screen" rel="stylesheet" type="text/css">
+  <script src="../../shared/js/jquery.js" type="text/javascript"></script>
+  <script src="../../shared/js/documentation.js" type="text/javascript"></script>
+</head>
+<body class="api">
+    <div id="header-wrapper">
+      <div id="header">
+        <div>
+          <a class="logo" href="../../">for Developers</a>
+          <ul class="nav">
+            <li class="api-status"></li>
+            <li><a href="../">API v3</a></li>
+            <li><a href="../../changes/">Changes</a></li>
+            <li><a href="https://skroutz.gr/contact">Support</a></li>
+            <li><a href="../../changes.atom">
+              <img src="../../images/feed-icon-28x28.png" width="16"
+              height="16" alt="Skroutz API Changes Feed" />
+            </a></li>
+          </ul>
+        </div>
+      </div><!-- #header -->
+    </div><!-- #header-wrapper -->
+
+    <div id="main">
+    <div id="wrapper">
+      <div id="js-sidebar" class="sidebar-shell">
+        <div class="js-toggle-list sidebar-module expandable">
+          <ul>
+            <li class="js-topic">
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="../">Overview</a></h3>
+              <ul class="js-guides">
+                <li><a href="../troubleshooting/">Troubleshooting</a></li>
+              </ul>
+            </li>
+            <li class="js-topic">
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a>
+                <a href="../category/">Category</a></h3>
+            </li>
+            <li class="js-topic">
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a>
+                <a href="../sku/">Sku</a></h3>
+            </li>
+            <li class="js-topic">
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a>
+                <a href="../product/">Product</a></h3>
+            </li>
+            <li class="js-topic">
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a>
+                <a href="../shop/">Shop</a></h3>
+            </li>
+            <li class="js-topic">
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a>
+                <a href="../manufacturer/">Manufacturer</a></h3>
+            </li>
+            <li class="js-topic">
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a>
+                <a href="../filter_groups/">Filter Groups</a></h3>
+            </li>
+            <li class="js-topic">
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a>
+                <a href="./">Search</a></h3>
+            </li>
+            <li class="js-topic">
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a>
+                <a href="../favorites/">User Favorites</a></h3>
+            </li>
+          </ul>
+        </div> <!-- /sidebar-module -->
+        <div class="sidebar-module">
+          <p>This website is a
+            <a href="https://github.com/skroutz/developer.skroutz.gr" target="_blank">public GitHub repository</a>.
+             Please help us by forking the project and adding to it.</p>
+        </div>
+      </div><!-- /sidebar-shell -->
+
+      <div class="content">
+        <h1 id="search-api">Search API</h1>
+
+<ul id="markdown-toc">
+<li><a href="#search">Search</a></li>
+  <li><a href="#autocomplete">Autocomplete</a></li>
+</ul><h2 id="search">Search</h2>
+
+<h3 id="parameters">Parameters</h3>
+<dl>
+<dt>q</dt>
+  <dd>
+<em>Required</em> <strong>string</strong> The keyphrase to search by</dd>
+</dl><h3 id="case-invalid-the-query-was-invalid-eg-less-than-2-characters">Case <code>invalid</code> <em>The query was invalid. Eg. less than 2 characters</em>
+</h3>
+
+<ul class="request-params">
+<li>
+<span class="label">verb</span>: GET</li>
+<li>
+<span class="label">path</span>: /search</li>
+<li>
+<span class="label">params</span>: <ul class="request-params">
+<li>
+<span class="label">q</span>: a</li>
+<li>
+<span class="label">oauth_token</span>: [FILTERED]</li>
+</ul>
+</li>
+</ul><pre class="headers"><code>Status: 400</code></pre>
+<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"result_type"</span><span class="o">:</span> <span class="s2">"invalid"</span>
+  <span class="p">},</span>
+  <span class="s2">"message"</span><span class="o">:</span> <span class="s2">"Η αναζήτησή σου πρέπει να περιέχει τουλάχιστον 2 χαρακτήρες"</span>
+<span class="p">}</span></code></pre>
+
+<h3 id="case-noresults-nothing-seems-to-match-the-specified-query">Case <code>no_results</code> <em>Nothing seems to match the specified query</em>
+</h3>
+
+<ul class="request-params">
+<li>
+<span class="label">verb</span>: GET</li>
+<li>
+<span class="label">path</span>: /search</li>
+<li>
+<span class="label">params</span>: <ul class="request-params">
+<li>
+<span class="label">q</span>: asdasdsagjgjgjweigrweji</li>
+<li>
+<span class="label">oauth_token</span>: [FILTERED]</li>
+</ul>
+</li>
+</ul><pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"result_type"</span><span class="o">:</span> <span class="s2">"no_results"</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre>
+
+<h3 id="case-categorymatch-when-your-query-matched-a-category">Case <code>category_match</code> <em>When your query matched a category</em>
+</h3>
+
+<ul class="request-params">
+<li>
+<span class="label">verb</span>: GET</li>
+<li>
+<span class="label">path</span>: /search</li>
+<li>
+<span class="label">params</span>: <ul class="request-params">
+<li>
+<span class="label">q</span>: computers</li>
+<li>
+<span class="label">per</span>: 2</li>
+<li>
+<span class="label">oauth_token</span>: [FILTERED]</li>
+</ul>
+</li>
+</ul><pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"categories"</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">115</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Εφαρμογές Γραφείου"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/categories/large/115.jpg"</span><span class="p">,</span>
+      <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">1</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">37</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Gadgets"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/37.jpg"</span><span class="p">,</span>
+      <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">1</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"result_type"</span><span class="o">:</span> <span class="s2">"category_facade"</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre>
+
+<h3 id="case-categoryfacade-when-your-query-matched-many-categories">Case <code>category_facade</code> <em>When your query matched many categories</em>
+</h3>
+
+<ul class="request-params">
+<li>
+<span class="label">verb</span>: GET</li>
+<li>
+<span class="label">path</span>: /search</li>
+<li>
+<span class="label">params</span>: <ul class="request-params">
+<li>
+<span class="label">q</span>: iphone</li>
+<li>
+<span class="label">page</span>: 1</li>
+<li>
+<span class="label">per</span>: 2</li>
+<li>
+<span class="label">oauth_token</span>: [FILTERED]</li>
+</ul>
+</li>
+</ul><pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"categories"</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Κινητά Τηλέφωνα"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/40.jpg"</span><span class="p">,</span>
+      <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">8</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">579</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Θήκες κινητών τηλεφώνων"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/579.jpg"</span><span class="p">,</span>
+      <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">2937</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"result_type"</span><span class="o">:</span> <span class="s2">"category_facade"</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre>
+
+<h3 id="case-manufacturermatch-your-query-matched-one-of-our-manufacturers">Case <code>manufacturer_match</code> *Your query matched one of our manufacturers</h3>
+<p>exactly*</p>
+
+<ul class="request-params">
+<li>
+<span class="label">verb</span>: GET</li>
+<li>
+<span class="label">path</span>: /search</li>
+<li>
+<span class="label">params</span>: <ul class="request-params">
+<li>
+<span class="label">q</span>: apple</li>
+<li>
+<span class="label">oauth_token</span>: [FILTERED]</li>
+</ul>
+</li>
+</ul><pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"manufacturer"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"id"</span><span class="o">:</span> <span class="mi">356</span><span class="p">,</span>
+    <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Apple"</span><span class="p">,</span>
+    <span class="s2">"image_url"</span><span class="o">:</span> <span class="kc">null</span>
+  <span class="p">},</span>
+  <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"result_type"</span><span class="o">:</span> <span class="s2">"manufacturer_match"</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre>
+
+<h3 id="case-latinmapping-your-query-has-an-exact-match-in-its-latin-form">Case <code>latin_mapping</code> <em>Your query has an exact match in its latin form</em>
+</h3>
+
+<p>Note: You will have to follow one or more 302 redirections</p>
+
+<ul class="request-params">
+<li>
+<span class="label">verb</span>: GET</li>
+<li>
+<span class="label">path</span>: /search</li>
+<li>
+<span class="label">params</span>: <ul class="request-params">
+<li>
+<span class="label">q</span>: ιπηονε</li>
+<li>
+<span class="label">page</span>: 1</li>
+<li>
+<span class="label">per</span>: 2</li>
+<li>
+<span class="label">oauth_token</span>: [FILTERED]</li>
+</ul>
+</li>
+</ul><pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"categories"</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Κινητά Τηλέφωνα"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/40.jpg"</span><span class="p">,</span>
+      <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">8</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">579</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Θήκες κινητών τηλεφώνων"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/579.jpg"</span><span class="p">,</span>
+      <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">2937</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"result_type"</span><span class="o">:</span> <span class="s2">"category_facade"</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre>
+
+<h3 id="case-skumatch-your-query-matches-exactly-one-of-our-skus">Case <code>sku_match</code> <em>Your query matches exactly one of our skus</em>
+</h3>
+
+<ul class="request-params">
+<li>
+<span class="label">verb</span>: GET</li>
+<li>
+<span class="label">path</span>: /search</li>
+<li>
+<span class="label">params</span>: <ul class="request-params">
+<li>
+<span class="label">q</span>: Dimage 2300</li>
+<li>
+<span class="label">oauth_token</span>: [FILTERED]</li>
+</ul>
+</li>
+</ul><pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"sku"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"id"</span><span class="o">:</span> <span class="mi">304460</span><span class="p">,</span>
+    <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+    <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+    <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="s2">"740|Photoqueen"</span><span class="p">,</span>
+    <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">49.0</span><span class="p">,</span>
+    <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">49.0</span><span class="p">,</span>
+    <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">0.0</span><span class="p">,</span>
+    <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"Compact, Αισθητήρας: CCD, Οθόνη: 1.8 inches"</span><span class="p">,</span>
+    <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/000304/304460/small_0562a9b791f404abe339b0cf577bd302.jpg.jpg"</span><span class="p">,</span>
+      <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/000304/304460/medium_0562a9b791f404abe339b0cf577bd302.jpg.jpg"</span><span class="p">,</span>
+      <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/000304/304460/tiny_0562a9b791f404abe339b0cf577bd302.jpg.jpg"</span><span class="p">,</span>
+      <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/000304/304460/medium_0562a9b791f404abe339b0cf577bd302.jpg.jpg"</span><span class="p">,</span>
+      <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/000304/304460/0562a9b791f404abe339b0cf577bd302.jpg.jpg"</span>
+    <span class="p">},</span>
+    <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">152</span>
+  <span class="p">},</span>
+  <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"result_type"</span><span class="o">:</span> <span class="s2">"sku_match"</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre>
+
+<h3 id="case-categoryskusmatch-your-query-matches-skus-from-a-category">Case <code>category_skus_match</code> <em>Your query matches skus from a category</em>
+</h3>
+
+<ul class="request-params">
+<li>
+<span class="label">verb</span>: GET</li>
+<li>
+<span class="label">path</span>: /search</li>
+<li>
+<span class="label">params</span>: <ul class="request-params">
+<li>
+<span class="label">q</span>: Cubieboard2</li>
+<li>
+<span class="label">page</span>: 1</li>
+<li>
+<span class="label">per</span>: 2</li>
+<li>
+<span class="label">oauth_token</span>: [FILTERED]</li>
+</ul>
+</li>
+</ul><pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"category"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"id"</span><span class="o">:</span> <span class="mi">146</span><span class="p">,</span>
+    <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Μικροηλεκτρονικά"</span><span class="p">,</span>
+    <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/146.jpg"</span><span class="p">,</span>
+    <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">true</span>
+  <span class="p">},</span>
+  <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"result_type"</span><span class="o">:</span> <span class="s2">"category_skus_match"</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre>
+
+<h3 id="case-drop-your-query-has-no-results-but-the-proposals-in-the">Case <code>drop</code> *Your query has no results but the proposals in the</h3>
+<p>response have*</p>
+
+<ul class="request-params">
+<li>
+<span class="label">verb</span>: GET</li>
+<li>
+<span class="label">path</span>: /search</li>
+<li>
+<span class="label">params</span>: <ul class="request-params">
+<li>
+<span class="label">q</span>: wrong iphone</li>
+<li>
+<span class="label">oauth_token</span>: [FILTERED]</li>
+</ul>
+</li>
+</ul><pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"proposals"</span><span class="o">:</span> <span class="p">[</span>
+    <span class="s2">"wrong"</span><span class="p">,</span>
+    <span class="s2">"iphone"</span>
+  <span class="p">],</span>
+  <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"result_type"</span><span class="o">:</span> <span class="s2">"drop"</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre>
+
+<h2 id="autocomplete">Autocomplete</h2>
+
+<h3 id="parameters-1">Parameters</h3>
+<dl>
+<dt>q  </dt>
+  <dd>
+<strong>Required</strong> <strong>string</strong> The keyphrase to search by</dd>
+</dl><ul class="request-params">
+<li>
+<span class="label">verb</span>: GET</li>
+<li>
+<span class="label">path</span>: /autocomplete</li>
+<li>
+<span class="label">params</span>: <ul class="request-params">
+<li>
+<span class="label">q</span>: iphone</li>
+<li>
+<span class="label">oauth_token</span>: [FILTERED]</li>
+</ul>
+</li>
+</ul><pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"autocomplete"</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">"k"</span><span class="o">:</span> <span class="s2">"iphone 5c"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"k"</span><span class="o">:</span> <span class="s2">"iphone 5c"</span><span class="p">,</span>
+      <span class="s2">"d"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"n"</span><span class="o">:</span> <span class="s2">"Κινητά Τηλέφωνα"</span><span class="p">,</span>
+        <span class="s2">"u"</span><span class="o">:</span> <span class="s2">"40"</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"k"</span><span class="o">:</span> <span class="s2">"iphone 5s 16gb"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"k"</span><span class="o">:</span> <span class="s2">"iphone 5 s"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"k"</span><span class="o">:</span> <span class="s2">"iphone 5 c"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"k"</span><span class="o">:</span> <span class="s2">"iphone5c"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"k"</span><span class="o">:</span> <span class="s2">"iphone 3 apple"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"k"</span><span class="o">:</span> <span class="s2">"iphone c"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"k"</span><span class="o">:</span> <span class="s2">"iphone 4s κινητο"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"k"</span><span class="o">:</span> <span class="s2">"iphone 6s"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"k"</span><span class="o">:</span> <span class="s2">"iphone 5s 64gb"</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span></code></pre>
+      </div>
+    </div><!-- #wrapper -->
+  </div>
+
+    <div id="footer" >
+      <div class="upper_footer">
+        <div class="footer_inner clearfix">
+
+        <ul class="footer_nav">
+          <li><h4>Skroutz</h4></li>
+          <li><a href="https://skroutz.gr/blog/projects">About</a></li>
+          <li><a href="https://skroutz.gr/blog">Blog</a></li>
+          <li><a href="https://skroutz.gr/contact">Contact</a></li>
+        </ul>
+
+
+        </div><!-- /.site -->
+      </div><!-- /.upper_footer -->
+
+      <div class="lower_footer">
+        <a class="footer_faq" href="http://skroutz.gr/faq/">F.A.Q - Terms of Service</a>
+        <p class="footer-cell">
+          Design &copy; <span class="js-year">2013</span> Skroutz S.A, Inc. All rights reserved.
+          <br />
+          Except where otherwise noted, content on this site is licensed under a
+          <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons CC-BY license</a>.
+        </p>
+      </div>
+
+    </div><!-- /#footer -->
+</body>
+</html>

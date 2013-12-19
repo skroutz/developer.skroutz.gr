@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="Content-Language" content="en-us" />
+  <meta http-equiv="imagetoolbar" content="false" />
+  <meta name="MSSmartTagsPreventParsing" content="true" />
+  <title>Product | Skroutz API</title>
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400' rel='stylesheet' type='text/css'>
+  <link rel="alternate" type="application/atom+xml" title="API Changes" href="../../changes.atom" />
+  <link href="../../css/reset.css" rel="stylesheet" type="text/css" />
+  <link href="../../css/960.css" rel="stylesheet" type="text/css" />
+  <link href="../../css/uv_active4d.css" rel="stylesheet" type="text/css" />
+  <link href="../../shared/css/documentation.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="../../shared/css/pygments.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="../../shared/css/skroutz.css" media="screen" rel="stylesheet" type="text/css">
+  <script src="../../shared/js/jquery.js" type="text/javascript"></script>
+  <script src="../../shared/js/documentation.js" type="text/javascript"></script>
+</head>
+<body class="api">
+    <div id="header-wrapper">
+      <div id="header">
+        <div>
+          <a class="logo" href="../../">for Developers</a>
+          <ul class="nav">
+            <li class="api-status"></li>
+            <li><a href="../">API v3</a></li>
+            <li><a href="../../changes/">Changes</a></li>
+            <li><a href="https://skroutz.gr/contact">Support</a></li>
+            <li><a href="../../changes.atom">
+              <img src="../../images/feed-icon-28x28.png" width="16"
+              height="16" alt="Skroutz API Changes Feed" />
+            </a></li>
+          </ul>
+        </div>
+      </div><!-- #header -->
+    </div><!-- #header-wrapper -->
+
+    <div id="main">
+    <div id="wrapper">
+      <div id="js-sidebar" class="sidebar-shell">
+        <div class="js-toggle-list sidebar-module expandable">
+          <ul>
+            <li class="js-topic">
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="../">Overview</a></h3>
+              <ul class="js-guides">
+                <li><a href="../troubleshooting/">Troubleshooting</a></li>
+              </ul>
+            </li>
+            <li class="js-topic">
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a>
+                <a href="../category/">Category</a></h3>
+            </li>
+            <li class="js-topic">
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a>
+                <a href="../sku/">Sku</a></h3>
+            </li>
+            <li class="js-topic">
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a>
+                <a href="./">Product</a></h3>
+            </li>
+            <li class="js-topic">
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a>
+                <a href="../shop/">Shop</a></h3>
+            </li>
+            <li class="js-topic">
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a>
+                <a href="../manufacturer/">Manufacturer</a></h3>
+            </li>
+            <li class="js-topic">
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a>
+                <a href="../filter_groups/">Filter Groups</a></h3>
+            </li>
+            <li class="js-topic">
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a>
+                <a href="../search/">Search</a></h3>
+            </li>
+            <li class="js-topic">
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a>
+                <a href="../favorites/">User Favorites</a></h3>
+            </li>
+          </ul>
+        </div> <!-- /sidebar-module -->
+        <div class="sidebar-module">
+          <p>This website is a
+            <a href="https://github.com/skroutz/developer.skroutz.gr" target="_blank">public GitHub repository</a>.
+             Please help us by forking the project and adding to it.</p>
+        </div>
+      </div><!-- /sidebar-shell -->
+
+      <div class="content">
+        <h1 id="product-api">Product API</h1>
+
+<ul id="markdown-toc">
+<li><a href="#list-products">List products</a></li>
+  <li><a href="#retrieve-a-single-product">Retrieve a single product</a></li>
+</ul><h2 id="list-products">List products</h2>
+
+<ul class="request-params">
+<li>
+<span class="label">verb</span>: GET</li>
+<li>
+<span class="label">path</span>: /products</li>
+<li>
+<span class="label">params</span>: <ul class="request-params"><li>
+<span class="label">oauth_token</span>: [FILTERED]</li></ul>
+</li>
+</ul><pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"products"</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">37667</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"MS-DSP INTELLIMOUSE OPTICAL PS/2/USB"</span><span class="p">,</span>
+      <span class="s2">"sku_id"</span><span class="o">:</span> <span class="mi">63554</span><span class="p">,</span>
+      <span class="s2">"shop_id"</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">69</span><span class="p">,</span>
+      <span class="s2">"visible"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"availability"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price"</span><span class="o">:</span> <span class="mf">15.54</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://www.my-shop.gr/eshop/catalog/images//myshop/microsoft/intellimouseopt-80x60.jpg"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">37729</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"MOUSE MS COMPACTOPTMSE 500 USB BLACK"</span><span class="p">,</span>
+      <span class="s2">"sku_id"</span><span class="o">:</span> <span class="mi">63016</span><span class="p">,</span>
+      <span class="s2">"shop_id"</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">69</span><span class="p">,</span>
+      <span class="s2">"visible"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"availability"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price"</span><span class="o">:</span> <span class="mf">11.89</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://www.my-shop.gr/eshop/catalog/images//myshop/MICROSOFT/94179-80x60.jpg"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">37772</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"ΜΝΗΜΗ 1GB DDRII 533MHZ BUFFALO ORIG L"</span><span class="p">,</span>
+      <span class="s2">"sku_id"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"shop_id"</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">56</span><span class="p">,</span>
+      <span class="s2">"visible"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"availability"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price"</span><span class="o">:</span> <span class="mf">19.81</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://www.my-shop.gr/eshop/catalog/images//myshop/BRAND NAME/94340-80x60.jpg"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">38207</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"SCANNER EPSON EXPRESSION 10000XL"</span><span class="p">,</span>
+      <span class="s2">"sku_id"</span><span class="o">:</span> <span class="mi">2501</span><span class="p">,</span>
+      <span class="s2">"shop_id"</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">64</span><span class="p">,</span>
+      <span class="s2">"visible"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"availability"</span><span class="o">:</span> <span class="s2">"Άγνωστη διαθεσιμότητα"</span><span class="p">,</span>
+      <span class="s2">"price"</span><span class="o">:</span> <span class="mf">3141.86</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://www.my-shop.gr/eshop/catalog/images//diafora/84917-80x60.jpg"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">38210</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"SCANNER HP SCANJET 5590 L1910A"</span><span class="p">,</span>
+      <span class="s2">"sku_id"</span><span class="o">:</span> <span class="mi">2510</span><span class="p">,</span>
+      <span class="s2">"shop_id"</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">64</span><span class="p">,</span>
+      <span class="s2">"visible"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"availability"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price"</span><span class="o">:</span> <span class="mf">322.91</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://www.my-shop.gr/eshop/catalog/images//myshop/hp/5590-80x60.jpg"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">38217</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"SCANNER HP SCANJET 5590P L1912A"</span><span class="p">,</span>
+      <span class="s2">"sku_id"</span><span class="o">:</span> <span class="mi">9472</span><span class="p">,</span>
+      <span class="s2">"shop_id"</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">64</span><span class="p">,</span>
+      <span class="s2">"visible"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"availability"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price"</span><span class="o">:</span> <span class="mf">207.96</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://www.my-shop.gr/eshop/catalog/images//myshop/hp/5590-80x60.jpg"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">38325</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"ΕΚΤΥΠΩΤΗΣ EPSON LX-300+ 80CL 9PIN"</span><span class="p">,</span>
+      <span class="s2">"sku_id"</span><span class="o">:</span> <span class="mi">2523</span><span class="p">,</span>
+      <span class="s2">"shop_id"</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">119</span><span class="p">,</span>
+      <span class="s2">"visible"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"availability"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price"</span><span class="o">:</span> <span class="mf">191.99</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://www.my-shop.gr/eshop/catalog/images//myshop/epson/lx-300+-80x60.jpg"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">38337</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"ΕΚΤΥΠΩΤΗΣ EPSON LX-1170 136CL 9PIN"</span><span class="p">,</span>
+      <span class="s2">"sku_id"</span><span class="o">:</span> <span class="mi">12096</span><span class="p">,</span>
+      <span class="s2">"shop_id"</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">119</span><span class="p">,</span>
+      <span class="s2">"visible"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"availability"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price"</span><span class="o">:</span> <span class="mf">527.44</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://www.my-shop.gr/eshop/catalog/images//myshop/epson/lx-1170-80x60.jpg"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">38341</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"ΕΚΤΥΠΩΤΗΣ EPSON LQ-630 80CL 24PIN"</span><span class="p">,</span>
+      <span class="s2">"sku_id"</span><span class="o">:</span> <span class="mi">2529</span><span class="p">,</span>
+      <span class="s2">"shop_id"</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">119</span><span class="p">,</span>
+      <span class="s2">"visible"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"availability"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price"</span><span class="o">:</span> <span class="mf">445.44</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://www.my-shop.gr/eshop/catalog/images//myshop/epson/lq-630-80x60.jpg"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">38343</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"ΕΚΤΥΠΩΤΗΣ EPSON LQ-680PRO  106CL 24PIN"</span><span class="p">,</span>
+      <span class="s2">"sku_id"</span><span class="o">:</span> <span class="mi">2533</span><span class="p">,</span>
+      <span class="s2">"shop_id"</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">119</span><span class="p">,</span>
+      <span class="s2">"visible"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"availability"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price"</span><span class="o">:</span> <span class="mf">781.87</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://www.my-shop.gr/eshop/catalog/images//myshop/epson/lq-680pro-80x60.jpg"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">38344</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"ΕΚΤΥΠΩΤΗΣ EPSON LQ-300+ 80CL 24PIN"</span><span class="p">,</span>
+      <span class="s2">"sku_id"</span><span class="o">:</span> <span class="mi">2524</span><span class="p">,</span>
+      <span class="s2">"shop_id"</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">119</span><span class="p">,</span>
+      <span class="s2">"visible"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"availability"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price"</span><span class="o">:</span> <span class="mf">285.7</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://www.my-shop.gr/eshop/catalog/images/subcategory_printers-80x60.jpg"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">38351</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"ΕΚΤΥΠΩΤΗΣ EPSON FX-890 80CL 18PIN"</span><span class="p">,</span>
+      <span class="s2">"sku_id"</span><span class="o">:</span> <span class="mi">2535</span><span class="p">,</span>
+      <span class="s2">"shop_id"</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">119</span><span class="p">,</span>
+      <span class="s2">"visible"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"availability"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price"</span><span class="o">:</span> <span class="mf">698.9</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://www.my-shop.gr/eshop/catalog/images//myshop/epson/fx880-80x60.jpg"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">38353</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"ΕΚΤΥΠΩΤΗΣ EPSON FX-2190 136CL 18PIN"</span><span class="p">,</span>
+      <span class="s2">"sku_id"</span><span class="o">:</span> <span class="mi">2537</span><span class="p">,</span>
+      <span class="s2">"shop_id"</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">119</span><span class="p">,</span>
+      <span class="s2">"visible"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"availability"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price"</span><span class="o">:</span> <span class="mf">881.41</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://www.my-shop.gr/eshop/catalog/images//myshop/epson/fx2180-80x60.jpg"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">38560</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"ΚΑΡΤ.ΔΙΚT INTEL PRO/1000MT 2-PORT SRV"</span><span class="p">,</span>
+      <span class="s2">"sku_id"</span><span class="o">:</span> <span class="mi">311020</span><span class="p">,</span>
+      <span class="s2">"shop_id"</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">128</span><span class="p">,</span>
+      <span class="s2">"visible"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"availability"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price"</span><span class="o">:</span> <span class="mf">150.72</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://www.my-shop.gr/eshop/catalog/images//myshop/INTEL/67902-80x60.jpg"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">38565</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"INTEL PRO/1000MT SRV ADPT-BLK PWLA8490MT"</span><span class="p">,</span>
+      <span class="s2">"sku_id"</span><span class="o">:</span> <span class="mi">311764</span><span class="p">,</span>
+      <span class="s2">"shop_id"</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">128</span><span class="p">,</span>
+      <span class="s2">"visible"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"availability"</span><span class="o">:</span> <span class="s2">"Άγνωστη διαθεσιμότητα"</span><span class="p">,</span>
+      <span class="s2">"price"</span><span class="o">:</span> <span class="mf">133.89</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://www.my-shop.gr/eshop/catalog/images//myshop/INTEL/65236-80x60.jpg"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">38569</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"NIC INTEL PRO/1000 GT DESKTOP BULK"</span><span class="p">,</span>
+      <span class="s2">"sku_id"</span><span class="o">:</span> <span class="mi">311761</span><span class="p">,</span>
+      <span class="s2">"shop_id"</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">128</span><span class="p">,</span>
+      <span class="s2">"visible"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"availability"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price"</span><span class="o">:</span> <span class="mf">31.22</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://www.my-shop.gr/eshop/catalog/images//myshop/INTEL/89233-80x60.jpg"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">38575</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"3COM HUB OFFICE CONNECT TP4"</span><span class="p">,</span>
+      <span class="s2">"sku_id"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"shop_id"</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">124</span><span class="p">,</span>
+      <span class="s2">"visible"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"availability"</span><span class="o">:</span> <span class="s2">"Άγνωστη διαθεσιμότητα"</span><span class="p">,</span>
+      <span class="s2">"price"</span><span class="o">:</span> <span class="mf">41.29</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://www.my-shop.gr/eshop/catalog/images//myshop/3COM/8068-80x60.jpg"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">38585</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"3COM HUB 5PORTS 10/100 (3C16755)"</span><span class="p">,</span>
+      <span class="s2">"sku_id"</span><span class="o">:</span> <span class="mi">25531</span><span class="p">,</span>
+      <span class="s2">"shop_id"</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">124</span><span class="p">,</span>
+      <span class="s2">"visible"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"availability"</span><span class="o">:</span> <span class="s2">"Άγνωστη διαθεσιμότητα"</span><span class="p">,</span>
+      <span class="s2">"price"</span><span class="o">:</span> <span class="mf">66.37</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://www.my-shop.gr/eshop/catalog/images//myshop/3COM/55380-80x60.jpg"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">38587</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"3COM HUB 8PORTS 10/100 (3C16753)"</span><span class="p">,</span>
+      <span class="s2">"sku_id"</span><span class="o">:</span> <span class="mi">25543</span><span class="p">,</span>
+      <span class="s2">"shop_id"</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">124</span><span class="p">,</span>
+      <span class="s2">"visible"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"availability"</span><span class="o">:</span> <span class="s2">"Άγνωστη διαθεσιμότητα"</span><span class="p">,</span>
+      <span class="s2">"price"</span><span class="o">:</span> <span class="mf">97.56</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://www.my-shop.gr/eshop/catalog/images//myshop/3COM/58726-80x60.jpg"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">38588</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"3COM HUB 16PORTS 10/100 (3C16754)"</span><span class="p">,</span>
+      <span class="s2">"sku_id"</span><span class="o">:</span> <span class="mi">25542</span><span class="p">,</span>
+      <span class="s2">"shop_id"</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">124</span><span class="p">,</span>
+      <span class="s2">"visible"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"availability"</span><span class="o">:</span> <span class="s2">"Άγνωστη διαθεσιμότητα"</span><span class="p">,</span>
+      <span class="s2">"price"</span><span class="o">:</span> <span class="mf">180.43</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://www.my-shop.gr/eshop/catalog/images//myshop/3COM/58727-80x60.jpg"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">38597</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"3COM HUB 24*10/100TX (3C16411)"</span><span class="p">,</span>
+      <span class="s2">"sku_id"</span><span class="o">:</span> <span class="mi">25573</span><span class="p">,</span>
+      <span class="s2">"shop_id"</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">124</span><span class="p">,</span>
+      <span class="s2">"visible"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"availability"</span><span class="o">:</span> <span class="s2">"Άγνωστη διαθεσιμότητα"</span><span class="p">,</span>
+      <span class="s2">"price"</span><span class="o">:</span> <span class="mf">383.17</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://www.my-shop.gr/eshop/catalog/images//myshop/3COM/67486-80x60.jpg"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">38598</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"3COM HUB (16*10/100TX) RACK (3C16410)"</span><span class="p">,</span>
+      <span class="s2">"sku_id"</span><span class="o">:</span> <span class="mi">25566</span><span class="p">,</span>
+      <span class="s2">"shop_id"</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">124</span><span class="p">,</span>
+      <span class="s2">"visible"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"availability"</span><span class="o">:</span> <span class="s2">"Άγνωστη διαθεσιμότητα"</span><span class="p">,</span>
+      <span class="s2">"price"</span><span class="o">:</span> <span class="mf">242.56</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://www.my-shop.gr/eshop/catalog/images//myshop/3COM/67769-80x60.jpg"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">38610</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"SWITCH HP PROCURVE 2824 J4903A"</span><span class="p">,</span>
+      <span class="s2">"sku_id"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"shop_id"</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">124</span><span class="p">,</span>
+      <span class="s2">"visible"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"availability"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price"</span><span class="o">:</span> <span class="mf">1898.06</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://www.my-shop.gr/eshop/catalog/images//myshop/HP/80649-80x60.jpg"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">38904</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"SWITCH CISCO WS-C3750G-24T-S"</span><span class="p">,</span>
+      <span class="s2">"sku_id"</span><span class="o">:</span> <span class="mi">25996</span><span class="p">,</span>
+      <span class="s2">"shop_id"</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">124</span><span class="p">,</span>
+      <span class="s2">"visible"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"availability"</span><span class="o">:</span> <span class="s2">"Άγνωστη διαθεσιμότητα"</span><span class="p">,</span>
+      <span class="s2">"price"</span><span class="o">:</span> <span class="mf">3408.58</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://www.my-shop.gr/eshop/catalog/images//myshop/CISCO/77478-80x60.jpg"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">38942</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"ROUTER CISCO CISCO857-K9"</span><span class="p">,</span>
+      <span class="s2">"sku_id"</span><span class="o">:</span> <span class="mi">302250</span><span class="p">,</span>
+      <span class="s2">"shop_id"</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">775</span><span class="p">,</span>
+      <span class="s2">"visible"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"availability"</span><span class="o">:</span> <span class="s2">"Άγνωστη διαθεσιμότητα"</span><span class="p">,</span>
+      <span class="s2">"price"</span><span class="o">:</span> <span class="mf">256.25</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://www.my-shop.gr/eshop/catalog/images//myshop/CISCO/95302-80x60.jpg"</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span></code></pre>
+
+<h2 id="retrieve-a-single-product">Retrieve a single product</h2>
+
+<ul class="request-params">
+<li>
+<span class="label">verb</span>: GET</li>
+<li>
+<span class="label">path</span>: /products/13313788</li>
+<li>
+<span class="label">params</span>: <ul class="request-params"><li>
+<span class="label">oauth_token</span>: [FILTERED]</li></ul>
+</li>
+</ul><pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"product"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"id"</span><span class="o">:</span> <span class="mi">13313788</span><span class="p">,</span>
+    <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Sneaker Adidas Greenstar Q23032 0071-ss2013 Ανδρικό"</span><span class="p">,</span>
+    <span class="s2">"sku_id"</span><span class="o">:</span> <span class="mi">3050591</span><span class="p">,</span>
+    <span class="s2">"shop_id"</span><span class="o">:</span> <span class="mi">821</span><span class="p">,</span>
+    <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">379</span><span class="p">,</span>
+    <span class="s2">"visible"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="s2">"availability"</span><span class="o">:</span> <span class="s2">"72 ΩΡΕΣ ΠΑΡΑΔΟΣΗ"</span><span class="p">,</span>
+    <span class="s2">"price"</span><span class="o">:</span> <span class="mf">55.97</span><span class="p">,</span>
+    <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://www.z-mall.gr/ItemsContent/0002227/962661.0/0002227_962661.0_GENCOM-SS2013_0071-ss2013_0_4.jpg"</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre>
+      </div>
+    </div><!-- #wrapper -->
+  </div>
+
+    <div id="footer" >
+      <div class="upper_footer">
+        <div class="footer_inner clearfix">
+
+        <ul class="footer_nav">
+          <li><h4>Skroutz</h4></li>
+          <li><a href="https://skroutz.gr/blog/projects">About</a></li>
+          <li><a href="https://skroutz.gr/blog">Blog</a></li>
+          <li><a href="https://skroutz.gr/contact">Contact</a></li>
+        </ul>
+
+
+        </div><!-- /.site -->
+      </div><!-- /.upper_footer -->
+
+      <div class="lower_footer">
+        <a class="footer_faq" href="http://skroutz.gr/faq/">F.A.Q - Terms of Service</a>
+        <p class="footer-cell">
+          Design &copy; <span class="js-year">2013</span> Skroutz S.A, Inc. All rights reserved.
+          <br />
+          Except where otherwise noted, content on this site is licensed under a
+          <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons CC-BY license</a>.
+        </p>
+      </div>
+
+    </div><!-- /#footer -->
+</body>
+</html>
