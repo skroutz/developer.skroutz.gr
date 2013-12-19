@@ -20,7 +20,7 @@ module ResponseMate
       output = '<ul class="request-params">'
       output << hash.map { |k, v|
         val = v.is_a?(Hash) ? format_params(v) : v
-        val = '[FILTERED]' if FILTERED_PARAMS.include? k
+        val = '[FILTERED]' if FILTERED_PARAMS.include? k.to_sym
 
         "<li><span class=\"label\">#{k}</span>: #{val}</li>"
       }.join()
