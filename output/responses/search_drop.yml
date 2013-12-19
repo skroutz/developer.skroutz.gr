@@ -3,20 +3,21 @@
   :verb: GET
   :path: /search
   :params:
-    :q: wrong iphone
+    q: wrong iphone
+    oauth_token: k0V2dGO/A1hO5s8fiUaBybaueTLyWF1xql9B70mflCspzBqOWGVsw/OyE3hOK9w9t1ssqykVAy6xIrofKsFfJQ==
 :status: 200
-:headers: !ruby/hash:Faraday::Utils::Headers
+:headers:
   content-type: application/json; charset=utf-8
   x-meta-request-version: 0.2.1
   x-ua-compatible: IE=Edge,chrome=1
-  etag: ! '"46d9f5f8501f0fbd6720ff256ea7ed15"'
+  etag: '"46d9f5f8501f0fbd6720ff256ea7ed15"'
   cache-control: max-age=0, private, must-revalidate
-  x-request-id: b744d480d6fb220ee6b777d77fe05bda
-  x-runtime: '0.056864'
-  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
-  date: Fri, 22 Nov 2013 10:06:14 GMT
+  x-request-id: 1c81f90691f8408358e9ecb5c348e3b5
+  x-runtime: '5.910092'
+  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
+  date: Thu, 19 Dec 2013 10:41:03 GMT
   content-length: '62'
   connection: close
-  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTQ2ZTM5MzYyNTI0Y2Q5N2YzNWE0NzE1MzBiY2MyYjkxBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--e39bc794297fd466b994efde774c20c7e7246382;
-    path=/; expires=Wed, 22-Jan-2014 10:06:14 GMT; HttpOnly
-:body: ! '{"proposals":["wrong","iphone"],"meta":{"result_type":"drop"}}'
+  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTZkMjI0OWU1OTgyNjQwYjZmYTdmYmUxYzE1Y2U0OWI0BjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--6421e60ecd9333f30e375cc046d9e6bf710c592b;
+    path=/; expires=Wed, 19-Feb-2014 10:41:03 GMT; HttpOnly
+:body: '{"proposals":["wrong","iphone"],"meta":{"result_type":"drop"}}'

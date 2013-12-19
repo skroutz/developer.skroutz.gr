@@ -2,19 +2,21 @@
 :request:
   :verb: GET
   :path: /shops/3
+  :params:
+    oauth_token: k0V2dGO/A1hO5s8fiUaBybaueTLyWF1xql9B70mflCspzBqOWGVsw/OyE3hOK9w9t1ssqykVAy6xIrofKsFfJQ==
 :status: 200
-:headers: !ruby/hash:Faraday::Utils::Headers
+:headers:
   content-type: application/json; charset=utf-8
   x-meta-request-version: 0.2.1
   x-ua-compatible: IE=Edge,chrome=1
-  etag: ! '"8a64f9be9205e9a622866275c216822f"'
+  etag: '"8a64f9be9205e9a622866275c216822f"'
   cache-control: max-age=0, private, must-revalidate
-  x-request-id: 97640dd7effa62bd877c531104c5f8a8
-  x-runtime: '0.019540'
-  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
-  date: Fri, 22 Nov 2013 10:06:14 GMT
+  x-request-id: db997f6095b402012e880049c56c3b52
+  x-runtime: '1.214301'
+  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
+  date: Thu, 19 Dec 2013 10:40:42 GMT
   content-length: '193'
   connection: close
-  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTA4Y2I3MTRmOWQ2ZjhhNzE1YTAzNWMzMWQ5OTBjYTIwBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--426757d0959430ff2765001eb990720479505b2f;
-    path=/; expires=Wed, 22-Jan-2014 10:06:14 GMT; HttpOnly
-:body: ! '{"shop":{"id":3,"name":"E-shop","phone":"2115000500","image_url":"http://d.scdn.gr/assets/merchants/el/no_logo.png","thumbshot_url":"http://a.scdn.gr/assets/helmet/el/no_scr_image_medium.png"}}'
+  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTNhYjQ1YzE1ODA5OGJhYmQ4MTU2YWFkYTVjMTJmODNlBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--cdefa99ce37eccc0ac4fbd001f1c16df4bc10215;
+    path=/; expires=Wed, 19-Feb-2014 10:40:42 GMT; HttpOnly
+:body: '{"shop":{"id":3,"name":"E-shop","phone":"2115000500","image_url":"http://d.scdn.gr/assets/merchants/el/no_logo.png","thumbshot_url":"http://a.scdn.gr/assets/helmet/el/no_scr_image_medium.png"}}'

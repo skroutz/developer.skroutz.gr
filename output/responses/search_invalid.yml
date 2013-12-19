@@ -3,21 +3,22 @@
   :verb: GET
   :path: /search
   :params:
-    :q: a
+    q: a
+    oauth_token: k0V2dGO/A1hO5s8fiUaBybaueTLyWF1xql9B70mflCspzBqOWGVsw/OyE3hOK9w9t1ssqykVAy6xIrofKsFfJQ==
 :status: 400
-:headers: !ruby/hash:Faraday::Utils::Headers
+:headers:
   content-type: application/json; charset=utf-8
   x-meta-request-version: 0.2.1
   x-ua-compatible: IE=Edge,chrome=1
   cache-control: no-cache
-  x-request-id: 0d56bd03cb4e621780b38f2ce27670d1
-  x-runtime: '0.016472'
-  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
-  date: Fri, 22 Nov 2013 10:06:14 GMT
+  x-request-id: dcb9d744c709e8ce6a78b88db2af0d88
+  x-runtime: '1.263257'
+  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
+  date: Thu, 19 Dec 2013 10:40:48 GMT
   content-length: '356'
   connection: close
-  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTYxOThlZWVmZDczY2U0NzlhYTllOTY5Nzg0NWQyMGFmBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--c4b66b3d6f80f0817815b7ec3683c03d9e90029f;
-    path=/; expires=Wed, 22-Jan-2014 10:06:14 GMT; HttpOnly
-:body: ! '{"meta":{"result_type":"invalid"},"message":"\u0397 \u03b1\u03bd\u03b1\u03b6\u03ae\u03c4\u03b7\u03c3\u03ae
+  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTUxYjExZjVkNDEyOGI5NWE0NTIwZTU3MDUzMmUzMmJjBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--4e38df9084284c4f3228c20fa4c3922957f27f38;
+    path=/; expires=Wed, 19-Feb-2014 10:40:48 GMT; HttpOnly
+:body: '{"meta":{"result_type":"invalid"},"message":"\u0397 \u03b1\u03bd\u03b1\u03b6\u03ae\u03c4\u03b7\u03c3\u03ae
   \u03c3\u03bf\u03c5 \u03c0\u03c1\u03ad\u03c0\u03b5\u03b9 \u03bd\u03b1 \u03c0\u03b5\u03c1\u03b9\u03ad\u03c7\u03b5\u03b9
   \u03c4\u03bf\u03c5\u03bb\u03ac\u03c7\u03b9\u03c3\u03c4\u03bf\u03bd 2 \u03c7\u03b1\u03c1\u03b1\u03ba\u03c4\u03ae\u03c1\u03b5\u03c2"}'

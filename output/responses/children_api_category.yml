@@ -1,0 +1,26 @@
+---
+:request:
+  :verb: GET
+  :path: /categories/73/children
+  :params:
+    oauth_token: k0V2dGO/A1hO5s8fiUaBybaueTLyWF1xql9B70mflCspzBqOWGVsw/OyE3hOK9w9t1ssqykVAy6xIrofKsFfJQ==
+:status: 200
+:headers:
+  content-type: application/json; charset=utf-8
+  x-meta-request-version: 0.2.1
+  x-ua-compatible: IE=Edge,chrome=1
+  etag: '"e7beb4bf561eac18085e35efd802ef76"'
+  cache-control: max-age=0, private, must-revalidate
+  x-request-id: b4a2396d0e31d22e9c8c0ecc41dcc887
+  x-runtime: '1.622965'
+  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
+  date: Thu, 19 Dec 2013 10:40:32 GMT
+  content-length: '814'
+  connection: close
+  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWFkOGRjNWNmMTQ4ZTc3MTI1ZDFlMWU4MzAzYTY0YWQzBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--d951d93c02f1903c5a9a793ba25f29e5c7878e0f;
+    path=/; expires=Wed, 19-Feb-2014 10:40:32 GMT; HttpOnly
+:body: '{"categories":[{"id":365,"name":"\u0394\u03b9\u03ac\u03c6\u03bf\u03c1\u03b5\u03c2
+  \u03a5\u03c0\u03b7\u03c1\u03b5\u03c3\u03af\u03b5\u03c2","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/365.jpg","leaf":true},{"id":107,"name":"\u0395\u03c0\u03b5\u03ba\u03c4\u03ac\u03c3\u03b5\u03b9\u03c2
+  \u0395\u03b3\u03b3\u03cd\u03b7\u03c3\u03b7\u03c2","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/107.jpg","leaf":true},{"id":106,"name":"\u03a3\u03c5\u03bd\u03b4\u03ad\u03c3\u03b5\u03b9\u03c2
+  Internet","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/106.jpg","leaf":true},{"id":364,"name":"\u03a5\u03c0\u03b7\u03c1\u03b5\u03c3\u03af\u03b5\u03c2
+  Internet","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/364.jpg","leaf":true}]}'

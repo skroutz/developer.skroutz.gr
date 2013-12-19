@@ -4,24 +4,24 @@
   :path: /categories/40/filter_groups
   :params:
     per: 2
-    oauth_token: Vr/AzbfQt3ywQlKUonZk25VqRg2ILFAFV/voi69FD9xlJl5Yp9DmDWb6PAEsVwuI1KckH3aa1/vxRaj/Mbwg==
+    oauth_token: k0V2dGO/A1hO5s8fiUaBybaueTLyWF1xql9B70mflCspzBqOWGVsw/OyE3hOK9w9t1ssqykVAy6xIrofKsFfJQ==
 :status: 200
 :headers:
-  link: <http://localhost:3000/api/categories/40/filter_groups?oauth_token=Vr%2FAzbfQt3ywQlKUonZk25VqRg2ILFAFV%2Fvoi69FD9xlJl5Yp9DmDWb6PAEsVwuI1KckH3aa1%2FvxRaj%2FMbwg%3D%3D&page=7&per=2>;
-    rel="last", <http://localhost:3000/api/categories/40/filter_groups?oauth_token=Vr%2FAzbfQt3ywQlKUonZk25VqRg2ILFAFV%2Fvoi69FD9xlJl5Yp9DmDWb6PAEsVwuI1KckH3aa1%2FvxRaj%2FMbwg%3D%3D&page=2&per=2>;
+  link: <http://localhost:3000/api/categories/40/filter_groups?oauth_token=k0V2dGO%2FA1hO5s8fiUaBybaueTLyWF1xql9B70mflCspzBqOWGVsw%2FOyE3hOK9w9t1ssqykVAy6xIrofKsFfJQ%3D%3D&page=7&per=2>;
+    rel="last", <http://localhost:3000/api/categories/40/filter_groups?oauth_token=k0V2dGO%2FA1hO5s8fiUaBybaueTLyWF1xql9B70mflCspzBqOWGVsw%2FOyE3hOK9w9t1ssqykVAy6xIrofKsFfJQ%3D%3D&page=2&per=2>;
     rel="next"
   content-type: application/json; charset=utf-8
   x-meta-request-version: 0.2.1
   x-ua-compatible: IE=Edge,chrome=1
-  etag: ! '"cc15b6a7e646002616695c0ad7ae6eeb"'
+  etag: '"cc15b6a7e646002616695c0ad7ae6eeb"'
   cache-control: max-age=0, private, must-revalidate
-  x-request-id: 09efc9dc7ab7f36de31ba15840f9b6ae
-  x-runtime: '0.031235'
-  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
-  date: Thu, 19 Dec 2013 10:10:47 GMT
+  x-request-id: 5b90e6e7182b73614458f330f689ba91
+  x-runtime: '1.407719'
+  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
+  date: Thu, 19 Dec 2013 10:41:34 GMT
   content-length: '366'
   connection: close
-  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTczZjdhNzBiYWY0MzhkNWU2OGI2OTc4YjBmY2ViMDM3BjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--1a8aee3e8b523c67f5ed2633f6a2fad1bb6c4c1b;
-    path=/; expires=Wed, 19-Feb-2014 10:10:47 GMT; HttpOnly
-:body: ! '{"filter_groups":[{"id":56092,"name":"\u03a0\u03b5\u03c1\u03b9\u03bf\u03c7\u03ae
+  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWFmMTBkZDVhOGM0ZDc2NzJhMTI1M2ZjYjAwYzU3ZDMzBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--928a2e529e7c2d1817d87581ba7f76364ebdf3e4;
+    path=/; expires=Wed, 19-Feb-2014 10:41:34 GMT; HttpOnly
+:body: '{"filter_groups":[{"id":56092,"name":"\u03a0\u03b5\u03c1\u03b9\u03bf\u03c7\u03ae
   \u03a4\u03b9\u03bc\u03ce\u03bd","active":true,"category_id":40,"created_at":null,"updated_at":null,"hint":null},{"id":48929,"name":"\u0395\u03c0\u03b5\u03be\u03b5\u03c1\u03b3\u03b1\u03c3\u03c4\u03ae\u03c2","active":true,"category_id":40,"created_at":null,"updated_at":null,"hint":""}]}'

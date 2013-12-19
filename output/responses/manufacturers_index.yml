@@ -3,23 +3,24 @@
   :verb: GET
   :path: /manufacturers
   :params:
-    :page: 1
-    :per: 2
+    per: 2
+    oauth_token: k0V2dGO/A1hO5s8fiUaBybaueTLyWF1xql9B70mflCspzBqOWGVsw/OyE3hOK9w9t1ssqykVAy6xIrofKsFfJQ==
 :status: 200
-:headers: !ruby/hash:Faraday::Utils::Headers
-  link: <http://localhost:3000/api/manufacturers?page=6339&per=2>; rel="last", <http://localhost:3000/api/manufacturers?page=2&per=2>;
+:headers:
+  link: <http://localhost:3000/api/manufacturers?oauth_token=k0V2dGO%2FA1hO5s8fiUaBybaueTLyWF1xql9B70mflCspzBqOWGVsw%2FOyE3hOK9w9t1ssqykVAy6xIrofKsFfJQ%3D%3D&page=6339&per=2>;
+    rel="last", <http://localhost:3000/api/manufacturers?oauth_token=k0V2dGO%2FA1hO5s8fiUaBybaueTLyWF1xql9B70mflCspzBqOWGVsw%2FOyE3hOK9w9t1ssqykVAy6xIrofKsFfJQ%3D%3D&page=2&per=2>;
     rel="next"
   content-type: application/json; charset=utf-8
   x-meta-request-version: 0.2.1
   x-ua-compatible: IE=Edge,chrome=1
-  etag: ! '"5797cdd8c67656337b2bbcece1762e6e"'
+  etag: '"5797cdd8c67656337b2bbcece1762e6e"'
   cache-control: max-age=0, private, must-revalidate
-  x-request-id: 85dacccf66dd19472cda16bc422e7341
-  x-runtime: '0.024214'
-  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
-  date: Fri, 22 Nov 2013 10:06:14 GMT
+  x-request-id: 98f1ad42457c8c7fb154e8801afcf473
+  x-runtime: '1.455387'
+  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
+  date: Thu, 19 Dec 2013 10:40:46 GMT
   content-length: '115'
   connection: close
-  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWExYmFiNGUwNGM5NWM1MDA0YWQ0MjZkODJmYjlhYTkxBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--0fa4bc77b8c6d0dbdd1eee485d2904dbf18f1600;
-    path=/; expires=Wed, 22-Jan-2014 10:06:14 GMT; HttpOnly
-:body: ! '{"manufacturers":[{"id":1,"name":"EA - Electronic Arts","image_url":null},{"id":2,"name":"Sony","image_url":null}]}'
+  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTA4NjliYzE1MmZiYWU0NGZmYjhmMzBhZjZhZWRhNzJhBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--da38756acdb725ec8edad894630cb3faec3fcee2;
+    path=/; expires=Wed, 19-Feb-2014 10:40:46 GMT; HttpOnly
+:body: '{"manufacturers":[{"id":1,"name":"EA - Electronic Arts","image_url":null},{"id":2,"name":"Sony","image_url":null}]}'

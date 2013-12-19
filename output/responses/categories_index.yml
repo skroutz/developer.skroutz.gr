@@ -3,26 +3,28 @@
   :verb: GET
   :path: /categories
   :params:
-    :page: '1'
-    :per: '5'
+    page: '1'
+    per: '5'
+    oauth_token: k0V2dGO/A1hO5s8fiUaBybaueTLyWF1xql9B70mflCspzBqOWGVsw/OyE3hOK9w9t1ssqykVAy6xIrofKsFfJQ==
 :status: 200
-:headers: !ruby/hash:Faraday::Utils::Headers
-  link: <http://localhost:3000/api/categories?page=222&per=5>; rel="last", <http://localhost:3000/api/categories?page=2&per=5>;
+:headers:
+  link: <http://localhost:3000/api/categories?oauth_token=k0V2dGO%2FA1hO5s8fiUaBybaueTLyWF1xql9B70mflCspzBqOWGVsw%2FOyE3hOK9w9t1ssqykVAy6xIrofKsFfJQ%3D%3D&page=222&per=5>;
+    rel="last", <http://localhost:3000/api/categories?oauth_token=k0V2dGO%2FA1hO5s8fiUaBybaueTLyWF1xql9B70mflCspzBqOWGVsw%2FOyE3hOK9w9t1ssqykVAy6xIrofKsFfJQ%3D%3D&page=2&per=5>;
     rel="next"
   content-type: application/json; charset=utf-8
   x-meta-request-version: 0.2.1
   x-ua-compatible: IE=Edge,chrome=1
-  etag: ! '"9f706ab2f96631c62229dad598af5434"'
+  etag: '"0c3e14fa014eb4c0d4b2621b484b49ab"'
   cache-control: max-age=0, private, must-revalidate
-  x-request-id: 507bd02d11440a1d899d23f8d31b1629
-  x-runtime: '0.024264'
-  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
-  date: Fri, 22 Nov 2013 10:06:13 GMT
+  x-request-id: 2152938cf3ce8a9ab1a28109d4202a20
+  x-runtime: '12.905105'
+  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
+  date: Thu, 19 Dec 2013 10:40:27 GMT
   content-length: '925'
   connection: close
-  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTI3NDEwMjU3M2QzODE0MTY0NTM2Yzc0NjczZDNjNTYwBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--10305c0e6f6ec74079dfcbbce030e10394510322;
-    path=/; expires=Wed, 22-Jan-2014 10:06:13 GMT; HttpOnly
-:body: ! '{"categories":[{"children_count":5,"id":1,"name":"\u03a3\u03c4\u03b1\u03b8\u03b5\u03c1\u03ae
-  \u03a4\u03b7\u03bb\u03b5\u03c6\u03c9\u03bd\u03af\u03b1","image_url":"http://a.scdn.gr/images/categories/large/1.jpg","leaf":false},{"children_count":3,"id":2,"name":"\u03a4\u03b7\u03bb\u03b5\u03c6\u03c9\u03bd\u03af\u03b1","image_url":"http://a.scdn.gr/images/categories/large/2.jpg","leaf":false},{"children_count":3,"id":5,"name":"\u03a6\u03c9\u03c4\u03bf\u03b3\u03c1\u03b1\u03c6\u03af\u03b1
-  & Video","image_url":"http://a.scdn.gr/images/categories/large/5.jpg","leaf":false},{"children_count":3,"id":6,"name":"\u0391\u03be\u03b5\u03c3\u03bf\u03c5\u03ac\u03c1  \u0389\u03c7\u03bf\u03c5
-  & \u0395\u03b9\u03ba\u03cc\u03bd\u03b1\u03c2","image_url":"http://a.scdn.gr/images/categories/large/6.jpg","leaf":false},{"children_count":0,"id":10,"name":"Projectors","image_url":"http://d.scdn.gr/images/categories/large/10.jpg","leaf":true}]}'
+  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWRkMTQ4NDc4NWNlMWJlNWRhNzBkYmU1NDk3MzE3ZjA1BjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--3b67c4778882b71c1a65cabb68738b0d96f13405;
+    path=/; expires=Wed, 19-Feb-2014 10:40:27 GMT; HttpOnly
+:body: '{"categories":[{"id":1,"name":"\u03a3\u03c4\u03b1\u03b8\u03b5\u03c1\u03ae
+  \u03a4\u03b7\u03bb\u03b5\u03c6\u03c9\u03bd\u03af\u03b1","children_count":5,"image_url":"http://a.scdn.gr/images/categories/large/1.jpg","leaf":false},{"id":2,"name":"\u03a4\u03b7\u03bb\u03b5\u03c6\u03c9\u03bd\u03af\u03b1","children_count":3,"image_url":"http://a.scdn.gr/images/categories/large/2.jpg","leaf":false},{"id":5,"name":"\u03a6\u03c9\u03c4\u03bf\u03b3\u03c1\u03b1\u03c6\u03af\u03b1
+  & Video","children_count":3,"image_url":"http://a.scdn.gr/images/categories/large/5.jpg","leaf":false},{"id":6,"name":"\u0391\u03be\u03b5\u03c3\u03bf\u03c5\u03ac\u03c1  \u0389\u03c7\u03bf\u03c5
+  & \u0395\u03b9\u03ba\u03cc\u03bd\u03b1\u03c2","children_count":3,"image_url":"http://a.scdn.gr/images/categories/large/6.jpg","leaf":false},{"id":10,"name":"Projectors","children_count":0,"image_url":"http://d.scdn.gr/images/categories/large/10.jpg","leaf":true}]}'
