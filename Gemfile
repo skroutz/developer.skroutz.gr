@@ -1,4 +1,5 @@
 source "http://rubygems.org"
+source "https://rubygems.skroutz.gr"
 
 gem 'builder'
 gem 'coderay'
@@ -15,6 +16,8 @@ gem 'guard'
 gem 'guard-nanoc'
 gem 'colored'
 gem 'addressable'
+
+gem 'response_mate'
 
 group :development do
   gem 'adsf'
