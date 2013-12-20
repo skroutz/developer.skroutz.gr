@@ -29,12 +29,12 @@ You have to specify a category in order to perform filtering.
 
 ### By category
 
-<%= render_recording :category_skus %>
+<%= render_recording :category_skus, only: [:request, :description] %>
 
 ### By manufacturers
 
-<%= render_recording :category_skus_manufacturers %>
+<%= render_recording :category_skus_manufacturers, only: [:request, :description] %>
 
 ### By filters
 
-<%= render_recording :category_skus_filters %>
+<%= render_recording :category_skus_filters, only: [:request, :description] %>

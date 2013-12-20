@@ -67,7 +67,7 @@ GEM
     rb-fsevent (0.9.3)
     rb-inotify (0.9.3)
       ffi (>= 0.5.0)
-    response_mate (0.0.3)
+    response_mate (0.0.5)
       activesupport
       addressable
       awesome_print

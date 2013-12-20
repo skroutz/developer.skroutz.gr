@@ -5,6 +5,8 @@ requests:
   -
     key: categories_index
     request: 'GET /categories?page=1&per=5'
+    meta:
+      description: 'Lists all categories'
   -
     key: categories_root
     request: 'GET /categories/root'
@@ -17,6 +19,8 @@ requests:
   -
     key: category_skus
     request: 'GET /categories/1442/skus?page=1&per=3'
+    meta:
+      description: "Lists only skus belonging to category specified in path"
   -
     key: shops_index
     request:
@@ -108,9 +112,13 @@ requests:
       path: '/categories/40/skus?manufacturer_ids[]=28&manufacturer_ids[]=2'
       params:
         per: 4
+    meta:
+      description: 'Lists skus filtered by manufacturers.'
   -
     key: category_skus_filters
     request:
       path: '/categories/40/skus?filter_ids[]=6282&filter_ids[]=6284'
       params:
         per: 4
+    meta:
+      description: 'Lists skus filtered given filters.'
