@@ -4,20 +4,20 @@
   :path: /search
   :params:
     q: apple
-    oauth_token: k0V2dGO/A1hO5s8fiUaBybaueTLyWF1xql9B70mflCspzBqOWGVsw/OyE3hOK9w9t1ssqykVAy6xIrofKsFfJQ==
+    oauth_token: Vr/AzbfQt3ywQlKUonZk25VqRg2ILFAFV/voi69FD9xlJl5Yp9DmDWb6PAEsVwuI1KckH3aa1/vxRaj/Mbwg==
 :status: 200
 :headers:
   content-type: application/json; charset=utf-8
   x-meta-request-version: 0.2.1
   x-ua-compatible: IE=Edge,chrome=1
-  etag: '"b3875a7a01287164830662d5472e4aeb"'
+  etag: ! '"b3875a7a01287164830662d5472e4aeb"'
   cache-control: max-age=0, private, must-revalidate
-  x-request-id: 406f961c6469451a9e5bebcfc34e8d7f
-  x-runtime: '1.537578'
-  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
-  date: Thu, 19 Dec 2013 10:40:52 GMT
+  x-request-id: cfbaf9c1861117ed63781899d0db5749
+  x-runtime: '0.034312'
+  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
+  date: Fri, 20 Dec 2013 10:53:51 GMT
   content-length: '103'
   connection: close
-  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWE4NzViYWZmNTBkM2Q2YzA3N2EyZmU5YjRkMWIzODRjBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--c5fc33384c102f97d17c60f1c0a1ba5836665488;
-    path=/; expires=Wed, 19-Feb-2014 10:40:52 GMT; HttpOnly
-:body: '{"manufacturer":{"id":356,"name":"Apple","image_url":null},"meta":{"result_type":"manufacturer_match"}}'
+  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTUzNjRmMDE5MzEyNWJhZTgyNWFkZDEwOWQ4NzllYjRmBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--50dc312b8fe0237dd5c5eb23080a2919eb78277c;
+    path=/; expires=Thu, 20-Feb-2014 10:53:51 GMT; HttpOnly
+:body: ! '{"manufacturer":{"id":356,"name":"Apple","image_url":null},"meta":{"result_type":"manufacturer_match"}}'

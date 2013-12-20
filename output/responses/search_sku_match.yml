@@ -4,22 +4,23 @@
   :path: /search
   :params:
     q: Dimage 2300
-    oauth_token: k0V2dGO/A1hO5s8fiUaBybaueTLyWF1xql9B70mflCspzBqOWGVsw/OyE3hOK9w9t1ssqykVAy6xIrofKsFfJQ==
+    oauth_token: Vr/AzbfQt3ywQlKUonZk25VqRg2ILFAFV/voi69FD9xlJl5Yp9DmDWb6PAEsVwuI1KckH3aa1/vxRaj/Mbwg==
 :status: 200
 :headers:
   content-type: application/json; charset=utf-8
   x-meta-request-version: 0.2.1
   x-ua-compatible: IE=Edge,chrome=1
-  etag: '"935031cee603bf0c955ec21586f665b8"'
+  etag: ! '"1e3aec56562dcd4bd8191de98e3864ee"'
   cache-control: max-age=0, private, must-revalidate
-  x-request-id: 18afbdb477d16655cc0c5075e5163de0
-  x-runtime: '4.551460'
-  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
-  date: Thu, 19 Dec 2013 10:41:14 GMT
-  content-length: '983'
+  x-request-id: 4fd8d9cb6bdfbe5cb323448028b71ecf
+  x-runtime: '0.060046'
+  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
+  date: Fri, 20 Dec 2013 10:53:51 GMT
+  content-length: '1066'
   connection: close
-  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTI5YmM5NDEwZmEzYjQwMTI1YWI2ODVhY2RlMWIyMWJkBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--ad76875642e59b813c30d18884ea45a04173b3d3;
-    path=/; expires=Wed, 19-Feb-2014 10:41:14 GMT; HttpOnly
-:body: '{"sku":{"id":304460,"ean":"","pn":"","first_product_shop_info":"740|Photoqueen","click_url":null,"price_max":49.0,"price_min":49.0,"reviewscore":0.0,"shop_count":1,"plain_spec_summary":"Compact,
+  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTM3MWIyYjk1N2YzZTI0OGUwNTlkZTc0MDJjNmVkZDI2BjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--0bf61b26e6ec5d865f818d04b8b81a4397b33510;
+    path=/; expires=Thu, 20-Feb-2014 10:53:51 GMT; HttpOnly
+:body: ! '{"sku":{"id":304460,"ean":"","pn":"","name":"Dimage 2300","display_name":"Konica
+  Minolta Dimage 2300","category_id":434,"first_product_shop_info":"740|Photoqueen","click_url":null,"price_max":49.0,"price_min":49.0,"reviewscore":0.0,"shop_count":1,"plain_spec_summary":"Compact,
   \u0391\u03b9\u03c3\u03b8\u03b7\u03c4\u03ae\u03c1\u03b1\u03c2: CCD, \u039f\u03b8\u03cc\u03bd\u03b7:
   1.8 inches","active_products_count":1,"main_picture":{"small_url":"http://b.scdn.gr/images/sku_main_images/000304/304460/small_0562a9b791f404abe339b0cf577bd302.jpg.jpg","original_url":"http://d.scdn.gr/images/sku_main_images/000304/304460/medium_0562a9b791f404abe339b0cf577bd302.jpg.jpg","tiny_url":"http://d.scdn.gr/images/sku_main_images/000304/304460/tiny_0562a9b791f404abe339b0cf577bd302.jpg.jpg","medium_url":"http://d.scdn.gr/images/sku_main_images/000304/304460/medium_0562a9b791f404abe339b0cf577bd302.jpg.jpg","datamart_url":"http://c.scdn.gr/images/sku_main_images/000304/304460/0562a9b791f404abe339b0cf577bd302.jpg.jpg"},"manufacturer_id":152},"meta":{"result_type":"sku_match"}}'

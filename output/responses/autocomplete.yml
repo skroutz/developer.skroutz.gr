@@ -4,23 +4,23 @@
   :path: /autocomplete
   :params:
     q: iphone
-    oauth_token: k0V2dGO/A1hO5s8fiUaBybaueTLyWF1xql9B70mflCspzBqOWGVsw/OyE3hOK9w9t1ssqykVAy6xIrofKsFfJQ==
+    oauth_token: Vr/AzbfQt3ywQlKUonZk25VqRg2ILFAFV/voi69FD9xlJl5Yp9DmDWb6PAEsVwuI1KckH3aa1/vxRaj/Mbwg==
 :status: 200
 :headers:
   content-type: application/json; charset=utf-8
   cache-control: max-age=3600, public
   x-meta-request-version: 0.2.1
   x-ua-compatible: IE=Edge,chrome=1
-  etag: '"965406afe87b77d604663f6fc9fcf177"'
-  x-request-id: c58489821ff18db681bb9e4660db56bc
-  x-runtime: '1.607288'
-  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
-  date: Thu, 19 Dec 2013 10:41:20 GMT
-  content-length: '375'
+  etag: ! '"334187bf7cf4775e47fa872922c100f7"'
+  x-request-id: 4d738e559025d645011165fa753b5f42
+  x-runtime: '0.034074'
+  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
+  date: Fri, 20 Dec 2013 10:53:51 GMT
+  content-length: '376'
   connection: close
-  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWUzNzdjZGVjYmRhMWEzMDdkNGU4ZWMyYjRkMTU3OGY5BjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--f0dea9ea11100c346d16f738c4ae6bc3de916908;
-    path=/; expires=Wed, 19-Feb-2014 10:41:20 GMT; HttpOnly
-:body: '{"autocomplete":[{"k":"iphone 5c"},{"k":"iphone 5c","d":{"n":"\u039a\u03b9\u03bd\u03b7\u03c4\u03ac
-  \u03a4\u03b7\u03bb\u03ad\u03c6\u03c9\u03bd\u03b1","u":"40"}},{"k":"iphone 5s 16gb"},{"k":"iphone
+  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWVkY2UzZDc3MTM1Y2JmMzkwNmQzNTBhZjA3N2M1NDNmBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--7db5073a89f6b9e3cbea3c846956be10271eddbc;
+    path=/; expires=Thu, 20-Feb-2014 10:53:51 GMT; HttpOnly
+:body: ! '{"autocomplete":[{"k":"iphone 5c"},{"k":"iphone 5c","d":{"n":"\u039a\u03b9\u03bd\u03b7\u03c4\u03ac
+  \u03a4\u03b7\u03bb\u03ad\u03c6\u03c9\u03bd\u03b1","id":"40"}},{"k":"iphone 5s 16gb"},{"k":"iphone
   5 s"},{"k":"iphone 5 c"},{"k":"iphone5c"},{"k":"iphone 3 apple"},{"k":"iphone c"},{"k":"iphone
   4s \u03ba\u03b9\u03bd\u03b7\u03c4\u03bf"},{"k":"iphone 6s"},{"k":"iphone 5s 64gb"}]}'

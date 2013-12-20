@@ -3,23 +3,23 @@
   :verb: GET
   :path: /skus/3703742/products
   :params:
-    oauth_token: k0V2dGO/A1hO5s8fiUaBybaueTLyWF1xql9B70mflCspzBqOWGVsw/OyE3hOK9w9t1ssqykVAy6xIrofKsFfJQ==
+    oauth_token: Vr/AzbfQt3ywQlKUonZk25VqRg2ILFAFV/voi69FD9xlJl5Yp9DmDWb6PAEsVwuI1KckH3aa1/vxRaj/Mbwg==
 :status: 200
 :headers:
   content-type: application/json; charset=utf-8
   x-meta-request-version: 0.2.1
   x-ua-compatible: IE=Edge,chrome=1
-  etag: '"c99d5bb1498391b3e2a78da0d580cf34"'
+  etag: ! '"c99d5bb1498391b3e2a78da0d580cf34"'
   cache-control: max-age=0, private, must-revalidate
-  x-request-id: 16a2322fae564fbfa643fff5097eba3b
-  x-runtime: '1.814706'
-  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
-  date: Thu, 19 Dec 2013 10:41:25 GMT
+  x-request-id: 5bde2a1bff7b1acdbaab4a69e9abf28a
+  x-runtime: '0.242178'
+  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
+  date: Fri, 20 Dec 2013 10:53:52 GMT
   content-length: '514'
   connection: close
-  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTczOWFjZGU0Yjc1MTZlZDFmMzQzNjBhZjE3YWRmZDhhBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--4616cad6601329c8f9bee8efb2eb193b14cf40cb;
-    path=/; expires=Wed, 19-Feb-2014 10:41:25 GMT; HttpOnly
-:body: '{"products":[{"id":13313785,"name":"\u039c\u03c0\u03bb\u03bf\u03cd\u03b6\u03b1
+  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTdjMjAxNmE3MDQ0ZmJjOGNjNTAzZWM0YWFiNDU2MzUxBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--dbd1168c5e8b0138f854cb68e5825a2f73dbe4b6;
+    path=/; expires=Thu, 20-Feb-2014 10:53:52 GMT; HttpOnly
+:body: ! '{"products":[{"id":13313785,"name":"\u039c\u03c0\u03bb\u03bf\u03cd\u03b6\u03b1
   \u039a\u03bf\u03bd\u03c4\u03bf\u03bc\u03ac\u03bd\u03b9\u03ba\u03b7 2nd Skin  SS201-4113
   navy-ss2013 \u0391\u03bd\u03b4\u03c1\u03b9\u03ba\u03cc","sku_id":3703742,"shop_id":821,"category_id":1066,"visible":false,"availability":"\u0391\u039c\u0395\u03a3\u0397
   \u03a0\u0391\u03a1\u0391\u0394\u039f\u03a3\u0397","price":11.7,"image_url":"http://www.z-mall.gr/ItemsContent/0012961/1260094/0012961_1260094_altex-ss2013_navy-ss2013_0_4.jpg"}]}'

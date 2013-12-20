@@ -3,19 +3,19 @@
   :verb: GET
   :path: /favorites/252116
   :params:
-    oauth_token: k0V2dGO/A1hO5s8fiUaBybaueTLyWF1xql9B70mflCspzBqOWGVsw/OyE3hOK9w9t1ssqykVAy6xIrofKsFfJQ==
+    oauth_token: Vr/AzbfQt3ywQlKUonZk25VqRg2ILFAFV/voi69FD9xlJl5Yp9DmDWb6PAEsVwuI1KckH3aa1/vxRaj/Mbwg==
 :status: 404
 :headers:
   content-type: application/json; charset=utf-8
   x-meta-request-version: 0.2.1
   x-ua-compatible: IE=Edge,chrome=1
   cache-control: no-cache
-  x-request-id: d6f488924872450d99fa1ba142d712c9
-  x-runtime: '1.361591'
-  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
-  date: Thu, 19 Dec 2013 10:41:32 GMT
+  x-request-id: 341b7ccd3be7c4d7d075fe44a51c323b
+  x-runtime: '0.046594'
+  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
+  date: Fri, 20 Dec 2013 10:53:53 GMT
   content-length: '43'
   connection: close
-  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTA2YjdjN2U0NTcyZTUzOWRmN2E1OGZhNzYyODlmNjBlBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--2f83efb2c5a4144ce937f89c545240329252fc78;
-    path=/; expires=Wed, 19-Feb-2014 10:41:32 GMT; HttpOnly
+  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTYxOTkxYWM2YmEzYTMzZDgyMzE1ZWM1ZGY3NGUzNDdiBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--0bbedfb8519d5ef2c48b373f3206e4cdebc283bf;
+    path=/; expires=Thu, 20-Feb-2014 10:53:53 GMT; HttpOnly
 :body: You requested something that does not exist

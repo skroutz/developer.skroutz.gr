@@ -5,24 +5,24 @@
   :params:
     q: computers
     per: 2
-    oauth_token: k0V2dGO/A1hO5s8fiUaBybaueTLyWF1xql9B70mflCspzBqOWGVsw/OyE3hOK9w9t1ssqykVAy6xIrofKsFfJQ==
+    oauth_token: Vr/AzbfQt3ywQlKUonZk25VqRg2ILFAFV/voi69FD9xlJl5Yp9DmDWb6PAEsVwuI1KckH3aa1/vxRaj/Mbwg==
 :status: 200
 :headers:
-  link: <http://localhost:3000/api/search?oauth_token=k0V2dGO%2FA1hO5s8fiUaBybaueTLyWF1xql9B70mflCspzBqOWGVsw%2FOyE3hOK9w9t1ssqykVAy6xIrofKsFfJQ%3D%3D&page=3&per=2&q=computers>;
-    rel="last", <http://localhost:3000/api/search?oauth_token=k0V2dGO%2FA1hO5s8fiUaBybaueTLyWF1xql9B70mflCspzBqOWGVsw%2FOyE3hOK9w9t1ssqykVAy6xIrofKsFfJQ%3D%3D&page=2&per=2&q=computers>;
+  link: <http://localhost:3000/api/search?oauth_token=Vr%2FAzbfQt3ywQlKUonZk25VqRg2ILFAFV%2Fvoi69FD9xlJl5Yp9DmDWb6PAEsVwuI1KckH3aa1%2FvxRaj%2FMbwg%3D%3D&page=3&per=2&q=computers>;
+    rel="last", <http://localhost:3000/api/search?oauth_token=Vr%2FAzbfQt3ywQlKUonZk25VqRg2ILFAFV%2Fvoi69FD9xlJl5Yp9DmDWb6PAEsVwuI1KckH3aa1%2FvxRaj%2FMbwg%3D%3D&page=2&per=2&q=computers>;
     rel="next"
   content-type: application/json; charset=utf-8
   x-meta-request-version: 0.2.1
   x-ua-compatible: IE=Edge,chrome=1
-  etag: '"b124f78d5662ebb85bb6dbaa3b5f981a"'
+  etag: ! '"b124f78d5662ebb85bb6dbaa3b5f981a"'
   cache-control: max-age=0, private, must-revalidate
-  x-request-id: 612013465d690038880d503e6c594517
-  x-runtime: '2.329686'
-  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
-  date: Thu, 19 Dec 2013 10:40:50 GMT
+  x-request-id: 36b3bebd9255654105fdafb481b21165
+  x-runtime: '0.056427'
+  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
+  date: Fri, 20 Dec 2013 10:53:51 GMT
   content-length: '427'
   connection: close
-  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTIzOWU1NjYyMWY0MTc3NGE4OWViNjM3MzY5MTI2OTk3BjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--b36332d61f562f5d1b77011ba13334d66c688775;
-    path=/; expires=Wed, 19-Feb-2014 10:40:50 GMT; HttpOnly
-:body: '{"categories":[{"id":115,"name":"\u0395\u03c6\u03b1\u03c1\u03bc\u03bf\u03b3\u03ad\u03c2
+  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTBiZGNmNmJlYTFmMzM1YWI1MjNhMzVkMzNiN2U2ZmUyBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--883b6e467c00aee126641007e2b83147c7060357;
+    path=/; expires=Thu, 20-Feb-2014 10:53:51 GMT; HttpOnly
+:body: ! '{"categories":[{"id":115,"name":"\u0395\u03c6\u03b1\u03c1\u03bc\u03bf\u03b3\u03ad\u03c2
   \u0393\u03c1\u03b1\u03c6\u03b5\u03af\u03bf\u03c5","children_count":0,"image_url":"http://d.scdn.gr/images/categories/large/115.jpg","leaf":true,"match_count":1},{"id":37,"name":"Gadgets","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/37.jpg","leaf":true,"match_count":1}],"meta":{"result_type":"category_facade"}}'

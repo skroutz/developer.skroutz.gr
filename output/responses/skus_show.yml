@@ -3,20 +3,24 @@
   :verb: GET
   :path: /skus/3703742
   :params:
-    oauth_token: k0V2dGO/A1hO5s8fiUaBybaueTLyWF1xql9B70mflCspzBqOWGVsw/OyE3hOK9w9t1ssqykVAy6xIrofKsFfJQ==
+    oauth_token: Vr/AzbfQt3ywQlKUonZk25VqRg2ILFAFV/voi69FD9xlJl5Yp9DmDWb6PAEsVwuI1KckH3aa1/vxRaj/Mbwg==
 :status: 200
 :headers:
   content-type: application/json; charset=utf-8
   x-meta-request-version: 0.2.1
   x-ua-compatible: IE=Edge,chrome=1
-  etag: '"6b1c6a3389e89e4c1a19b89c2758714d"'
+  etag: ! '"bc0efa6be84c668a02bbc23cb2305af6"'
   cache-control: max-age=0, private, must-revalidate
-  x-request-id: fa3a68eb73fc92a457850993f4f838b3
-  x-runtime: '0.939657'
-  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
-  date: Thu, 19 Dec 2013 10:41:23 GMT
-  content-length: '757'
+  x-request-id: 87ea62ffdb00f074318be6e86cea2945
+  x-runtime: '0.028575'
+  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
+  date: Fri, 20 Dec 2013 10:53:52 GMT
+  content-length: '1174'
   connection: close
-  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTdkNmY2YzZhOTc5NDNlYWVjYmEzM2NlOTRlYmVhNmNiBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--817b4d7024a8c418ba8e4177a97e759b818e17fa;
-    path=/; expires=Wed, 19-Feb-2014 10:41:23 GMT; HttpOnly
-:body: '{"sku":{"id":3703742,"ean":"","pn":"","first_product_shop_info":"821|Z-mall","click_url":"http://www.skroutz.gr/products/show/13313785","price_max":11.7,"price_min":11.7,"reviewscore":0.0,"shop_count":1,"plain_spec_summary":"","active_products_count":1,"main_picture":{"small_url":"http://b.scdn.gr/images/sku_main_images/003703/3703742/small_13313785-orig.jpg","original_url":"http://c.scdn.gr/images/sku_main_images/003703/3703742/medium_13313785-orig.jpg","tiny_url":"http://c.scdn.gr/images/sku_main_images/003703/3703742/tiny_13313785-orig.jpg","medium_url":"http://c.scdn.gr/images/sku_main_images/003703/3703742/medium_13313785-orig.jpg","datamart_url":"http://d.scdn.gr/images/sku_main_images/003703/3703742/13313785-orig.jpg"},"manufacturer_id":0}}'
+  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWU4YWRhYmU3MmM2NjMwODVjMDU0NDc5NmQ4MjA0ODFiBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--f7956aed3565ea2fd3fcdc7862003a1b2cdc0adb;
+    path=/; expires=Thu, 20-Feb-2014 10:53:52 GMT; HttpOnly
+:body: ! '{"sku":{"id":3703742,"ean":"","pn":"","name":"\u039c\u03c0\u03bb\u03bf\u03cd\u03b6\u03b1
+  \u039a\u03bf\u03bd\u03c4\u03bf\u03bc\u03ac\u03bd\u03b9\u03ba\u03b7 2nd Skin  SS201-4113
+  navy-ss2013 \u0391\u03bd\u03b4\u03c1\u03b9\u03ba\u03cc","display_name":"\u039c\u03c0\u03bb\u03bf\u03cd\u03b6\u03b1
+  \u039a\u03bf\u03bd\u03c4\u03bf\u03bc\u03ac\u03bd\u03b9\u03ba\u03b7 2nd Skin  SS201-4113
+  navy-ss2013 \u0391\u03bd\u03b4\u03c1\u03b9\u03ba\u03cc","category_id":1066,"first_product_shop_info":"821|Z-mall","click_url":"http://www.skroutz.gr/products/show/13313785","price_max":11.7,"price_min":11.7,"reviewscore":0.0,"shop_count":1,"plain_spec_summary":"","active_products_count":1,"main_picture":{"small_url":"http://b.scdn.gr/images/sku_main_images/003703/3703742/small_13313785-orig.jpg","original_url":"http://c.scdn.gr/images/sku_main_images/003703/3703742/medium_13313785-orig.jpg","tiny_url":"http://c.scdn.gr/images/sku_main_images/003703/3703742/tiny_13313785-orig.jpg","medium_url":"http://c.scdn.gr/images/sku_main_images/003703/3703742/medium_13313785-orig.jpg","datamart_url":"http://d.scdn.gr/images/sku_main_images/003703/3703742/13313785-orig.jpg"},"manufacturer_id":0}}'
