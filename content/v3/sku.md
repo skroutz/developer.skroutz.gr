@@ -22,3 +22,19 @@ A SKU (Stock Keeping Unit) is an aggregation of products.
 ## Retrieve a SKU's products
 
 <%= render_recording :skus_products %>
+
+## Filtering
+
+You have to specify a category in order to perform filtering.
+
+### By category
+
+<%= render_recording :category_skus %>
+
+### By manufacturers
+
+<%= render_recording :category_skus_manufacturers %>
+
+### By filters
+
+<%= render_recording :category_skus_filters %>

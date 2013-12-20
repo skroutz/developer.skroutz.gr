@@ -96,6 +96,7 @@
   <li><a href="#list-skus">List SKUs</a></li>
   <li><a href="#retrieve-a-single-sku">Retrieve a single SKU</a></li>
   <li><a href="#retrieve-a-skus-products">Retrieve a SKU’s products</a></li>
+  <li><a href="#filtering">Filtering</a></li>
 </ul><h2 id="about">About</h2>
 
 <p>A SKU (Stock Keeping Unit) is an aggregation of products.</p>
@@ -246,6 +247,306 @@
       <span class="s2">"availability"</span><span class="o">:</span> <span class="s2">"ΑΜΕΣΗ ΠΑΡΑΔΟΣΗ"</span><span class="p">,</span>
       <span class="s2">"price"</span><span class="o">:</span> <span class="mf">11.7</span><span class="p">,</span>
       <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://www.z-mall.gr/ItemsContent/0012961/1260094/0012961_1260094_altex-ss2013_navy-ss2013_0_4.jpg"</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span></code></pre>
+
+<h2 id="filtering">Filtering</h2>
+
+<p>You have to specify a category in order to perform filtering.</p>
+
+<h3 id="by-category">By category</h3>
+
+<ul class="request-params">
+<li>
+<span class="label">verb</span>: GET</li>
+<li>
+<span class="label">path</span>: /categories/1442/skus</li>
+<li>
+<span class="label">params</span>: <ul class="request-params">
+<li>
+<span class="label">page</span>: 1</li>
+<li>
+<span class="label">per</span>: 3</li>
+<li>
+<span class="label">oauth_token</span>: [FILTERED]</li>
+</ul>
+</li>
+</ul><pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"skus"</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">2583612</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="s2">"1800|Prasopouloshomeart"</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="s2">"http://www.skroutz.gr/products/show/10668542"</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">35.9</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">35.9</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">0.0</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/002583/2583612/small_10668542-orig.jpg"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/002583/2583612/medium_10668542-orig.jpg"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/002583/2583612/tiny_10668542-orig.jpg"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/002583/2583612/medium_10668542-orig.jpg"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/002583/2583612/10668542-orig.jpg"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">0</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">2583613</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="s2">"1800|Prasopouloshomeart"</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="s2">"http://www.skroutz.gr/products/show/10668543"</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">35.9</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">35.9</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">0.0</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/002583/2583613/small_10668543-orig.jpg"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/002583/2583613/medium_10668543-orig.jpg"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/002583/2583613/tiny_10668543-orig.jpg"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/002583/2583613/medium_10668543-orig.jpg"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/002583/2583613/10668543-orig.jpg"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">0</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">3395746</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="s2">"1981|Diathesimo"</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="s2">"http://www.skroutz.gr/products/show/12710846"</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">36.0</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">36.0</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">0.0</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/003395/3395746/small_12710846-orig.jpg"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/003395/3395746/medium_12710846-orig.jpg"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/003395/3395746/tiny_12710846-orig.jpg"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/003395/3395746/medium_12710846-orig.jpg"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/003395/3395746/12710846-orig.jpg"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">0</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span></code></pre>
+
+<h3 id="by-manufacturers">By manufacturers</h3>
+
+<ul class="request-params">
+<li>
+<span class="label">verb</span>: GET</li>
+<li>
+<span class="label">path</span>: /categories/40/skus?manufacturer_ids[]=28&amp;manufacturer_ids[]=2</li>
+<li>
+<span class="label">params</span>: <ul class="request-params">
+<li>
+<span class="label">per</span>: 4</li>
+<li>
+<span class="label">oauth_token</span>: [FILTERED]</li>
+</ul>
+</li>
+</ul><pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"skus"</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">328970</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">"E1050"</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">24.99</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">15.99</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">5.0</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">12</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"Single SIM, Δίκτυο Σύνδεσης: 2G,   Οθόνη: 1.43\" , Ανάλυση: 128 x 128 pixels, Χειρισμός: Φυσικό Πληκτρολόγιο,    Λειτουργικό Σύστημα: N/A, SAR: 0.789 W/kg, Έτος Κυκλοφορίας: 2011, Feature Phone"</span><span class="p">,</span>
+      <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">12</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/000328/328970/small_sku_picture_5c590d.jpg.jpg"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/000328/328970/medium_sku_picture_5c590d.jpg.jpg"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/000328/328970/tiny_sku_picture_5c590d.jpg.jpg"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/000328/328970/medium_sku_picture_5c590d.jpg.jpg"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/000328/328970/sku_picture_5c590d.jpg.jpg"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">28</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">337548</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">"E1182"</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">31.98</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">16.0</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">4.28571</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">19</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"Dual SIM, Δίκτυο Σύνδεσης: 2G,   Οθόνη: 1.52\" , Ανάλυση: 128 x 128 pixels, Χειρισμός: Φυσικό Πληκτρολόγιο,    Λειτουργικό Σύστημα: N/A, SAR: 0.99 W/kg, Έτος Κυκλοφορίας: 2011, Feature Phone"</span><span class="p">,</span>
+      <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">19</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/000337/337548/small_sku_picture_d81fbb.jpg.jpg"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/000337/337548/medium_sku_picture_d81fbb.jpg.jpg"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/000337/337548/tiny_sku_picture_d81fbb.jpg.jpg"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/000337/337548/medium_sku_picture_d81fbb.jpg.jpg"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/000337/337548/sku_picture_d81fbb.jpg.jpg"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">28</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">2119391</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">46.8</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">17.03</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">4.0</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"Single SIM, Δίκτυο Σύνδεσης: 2G,   Οθόνη: 1.52\" , Ανάλυση: 128 x 128 pixels, Χειρισμός: Φυσικό Πληκτρολόγιο,  Εσωτερική Μνήμη: 100 MB,  Λειτουργικό Σύστημα: N/A, SAR: 0.81 W/kg, Έτος Κυκλοφορίας: 2012, Feature Phone"</span><span class="p">,</span>
+      <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/002119/2119391/small_8806071935041.jpg"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/002119/2119391/medium_8806071935041.jpg"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/002119/2119391/tiny_8806071935041.jpg"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/002119/2119391/medium_8806071935041.jpg"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/002119/2119391/8806071935041.jpg"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">28</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">3287073</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">"GT-E1280"</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">32.0</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">18.96</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">0.0</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"Single SIM, Δίκτυο Σύνδεσης: 2G,   Οθόνη: 1.8\" , Ανάλυση: 160 x 128 pixels, Χειρισμός: Φυσικό Πληκτρολόγιο,    Λειτουργικό Σύστημα: N/A, Έτος Κυκλοφορίας: 2013, Feature Phone"</span><span class="p">,</span>
+      <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/003287/3287073/small_pl_GT-E1280BKAXEO_001_Front_black"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/003287/3287073/medium_pl_GT-E1280BKAXEO_001_Front_black"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/003287/3287073/tiny_pl_GT-E1280BKAXEO_001_Front_black"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/003287/3287073/medium_pl_GT-E1280BKAXEO_001_Front_black"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/003287/3287073/pl_GT-E1280BKAXEO_001_Front_black"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">28</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span></code></pre>
+
+<h3 id="by-filters">By filters</h3>
+
+<ul class="request-params">
+<li>
+<span class="label">verb</span>: GET</li>
+<li>
+<span class="label">path</span>: /categories/40/skus?filter_ids[]=6282&amp;filter_ids[]=6284</li>
+<li>
+<span class="label">params</span>: <ul class="request-params">
+<li>
+<span class="label">per</span>: 4</li>
+<li>
+<span class="label">oauth_token</span>: [FILTERED]</li>
+</ul>
+</li>
+</ul><pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"skus"</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">2141062</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">59.0</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">59.0</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">0.0</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"Single SIM, Δίκτυο Σύνδεσης: 2G, Κάμερα: 2.0 MP,  Οθόνη: 2.8\" , Ανάλυση: 320 x 240 pixels, Χειρισμός: Οθόνη αφής (Touch screen),    Ασύρματο Δίκτυο: Wi-Fi, Λειτουργικό Σύστημα: Android, Έτος Κυκλοφορίας: 2011, SmartPhone"</span><span class="p">,</span>
+      <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/002141/2141062/small_ZTE_Mimosa_Mini_4ffb13abecf34.png"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/002141/2141062/medium_ZTE_Mimosa_Mini_4ffb13abecf34.png"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/002141/2141062/tiny_ZTE_Mimosa_Mini_4ffb13abecf34.png"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/002141/2141062/medium_ZTE_Mimosa_Mini_4ffb13abecf34.png"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/002141/2141062/ZTE_Mimosa_Mini_4ffb13abecf34.png"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">4834</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">2564748</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">"OT-903D"</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">79.99</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">71.09</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">4.16667</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">12</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"Dual SIM, Δίκτυο Σύνδεσης: 3G, Κάμερα: 2 MP,  Οθόνη: 2.8\" , Ανάλυση: 320 x 240 pixels, Χειρισμός: Οθόνη αφής (Touch screen),    Ασύρματο Δίκτυο: Wi-Fi, Λειτουργικό Σύστημα: Android, SAR: 0.891 W/kg, Έτος Κυκλοφορίας: 2012, SmartPhone"</span><span class="p">,</span>
+      <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">12</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/002564/2564748/small_alcatel-903d.jpg"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/002564/2564748/medium_alcatel-903d.jpg"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/002564/2564748/tiny_alcatel-903d.jpg"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/002564/2564748/medium_alcatel-903d.jpg"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/002564/2564748/alcatel-903d.jpg"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">417</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">389499</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">77.0</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">73.0</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">4.0</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"Single SIM, Δίκτυο Σύνδεσης: 3G, Κάμερα: 3.2 MP,  Οθόνη: 2.6\" , Ανάλυση: 320 x 240 pixels, Χειρισμός: Οθόνη αφής (Touch screen) / Φυσικό Πληκτρολόγιο,  Εσωτερική Μνήμη: 512 MB,  Ασύρματο Δίκτυο: Wi-Fi, Λειτουργικό Σύστημα: Android, Έτος Κυκλοφορίας: 2011, SmartPhone"</span><span class="p">,</span>
+      <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/000389/389499/small_huawei-boulder-u8350.jpg"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/000389/389499/medium_huawei-boulder-u8350.jpg"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/000389/389499/tiny_huawei-boulder-u8350.jpg"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/000389/389499/medium_huawei-boulder-u8350.jpg"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/000389/389499/huawei-boulder-u8350.jpg"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">2159</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">388525</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">"Galaxy Y S5360"</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">129.9</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">77.8</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">2.89474</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">18</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"Single SIM, Δίκτυο Σύνδεσης: 3G, Κάμερα: 2 MP,  Οθόνη: 3.0\" , Ανάλυση: 320 x 240 pixels, Χειρισμός: Οθόνη αφής (Touch screen),  Εσωτερική Μνήμη: 180 MB,  Ασύρματο Δίκτυο: Wi-Fi, Λειτουργικό Σύστημα: Android, SAR: 0.66 W/kg, Έτος Κυκλοφορίας: 2011, SmartPhone"</span><span class="p">,</span>
+      <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">18</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/000388/388525/small_samsung-galaxy-y-s5360.jpg"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/000388/388525/medium_samsung-galaxy-y-s5360.jpg"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/000388/388525/tiny_samsung-galaxy-y-s5360.jpg"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/000388/388525/medium_samsung-galaxy-y-s5360.jpg"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/000388/388525/samsung-galaxy-y-s5360.jpg"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">28</span>
     <span class="p">}</span>
   <span class="p">]</span>
 <span class="p">}</span></code></pre>

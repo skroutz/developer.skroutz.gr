@@ -102,3 +102,15 @@ requests:
       path: '/categories/40/filter_groups'
       params:
         per: 2
+  -
+    key: category_skus_manufacturers
+    request:
+      path: '/categories/40/skus?manufacturer_ids[]=28&manufacturer_ids[]=2'
+      params:
+        per: 4
+  -
+    key: category_skus_filters
+    request:
+      path: '/categories/40/skus?filter_ids[]=6282&filter_ids[]=6284'
+      params:
+        per: 4
