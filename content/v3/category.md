@@ -27,11 +27,3 @@ A product/sku belongs to a leaf category.
 ## List the children categories of a category
 
 <%= render_recording :children_api_category %>
-
-## List the skus of a category
-
-### Note 
-Only leaf categories have skus.  
-If you request the skus of a non-leaf category you'll get a `404 Not Found` response.
-
-<%= render_recording :category_skus %>
