@@ -97,7 +97,6 @@
   <li><a href="#retrieve-a-single-category">Retrieve a single category</a></li>
   <li><a href="#retrieve-the-root-category">Retrieve the root category</a></li>
   <li><a href="#list-the-children-categories-of-a-category">List the children categories of a category</a></li>
-  <li><a href="#list-the-skus-of-a-category">List the skus of a category</a></li>
 </ul><h2 id="about">About</h2>
 
 <p>Categories are organized in a tree-like structure.<br>
@@ -246,105 +245,6 @@ A product/sku belongs to a leaf category.</p>
       <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
       <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/categories/large/364.jpg"</span><span class="p">,</span>
       <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">true</span>
-    <span class="p">}</span>
-  <span class="p">]</span>
-<span class="p">}</span></code></pre>
-
-<h2 id="list-the-skus-of-a-category">List the skus of a category</h2>
-
-<h3 id="note">Note</h3>
-<p>Only leaf categories have skus.<br>
-If you request the skus of a non-leaf category you’ll get a <code>404 Not Found</code> response.</p>
-
-<ul class="request-params">
-<li>
-<span class="label">verb</span>: GET</li>
-<li>
-<span class="label">path</span>: /categories/1442/skus</li>
-<li>
-<span class="label">params</span>: <ul class="request-params">
-<li>
-<span class="label">page</span>: 1</li>
-<li>
-<span class="label">per</span>: 3</li>
-<li>
-<span class="label">oauth_token</span>: [FILTERED]</li>
-</ul>
-</li>
-</ul><pre class="headers"><code>Status: 200</code></pre>
-<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
-  <span class="s2">"skus"</span><span class="o">:</span> <span class="p">[</span>
-    <span class="p">{</span>
-      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">2583612</span><span class="p">,</span>
-      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
-      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
-      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"ΞΑΠΛΩΣΤΡΑ"</span><span class="p">,</span>
-      <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"ΞΑΠΛΩΣΤΡΑ"</span><span class="p">,</span>
-      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">1442</span><span class="p">,</span>
-      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="s2">"1800|Prasopouloshomeart"</span><span class="p">,</span>
-      <span class="s2">"click_url"</span><span class="o">:</span> <span class="s2">"http://www.skroutz.gr/products/show/10668542"</span><span class="p">,</span>
-      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">35.9</span><span class="p">,</span>
-      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">35.9</span><span class="p">,</span>
-      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">0.0</span><span class="p">,</span>
-      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-      <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/002583/2583612/small_10668542-orig.jpg"</span><span class="p">,</span>
-        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/002583/2583612/medium_10668542-orig.jpg"</span><span class="p">,</span>
-        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/002583/2583612/tiny_10668542-orig.jpg"</span><span class="p">,</span>
-        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/002583/2583612/medium_10668542-orig.jpg"</span><span class="p">,</span>
-        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/002583/2583612/10668542-orig.jpg"</span>
-      <span class="p">},</span>
-      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">0</span>
-    <span class="p">},</span>
-    <span class="p">{</span>
-      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">2583613</span><span class="p">,</span>
-      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
-      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
-      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"ΞΑΠΛΩΣΤΡΑ"</span><span class="p">,</span>
-      <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"ΞΑΠΛΩΣΤΡΑ"</span><span class="p">,</span>
-      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">1442</span><span class="p">,</span>
-      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="s2">"1800|Prasopouloshomeart"</span><span class="p">,</span>
-      <span class="s2">"click_url"</span><span class="o">:</span> <span class="s2">"http://www.skroutz.gr/products/show/10668543"</span><span class="p">,</span>
-      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">35.9</span><span class="p">,</span>
-      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">35.9</span><span class="p">,</span>
-      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">0.0</span><span class="p">,</span>
-      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-      <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/002583/2583613/small_10668543-orig.jpg"</span><span class="p">,</span>
-        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/002583/2583613/medium_10668543-orig.jpg"</span><span class="p">,</span>
-        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/002583/2583613/tiny_10668543-orig.jpg"</span><span class="p">,</span>
-        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/002583/2583613/medium_10668543-orig.jpg"</span><span class="p">,</span>
-        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/002583/2583613/10668543-orig.jpg"</span>
-      <span class="p">},</span>
-      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">0</span>
-    <span class="p">},</span>
-    <span class="p">{</span>
-      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">3395746</span><span class="p">,</span>
-      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
-      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
-      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Ξαπλώστρα 88x60x99 cm Ξύλινη με Ύφασμα Πορτοκαλί - Σε 6 άτοκες δόσεις"</span><span class="p">,</span>
-      <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"Ξαπλώστρα 88x60x99 cm Ξύλινη με Ύφασμα Πορτοκαλί - Σε 6 άτοκες δόσεις"</span><span class="p">,</span>
-      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">1442</span><span class="p">,</span>
-      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="s2">"1981|Diathesimo"</span><span class="p">,</span>
-      <span class="s2">"click_url"</span><span class="o">:</span> <span class="s2">"http://www.skroutz.gr/products/show/12710846"</span><span class="p">,</span>
-      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">36.0</span><span class="p">,</span>
-      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">36.0</span><span class="p">,</span>
-      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">0.0</span><span class="p">,</span>
-      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-      <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/003395/3395746/small_12710846-orig.jpg"</span><span class="p">,</span>
-        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/003395/3395746/medium_12710846-orig.jpg"</span><span class="p">,</span>
-        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/003395/3395746/tiny_12710846-orig.jpg"</span><span class="p">,</span>
-        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/003395/3395746/medium_12710846-orig.jpg"</span><span class="p">,</span>
-        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/003395/3395746/12710846-orig.jpg"</span>
-      <span class="p">},</span>
-      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">0</span>
     <span class="p">}</span>
   <span class="p">]</span>
 <span class="p">}</span></code></pre>
