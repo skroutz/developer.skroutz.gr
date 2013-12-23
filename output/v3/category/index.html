@@ -94,6 +94,7 @@
 <ul id="markdown-toc">
 <li><a href="#about">About</a></li>
   <li><a href="#list-all-categories">List all categories</a></li>
+  <li><a href="#list-top-level-categories">List top level categories</a></li>
   <li><a href="#retrieve-a-single-category">Retrieve a single category</a></li>
   <li><a href="#retrieve-the-root-category">Retrieve the root category</a></li>
   <li><a href="#list-the-children-categories-of-a-category">List the children categories of a category</a></li>
@@ -156,6 +157,66 @@ A product/sku belongs to a leaf category.</p>
       <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
       <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/categories/large/10.jpg"</span><span class="p">,</span>
       <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">true</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span></code></pre>
+
+<h2 id="list-top-level-categories">List top level categories</h2>
+
+<ul class="request-params">
+<li>
+<span class="label">verb</span>: GET</li>
+<li>
+<span class="label">path</span>: /categories/top_level</li>
+<li>
+<span class="label">params</span>: <ul class="request-params"><li>
+<span class="label">oauth_token</span>: [FILTERED]</li></ul>
+</li>
+</ul><div class="request-description"> Description: Lists top level categories</div>
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"categories"</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">33</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Auto - Moto"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/33.jpg"</span><span class="p">,</span>
+      <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">false</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">255</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Hobby - Αθλητισμός"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">9</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/255.jpg"</span><span class="p">,</span>
+      <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">false</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">274</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Μόδα - Ομορφιά"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">12</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/categories/large/274.jpg"</span><span class="p">,</span>
+      <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">false</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">417</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Παιδικά - Βρεφικά"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">14</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/417.jpg"</span><span class="p">,</span>
+      <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">false</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">11</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Σπίτι - Κήπος"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">12</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/categories/large/11.jpg"</span><span class="p">,</span>
+      <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">false</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">1269</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Τεχνολογία"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/categories/large/1269.jpg"</span><span class="p">,</span>
+      <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">false</span>
     <span class="p">}</span>
   <span class="p">]</span>
 <span class="p">}</span></code></pre>

@@ -1,0 +1,28 @@
+---
+:request:
+  :verb: GET
+  :path: /categories/top_level
+  :params:
+    oauth_token: k0V2dGO/A1hO5s8fiUaBybaueTLyWF1xql9B70mflCspzBqOWGVsw/OyE3hOK9w9t1ssqykVAy6xIrofKsFfJQ==
+:status: 200
+:headers:
+  content-type: application/json; charset=utf-8
+  x-meta-request-version: 0.2.1
+  x-ua-compatible: IE=Edge,chrome=1
+  etag: '"07e7369f8316e695f4f330d065448ce7"'
+  cache-control: max-age=0, private, must-revalidate
+  x-request-id: 4b60ee93340d3d0a6345e96666a74f83
+  x-runtime: '0.870435'
+  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
+  date: Mon, 23 Dec 2013 09:23:29 GMT
+  content-length: '1071'
+  connection: close
+  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTk2ZjdmMTIyOGY1NmM5MjVjYjE5YzFjY2FjYThkZmIzBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--2b443ae51278ea020f93230356c44f0dad4acd41;
+    path=/; expires=Sun, 23-Feb-2014 09:23:29 GMT; HttpOnly
+:body: '{"categories":[{"id":33,"name":"Auto - Moto","children_count":4,"image_url":"http://a.scdn.gr/images/categories/large/33.jpg","leaf":false},{"id":255,"name":"Hobby
+  - \u0391\u03b8\u03bb\u03b7\u03c4\u03b9\u03c3\u03bc\u03cc\u03c2","children_count":9,"image_url":"http://a.scdn.gr/images/categories/large/255.jpg","leaf":false},{"id":274,"name":"\u039c\u03cc\u03b4\u03b1
+  - \u039f\u03bc\u03bf\u03c1\u03c6\u03b9\u03ac","children_count":12,"image_url":"http://d.scdn.gr/images/categories/large/274.jpg","leaf":false},{"id":417,"name":"\u03a0\u03b1\u03b9\u03b4\u03b9\u03ba\u03ac
+  - \u0392\u03c1\u03b5\u03c6\u03b9\u03ba\u03ac","children_count":14,"image_url":"http://a.scdn.gr/images/categories/large/417.jpg","leaf":false},{"id":11,"name":"\u03a3\u03c0\u03af\u03c4\u03b9
+  - \u039a\u03ae\u03c0\u03bf\u03c2","children_count":12,"image_url":"http://d.scdn.gr/images/categories/large/11.jpg","leaf":false},{"id":1269,"name":"\u03a4\u03b5\u03c7\u03bd\u03bf\u03bb\u03bf\u03b3\u03af\u03b1","children_count":8,"image_url":"http://b.scdn.gr/images/categories/large/1269.jpg","leaf":false}]}'
+:meta:
+  description: Lists top level categories
