@@ -130,3 +130,11 @@ requests:
         per: 4
     meta:
       description: 'Lists skus filtered given filters.'
+  -
+    key: category_skus_with_available_filters
+    request:
+      path: '/categories/279/skus'
+      params:
+        per: 1
+        include_meta:
+          - available_filters
