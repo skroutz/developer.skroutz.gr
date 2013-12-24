@@ -24,6 +24,10 @@ A product/sku belongs to a leaf category.
 
 <%= render_recording :categories_show %>
 
+## Retrieve the parent of a category
+
+<%= render_recording :category_parent %>
+
 ## Retrieve the root category
 
 <%= render_recording :categories_root %>

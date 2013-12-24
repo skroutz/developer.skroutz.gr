@@ -96,6 +96,7 @@
   <li><a href="#list-all-categories">List all categories</a></li>
   <li><a href="#list-top-level-categories">List top level categories</a></li>
   <li><a href="#retrieve-a-single-category">Retrieve a single category</a></li>
+  <li><a href="#retrieve-the-parent-of-a-category">Retrieve the parent of a category</a></li>
   <li><a href="#retrieve-the-root-category">Retrieve the root category</a></li>
   <li><a href="#list-the-children-categories-of-a-category">List the children categories of a category</a></li>
 </ul><h2 id="about">About</h2>
@@ -240,6 +241,29 @@ A product/sku belongs to a leaf category.</p>
     <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
     <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/categories/large/1442.jpg"</span><span class="p">,</span>
     <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">true</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre>
+
+<h2 id="retrieve-the-parent-of-a-category">Retrieve the parent of a category</h2>
+
+<ul class="request-params">
+<li>
+<span class="label">verb</span>: GET</li>
+<li>
+<span class="label">path</span>: /categories/1442/parent</li>
+<li>
+<span class="label">params</span>: <ul class="request-params"><li>
+<span class="label">oauth_token</span>: [FILTERED]</li></ul>
+</li>
+</ul><pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"category"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"id"</span><span class="o">:</span> <span class="mi">1434</span><span class="p">,</span>
+    <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Έπιπλα Κήπου &amp; Βεράντας"</span><span class="p">,</span>
+    <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/categories/large/1434.jpg"</span><span class="p">,</span>
+    <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">1052</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre>
 
