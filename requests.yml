@@ -1,10 +1,19 @@
 base_url: http://localhost:3000/api
 default_headers:
   accept: 'application/vnd.skroutz+json; version=3'
+name: apiv3
+
 requests:
   -
     key: categories_index
     request: 'GET /categories?page=1&per=5'
+    meta:
+      description: 'Lists all categories'
+  -
+    key: categories_top_level
+    request: 'GET /categories/top_level'
+    meta:
+      description: 'Lists top level categories'
   -
     key: categories_root
     request: 'GET /categories/root'
@@ -12,16 +21,21 @@ requests:
     key: categories_show
     request: 'GET /categories/1442'
   -
+    key: children_api_category
     request: 'GET /categories/73/children'
   -
     key: category_skus
     request: 'GET /categories/1442/skus?page=1&per=3'
+    meta:
+      description: "Lists only skus belonging to category specified in path"
+  -
+    key: category_parent
+    request: 'GET /categories/1442/parent'
   -
     key: shops_index
     request:
       path: '/shops'
       params:
-        page: 1
         per:  2
   -
     key: shops_show
@@ -34,7 +48,6 @@ requests:
     request:
       path: '/manufacturers'
       params:
-        page: 1
         per:  2
   -
     key: autocomplete
@@ -48,7 +61,6 @@ requests:
       path: '/search'
       params:
         q: 'computers'
-        page: 1
         per:  2
   -
     key: search_manufacturer_match
@@ -94,7 +106,37 @@ requests:
     request: 'GET /products/13313788'
   -
     key: favorites_index
-    request: 'GET /favorites?oauth_token=PfmMB26BZ8gcA3bMpZXc/6AIZmPCbEZ9wvkDr7A8Vu31GwDSoeBD6xaezCLaqPa/wejrDMWDHbuvVJUZBKxfQ=='
+    request: 'GET /favorites'
   -
     key: favorites_show
-    request: 'GET /favorites/254728?oauth_token=PfmMB26BZ8gcA3bMpZXc/6AIZmPCbEZ9wvkDr7A8Vu31GwDSoeBD6xaezCLaqPa/wejrDMWDHbuvVJUZBKxfQ=='
+    request: 'GET /favorites/252116'
+  -
+    key: filter_groups_index
+    request:
+      path: '/categories/40/filter_groups'
+      params:
+        per: 2
+  -
+    key: category_skus_manufacturers
+    request:
+      path: '/categories/40/skus?manufacturer_ids[]=28&manufacturer_ids[]=2'
+      params:
+        per: 4
+    meta:
+      description: 'Lists skus filtered by manufacturers.'
+  -
+    key: category_skus_filters
+    request:
+      path: '/categories/40/skus?filter_ids[]=6282&filter_ids[]=6284'
+      params:
+        per: 4
+    meta:
+      description: 'Lists skus filtered given filters.'
+  -
+    key: category_skus_with_available_filters
+    request:
+      path: '/categories/279/skus'
+      params:
+        per: 1
+        include_meta:
+          - available_filters
