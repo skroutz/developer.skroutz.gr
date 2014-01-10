@@ -1,0 +1,148 @@
+@import "colors";
+
+body {
+  font-family: 'Verdana', sans-serif;
+  background: $grey-1;
+}
+
+p {
+  color: $grey-10;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+.content {
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.button {
+  background: $orange-1;
+  border-radius: 3px;
+  padding: 8px 15px;
+  color: $white;
+  text-decoration: none;
+
+  &:hover {
+    background: $orange-2;
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+header {
+  position: relative;
+  padding-top: 13px;
+  height: 37px;
+  background: $grey-9;
+  box-shadow: 0px 2px 4px 0 $grey-10;
+  color: $white;
+
+  h1 {
+    position: relative;
+    padding-left: 120px;
+    line-height: 29px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 109px;
+      height: 22px;
+      background: url(../../images/logo3.png) no-repeat 0 -59px;
+    }
+  }
+}
+
+#pattern {
+  padding-top: 80px;
+  height: 400px;
+  background: url(../../images/pattern.jpg);
+
+  h2 {
+    position: relative;
+    color: $white;
+    font-family: 'ubuntu', sans-serif;
+    font-size: 38px;
+    font-weight: 300;
+    width: 460px;
+    line-height: 1.7;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: -25px;
+      right: -580px;
+      background: url(../../images/dev.png) no-repeat;
+      width: 487px;
+      height: 369px;
+    }
+  }
+
+  .button {
+    display: inline-block;
+    margin-top: 40px;
+    font-size: 22px;
+    padding: 20px 30px;
+    font-family: 'ubuntu', sans-serif;
+    font-weight: 300;
+  }
+}
+
+#main {
+  overflow: hidden;
+
+  .col {
+    float: left;
+    width: 343px;
+    margin-right: 50px;
+    padding-top: 215px;
+
+    h3 {
+      font-family: 'ubuntu', sans-serif;
+      font-weight: 300;
+      font-size: 28px;
+      text-align: center;
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-top: 35px;
+    }
+
+    &.first h3:before {
+      width: 171px;
+      height: 147px;
+      top: -170px;
+      left: 85px;
+      background: url(../../images/apps.png) no-repeat;
+    }
+
+    &.second h3:before {
+      width: 205px;
+      height: 146px;
+      top: -170px;
+      left: 85px;
+      background: url(../../images/manual.png) no-repeat;
+    }
+
+    &.third h3:before {
+      width: 75px;
+      height: 178px;
+      top: -215px;
+      left: 142px;
+      background: url(../../images/help.png) no-repeat;
+    }
+  }
+}
