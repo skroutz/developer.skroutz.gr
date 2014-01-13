@@ -18,455 +18,448 @@
   <script src="../shared/js/documentation.js" type="text/javascript"></script>
 </head>
 <body class="api">
-    <div id="header-wrapper">
-      <div id="header">
-        <div>
-          <a class="logo" href="../">for Developers</a>
-          <ul class="nav">
-            <li class="api-status"></li>
-            <li><a href="./">API v3</a></li>
-            <li><a href="../changes/">Changes</a></li>
-            <li><a href="https://skroutz.gr/contact">Support</a></li>
-            <li><a href="../changes.atom">
-              <img src="../images/feed-icon-28x28.png" width="16"
-              height="16" alt="Skroutz API Changes Feed" />
-            </a></li>
-          </ul>
-        </div>
-      </div><!-- #header -->
-    </div><!-- #header-wrapper -->
+  <header>
+    <div class="content">
+      <h1>for Developers</h1>
+    </div>
+  </header>
 
-    <div id="main">
-    <div id="wrapper">
+    <div id="main" class="cf">
+    <div class="content cf">
+
+      <div id="right_container">
+        <div class="container">
+        <h1 id="api-v3">API v3</h1>
+
+        <p>This describes the resources that make up the official Skroutz API v3. If
+        you have any problems or requests please contact us.</p>
+
+        <ul id="markdown-toc">
+        <li><a href="#schema">Schema</a></li>
+          <li><a href="#parameters">Parameters</a></li>
+          <li><a href="#client-errors">Client Errors</a></li>
+          <li><a href="#http-redirects">HTTP Redirects</a></li>
+          <li><a href="#http-verbs">HTTP Verbs</a></li>
+          <li><a href="#pagination">Pagination</a></li>
+          <li><a href="#rate-limiting">Rate Limiting</a></li>
+          <li><a href="#user-agent-required">User Agent Required</a></li>
+          <li><a href="#conditional-requests">Conditional requests</a></li>
+          <li><a href="#cross-origin-resource-sharing">Cross Origin Resource Sharing</a></li>
+          <li><a href="#json-p-callbacks">JSON-P Callbacks</a></li>
+        </ul><h2 id="schema">Schema</h2>
+
+        <p>All API access is over HTTPS, and accessed from the <code>api.skroutz.gr</code>
+        domain. All data is sent and received as JSON.</p>
+
+        <pre class="terminal">
+        $ curl -i https://api.skroutz.gr/categories/999999999
+
+        HTTP/1.1 404 NOT FOUND
+        Server: nginx
+        Content-Type: application/json; charset=utf-8
+        Vary: Accept-Encoding
+        Status: 200 OK
+        X-UA-Compatible: IE=Edge,chrome=1
+        Cache-Control: max-age=0, private, must-revalidate
+        X-Request-Id: 1475076950
+        X-Runtime: 0.011315
+        X-DNS-Prefetch-Control: off
+        X-App: benjy
+        Transfer-Encoding: chunked
+        Date: Tue, 24 Sep 2013 10:49:50 GMT
+        X-Varnish: 1475076950
+        Age: 0
+        Via: 1.1 varnish
+        X-Origin: varnish2
+        X-Cache: MISS
+
+        []
+        </pre>
+
+        <p>Blank fields are included as <code>null</code> instead of being omitted.</p>
+
+        <p>All timestamps are returned in ISO 8601 format:</p>
+
+        <pre><code>YYYY-MM-DDTHH:MM:SSZ
+        </code></pre>
+
+        <h2 id="parameters">Parameters</h2>
+
+        <p>Many API methods take optional parameters. For GET requests, any parameters not
+        specified as a segment in the path can be passed as an HTTP query string
+        parameter:</p>
+
+        <pre class="terminal">
+        $ curl -i "https://api.skroutz.gr/categories?page=2&amp;per=4"
+        </pre>
+
+        <p>In this example, the pagination parameters <code>page</code> and <code>per</code> are passed in the query
+        string.</p>
+
+        <p>For POST, PATCH, PUT, and DELETE requests, parameters not included in the URL should be encoded as JSON
+        with a Content-Type of ‘application/x-www-form-urlencoded’:</p>
+
+        <h2 id="client-errors">Client Errors</h2>
+
+        <p>There are three possible types of client errors on API calls that
+        receive request bodies:</p>
+
+        <ol>
+        <li>
+            <p>Sending invalid JSON will result in a <code>400 Bad Request</code> response.</p>
+
+            <pre><code> HTTP/1.1 400 Bad Request
+         Content-Length: 35
+
+         {"message":"Problems parsing JSON"}
+        </code></pre>
+          </li>
+          <li>
+            <p>Sending the wrong type of JSON values will result in a <code>400 Bad
+        Request</code> response.</p>
+
+            <pre><code> HTTP/1.1 400 Bad Request
+         Content-Length: 40
+
+         {"message":"Body should be a JSON Hash"}
+        </code></pre>
+          </li>
+          <li>
+            <p>Sending invalid fields will result in a <code>422 Unprocessable Entity</code>
+        response.</p>
+
+            <pre><code> HTTP/1.1 422 Unprocessable Entity
+         Content-Length: 149
+        </code></pre>
+          </li>
+        </ol><p>All error objects have resource and field properties so that your client
+        can tell what the problem is.  There’s also an error code to let you
+        know what is wrong with the field.  These are the possible validation error
+        codes:</p>
+
+        <dl>
+        <dt>missing</dt>
+          <dd>This means a resource does not exist.</dd>
+          <dt>missing_field</dt>
+          <dd>This means a required field on a resource has not been set.</dd>
+          <dt>invalid</dt>
+          <dd>This means the formatting of a field is invalid.  The documentation
+        for that resource should be able to give you more specific information.</dd>
+          <dt>already_exists</dt>
+          <dd>This means another resource has the same value as this field.  This
+        can happen in resources that must have some unique key (such as Label
+        names).</dd>
+        </dl><p>If resources have custom validation errors, they will be documented with the resource.</p>
+
+        <h2 id="http-redirects">HTTP Redirects</h2>
+
+        <p>API v3 uses HTTP redirection where appropriate. Clients should assume that any
+        request may result in a redirection. Receiving an HTTP redirection is <em>not</em> an
+        error and clients should follow that redirect. Redirect responses will have a
+        <code>Location</code> header field which contains the URI of the resource to which the
+        client should repeat the requests.</p>
+
+        <dl>
+        <dt>301</dt>
+          <dd>Permanent redirection. The URI you used to make the request has been
+        superseded by the one specified in the <code>Location</code> header field. This and all
+        future requests to this resource should be directed to the new URI.</dd>
+          <dt>302, 307</dt>
+          <dd>Temporary redirection. The request should be repeated verbatim to the URI
+        specified in the <code>Location</code> header field but clients should continue to use the
+        original URI for future requests.</dd>
+        </dl><p>Other redirection status codes may be used in accordance with the HTTP 1.1 spec.</p>
+
+        <h2 id="http-verbs">HTTP Verbs</h2>
+
+        <p>Where possible, API v3 strives to use appropriate HTTP verbs for each
+        action.</p>
+
+        <dl>
+        <dt>HEAD</dt>
+          <dd>Can be issued against any resource to get just the HTTP header info.</dd>
+          <dt>GET</dt>
+          <dd>Used for retrieving resources.</dd>
+          <dt>POST</dt>
+          <dd>Used for creating resources, or performing custom actions (such as
+        merging a pull request).</dd>
+          <dt>PUT</dt>
+          <dd>Used for replacing resources or collections. For PUT requests
+        with no <code>body</code> attribute, be sure to set the <code>Content-Length</code> header to zero.</dd>
+          <dt>DELETE</dt>
+          <dd>Used for deleting resources.</dd>
+        </dl><h2 id="pagination">Pagination</h2>
+
+        <p>Requests that return multiple items will be paginated to 25 items by
+        default.  You can specify further pages with the <code>?page</code> parameter. You can also
+        set a custom page size to 10 with the <code>?per</code> parameter.</p>
+
+        <pre class="terminal">
+        $ curl https://api.skroutz.gr/categories?page=2&amp;per_page=10
+        </pre>
+
+        <p>When there are other pages the response will contain the <a href="http://tools.ietf.org/html/rfc5988">Link</a> header.</p>
+
+        <pre><code>Link
+
+        &lt;https://api.skroutz.gr/categories?page=508&amp;per=4&gt;; rel="last",
+        &lt;https://api.skroutz.gr/categories?page=3&amp;per=4&gt;; rel="next"
+        </code></pre>
+
+        <p>Note that page numbering is 1-based and that ommiting the <code>?page</code>
+        parameter will return the first page.</p>
+
+        <h2 id="rate-limiting">Rate Limiting</h2>
+
+        <p>You can make up to 5,000 requests per hour.</p>
+
+        <p>You can check the returned HTTP headers of any API request to see your current
+        rate limit status:</p>
+
+        <pre class="terminal">
+        $ curl -i https://api.skroutz.gr/categories/1441
+
+        HTTP/1.1 200 OK
+        Date: Mon, 01 Jul 2013 17:27:06 GMT
+        Status: 200 OK
+        X-RateLimit-Limit: 60
+        X-RateLimit-Remaining: 56
+        X-RateLimit-Reset: 1372700873
+        </pre>
+
+        <p>The headers tell you everything you need to know about your current rate limit status:</p>
+
+        <dl>
+        <dt><code>X-RateLimit-Limit</code></dt>
+          <dd>The maximum number of requests that the consumer is permitted to make per hour.</dd>
+          <dt><code>X-RateLimit-Remaining</code></dt>
+          <dd>The number of requests remaining in the current rate limit window.</dd>
+          <dt><code>X-RateLimit-Reset</code></dt>
+          <dd>The time at which the current rate limit window resets in <a href="http://en.wikipedia.org/wiki/Unix_time">UTC epoch seconds</a>.</dd>
+        </dl><p>If you need the time in a different format, any modern programming language can get the job done. For example, if you open up the console on your web browser, you can easily get the reset time as a JavaScript Date object.</p>
+
+        <pre class="highlight"><code class="language-javascript"><span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="mi">1372700873</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">)</span>
+        <span class="c1">// =&gt; Mon Jul 01 2013 13:47:53 GMT-0400 (EDT)</span></code></pre>
+
+        <p>Once you go over the rate limit you will receive an error response:</p>
+
+        <pre class="terminal">
+        HTTP/1.1 403 Forbidden
+        Date: Tue, 20 Aug 2013 14:50:41 GMT
+        Status: 403 Forbidden
+        X-RateLimit-Limit: 60
+        X-RateLimit-Remaining: 0
+        X-RateLimit-Reset: 1377013266
+
+        {
+            "message": "API rate limit exceeded. See http://developer.skroutz.gr/v3/#rate-limiting for details."
+        }
+        </pre>
+
+        <h3 id="staying-within-the-rate-limit">Staying within the rate limit</h3>
+
+        <p>If you are exceeding your rate limit, you can likely fix the issue by caching API responses
+        and using <a href="#conditional-requests">conditional requests</a>.</p>
+
+        <p>If you’re using conditional requests and still exceeding your rate
+        limit, please [contact us][support] to request a higher rate limit for your application.</p>
+
+        <h2 id="user-agent-required">User Agent Required</h2>
+
+        <p>All API requests MUST include a valid <code>User-Agent</code> header. Requests with no <code>User-Agent</code>
+        header will be rejected. We request that you use your Skroutz username, or the name of your
+        application, for the <code>User-Agent</code> header value. This allows us to contact you if there are problems.</p>
+
+        <p>Here’s an example:</p>
+
+        <pre class="terminal">
+        User-Agent: Awesome-Skroutz-App
+        </pre>
+
+        <h2 id="conditional-requests">Conditional requests</h2>
+
+        <p>Most responses return <code>Last-Modified</code> and <code>ETag</code> headers. You can use the values
+        of these headers to make subsequent requests to those resources using the
+        <code>If-Modified-Since</code> and <code>If-None-Match</code> headers, respectively. If the resource
+        has not changed, the server will return a <code>304 Not Modified</code>. Also note: making
+        a conditional request and receiving a 304 response does not count against your
+        <a href="#rate-limiting">Rate Limit</a>, so we encourage you to use it whenever possible.</p>
+
+        <pre class="terminal">
+        $ curl -i https://api.skroutz.gr/categories/1440
+        HTTP/1.1 200 OK
+        Cache-Control: private, max-age=60
+        ETag: "644b5b0155e6404a9cc4bd9d8b1ae730"
+        Last-Modified: Thu, 05 Jul 2012 15:31:30 GMT
+        Status: 200 OK
+        Vary: Accept, Authorization, Cookie
+        X-RateLimit-Limit: 5000
+        X-RateLimit-Remaining: 4996
+        X-RateLimit-Reset: 1372700873
+
+        $ curl -i https://api.skroutz.gr/categories/1440 -H "If-Modified-Since: Thu, 05 Jul 2012 15:31:30 GMT"
+        HTTP/1.1 304 Not Modified
+        Cache-Control: private, max-age=60
+        Last-Modified: Thu, 05 Jul 2012 15:31:30 GMT
+        Status: 304 Not Modified
+        Vary: Accept, Authorization, Cookie
+        X-RateLimit-Limit: 5000
+        X-RateLimit-Remaining: 4996
+        X-RateLimit-Reset: 1372700873
+
+        $ curl -i https://api.skroutz.gr/categories/1440 -H 'If-None-Match: "644b5b0155e6404a9cc4bd9d8b1ae730"'
+        HTTP/1.1 304 Not Modified
+        Cache-Control: private, max-age=60
+        ETag: "644b5b0155e6404a9cc4bd9d8b1ae730"
+        Last-Modified: Thu, 05 Jul 2012 15:31:30 GMT
+        Status: 304 Not Modified
+        Vary: Accept, Authorization, Cookie
+        X-RateLimit-Limit: 5000
+        X-RateLimit-Remaining: 4996
+        X-RateLimit-Reset: 1372700873
+        </pre>
+
+        <h2 id="cross-origin-resource-sharing">Cross Origin Resource Sharing</h2>
+
+        <p>The API supports Cross Origin Resource Sharing (CORS) for AJAX requests.
+        you can read the <a href="http://www.w3.org/TR/cors">CORS W3C working draft</a>, or
+        <a href="http://code.google.com/p/html5security/wiki/CrossOriginRequestSecurity">this intro</a> from the
+        HTML 5 Security Guide.</p>
+
+        <p>Here’s a sample request sent from a browser hitting
+        <code>http://example.com</code>:</p>
+
+        <pre><code>$ curl -i https://api.skroutz.gr -H "Origin: http://example.com"
+        HTTP/1.1 302 Found
+        </code></pre>
+
+        <p>Any domain that is registered as an application is accepted.
+        Here’s a sample request for a browser hitting <a href="http://cheapyellowshoes.com/">cheap yellow shoes</a>:</p>
+
+        <pre><code>$ curl -i https://api.skroutz.gr -H "Origin: http://cheapyellowshoes.com"
+        HTTP/1.1 302 Found
+        Access-Control-Allow-Origin: *
+        Access-Control-Expose-Headers: ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes
+        Access-Control-Allow-Credentials: true
+        </code></pre>
+
+        <p>This is what the CORS preflight request looks like:</p>
+
+        <pre><code>$ curl -i https://api.skroutz.gr -H "Origin: http://cheapyellowshoes.com" -X OPTIONS
+        HTTP/1.1 204 No Content
+        Access-Control-Allow-Origin: *
+        Access-Control-Allow-Headers: Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, X-Requested-With
+        Access-Control-Allow-Methods: GET, POST, PATCH, PUT, DELETE
+        Access-Control-Expose-Headers: ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes
+        Access-Control-Max-Age: 86400
+        Access-Control-Allow-Credentials: true
+        </code></pre>
+
+        <h2 id="json-p-callbacks">JSON-P Callbacks</h2>
+
+        <p>You can send a <code>?callback</code> parameter to any GET call to have the results
+        wrapped in a JSON function.  The response includes the same data output as the regular API,
+        plus the relevant HTTP Header information.</p>
+
+        <pre class="terminal">
+        $ curl https://api.skroutz.gr/categories/1442?callback=foo
+
+        foo({
+          "meta": {
+            "status": 200
+          },
+          "data": {
+            "category": {
+              "children_count": 0, "family_id": 11,
+              "id": 1442,
+              "name": "Ξαπλώστρες Κήπου &amp; Βεράντας",
+              "image_url": "http://b.scdn.gr/images/categories/large/1442.jpg"
+            }
+          }
+        })
+        </pre>
+      </div>
+      </div>
+
       <div id="js-sidebar" class="sidebar-shell">
-        <div class="js-toggle-list sidebar-module expandable">
+        <nav class="js-toggle-list sidebar-module expandable">
           <ul>
             <li class="js-topic">
-              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="./">Overview</a></h3>
-              <ul class="js-guides">
-                <li><a href="troubleshooting/">Troubleshooting</a></li>
+              <h3>
+                <a href="./">Overview</a>
+              </h3>
+
+              <ul>
+                <li>
+                  <a href="#">Schema</a>
+                </li>
+                <li>
+                  <a href="#">Parameters</a>
+                </li>
+                <li>
+                  <a href="#">Client Errors</a>
+                </li>
+                <li>
+                  <a href="#">HTTP Redirects</a>
+                </li>
+                <li>
+                  <a href="#">HTTP Verbs</a>
+                </li>
+                <li>
+                  <a href="#">Pagination</a>
+                </li>
               </ul>
             </li>
             <li class="js-topic">
-              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a>
+              <h3>
                 <a href="category/">Category</a></h3>
             </li>
             <li class="js-topic">
-              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a>
+              <h3>
                 <a href="sku/">Sku</a></h3>
             </li>
             <li class="js-topic">
-              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a>
+              <h3>
                 <a href="product/">Product</a></h3>
             </li>
             <li class="js-topic">
-              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a>
+              <h3>
                 <a href="shop/">Shop</a></h3>
             </li>
             <li class="js-topic">
-              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a>
+              <h3>
                 <a href="manufacturer/">Manufacturer</a></h3>
             </li>
             <li class="js-topic">
-              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a>
+              <h3>
                 <a href="filter_groups/">Filter Groups</a></h3>
             </li>
             <li class="js-topic">
-              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a>
+              <h3>
                 <a href="search/">Search</a></h3>
             </li>
             <li class="js-topic">
-              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a>
+              <h3>
                 <a href="favorites/">User Favorites</a></h3>
             </li>
           </ul>
-        </div> <!-- /sidebar-module -->
-        <div class="sidebar-module">
+        </nav> <!-- /sidebar-module -->
+
+        <footer>
+          <p>
+            <a href="#">F.A.Q - Terms of Service</a>
+            <a href="#">Support</a>
+          </p>
+          <p>&copy; 20[0-9]{2} Skroutz A.E. All Rights and Lefts reserved.</p>
+        </footer>
+
+        <div class="repo sidebar-module">
           <p>This website is a
             <a href="https://github.com/skroutz/developer.skroutz.gr" target="_blank">public GitHub repository</a>.
              Please help us by forking the project and adding to it.</p>
         </div>
       </div><!-- /sidebar-shell -->
-
-      <div class="content">
-        <h1 id="api-v3">API v3</h1>
-
-<p>This describes the resources that make up the official Skroutz API v3. If
-you have any problems or requests please contact us.</p>
-
-<ul id="markdown-toc">
-<li><a href="#schema">Schema</a></li>
-  <li><a href="#parameters">Parameters</a></li>
-  <li><a href="#client-errors">Client Errors</a></li>
-  <li><a href="#http-redirects">HTTP Redirects</a></li>
-  <li><a href="#http-verbs">HTTP Verbs</a></li>
-  <li><a href="#pagination">Pagination</a></li>
-  <li><a href="#rate-limiting">Rate Limiting</a></li>
-  <li><a href="#user-agent-required">User Agent Required</a></li>
-  <li><a href="#conditional-requests">Conditional requests</a></li>
-  <li><a href="#cross-origin-resource-sharing">Cross Origin Resource Sharing</a></li>
-  <li><a href="#json-p-callbacks">JSON-P Callbacks</a></li>
-</ul><h2 id="schema">Schema</h2>
-
-<p>All API access is over HTTPS, and accessed from the <code>api.skroutz.gr</code>
-domain. All data is sent and received as JSON.</p>
-
-<pre class="terminal">
-$ curl -i https://api.skroutz.gr/categories/999999999
-
-HTTP/1.1 404 NOT FOUND
-Server: nginx
-Content-Type: application/json; charset=utf-8
-Vary: Accept-Encoding
-Status: 200 OK
-X-UA-Compatible: IE=Edge,chrome=1
-Cache-Control: max-age=0, private, must-revalidate
-X-Request-Id: 1475076950
-X-Runtime: 0.011315
-X-DNS-Prefetch-Control: off
-X-App: benjy
-Transfer-Encoding: chunked
-Date: Tue, 24 Sep 2013 10:49:50 GMT
-X-Varnish: 1475076950
-Age: 0
-Via: 1.1 varnish
-X-Origin: varnish2
-X-Cache: MISS
-
-[]
-</pre>
-
-<p>Blank fields are included as <code>null</code> instead of being omitted.</p>
-
-<p>All timestamps are returned in ISO 8601 format:</p>
-
-<pre><code>YYYY-MM-DDTHH:MM:SSZ
-</code></pre>
-
-<h2 id="parameters">Parameters</h2>
-
-<p>Many API methods take optional parameters. For GET requests, any parameters not
-specified as a segment in the path can be passed as an HTTP query string
-parameter:</p>
-
-<pre class="terminal">
-$ curl -i "https://api.skroutz.gr/categories?page=2&amp;per=4"
-</pre>
-
-<p>In this example, the pagination parameters <code>page</code> and <code>per</code> are passed in the query
-string.</p>
-
-<p>For POST, PATCH, PUT, and DELETE requests, parameters not included in the URL should be encoded as JSON
-with a Content-Type of ‘application/x-www-form-urlencoded’:</p>
-
-<h2 id="client-errors">Client Errors</h2>
-
-<p>There are three possible types of client errors on API calls that
-receive request bodies:</p>
-
-<ol>
-<li>
-    <p>Sending invalid JSON will result in a <code>400 Bad Request</code> response.</p>
-
-    <pre><code> HTTP/1.1 400 Bad Request
- Content-Length: 35
-
- {"message":"Problems parsing JSON"}
-</code></pre>
-  </li>
-  <li>
-    <p>Sending the wrong type of JSON values will result in a <code>400 Bad
-Request</code> response.</p>
-
-    <pre><code> HTTP/1.1 400 Bad Request
- Content-Length: 40
-
- {"message":"Body should be a JSON Hash"}
-</code></pre>
-  </li>
-  <li>
-    <p>Sending invalid fields will result in a <code>422 Unprocessable Entity</code>
-response.</p>
-
-    <pre><code> HTTP/1.1 422 Unprocessable Entity
- Content-Length: 149
-</code></pre>
-  </li>
-</ol><p>All error objects have resource and field properties so that your client
-can tell what the problem is.  There’s also an error code to let you
-know what is wrong with the field.  These are the possible validation error
-codes:</p>
-
-<dl>
-<dt>missing</dt>
-  <dd>This means a resource does not exist.</dd>
-  <dt>missing_field</dt>
-  <dd>This means a required field on a resource has not been set.</dd>
-  <dt>invalid</dt>
-  <dd>This means the formatting of a field is invalid.  The documentation
-for that resource should be able to give you more specific information.</dd>
-  <dt>already_exists</dt>
-  <dd>This means another resource has the same value as this field.  This
-can happen in resources that must have some unique key (such as Label
-names).</dd>
-</dl><p>If resources have custom validation errors, they will be documented with the resource.</p>
-
-<h2 id="http-redirects">HTTP Redirects</h2>
-
-<p>API v3 uses HTTP redirection where appropriate. Clients should assume that any
-request may result in a redirection. Receiving an HTTP redirection is <em>not</em> an
-error and clients should follow that redirect. Redirect responses will have a
-<code>Location</code> header field which contains the URI of the resource to which the
-client should repeat the requests.</p>
-
-<dl>
-<dt>301</dt>
-  <dd>Permanent redirection. The URI you used to make the request has been
-superseded by the one specified in the <code>Location</code> header field. This and all
-future requests to this resource should be directed to the new URI.</dd>
-  <dt>302, 307</dt>
-  <dd>Temporary redirection. The request should be repeated verbatim to the URI
-specified in the <code>Location</code> header field but clients should continue to use the
-original URI for future requests.</dd>
-</dl><p>Other redirection status codes may be used in accordance with the HTTP 1.1 spec.</p>
-
-<h2 id="http-verbs">HTTP Verbs</h2>
-
-<p>Where possible, API v3 strives to use appropriate HTTP verbs for each
-action.</p>
-
-<dl>
-<dt>HEAD</dt>
-  <dd>Can be issued against any resource to get just the HTTP header info.</dd>
-  <dt>GET</dt>
-  <dd>Used for retrieving resources.</dd>
-  <dt>POST</dt>
-  <dd>Used for creating resources, or performing custom actions (such as
-merging a pull request).</dd>
-  <dt>PUT</dt>
-  <dd>Used for replacing resources or collections. For PUT requests
-with no <code>body</code> attribute, be sure to set the <code>Content-Length</code> header to zero.</dd>
-  <dt>DELETE</dt>
-  <dd>Used for deleting resources.</dd>
-</dl><h2 id="pagination">Pagination</h2>
-
-<p>Requests that return multiple items will be paginated to 25 items by
-default.  You can specify further pages with the <code>?page</code> parameter. You can also 
-set a custom page size to 10 with the <code>?per</code> parameter.</p>
-
-<pre class="terminal">
-$ curl https://api.skroutz.gr/categories?page=2&amp;per_page=10
-</pre>
-
-<p>When there are other pages the response will contain the <a href="http://tools.ietf.org/html/rfc5988">Link</a> header.</p>
-
-<pre><code>Link
-
-&lt;https://api.skroutz.gr/categories?page=508&amp;per=4&gt;; rel="last",
-&lt;https://api.skroutz.gr/categories?page=3&amp;per=4&gt;; rel="next"
-</code></pre>
-
-<p>Note that page numbering is 1-based and that ommiting the <code>?page</code>
-parameter will return the first page.</p>
-
-<h2 id="rate-limiting">Rate Limiting</h2>
-
-<p>You can make up to 5,000 requests per hour.</p>
-
-<p>You can check the returned HTTP headers of any API request to see your current
-rate limit status:</p>
-
-<pre class="terminal">
-$ curl -i https://api.skroutz.gr/categories/1441
-
-HTTP/1.1 200 OK
-Date: Mon, 01 Jul 2013 17:27:06 GMT
-Status: 200 OK
-X-RateLimit-Limit: 60
-X-RateLimit-Remaining: 56
-X-RateLimit-Reset: 1372700873
-</pre>
-
-<p>The headers tell you everything you need to know about your current rate limit status:</p>
-
-<dl>
-<dt><code>X-RateLimit-Limit</code></dt>
-  <dd>The maximum number of requests that the consumer is permitted to make per hour.</dd>
-  <dt><code>X-RateLimit-Remaining</code></dt>
-  <dd>The number of requests remaining in the current rate limit window.</dd>
-  <dt><code>X-RateLimit-Reset</code></dt>
-  <dd>The time at which the current rate limit window resets in <a href="http://en.wikipedia.org/wiki/Unix_time">UTC epoch seconds</a>.</dd>
-</dl><p>If you need the time in a different format, any modern programming language can get the job done. For example, if you open up the console on your web browser, you can easily get the reset time as a JavaScript Date object.</p>
-
-<pre class="highlight"><code class="language-javascript"><span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="mi">1372700873</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">)</span>
-<span class="c1">// =&gt; Mon Jul 01 2013 13:47:53 GMT-0400 (EDT)</span></code></pre>
-
-<p>Once you go over the rate limit you will receive an error response:</p>
-
-<pre class="terminal">
-HTTP/1.1 403 Forbidden
-Date: Tue, 20 Aug 2013 14:50:41 GMT
-Status: 403 Forbidden
-X-RateLimit-Limit: 60
-X-RateLimit-Remaining: 0
-X-RateLimit-Reset: 1377013266
-
-{
-    "message": "API rate limit exceeded. See http://developer.skroutz.gr/v3/#rate-limiting for details."
-}
-</pre>
-
-<h3 id="staying-within-the-rate-limit">Staying within the rate limit</h3>
-
-<p>If you are exceeding your rate limit, you can likely fix the issue by caching API responses
-and using <a href="#conditional-requests">conditional requests</a>.</p>
-
-<p>If you’re using conditional requests and still exceeding your rate
-limit, please [contact us][support] to request a higher rate limit for your application.</p>
-
-<h2 id="user-agent-required">User Agent Required</h2>
-
-<p>All API requests MUST include a valid <code>User-Agent</code> header. Requests with no <code>User-Agent</code>
-header will be rejected. We request that you use your Skroutz username, or the name of your
-application, for the <code>User-Agent</code> header value. This allows us to contact you if there are problems.</p>
-
-<p>Here’s an example:</p>
-
-<pre class="terminal">
-User-Agent: Awesome-Skroutz-App
-</pre>
-
-<h2 id="conditional-requests">Conditional requests</h2>
-
-<p>Most responses return <code>Last-Modified</code> and <code>ETag</code> headers. You can use the values
-of these headers to make subsequent requests to those resources using the
-<code>If-Modified-Since</code> and <code>If-None-Match</code> headers, respectively. If the resource
-has not changed, the server will return a <code>304 Not Modified</code>. Also note: making
-a conditional request and receiving a 304 response does not count against your
-<a href="#rate-limiting">Rate Limit</a>, so we encourage you to use it whenever possible.</p>
-
-<pre class="terminal">
-$ curl -i https://api.skroutz.gr/categories/1440
-HTTP/1.1 200 OK
-Cache-Control: private, max-age=60
-ETag: "644b5b0155e6404a9cc4bd9d8b1ae730"
-Last-Modified: Thu, 05 Jul 2012 15:31:30 GMT
-Status: 200 OK
-Vary: Accept, Authorization, Cookie
-X-RateLimit-Limit: 5000
-X-RateLimit-Remaining: 4996
-X-RateLimit-Reset: 1372700873
-
-$ curl -i https://api.skroutz.gr/categories/1440 -H "If-Modified-Since: Thu, 05 Jul 2012 15:31:30 GMT"
-HTTP/1.1 304 Not Modified
-Cache-Control: private, max-age=60
-Last-Modified: Thu, 05 Jul 2012 15:31:30 GMT
-Status: 304 Not Modified
-Vary: Accept, Authorization, Cookie
-X-RateLimit-Limit: 5000
-X-RateLimit-Remaining: 4996
-X-RateLimit-Reset: 1372700873
-
-$ curl -i https://api.skroutz.gr/categories/1440 -H 'If-None-Match: "644b5b0155e6404a9cc4bd9d8b1ae730"'
-HTTP/1.1 304 Not Modified
-Cache-Control: private, max-age=60
-ETag: "644b5b0155e6404a9cc4bd9d8b1ae730"
-Last-Modified: Thu, 05 Jul 2012 15:31:30 GMT
-Status: 304 Not Modified
-Vary: Accept, Authorization, Cookie
-X-RateLimit-Limit: 5000
-X-RateLimit-Remaining: 4996
-X-RateLimit-Reset: 1372700873
-</pre>
-
-<h2 id="cross-origin-resource-sharing">Cross Origin Resource Sharing</h2>
-
-<p>The API supports Cross Origin Resource Sharing (CORS) for AJAX requests.
-you can read the <a href="http://www.w3.org/TR/cors">CORS W3C working draft</a>, or
-<a href="http://code.google.com/p/html5security/wiki/CrossOriginRequestSecurity">this intro</a> from the
-HTML 5 Security Guide.</p>
-
-<p>Here’s a sample request sent from a browser hitting
-<code>http://example.com</code>:</p>
-
-<pre><code>$ curl -i https://api.skroutz.gr -H "Origin: http://example.com"
-HTTP/1.1 302 Found
-</code></pre>
-
-<p>Any domain that is registered as an application is accepted.
-Here’s a sample request for a browser hitting <a href="http://cheapyellowshoes.com/">cheap yellow shoes</a>:</p>
-
-<pre><code>$ curl -i https://api.skroutz.gr -H "Origin: http://cheapyellowshoes.com"
-HTTP/1.1 302 Found
-Access-Control-Allow-Origin: *
-Access-Control-Expose-Headers: ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes
-Access-Control-Allow-Credentials: true
-</code></pre>
-
-<p>This is what the CORS preflight request looks like:</p>
-
-<pre><code>$ curl -i https://api.skroutz.gr -H "Origin: http://cheapyellowshoes.com" -X OPTIONS
-HTTP/1.1 204 No Content
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Headers: Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, X-Requested-With
-Access-Control-Allow-Methods: GET, POST, PATCH, PUT, DELETE
-Access-Control-Expose-Headers: ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes
-Access-Control-Max-Age: 86400
-Access-Control-Allow-Credentials: true
-</code></pre>
-
-<h2 id="json-p-callbacks">JSON-P Callbacks</h2>
-
-<p>You can send a <code>?callback</code> parameter to any GET call to have the results
-wrapped in a JSON function.  The response includes the same data output as the regular API,
-plus the relevant HTTP Header information.</p>
-
-<pre class="terminal">
-$ curl https://api.skroutz.gr/categories/1442?callback=foo
-
-foo({
-  "meta": {
-    "status": 200
-  },
-  "data": {
-    "category": {
-      "children_count": 0, "family_id": 11,
-      "id": 1442,
-      "name": "Ξαπλώστρες Κήπου &amp; Βεράντας",
-      "image_url": "http://b.scdn.gr/images/categories/large/1442.jpg"
-    }
-  }
-})
-</pre>
-      </div>
-    </div><!-- #wrapper -->
+    </div>
   </div>
-
-    <div id="footer" >
-      <div class="upper_footer">
-        <div class="footer_inner clearfix">
-
-        <ul class="footer_nav">
-          <li><h4>Skroutz</h4></li>
-          <li><a href="https://skroutz.gr/blog/projects">About</a></li>
-          <li><a href="https://skroutz.gr/blog">Blog</a></li>
-          <li><a href="https://skroutz.gr/contact">Contact</a></li>
-        </ul>
-
-
-        </div><!-- /.site -->
-      </div><!-- /.upper_footer -->
-
-      <div class="lower_footer">
-        <a class="footer_faq" href="http://skroutz.gr/faq/">F.A.Q - Terms of Service</a>
-        <p class="footer-cell">
-          Design &copy; <span class="js-year">2013</span> Skroutz S.A, Inc. All rights reserved.
-          <br />
-          Except where otherwise noted, content on this site is licensed under a
-          <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons CC-BY license</a>.
-        </p>
-      </div>
-
-    </div><!-- /#footer -->
 </body>
 </html>
