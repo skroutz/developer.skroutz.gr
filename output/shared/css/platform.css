@@ -4,15 +4,28 @@ body {
   background: #fbfbfb; }
 
 p {
-  color: #363636; }
+  color: #363636;
+  font-size: 13px;
+  line-height: 1.5; }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal; }
+
+a {
+  color: #f68b24; }
+  a:hover {
+    text-decoration: underline; }
 
 .content {
   max-width: 1180px;
   width: 100%;
   margin: 0 auto; }
+
+.cf:before, .cf:after {
+  content: "";
+  display: table; }
+.cf:after {
+  clear: both; }
 
 .button {
   background: #f68b24;
@@ -35,7 +48,10 @@ header {
   header h1 {
     position: relative;
     padding-left: 120px;
-    line-height: 29px; }
+    line-height: 29px;
+    font-family: 'ubuntu', sans-serif;
+    font-weight: 300;
+    font-size: 18px; }
     header h1:before {
       content: "";
       position: absolute;
@@ -73,41 +89,55 @@ header {
     font-family: 'ubuntu', sans-serif;
     font-weight: 300; }
 
-#main {
-  overflow: hidden; }
-  #main .col {
+#main .col {
+  float: left;
+  width: 343px;
+  margin-right: 50px;
+  padding-top: 215px; }
+  #main .col h3 {
+    font-family: 'ubuntu', sans-serif;
+    font-weight: 300;
+    font-size: 28px;
+    text-align: center;
+    position: relative; }
+    #main .col h3:before {
+      content: "";
+      position: absolute; }
+  #main .col p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 35px; }
+  #main .col.first h3:before {
+    width: 171px;
+    height: 147px;
+    top: -170px;
+    left: 85px;
+    background: url(../../images/apps.png) no-repeat; }
+  #main .col.second h3:before {
+    width: 205px;
+    height: 146px;
+    top: -170px;
+    left: 85px;
+    background: url(../../images/manual.png) no-repeat; }
+  #main .col.third h3:before {
+    width: 75px;
+    height: 178px;
+    top: -215px;
+    left: 142px;
+    background: url(../../images/help.png) no-repeat; }
+
+footer {
+  clear: both;
+  margin-top: 100px; }
+  footer .content {
+    border-top: 1px solid #dbdbdb;
+    padding: 30px 0; }
+  footer a {
     float: left;
-    width: 343px;
-    margin-right: 50px;
-    padding-top: 215px; }
-    #main .col h3 {
-      font-family: 'ubuntu', sans-serif;
-      font-weight: 300;
-      font-size: 28px;
-      text-align: center;
-      position: relative; }
-      #main .col h3:before {
-        content: "";
-        position: absolute; }
-    #main .col p {
-      font-size: 16px;
-      line-height: 1.6;
-      margin-top: 35px; }
-    #main .col.first h3:before {
-      width: 171px;
-      height: 147px;
-      top: -170px;
-      left: 85px;
-      background: url(../../images/apps.png) no-repeat; }
-    #main .col.second h3:before {
-      width: 205px;
-      height: 146px;
-      top: -170px;
-      left: 85px;
-      background: url(../../images/manual.png) no-repeat; }
-    #main .col.third h3:before {
-      width: 75px;
-      height: 178px;
-      top: -215px;
-      left: 142px;
-      background: url(../../images/help.png) no-repeat; }
+    width: 200px;
+    font-size: 12px;
+    text-decoration: none; }
+  footer p {
+    float: right;
+    width: 500px;
+    text-align: right; }

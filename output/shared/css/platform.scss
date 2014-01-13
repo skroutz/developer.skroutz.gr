@@ -7,16 +7,39 @@ body {
 
 p {
   color: $grey-10;
+  font-size: 13px;
+  line-height: 1.5;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 
+a {
+  color: $orange-1;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 .content {
   max-width: 1180px;
   width: 100%;
   margin: 0 auto;
+}
+
+.cf {
+
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
 }
 
 .button {
@@ -45,6 +68,9 @@ header {
     position: relative;
     padding-left: 120px;
     line-height: 29px;
+    font-family: 'ubuntu', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
 
     &:before {
       content: "";
@@ -94,7 +120,6 @@ header {
 }
 
 #main {
-  overflow: hidden;
 
   .col {
     float: left;
@@ -144,5 +169,28 @@ header {
       left: 142px;
       background: url(../../images/help.png) no-repeat;
     }
+  }
+}
+
+footer {
+  clear: both;
+  margin-top: 100px;
+
+  .content {
+    border-top: 1px solid $border;
+    padding: 30px 0;
+  }
+
+  a {
+    float: left;
+    width: 200px;
+    font-size: 12px;
+    text-decoration: none;
+  }
+
+  p {
+    float: right;
+    width: 500px;
+    text-align: right;
   }
 }
