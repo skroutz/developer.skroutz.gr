@@ -18,6 +18,7 @@ gem 'colored'
 gem 'addressable'
 
 gem 'response_mate'
+gem 'response_mate-nanoc', path: '/home/zorbash/dev/response_mate-nanoc'
 
 group :development do
   gem 'adsf'
