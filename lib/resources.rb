@@ -6,7 +6,7 @@ require 'cgi'
 require 'securerandom'
 
 require 'response_mate'
-require 'response_mate-nanoc'
+require 'response_mate/nanoc'
 
 module Skroutz
   module Resources

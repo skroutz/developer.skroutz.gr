@@ -1,9 +1,0 @@
----
-title: Skroutz API Changes
-is_hidden: true
-author_name: zorbash
-author_uri: https://github.com/zorbash
-layout: false
----
-
-<%= atom_feed :limit => 30, :articles => api_changes %>
