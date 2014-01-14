@@ -85,6 +85,7 @@ GEM
       highline
       mustache
       thor (~> 0.18.1)
+    sass (3.2.12)
     slop (3.4.7)
     thin (1.6.1)
       daemons (>= 1.0.9)
@@ -121,4 +122,5 @@ DEPENDENCIES
   rake (~> 0.9.2)
   response_mate
   response_mate-nanoc!
+  sass
   thin
