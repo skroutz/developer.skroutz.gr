@@ -16,50 +16,37 @@ end
 compile '/CNAME/' do
 end
 
-compile '/feed/' do
-  filter :erb
-  filter :kramdown, :toc_levels => [2]
-end
-
-%w(v3 */).each do |version|
-  compile "/changes/#{version}" do
-    filter :erb
-    filter :kramdown, :toc_levels => [2]
-    filter :colorize_syntax,
-      :colorizers => {:javascript => :pygmentsrb}
-    layout 'changes' if version[0] == '*'
-    layout 'default'
-  end
-end
-
-compile '/guides/*' do
-  filter :kramdown, :toc_levels => [2]
-  filter :erb
-  layout 'default'
-end
-
-compile '*' do
-  filter :erb
-  filter :kramdown, :toc_levels => [2]
-  filter :colorize_syntax,
-    :colorizers => {:javascript => :pygmentsrb}
-  layout 'default'
-end
-
-route '/static/*' do
-  item.identifier[7..-2]
-end
-
 route '/CNAME/' do
   '/CNAME'
 end
 
-route '/feed' do
-  '/changes.atom'
+compile '/' do
+  filter :erb
 end
 
-route '*' do
+route '/' do
+  '/index.html'
+end
+
+route '/v3/*' do
   item.identifier + 'index.html'
+end
+
+compile '*' do
+  filter :erb
+  case item[:extension]
+  when 'md'
+    filter :kramdown, :toc_levels => [2]
+    filter :colorize_syntax,
+      :colorizers => {:javascript => :pygmentsrb}
+    layout 'default'
+  when 'scss'
+    filter :sass, syntax: :scss
+  end
+end
+
+route '/assets/stylesheets/*' do
+  item.identifier.chop + '.css'
 end
 
 layout '*', :erb
