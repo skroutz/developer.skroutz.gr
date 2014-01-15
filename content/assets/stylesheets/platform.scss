@@ -21,6 +21,11 @@ a {
   &:hover {
     text-decoration: underline;
   }
+
+  &.unstyled {
+    color: $grey-10;
+    text-decoration: none;
+  }
 }
 
 .content {

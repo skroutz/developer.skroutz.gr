@@ -23,6 +23,10 @@ a {
   &:hover {
     text-decoration: underline;
   }
+
+  &.unstyled {
+    text-decoration: none;
+  }
 }
 
 ol {

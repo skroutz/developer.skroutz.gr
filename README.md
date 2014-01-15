@@ -35,7 +35,7 @@ API docs should look like:
 
     ## Sample endpoint
 
-    <%%= render_recording :sample_key %>
+    <%%= render_recording :sample_key %%>
 
 **Note**: We're using [Kramdown Markdown extensions](http://kramdown.rubyforge.org/syntax.html), such as definition lists.
 
