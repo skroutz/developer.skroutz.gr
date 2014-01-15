@@ -16,10 +16,12 @@ end
 compile '/CNAME/' do
 end
 
+# To be used if hosted on github-pages
 route '/CNAME/' do
   '/CNAME'
 end
 
+# This rule is for the index page, the introduction on the platform
 compile '/' do
   filter :erb
 end
@@ -39,12 +41,15 @@ compile '*' do
     filter :kramdown, :toc_levels => [2]
     filter :colorize_syntax,
       :colorizers => {:javascript => :pygmentsrb}
+    # Only markdown files get the default layout, as html pages are mostly
+    # made to be complete.
     layout 'default'
   when 'scss'
     filter :sass, syntax: :scss
   end
 end
 
+# Output *.scss files are placed under output/assets/stylesheets/
 route '/assets/stylesheets/*' do
   item.identifier.chop + '.css'
 end

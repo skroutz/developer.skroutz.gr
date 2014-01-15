@@ -3,3 +3,5 @@ crash.log
 .ruby-gemset
 oauth.yml
 tmp
+
+.sass-cache
