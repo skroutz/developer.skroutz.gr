@@ -9,9 +9,13 @@ title: Search | Skroutz API
 
 ## Search
 
-### Parameters
-q
-: _Required_ **string** The keyphrase to search by
+<pre class="terminal">
+  /search
+</pre>
+
+Name | Type | Description
+-----| -----| -----------
+`q` | `String` | `The keyphrase to search by`
 
 ### Case `invalid` *The query was invalid. Eg. less than 2 characters*
 
@@ -56,9 +60,12 @@ response have*
 
 ## Autocomplete
 
+<pre class="terminal">
+  /autocomplete
+</pre>
 
-### Parameters
-q  
-: **Required** **string** The keyphrase to search by
+Name | Type | Description
+-----| -----| -----------
+`q` | `String` | `The term to be autocompleted`
 
 <%= render_recording :autocomplete %>

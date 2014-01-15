@@ -11,8 +11,16 @@ To access any of the following endpoints a valid access_token is required.
 
 ## List favorites 
 
+<pre class="terminal">
+  /favorites
+</pre>
+
 <%= render_recording :favorites_index %>
 
 ## Retrieve a single favorite 
+
+<pre class="terminal">
+  /favorites/:id
+</pre>
 
 <%= render_recording :favorites_show %>
