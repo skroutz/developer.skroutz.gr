@@ -1,6 +1,8 @@
 base_url: http://localhost:3000/api
 default_headers:
   accept: 'application/vnd.skroutz+json; version=3'
+  authorization: "Bearer {{oauth_token}}"
+
 name: apiv3
 
 requests:
@@ -100,7 +102,7 @@ requests:
     request: 'GET /skus/3703742/products'
   -
     key: products_index
-    request: 'GET /products'
+    request: 'GET /products?page=1&per=2'
   -
     key: products_show
     request: 'GET /products/13313788'
@@ -140,3 +142,14 @@ requests:
         per: 1
         include_meta:
           - available_filters
+
+  -
+    key: notifications_index
+    request:
+      path: '/notifications'
+      params:
+        per: 1
+  -
+    key: notifications_show
+    request:
+      path: '/notifications/3642082'
