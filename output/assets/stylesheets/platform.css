@@ -15,6 +15,9 @@ a {
   color: #f68b24; }
   a:hover {
     text-decoration: underline; }
+  a.unstyled {
+    color: #363636;
+    text-decoration: none; }
 
 .content {
   max-width: 1180px;

@@ -7,89 +7,28 @@
   <meta name="MSSmartTagsPreventParsing" content="true" />
   <title>Sku | Skroutz API</title>
   <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400' rel='stylesheet' type='text/css'>
-  <link rel="alternate" type="application/atom+xml" title="API Changes" href="../../changes.atom" />
+  <link rel="alternate" type="application/atom+xml" title="API Changes" href="../changes.atom" />
   <link href="../../css/reset.css" rel="stylesheet" type="text/css" />
   <link href="../../css/960.css" rel="stylesheet" type="text/css" />
   <link href="../../css/uv_active4d.css" rel="stylesheet" type="text/css" />
   <link href="../../shared/css/documentation.css" media="screen" rel="stylesheet" type="text/css">
   <link href="../../shared/css/pygments.css" media="screen" rel="stylesheet" type="text/css">
-  <link href="../../shared/css/skroutz.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="../../assets/stylesheets/skroutz.css" media="screen" rel="stylesheet" type="text/css">
   <script src="../../shared/js/jquery.js" type="text/javascript"></script>
   <script src="../../shared/js/documentation.js" type="text/javascript"></script>
 </head>
 <body class="api">
-    <div id="header-wrapper">
-      <div id="header">
-        <div>
-          <a class="logo" href="../../">for Developers</a>
-          <ul class="nav">
-            <li class="api-status"></li>
-            <li><a href="../">API v3</a></li>
-            <li><a href="../../changes/">Changes</a></li>
-            <li><a href="https://skroutz.gr/contact">Support</a></li>
-            <li><a href="../../changes.atom">
-              <img src="../../images/feed-icon-28x28.png" width="16"
-              height="16" alt="Skroutz API Changes Feed" />
-            </a></li>
-          </ul>
-        </div>
-      </div><!-- #header -->
-    </div><!-- #header-wrapper -->
+  <header>
+    <div class="content">
+      <h1>for Developers</h1>
+    </div>
+  </header>
 
-    <div id="main">
-    <div id="wrapper">
-      <div id="js-sidebar" class="sidebar-shell">
-        <div class="js-toggle-list sidebar-module expandable">
-          <ul>
-            <li class="js-topic">
-              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="../">Overview</a></h3>
-              <ul class="js-guides">
-                <li><a href="../troubleshooting/">Troubleshooting</a></li>
-              </ul>
-            </li>
-            <li class="js-topic">
-              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a>
-                <a href="../category/">Category</a></h3>
-            </li>
-            <li class="js-topic">
-              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a>
-                <a href="./">Sku</a></h3>
-            </li>
-            <li class="js-topic">
-              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a>
-                <a href="../product/">Product</a></h3>
-            </li>
-            <li class="js-topic">
-              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a>
-                <a href="../shop/">Shop</a></h3>
-            </li>
-            <li class="js-topic">
-              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a>
-                <a href="../manufacturer/">Manufacturer</a></h3>
-            </li>
-            <li class="js-topic">
-              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a>
-                <a href="../filter_groups/">Filter Groups</a></h3>
-            </li>
-            <li class="js-topic">
-              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a>
-                <a href="../search/">Search</a></h3>
-            </li>
-            <li class="js-topic">
-              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a>
-                <a href="../favorites/">User Favorites</a></h3>
-            </li>
-          </ul>
-        </div> <!-- /sidebar-module -->
-        <div class="sidebar-module">
-          <p>This website is a
-            <a href="https://github.com/skroutz/developer.skroutz.gr" target="_blank">public GitHub repository</a>.
-             Please help us by forking the project and adding to it.</p>
-        </div>
-      </div><!-- /sidebar-shell -->
-
-      <div class="content">
-        <h1 id="sku-api">Sku API</h1>
+  <div id="main" class="cf">
+    <div class="content cf">
+      <div id="right_container">
+        <div class="container">
+          <h1 id="sku-api">Sku API</h1>
 
 <ul id="markdown-toc">
 <li><a href="#about">About</a></li>
@@ -102,6 +41,10 @@
 <p>A SKU (Stock Keeping Unit) is an aggregation of products.</p>
 
 <h2 id="list-skus">List SKUs</h2>
+
+<pre class="terminal">
+  /skus
+</pre>
 
 <ul class="request-params">
 <li>
@@ -198,6 +141,10 @@
 
 <h2 id="retrieve-a-single-sku">Retrieve a single SKU</h2>
 
+<pre class="terminal">
+  /skus/:id
+</pre>
+
 <ul class="request-params">
 <li>
 <span class="label">verb</span>: GET</li>
@@ -237,6 +184,10 @@
 
 <h2 id="retrieve-a-skus-products">Retrieve a SKU’s products</h2>
 
+<pre class="terminal">
+  /skus/:id/products
+</pre>
+
 <ul class="request-params">
 <li>
 <span class="label">verb</span>: GET</li>
@@ -265,13 +216,24 @@
 
 <h2 id="filtering">Filtering</h2>
 
-<p>You have to specify a category in order to perform filtering.
+<p>You have to specify a category in order to perform filtering.<br>
 You may supply the optional parameter <code>include_meta[]=available_filters</code>
 to get meta information about the filters that can be applied.</p>
 
-<p>Example</p>
+<h3 id="include-available-filters">Include available filters</h3>
 
-<ul class="request-params">
+<table>
+<thead><tr>
+<th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr></thead>
+<tbody><tr>
+<td><code>include_meta</code></td>
+      <td><code>Array</code></td>
+      <td><code>Extra meta info to be included in the response</code></td>
+    </tr></tbody>
+</table><ul class="request-params">
 <li>
 <span class="label">verb</span>: GET</li>
 <li>
@@ -360,29 +322,31 @@ to get meta information about the filters that can be applied.</p>
     <span class="p">}</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre>
+<p>As you can see above the available_filters object contains two objects
+(filters, manufacturers) each of which has as keys the ids of the
+entities that can be applied and as values the number of skus that match
+the filter/manufacturer.</p>
 
 <h3 id="by-category">By category</h3>
 
-<ul class="request-params">
-<li>
-<span class="label">verb</span>: GET</li>
-<li>
-<span class="label">path</span>: /categories/1442/skus</li>
-<li>
-<span class="label">params</span>: <ul class="request-params">
-<li>
-<span class="label">page</span>: 1</li>
-<li>
-<span class="label">per</span>: 3</li>
-<li>
-<span class="label">oauth_token</span>: [FILTERED]</li>
-</ul>
-</li>
-</ul><div class="request-description"> Description: Lists only skus belonging to category specified in path</div>
+<pre class="terminal">
+  /categories/:category_id/skus
+</pre>
 
 <h3 id="by-manufacturers">By manufacturers</h3>
 
-<ul class="request-params">
+<table>
+<thead><tr>
+<th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr></thead>
+<tbody><tr>
+<td><code>manufacturer_ids</code></td>
+      <td><code>Array</code></td>
+      <td>The ids of the manufacturers of the skus</td>
+    </tr></tbody>
+</table><ul class="request-params">
 <li>
 <span class="label">verb</span>: GET</li>
 <li>
@@ -395,9 +359,122 @@ to get meta information about the filters that can be applied.</p>
 <span class="label">oauth_token</span>: [FILTERED]</li>
 </ul>
 </li>
-</ul><h3 id="by-filters">By filters</h3>
+</ul><pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"skus"</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">328970</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">"E1050"</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"E1050"</span><span class="p">,</span>
+      <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"Samsung E1050"</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">24.99</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">15.99</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">5.0</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">12</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"Single SIM, Δίκτυο Σύνδεσης: 2G,   Οθόνη: 1.43\" , Ανάλυση: 128 x 128 pixels, Χειρισμός: Φυσικό Πληκτρολόγιο,    Λειτουργικό Σύστημα: N/A, SAR: 0.789 W/kg, Έτος Κυκλοφορίας: 2011, Feature Phone"</span><span class="p">,</span>
+      <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">12</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/000328/328970/small_sku_picture_5c590d.jpg.jpg"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/000328/328970/medium_sku_picture_5c590d.jpg.jpg"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/000328/328970/tiny_sku_picture_5c590d.jpg.jpg"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/000328/328970/medium_sku_picture_5c590d.jpg.jpg"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/000328/328970/sku_picture_5c590d.jpg.jpg"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">28</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">337548</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">"E1182"</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"E1182"</span><span class="p">,</span>
+      <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"Samsung E1182"</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">31.98</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">16.0</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">4.28571</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">19</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"Dual SIM, Δίκτυο Σύνδεσης: 2G,   Οθόνη: 1.52\" , Ανάλυση: 128 x 128 pixels, Χειρισμός: Φυσικό Πληκτρολόγιο,    Λειτουργικό Σύστημα: N/A, SAR: 0.99 W/kg, Έτος Κυκλοφορίας: 2011, Feature Phone"</span><span class="p">,</span>
+      <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">19</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/000337/337548/small_sku_picture_d81fbb.jpg.jpg"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/000337/337548/medium_sku_picture_d81fbb.jpg.jpg"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/000337/337548/tiny_sku_picture_d81fbb.jpg.jpg"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/000337/337548/medium_sku_picture_d81fbb.jpg.jpg"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/000337/337548/sku_picture_d81fbb.jpg.jpg"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">28</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">2119391</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"E1200"</span><span class="p">,</span>
+      <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"Samsung E1200"</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">46.8</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">17.03</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">4.0</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"Single SIM, Δίκτυο Σύνδεσης: 2G,   Οθόνη: 1.52\" , Ανάλυση: 128 x 128 pixels, Χειρισμός: Φυσικό Πληκτρολόγιο,  Εσωτερική Μνήμη: 100 MB,  Λειτουργικό Σύστημα: N/A, SAR: 0.81 W/kg, Έτος Κυκλοφορίας: 2012, Feature Phone"</span><span class="p">,</span>
+      <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/002119/2119391/small_8806071935041.jpg"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/002119/2119391/medium_8806071935041.jpg"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/002119/2119391/tiny_8806071935041.jpg"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/002119/2119391/medium_8806071935041.jpg"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/002119/2119391/8806071935041.jpg"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">28</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">3287073</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">"GT-E1280"</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"E1280"</span><span class="p">,</span>
+      <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"Samsung E1280"</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">32.0</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">18.96</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">0.0</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"Single SIM, Δίκτυο Σύνδεσης: 2G,   Οθόνη: 1.8\" , Ανάλυση: 160 x 128 pixels, Χειρισμός: Φυσικό Πληκτρολόγιο,    Λειτουργικό Σύστημα: N/A, Έτος Κυκλοφορίας: 2013, Feature Phone"</span><span class="p">,</span>
+      <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/003287/3287073/small_pl_GT-E1280BKAXEO_001_Front_black"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/003287/3287073/medium_pl_GT-E1280BKAXEO_001_Front_black"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/003287/3287073/tiny_pl_GT-E1280BKAXEO_001_Front_black"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/003287/3287073/medium_pl_GT-E1280BKAXEO_001_Front_black"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/003287/3287073/pl_GT-E1280BKAXEO_001_Front_black"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">28</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span></code></pre>
 
-<ul class="request-params">
+<h3 id="by-filters">By filters</h3>
+
+<table>
+<thead><tr>
+<th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr></thead>
+<tbody><tr>
+<td><code>filter_ids</code></td>
+      <td><code>Array</code></td>
+      <td>The ids of the filters to be applied on the skus</td>
+    </tr></tbody>
+</table><ul class="request-params">
 <li>
 <span class="label">verb</span>: GET</li>
 <li>
@@ -410,36 +487,164 @@ to get meta information about the filters that can be applied.</p>
 <span class="label">oauth_token</span>: [FILTERED]</li>
 </ul>
 </li>
-</ul>
+</ul><pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"skus"</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">2141062</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Mimosa Mini"</span><span class="p">,</span>
+      <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"ZTE Mimosa Mini"</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">59.0</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">59.0</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">0.0</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"Single SIM, Δίκτυο Σύνδεσης: 2G, Κάμερα: 2.0 MP,  Οθόνη: 2.8\" , Ανάλυση: 320 x 240 pixels, Χειρισμός: Οθόνη αφής (Touch screen),    Ασύρματο Δίκτυο: Wi-Fi, Λειτουργικό Σύστημα: Android, Έτος Κυκλοφορίας: 2011, SmartPhone"</span><span class="p">,</span>
+      <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/002141/2141062/small_ZTE_Mimosa_Mini_4ffb13abecf34.png"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/002141/2141062/medium_ZTE_Mimosa_Mini_4ffb13abecf34.png"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/002141/2141062/tiny_ZTE_Mimosa_Mini_4ffb13abecf34.png"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/002141/2141062/medium_ZTE_Mimosa_Mini_4ffb13abecf34.png"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/002141/2141062/ZTE_Mimosa_Mini_4ffb13abecf34.png"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">4834</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">2564748</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">"OT-903D"</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"One Touch 903D"</span><span class="p">,</span>
+      <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"Alcatel One Touch 903D"</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">79.99</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">71.09</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">4.16667</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">12</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"Dual SIM, Δίκτυο Σύνδεσης: 3G, Κάμερα: 2 MP,  Οθόνη: 2.8\" , Ανάλυση: 320 x 240 pixels, Χειρισμός: Οθόνη αφής (Touch screen),    Ασύρματο Δίκτυο: Wi-Fi, Λειτουργικό Σύστημα: Android, SAR: 0.891 W/kg, Έτος Κυκλοφορίας: 2012, SmartPhone"</span><span class="p">,</span>
+      <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">12</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/002564/2564748/small_alcatel-903d.jpg"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/002564/2564748/medium_alcatel-903d.jpg"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/002564/2564748/tiny_alcatel-903d.jpg"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/002564/2564748/medium_alcatel-903d.jpg"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/002564/2564748/alcatel-903d.jpg"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">417</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">389499</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"U8350"</span><span class="p">,</span>
+      <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"Huawei U8350"</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">77.0</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">73.0</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">4.0</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"Single SIM, Δίκτυο Σύνδεσης: 3G, Κάμερα: 3.2 MP,  Οθόνη: 2.6\" , Ανάλυση: 320 x 240 pixels, Χειρισμός: Οθόνη αφής (Touch screen) / Φυσικό Πληκτρολόγιο,  Εσωτερική Μνήμη: 512 MB,  Ασύρματο Δίκτυο: Wi-Fi, Λειτουργικό Σύστημα: Android, Έτος Κυκλοφορίας: 2011, SmartPhone"</span><span class="p">,</span>
+      <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/000389/389499/small_huawei-boulder-u8350.jpg"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/000389/389499/medium_huawei-boulder-u8350.jpg"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/000389/389499/tiny_huawei-boulder-u8350.jpg"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/000389/389499/medium_huawei-boulder-u8350.jpg"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/000389/389499/huawei-boulder-u8350.jpg"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">2159</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">388525</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">"Galaxy Y S5360"</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Galaxy Y S5360"</span><span class="p">,</span>
+      <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"Samsung Galaxy Y S5360"</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">129.9</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">77.8</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">2.89474</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">18</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"Single SIM, Δίκτυο Σύνδεσης: 3G, Κάμερα: 2 MP,  Οθόνη: 3.0\" , Ανάλυση: 320 x 240 pixels, Χειρισμός: Οθόνη αφής (Touch screen),  Εσωτερική Μνήμη: 180 MB,  Ασύρματο Δίκτυο: Wi-Fi, Λειτουργικό Σύστημα: Android, SAR: 0.66 W/kg, Έτος Κυκλοφορίας: 2011, SmartPhone"</span><span class="p">,</span>
+      <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">18</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/000388/388525/small_samsung-galaxy-y-s5360.jpg"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/000388/388525/medium_samsung-galaxy-y-s5360.jpg"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/000388/388525/tiny_samsung-galaxy-y-s5360.jpg"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/000388/388525/medium_samsung-galaxy-y-s5360.jpg"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/000388/388525/samsung-galaxy-y-s5360.jpg"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">28</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span></code></pre>
+        </div>
       </div>
-    </div><!-- #wrapper -->
+      <div id="js-sidebar" class="sidebar-shell">
+<nav class="js-toggle-list sidebar-module expandable">
+  <ul>
+    <li class="js-topic">
+      <h3><a href="..">Overview</a></h3>
+    </li>
+    <li class="js-topic">
+      <h3><a href="../category/">Category</a></h3>
+    </li>
+    <li class="js-topic">
+      <h3><a href="./">Sku</a></h3>
+    </li>
+    <li class="js-topic">
+      <h3><a href="../product/">Product</a></h3>
+    </li>
+    <li class="js-topic">
+      <h3><a href="../shop/">Shop</a></h3>
+    </li>
+    <li class="js-topic">
+      <h3><a href="../manufacturer/">Manufacturer</a></h3>
+    <li class="js-topic">
+      <h3><a href="../search/">Search</a></h3>
+    </li>
+    </li>
+    <li class="js-topic">
+      <h3><a href="../filter_groups/">Filter Groups</a></h3>
+    </li>
+    <li class="js-topic user">
+      <h3><a href="../favorites/">User Favorites</a></h3>
+    </li>
+    <li class="js-topic user">
+      <h3>
+        <a href="../notifications/">User Notifications</a>
+      </h3>
+    </li>
+  </ul>
+
+ </nav>
+  <footer>
+  <p>
+    <a href="#">F.A.Q - Terms of Service</a>
+    <a href="#">Support</a>
+  </p>
+  <p>&copy; 20[0-9]{2} Skroutz A.E. All Rights and Lefts reserved.</p>
+</footer>
+
+  <div class="repo sidebar-module">
+  <p>This website is a
+    <a href="https://github.com/skroutz/developer.skroutz.gr" target="_blank">public GitHub repository</a>.
+     Please help us by forking the project and adding to it.</p>
+</div>
+
+</div> <!-- /sidebar-module -->
+
+    </div>
   </div>
-
-    <div id="footer" >
-      <div class="upper_footer">
-        <div class="footer_inner clearfix">
-
-        <ul class="footer_nav">
-          <li><h4>Skroutz</h4></li>
-          <li><a href="https://skroutz.gr/blog/projects">About</a></li>
-          <li><a href="https://skroutz.gr/blog">Blog</a></li>
-          <li><a href="https://skroutz.gr/contact">Contact</a></li>
-        </ul>
-
-
-        </div><!-- /.site -->
-      </div><!-- /.upper_footer -->
-
-      <div class="lower_footer">
-        <a class="footer_faq" href="http://skroutz.gr/faq/">F.A.Q - Terms of Service</a>
-        <p class="footer-cell">
-          Design &copy; <span class="js-year">2013</span> Skroutz S.A, Inc. All rights reserved.
-          <br />
-          Except where otherwise noted, content on this site is licensed under a
-          <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons CC-BY license</a>.
-        </p>
-      </div>
-
-    </div><!-- /#footer -->
 </body>
 </html>

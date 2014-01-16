@@ -17,6 +17,8 @@ a {
   text-decoration: none; }
   a:hover {
     text-decoration: underline; }
+  a.unstyled {
+    text-decoration: none; }
 
 ol {
   list-style-position: inside; }
