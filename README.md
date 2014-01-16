@@ -9,7 +9,7 @@ The following steps will get you started
 
 1. `git pull`                # make sure you get latest changes
 2. `bundle install`          # make sure dependencies are met
-3. `bundle exec guard`       # have changes autocompiled
+3. `bundle exec guard`       # have changes autocompiled (leave it running)
 4. `bundle exec nanoc view`  # start a local webserver to view the compiled static files found in `./output`
 5. `bundle exec rake deploy` # deploy changes
 
