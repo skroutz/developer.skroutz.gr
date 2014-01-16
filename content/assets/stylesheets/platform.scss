@@ -25,6 +25,9 @@ a {
   &.unstyled {
     color: $grey-10;
     text-decoration: none;
+    &.header {
+      color: $grey-1;
+    }
   }
 }
 

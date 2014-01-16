@@ -18,7 +18,10 @@ a {
   a:hover {
     text-decoration: underline; }
   a.unstyled {
+    color: #363636;
     text-decoration: none; }
+    a.unstyled.header {
+      color: #fbfbfb; }
 
 ol {
   list-style-position: inside; }

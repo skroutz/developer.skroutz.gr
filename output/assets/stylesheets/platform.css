@@ -18,6 +18,8 @@ a {
   a.unstyled {
     color: #363636;
     text-decoration: none; }
+    a.unstyled.header {
+      color: #fbfbfb; }
 
 .content {
   max-width: 1180px;
