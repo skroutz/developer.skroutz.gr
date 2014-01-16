@@ -9,6 +9,10 @@ title: User Favorites | Skroutz API
 
 To access any of the following endpoints a valid access_token is required.
 
+## About
+
+User may pick one or more skus as favorites
+
 ## List favorites 
 
 <pre class="terminal">

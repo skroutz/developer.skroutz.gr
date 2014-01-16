@@ -2,20 +2,23 @@
 :request:
   :verb: GET
   :path: /favorites/252116
-  :params:
-    oauth_token: Vr/AzbfQt3ywQlKUonZk25VqRg2ILFAFV/voi69FD9xlJl5Yp9DmDWb6PAEsVwuI1KckH3aa1/vxRaj/Mbwg==
-:status: 404
+:status: 200
 :headers:
   content-type: application/json; charset=utf-8
   x-meta-request-version: 0.2.1
   x-ua-compatible: IE=Edge,chrome=1
-  cache-control: no-cache
-  x-request-id: 341b7ccd3be7c4d7d075fe44a51c323b
-  x-runtime: '0.046594'
+  etag: ! '"b8118eda6d3c3651ad460262e35db70c"'
+  cache-control: max-age=0, private, must-revalidate
+  x-request-id: e863a25cb45dde9cda7e5fb41a1ae404
+  x-runtime: '0.048635'
   server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
-  date: Fri, 20 Dec 2013 10:53:53 GMT
-  content-length: '43'
+  date: Thu, 16 Jan 2014 13:16:38 GMT
+  content-length: '509'
   connection: close
-  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTYxOTkxYWM2YmEzYTMzZDgyMzE1ZWM1ZGY3NGUzNDdiBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--0bbedfb8519d5ef2c48b373f3206e4cdebc283bf;
-    path=/; expires=Thu, 20-Feb-2014 10:53:53 GMT; HttpOnly
-:body: You requested something that does not exist
+  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWU1ZTM3MjViMTdjNTQzNGM1Mzc1OTU5NDlmNjJlODI4BjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--fd296e2ef7f234cf8ccfd3068223c533284e3f61;
+    path=/; expires=Sun, 16-Mar-2014 13:16:38 GMT; HttpOnly
+:body: ! '{"favorite":{"id":252116,"have_it":true,"user_id":132950,"user_notes":"\u039a\u03cc\u03b2\u03b5\u03b9
+  \u03c4\u03bf \u03b6\u03b1\u03bc\u03c0\u03cc\u03bd \u03c3\u03b1\u03bd \u03bd\u03b1
+  \u03ae\u03c4\u03b1\u03bd \u03b2\u03bf\u03cd\u03c4\u03b7\u03c1\u03bf. \u0395\u03af\u03bd\u03b1\u03b9
+  \u03c0\u03c1\u03b1\u03b3\u03bc\u03b1\u03c4\u03b9\u03ba\u03cc \u03ad\u03c1\u03b3\u03bf
+  \u03c4\u03ad\u03c7\u03bd\u03b7\u03c2.","sku_id":1137426,"created_at":"2013-04-09T16:16:25+03:00","updated_at":"2013-04-09T16:17:02+03:00"}}'
