@@ -1,0 +1,17 @@
+{
+  "id": "20c741b8-4387-4843-8a4c-ec8744846881",
+  "name": "exported_environment",
+  "values": [
+    {
+      "key": "oauth_token",
+      "value": "valid_token",
+      "type": "text"
+    },
+    {
+      "key": "domain",
+      "value": "http://skroutz.gr",
+      "type": "text"
+    }
+  ],
+  "timestamp": 1389957292
+}
