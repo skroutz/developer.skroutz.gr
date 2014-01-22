@@ -46,23 +46,13 @@
   /skus
 </pre>
 
-<ul class="request-params">
-<li>
-<span class="label">verb</span>: GET</li>
-<li>
-<span class="label">path</span>: /skus</li>
-<li>
-<span class="label">params</span>: <ul class="request-params">
-<li>
-<span class="label">page</span>: 1</li>
-<li>
-<span class="label">per</span>: 3</li>
-<li>
-<span class="label">oauth_token</span>: [FILTERED]</li>
-</ul>
-</li>
-</ul><pre class="headers"><code>Status: 200</code></pre>
-<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+<div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/skus</span>
+        </p>
+<a href="void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"skus"</span><span class="o">:</span> <span class="p">[</span>
     <span class="p">{</span>
       <span class="s2">"id"</span><span class="o">:</span> <span class="mi">224</span><span class="p">,</span>
@@ -138,6 +128,8 @@
     <span class="p">}</span>
   <span class="p">]</span>
 <span class="p">}</span></code></pre>
+</div>
+</div>
 
 <h2 id="retrieve-a-single-sku">Retrieve a single SKU</h2>
 
@@ -145,17 +137,13 @@
   /skus/:id
 </pre>
 
-<ul class="request-params">
-<li>
-<span class="label">verb</span>: GET</li>
-<li>
-<span class="label">path</span>: /skus/3703742</li>
-<li>
-<span class="label">params</span>: <ul class="request-params"><li>
-<span class="label">oauth_token</span>: [FILTERED]</li></ul>
-</li>
-</ul><pre class="headers"><code>Status: 200</code></pre>
-<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+<div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/skus/3703742</span>
+        </p>
+<a href="void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"sku"</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">"id"</span><span class="o">:</span> <span class="mi">3703742</span><span class="p">,</span>
     <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
@@ -181,6 +169,8 @@
     <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">0</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre>
+</div>
+</div>
 
 <h2 id="retrieve-a-skus-products">Retrieve a SKU’s products</h2>
 
@@ -188,17 +178,13 @@
   /skus/:id/products
 </pre>
 
-<ul class="request-params">
-<li>
-<span class="label">verb</span>: GET</li>
-<li>
-<span class="label">path</span>: /skus/3703742/products</li>
-<li>
-<span class="label">params</span>: <ul class="request-params"><li>
-<span class="label">oauth_token</span>: [FILTERED]</li></ul>
-</li>
-</ul><pre class="headers"><code>Status: 200</code></pre>
-<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+<div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/skus/3703742/products</span>
+        </p>
+<a href="void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"products"</span><span class="o">:</span> <span class="p">[</span>
     <span class="p">{</span>
       <span class="s2">"id"</span><span class="o">:</span> <span class="mi">13313785</span><span class="p">,</span>
@@ -213,6 +199,8 @@
     <span class="p">}</span>
   <span class="p">]</span>
 <span class="p">}</span></code></pre>
+</div>
+</div>
 
 <h2 id="filtering">Filtering</h2>
 
@@ -233,23 +221,13 @@ to get meta information about the filters that can be applied.</p>
       <td><code>Array</code></td>
       <td><code>Extra meta info to be included in the response</code></td>
     </tr></tbody>
-</table><ul class="request-params">
-<li>
-<span class="label">verb</span>: GET</li>
-<li>
-<span class="label">path</span>: /categories/279/skus</li>
-<li>
-<span class="label">params</span>: <ul class="request-params">
-<li>
-<span class="label">per</span>: 1</li>
-<li>
-<span class="label">include_meta</span>: ["available_filters"]</li>
-<li>
-<span class="label">oauth_token</span>: [FILTERED]</li>
-</ul>
-</li>
-</ul><pre class="headers"><code>Status: 200</code></pre>
-<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+</table><div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/categories/279/skus</span>
+        </p>
+<a href="void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"skus"</span><span class="o">:</span> <span class="p">[</span>
     <span class="p">{</span>
       <span class="s2">"id"</span><span class="o">:</span> <span class="mi">1086074</span><span class="p">,</span>
@@ -322,6 +300,8 @@ to get meta information about the filters that can be applied.</p>
     <span class="p">}</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre>
+</div>
+</div>
 <p>As you can see above the available_filters object contains two objects
 (filters, manufacturers) each of which has as keys the ids of the
 entities that can be applied and as values the number of skus that match
@@ -346,21 +326,13 @@ the filter/manufacturer.</p>
       <td><code>Array</code></td>
       <td>The ids of the manufacturers of the skus</td>
     </tr></tbody>
-</table><ul class="request-params">
-<li>
-<span class="label">verb</span>: GET</li>
-<li>
-<span class="label">path</span>: /categories/40/skus?manufacturer_ids[]=28&amp;manufacturer_ids[]=2</li>
-<li>
-<span class="label">params</span>: <ul class="request-params">
-<li>
-<span class="label">per</span>: 4</li>
-<li>
-<span class="label">oauth_token</span>: [FILTERED]</li>
-</ul>
-</li>
-</ul><pre class="headers"><code>Status: 200</code></pre>
-<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+</table><div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/categories/40/skus?manufacturer_ids[]=28&amp;manufacturer_ids[]=2</span>
+        </p>
+<a href="void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"skus"</span><span class="o">:</span> <span class="p">[</span>
     <span class="p">{</span>
       <span class="s2">"id"</span><span class="o">:</span> <span class="mi">328970</span><span class="p">,</span>
@@ -460,6 +432,8 @@ the filter/manufacturer.</p>
     <span class="p">}</span>
   <span class="p">]</span>
 <span class="p">}</span></code></pre>
+</div>
+</div>
 
 <h3 id="by-filters">By filters</h3>
 
@@ -474,21 +448,13 @@ the filter/manufacturer.</p>
       <td><code>Array</code></td>
       <td>The ids of the filters to be applied on the skus</td>
     </tr></tbody>
-</table><ul class="request-params">
-<li>
-<span class="label">verb</span>: GET</li>
-<li>
-<span class="label">path</span>: /categories/40/skus?filter_ids[]=6282&amp;filter_ids[]=6284</li>
-<li>
-<span class="label">params</span>: <ul class="request-params">
-<li>
-<span class="label">per</span>: 4</li>
-<li>
-<span class="label">oauth_token</span>: [FILTERED]</li>
-</ul>
-</li>
-</ul><pre class="headers"><code>Status: 200</code></pre>
-<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+</table><div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/categories/40/skus?filter_ids[]=6282&amp;filter_ids[]=6284</span>
+        </p>
+<a href="void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"skus"</span><span class="o">:</span> <span class="p">[</span>
     <span class="p">{</span>
       <span class="s2">"id"</span><span class="o">:</span> <span class="mi">2141062</span><span class="p">,</span>
@@ -588,6 +554,8 @@ the filter/manufacturer.</p>
     <span class="p">}</span>
   <span class="p">]</span>
 <span class="p">}</span></code></pre>
+</div>
+</div>
         </div>
       </div>
       <div id="js-sidebar" class="sidebar-shell">

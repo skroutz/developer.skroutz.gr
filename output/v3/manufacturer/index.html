@@ -39,21 +39,13 @@
   /manufacturers
 </pre>
 
-<ul class="request-params">
-<li>
-<span class="label">verb</span>: GET</li>
-<li>
-<span class="label">path</span>: /manufacturers</li>
-<li>
-<span class="label">params</span>: <ul class="request-params">
-<li>
-<span class="label">per</span>: 2</li>
-<li>
-<span class="label">oauth_token</span>: [FILTERED]</li>
-</ul>
-</li>
-</ul><pre class="headers"><code>Status: 200</code></pre>
-<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+<div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/manufacturers</span>
+        </p>
+<a href="void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"manufacturers"</span><span class="o">:</span> <span class="p">[</span>
     <span class="p">{</span>
       <span class="s2">"id"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
@@ -67,6 +59,8 @@
     <span class="p">}</span>
   <span class="p">]</span>
 <span class="p">}</span></code></pre>
+</div>
+</div>
 
 <h2 id="retrieve-a-single-manufacturer">Retrieve a single manufacturer</h2>
 
@@ -74,23 +68,21 @@
   /manufacturers/:id
 </pre>
 
-<ul class="request-params">
-<li>
-<span class="label">verb</span>: GET</li>
-<li>
-<span class="label">path</span>: /manufacturers/12907</li>
-<li>
-<span class="label">params</span>: <ul class="request-params"><li>
-<span class="label">oauth_token</span>: [FILTERED]</li></ul>
-</li>
-</ul><pre class="headers"><code>Status: 200</code></pre>
-<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+<div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/manufacturers/12907</span>
+        </p>
+<a href="void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"manufacturer"</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">"id"</span><span class="o">:</span> <span class="mi">12907</span><span class="p">,</span>
     <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Rapala"</span><span class="p">,</span>
     <span class="s2">"image_url"</span><span class="o">:</span> <span class="kc">null</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre>
+</div>
+</div>
         </div>
       </div>
       <div id="js-sidebar" class="sidebar-shell">

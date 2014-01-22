@@ -49,23 +49,13 @@ A product/sku belongs to a leaf category.</p>
   /categories
 </pre>
 
-<ul class="request-params">
-<li>
-<span class="label">verb</span>: GET</li>
-<li>
-<span class="label">path</span>: /categories</li>
-<li>
-<span class="label">params</span>: <ul class="request-params">
-<li>
-<span class="label">page</span>: 1</li>
-<li>
-<span class="label">per</span>: 5</li>
-<li>
-<span class="label">oauth_token</span>: [FILTERED]</li>
-</ul>
-</li>
-</ul><pre class="headers"><code>Status: 200</code></pre>
-<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+<div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/categories</span>
+        </p>
+<a href="void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"categories"</span><span class="o">:</span> <span class="p">[</span>
     <span class="p">{</span>
       <span class="s2">"id"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
@@ -104,6 +94,8 @@ A product/sku belongs to a leaf category.</p>
     <span class="p">}</span>
   <span class="p">]</span>
 <span class="p">}</span></code></pre>
+</div>
+</div>
 
 <h2 id="list-top-level-categories">List top level categories</h2>
 
@@ -111,17 +103,13 @@ A product/sku belongs to a leaf category.</p>
   /categories/top_level
 </pre>
 
-<ul class="request-params">
-<li>
-<span class="label">verb</span>: GET</li>
-<li>
-<span class="label">path</span>: /categories/top_level</li>
-<li>
-<span class="label">params</span>: <ul class="request-params"><li>
-<span class="label">oauth_token</span>: [FILTERED]</li></ul>
-</li>
-</ul><pre class="headers"><code>Status: 200</code></pre>
-<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+<div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/categories/top_level</span>
+        </p>
+<a href="void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"categories"</span><span class="o">:</span> <span class="p">[</span>
     <span class="p">{</span>
       <span class="s2">"id"</span><span class="o">:</span> <span class="mi">33</span><span class="p">,</span>
@@ -167,6 +155,8 @@ A product/sku belongs to a leaf category.</p>
     <span class="p">}</span>
   <span class="p">]</span>
 <span class="p">}</span></code></pre>
+</div>
+</div>
 
 <h2 id="retrieve-a-single-category">Retrieve a single category</h2>
 
@@ -174,17 +164,13 @@ A product/sku belongs to a leaf category.</p>
   /categories/:id
 </pre>
 
-<ul class="request-params">
-<li>
-<span class="label">verb</span>: GET</li>
-<li>
-<span class="label">path</span>: /categories/1442</li>
-<li>
-<span class="label">params</span>: <ul class="request-params"><li>
-<span class="label">oauth_token</span>: [FILTERED]</li></ul>
-</li>
-</ul><pre class="headers"><code>Status: 200</code></pre>
-<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+<div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/categories/1442</span>
+        </p>
+<a href="void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"category"</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">"id"</span><span class="o">:</span> <span class="mi">1442</span><span class="p">,</span>
     <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Ξαπλώστρες Κήπου &amp; Βεράντας"</span><span class="p">,</span>
@@ -193,6 +179,8 @@ A product/sku belongs to a leaf category.</p>
     <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">true</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre>
+</div>
+</div>
 
 <h2 id="retrieve-the-parent-of-a-category">Retrieve the parent of a category</h2>
 
@@ -200,17 +188,13 @@ A product/sku belongs to a leaf category.</p>
   /categories/:id/parent
 </pre>
 
-<ul class="request-params">
-<li>
-<span class="label">verb</span>: GET</li>
-<li>
-<span class="label">path</span>: /categories/1442/parent</li>
-<li>
-<span class="label">params</span>: <ul class="request-params"><li>
-<span class="label">oauth_token</span>: [FILTERED]</li></ul>
-</li>
-</ul><pre class="headers"><code>Status: 200</code></pre>
-<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+<div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/categories/1442/parent</span>
+        </p>
+<a href="void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"category"</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">"id"</span><span class="o">:</span> <span class="mi">1434</span><span class="p">,</span>
     <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Έπιπλα Κήπου &amp; Βεράντας"</span><span class="p">,</span>
@@ -220,6 +204,8 @@ A product/sku belongs to a leaf category.</p>
     <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">1052</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre>
+</div>
+</div>
 
 <h2 id="retrieve-the-root-category">Retrieve the root category</h2>
 
@@ -227,17 +213,13 @@ A product/sku belongs to a leaf category.</p>
   /categories/root
 </pre>
 
-<ul class="request-params">
-<li>
-<span class="label">verb</span>: GET</li>
-<li>
-<span class="label">path</span>: /categories/root</li>
-<li>
-<span class="label">params</span>: <ul class="request-params"><li>
-<span class="label">oauth_token</span>: [FILTERED]</li></ul>
-</li>
-</ul><pre class="headers"><code>Status: 200</code></pre>
-<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+<div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/categories/root</span>
+        </p>
+<a href="void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"category"</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">"id"</span><span class="o">:</span> <span class="mi">76</span><span class="p">,</span>
     <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Skroutz"</span><span class="p">,</span>
@@ -246,6 +228,8 @@ A product/sku belongs to a leaf category.</p>
     <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">false</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre>
+</div>
+</div>
 
 <h2 id="list-the-children-categories-of-a-category">List the children categories of a category</h2>
 
@@ -253,17 +237,13 @@ A product/sku belongs to a leaf category.</p>
   /categories/:id/children
 </pre>
 
-<ul class="request-params">
-<li>
-<span class="label">verb</span>: GET</li>
-<li>
-<span class="label">path</span>: /categories/73/children</li>
-<li>
-<span class="label">params</span>: <ul class="request-params"><li>
-<span class="label">oauth_token</span>: [FILTERED]</li></ul>
-</li>
-</ul><pre class="headers"><code>Status: 200</code></pre>
-<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+<div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/categories/73/children</span>
+        </p>
+<a href="void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"categories"</span><span class="o">:</span> <span class="p">[</span>
     <span class="p">{</span>
       <span class="s2">"id"</span><span class="o">:</span> <span class="mi">365</span><span class="p">,</span>
@@ -295,6 +275,8 @@ A product/sku belongs to a leaf category.</p>
     <span class="p">}</span>
   <span class="p">]</span>
 <span class="p">}</span></code></pre>
+</div>
+</div>
         </div>
       </div>
       <div id="js-sidebar" class="sidebar-shell">

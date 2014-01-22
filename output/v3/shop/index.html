@@ -50,21 +50,13 @@
       <td><code>String</code></td>
       <td><code>(optional) Filter shops of which the first letter matches the given value</code></td>
     </tr></tbody>
-</table><ul class="request-params">
-<li>
-<span class="label">verb</span>: GET</li>
-<li>
-<span class="label">path</span>: /shops</li>
-<li>
-<span class="label">params</span>: <ul class="request-params">
-<li>
-<span class="label">per</span>: 2</li>
-<li>
-<span class="label">oauth_token</span>: [FILTERED]</li>
-</ul>
-</li>
-</ul><pre class="headers"><code>Status: 200</code></pre>
-<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+</table><div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/shops</span>
+        </p>
+<a href="void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"shops"</span><span class="o">:</span> <span class="p">[</span>
     <span class="p">{</span>
       <span class="s2">"id"</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
@@ -82,6 +74,8 @@
     <span class="p">}</span>
   <span class="p">]</span>
 <span class="p">}</span></code></pre>
+</div>
+</div>
 
 <h2 id="retrieve-a-single-shop">Retrieve a single shop</h2>
 
@@ -89,17 +83,13 @@
   /shops/:id
 </pre>
 
-<ul class="request-params">
-<li>
-<span class="label">verb</span>: GET</li>
-<li>
-<span class="label">path</span>: /shops/3</li>
-<li>
-<span class="label">params</span>: <ul class="request-params"><li>
-<span class="label">oauth_token</span>: [FILTERED]</li></ul>
-</li>
-</ul><pre class="headers"><code>Status: 200</code></pre>
-<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+<div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/shops/3</span>
+        </p>
+<a href="void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"shop"</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">"id"</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
     <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"E-shop"</span><span class="p">,</span>
@@ -108,6 +98,8 @@
     <span class="s2">"thumbshot_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/assets/helmet/el/no_scr_image_medium.png"</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre>
+</div>
+</div>
         </div>
       </div>
       <div id="js-sidebar" class="sidebar-shell">
