@@ -53,70 +53,48 @@
 </table><h3 id="case-invalid-the-query-was-invalid-eg-less-than-2-characters">Case <code>invalid</code> <em>The query was invalid. Eg. less than 2 characters</em>
 </h3>
 
-<ul class="request-params">
-<li>
-<span class="label">verb</span>: GET</li>
-<li>
-<span class="label">path</span>: /search</li>
-<li>
-<span class="label">params</span>: <ul class="request-params">
-<li>
-<span class="label">q</span>: a</li>
-<li>
-<span class="label">oauth_token</span>: [FILTERED]</li>
-</ul>
-</li>
-</ul><pre class="headers"><code>Status: 400</code></pre>
-<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+<div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/search</span>
+        </p>
+<a href="void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 400</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">"result_type"</span><span class="o">:</span> <span class="s2">"invalid"</span>
   <span class="p">},</span>
   <span class="s2">"message"</span><span class="o">:</span> <span class="s2">"Η αναζήτησή σου πρέπει να περιέχει τουλάχιστον 2 χαρακτήρες"</span>
 <span class="p">}</span></code></pre>
+</div>
+</div>
 
 <h3 id="case-noresults-nothing-seems-to-match-the-specified-query">Case <code>no_results</code> <em>Nothing seems to match the specified query</em>
 </h3>
 
-<ul class="request-params">
-<li>
-<span class="label">verb</span>: GET</li>
-<li>
-<span class="label">path</span>: /search</li>
-<li>
-<span class="label">params</span>: <ul class="request-params">
-<li>
-<span class="label">q</span>: asdasdsagjgjgjweigrweji</li>
-<li>
-<span class="label">oauth_token</span>: [FILTERED]</li>
-</ul>
-</li>
-</ul><pre class="headers"><code>Status: 200</code></pre>
-<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+<div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/search</span>
+        </p>
+<a href="void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">"result_type"</span><span class="o">:</span> <span class="s2">"no_results"</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre>
+</div>
+</div>
 
 <h3 id="case-categorymatch-when-your-query-matched-a-category">Case <code>category_match</code> <em>When your query matched a category</em>
 </h3>
 
-<ul class="request-params">
-<li>
-<span class="label">verb</span>: GET</li>
-<li>
-<span class="label">path</span>: /search</li>
-<li>
-<span class="label">params</span>: <ul class="request-params">
-<li>
-<span class="label">q</span>: computers</li>
-<li>
-<span class="label">per</span>: 2</li>
-<li>
-<span class="label">oauth_token</span>: [FILTERED]</li>
-</ul>
-</li>
-</ul><pre class="headers"><code>Status: 200</code></pre>
-<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+<div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/search</span>
+        </p>
+<a href="void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"categories"</span><span class="o">:</span> <span class="p">[</span>
     <span class="p">{</span>
       <span class="s2">"id"</span><span class="o">:</span> <span class="mi">115</span><span class="p">,</span>
@@ -139,29 +117,19 @@
     <span class="s2">"result_type"</span><span class="o">:</span> <span class="s2">"category_facade"</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre>
+</div>
+</div>
 
 <h3 id="case-categoryfacade-when-your-query-matched-many-categories">Case <code>category_facade</code> <em>When your query matched many categories</em>
 </h3>
 
-<ul class="request-params">
-<li>
-<span class="label">verb</span>: GET</li>
-<li>
-<span class="label">path</span>: /search</li>
-<li>
-<span class="label">params</span>: <ul class="request-params">
-<li>
-<span class="label">q</span>: iphone</li>
-<li>
-<span class="label">page</span>: 1</li>
-<li>
-<span class="label">per</span>: 2</li>
-<li>
-<span class="label">oauth_token</span>: [FILTERED]</li>
-</ul>
-</li>
-</ul><pre class="headers"><code>Status: 200</code></pre>
-<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+<div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/search</span>
+        </p>
+<a href="void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"categories"</span><span class="o">:</span> <span class="p">[</span>
     <span class="p">{</span>
       <span class="s2">"id"</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span>
@@ -184,25 +152,19 @@
     <span class="s2">"result_type"</span><span class="o">:</span> <span class="s2">"category_facade"</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre>
+</div>
+</div>
 
 <h3 id="case-manufacturermatch-your-query-matched-one-of-our-manufacturers">Case <code>manufacturer_match</code> *Your query matched one of our manufacturers</h3>
 <p>exactly*</p>
 
-<ul class="request-params">
-<li>
-<span class="label">verb</span>: GET</li>
-<li>
-<span class="label">path</span>: /search</li>
-<li>
-<span class="label">params</span>: <ul class="request-params">
-<li>
-<span class="label">q</span>: apple</li>
-<li>
-<span class="label">oauth_token</span>: [FILTERED]</li>
-</ul>
-</li>
-</ul><pre class="headers"><code>Status: 200</code></pre>
-<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+<div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/search</span>
+        </p>
+<a href="void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"manufacturer"</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">"id"</span><span class="o">:</span> <span class="mi">356</span><span class="p">,</span>
     <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Apple"</span><span class="p">,</span>
@@ -212,31 +174,21 @@
     <span class="s2">"result_type"</span><span class="o">:</span> <span class="s2">"manufacturer_match"</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre>
+</div>
+</div>
 
 <h3 id="case-latinmapping-your-query-has-an-exact-match-in-its-latin-form">Case <code>latin_mapping</code> <em>Your query has an exact match in its latin form</em>
 </h3>
 
 <p>Note: You will have to follow one or more 302 redirections</p>
 
-<ul class="request-params">
-<li>
-<span class="label">verb</span>: GET</li>
-<li>
-<span class="label">path</span>: /search</li>
-<li>
-<span class="label">params</span>: <ul class="request-params">
-<li>
-<span class="label">q</span>: ιπηονε</li>
-<li>
-<span class="label">page</span>: 1</li>
-<li>
-<span class="label">per</span>: 2</li>
-<li>
-<span class="label">oauth_token</span>: [FILTERED]</li>
-</ul>
-</li>
-</ul><pre class="headers"><code>Status: 200</code></pre>
-<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+<div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/search</span>
+        </p>
+<a href="void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"categories"</span><span class="o">:</span> <span class="p">[</span>
     <span class="p">{</span>
       <span class="s2">"id"</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span>
@@ -259,25 +211,19 @@
     <span class="s2">"result_type"</span><span class="o">:</span> <span class="s2">"category_facade"</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre>
+</div>
+</div>
 
 <h3 id="case-skumatch-your-query-matches-exactly-one-of-our-skus">Case <code>sku_match</code> <em>Your query matches exactly one of our skus</em>
 </h3>
 
-<ul class="request-params">
-<li>
-<span class="label">verb</span>: GET</li>
-<li>
-<span class="label">path</span>: /search</li>
-<li>
-<span class="label">params</span>: <ul class="request-params">
-<li>
-<span class="label">q</span>: Dimage 2300</li>
-<li>
-<span class="label">oauth_token</span>: [FILTERED]</li>
-</ul>
-</li>
-</ul><pre class="headers"><code>Status: 200</code></pre>
-<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+<div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/search</span>
+        </p>
+<a href="void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"sku"</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">"id"</span><span class="o">:</span> <span class="mi">304460</span><span class="p">,</span>
     <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
@@ -306,29 +252,19 @@
     <span class="s2">"result_type"</span><span class="o">:</span> <span class="s2">"sku_match"</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre>
+</div>
+</div>
 
 <h3 id="case-categoryskusmatch-your-query-matches-skus-from-a-category">Case <code>category_skus_match</code> <em>Your query matches skus from a category</em>
 </h3>
 
-<ul class="request-params">
-<li>
-<span class="label">verb</span>: GET</li>
-<li>
-<span class="label">path</span>: /search</li>
-<li>
-<span class="label">params</span>: <ul class="request-params">
-<li>
-<span class="label">q</span>: Cubieboard2</li>
-<li>
-<span class="label">page</span>: 1</li>
-<li>
-<span class="label">per</span>: 2</li>
-<li>
-<span class="label">oauth_token</span>: [FILTERED]</li>
-</ul>
-</li>
-</ul><pre class="headers"><code>Status: 200</code></pre>
-<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+<div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/search</span>
+        </p>
+<a href="void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"category"</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">"id"</span><span class="o">:</span> <span class="mi">146</span><span class="p">,</span>
     <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Μικροηλεκτρονικά"</span><span class="p">,</span>
@@ -340,25 +276,19 @@
     <span class="s2">"result_type"</span><span class="o">:</span> <span class="s2">"category_skus_match"</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre>
+</div>
+</div>
 
 <h3 id="case-drop-your-query-has-no-results-but-the-proposals-in-the">Case <code>drop</code> *Your query has no results but the proposals in the</h3>
 <p>response have*</p>
 
-<ul class="request-params">
-<li>
-<span class="label">verb</span>: GET</li>
-<li>
-<span class="label">path</span>: /search</li>
-<li>
-<span class="label">params</span>: <ul class="request-params">
-<li>
-<span class="label">q</span>: wrong iphone</li>
-<li>
-<span class="label">oauth_token</span>: [FILTERED]</li>
-</ul>
-</li>
-</ul><pre class="headers"><code>Status: 200</code></pre>
-<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+<div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/search</span>
+        </p>
+<a href="void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"proposals"</span><span class="o">:</span> <span class="p">[</span>
     <span class="s2">"wrong"</span><span class="p">,</span>
     <span class="s2">"iphone"</span>
@@ -367,6 +297,8 @@
     <span class="s2">"result_type"</span><span class="o">:</span> <span class="s2">"drop"</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre>
+</div>
+</div>
 
 <h2 id="autocomplete">Autocomplete</h2>
 
@@ -385,21 +317,13 @@
       <td><code>String</code></td>
       <td><code>The term to be autocompleted</code></td>
     </tr></tbody>
-</table><ul class="request-params">
-<li>
-<span class="label">verb</span>: GET</li>
-<li>
-<span class="label">path</span>: /autocomplete</li>
-<li>
-<span class="label">params</span>: <ul class="request-params">
-<li>
-<span class="label">q</span>: iphone</li>
-<li>
-<span class="label">oauth_token</span>: [FILTERED]</li>
-</ul>
-</li>
-</ul><pre class="headers"><code>Status: 200</code></pre>
-<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+</table><div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/autocomplete</span>
+        </p>
+<a href="void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"autocomplete"</span><span class="o">:</span> <span class="p">[</span>
     <span class="p">{</span>
       <span class="s2">"k"</span><span class="o">:</span> <span class="s2">"iphone 5c"</span>
@@ -440,6 +364,8 @@
     <span class="p">}</span>
   <span class="p">]</span>
 <span class="p">}</span></code></pre>
+</div>
+</div>
         </div>
       </div>
       <div id="js-sidebar" class="sidebar-shell">

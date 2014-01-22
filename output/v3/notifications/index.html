@@ -47,17 +47,13 @@ subscribed discussion messages etc).</p>
   /notifications
 </pre>
 
-<ul class="request-params">
-<li>
-<span class="label">verb</span>: GET</li>
-<li>
-<span class="label">path</span>: /notifications</li>
-<li>
-<span class="label">params</span>: <ul class="request-params"><li>
-<span class="label">per</span>: 1</li></ul>
-</li>
-</ul><pre class="headers"><code>Status: 200</code></pre>
-<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+<div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/notifications</span>
+        </p>
+<a href="void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"notifications"</span><span class="o">:</span> <span class="p">[</span>
     <span class="p">{</span>
       <span class="s2">"event"</span><span class="o">:</span> <span class="p">{</span>
@@ -89,6 +85,8 @@ subscribed discussion messages etc).</p>
     <span class="p">}</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre>
+</div>
+</div>
 
 <h2 id="retrieve-a-single-favorite">Retrieve a single favorite</h2>
 
@@ -96,13 +94,13 @@ subscribed discussion messages etc).</p>
   /notifications/:id
 </pre>
 
-<ul class="request-params">
-<li>
-<span class="label">verb</span>: GET</li>
-<li>
-<span class="label">path</span>: /notifications/3642082</li>
-</ul><pre class="headers"><code>Status: 200</code></pre>
-<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+<div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/notifications/3642082</span>
+        </p>
+<a href="void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"notification"</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">"confirmed"</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="s2">"created_at"</span><span class="o">:</span> <span class="s2">"2014-01-16T15:07:52+02:00"</span><span class="p">,</span>
@@ -122,6 +120,8 @@ subscribed discussion messages etc).</p>
     <span class="s2">"user_notified"</span><span class="o">:</span> <span class="kc">false</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre>
+</div>
+</div>
         </div>
       </div>
       <div id="js-sidebar" class="sidebar-shell">
