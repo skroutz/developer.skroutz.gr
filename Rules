@@ -38,11 +38,16 @@ route '/v3/*' do
   item.identifier + 'index.html'
 end
 
+route '/authentication/*' do
+  item.identifier + 'index.html'
+end
+
 route '/guides/*' do
   item.identifier + 'index.html'
 end
 
 compile '*' do
+  next if item[:extension] =~ /(png)|(jpe?g)|(gif)|(svg)/
   filter :erb
   case item[:extension]
   when 'md'
@@ -64,6 +69,10 @@ end
 # Output *.scss files are placed under output/assets/stylesheets/
 route '/assets/stylesheets/*' do
   item.identifier.chop + '.css'
+end
+
+route '/assets/images/*/' do
+  item.identifier.chop + '.' + item[:extension]
 end
 
 layout '*', :erb
