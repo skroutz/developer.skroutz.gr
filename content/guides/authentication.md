@@ -7,7 +7,7 @@ title: Authentication | Skroutz API
 We use [OAuth2.0](http://oauth.net/2/) for authorization.
 
 Make sure you have obtained a valid set of `client_id`, `client_secret`  
-To get one [contact us](api@skroutz.gr)
+To get one <a href="mailto:api@skroutz.gr">contact us</a>
 
 ## Get an authorization code
 
