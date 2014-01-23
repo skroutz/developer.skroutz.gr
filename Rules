@@ -30,6 +30,10 @@ route '/' do
   '/index.html'
 end
 
+route '/terms' do
+  '/terms/index.html'
+end
+
 route '/v3/*' do
   item.identifier + 'index.html'
 end
@@ -58,6 +62,10 @@ compile '*' do
     # made to be complete.
     if item.identifier =~ /^\/guides\//
       layout 'guides'
+    elsif item.identifier =~ /^\/authentication\//
+      layout 'authentication'
+    elsif item.identifier =~ /^\/terms\//
+      layout 'statics'
     else
       layout 'default'
     end
