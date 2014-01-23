@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,15 +21,15 @@
 <body class="api" id="<%= item.identifier.gsub(/\//, '-')[1..-2] %>">
   <%= render '_header' %>
 
-  <div id="main" class="cf">
-    <div class="content cf">
-      <div id="right_container">
-        <div class="container">
-          <%= yield %>
+    <div id="main" class="cf">
+      <div class="content cf">
+        <div id="right_container">
+          <div class="container">
+            <%= yield %>
+          </div>
         </div>
+        <%= render '_guides_sidebar' %>
       </div>
-      <%= render '_endpoints_sidebar' %>
-    </div>
   </div>
 </body>
 </html>

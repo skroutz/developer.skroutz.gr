@@ -25,5 +25,6 @@ group :development do
   gem 'adsf'
   gem 'fssm'
   gem 'pry'
+  gem 'pry-doc'
   gem 'awesome_print'
 end
