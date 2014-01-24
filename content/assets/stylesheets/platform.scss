@@ -21,6 +21,19 @@ a {
   &:hover {
     text-decoration: underline;
   }
+
+  &.unstyled {
+    color: $grey-10;
+    text-decoration: none;
+    &.header {
+      color: $grey-1;
+      float: left;
+    }
+  }
+}
+
+.search {
+  float: right;
 }
 
 .content {
