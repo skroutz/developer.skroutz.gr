@@ -15,6 +15,15 @@ a {
   color: #f68b24; }
   a:hover {
     text-decoration: underline; }
+  a.unstyled {
+    color: #363636;
+    text-decoration: none; }
+    a.unstyled.header {
+      color: #fbfbfb;
+      float: left; }
+
+.search {
+  float: right; }
 
 .content {
   max-width: 1180px;

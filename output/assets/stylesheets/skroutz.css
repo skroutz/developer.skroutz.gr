@@ -26,6 +26,15 @@ a {
   display: table; }
 .cf:after {
   clear: both; }
+  .cf:after.unstyled {
+    color: #363636;
+    text-decoration: none; }
+    .cf:after.unstyled.header {
+      color: #fbfbfb;
+      float: left; }
+
+.search {
+  float: right; }
 
 ol {
   list-style-position: inside; }
@@ -254,3 +263,13 @@ pre.terminal {
   color: white;
   font-size: 13px;
   line-height: 1.7; }
+
+/* Guides */
+.guides h1 {
+  font-size: 18px; }
+.guides .classroom {
+  display: block;
+  margin: 0 auto; }
+
+#guides-getting-started ul {
+  list-style: none; }

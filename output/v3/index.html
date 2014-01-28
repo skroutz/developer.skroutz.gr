@@ -21,6 +21,9 @@
   <header>
   <div class="content">
     <a href="../">for Developers [beta]</a>
+    <form class="search">
+        <input type="text" id="st-search-input" class="st-search-input"/>
+    </form>
   </div>
 </header>
 
@@ -36,14 +39,11 @@ you have any problems or requests please contact us.</p>
 
 <ul id="markdown-toc">
 <li><a href="#schema">Schema</a></li>
-  <li><a href="#parameters">Parameters</a></li>
-  <li><a href="#client-errors">Client Errors</a></li>
-  <li><a href="#http-redirects">HTTP Redirects</a></li>
-  <li><a href="#http-verbs">HTTP Verbs</a></li>
+  <li><a href="#linked-resources">Linked Resources</a></li>
   <li><a href="#pagination">Pagination</a></li>
   <li><a href="#rate-limiting">Rate Limiting</a></li>
-  <li><a href="#user-agent-required">User Agent Required</a></li>
   <li><a href="#conditional-requests">Conditional requests</a></li>
+  <li><a href="#http-redirects">HTTP Redirects</a></li>
   <li><a href="#cross-origin-resource-sharing">Cross Origin Resource Sharing</a></li>
   <li><a href="#json-p-callbacks">JSON-P Callbacks</a></li>
 </ul><h2 id="schema">Schema</h2>
@@ -83,119 +83,78 @@ X-Cache: MISS
 <pre><code>YYYY-MM-DDTHH:MM:SSZ
 </code></pre>
 
-<h2 id="parameters">Parameters</h2>
+<h2 id="linked-resources">Linked Resources</h2>
+<p>When you see “Linked resources: some_resource” in any of our resources
+it means you may choose to include/embed it as follows:</p>
 
-<p>Many API methods take optional parameters. For GET requests, any parameters not
-specified as a segment in the path can be passed as an HTTP query string
-parameter:</p>
+<p>Example:
+Resource Foo has “linked resources: bar”</p>
 
-<pre class="terminal">
-$ curl -i "https://api.skroutz.gr/categories?page=2&amp;per=4"
+<p>Case: embed</p>
+
+<pre>
+  <code>GET /foos/42?embed=bars</code>
 </pre>
 
-<p>In this example, the pagination parameters <code>page</code> and <code>per</code> are passed in the query
-string.</p>
+<pre class="terminal">
+{
+  "foo": {
+    "id": 12,
+    "bars": [
+      {
+        "id": 1,
+        ...
+      }
+    ]
+  }
+}
+</pre>
 
-<p>For POST, PATCH, PUT, and DELETE requests, parameters not included in the URL should be encoded as JSON
-with a Content-Type of ‘application/x-www-form-urlencoded’:</p>
+<p>Case: embed_ids</p>
 
-<h2 id="client-errors">Client Errors</h2>
+<pre>
+  <code>GET /foos/42?embed_ids=bars</code>
+</pre>
 
-<p>There are three possible types of client errors on API calls that
-receive request bodies:</p>
+<pre class="terminal">
+{
+  "foo": {
+    "id": 12,
+    "bars": [1,2,3,4]
+  }
+}
+</pre>
 
-<ol>
-<li>
-    <p>Sending invalid JSON will result in a <code>400 Bad Request</code> response.</p>
+<p>Case: include</p>
 
-    <pre><code> HTTP/1.1 400 Bad Request
- Content-Length: 35
+<pre>
+  <code>GET /foos/42?include=bars</code>
+</pre>
 
- {"message":"Problems parsing JSON"}
-</code></pre>
-  </li>
-  <li>
-    <p>Sending the wrong type of JSON values will result in a <code>400 Bad
-Request</code> response.</p>
+<pre class="terminal">
+{
+  "foo": {
+    "id": 12,
+    "bars": [1,2,3,4]
+  },
+  "bars": [
+    {
+      "id": 1,
+      ...
+    },
+    ...
+  ]
+}
+</pre>
 
-    <pre><code> HTTP/1.1 400 Bad Request
- Content-Length: 40
-
- {"message":"Body should be a JSON Hash"}
-</code></pre>
-  </li>
-  <li>
-    <p>Sending invalid fields will result in a <code>422 Unprocessable Entity</code>
-response.</p>
-
-    <pre><code> HTTP/1.1 422 Unprocessable Entity
- Content-Length: 149
-</code></pre>
-  </li>
-</ol><p>All error objects have resource and field properties so that your client
-can tell what the problem is.  There’s also an error code to let you
-know what is wrong with the field.  These are the possible validation error
-codes:</p>
-
-<dl>
-<dt>missing</dt>
-  <dd>This means a resource does not exist.</dd>
-  <dt>missing_field</dt>
-  <dd>This means a required field on a resource has not been set.</dd>
-  <dt>invalid</dt>
-  <dd>This means the formatting of a field is invalid.  The documentation
-for that resource should be able to give you more specific information.</dd>
-  <dt>already_exists</dt>
-  <dd>This means another resource has the same value as this field.  This
-can happen in resources that must have some unique key (such as Label
-names).</dd>
-</dl><p>If resources have custom validation errors, they will be documented with the resource.</p>
-
-<h2 id="http-redirects">HTTP Redirects</h2>
-
-<p>API v3 uses HTTP redirection where appropriate. Clients should assume that any
-request may result in a redirection. Receiving an HTTP redirection is <em>not</em> an
-error and clients should follow that redirect. Redirect responses will have a
-<code>Location</code> header field which contains the URI of the resource to which the
-client should repeat the requests.</p>
-
-<dl>
-<dt>301</dt>
-  <dd>Permanent redirection. The URI you used to make the request has been
-superseded by the one specified in the <code>Location</code> header field. This and all
-future requests to this resource should be directed to the new URI.</dd>
-  <dt>302, 307</dt>
-  <dd>Temporary redirection. The request should be repeated verbatim to the URI
-specified in the <code>Location</code> header field but clients should continue to use the
-original URI for future requests.</dd>
-</dl><p>Other redirection status codes may be used in accordance with the HTTP 1.1 spec.</p>
-
-<h2 id="http-verbs">HTTP Verbs</h2>
-
-<p>Where possible, API v3 strives to use appropriate HTTP verbs for each
-action.</p>
-
-<dl>
-<dt>HEAD</dt>
-  <dd>Can be issued against any resource to get just the HTTP header info.</dd>
-  <dt>GET</dt>
-  <dd>Used for retrieving resources.</dd>
-  <dt>POST</dt>
-  <dd>Used for creating resources, or performing custom actions (such as
-merging a pull request).</dd>
-  <dt>PUT</dt>
-  <dd>Used for replacing resources or collections. For PUT requests
-with no <code>body</code> attribute, be sure to set the <code>Content-Length</code> header to zero.</dd>
-  <dt>DELETE</dt>
-  <dd>Used for deleting resources.</dd>
-</dl><h2 id="pagination">Pagination</h2>
+<h2 id="pagination">Pagination</h2>
 
 <p>Requests that return multiple items will be paginated to 25 items by
 default.  You can specify further pages with the <code>?page</code> parameter. You can also 
 set a custom page size to 10 with the <code>?per</code> parameter.</p>
 
 <pre class="terminal">
-$ curl https://api.skroutz.gr/categories?page=2&amp;per_page=10
+$ curl https://api.skroutz.gr/categories?page=2&amp;per=10
 </pre>
 
 <p>When there are other pages the response will contain the <a href="http://tools.ietf.org/html/rfc5988">Link</a> header.</p>
@@ -211,7 +170,7 @@ parameter will return the first page.</p>
 
 <h2 id="rate-limiting">Rate Limiting</h2>
 
-<p>You can make up to 5,000 requests per hour.</p>
+<p>You can make up to a certain amount of requests for each oauth token associated with your application.</p>
 
 <p>You can check the returned HTTP headers of any API request to see your current
 rate limit status:</p>
@@ -262,19 +221,7 @@ X-RateLimit-Reset: 1377013266
 and using <a href="#conditional-requests">conditional requests</a>.</p>
 
 <p>If you’re using conditional requests and still exceeding your rate
-limit, please [contact us][support] to request a higher rate limit for your application.</p>
-
-<h2 id="user-agent-required">User Agent Required</h2>
-
-<p>All API requests MUST include a valid <code>User-Agent</code> header. Requests with no <code>User-Agent</code>
-header will be rejected. We request that you use your Skroutz username, or the name of your
-application, for the <code>User-Agent</code> header value. This allows us to contact you if there are problems.</p>
-
-<p>Here’s an example:</p>
-
-<pre class="terminal">
-User-Agent: Awesome-Skroutz-App
-</pre>
+limit, please <a href="../help">contact us</a> to request a higher rate limit for your application.</p>
 
 <h2 id="conditional-requests">Conditional requests</h2>
 
@@ -318,6 +265,25 @@ X-RateLimit-Limit: 5000
 X-RateLimit-Remaining: 4996
 X-RateLimit-Reset: 1372700873
 </pre>
+
+<h2 id="http-redirects">HTTP Redirects</h2>
+
+<p>API v3 uses HTTP redirection where appropriate. Clients should assume that any
+request may result in a redirection. Receiving an HTTP redirection is <em>not</em> an
+error and clients should follow that redirect. Redirect responses will have a
+<code>Location</code> header field which contains the URI of the resource to which the
+client should repeat the requests.</p>
+
+<dl>
+<dt>301</dt>
+  <dd>Permanent redirection. The URI you used to make the request has been
+superseded by the one specified in the <code>Location</code> header field. This and all
+future requests to this resource should be directed to the new URI.</dd>
+  <dt>302, 307</dt>
+  <dd>Temporary redirection. The request should be repeated verbatim to the URI
+specified in the <code>Location</code> header field but clients should continue to use the
+original URI for future requests.</dd>
+</dl><p>Other redirection status codes may be used in accordance with the HTTP 1.1 spec.</p>
 
 <h2 id="cross-origin-resource-sharing">Cross Origin Resource Sharing</h2>
 
@@ -479,6 +445,20 @@ foo({
     <a href="mailto:api@skroutz.gr">Support</a>
   </p>
   <p>&copy; 20[0-9]{2} Skroutz A.E. All Rights and Lefts reserved.</p>
+  <script type="text/javascript">
+  var Swiftype = window.Swiftype || {};
+  (function() {
+    Swiftype.key = 'qbNiqUVxzUseXtdSCSUy';
+
+    /** DO NOT EDIT BELOW THIS LINE **/
+    var script = document.createElement('script'); script.type =
+      'text/javascript'; script.async = true;
+    script.src = "//s.swiftypecdn.com/embed.js";
+    var entry = document.getElementsByTagName('script')[0];
+    entry.parentNode.insertBefore(script, entry);
+  }());
+</script>
+
 </footer>
 
   <div class="repo sidebar-module">

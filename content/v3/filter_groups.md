@@ -9,7 +9,8 @@ title: FilterGroup | Skroutz API
 
 ## About
 
-A FilterGroup is a collection of filters of the same kind.
+A FilterGroup is a collection of filters of the same kind.  
+Linked resources: [filter](<%= relative_path_to('/v3/filters') %>)
 
 ## List FilterGroups
 
