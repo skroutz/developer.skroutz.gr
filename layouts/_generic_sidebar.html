@@ -2,7 +2,7 @@
   <nav class="js-toggle-list sidebar-module expandable">
 
     <h3>
-      <a href="#">Index page</a>
+      <a href="<%= relative_path_to('/') %>">Home</a>
     </h3>
 
     <h2 class="guides">Development Guides</h2>
@@ -10,22 +10,17 @@
     <ul>
       <li class="js-topic">
         <h3>
-          <a href="<%= relative_path_to('/v3') %>">Getting Started</a>
+          <a href="<%= relative_path_to('/guides/getting-started') %>">Getting Started</a>
         </h3>
       </li>
       <li class="js-topic">
         <h3>
-          <a href="<%= relative_path_to('/v3') %>">First Request</a>
+          <a href="<%= relative_path_to('/guides/authentication') %>">Authentication</a>
         </h3>
       </li>
       <li class="js-topic">
         <h3>
-          <a href="<%= relative_path_to('/v3') %>">Authentication</a>
-        </h3>
-      </li>
-      <li class="js-topic">
-        <h3>
-          <a href="<%= relative_path_to('/v3') %>">Permissions</a>
+          <a href="<%= relative_path_to('/authentication/permissions') %>">Permissions</a>
         </h3>
       </li>
     </ul>
@@ -86,7 +81,7 @@
     </ul>
 
     <h3>
-      <a href="#">Help</a>
+      <a href="<%= relative_path_to('/help') %>">Help</a>
     </h3>
 
    </nav>
