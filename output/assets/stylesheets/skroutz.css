@@ -102,17 +102,6 @@ header {
       background: url(../../images/logo3.png) no-repeat 0 -59px; }
 
 /* General styles */
-h1 {
-  font-size: 24px;
-  margin-bottom: 40px; }
-
-h2 {
-  font-size: 20px;
-  color: #282828;
-  padding-bottom: 8px;
-  border-bottom: 1px solid #cdcdcd;
-  margin: 40px 0; }
-
 #right_container {
   float: left;
   padding: 40px 0 80px;
@@ -120,36 +109,81 @@ h2 {
   color: #474747; }
   #right_container .container {
     margin-left: 300px; }
+  #right_container h1 {
+    font-size: 24px;
+    margin-bottom: 40px; }
+  #right_container h2 {
+    font-size: 20px;
+    color: #282828;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #cdcdcd;
+    margin: 40px 0; }
 
 /* Sidebar */
 nav {
-  box-shadow: 2px 2px 2px 0px #282828;
-  -moz-box-shadow: 2px 2px 2px 0px #282828;
-  -webkit-box-shadow: 2px 2px 2px 0px #282828;
-  border-top: 1px solid #474747;
-  border-left: 1px solid #474747;
-  border-radius: 3px; }
-  nav ul li {
-    font-family: "ubuntu", sans-serif; }
+  font-family: "ubuntu", sans-serif; }
+  nav a {
+    font-size: 14px;
+    font-weight: 300;
+    text-decoration: none;
+    padding: 10px 10px 12px 30px;
+    display: block; }
+    nav a:hover {
+      color: white;
+      background: #f68b24;
+      -o-transition: all, .2s, ease;
+      -webkit-transition: all, .2s, ease;
+      -moz-transition: all, .2s, ease;
+      transition: all, .2s, ease;
+      text-decoration: none; }
+  nav > h3 {
+    margin: 25px 0 15px;
+    color: #999999; }
+    nav > h3 a {
+      -webkit-box-shadow: 2px 2px 2px 0px #282828;
+      -moz-box-shadow: 2px 2px 2px 0px #282828;
+      -o-box-shadow: 2px 2px 2px 0px #282828;
+      box-shadow: 2px 2px 2px 0px #282828;
+      border-top: 1px solid #474747;
+      border-left: 1px solid #474747;
+      border-radius: 3px;
+      color: #fbfbfb;
+      background: #3d3d3d; }
+      nav > h3 a:hover {
+        color: #fbfbfb; }
+  nav h2 {
+    position: relative;
+    padding-left: 30px;
+    color: #999999;
+    margin: 25px 0 15px;
+    font-size: 13px; }
+    nav h2:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0; }
+    nav h2.guides:before {
+      width: 17px;
+      height: 17px;
+      background: url("/assets/images/sprite.png") -3px -2px; }
+    nav h2.manual:before {
+      width: 19px;
+      height: 16px;
+      background: url("/assets/images/sprite.png") -28px -2px; }
+  nav ul {
+    box-shadow: 2px 2px 2px 0px #282828;
+    -moz-box-shadow: 2px 2px 2px 0px #282828;
+    -webkit-box-shadow: 2px 2px 2px 0px #282828;
+    border-top: 1px solid #474747;
+    border-left: 1px solid #474747;
+    border-radius: 3px; }
     nav ul li h3 {
       border-top: 1px solid #474747; }
     nav ul li:first-child h3 {
       border-top: none; }
     nav ul li a {
-      padding: 10px 10px 12px 30px;
       background: #3d3d3d;
-      color: #dbdbdb;
-      font-size: 14px;
-      font-weight: 300;
-      text-decoration: none; }
-      nav ul li a:hover {
-        color: white;
-        background: #f68b24;
-        -o-transition: all, .2s, ease;
-        -webkit-transition: all, .2s, ease;
-        -moz-transition: all, .2s, ease;
-        transition: all, .2s, ease;
-        text-decoration: none; }
+      color: #dbdbdb; }
     nav ul li:first-child h3 a {
       border-radius: 3px 3px 0 0; }
     nav ul li:last-child h3 a {

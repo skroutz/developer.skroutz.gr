@@ -157,19 +157,6 @@ header {
 
 /* General styles */
 
-h1 {
-  font-size: 24px;
-  margin-bottom: 40px;
-}
-
-h2 {
-  font-size: 20px;
-  color: $black;
-  padding-bottom: 8px;
-  border-bottom: 1px solid #cdcdcd;
-  margin: 40px 0;
-}
-
 #right_container {
   float: left;
   padding: 40px 0 80px;
@@ -179,78 +166,146 @@ h2 {
   .container {
     margin-left: 300px;
   }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+
+  h2 {
+    font-size: 20px;
+    color: $black;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #cdcdcd;
+    margin: 40px 0;
+  }
 }
 
 /* Sidebar */
 
 nav {
-  box-shadow: 2px 2px 2px 0px $black;
-  -moz-box-shadow: 2px 2px 2px 0px $black;
-  -webkit-box-shadow: 2px 2px 2px 0px $black;
-  border-top: 1px solid $grey-9;
-  border-left: 1px solid $grey-9;
-  border-radius: 3px;
+  font-family: "ubuntu", sans-serif;
 
-  ul li {
-    font-family: "ubuntu", sans-serif;
+  a {
+    font-size: 14px;
+    font-weight: 300;
+    text-decoration: none;
+    padding: 10px 10px 12px 30px;
+    display: block;
 
-    h3 {
-      border-top: 1px solid $grey-9;
+    &:hover {
+      color: $white;
+      background: $orange-1;
+      -o-transition: all, .2s, ease;
+      -webkit-transition: all, .2s, ease;
+      -moz-transition: all, .2s, ease;
+      transition: all, .2s, ease;
+      text-decoration: none;
     }
+  }
 
-    &:first-child h3 {
-      border-top: none;
-    }
+  > h3 {
+    margin: 25px 0 15px;
+    color: $grey-7;
 
     a {
-      padding: 10px 10px 12px 30px;
+      -webkit-box-shadow: 2px 2px 2px 0px #282828;
+      -moz-box-shadow: 2px 2px 2px 0px #282828;
+      -o-box-shadow: 2px 2px 2px 0px #282828;
+      box-shadow: 2px 2px 2px 0px #282828;
+      border-top: 1px solid $grey-9;
+      border-left: 1px solid $grey-9;
+      border-radius: 3px;
+      color: $grey-1;
       background: #3d3d3d;
-      color: $grey-5;
-      font-size: 14px;
-      font-weight: 300;
-      text-decoration: none;
 
       &:hover {
-        color: $white;
-        background: $orange-1;
-        -o-transition: all, .2s, ease;
-        -webkit-transition: all, .2s, ease;
-        -moz-transition: all, .2s, ease;
-        transition: all, .2s, ease;
-        text-decoration: none;
+        color: $grey-1;
       }
     }
+  }
 
-    &:first-child h3 a {
-      border-radius: 3px 3px 0 0;
+  h2 {
+    position: relative;
+    padding-left: 30px;
+    color: $grey-7;
+    margin: 25px 0 15px;
+    font-size: 13px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
     }
 
-    &:last-child h3 a {
-      border-radius: 0 0 3px 3px;
+    &.guides:before {
+      width: 17px;
+      height: 17px;
+      background: url("/assets/images/sprite.png") -3px -2px;
     }
 
-    > ul {
-      background: #434343;
-      box-shadow: inset 0px 1px 1px 0px $grey-10,
-                  inset 0px -1px 1px 0 $grey-10;
-      -moz-box-shadow: inset 0px 1px 1px 0px $grey-10,
-                       inset 0px -1px 1px 0 $grey-10;;
-      -webkit-box-shadow: inset 0px 1px 1px 0px $grey-10,
-                          inset 0px -1px 1px 0 $grey-10;;
+    &.manual:before {
+      width: 19px;
+      height: 16px;
+      background: url("/assets/images/sprite.png") -28px -2px;
+    }
+  }
 
-      li {
-        padding: 12px 20px 0;
+  ul {
+    box-shadow: 2px 2px 2px 0px $black;
+    -moz-box-shadow: 2px 2px 2px 0px $black;
+    -webkit-box-shadow: 2px 2px 2px 0px $black;
+    border-top: 1px solid $grey-9;
+    border-left: 1px solid $grey-9;
+    border-radius: 3px;
 
-        &:last-child {
-          padding-bottom: 12px;
-        }
+    li {
 
-        a {
-          background: inherit;
+      h3 {
+        border-top: 1px solid $grey-9;
+      }
 
-          &:hover {
+      &:first-child h3 {
+        border-top: none;
+      }
+
+      a {
+        background: #3d3d3d;
+        color: $grey-5;
+      }
+
+      &:first-child h3 a {
+        border-radius: 3px 3px 0 0;
+      }
+
+      &:last-child h3 a {
+        border-radius: 0 0 3px 3px;
+      }
+
+      > ul {
+        background: #434343;
+        box-shadow: inset 0px 1px 1px 0px $grey-10,
+                    inset 0px -1px 1px 0 $grey-10;
+        -moz-box-shadow: inset 0px 1px 1px 0px $grey-10,
+                         inset 0px -1px 1px 0 $grey-10;;
+        -webkit-box-shadow: inset 0px 1px 1px 0px $grey-10,
+                            inset 0px -1px 1px 0 $grey-10;;
+
+        li {
+          padding: 12px 20px 0;
+
+          &:last-child {
+            padding-bottom: 12px;
+          }
+
+          a {
             background: inherit;
-            color: $orange-1;
+
+            &:hover {
+              background: inherit;
+              color: $orange-1;
+            }
           }
         }
       }
