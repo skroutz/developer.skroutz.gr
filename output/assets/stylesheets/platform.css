@@ -15,15 +15,10 @@ a {
   color: #f68b24; }
   a:hover {
     text-decoration: underline; }
-  a.unstyled {
-    color: #363636;
-    text-decoration: none; }
-    a.unstyled.header {
-      color: #fbfbfb; }
 
 .content {
   max-width: 1180px;
-  width: 100%;
+  width: 98%;
   margin: 0 auto; }
 
 .cf:before, .cf:after {
@@ -50,17 +45,24 @@ header {
   background: #474747;
   box-shadow: 0px 2px 4px 0 #363636;
   color: white; }
-  header h1 {
+  header a {
+    color: #fbfbfb;
+    text-decoration: none;
     position: relative;
     padding-left: 120px;
     line-height: 29px;
     font-family: 'ubuntu', sans-serif;
     font-weight: 300;
-    font-size: 18px; }
-    header h1:before {
+    font-size: 18px;
+    height: 29px; }
+    header a:hover,
+    header a a:visited {
+      text-decoration: none;
+      color: #fbfbfb; }
+    header a:before {
       content: "";
       position: absolute;
-      top: 0;
+      top: -2px;
       left: 0;
       width: 109px;
       height: 22px;
@@ -98,7 +100,15 @@ header {
   float: left;
   width: 343px;
   margin-right: 50px;
-  padding-top: 215px; }
+  padding-top: 215px;
+  position: relative; }
+  #main .col > a {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2; }
   #main .col h3 {
     font-family: 'ubuntu', sans-serif;
     font-weight: 300;

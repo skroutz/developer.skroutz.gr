@@ -21,19 +21,11 @@ a {
   &:hover {
     text-decoration: underline;
   }
-
-  &.unstyled {
-    color: $grey-10;
-    text-decoration: none;
-    &.header {
-      color: $grey-1;
-    }
-  }
 }
 
 .content {
   max-width: 1180px;
-  width: 100%;
+  width: 98%;
   margin: 0 auto;
 }
 
@@ -71,18 +63,27 @@ header {
   box-shadow: 0px 2px 4px 0 $grey-10;
   color: $white;
 
-  h1 {
+  a {
+    color: $grey-1;
+    text-decoration: none;
     position: relative;
     padding-left: 120px;
     line-height: 29px;
     font-family: 'ubuntu', sans-serif;
     font-weight: 300;
     font-size: 18px;
+    height: 29px;
+
+    &:hover,
+    a:visited {
+      text-decoration: none;
+      color: $grey-1;
+    }
 
     &:before {
       content: "";
       position: absolute;
-      top: 0;
+      top: -2px;
       left: 0;
       width: 109px;
       height: 22px;
@@ -133,6 +134,16 @@ header {
     width: 343px;
     margin-right: 50px;
     padding-top: 215px;
+    position: relative;
+
+    > a {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+    }
 
     h3 {
       font-family: 'ubuntu', sans-serif;

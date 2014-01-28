@@ -5,23 +5,27 @@ body {
 
 p {
   color: #363636;
-  font-size: 13px;
-  line-height: 1.5;
-  margin-bottom: 15px; }
+  font-size: 14px;
+  line-height: 1.5; }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal; }
 
 a {
-  color: #f68b24;
-  text-decoration: none; }
+  color: #f68b24; }
   a:hover {
-    text-decoration: underline; }
-  a.unstyled {
-    color: #363636;
     text-decoration: none; }
-    a.unstyled.header {
-      color: #fbfbfb; }
+
+.content {
+  max-width: 1180px;
+  width: 98%;
+  margin: 0 auto; }
+
+.cf:before, .cf:after {
+  content: "";
+  display: table; }
+.cf:after {
+  clear: both; }
 
 ol {
   list-style-position: inside; }
@@ -34,11 +38,6 @@ dl {
     padding-left: 20px;
     margin-bottom: 15px; }
 
-.content {
-  max-width: 1180px;
-  width: 100%;
-  margin: 0 auto; }
-
 #wrapper {
   max-width: 1180px; }
 
@@ -50,12 +49,12 @@ dl {
 
 #main {
   background: #363636;
-  background: -moz-linear-gradient(left, #363636 0%, #363636 30%, #f9f9f9 30%, #f9f9f9 100%);
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #363636), color-stop(30%, #363636), color-stop(30%, #f9f9f9), color-stop(100%, #f9f9f9));
-  background: -webkit-linear-gradient(left, #363636 0%, #363636 30%, #f9f9f9 30%, #f9f9f9 100%);
-  background: -o-linear-gradient(left, #363636 0%, #363636 30%, #f9f9f9 30%, #f9f9f9 100%);
-  background: -ms-linear-gradient(left, #363636 0%, #363636 30%, #f9f9f9 30%, #f9f9f9 100%);
-  background: linear-gradient(to right, #363636 0%, #363636 30%, #f9f9f9 30%, #f9f9f9 100%);
+  background: -moz-linear-gradient(left, #363636 0%, #363636 24%, #f9f9f9 24%, #f9f9f9 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #363636), color-stop(24%, #363636), color-stop(24%, #f9f9f9), color-stop(100%, #f9f9f9));
+  background: -webkit-linear-gradient(left, #363636 0%, #363636 24%, #f9f9f9 24%, #f9f9f9 100%);
+  background: -o-linear-gradient(left, #363636 0%, #363636 24%, #f9f9f9 24%, #f9f9f9 100%);
+  background: -ms-linear-gradient(left, #363636 0%, #363636 24%, #f9f9f9 24%, #f9f9f9 100%);
+  background: linear-gradient(to right, #363636 0%, #363636 24%, #f9f9f9 24%, #f9f9f9 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#363636', endColorstr='#f9f9f9',GradientType=1 ); }
   #main > .content {
     overflow: hidden;
@@ -79,25 +78,36 @@ header {
   background: #474747;
   box-shadow: 0px 2px 4px 0 #363636;
   color: white; }
-  header h1 {
+  header a {
+    color: #fbfbfb;
+    text-decoration: none;
     position: relative;
     padding-left: 120px;
     line-height: 29px;
     font-family: 'ubuntu', sans-serif;
     font-weight: 300;
-    font-size: 18px; }
-    header h1:before {
+    font-size: 18px;
+    height: 29px; }
+    header a:hover,
+    header a a:visited {
+      text-decoration: none;
+      color: #fbfbfb; }
+    header a:before {
       content: "";
       position: absolute;
-      top: 0;
+      top: -2px;
       left: 0;
       width: 109px;
       height: 22px;
       background: url(../../images/logo3.png) no-repeat 0 -59px; }
 
 /* General styles */
-h2 {
+h1 {
   font-size: 24px;
+  margin-bottom: 40px; }
+
+h2 {
+  font-size: 20px;
   color: #282828;
   padding-bottom: 8px;
   border-bottom: 1px solid #cdcdcd;
@@ -117,15 +127,21 @@ nav {
   -moz-box-shadow: 2px 2px 2px 0px #282828;
   -webkit-box-shadow: 2px 2px 2px 0px #282828;
   border-top: 1px solid #474747;
-  border-left: 1px solid #474747; }
+  border-left: 1px solid #474747;
+  border-radius: 3px; }
   nav ul li {
     font-family: "ubuntu", sans-serif; }
+    nav ul li h3 {
+      border-top: 1px solid #474747; }
+    nav ul li:first-child h3 {
+      border-top: none; }
     nav ul li a {
       padding: 10px 10px 12px 30px;
       background: #3d3d3d;
       color: #dbdbdb;
       font-size: 14px;
-      font-weight: 300; }
+      font-weight: 300;
+      text-decoration: none; }
       nav ul li a:hover {
         color: white;
         background: #f68b24;
@@ -169,12 +185,23 @@ nav {
     list-style-type: none; }
 
 .repo p {
+  position: relative;
   margin-top: 70px;
   font-size: 13px;
   color: #b8b8b8;
-  border-top: 1px solid #616161;
-  border-bottom: 1px solid #616161;
   padding: 15px 0; }
+  .repo p:before, .repo p:after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 1px;
+    background: #616161; }
+  .repo p:before {
+    top: 0;
+    left: 0; }
+  .repo p:after {
+    bottom: 0;
+    right: 0; }
 .repo a {
   text-decoration: none; }
   .repo a:hover {
@@ -184,6 +211,7 @@ footer {
   margin-top: 50px; }
   footer p {
     color: #b8b8b8;
+    font-size: 13px;
     margin-bottom: 20px; }
 
 /* Terminal */
@@ -192,13 +220,3 @@ pre.terminal {
   color: white;
   font-size: 13px;
   line-height: 1.7; }
-
-/* Guides */
-.guides h1 {
-  font-size: 18px; }
-.guides .classroom {
-  display: block;
-  margin: 0 auto; }
-
-#guides-getting-started ul {
-  list-style: none; }

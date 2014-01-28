@@ -7,9 +7,8 @@ body {
 
 p {
   color: $grey-10;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.5;
-  margin-bottom: 15px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -18,18 +17,27 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
   color: $orange-1;
-  text-decoration: none;
 
   &:hover {
-    text-decoration: underline;
+    text-decoration: none;
+  }
+}
+
+.content {
+  max-width: 1180px;
+  width: 98%;
+  margin: 0 auto;
+}
+
+.cf {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
   }
 
-  &.unstyled {
-    color: $grey-10;
-    text-decoration: none;
-    &.header {
-      color: $grey-1;
-    }
+  &:after {
+    clear: both;
   }
 }
 
@@ -48,12 +56,6 @@ dl {
     padding-left: 20px;
     margin-bottom: 15px;
   }
-}
-
-.content {
-  max-width: 1180px;
-  width: 100%;
-  margin: 0 auto;
 }
 
 #wrapper {
@@ -75,12 +77,12 @@ dl {
 
 #main {
   background: #363636;
-  background: -moz-linear-gradient(left,  #363636 0%, #363636 30%, #f9f9f9 30%, #f9f9f9 100%);
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#363636), color-stop(30%,#363636), color-stop(30%,#f9f9f9), color-stop(100%,#f9f9f9));
-  background: -webkit-linear-gradient(left,  #363636 0%,#363636 30%,#f9f9f9 30%,#f9f9f9 100%);
-  background: -o-linear-gradient(left,  #363636 0%,#363636 30%,#f9f9f9 30%,#f9f9f9 100%);
-  background: -ms-linear-gradient(left,  #363636 0%,#363636 30%,#f9f9f9 30%,#f9f9f9 100%);
-  background: linear-gradient(to right,  #363636 0%,#363636 30%,#f9f9f9 30%,#f9f9f9 100%);
+  background: -moz-linear-gradient(left,  #363636 0%, #363636 24%, #f9f9f9 24%, #f9f9f9 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#363636), color-stop(24%,#363636), color-stop(24%,#f9f9f9), color-stop(100%,#f9f9f9));
+  background: -webkit-linear-gradient(left,  #363636 0%,#363636 24%,#f9f9f9 24%,#f9f9f9 100%);
+  background: -o-linear-gradient(left,  #363636 0%,#363636 24%,#f9f9f9 24%,#f9f9f9 100%);
+  background: -ms-linear-gradient(left,  #363636 0%,#363636 24%,#f9f9f9 24%,#f9f9f9 100%);
+  background: linear-gradient(to right,  #363636 0%,#363636 24%,#f9f9f9 24%,#f9f9f9 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#363636', endColorstr='#f9f9f9',GradientType=1 );
 
   & > .content {
@@ -111,18 +113,27 @@ header {
   box-shadow: 0px 2px 4px 0 $grey-10;
   color: $white;
 
-  h1 {
+  a {
+    color: $grey-1;
+    text-decoration: none;
     position: relative;
     padding-left: 120px;
     line-height: 29px;
     font-family: 'ubuntu', sans-serif;
     font-weight: 300;
     font-size: 18px;
+    height: 29px;
+
+    &:hover,
+    a:visited {
+      text-decoration: none;
+      color: $grey-1;
+    }
 
     &:before {
       content: "";
       position: absolute;
-      top: 0;
+      top: -2px;
       left: 0;
       width: 109px;
       height: 22px;
@@ -134,8 +145,13 @@ header {
 
 /* General styles */
 
-h2 {
+h1 {
   font-size: 24px;
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 20px;
   color: $black;
   padding-bottom: 8px;
   border-bottom: 1px solid #cdcdcd;
@@ -161,9 +177,18 @@ nav {
   -webkit-box-shadow: 2px 2px 2px 0px $black;
   border-top: 1px solid $grey-9;
   border-left: 1px solid $grey-9;
+  border-radius: 3px;
 
   ul li {
     font-family: "ubuntu", sans-serif;
+
+    h3 {
+      border-top: 1px solid $grey-9;
+    }
+
+    &:first-child h3 {
+      border-top: none;
+    }
 
     a {
       padding: 10px 10px 12px 30px;
@@ -171,6 +196,7 @@ nav {
       color: $grey-5;
       font-size: 14px;
       font-weight: 300;
+      text-decoration: none;
 
       &:hover {
         color: $white;
@@ -247,12 +273,30 @@ nav {
 .repo {
 
   p {
+    position: relative;
     margin-top: 70px;
     font-size: 13px;
     color: $grey-6;
-    border-top: 1px solid #616161;
-    border-bottom: 1px solid #616161;
     padding: 15px 0;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      width: 150px;
+      height: 1px;
+      background: #616161;
+    }
+
+    &:before {
+      top: 0;
+      left: 0;
+    }
+
+    &:after {
+      bottom: 0;
+      right: 0;
+    }
   }
 
   a {
@@ -269,6 +313,7 @@ footer {
 
   p {
     color: $grey-6;
+    font-size: 13px;
     margin-bottom: 20px;
   }
 }
@@ -280,23 +325,4 @@ pre.terminal {
   color: $white;
   font-size: 13px;
   line-height: 1.7;
-}
-
-
-/* Guides */
-.guides {
-  h1 {
-    font-size: 18px;
-  }
-
-  .classroom {
-    display: block;
-    margin: 0 auto;
-  }
-}
-
-#guides-getting-started {
-  ul {
-    list-style: none;
-  }
 }
