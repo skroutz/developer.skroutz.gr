@@ -235,20 +235,20 @@ nav {
     &:before {
       content: "";
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 1px;
+      left: 5px;
     }
 
     &.guides:before {
-      width: 17px;
-      height: 17px;
-      background: url("/assets/images/sprite.png") -3px -2px;
+      width: 14px;
+      height: 14px;
+      background: url("/assets/images/sprite.png") 0 0;
     }
 
     &.manual:before {
-      width: 19px;
-      height: 16px;
-      background: url("/assets/images/sprite.png") -28px -2px;
+      width: 16px;
+      height: 13px;
+      background: url("/assets/images/sprite.png") -20px -1px;
     }
   }
 
@@ -337,14 +337,19 @@ nav {
   }
 }
 
-.repo {
+footer {
+  margin-top: 50px;
 
   p {
     position: relative;
-    margin-top: 70px;
-    font-size: 13px;
     color: $grey-6;
-    padding: 15px 0;
+    font-size: 13px;
+    margin-bottom: 20px;
+    padding: 20px 0;
+
+    a {
+      text-decoration: none;
+    }
 
     &:before,
     &:after {
@@ -365,24 +370,6 @@ nav {
       right: 0;
     }
   }
-
-  a {
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
-
-footer {
-  margin-top: 50px;
-
-  p {
-    color: $grey-6;
-    font-size: 13px;
-    margin-bottom: 20px;
-  }
 }
 
 /* Terminal */
@@ -396,19 +383,9 @@ pre.terminal {
 
 
 /* Guides */
-.guides {
-  h1 {
-    font-size: 18px;
-  }
 
-  .classroom {
-    display: block;
-    margin: 0 auto;
-  }
+.classroom {
+  display: block;
+  margin: 0 auto;
 }
 
-#guides-getting-started {
-  ul {
-    list-style: none;
-  }
-}

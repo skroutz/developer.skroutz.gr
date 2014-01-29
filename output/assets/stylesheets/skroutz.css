@@ -169,16 +169,16 @@ nav {
     nav h2:before {
       content: "";
       position: absolute;
-      top: 0;
-      left: 0; }
+      top: 1px;
+      left: 5px; }
     nav h2.guides:before {
-      width: 17px;
-      height: 17px;
-      background: url("/assets/images/sprite.png") -3px -2px; }
+      width: 14px;
+      height: 14px;
+      background: url("/assets/images/sprite.png") 0 0; }
     nav h2.manual:before {
-      width: 19px;
-      height: 16px;
-      background: url("/assets/images/sprite.png") -28px -2px; }
+      width: 16px;
+      height: 13px;
+      background: url("/assets/images/sprite.png") -20px -1px; }
   nav ul {
     box-shadow: 2px 2px 2px 0px #282828;
     -moz-box-shadow: 2px 2px 2px 0px #282828;
@@ -227,35 +227,28 @@ nav {
   .sidebar-shell ul {
     list-style-type: none; }
 
-.repo p {
-  position: relative;
-  margin-top: 70px;
-  font-size: 13px;
-  color: #b8b8b8;
-  padding: 15px 0; }
-  .repo p:before, .repo p:after {
-    content: "";
-    position: absolute;
-    width: 150px;
-    height: 1px;
-    background: #616161; }
-  .repo p:before {
-    top: 0;
-    left: 0; }
-  .repo p:after {
-    bottom: 0;
-    right: 0; }
-.repo a {
-  text-decoration: none; }
-  .repo a:hover {
-    text-decoration: underline; }
-
 footer {
   margin-top: 50px; }
   footer p {
+    position: relative;
     color: #b8b8b8;
     font-size: 13px;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    padding: 20px 0; }
+    footer p a {
+      text-decoration: none; }
+    footer p:before, footer p:after {
+      content: "";
+      position: absolute;
+      width: 150px;
+      height: 1px;
+      background: #616161; }
+    footer p:before {
+      top: 0;
+      left: 0; }
+    footer p:after {
+      bottom: 0;
+      right: 0; }
 
 /* Terminal */
 pre.terminal {
@@ -265,11 +258,6 @@ pre.terminal {
   line-height: 1.7; }
 
 /* Guides */
-.guides h1 {
-  font-size: 18px; }
-.guides .classroom {
+.classroom {
   display: block;
   margin: 0 auto; }
-
-#guides-getting-started ul {
-  list-style: none; }
