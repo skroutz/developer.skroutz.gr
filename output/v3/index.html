@@ -99,7 +99,7 @@ Resource Foo has “linked resources: bar”</p>
 <pre class="terminal">
 {
   "foo": {
-    "id": 12,
+    "id": 42,
     "bars": [
       {
         "id": 1,
@@ -119,7 +119,7 @@ Resource Foo has “linked resources: bar”</p>
 <pre class="terminal">
 {
   "foo": {
-    "id": 12,
+    "id": 42,
     "bars": [1,2,3,4]
   }
 }
@@ -128,18 +128,28 @@ Resource Foo has “linked resources: bar”</p>
 <p>Case: include</p>
 
 <pre>
-  <code>GET /foos/42?include=bars</code>
+  <code>GET /foos?include=bars</code>
 </pre>
 
 <pre class="terminal">
 {
-  "foo": {
-    "id": 12,
-    "bars": [1,2,3,4]
-  },
+  "foos: [
+    {
+      "id": 42,
+      "bars": [1,4]
+    },
+    {
+      "id": 43,
+      "bars": [3,4]
+    }
+  ],
   "bars": [
     {
       "id": 1,
+      ...
+    },
+    {
+      "id": 3,
       ...
     },
     ...
