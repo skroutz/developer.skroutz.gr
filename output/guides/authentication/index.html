@@ -40,7 +40,62 @@
 <p>Make sure you have obtained a valid set of <code>client_id</code>, <code>client_secret</code><br>
 To get one <a href="mailto:api@skroutz.gr">contact us</a></p>
 
-<h2 id="get-an-authorization-code">Get an authorization code</h2>
+<h2 id="application-token">Application Token</h2>
+<p>With an application token you can only access resources not associated
+to a user. Have a look at related <a href="../../authentication/permissions">permissions</a></p>
+
+<p><a href="http://tools.ietf.org/html/rfc6749#section-4.4">More info about client-credentials</a></p>
+
+<pre class="terminal">
+POST https://www.skroutz.gr/oauth2/token
+</pre>
+
+<table>
+<thead><tr>
+<th>Name</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Description</th>
+    </tr></thead>
+<tbody>
+<tr>
+<td><code>client_id</code></td>
+      <td><code>String</code></td>
+      <td>yes</td>
+      <td><code>The client_id supplied by skroutz for the application</code></td>
+    </tr>
+<tr>
+<td><code>client_secret</code></td>
+      <td><code>String</code></td>
+      <td>yes</td>
+      <td><code>The client_secret supplied by skroutz for the application</code></td>
+    </tr>
+<tr>
+<td><code>redirect_uri</code></td>
+      <td><code>String</code></td>
+      <td>yes</td>
+      <td><code>The redirect_uri set for the application</code></td>
+    </tr>
+<tr>
+<td><code>grant_type</code></td>
+      <td><code>String</code></td>
+      <td>yes</td>
+      <td><code>client_credentials</code></td>
+    </tr>
+<tr>
+<td><code>scope</code></td>
+      <td><code>String</code></td>
+      <td>no</td>
+      <td><code>The space separated set of permissions your application wishes</code></td>
+    </tr>
+</tbody>
+</table><h2 id="user-token">User Token</h2>
+
+<h3 id="get-an-authorization-code">Get an authorization code</h3>
+<p>With a “user token” you can access resources associated to a user. Given that the user 
+permits you to.</p>
+
+<p><a href="http://tools.ietf.org/html/rfc6749#section-4.1">More info about authorization code grant</a></p>
 
 <pre class="terminal">
 GET https://www.skroutz.gr/oauth2/authorizations/new
@@ -79,7 +134,8 @@ GET https://www.skroutz.gr/oauth2/authorizations/new
       <td><code>The space separated set of permissions your application wishes</code></td>
     </tr>
 </tbody>
-</table><p>If everything went OK, you are redirected to </p>
+</table><p>If everything went OK and the user granted your the requested permissions declared in 
+the scope parameter, you are redirected to: </p>
 
 <pre class="terminal">
 http://redirect_uri?code=a_valid_authorization_code
@@ -92,7 +148,7 @@ http://redirect_uri?code=a_valid_authorization_code
   <li>notifications</li>
 </ul><p><a href="../../authentication/permissions">More info about permissions</a></p>
 
-<h2 id="get-an-oauthtoken">Get an oauth_token</h2>
+<h3 id="get-an-oauthtoken">Get an oauth_token</h3>
 
 <pre class="terminal">
 POST https://www.skroutz.gr/oauth2/token

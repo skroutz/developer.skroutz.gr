@@ -9,7 +9,31 @@ We use [OAuth2.0](http://oauth.net/2/) for authorization.
 Make sure you have obtained a valid set of `client_id`, `client_secret`  
 To get one <a href="mailto:api@skroutz.gr">contact us</a>
 
-## Get an authorization code
+## Application Token
+With an application token you can only access resources not associated
+to a user. Have a look at related [permissions](<%= relative_path_to('/authentication/permissions') %>)
+
+[More info about client-credentials](http://tools.ietf.org/html/rfc6749#section-4.4)
+
+<pre class="terminal">
+POST https://www.skroutz.gr/oauth2/token
+</pre>
+
+Name            | Type     | Required | Description
+----------------| ---------|----------| -----------
+`client_id`     | `String` | yes      | `The client_id supplied by skroutz for the application`
+`client_secret` | `String` | yes      | `The client_secret supplied by skroutz for the application`
+`redirect_uri`  | `String` | yes      | `The redirect_uri set for the application`
+`grant_type`    | `String` | yes      | `client_credentials` 
+`scope`         | `String` | no        | `The space separated set of permissions your application wishes` 
+
+## User Token
+
+### Get an authorization code
+With a "user token" you can access resources associated to a user. Given that the user 
+permits you to.
+
+[More info about authorization code grant](http://tools.ietf.org/html/rfc6749#section-4.1)
 
 <pre class="terminal">
 GET https://www.skroutz.gr/oauth2/authorizations/new
@@ -22,7 +46,8 @@ Name            | Type     | Required | Description
 `response_type` | `String` | yes       | `The value should be "code"`
 `scope`         | `String` | no        | `The space separated set of permissions your application wishes` 
 
-If everything went OK, you are redirected to 
+If everything went OK and the user granted your the requested permissions declared in 
+the scope parameter, you are redirected to: 
 
 <pre class="terminal">
 http://redirect_uri?code=a_valid_authorization_code
@@ -37,7 +62,7 @@ http://redirect_uri?code=a_valid_authorization_code
 
 <a href="<%= relative_path_to('/authentication/permissions') %>">More info about permissions</a>
 
-## Get an oauth_token
+### Get an oauth_token
 
 <pre class="terminal">
 POST https://www.skroutz.gr/oauth2/token
