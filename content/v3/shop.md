@@ -35,3 +35,15 @@ Name | Type | Description
 </pre>
 
 <%= render_recording :shop_reviews %>
+
+## Search for shops
+
+<pre class="terminal">
+  GET /shops/search
+</pre>
+
+Name | Type | Description
+-----| -----| -----------
+`q` | `String` | `(required) Search with the value of this parameter
+
+<%= render_recording :shop_search %>
