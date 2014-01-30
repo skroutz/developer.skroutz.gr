@@ -8,10 +8,13 @@ Submissions are welcome.
 The following steps will get you started
 
 1. `git pull`                # make sure you get latest changes
-2. `bundle install`          # make sure dependencies are met
-3. `bundle exec guard`       # have changes autocompiled (leave it running)
-4. `bundle exec nanoc view`  # start a local webserver to view the compiled static files found in `./output`
-5. `bundle exec rake deploy` # deploy changes
+* `bundle install`          # make sure dependencies are met
+* `bundle exec guard`       # have changes autocompiled (leave it running)
+* `bundle exec nanoc view`  # start a local webserver to view the compiled static files found in `./output`
+* Submit pull request
+
+If you have deploy rights you may:
+* `bundle exec rake deploy` # deploy changes
 
 [nanoc]: http://nanoc.stoneship.org/
 
