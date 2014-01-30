@@ -40,6 +40,7 @@
   <li><a href="#list-skus-of-specific-category">List SKUS of specific category</a></li>
   <li><a href="#retrieve-a-single-sku">Retrieve a single SKU</a></li>
   <li><a href="#retrieve-a-skus-products">Retrieve a SKU’s products</a></li>
+  <li><a href="#retrieve-a-skus-reviews">Retrieve a SKU’s reviews</a></li>
   <li><a href="#filtering">Filtering</a></li>
   <li><a href="#meta">Meta</a></li>
 </ul><h2 id="about">About</h2>
@@ -319,6 +320,41 @@
       <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://www.z-mall.gr/ItemsContent/0012961/1260094/0012961_1260094_altex-ss2013_navy-ss2013_0_4.jpg"</span>
     <span class="p">}</span>
   <span class="p">]</span>
+<span class="p">}</span></code></pre>
+</div>
+</div>
+
+<h2 id="retrieve-a-skus-reviews">Retrieve a SKU’s reviews</h2>
+
+<pre class="terminal">
+  GET /skus/:id/reviews
+</pre>
+
+<div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/skus/355766/reviews</span>
+        </p>
+<a href="void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"reviews"</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">10875</span><span class="p">,</span>
+      <span class="s2">"user_id"</span><span class="o">:</span> <span class="mi">147596</span><span class="p">,</span>
+      <span class="s2">"review"</span><span class="o">:</span> <span class="s2">"Επιλέξτε το !  Τα τρόφιμα διατηρούνται χωρίς το παραμικρό πρόβλημα. Το νερό το κρυώνει, δεν το παγώνει, για να το πίνεις ευχάριστα. Μεγάλη ευκολία το δοχείο νερού 3,5 λίτρων ! (για να μην ανοίγεις συχνά την πόρτα). Ο καταψύκτης φοβερός. Τρως το παγωτό σου, όπως στο σερβίρουν στην αγορά (καφετέρια ή χωνάκι). Αθόρυβο. Το μόνο μή άριστο είναι η χωρητικότητά του. Με λίγα παραπάνω λίτρα θα ήταν τέλειο."</span><span class="p">,</span>
+      <span class="s2">"rating"</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+      <span class="s2">"created_at"</span><span class="o">:</span> <span class="s2">"2013-08-13T22:00:24+03:00"</span><span class="p">,</span>
+      <span class="s2">"collapsed"</span><span class="o">:</span> <span class="kc">false</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"pagination"</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">"total_results"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"total_pages"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"page"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"per"</span><span class="o">:</span> <span class="mi">25</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
 <span class="p">}</span></code></pre>
 </div>
 </div>

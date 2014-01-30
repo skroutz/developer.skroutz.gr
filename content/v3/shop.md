@@ -26,3 +26,12 @@ Name | Type | Description
 </pre>
 
 <%= render_recording :shops_show %>
+
+
+## Retrieve a shop's reviews
+
+<pre class="terminal">
+  GET /shops/:id/reviews
+</pre>
+
+<%= render_recording :shop_reviews %>
