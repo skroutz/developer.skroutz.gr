@@ -1,6 +1,6 @@
 $(function() {
   $('a[href*=#]').on('click', function(e) {
     e.preventDefault();
-    $(this.href.match(/(#.+)/)[0]).animatedScroll({ duration: 'normal' })
+    window.scrollTo(0, $(this.href.match(/(#.+)/)[0]).offset().top)
   });
 });
