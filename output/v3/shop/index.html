@@ -38,6 +38,7 @@
 <li><a href="#list-shops">List shops</a></li>
   <li><a href="#retrieve-a-single-shop">Retrieve a single shop</a></li>
   <li><a href="#retrieve-a-shops-reviews">Retrieve a shop’s reviews</a></li>
+  <li><a href="#search-for-shops">Search for shops</a></li>
 </ul><h2 id="list-shops">List shops</h2>
 
 <pre class="terminal">
@@ -148,6 +149,51 @@
       <span class="s2">"total_pages"</span><span class="o">:</span> <span class="mi">54</span><span class="p">,</span>
       <span class="s2">"page"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
       <span class="s2">"per"</span><span class="o">:</span> <span class="mi">3</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre>
+</div>
+</div>
+
+<h2 id="search-for-shops">Search for shops</h2>
+
+<pre class="terminal">
+  GET /shops/search
+</pre>
+
+<table>
+<thead><tr>
+<th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr></thead>
+<tbody><tr>
+<td><code>q</code></td>
+      <td><code>String</code></td>
+      <td>`(required) Search with the value of this parameter</td>
+    </tr></tbody>
+</table><div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/shops/search</span>
+        </p>
+<a href="void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"shops"</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">11</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Πλαίσιο"</span><span class="p">,</span>
+      <span class="s2">"phone"</span><span class="o">:</span> <span class="s2">"8001112345"</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/assets/merchants/el/no_logo.png"</span><span class="p">,</span>
+      <span class="s2">"thumbshot_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/assets/helmet/el/no_scr_image_medium.png"</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"pagination"</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">"total_results"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"total_pages"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"page"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"per"</span><span class="o">:</span> <span class="mi">25</span>
     <span class="p">}</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre>

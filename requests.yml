@@ -163,3 +163,9 @@ requests:
       path: '{{base_url}}/shops/3/reviews'
       params:
         per: 3
+  -
+    key: shop_search
+    request:
+      path: '{{base_url}}/shops/search'
+      params:
+        q: 'plaisio'
