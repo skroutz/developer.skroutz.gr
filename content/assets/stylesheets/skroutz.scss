@@ -242,13 +242,13 @@ nav {
     &.guides:before {
       width: 14px;
       height: 14px;
-      background: url("/assets/images/sprite.png") 0 0;
+      background: url("../../assets/images/sprite.png") 0 0;
     }
 
     &.manual:before {
       width: 16px;
       height: 13px;
-      background: url("/assets/images/sprite.png") -20px -1px;
+      background: url("../../assets/images/sprite.png") -20px -1px;
     }
   }
 
@@ -388,4 +388,23 @@ pre.terminal {
   display: block;
   margin: 0 auto;
 }
+
+/* Help */
+
+#help {
+  ol li {
+    margin-bottom: 20px;
+  }
+
+  .question {
+
+  }
+
+  .answer {
+    color: $grey-8;
+    padding-left: 22px;
+    font-size: 13px;
+  }
+}
+
 

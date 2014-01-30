@@ -174,11 +174,11 @@ nav {
     nav h2.guides:before {
       width: 14px;
       height: 14px;
-      background: url("/assets/images/sprite.png") 0 0; }
+      background: url("../../assets/images/sprite.png") 0 0; }
     nav h2.manual:before {
       width: 16px;
       height: 13px;
-      background: url("/assets/images/sprite.png") -20px -1px; }
+      background: url("../../assets/images/sprite.png") -20px -1px; }
   nav ul {
     box-shadow: 2px 2px 2px 0px #282828;
     -moz-box-shadow: 2px 2px 2px 0px #282828;
@@ -261,3 +261,11 @@ pre.terminal {
 .classroom {
   display: block;
   margin: 0 auto; }
+
+/* Help */
+#help ol li {
+  margin-bottom: 20px; }
+#help .answer {
+  color: #666666;
+  padding-left: 22px;
+  font-size: 13px; }
