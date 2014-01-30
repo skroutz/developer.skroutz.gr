@@ -50,7 +50,7 @@ A product/sku belongs to a leaf category.</p>
 <h2 id="list-all-categories">List all categories</h2>
 
 <pre class="terminal">
-  /categories
+  GET /categories
 </pre>
 
 <div class="example">        <p class="request">
@@ -104,7 +104,7 @@ A product/sku belongs to a leaf category.</p>
 <h2 id="list-top-level-categories">List top level categories</h2>
 
 <pre class="terminal">
-  /categories/top_level
+  GET /categories/top_level
 </pre>
 
 <div class="example">        <p class="request">
@@ -165,7 +165,7 @@ A product/sku belongs to a leaf category.</p>
 <h2 id="retrieve-a-single-category">Retrieve a single category</h2>
 
 <pre class="terminal">
-  /categories/:id
+  GET /categories/:id
 </pre>
 
 <div class="example">        <p class="request">
@@ -189,7 +189,7 @@ A product/sku belongs to a leaf category.</p>
 <h2 id="retrieve-the-parent-of-a-category">Retrieve the parent of a category</h2>
 
 <pre class="terminal">
-  /categories/:id/parent
+  GET /categories/:id/parent
 </pre>
 
 <div class="example">        <p class="request">
@@ -214,7 +214,7 @@ A product/sku belongs to a leaf category.</p>
 <h2 id="retrieve-the-root-category">Retrieve the root category</h2>
 
 <pre class="terminal">
-  /categories/root
+  GET /categories/root
 </pre>
 
 <div class="example">        <p class="request">
@@ -229,8 +229,7 @@ A product/sku belongs to a leaf category.</p>
     <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Skroutz"</span><span class="p">,</span>
     <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
     <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/categories/large/76.jpg"</span><span class="p">,</span>
-    <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-    <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">0</span>
+    <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">false</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre>
 </div>
@@ -239,7 +238,7 @@ A product/sku belongs to a leaf category.</p>
 <h2 id="list-the-children-categories-of-a-category">List the children categories of a category</h2>
 
 <pre class="terminal">
-  /categories/:id/children
+  GET /categories/:id/children
 </pre>
 
 <div class="example">        <p class="request">

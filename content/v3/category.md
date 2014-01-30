@@ -15,7 +15,7 @@ A product/sku belongs to a leaf category.
 ## List all categories
 
 <pre class="terminal">
-  /categories
+  GET /categories
 </pre>
 
 <%= render_recording :categories_index %>
@@ -23,7 +23,7 @@ A product/sku belongs to a leaf category.
 ## List top level categories
 
 <pre class="terminal">
-  /categories/top_level
+  GET /categories/top_level
 </pre>
 
 <%= render_recording :categories_top_level %>
@@ -31,7 +31,7 @@ A product/sku belongs to a leaf category.
 ## Retrieve a single category
 
 <pre class="terminal">
-  /categories/:id
+  GET /categories/:id
 </pre>
 
 <%= render_recording :categories_show %>
@@ -39,7 +39,7 @@ A product/sku belongs to a leaf category.
 ## Retrieve the parent of a category
 
 <pre class="terminal">
-  /categories/:id/parent
+  GET /categories/:id/parent
 </pre>
 
 <%= render_recording :category_parent %>
@@ -47,7 +47,7 @@ A product/sku belongs to a leaf category.
 ## Retrieve the root category
 
 <pre class="terminal">
-  /categories/root
+  GET /categories/root
 </pre>
 
 <%= render_recording :categories_root %>
@@ -55,7 +55,7 @@ A product/sku belongs to a leaf category.
 ## List the children categories of a category
 
 <pre class="terminal">
-  /categories/:id/children
+  GET /categories/:id/children
 </pre>
 
 <%= render_recording :children_api_category %>

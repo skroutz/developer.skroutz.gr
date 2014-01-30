@@ -10,7 +10,7 @@ title: Search | Skroutz API
 ## Search
 
 <pre class="terminal">
-  /search
+  GET /search
 </pre>
 
 Name | Type | Description
@@ -61,7 +61,7 @@ response have*
 ## Autocomplete
 
 <pre class="terminal">
-  /autocomplete
+  GET /autocomplete
 </pre>
 
 Name | Type | Description

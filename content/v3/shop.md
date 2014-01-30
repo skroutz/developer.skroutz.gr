@@ -10,7 +10,7 @@ title: Shops | Skroutz API
 ## List shops
 
 <pre class="terminal">
-  /shops
+  GET /shops
 </pre>
 
 Name | Type | Description
@@ -22,7 +22,7 @@ Name | Type | Description
 ## Retrieve a single shop
 
 <pre class="terminal">
-  /shops/:id
+  GET /shops/:id
 </pre>
 
 <%= render_recording :shops_show %>

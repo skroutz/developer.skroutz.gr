@@ -10,7 +10,7 @@ title: Manufacturers | Skroutz API
 ## List manufacturers
 
 <pre class="terminal">
-  /manufacturers
+  GET /manufacturers
 </pre>
 
 <%= render_recording :manufacturers_index %>
@@ -18,7 +18,7 @@ title: Manufacturers | Skroutz API
 ## Retrieve a single manufacturer
 
 <pre class="terminal">
-  /manufacturers/:id
+  GET /manufacturers/:id
 </pre>
 
 <%= render_recording :manufacturers_show %>

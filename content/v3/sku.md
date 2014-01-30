@@ -15,15 +15,23 @@ A SKU (Stock Keeping Unit) is an aggregation of products.
 ## List SKUs
 
 <pre class="terminal">
-  /skus
+  GET /skus
 </pre>
 
 <%= render_recording :skus_index %>
 
+## List SKUS of specific category
+
+<pre class="terminal">
+  GET /categories/:category_id/skus
+</pre>
+
+<%= render_recording :category_skus %>
+
 ## Retrieve a single SKU
 
 <pre class="terminal">
-  /skus/:id
+  GET /skus/:id
 </pre>
 
 <%= render_recording :skus_show %>
@@ -31,7 +39,7 @@ A SKU (Stock Keeping Unit) is an aggregation of products.
 ## Retrieve a SKU's products
 
 <pre class="terminal">
-  /skus/:id/products
+  GET /skus/:id/products
 </pre>
 
 <%= render_recording :skus_products %>
@@ -42,7 +50,8 @@ You have to specify a category in order to perform filtering.
 You may supply the optional parameter `include_meta[]=available_filters`
 to get meta information about the filters that can be applied.
 
-### Include available filters
+## Meta
+You may choose to include extra meta information using the following parameters:
 
 Name | Type | Description
 -----| -----| -----------
@@ -53,12 +62,6 @@ As you can see above the available_filters object contains two objects
 (filters, manufacturers) each of which has as keys the ids of the
 entities that can be applied and as values the number of skus that match
 the filter/manufacturer.
-
-### By category
-
-<pre class="terminal">
-  /categories/:category_id/skus
-</pre>
 
 ### By manufacturers
 

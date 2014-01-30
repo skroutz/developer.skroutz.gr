@@ -10,7 +10,7 @@ title: Product | Skroutz API
 ## List products
 
 <pre class="terminal">
-  /products
+  GET /products
 </pre>
 
 <%= render_recording :products_index %>
@@ -18,7 +18,7 @@ title: Product | Skroutz API
 ## Retrieve a single product
 
 <pre class="terminal">
-  /products/:id
+  GET /products/:id
 </pre>
 
 <%= render_recording :products_show %>
