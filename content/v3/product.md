@@ -7,14 +7,6 @@ title: Product | Skroutz API
 * TOC
 {:toc}
 
-## List products
-
-<pre class="terminal">
-  GET /products
-</pre>
-
-<%= render_recording :products_index %>
-
 ## Retrieve a single product
 
 <pre class="terminal">

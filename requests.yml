@@ -101,9 +101,6 @@ requests:
     key: skus_products
     request: 'GET {{base_url}}/skus/3703742/products'
   -
-    key: products_index
-    request: 'GET {{base_url}}/products?page=1&per=2'
-  -
     key: products_show
     request: 'GET {{base_url}}/products/13313788'
   -
