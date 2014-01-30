@@ -44,6 +44,14 @@ A SKU (Stock Keeping Unit) is an aggregation of products.
 
 <%= render_recording :skus_products %>
 
+## Retrieve a SKU's reviews
+
+<pre class="terminal">
+  GET /skus/:id/reviews
+</pre>
+
+<%= render_recording :sku_reviews %>
+
 ## Filtering
 
 You have to specify a category in order to perform filtering.  

@@ -37,6 +37,7 @@
 <ul id="markdown-toc">
 <li><a href="#list-shops">List shops</a></li>
   <li><a href="#retrieve-a-single-shop">Retrieve a single shop</a></li>
+  <li><a href="#retrieve-a-shops-reviews">Retrieve a shop’s reviews</a></li>
 </ul><h2 id="list-shops">List shops</h2>
 
 <pre class="terminal">
@@ -100,6 +101,54 @@
     <span class="s2">"phone"</span><span class="o">:</span> <span class="s2">"2115000500"</span><span class="p">,</span>
     <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/assets/merchants/el/no_logo.png"</span><span class="p">,</span>
     <span class="s2">"thumbshot_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/assets/helmet/el/no_scr_image_medium.png"</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre>
+</div>
+</div>
+
+<h2 id="retrieve-a-shops-reviews">Retrieve a shop’s reviews</h2>
+
+<pre class="terminal">
+  GET /shops/:id/reviews
+</pre>
+
+<div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/shops/3/reviews</span>
+        </p>
+<a href="void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"reviews"</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">3984</span><span class="p">,</span>
+      <span class="s2">"user_id"</span><span class="o">:</span> <span class="mi">66430</span><span class="p">,</span>
+      <span class="s2">"review"</span><span class="o">:</span> <span class="s2">"Είχα παραγγείλει κάποιες ταινίες σε DVD και BLUERAY κι ένα pc game. To game δεν το είχαν τελικά αλλά με πήραν τηλέφωνο αμέσως για να μου το πουν καθώς και για να με ρωτήσουν αν τελικά θέλω να παραλάβω τα υπόλοιπα πράγματα που είχα παραγγείλει. Δέχτηκα φυσικά και την επόμενη μέρα παρέλαβα την παραγγελεία μου. Έχω μείνει απόλυτα ευχαριστημένος. "</span><span class="p">,</span>
+      <span class="s2">"rating"</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+      <span class="s2">"created_at"</span><span class="o">:</span> <span class="s2">"2010-12-28T02:31:12+02:00"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">3940</span><span class="p">,</span>
+      <span class="s2">"user_id"</span><span class="o">:</span> <span class="mi">66396</span><span class="p">,</span>
+      <span class="s2">"review"</span><span class="o">:</span> <span class="s2">"Η τελευταία παραλαβή μου ηταν χθες το βράδι απο το κατάστημα Ζωγράφου και η ωρα που ήταν 9 το βράδι και χωρίς κανένα πρόβλημα.Η μιτρική που πήρα ASUS M4A88T-V EVO μετά κατάλαβα στο σπίτι ότι το κουτί ήταν ανοιχτό,μάλλον το είχαν τσεκάρει αν είναι όλλα μεσα ή κατι άλλο το οποίο όμως δεν έχει πρόβλημα,επειδή είδα όλλα ήταν μέσα.Είναι πρώτη φορά που γράφω εδώ στο σκρούτζ για το πολύ καλό e-shop τουλάχιστον μέχρι τώρα δεν είχα κανένα πρόβλημα με το αυτό το μαγαζί.Για'μένα το e-shop είναι μια καλή και άριστη επιλογή σε κάποια προιόντα.Για αύριο περιμένω άλλες τέσσερις συσκεύες και πιστεύω να μην έχουν κανένα πρόβλημα όπως μέχρι τώρα."</span><span class="p">,</span>
+      <span class="s2">"rating"</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+      <span class="s2">"created_at"</span><span class="o">:</span> <span class="s2">"2010-12-23T00:14:31+02:00"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">3692</span><span class="p">,</span>
+      <span class="s2">"user_id"</span><span class="o">:</span> <span class="mi">64228</span><span class="p">,</span>
+      <span class="s2">"review"</span><span class="o">:</span> <span class="s2">"Θέλοντας να αποκτήσω την τηλεόραση SAMSUNG UE 40C6000 έκανα έρευνα αγοράς μέσω INTERNET και κατέληξα  στο κατ/μα του e-shop βασικά λόγω τιμής αλλά και λόγω ονόματος. Να σημειωθεί οτι στο κάτω μέρος της καταχώρισης, όταν έκανα την έρευνα, υπήρχε η ένδειξη οτι αναμένεται νέα παραλαβή  η 23η Οκτωβρίου, η οποία κάθε εβδομάδα ανανεώνονταν. Παρ όλα αυτά την 2.11.2010 παρήγγειλα το συγκεκριμένο προϊόν (κωδ. παραγγελίας 101025202140178128243205) με ενδεχόμενη ημερομηνία νέας παραλαβής 7.11.2010. Δυστυχώς η ημερομηνία αυτή άλλαζε κάθε εβδομάδα. Ακόμη και σήμερα εμφανίζεται ως ημερομηνία παραλαβής η 6η Δεκεμβρίου 2010. Ετσι αναγκάστηκα να ακυρώσω την παραγγελία θεωρώντας οτι το συγκεκριμένο κατάστημα μας εμπαίζει και να στραφώ στην αγορά του συγκεκριμένου προϊόντος και μάλιστα με ευνοϊκότερους όρους από άλλο ιντερνετικό κατάστημα. "</span><span class="p">,</span>
+      <span class="s2">"rating"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"created_at"</span><span class="o">:</span> <span class="s2">"2010-11-30T20:31:21+02:00"</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"pagination"</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">"total_results"</span><span class="o">:</span> <span class="mi">162</span><span class="p">,</span>
+      <span class="s2">"total_pages"</span><span class="o">:</span> <span class="mi">54</span><span class="p">,</span>
+      <span class="s2">"page"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"per"</span><span class="o">:</span> <span class="mi">3</span>
+    <span class="p">}</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre>
 </div>

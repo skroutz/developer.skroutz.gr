@@ -153,3 +153,13 @@ requests:
     key: notifications_show
     request:
       path: '{{base_url}}/notifications/3642082'
+  -
+    key: sku_reviews
+    request:
+      path: '{{base_url}}/skus/355766/reviews'
+  -
+    key: shop_reviews
+    request:
+      path: '{{base_url}}/shops/3/reviews'
+      params:
+        per: 3
