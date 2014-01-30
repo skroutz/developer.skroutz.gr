@@ -44,6 +44,6 @@ Name | Type | Description
 
 Name | Type | Description
 -----| -----| -----------
-`q` | `String` | `(required) Search with the value of this parameter
+`q` | `String` | `(required) Search with the value of this parameter`
 
 <%= render_recording :shop_search %>
