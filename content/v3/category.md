@@ -20,14 +20,6 @@ A product/sku belongs to a leaf category.
 
 <%= render_recording :categories_index %>
 
-## List top level categories
-
-<pre class="terminal">
-  GET /categories/top_level
-</pre>
-
-<%= render_recording :categories_top_level %>
-
 ## Retrieve a single category
 
 <pre class="terminal">
