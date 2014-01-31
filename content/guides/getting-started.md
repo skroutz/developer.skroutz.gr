@@ -4,7 +4,7 @@ title: Getting Started | Skroutz API
 
 # Getting Started
 
-Follow the steps below to build your first succesful application using 
+Follow the steps below to build your first succesful application using
 Skroutz API.
 
 ## Authenticate
@@ -25,9 +25,9 @@ href="https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpji
   <li><a href="https://github.com/Zorbash/response_mate">response_mate</a></li>
 </ul>
 
-## Your first request
+## Your First Request
 
-Supposing that you have successfuly obtained a valid access token you can use it to perform requests.  
+Supposing that you have successfuly obtained a valid access token you can use it to perform requests.
 As mentioned in [authentication](../authentication) there are 2 ways to specify your access token.
 
 ### Via the oauth_token parameter
@@ -49,7 +49,7 @@ Authorization: Bearer your_token
 
 ### Point to the right version
 There are 2 version of the Skroutz API:
-[v2](http://docs.skroutz.gr/apiv2/) and [v3](<%= relative_path_to('/v3') %>).  
+[v2](http://docs.skroutz.gr/apiv2/) and [v3](<%= relative_path_to('/v3') %>).
 [v2](http://docs.skroutz.gr/apiv2/) is to be deprecated at 2014-01-01.
 
 To use v3 you have to explicitly request the API v3 media type in the

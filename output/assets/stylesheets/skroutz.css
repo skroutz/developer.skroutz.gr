@@ -12,9 +12,10 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal; }
 
 a {
-  color: #f68b24; }
+  color: #f68b24;
+  text-decoration: none; }
   a:hover {
-    text-decoration: none; }
+    text-decoration: underline; }
 
 .content {
   max-width: 1180px;
@@ -127,6 +128,47 @@ header {
     padding-bottom: 8px;
     border-bottom: 1px solid #cdcdcd;
     margin: 40px 0; }
+  #right_container h3 {
+    font-size: 16px;
+    margin: 20px 0;
+    color: #282828;
+    position: relative;
+    padding-left: 20px; }
+    #right_container h3:before {
+      content: "\1405";
+      position: absolute;
+      top: 1px;
+      left: 0;
+      font-size: 14px;
+      color: #666666; }
+  #right_container ul {
+    list-style-position: inside;
+    font-size: 14px;
+    margin-top: 10px; }
+    #right_container ul li {
+      margin-bottom: 3px; }
+  #right_container table {
+    font-size: 13px;
+    width: 100%;
+    margin: 20px auto;
+    background: #fff;
+    -moz-box-shadow: 1px 1px 3px #ebebec, -1px -1px 3px #ebebec;
+    -webkit-box-shadow: 1px 1px 3px #ebebec, -1px -1px 3px #ebebec;
+    -o-box-shadow: 1px 1px 3px #ebebec, -1px -1px 3px #ebebec;
+    box-shadow: 1px 1px 3px #ebebec, -1px -1px 3px #ebebec; }
+    #right_container table thead {
+      background: #fbfbfb; }
+    #right_container table tr td,
+    #right_container table tr th {
+      border: 1px solid #dbdbdb;
+      padding: 8px 15px; }
+    #right_container table tr th {
+      font-size: 15px;
+      padding: 15px; }
+    #right_container table code {
+      font-size: 13px; }
+  #right_container code {
+    font: 14px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace; }
 
 /* Sidebar */
 nav {

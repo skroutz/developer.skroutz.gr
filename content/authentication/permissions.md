@@ -33,7 +33,7 @@ A representations of the permissions granted to your app by Skroutz and a User.
   </tbody>
 </table>
 
-For more info about permission types check 
+For more info about permission types check
 [authentication flows](<%= relative_path_to('/authentication/flows') %>).
 
 ## Public Resources
@@ -52,8 +52,8 @@ Having obtained the public permission you can access the following resources:
 ## User Resources
 These permissions require that you have explicitly requested them using
 the scope param [see here](<%= relative_path_to('/guides/authentication') %>)
-The user will have to consent to grant any of those permissions.  
-You __must__ not share these data to 3rd parties. 
+The user will have to consent to grant any of those permissions.
+You __must not__ share these data to 3rd parties.
 
 <ul class="private-resources">
   <li><a href="<%= relative_path_to('/v3/favorites/') %>">Favorites</a></li>

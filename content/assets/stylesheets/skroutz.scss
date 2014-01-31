@@ -17,9 +17,10 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
   color: $orange-1;
+  text-decoration: none;
 
   &:hover {
-    text-decoration: none;
+    text-decoration: underline;
   }
 }
 
@@ -154,7 +155,6 @@ header {
   }
 }
 
-
 /* General styles */
 
 #right_container {
@@ -178,6 +178,70 @@ header {
     padding-bottom: 8px;
     border-bottom: 1px solid #cdcdcd;
     margin: 40px 0;
+  }
+
+  h3 {
+    font-size: 16px;
+    margin: 20px 0;
+    color: $black;
+    position: relative;
+    padding-left: 20px;
+
+
+    &:before {
+      content: "\1405";
+      position: absolute;
+      top: 1px;
+      left: 0;
+      font-size: 14px;
+      color: $grey-8;
+    }
+  }
+
+  ul {
+    list-style-position: inside;
+    font-size: 14px;
+    margin-top: 10px;
+
+    li {
+      margin-bottom: 3px;
+    }
+  }
+
+  table {
+    font-size: 13px;
+    width: 100%;
+    margin: 20px auto;
+    background: #fff;
+    -moz-box-shadow: 1px 1px 3px #ebebec, -1px -1px 3px #ebebec;
+    -webkit-box-shadow: 1px 1px 3px #ebebec, -1px -1px 3px #ebebec;
+    -o-box-shadow: 1px 1px 3px #ebebec, -1px -1px 3px #ebebec;
+    box-shadow: 1px 1px 3px #ebebec, -1px -1px 3px #ebebec;
+
+    thead {
+      background: #fbfbfb;
+    }
+
+    tr {
+      td,
+      th {
+        border: 1px solid #dbdbdb;
+        padding: 8px 15px;
+      }
+
+      th {
+        font-size: 15px;
+        padding: 15px;
+      }
+    }
+
+    code {
+      font-size: 13px;
+    }
+  }
+
+  code {
+    font: 14px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
   }
 }
 

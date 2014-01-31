@@ -37,7 +37,7 @@
 
 <p>We use <a href="http://oauth.net/2/">OAuth2.0</a> for authorization.</p>
 
-<p>Make sure you have obtained a valid set of <code>client_id</code>, <code>client_secret</code><br>
+<p>Make sure you have obtained a valid set of <code>client_id</code>, <code>client_secret</code>
 To get one <a href="mailto:api@skroutz.gr">contact us</a></p>
 
 <h2 id="application-token">Application Token</h2>
@@ -60,39 +60,39 @@ POST https://www.skroutz.gr/oauth2/token
 <tbody>
 <tr>
 <td><code>client_id</code></td>
-      <td><code>String</code></td>
+      <td>String</td>
       <td>yes</td>
-      <td><code>The client_id supplied by skroutz for the application</code></td>
+      <td>The client_id supplied by skroutz for the application</td>
     </tr>
 <tr>
 <td><code>client_secret</code></td>
-      <td><code>String</code></td>
+      <td>String</td>
       <td>yes</td>
-      <td><code>The client_secret supplied by skroutz for the application</code></td>
+      <td>The client_secret supplied by skroutz for the application</td>
     </tr>
 <tr>
 <td><code>redirect_uri</code></td>
-      <td><code>String</code></td>
+      <td>String</td>
       <td>yes</td>
-      <td><code>The redirect_uri set for the application</code></td>
+      <td>The redirect_uri set for the application</td>
     </tr>
 <tr>
 <td><code>grant_type</code></td>
-      <td><code>String</code></td>
+      <td>String</td>
       <td>yes</td>
-      <td><code>client_credentials</code></td>
+      <td>client_credentials</td>
     </tr>
 <tr>
 <td><code>scope</code></td>
-      <td><code>String</code></td>
+      <td>String</td>
       <td>no</td>
-      <td><code>The space separated set of permissions your application wishes</code></td>
+      <td>The space separated set of permissions your application wishes</td>
     </tr>
 </tbody>
 </table><h2 id="user-token">User Token</h2>
 
 <h3 id="get-an-authorization-code">Get an authorization code</h3>
-<p>With a “user token” you can access resources associated to a user. Given that the user 
+<p>With a “user token” you can access resources associated to a user. Given that the user
 permits you to.</p>
 
 <p><a href="http://tools.ietf.org/html/rfc6749#section-4.1">More info about authorization code grant</a></p>
@@ -111,31 +111,31 @@ GET https://www.skroutz.gr/oauth2/authorizations/new
 <tbody>
 <tr>
 <td><code>client_id</code></td>
-      <td><code>String</code></td>
+      <td>String</td>
       <td>yes</td>
-      <td><code>The client_id supplied by skroutz for the application</code></td>
+      <td>The client_id supplied by skroutz for the application</td>
     </tr>
 <tr>
 <td><code>redirect_uri</code></td>
-      <td><code>String</code></td>
+      <td>String</td>
       <td>yes</td>
-      <td><code>The redirect_uri set for the application</code></td>
+      <td>The redirect_uri set for the application</td>
     </tr>
 <tr>
 <td><code>response_type</code></td>
-      <td><code>String</code></td>
+      <td>String</td>
       <td>yes</td>
-      <td><code>The value should be "code"</code></td>
+      <td>The value should be “code”</td>
     </tr>
 <tr>
 <td><code>scope</code></td>
-      <td><code>String</code></td>
+      <td>String</td>
       <td>no</td>
-      <td><code>The space separated set of permissions your application wishes</code></td>
+      <td>The space separated set of permissions your application wishes</td>
     </tr>
 </tbody>
-</table><p>If everything went OK and the user granted your the requested permissions declared in 
-the scope parameter, you are redirected to: </p>
+</table><p>If everything went OK and the user granted your the requested permissions declared in
+the scope parameter, you are redirected to:</p>
 
 <pre class="terminal">
 http://redirect_uri?code=a_valid_authorization_code
@@ -164,39 +164,39 @@ POST https://www.skroutz.gr/oauth2/token
 <tbody>
 <tr>
 <td><code>client_id</code></td>
-      <td><code>String</code></td>
+      <td>String</td>
       <td>yes</td>
-      <td><code>The client_id supplied by skroutz for the application</code></td>
+      <td>The client_id supplied by skroutz for the application</td>
     </tr>
 <tr>
 <td><code>client_secret</code></td>
-      <td><code>String</code></td>
+      <td>String</td>
       <td>yes</td>
-      <td><code>The client_secret supplied by skroutz for the application</code></td>
+      <td>The client_secret supplied by skroutz for the application</td>
     </tr>
 <tr>
 <td><code>redirect_uri</code></td>
-      <td><code>String</code></td>
+      <td>String</td>
       <td>yes</td>
-      <td><code>The redirect_uri set for the application</code></td>
+      <td>The redirect_uri set for the application</td>
     </tr>
 <tr>
 <td><code>response_type</code></td>
-      <td><code>String</code></td>
+      <td>String</td>
       <td>yes</td>
-      <td><code>The value should be "code"</code></td>
+      <td>The value should be “code”</td>
     </tr>
 <tr>
 <td><code>grant_type</code></td>
-      <td><code>String</code></td>
+      <td>String</td>
       <td>yes</td>
-      <td><code>authorization_code</code></td>
+      <td>authorization_code</td>
     </tr>
 <tr>
 <td><code>code</code></td>
-      <td><code>String</code></td>
+      <td>String</td>
       <td>yes</td>
-      <td><code>authorization code obtained</code></td>
+      <td>authorization code obtained</td>
     </tr>
 </tbody>
 </table><p>If everything went OK, the response has the following form:</p>
