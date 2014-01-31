@@ -167,6 +167,8 @@ header {
     margin-left: 300px;
   }
 
+  // HEADINGS
+
   h1 {
     font-size: 24px;
     margin-bottom: 40px;
@@ -198,6 +200,8 @@ header {
     }
   }
 
+  // LISTS
+
   ul {
     list-style-position: inside;
     font-size: 14px;
@@ -207,6 +211,8 @@ header {
       margin-bottom: 3px;
     }
   }
+
+  // TABLE
 
   table {
     font-size: 13px;
@@ -240,8 +246,88 @@ header {
     }
   }
 
+  // CODE
+
   code {
     font: 14px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+  }
+
+  .example {
+    position: relative;
+    border: 1px solid #dbdbdb;
+    background: #fff;
+    overflow: hidden;
+
+    .request {
+      border-radius: 3px;
+      border-bottom: 1px dotted #dbdbdb;
+      overflow: hidden;
+
+      .verb {
+        width: 10%;
+        float: left;
+        padding: 15px 30px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        border-right: 1px dotted #dbdbdb;
+      }
+
+      .path {
+        float: left;
+        width: 90%;
+        padding: 15px 30px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+    }
+
+    .toggler {
+      float: right;
+      font-size: 13px;
+      background: #f68b24;
+      color: #fff;
+      padding: 8px 10px;
+      margin: 10px 15px;
+      border-radius: 3px;
+
+      &:hover {
+        background: #d8731c;
+        text-decoration: none;
+      }
+
+      &.hide {
+        display: none;
+      }
+    }
+
+    pre.headers code {
+      font-family: 'verdana', sans-serif;
+      color: #707070;
+    }
+
+    .response {
+      display: none;
+      padding-top: 55px;
+    }
+
+    &.active {
+      .response {
+        display: block;
+      }
+
+      .toggler {
+
+        &.hide {
+          display: block;
+        }
+
+        &.show {
+          display: none;
+        }
+      }
+    }
   }
 }
 
@@ -443,6 +529,7 @@ pre.terminal {
   color: $white;
   font-size: 13px;
   line-height: 1.7;
+  margin-bottom: 30px;
 }
 
 

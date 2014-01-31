@@ -708,20 +708,9 @@ p code {
 code {white-space: nowrap;}
 
 pre {
-  border: 1px solid #cacaca;
   line-height: 1.2em;
   font: 12px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
   padding: 10px;
-  overflow:auto;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  background-color: #FAFAFB;
-  color: #393939;
-  margin: 2em 0;
 }
 
 ul + pre {
@@ -731,24 +720,6 @@ ul + pre {
 pre code {white-space: pre;}
 
 pre span.comment {color: #aaa;}
-
-pre.headers {
-  margin-bottom: 0;
-  border-bottom-width: 0;
-  -webkit-border-radius: 3px 3px 0 0;
-  -moz-border-radius: 3px 3px 0 0;
-  border-radius: 3px 3px 0 0;
-  color: #666;
-  background-color: #f1f1f1;
-  background-image: -moz-linear-gradient(top, #f1f1f1, #e1e1e1);
-  background-image: -ms-linear-gradient(top, #f1f1f1, #e1e1e1);
-  background-image: -o-linear-gradient(top, #f1f1f1, #e1e1e1);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f1f1f1), to(#e1e1e1));
-  background-image: -webkit-linear-gradient(top, #f1f1f1, #e1e1e1);
-  background-image: linear-gradient(top, #f1f1f1, #e1e1e1);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#f1f1f1', EndColorStr='#e1e1e1');
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
-}
 
 pre.no-response {
   -webkit-border-radius: 3px 3px;

@@ -169,6 +169,55 @@ header {
       font-size: 13px; }
   #right_container code {
     font: 14px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace; }
+  #right_container .example {
+    position: relative;
+    border: 1px solid #dbdbdb;
+    background: #fff;
+    overflow: hidden; }
+    #right_container .example .request {
+      border-radius: 3px;
+      border-bottom: 1px dotted #dbdbdb;
+      overflow: hidden; }
+      #right_container .example .request .verb {
+        width: 10%;
+        float: left;
+        padding: 15px 30px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        border-right: 1px dotted #dbdbdb; }
+      #right_container .example .request .path {
+        float: left;
+        width: 90%;
+        padding: 15px 30px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box; }
+    #right_container .example .toggler {
+      float: right;
+      font-size: 13px;
+      background: #f68b24;
+      color: #fff;
+      padding: 8px 10px;
+      margin: 10px 15px;
+      border-radius: 3px; }
+      #right_container .example .toggler:hover {
+        background: #d8731c;
+        text-decoration: none; }
+      #right_container .example .toggler.hide {
+        display: none; }
+    #right_container .example pre.headers code {
+      font-family: 'verdana', sans-serif;
+      color: #707070; }
+    #right_container .example .response {
+      display: none;
+      padding-top: 55px; }
+    #right_container .example.active .response {
+      display: block; }
+    #right_container .example.active .toggler.hide {
+      display: block; }
+    #right_container .example.active .toggler.show {
+      display: none; }
 
 /* Sidebar */
 nav {
@@ -297,7 +346,8 @@ pre.terminal {
   background: #363636;
   color: white;
   font-size: 13px;
-  line-height: 1.7; }
+  line-height: 1.7;
+  margin-bottom: 30px; }
 
 /* Guides */
 .classroom {
