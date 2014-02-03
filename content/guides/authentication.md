@@ -33,7 +33,8 @@ Name            | Type     | Required | Description
 With a "user token" you can access resources associated to a user. Given that the user
 permits you to.
 
-[More info about authorization code grant](http://tools.ietf.org/html/rfc6749#section-4.1)
+<a href="http://tools.ietf.org/html/rfc6749#section-4.1" target="_blank" 
+   class="external">More info about authorization code grant</a>
 
 <pre class="terminal">
 GET https://www.skroutz.gr/oauth2/authorizations/new
@@ -63,6 +64,7 @@ http://redirect_uri?code=a_valid_authorization_code
 <a href="<%= relative_path_to('/authentication/permissions') %>">More info about permissions</a>
 
 ### Get an oauth_token
+
 
 <pre class="terminal">
 POST https://www.skroutz.gr/oauth2/token
