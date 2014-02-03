@@ -7,13 +7,13 @@ title: Authentication | Skroutz API
 We use [OAuth2.0](http://oauth.net/2/) for authorization.
 
 Make sure you have obtained a valid set of `client_id`, `client_secret`
-To get one <a href="mailto:api@skroutz.gr">contact us</a>
+To get one <a href="mailto:api@skroutz.gr">contact us</a>.
 
 ## Application Token
 With an application token you can only access resources not associated
-to a user. Have a look at related [permissions](<%= relative_path_to('/authentication/permissions') %>)
+to a user. Have a look at related [permissions](<%= relative_path_to('/authentication/permissions') %>).
 
-[More info about client-credentials](http://tools.ietf.org/html/rfc6749#section-4.4)
+<a href="http://tools.ietf.org/html/rfc6749#section-4.4" class="emph-link" target="_blank">More info about client-credentials</a>
 
 <pre class="terminal">
 POST https://www.skroutz.gr/oauth2/token
@@ -33,8 +33,7 @@ Name            | Type     | Required | Description
 With a "user token" you can access resources associated to a user. Given that the user
 permits you to.
 
-<a href="http://tools.ietf.org/html/rfc6749#section-4.1" target="_blank" 
-   class="external">More info about authorization code grant</a>
+<a href="http://tools.ietf.org/html/rfc6749#section-4.1" class="emph-link" target="_blank">More info about authorization code grant</a>
 
 <pre class="terminal">
 GET https://www.skroutz.gr/oauth2/authorizations/new
@@ -61,7 +60,9 @@ http://redirect_uri?code=a_valid_authorization_code
   <li>notifications</li>
 </ul>
 
-<a href="<%= relative_path_to('/authentication/permissions') %>">More info about permissions</a>
+<a href="<%= relative_path_to('/authentication/permissions') %>" class="emph-link" target="_blank">More info about permissions</a>
+
+
 
 ### Get an oauth_token
 

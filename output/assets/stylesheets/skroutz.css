@@ -141,6 +141,14 @@ header {
       left: 0;
       font-size: 14px;
       color: #666666; }
+  #right_container .emph-link {
+    display: inline-block;
+    color: #282828;
+    margin: 15px 0 0;
+    border-bottom: 1px dotted #666; }
+    #right_container .emph-link:hover {
+      text-decoration: none;
+      border-bottom-style: solid; }
   #right_container ul {
     list-style-position: inside;
     font-size: 14px;
@@ -206,11 +214,16 @@ header {
         text-decoration: none; }
       #right_container .example .toggler.hide {
         display: none; }
-    #right_container .example pre.headers code {
-      font-family: 'verdana', sans-serif;
-      color: #707070; }
+    #right_container .example pre.headers {
+      padding: 0;
+      background: #f9f9f9;
+      padding: 10px 20px;
+      border-top: 1px solid #f0f0f0;
+      border-bottom: 1px solid #f0f0f0; }
+      #right_container .example pre.headers code {
+        font-family: 'verdana', sans-serif;
+        color: #363636; }
     #right_container .example .response {
-      display: none;
       padding-top: 55px; }
     #right_container .example.active .response {
       display: block; }
@@ -347,7 +360,7 @@ pre.terminal {
   color: white;
   font-size: 13px;
   line-height: 1.7;
-  margin-bottom: 30px; }
+  margin: 30px 0; }
 
 /* Guides */
 .classroom {

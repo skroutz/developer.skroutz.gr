@@ -200,6 +200,20 @@ header {
     }
   }
 
+  // EMPHASIZED LINK
+
+  .emph-link {
+    display: inline-block;
+    color: #282828;
+    margin: 15px 0 0;
+    border-bottom: 1px dotted #666;
+
+    &:hover {
+      text-decoration: none;
+      border-bottom-style: solid;
+    }
+  }
+
   // LISTS
 
   ul {
@@ -302,13 +316,21 @@ header {
       }
     }
 
-    pre.headers code {
-      font-family: 'verdana', sans-serif;
-      color: #707070;
+    pre.headers {
+      padding: 0;
+      background: #f9f9f9;
+      padding: 10px 20px;
+      border-top: 1px solid #f0f0f0;
+      border-bottom: 1px solid #f0f0f0;
+
+      code {
+        font-family: 'verdana', sans-serif;
+        color: #363636;
+      }
     }
 
     .response {
-      display: none;
+
       padding-top: 55px;
     }
 
@@ -529,7 +551,7 @@ pre.terminal {
   color: $white;
   font-size: 13px;
   line-height: 1.7;
-  margin-bottom: 30px;
+  margin: 30px 0;
 }
 
 
