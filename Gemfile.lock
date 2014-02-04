@@ -81,7 +81,7 @@ GEM
       highline
       mustache
       thor (~> 0.18.1)
-    response_mate-nanoc (0.0.5)
+    response_mate-nanoc (0.0.6)
       activesupport
       response_mate (~> 0.1.6)
     sass (3.2.13)
