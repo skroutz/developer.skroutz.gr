@@ -224,6 +224,7 @@ header {
         font-family: 'verdana', sans-serif;
         color: #363636; }
     #right_container .example .response {
+      display: none;
       padding-top: 55px; }
     #right_container .example.active .response {
       display: block; }
