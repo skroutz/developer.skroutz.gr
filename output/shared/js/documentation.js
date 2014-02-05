@@ -1,4 +1,6 @@
 $(function() {
+
+  // Handle links to headers
   $('a[href*=#]').on('click', function(e) {
     if ($(e.target).hasClass('external')) {
       return;
@@ -9,6 +11,7 @@ $(function() {
     window.scrollTo(0, $(this.href.match(/(#.+)/)[0]).offset().top)
   });
 
+  // Make responses toggleable
   $('.toggler').on('click', function(e) {
     var $el = $(e.currentTarget),
         $target = $el.siblings('.response').toggle();
@@ -20,4 +23,10 @@ $(function() {
       $el.data('open', true);
     }
   });
+
+  // Highlight active sidebar item
+  $('#js-sidebar')
+    .find('a[href="./"]')
+    .add('a[href="."]')
+      .addClass('active')
 });

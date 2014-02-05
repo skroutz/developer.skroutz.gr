@@ -265,6 +265,9 @@ nav {
       background: #3d3d3d; }
       nav > h3 a:hover {
         color: #fbfbfb; }
+      nav > h3 a.active {
+        background: inherit;
+        color: #f68b24; }
   nav h2 {
     position: relative;
     padding-left: 30px;
@@ -298,6 +301,9 @@ nav {
     nav ul li a {
       background: #3d3d3d;
       color: #dbdbdb; }
+      nav ul li a.active {
+        background: inherit;
+        color: #f68b24; }
     nav ul li:first-child h3 a {
       border-radius: 3px 3px 0 0; }
     nav ul li:last-child h3 a {
