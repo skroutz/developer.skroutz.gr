@@ -5,26 +5,102 @@
   :params:
     page: '1'
     per: '3'
-    oauth_token: Vr/AzbfQt3ywQlKUonZk25VqRg2ILFAFV/voi69FD9xlJl5Yp9DmDWb6PAEsVwuI1KckH3aa1/vxRaj/Mbwg==
 :status: 200
 :headers:
-  link: <http://localhost:3000/api/skus?oauth_token=Vr%2FAzbfQt3ywQlKUonZk25VqRg2ILFAFV%2Fvoi69FD9xlJl5Yp9DmDWb6PAEsVwuI1KckH3aa1%2FvxRaj%2FMbwg%3D%3D&page=474564&per=3>;
-    rel="last", <http://localhost:3000/api/skus?oauth_token=Vr%2FAzbfQt3ywQlKUonZk25VqRg2ILFAFV%2Fvoi69FD9xlJl5Yp9DmDWb6PAEsVwuI1KckH3aa1%2FvxRaj%2FMbwg%3D%3D&page=2&per=3>;
-    rel="next"
-  content-type: application/json; charset=utf-8
-  x-meta-request-version: 0.2.1
-  x-ua-compatible: IE=Edge,chrome=1
-  etag: ! '"168c0d9677583c8305fb51b0543f1dda"'
-  cache-control: max-age=0, private, must-revalidate
-  x-request-id: c217576d97a588517f360dd1790e6e4b
-  x-runtime: '0.834211'
-  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
-  date: Fri, 20 Dec 2013 10:53:52 GMT
-  content-length: '2281'
-  connection: close
-  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWFmM2E1MjE1ZGVkYzNiNjIyYTZiMWMzNjQ5YTMyNmEzBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--c4ff9c59b2235dba4ecb1e94450af6d37846d791;
-    path=/; expires=Thu, 20-Feb-2014 10:53:52 GMT; HttpOnly
-:body: ! '{"skus":[{"id":224,"ean":"","pn":"","name":"H 500","display_name":"Motorola
-  H 500","category_id":435,"first_product_shop_info":"870|Media-ram","click_url":null,"price_max":47.71,"price_min":32.63,"reviewscore":0.0,"shop_count":1,"plain_spec_summary":null,"active_products_count":1,"main_picture":{"small_url":"http://d.scdn.gr/images/sku_main_images/000000/224/small_Motorola-H-500.jpeg","original_url":"http://b.scdn.gr/images/sku_main_images/000000/224/medium_Motorola-H-500.jpeg","tiny_url":"http://a.scdn.gr/images/sku_main_images/000000/224/tiny_Motorola-H-500.jpeg","medium_url":"http://b.scdn.gr/images/sku_main_images/000000/224/medium_Motorola-H-500.jpeg","datamart_url":"http://b.scdn.gr/images/sku_main_images/000000/224/Motorola-H-500.jpeg"},"manufacturer_id":27},{"id":403,"ean":null,"pn":null,"name":"T-104","display_name":"Brother
-  T-104","category_id":66,"first_product_shop_info":null,"click_url":null,"price_max":73.9,"price_min":69.9,"reviewscore":0.0,"shop_count":3,"plain_spec_summary":null,"active_products_count":3,"main_picture":{"small_url":"http://d.scdn.gr/images/sku_main_images/000000/403/small_Brother-T-104.jpeg","original_url":"http://c.scdn.gr/images/sku_main_images/000000/403/medium_Brother-T-104.jpeg","tiny_url":"http://b.scdn.gr/images/sku_main_images/000000/403/tiny_Brother-T-104.jpeg","medium_url":"http://c.scdn.gr/images/sku_main_images/000000/403/medium_Brother-T-104.jpeg","datamart_url":"http://c.scdn.gr/images/sku_main_images/000000/403/Brother-T-104.jpeg"},"manufacturer_id":46},{"id":404,"ean":null,"pn":null,"name":"T-106","display_name":"Brother
-  T-106","category_id":66,"first_product_shop_info":null,"click_url":null,"price_max":122.9,"price_min":122.0,"reviewscore":0.0,"shop_count":2,"plain_spec_summary":null,"active_products_count":2,"main_picture":{"small_url":"http://c.scdn.gr/images/sku_main_images/000000/404/small_Brother-T-106.jpeg","original_url":"http://d.scdn.gr/images/sku_main_images/000000/404/medium_Brother-T-106.jpeg","tiny_url":"http://c.scdn.gr/images/sku_main_images/000000/404/tiny_Brother-T-106.jpeg","medium_url":"http://d.scdn.gr/images/sku_main_images/000000/404/medium_Brother-T-106.jpeg","datamart_url":"http://c.scdn.gr/images/sku_main_images/000000/404/Brother-T-106.jpeg"},"manufacturer_id":46}]}'
+  server: !binary |-
+    bmdpbng=
+  !binary "Y29udGVudC10eXBl": !binary |-
+    YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
+  !binary "dmFyeQ==": !binary |-
+    QWNjZXB0LUVuY29kaW5n
+  status: !binary |-
+    MjAwIE9L
+  !binary "bGluaw==": !binary |-
+    PGh0dHA6Ly9hcGkuc2tyb3V0ei5nci9hcGkvc2t1cz9wYWdlPTU0MzMwMiZw
+    ZXI9Mz47IHJlbD0ibGFzdCIsIDxodHRwOi8vYXBpLnNrcm91dHouZ3IvYXBp
+    L3NrdXM/cGFnZT0yJnBlcj0zPjsgcmVsPSJuZXh0Ig==
+  x-ua-compatible: !binary |-
+    SUU9RWRnZSxjaHJvbWU9MQ==
+  cache-control: !binary |-
+    bWF4LWFnZT0wLCBwcml2YXRlLCBtdXN0LXJldmFsaWRhdGU=
+  x-request-id: !binary |-
+    MjM1ODAxNDEwNg==
+  x-runtime: !binary |-
+    MC43MzQxNDU=
+  x-dns-prefetch-control: !binary |-
+    b2Zm
+  x-app: !binary |-
+    ZnJhbmtpZQ==
+  content-length: !binary |-
+    NTY0
+  accept-ranges: !binary |-
+    Ynl0ZXM=
+  date: !binary |-
+    TW9uLCAxMCBGZWIgMjAxNCAxMzozNTo0MyBHTVQ=
+  x-varnish: !binary |-
+    MjM1ODAxNDEwNg==
+  age: !binary |-
+    MA==
+  via: !binary |-
+    MS4xIHZhcm5pc2g=
+  connection: !binary |-
+    Y2xvc2U=
+  x-origin: !binary |-
+    dmFybmlzaDE=
+  x-cache: !binary |-
+    TUlTUw==
+:body: !binary |-
+  eyJza3VzIjpbeyJpZCI6NDAzLCJlYW4iOiIiLCJwbiI6IiIsIm5hbWUiOiJU
+  LTEwNCIsImRpc3BsYXlfbmFtZSI6IkJyb3RoZXIgVC0xMDQiLCJjYXRlZ29y
+  eV9pZCI6NjYsImZpcnN0X3Byb2R1Y3Rfc2hvcF9pbmZvIjpudWxsLCJjbGlj
+  a191cmwiOm51bGwsInByaWNlX21heCI6NzYuOSwicHJpY2VfbWluIjo2NS45
+  LCJyZXZpZXdzY29yZSI6MC4wLCJzaG9wX2NvdW50IjozLCJwbGFpbl9zcGVj
+  X3N1bW1hcnkiOiIiLCJhY3RpdmVfcHJvZHVjdHNfY291bnQiOjMsIm1haW5f
+  cGljdHVyZSI6eyJzbWFsbF91cmwiOiJodHRwOi8vZC5zY2RuLmdyL2ltYWdl
+  cy9za3VfbWFpbl9pbWFnZXMvMDAwMDAwLzQwMy9zbWFsbF9CUk9USEVSVDEw
+  NEQuanBnIiwib3JpZ2luYWxfdXJsIjoiaHR0cDovL2Muc2Nkbi5nci9pbWFn
+  ZXMvc2t1X21haW5faW1hZ2VzLzAwMDAwMC80MDMvbWVkaXVtX0JST1RIRVJU
+  MTA0RC5qcGciLCJ0aW55X3VybCI6Imh0dHA6Ly9iLnNjZG4uZ3IvaW1hZ2Vz
+  L3NrdV9tYWluX2ltYWdlcy8wMDAwMDAvNDAzL3RpbnlfQlJPVEhFUlQxMDRE
+  LmpwZyIsIm1lZGl1bV91cmwiOiJodHRwOi8vYy5zY2RuLmdyL2ltYWdlcy9z
+  a3VfbWFpbl9pbWFnZXMvMDAwMDAwLzQwMy9tZWRpdW1fQlJPVEhFUlQxMDRE
+  LmpwZyIsImRhdGFtYXJ0X3VybCI6Imh0dHA6Ly9hLnNjZG4uZ3IvaW1hZ2Vz
+  L3NrdV9tYWluX2ltYWdlcy8wMDAwMDAvNDAzL0JST1RIRVJUMTA0RC5qcGci
+  fSwibWFudWZhY3R1cmVyX2lkIjo0NiwiZnV0dXJlIjpmYWxzZX0seyJpZCI6
+  NDA0LCJlYW4iOiIiLCJwbiI6IiIsIm5hbWUiOiJULTEwNiIsImRpc3BsYXlf
+  bmFtZSI6IkJyb3RoZXIgVC0xMDYiLCJjYXRlZ29yeV9pZCI6NjYsImZpcnN0
+  X3Byb2R1Y3Rfc2hvcF9pbmZvIjpudWxsLCJjbGlja191cmwiOm51bGwsInBy
+  aWNlX21heCI6MTIyLjksInByaWNlX21pbiI6MTIyLjAsInJldmlld3Njb3Jl
+  IjowLjAsInNob3BfY291bnQiOjIsInBsYWluX3NwZWNfc3VtbWFyeSI6IiIs
+  ImFjdGl2ZV9wcm9kdWN0c19jb3VudCI6MiwibWFpbl9waWN0dXJlIjp7InNt
+  YWxsX3VybCI6Imh0dHA6Ly9jLnNjZG4uZ3IvaW1hZ2VzL3NrdV9tYWluX2lt
+  YWdlcy8wMDAwMDAvNDA0L3NtYWxsX0Jyb3RoZXItVC0xMDYuanBlZyIsIm9y
+  aWdpbmFsX3VybCI6Imh0dHA6Ly9kLnNjZG4uZ3IvaW1hZ2VzL3NrdV9tYWlu
+  X2ltYWdlcy8wMDAwMDAvNDA0L21lZGl1bV9Ccm90aGVyLVQtMTA2LmpwZWci
+  LCJ0aW55X3VybCI6Imh0dHA6Ly9jLnNjZG4uZ3IvaW1hZ2VzL3NrdV9tYWlu
+  X2ltYWdlcy8wMDAwMDAvNDA0L3RpbnlfQnJvdGhlci1ULTEwNi5qcGVnIiwi
+  bWVkaXVtX3VybCI6Imh0dHA6Ly9kLnNjZG4uZ3IvaW1hZ2VzL3NrdV9tYWlu
+  X2ltYWdlcy8wMDAwMDAvNDA0L21lZGl1bV9Ccm90aGVyLVQtMTA2LmpwZWci
+  LCJkYXRhbWFydF91cmwiOiJodHRwOi8vYy5zY2RuLmdyL2ltYWdlcy9za3Vf
+  bWFpbl9pbWFnZXMvMDAwMDAwLzQwNC9Ccm90aGVyLVQtMTA2LmpwZWcifSwi
+  bWFudWZhY3R1cmVyX2lkIjo0NiwiZnV0dXJlIjpmYWxzZX0seyJpZCI6NDA2
+  LCJlYW4iOiIiLCJwbiI6IiIsIm5hbWUiOiIyODIwIiwiZGlzcGxheV9uYW1l
+  IjoiQnJvdGhlciAyODIwIiwiY2F0ZWdvcnlfaWQiOjY2LCJmaXJzdF9wcm9k
+  dWN0X3Nob3BfaW5mbyI6IjE3MzV8VG9wIFN5c3RlbXN8dG9wc3lzdGVtcyIs
+  ImNsaWNrX3VybCI6bnVsbCwicHJpY2VfbWF4IjozMDIuNzUsInByaWNlX21p
+  biI6MzAyLjc1LCJyZXZpZXdzY29yZSI6MC4wLCJzaG9wX2NvdW50IjoxLCJw
+  bGFpbl9zcGVjX3N1bW1hcnkiOiIiLCJhY3RpdmVfcHJvZHVjdHNfY291bnQi
+  OjEsIm1haW5fcGljdHVyZSI6eyJzbWFsbF91cmwiOiJodHRwOi8vZC5zY2Ru
+  LmdyL2ltYWdlcy9za3VfbWFpbl9pbWFnZXMvMDAwMDAwLzQwNi9zbWFsbF9C
+  cm90aGVyLTI4MjAuanBlZyIsIm9yaWdpbmFsX3VybCI6Imh0dHA6Ly9jLnNj
+  ZG4uZ3IvaW1hZ2VzL3NrdV9tYWluX2ltYWdlcy8wMDAwMDAvNDA2L21lZGl1
+  bV9Ccm90aGVyLTI4MjAuanBlZyIsInRpbnlfdXJsIjoiaHR0cDovL2Iuc2Nk
+  bi5nci9pbWFnZXMvc2t1X21haW5faW1hZ2VzLzAwMDAwMC80MDYvdGlueV9C
+  cm90aGVyLTI4MjAuanBlZyIsIm1lZGl1bV91cmwiOiJodHRwOi8vYy5zY2Ru
+  LmdyL2ltYWdlcy9za3VfbWFpbl9pbWFnZXMvMDAwMDAwLzQwNi9tZWRpdW1f
+  QnJvdGhlci0yODIwLmpwZWciLCJkYXRhbWFydF91cmwiOiJodHRwOi8vYi5z
+  Y2RuLmdyL2ltYWdlcy9za3VfbWFpbl9pbWFnZXMvMDAwMDAwLzQwNi9Ccm90
+  aGVyLTI4MjAuanBlZyJ9LCJtYW51ZmFjdHVyZXJfaWQiOjQ2LCJmdXR1cmUi
+  OmZhbHNlfV0sIm1ldGEiOnsicGFnaW5hdGlvbiI6eyJ0b3RhbF9yZXN1bHRz
+  IjoxNjI5OTA0LCJ0b3RhbF9wYWdlcyI6NTQzMzAyLCJwYWdlIjoxLCJwZXIi
+  OjN9fX0=
