@@ -1,26 +1,81 @@
 ---
 :request:
   :verb: GET
-  :path: /skus/3703742
-  :params:
-    oauth_token: Vr/AzbfQt3ywQlKUonZk25VqRg2ILFAFV/voi69FD9xlJl5Yp9DmDWb6PAEsVwuI1KckH3aa1/vxRaj/Mbwg==
+  :path: /skus/3690169
 :status: 200
 :headers:
-  content-type: application/json; charset=utf-8
-  x-meta-request-version: 0.2.1
-  x-ua-compatible: IE=Edge,chrome=1
-  etag: ! '"bc0efa6be84c668a02bbc23cb2305af6"'
-  cache-control: max-age=0, private, must-revalidate
-  x-request-id: 87ea62ffdb00f074318be6e86cea2945
-  x-runtime: '0.028575'
-  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
-  date: Fri, 20 Dec 2013 10:53:52 GMT
-  content-length: '1174'
-  connection: close
-  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWU4YWRhYmU3MmM2NjMwODVjMDU0NDc5NmQ4MjA0ODFiBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--f7956aed3565ea2fd3fcdc7862003a1b2cdc0adb;
-    path=/; expires=Thu, 20-Feb-2014 10:53:52 GMT; HttpOnly
-:body: ! '{"sku":{"id":3703742,"ean":"","pn":"","name":"\u039c\u03c0\u03bb\u03bf\u03cd\u03b6\u03b1
-  \u039a\u03bf\u03bd\u03c4\u03bf\u03bc\u03ac\u03bd\u03b9\u03ba\u03b7 2nd Skin  SS201-4113
-  navy-ss2013 \u0391\u03bd\u03b4\u03c1\u03b9\u03ba\u03cc","display_name":"\u039c\u03c0\u03bb\u03bf\u03cd\u03b6\u03b1
-  \u039a\u03bf\u03bd\u03c4\u03bf\u03bc\u03ac\u03bd\u03b9\u03ba\u03b7 2nd Skin  SS201-4113
-  navy-ss2013 \u0391\u03bd\u03b4\u03c1\u03b9\u03ba\u03cc","category_id":1066,"first_product_shop_info":"821|Z-mall","click_url":"http://www.skroutz.gr/products/show/13313785","price_max":11.7,"price_min":11.7,"reviewscore":0.0,"shop_count":1,"plain_spec_summary":"","active_products_count":1,"main_picture":{"small_url":"http://b.scdn.gr/images/sku_main_images/003703/3703742/small_13313785-orig.jpg","original_url":"http://c.scdn.gr/images/sku_main_images/003703/3703742/medium_13313785-orig.jpg","tiny_url":"http://c.scdn.gr/images/sku_main_images/003703/3703742/tiny_13313785-orig.jpg","medium_url":"http://c.scdn.gr/images/sku_main_images/003703/3703742/medium_13313785-orig.jpg","datamart_url":"http://d.scdn.gr/images/sku_main_images/003703/3703742/13313785-orig.jpg"},"manufacturer_id":0}}'
+  server: !binary |-
+    bmdpbng=
+  !binary "Y29udGVudC10eXBl": !binary |-
+    YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
+  !binary "dmFyeQ==": !binary |-
+    QWNjZXB0LUVuY29kaW5n
+  status: !binary |-
+    MjAwIE9L
+  x-ua-compatible: !binary |-
+    SUU9RWRnZSxjaHJvbWU9MQ==
+  cache-control: !binary |-
+    bWF4LWFnZT0wLCBwcml2YXRlLCBtdXN0LXJldmFsaWRhdGU=
+  x-request-id: !binary |-
+    MTMwOTUwNDI2Mw==
+  x-runtime: !binary |-
+    MC4wMjUzMDQ=
+  x-dns-prefetch-control: !binary |-
+    b2Zm
+  x-app: !binary |-
+    ZnJhbmtpZQ==
+  content-length: !binary |-
+    NjQw
+  accept-ranges: !binary |-
+    Ynl0ZXM=
+  date: !binary |-
+    TW9uLCAxMCBGZWIgMjAxNCAxMzozMjo0MSBHTVQ=
+  x-varnish: !binary |-
+    MTMwOTUwNDI2Mw==
+  age: !binary |-
+    MA==
+  via: !binary |-
+    MS4xIHZhcm5pc2g=
+  connection: !binary |-
+    Y2xvc2U=
+  x-origin: !binary |-
+    dmFybmlzaDI=
+  x-cache: !binary |-
+    TUlTUw==
+:body: !binary |-
+  eyJza3UiOnsiaWQiOjM2OTAxNjksImVhbiI6IiIsInBuIjoiRDgwMiIsIm5h
+  bWUiOiJHMiAoMTZHQikiLCJkaXNwbGF5X25hbWUiOiJMRyBHMiAoMTZHQiki
+  LCJjYXRlZ29yeV9pZCI6NDAsImZpcnN0X3Byb2R1Y3Rfc2hvcF9pbmZvIjpu
+  dWxsLCJjbGlja191cmwiOm51bGwsInByaWNlX21heCI6NjE2Ljk3LCJwcmlj
+  ZV9taW4iOjM3MS4xNCwicmV2aWV3c2NvcmUiOjQuNTM0NDgsInNob3BfY291
+  bnQiOjM1LCJwbGFpbl9zcGVjX3N1bW1hcnkiOiJTaW5nbGUgU0lNLCBcdTAz
+  OTRcdTAzYWZcdTAzYmFcdTAzYzRcdTAzYzVcdTAzYmYgXHUwM2EzXHUwM2Nk
+  XHUwM2JkXHUwM2I0XHUwM2I1XHUwM2MzXHUwM2I3XHUwM2MyOiAyRyAvIDNH
+  IC8gNEcgLSBMVEUsIFx1MDM5YVx1MDNhY1x1MDNiY1x1MDNiNVx1MDNjMVx1
+  MDNiMTogMTMgTVAsICBcdTAzOWZcdTAzYjhcdTAzY2NcdTAzYmRcdTAzYjc6
+  IDUuMlwiICwgXHUwMzkxXHUwM2JkXHUwM2FjXHUwM2JiXHUwM2M1XHUwM2Mz
+  XHUwM2I3OiAxOTIwIHggMTA4MCBwaXhlbHMsIFx1MDNhN1x1MDNiNVx1MDNi
+  OVx1MDNjMVx1MDNiOVx1MDNjM1x1MDNiY1x1MDNjY1x1MDNjMjogXHUwMzlm
+  XHUwM2I4XHUwM2NjXHUwM2JkXHUwM2I3IFx1MDNiMVx1MDNjNlx1MDNhZVx1
+  MDNjMiAoVG91Y2ggc2NyZWVuKSwgIFx1MDM5NVx1MDNjM1x1MDNjOVx1MDNj
+  NFx1MDNiNVx1MDNjMVx1MDNiOVx1MDNiYVx1MDNhZSBcdTAzOWNcdTAzYmRc
+  dTAzYWVcdTAzYmNcdTAzYjc6IDE2LjAgR0IsICBcdTAzOTFcdTAzYzNcdTAz
+  Y2RcdTAzYzFcdTAzYmNcdTAzYjFcdTAzYzRcdTAzYmYgXHUwMzk0XHUwM2Fm
+  XHUwM2JhXHUwM2M0XHUwM2M1XHUwM2JmOiBXaS1GaSwgXHUwMzliXHUwM2I1
+  XHUwM2I5XHUwM2M0XHUwM2JmXHUwM2M1XHUwM2MxXHUwM2IzXHUwM2I5XHUw
+  M2JhXHUwM2NjIFx1MDNhM1x1MDNjZFx1MDNjM1x1MDNjNFx1MDNiN1x1MDNi
+  Y1x1MDNiMTogQW5kcm9pZCwgXHUwMzg4XHUwM2M0XHUwM2JmXHUwM2MyIFx1
+  MDM5YVx1MDNjNVx1MDNiYVx1MDNiYlx1MDNiZlx1MDNjNlx1MDNiZlx1MDNj
+  MVx1MDNhZlx1MDNiMVx1MDNjMjogMjAxMywgU21hcnRQaG9uZSIsImFjdGl2
+  ZV9wcm9kdWN0c19jb3VudCI6MzUsIm1haW5fcGljdHVyZSI6eyJzbWFsbF91
+  cmwiOiJodHRwOi8vYy5zY2RuLmdyL2ltYWdlcy9za3VfbWFpbl9pbWFnZXMv
+  MDAzNjkwLzM2OTAxNjkvc21hbGxfTEdHMl9Gcm9udC5qcGciLCJvcmlnaW5h
+  bF91cmwiOiJodHRwOi8vYi5zY2RuLmdyL2ltYWdlcy9za3VfbWFpbl9pbWFn
+  ZXMvMDAzNjkwLzM2OTAxNjkvbWVkaXVtX0xHRzJfRnJvbnQuanBnIiwidGlu
+  eV91cmwiOiJodHRwOi8vZC5zY2RuLmdyL2ltYWdlcy9za3VfbWFpbl9pbWFn
+  ZXMvMDAzNjkwLzM2OTAxNjkvdGlueV9MR0cyX0Zyb250LmpwZyIsIm1lZGl1
+  bV91cmwiOiJodHRwOi8vYi5zY2RuLmdyL2ltYWdlcy9za3VfbWFpbl9pbWFn
+  ZXMvMDAzNjkwLzM2OTAxNjkvbWVkaXVtX0xHRzJfRnJvbnQuanBnIiwiZGF0
+  YW1hcnRfdXJsIjoiaHR0cDovL2Iuc2Nkbi5nci9pbWFnZXMvc2t1X21haW5f
+  aW1hZ2VzLzAwMzY5MC8zNjkwMTY5L0xHRzJfRnJvbnQuanBnIn0sIm1hbnVm
+  YWN0dXJlcl9pZCI6MzAsImZ1dHVyZSI6ZmFsc2V9fQ==

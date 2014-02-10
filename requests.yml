@@ -96,7 +96,7 @@ requests:
     request: 'GET {{base_url}}/skus?page=1&per=3'
   -
     key: skus_show
-    request: 'GET {{base_url}}/skus/3703742'
+    request: 'GET {{base_url}}/skus/3690169'
   -
     key: skus_products
     request: 'GET {{base_url}}/skus/3703742/products'
