@@ -38,6 +38,8 @@
 <ul id="markdown-toc">
 <li><a href="#list-manufacturers">List manufacturers</a></li>
   <li><a href="#retrieve-a-single-manufacturer">Retrieve a single manufacturer</a></li>
+  <li><a href="#retrieve-a-manufacturers-categories">Retrieve a manufacturer’s categories</a></li>
+  <li><a href="#retrieve-a-manufacturers-skus">Retrieve a manufacturer’s skus</a></li>
 </ul><h2 id="list-manufacturers">List manufacturers</h2>
 
 <pre class="terminal">
@@ -84,6 +86,150 @@
     <span class="s2">"id"</span><span class="o">:</span> <span class="mi">12907</span><span class="p">,</span>
     <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Rapala"</span><span class="p">,</span>
     <span class="s2">"image_url"</span><span class="o">:</span> <span class="kc">null</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre>
+</div>
+</div>
+
+<h2 id="retrieve-a-manufacturers-categories">Retrieve a manufacturer’s categories</h2>
+
+<p>Set ordering with order_by parameter. Possible values:</p>
+
+<pre><code>- 'popularity' (default)
+- 'name'
+</code></pre>
+
+<p>Set ordering direction with order_dir parameter. Possible values: </p>
+
+<pre><code>- 'asc' (default)
+- 'desc'
+</code></pre>
+
+<pre class="terminal">
+  GET /manufacturers/:id/categories
+</pre>
+
+<div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/manufacturers/356/categories</span>
+        </p>
+<a href="javascript:void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"categories"</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">1109</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Εφαρμογές Επεξεργασίας Ήχου"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/categories/large/1109.jpg"</span><span class="p">,</span>
+      <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">16</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">154</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Μπαταρίες &amp; Αξεσουάρ"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/categories/large/154.jpg"</span><span class="p">,</span>
+      <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">425</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"pagination"</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">"total_results"</span><span class="o">:</span> <span class="mi">49</span><span class="p">,</span>
+      <span class="s2">"total_pages"</span><span class="o">:</span> <span class="mi">25</span><span class="p">,</span>
+      <span class="s2">"page"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"per"</span><span class="o">:</span> <span class="mi">2</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre>
+</div>
+</div>
+
+<h2 id="retrieve-a-manufacturers-skus">Retrieve a manufacturer’s skus</h2>
+
+<p>Set ordering with order_by parameter. Possible values:</p>
+
+<pre><code>- 'popularity' (default)
+- 'name'
+</code></pre>
+
+<p>Set ordering direction with order_dir parameter. Possible values: </p>
+
+<pre><code>- 'asc' (default)
+- 'desc'
+</code></pre>
+
+<pre class="terminal">
+  GET /manufacturers/:id/skus
+</pre>
+
+<div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/manufacturers/356/skus</span>
+        </p>
+<a href="javascript:void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"skus"</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">3559432</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Apple Magsafe Power Adapter 85W MC556Z/B"</span><span class="p">,</span>
+      <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"Apple Magsafe Power Adapter 85W MC556Z/B"</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">1404</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="s2">"482|Electroworld"</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="s2">"http://www.skroutz.gr/products/show/9745109"</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">89.0</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">89.0</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">0.0</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"Ισχύς: 85 Watt, Συμβατότητα: Apple"</span><span class="p">,</span>
+      <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/003559/3559432/small_9745109-orig.jpg"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/003559/3559432/medium_9745109-orig.jpg"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/003559/3559432/tiny_9745109-orig.jpg"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/003559/3559432/medium_9745109-orig.jpg"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/003559/3559432/9745109-orig.jpg"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">356</span><span class="p">,</span>
+      <span class="s2">"future"</span><span class="o">:</span> <span class="kc">false</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">3411210</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Apple World Travel Adapter Kit power adapter kit"</span><span class="p">,</span>
+      <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"Apple World Travel Adapter Kit power adapter kit"</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">1404</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="s2">"34|Multirama"</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="s2">"http://www.skroutz.gr/products/show/12704170"</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">41.86</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">41.86</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">0.0</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"Συμβατότητα: Apple"</span><span class="p">,</span>
+      <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/003411/3411210/small_12704170-orig.jpg"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/003411/3411210/medium_12704170-orig.jpg"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/003411/3411210/tiny_12704170-orig.jpg"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/003411/3411210/medium_12704170-orig.jpg"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/003411/3411210/12704170-orig.jpg"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">356</span><span class="p">,</span>
+      <span class="s2">"future"</span><span class="o">:</span> <span class="kc">false</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"pagination"</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">"total_results"</span><span class="o">:</span> <span class="mi">319</span><span class="p">,</span>
+      <span class="s2">"total_pages"</span><span class="o">:</span> <span class="mi">160</span><span class="p">,</span>
+      <span class="s2">"page"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"per"</span><span class="o">:</span> <span class="mi">2</span>
+    <span class="p">}</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre>
 </div>
