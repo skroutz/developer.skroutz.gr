@@ -52,6 +52,18 @@ requests:
       params:
         per:  2
   -
+    key: manufacturer_categories
+    request:
+      path: '{{base_url}}/manufacturers/356/categories'
+      params:
+        per:  2
+  -
+    key: manufacturer_skus
+    request:
+      path: '{{base_url}}/manufacturers/356/skus'
+      params:
+        per:  2
+  -
     key: autocomplete
     request: 'GET {{base_url}}/autocomplete?keyphrase=iph'
   -
