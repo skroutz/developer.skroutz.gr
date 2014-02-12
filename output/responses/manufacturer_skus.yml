@@ -6,24 +6,98 @@
     per: 2
 :status: 200
 :headers:
-  link: <http://localhost:3000/api/manufacturers/356/skus?page=160&per=2>; rel="last",
-    <http://localhost:3000/api/manufacturers/356/skus?page=2&per=2>; rel="next"
-  content-type: application/json; charset=utf-8
-  x-meta-request-version: 0.2.1
-  x-ua-compatible: IE=Edge,chrome=1
-  etag: '"b497e1859c1ce7299d29f093f81419bc"'
-  cache-control: max-age=0, private, must-revalidate
-  x-request-id: c876daba2fbfd18b75bd68806ebc87ec
-  x-runtime: '2.192102'
-  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
-  date: Tue, 11 Feb 2014 12:42:05 GMT
-  content-length: '2084'
-  connection: close
-  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTRhMzA3MjUwNjljYTdlZTgyYmI4YTFmODA1MGMxYWM0BjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--03e5f58ccd30d8ce436299e8aea19f5bb87eb1d8;
-    path=/; expires=Fri, 11-Apr-2014 11:42:05 GMT; HttpOnly
-:body: '{"skus":[{"id":3559432,"ean":"","pn":"","name":"Apple Magsafe Power Adapter
-  85W MC556Z/B","display_name":"Apple Magsafe Power Adapter 85W MC556Z/B","category_id":1404,"first_product_shop_info":"482|Electroworld","click_url":"http://www.skroutz.gr/products/show/9745109","price_max":89.0,"price_min":89.0,"reviewscore":0.0,"shop_count":1,"plain_spec_summary":"\u0399\u03c3\u03c7\u03cd\u03c2:
-  85 Watt, \u03a3\u03c5\u03bc\u03b2\u03b1\u03c4\u03cc\u03c4\u03b7\u03c4\u03b1: Apple","active_products_count":1,"main_picture":{"small_url":"http://b.scdn.gr/images/sku_main_images/003559/3559432/small_9745109-orig.jpg","original_url":"http://b.scdn.gr/images/sku_main_images/003559/3559432/medium_9745109-orig.jpg","tiny_url":"http://a.scdn.gr/images/sku_main_images/003559/3559432/tiny_9745109-orig.jpg","medium_url":"http://b.scdn.gr/images/sku_main_images/003559/3559432/medium_9745109-orig.jpg","datamart_url":"http://d.scdn.gr/images/sku_main_images/003559/3559432/9745109-orig.jpg"},"manufacturer_id":356,"future":false},{"id":3411210,"ean":"","pn":"","name":"Apple
-  World Travel Adapter Kit power adapter kit","display_name":"Apple World Travel Adapter
-  Kit power adapter kit","category_id":1404,"first_product_shop_info":"34|Multirama","click_url":"http://www.skroutz.gr/products/show/12704170","price_max":41.86,"price_min":41.86,"reviewscore":0.0,"shop_count":1,"plain_spec_summary":"\u03a3\u03c5\u03bc\u03b2\u03b1\u03c4\u03cc\u03c4\u03b7\u03c4\u03b1:
-  Apple","active_products_count":1,"main_picture":{"small_url":"http://a.scdn.gr/images/sku_main_images/003411/3411210/small_12704170-orig.jpg","original_url":"http://d.scdn.gr/images/sku_main_images/003411/3411210/medium_12704170-orig.jpg","tiny_url":"http://a.scdn.gr/images/sku_main_images/003411/3411210/tiny_12704170-orig.jpg","medium_url":"http://d.scdn.gr/images/sku_main_images/003411/3411210/medium_12704170-orig.jpg","datamart_url":"http://b.scdn.gr/images/sku_main_images/003411/3411210/12704170-orig.jpg"},"manufacturer_id":356,"future":false}],"meta":{"pagination":{"total_results":319,"total_pages":160,"page":1,"per":2}}}'
+  server: !binary |-
+    bmdpbng=
+  !binary "Y29udGVudC10eXBl": !binary |-
+    YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
+  !binary "dmFyeQ==": !binary |-
+    QWNjZXB0LUVuY29kaW5n
+  status: !binary |-
+    MjAwIE9L
+  !binary "bGluaw==": !binary |-
+    PGh0dHA6Ly9hcGkuc2tyb3V0ei5nci9hcGkvbWFudWZhY3R1cmVycy8zNTYv
+    c2t1cz9wYWdlPTI5NyZwZXI9Mj47IHJlbD0ibGFzdCIsIDxodHRwOi8vYXBp
+    LnNrcm91dHouZ3IvYXBpL21hbnVmYWN0dXJlcnMvMzU2L3NrdXM/cGFnZT0y
+    JnBlcj0yPjsgcmVsPSJuZXh0Ig==
+  x-ua-compatible: !binary |-
+    SUU9RWRnZSxjaHJvbWU9MQ==
+  cache-control: !binary |-
+    bWF4LWFnZT0wLCBwcml2YXRlLCBtdXN0LXJldmFsaWRhdGU=
+  x-request-id: !binary |-
+    MjM3MDA0ODQyMg==
+  x-runtime: !binary |-
+    MC4xMDUzMzE=
+  x-dns-prefetch-control: !binary |-
+    b2Zm
+  x-app: !binary |-
+    bHVua3dpbGw=
+  content-length: !binary |-
+    Njc4
+  accept-ranges: !binary |-
+    Ynl0ZXM=
+  date: !binary |-
+    V2VkLCAxMiBGZWIgMjAxNCAxNDoyODowOSBHTVQ=
+  x-varnish: !binary |-
+    MjM3MDA0ODQyMg==
+  age: !binary |-
+    MA==
+  via: !binary |-
+    MS4xIHZhcm5pc2g=
+  connection: !binary |-
+    Y2xvc2U=
+  x-origin: !binary |-
+    dmFybmlzaDE=
+  x-cache: !binary |-
+    TUlTUw==
+:body: !binary |-
+  eyJza3VzIjpbeyJpZCI6MzQxMTIxNCwiZWFuIjoiIiwicG4iOiIiLCJuYW1l
+  IjoiQXBwbGUgTWFnc2FmZSAyIFBvd2VyIEFkYXB0ZXIgLSA4NSBXYXR0Iiwi
+  ZGlzcGxheV9uYW1lIjoiQXBwbGUgTWFnc2FmZSAyIFBvd2VyIEFkYXB0ZXIg
+  LSA4NSBXYXR0IiwiY2F0ZWdvcnlfaWQiOjE0MDQsImZpcnN0X3Byb2R1Y3Rf
+  c2hvcF9pbmZvIjoiMzR8TXVsdGlyYW1hfG11bHRpcmFtYSIsImNsaWNrX3Vy
+  bCI6Imh0dHA6Ly93d3cuc2tyb3V0ei5nci9wcm9kdWN0cy9zaG93LzEyNzA1
+  NTMwIiwicHJpY2VfbWF4Ijo4OS4wLCJwcmljZV9taW4iOjg5LjAsInJldmll
+  d3Njb3JlIjowLjAsInNob3BfY291bnQiOjEsInBsYWluX3NwZWNfc3VtbWFy
+  eSI6Ilx1MDNhM1x1MDNjNVx1MDNiY1x1MDNiMlx1MDNiMVx1MDNjNFx1MDNj
+  Y1x1MDNjNFx1MDNiN1x1MDNjNFx1MDNiMTogQXBwbGUiLCJtYWluX3BpY3R1
+  cmUiOnsic21hbGxfdXJsIjoiaHR0cDovL2Quc2Nkbi5nci9pbWFnZXMvc2t1
+  X21haW5faW1hZ2VzLzAwMzQxMS8zNDExMjE0L3NtYWxsXzEyNzA1NTMwLW9y
+  aWcuanBnIiwib3JpZ2luYWxfdXJsIjoiaHR0cDovL2Iuc2Nkbi5nci9pbWFn
+  ZXMvc2t1X21haW5faW1hZ2VzLzAwMzQxMS8zNDExMjE0L21lZGl1bV8xMjcw
+  NTUzMC1vcmlnLmpwZyIsInRpbnlfdXJsIjoiaHR0cDovL2Quc2Nkbi5nci9p
+  bWFnZXMvc2t1X21haW5faW1hZ2VzLzAwMzQxMS8zNDExMjE0L3RpbnlfMTI3
+  MDU1MzAtb3JpZy5qcGciLCJtZWRpdW1fdXJsIjoiaHR0cDovL2Iuc2Nkbi5n
+  ci9pbWFnZXMvc2t1X21haW5faW1hZ2VzLzAwMzQxMS8zNDExMjE0L21lZGl1
+  bV8xMjcwNTUzMC1vcmlnLmpwZyIsImRhdGFtYXJ0X3VybCI6Imh0dHA6Ly9k
+  LnNjZG4uZ3IvaW1hZ2VzL3NrdV9tYWluX2ltYWdlcy8wMDM0MTEvMzQxMTIx
+  NC8xMjcwNTUzMC1vcmlnLmpwZyJ9LCJtYW51ZmFjdHVyZXJfaWQiOjM1Niwi
+  ZnV0dXJlIjpmYWxzZSwicmV2aWV3c19jb3VudCI6MH0seyJpZCI6NDExMjQx
+  MSwiZWFuIjoiIiwicG4iOiIiLCJuYW1lIjoiXHUwMzkxXHUwMzlkXHUwMzk0
+  XHUwM2ExXHUwMzk5XHUwMzlhXHUwMzkxIFNMSVAgQVBQTEUgXHUwM2EzXHUw
+  Mzk1XHUwM2E0ICAwMjEwMTQ5IC0gXHUwMzliXHUwMzk1XHUwM2E1XHUwMzlh
+  XHUwMzlmIFx1MDM5Y1x1MDM5MVx1MDNhNVx1MDNhMVx1MDM5ZiIsImRpc3Bs
+  YXlfbmFtZSI6Ilx1MDM5MVx1MDM5ZFx1MDM5NFx1MDNhMVx1MDM5OVx1MDM5
+  YVx1MDM5MSBTTElQIEFQUExFIFx1MDNhM1x1MDM5NVx1MDNhNCAgMDIxMDE0
+  OSAtIFx1MDM5Ylx1MDM5NVx1MDNhNVx1MDM5YVx1MDM5ZiBcdTAzOWNcdTAz
+  OTFcdTAzYTVcdTAzYTFcdTAzOWYiLCJjYXRlZ29yeV9pZCI6NTI4LCJmaXJz
+  dF9wcm9kdWN0X3Nob3BfaW5mbyI6IjE3OTZ8QnJhbmRzNGFsbHxicmFuZHM0
+  YWxsIiwiY2xpY2tfdXJsIjoiaHR0cDovL3d3dy5za3JvdXR6LmdyL3Byb2R1
+  Y3RzL3Nob3cvMTQwMjg2ODQiLCJwcmljZV9tYXgiOjE0LjAsInByaWNlX21p
+  biI6MTQuMCwicmV2aWV3c2NvcmUiOjAuMCwic2hvcF9jb3VudCI6MSwicGxh
+  aW5fc3BlY19zdW1tYXJ5IjoiXHUwM2E0XHUwM2NkXHUwM2MwXHUwM2JmXHUw
+  M2MyOiBcdTAzYTNcdTAzYmJcdTAzYWZcdTAzYzAsIFx1MDNhN1x1MDNjMVx1
+  MDNjZVx1MDNiY1x1MDNiMTogXHUwMzljXHUwM2IxXHUwM2NkXHUwM2MxXHUw
+  M2JmIiwibWFpbl9waWN0dXJlIjp7InNtYWxsX3VybCI6Imh0dHA6Ly9hLnNj
+  ZG4uZ3IvaW1hZ2VzL3NrdV9tYWluX2ltYWdlcy8wMDQxMTIvNDExMjQxMS9z
+  bWFsbF8xNDAyODY4NC1vcmlnLmpwZyIsIm9yaWdpbmFsX3VybCI6Imh0dHA6
+  Ly9jLnNjZG4uZ3IvaW1hZ2VzL3NrdV9tYWluX2ltYWdlcy8wMDQxMTIvNDEx
+  MjQxMS9tZWRpdW1fMTQwMjg2ODQtb3JpZy5qcGciLCJ0aW55X3VybCI6Imh0
+  dHA6Ly9iLnNjZG4uZ3IvaW1hZ2VzL3NrdV9tYWluX2ltYWdlcy8wMDQxMTIv
+  NDExMjQxMS90aW55XzE0MDI4Njg0LW9yaWcuanBnIiwibWVkaXVtX3VybCI6
+  Imh0dHA6Ly9jLnNjZG4uZ3IvaW1hZ2VzL3NrdV9tYWluX2ltYWdlcy8wMDQx
+  MTIvNDExMjQxMS9tZWRpdW1fMTQwMjg2ODQtb3JpZy5qcGciLCJkYXRhbWFy
+  dF91cmwiOiJodHRwOi8vYy5zY2RuLmdyL2ltYWdlcy9za3VfbWFpbl9pbWFn
+  ZXMvMDA0MTEyLzQxMTI0MTEvMTQwMjg2ODQtb3JpZy5qcGcifSwibWFudWZh
+  Y3R1cmVyX2lkIjozNTYsImZ1dHVyZSI6ZmFsc2UsInJldmlld3NfY291bnQi
+  OjB9XSwibWV0YSI6eyJwYWdpbmF0aW9uIjp7InRvdGFsX3Jlc3VsdHMiOjU5
+  NCwidG90YWxfcGFnZXMiOjI5NywicGFnZSI6MSwicGVyIjoyfX19
