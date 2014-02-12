@@ -37,18 +37,19 @@
 
 <ul id="markdown-toc">
 <li><a href="#about">About</a></li>
-  <li><a href="#list-skus">List SKUs</a></li>
-  <li><a href="#list-skus-of-specific-category">List SKUS of specific category</a></li>
-  <li><a href="#retrieve-a-single-sku">Retrieve a single SKU</a></li>
-  <li><a href="#retrieve-a-skus-products">Retrieve a SKU’s products</a></li>
-  <li><a href="#retrieve-a-skus-reviews">Retrieve a SKU’s reviews</a></li>
+  <li><a href="#list-skus">List skus</a></li>
+  <li><a href="#list-skus-of-specific-category">List skus of specific category</a></li>
+  <li><a href="#retrieve-a-single-sku">Retrieve a single sku</a></li>
+  <li><a href="#retrieve-similar-skus">Retrieve similar skus</a></li>
+  <li><a href="#retrieve-a-skus-products">Retrieve a sku’s products</a></li>
+  <li><a href="#retrieve-a-skus-reviews">Retrieve a sku’s reviews</a></li>
   <li><a href="#filtering">Filtering</a></li>
   <li><a href="#meta">Meta</a></li>
 </ul><h2 id="about">About</h2>
 
 <p>A SKU (Stock Keeping Unit) is an aggregation of products.<br><a href="..#linked-resources">Linked resources</a>: <a href="../product">product</a></p>
 
-<h2 id="list-skus">List SKUs</h2>
+<h2 id="list-skus">List skus</h2>
 
 <pre class="terminal">
   GET /skus
@@ -150,7 +151,7 @@
 </div>
 </div>
 
-<h2 id="list-skus-of-specific-category">List SKUS of specific category</h2>
+<h2 id="list-skus-of-specific-category">List skus of specific category</h2>
 
 <pre class="terminal">
   GET /categories/:category_id/skus
@@ -252,7 +253,7 @@
 </div>
 </div>
 
-<h2 id="retrieve-a-single-sku">Retrieve a single SKU</h2>
+<h2 id="retrieve-a-single-sku">Retrieve a single sku</h2>
 
 <pre class="terminal">
   GET /skus/:id
@@ -294,7 +295,284 @@
 </div>
 </div>
 
-<h2 id="retrieve-a-skus-products">Retrieve a SKU’s products</h2>
+<h2 id="retrieve-similar-skus">Retrieve similar skus</h2>
+
+<pre class="terminal">
+  GET /skus/:id/similar
+</pre>
+
+<div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/skus/3034682/similar</span>
+        </p>
+<a href="javascript:void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"skus"</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">1828505</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">"I9300"</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Galaxy S III i9300 16GB"</span><span class="p">,</span>
+      <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"Samsung Galaxy S III i9300 16GB"</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">477.0</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">258.1</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">4.42963</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">58</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"Single SIM, Δίκτυο Σύνδεσης: 3G, Κάμερα: 8 MP,  Οθόνη: 4.8\" , Ανάλυση: 1280 x 720 pixels, Χειρισμός: Οθόνη αφής (Touch screen),  Εσωτερική Μνήμη: 16.0 GB,  Ασύρματο Δίκτυο: Wi-Fi, Λειτουργικό Σύστημα: Android, SAR: 0.21 W/kg, Έτος Κυκλοφορίας: 2012, SmartPhone"</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/001828/1828505/small_samsung-i9300-galaxy-s-iii-1.jpg"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/001828/1828505/medium_samsung-i9300-galaxy-s-iii-1.jpg"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/001828/1828505/tiny_samsung-i9300-galaxy-s-iii-1.jpg"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/001828/1828505/medium_samsung-i9300-galaxy-s-iii-1.jpg"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/001828/1828505/samsung-i9300-galaxy-s-iii-1.jpg"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">28</span><span class="p">,</span>
+      <span class="s2">"future"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"reviews_count"</span><span class="o">:</span> <span class="mi">135</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">3385582</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">"GT-i9195"</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Galaxy S4 mini i9195 LTE (8GB)"</span><span class="p">,</span>
+      <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"Samsung Galaxy S4 mini i9195 LTE (8GB)"</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">439.0</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">272.33</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">4.41463</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">56</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"Single SIM, Δίκτυο Σύνδεσης: 4G - LTE, Κάμερα: 8 MP,  Οθόνη: 4.3\" , Ανάλυση: 960 x 540 pixels, Χειρισμός: Οθόνη αφής (Touch screen),  Εσωτερική Μνήμη: 8.0 GB,  Ασύρματο Δίκτυο: Wi-Fi, Λειτουργικό Σύστημα: Android, SAR: 0.33 W/kg, Έτος Κυκλοφορίας: 2013, SmartPhone"</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/003385/3385582/small_samsung-galaxy-s4-mini-I9190-1.jpg"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/003385/3385582/medium_samsung-galaxy-s4-mini-I9190-1.jpg"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/003385/3385582/tiny_samsung-galaxy-s4-mini-I9190-1.jpg"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/003385/3385582/medium_samsung-galaxy-s4-mini-I9190-1.jpg"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/003385/3385582/samsung-galaxy-s4-mini-I9190-1.jpg"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">28</span><span class="p">,</span>
+      <span class="s2">"future"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"reviews_count"</span><span class="o">:</span> <span class="mi">41</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">3765221</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">"GT-N9005"</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Galaxy Note 3 N9005 (32GB)"</span><span class="p">,</span>
+      <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"Samsung Galaxy Note 3 N9005 (32GB)"</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">822.19</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">480.25</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">4.74545</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">47</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"Single SIM, Δίκτυο Σύνδεσης: 4G - LTE, Κάμερα: 13 MP,  Οθόνη: 5.7\" , Ανάλυση: 1920 x 1080 pixels, Χειρισμός: Οθόνη αφής (Touch screen),  Εσωτερική Μνήμη: 32.0 GB,  Ασύρματο Δίκτυο: Wi-Fi, Λειτουργικό Σύστημα: Android, SAR: 0.29 W/kg, Έτος Κυκλοφορίας: 2013, SmartPhone"</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/003765/3765221/small_Galxy-Note3_002_front-with-pen_Jet-Black.jpg"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/003765/3765221/medium_Galxy-Note3_002_front-with-pen_Jet-Black.jpg"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/003765/3765221/tiny_Galxy-Note3_002_front-with-pen_Jet-Black.jpg"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/003765/3765221/medium_Galxy-Note3_002_front-with-pen_Jet-Black.jpg"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/003765/3765221/Galxy-Note3_002_front-with-pen_Jet-Black.jpg"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">28</span><span class="p">,</span>
+      <span class="s2">"future"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"reviews_count"</span><span class="o">:</span> <span class="mi">55</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">3783654</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"iPhone 5S (16GB)"</span><span class="p">,</span>
+      <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"Apple iPhone 5S (16GB)"</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">959.9</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">576.0</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">4.23913</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">56</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"Single SIM, Δίκτυο Σύνδεσης: 4G - LTE, Κάμερα: 8.0 MP,  Οθόνη: 4.0\" , Ανάλυση: 1136 x 640 pixels, Χειρισμός: Οθόνη αφής (Touch screen),  Εσωτερική Μνήμη: 16.0 GB,  Ασύρματο Δίκτυο: Wi-Fi, Λειτουργικό Σύστημα: iOS, Έτος Κυκλοφορίας: 2013, SmartPhone"</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/003783/3783654/small_iphone5s-gallery1-2013"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/003783/3783654/medium_iphone5s-gallery1-2013"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/003783/3783654/tiny_iphone5s-gallery1-2013"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/003783/3783654/medium_iphone5s-gallery1-2013"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/003783/3783654/iphone5s-gallery1-2013"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">356</span><span class="p">,</span>
+      <span class="s2">"future"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"reviews_count"</span><span class="o">:</span> <span class="mi">46</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">3598645</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">"I9295"</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Galaxy S4 Active"</span><span class="p">,</span>
+      <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"Samsung Galaxy S4 Active"</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">619.0</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">347.2</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">4.71429</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">32</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"Single SIM, Δίκτυο Σύνδεσης: 2G / 3G / 4G - LTE, Κάμερα: 8 MP,  Οθόνη: 5.0\" , Ανάλυση: 1920 x 1080 pixels, Χειρισμός: Οθόνη αφής (Touch screen),  Εσωτερική Μνήμη: 16.0 GB,  Ασύρματο Δίκτυο: Wi-Fi, Λειτουργικό Σύστημα: Android, SAR: 0.26 W/kg, Έτος Κυκλοφορίας: 2013, SmartPhone"</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/003598/3598645/small_Samsung-I9295-Galaxy-S4-0.jpg"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/003598/3598645/medium_Samsung-I9295-Galaxy-S4-0.jpg"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/003598/3598645/tiny_Samsung-I9295-Galaxy-S4-0.jpg"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/003598/3598645/medium_Samsung-I9295-Galaxy-S4-0.jpg"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/003598/3598645/Samsung-I9295-Galaxy-S4-0.jpg"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">28</span><span class="p">,</span>
+      <span class="s2">"future"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"reviews_count"</span><span class="o">:</span> <span class="mi">7</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">3690169</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">"D802"</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"G2 (16GB)"</span><span class="p">,</span>
+      <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"LG G2 (16GB)"</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">616.97</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">367.0</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">4.53448</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">42</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"Single SIM, Δίκτυο Σύνδεσης: 2G / 3G / 4G - LTE, Κάμερα: 13 MP,  Οθόνη: 5.2\" , Ανάλυση: 1920 x 1080 pixels, Χειρισμός: Οθόνη αφής (Touch screen),  Εσωτερική Μνήμη: 16.0 GB,  Ασύρματο Δίκτυο: Wi-Fi, Λειτουργικό Σύστημα: Android, Έτος Κυκλοφορίας: 2013, SmartPhone"</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/003690/3690169/small_LGG2_Front.jpg"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/003690/3690169/medium_LGG2_Front.jpg"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/003690/3690169/tiny_LGG2_Front.jpg"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/003690/3690169/medium_LGG2_Front.jpg"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/003690/3690169/LGG2_Front.jpg"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">30</span><span class="p">,</span>
+      <span class="s2">"future"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"reviews_count"</span><span class="o">:</span> <span class="mi">58</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">4047788</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Google Nexus 5 D821 (16GB)"</span><span class="p">,</span>
+      <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"LG Google Nexus 5 D821 (16GB)"</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">442.0</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">356.99</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">4.75</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">26</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"Single SIM, Δίκτυο Σύνδεσης: 4G - LTE, Κάμερα: 8.0 MP,  Οθόνη: 4.95\" , Ανάλυση: 1920 x 1080 pixels, Χειρισμός: Οθόνη αφής (Touch screen),  Εσωτερική Μνήμη: 16.0 GB,  Ασύρματο Δίκτυο: Wi-Fi, Λειτουργικό Σύστημα: Android, Έτος Κυκλοφορίας: 2013, SmartPhone"</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/004047/4047788/small_Nexus5_Front.jpg"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/004047/4047788/medium_Nexus5_Front.jpg"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/004047/4047788/tiny_Nexus5_Front.jpg"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/004047/4047788/medium_Nexus5_Front.jpg"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/004047/4047788/Nexus5_Front.jpg"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">30</span><span class="p">,</span>
+      <span class="s2">"future"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"reviews_count"</span><span class="o">:</span> <span class="mi">16</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">3763881</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">"C6903"</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Xperia Z1 Honami"</span><span class="p">,</span>
+      <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"Sony Xperia Z1 Honami"</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">718.4</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">438.7</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">4.88</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">42</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"Single SIM, Δίκτυο Σύνδεσης: 4G - LTE, Κάμερα: 20.7 MP,  Οθόνη: 5.0\" , Ανάλυση: 1920 x 1080 pixels, Χειρισμός: Οθόνη αφής (Touch screen),  Εσωτερική Μνήμη: 16.0 GB,  Ασύρματο Δίκτυο: Wi-Fi, Λειτουργικό Σύστημα: Android, Έτος Κυκλοφορίας: 2013, SmartPhone"</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/003763/3763881/small_xperia-Z1-hero-black-1240x840-3c449514e1daf8b0652a5dc235530ebc.jpg"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/003763/3763881/medium_xperia-Z1-hero-black-1240x840-3c449514e1daf8b0652a5dc235530ebc.jpg"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/003763/3763881/tiny_xperia-Z1-hero-black-1240x840-3c449514e1daf8b0652a5dc235530ebc.jpg"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/003763/3763881/medium_xperia-Z1-hero-black-1240x840-3c449514e1daf8b0652a5dc235530ebc.jpg"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/003763/3763881/xperia-Z1-hero-black-1240x840-3c449514e1daf8b0652a5dc235530ebc.jpg"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="s2">"future"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"reviews_count"</span><span class="o">:</span> <span class="mi">25</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">2395493</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">"N7100"</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Galaxy Note II 16GB"</span><span class="p">,</span>
+      <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"Samsung Galaxy Note II 16GB"</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">689.0</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">319.59</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">4.94915</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">33</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"Single SIM, Δίκτυο Σύνδεσης: 3G, Κάμερα: 8 MP,  Οθόνη: 5.5\" , Ανάλυση: 1280 x 720 pixels, Χειρισμός: Οθόνη αφής (Touch screen),  Εσωτερική Μνήμη: 16.0 GB,  Ασύρματο Δίκτυο: Wi-Fi, Λειτουργικό Σύστημα: Android, SAR: 0.17 W/kg, Έτος Κυκλοφορίας: 2012, SmartPhone"</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/002395/2395493/small_img_white_02.jpg"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/002395/2395493/medium_img_white_02.jpg"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/002395/2395493/tiny_img_white_02.jpg"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/002395/2395493/medium_img_white_02.jpg"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/002395/2395493/img_white_02.jpg"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">28</span><span class="p">,</span>
+      <span class="s2">"future"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"reviews_count"</span><span class="o">:</span> <span class="mi">59</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">2901687</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">"C6603"</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Xperia Z"</span><span class="p">,</span>
+      <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"Sony Xperia Z"</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">649.0</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">317.0</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">4.16176</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">47</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"Single SIM, Δίκτυο Σύνδεσης: 2G / 3G / 4G - LTE, Κάμερα: 13.1 MP,  Οθόνη: 5.0\" , Ανάλυση: 1920 x 1080 pixels, Χειρισμός: Οθόνη αφής (Touch screen),  Εσωτερική Μνήμη: 16.0 GB,  Ασύρματο Δίκτυο: Wi-Fi, Λειτουργικό Σύστημα: Android, SAR: 0.48 W/kg, Έτος Κυκλοφορίας: 2013, SmartPhone"</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/002901/2901687/small_xperia-z-gallery-02-1240x840-dc3b2c28d2f404392cadb352aceac578-opt.png"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/002901/2901687/medium_xperia-z-gallery-02-1240x840-dc3b2c28d2f404392cadb352aceac578-opt.png"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/002901/2901687/tiny_xperia-z-gallery-02-1240x840-dc3b2c28d2f404392cadb352aceac578-opt.png"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/002901/2901687/medium_xperia-z-gallery-02-1240x840-dc3b2c28d2f404392cadb352aceac578-opt.png"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/002901/2901687/xperia-z-gallery-02-1240x840-dc3b2c28d2f404392cadb352aceac578-opt.png"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="s2">"future"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"reviews_count"</span><span class="o">:</span> <span class="mi">68</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"pagination"</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">"total_results"</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+      <span class="s2">"total_pages"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"page"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"per"</span><span class="o">:</span> <span class="mi">25</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre>
+</div>
+</div>
+
+<h2 id="retrieve-a-skus-products">Retrieve a sku’s products</h2>
 
 <pre class="terminal">
   GET /skus/:id/products
@@ -330,7 +608,7 @@
 </div>
 </div>
 
-<h2 id="retrieve-a-skus-reviews">Retrieve a SKU’s reviews</h2>
+<h2 id="retrieve-a-skus-reviews">Retrieve a sku’s reviews</h2>
 
 <pre class="terminal">
   GET /skus/:id/reviews
