@@ -1,25 +1,55 @@
 ---
 :request:
   :verb: GET
-  :path: /search
+  :path: /search?q=Cubieboard2
   :params:
-    q: Cubieboard2
-    page: '1'
-    per: '2'
-    oauth_token: Vr/AzbfQt3ywQlKUonZk25VqRg2ILFAFV/voi69FD9xlJl5Yp9DmDWb6PAEsVwuI1KckH3aa1/vxRaj/Mbwg==
+    page: 1
+    per: 2
 :status: 200
 :headers:
-  content-type: application/json; charset=utf-8
-  x-meta-request-version: 0.2.1
-  x-ua-compatible: IE=Edge,chrome=1
-  etag: ! '"94ed7ee9f4a276ecfbe1149fe0386c65"'
-  cache-control: max-age=0, private, must-revalidate
-  x-request-id: e83c9546bd9784d387d61ebafedf9e86
-  x-runtime: '0.049989'
-  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
-  date: Fri, 20 Dec 2013 10:53:51 GMT
-  content-length: '268'
-  connection: close
-  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTc1ODJhZDZlMjE1MTNkYjdiNGU4ZTJiY2JkOTVkYzlmBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--02bf28aeea193cf859814226d00ea914e2d6f2fb;
-    path=/; expires=Thu, 20-Feb-2014 10:53:51 GMT; HttpOnly
-:body: ! '{"category":{"id":146,"name":"\u039c\u03b9\u03ba\u03c1\u03bf\u03b7\u03bb\u03b5\u03ba\u03c4\u03c1\u03bf\u03bd\u03b9\u03ba\u03ac","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/146.jpg","leaf":true},"meta":{"result_type":"category_skus_match"}}'
+  server: !binary |-
+    bmdpbng=
+  !binary "Y29udGVudC10eXBl": !binary |-
+    YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
+  !binary "dmFyeQ==": !binary |-
+    QWNjZXB0LUVuY29kaW5n
+  status: !binary |-
+    MjAwIE9L
+  x-ua-compatible: !binary |-
+    SUU9RWRnZSxjaHJvbWU9MQ==
+  cache-control: !binary |-
+    bWF4LWFnZT0wLCBwcml2YXRlLCBtdXN0LXJldmFsaWRhdGU=
+  x-request-id: !binary |-
+    MjM3MDM4MDY5Mg==
+  x-runtime: !binary |-
+    MC4xMDgxMjE=
+  x-dns-prefetch-control: !binary |-
+    b2Zm
+  x-app: !binary |-
+    bHVua3dpbGw=
+  content-length: !binary |-
+    MTkz
+  accept-ranges: !binary |-
+    Ynl0ZXM=
+  date: !binary |-
+    V2VkLCAxMiBGZWIgMjAxNCAxNToyNzozMiBHTVQ=
+  x-varnish: !binary |-
+    MjM3MDM4MDY5Mg==
+  age: !binary |-
+    MA==
+  via: !binary |-
+    MS4xIHZhcm5pc2g=
+  connection: !binary |-
+    Y2xvc2U=
+  x-origin: !binary |-
+    dmFybmlzaDE=
+  x-cache: !binary |-
+    TUlTUw==
+:body: !binary |-
+  eyJjYXRlZ29yeSI6eyJpZCI6MTQ2LCJuYW1lIjoiXHUwMzljXHUwM2I5XHUw
+  M2JhXHUwM2MxXHUwM2JmXHUwM2I3XHUwM2JiXHUwM2I1XHUwM2JhXHUwM2M0
+  XHUwM2MxXHUwM2JmXHUwM2JkXHUwM2I5XHUwM2JhXHUwM2FjIiwiY2hpbGRy
+  ZW5fY291bnQiOjAsImltYWdlX3VybCI6Imh0dHA6Ly9hLnNjZG4uZ3IvaW1h
+  Z2VzL2NhdGVnb3JpZXMvbGFyZ2UvMTQ2LmpwZyIsImxlYWYiOnRydWUsInBh
+  cmVudF9pZCI6MTQ0fSwibWV0YSI6eyJyZXN1bHRfdHlwZSI6ImNhdGVnb3J5
+  X3NrdXNfbWF0Y2gifX0=

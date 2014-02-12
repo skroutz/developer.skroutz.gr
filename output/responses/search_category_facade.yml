@@ -1,29 +1,68 @@
 ---
 :request:
   :verb: GET
-  :path: /search
+  :path: /search?q=iphone
   :params:
-    q: iphone
-    page: '1'
-    per: '2'
-    oauth_token: Vr/AzbfQt3ywQlKUonZk25VqRg2ILFAFV/voi69FD9xlJl5Yp9DmDWb6PAEsVwuI1KckH3aa1/vxRaj/Mbwg==
+    page: 1
+    per: 2
 :status: 200
 :headers:
-  link: <http://localhost:3000/api/search?oauth_token=Vr%2FAzbfQt3ywQlKUonZk25VqRg2ILFAFV%2Fvoi69FD9xlJl5Yp9DmDWb6PAEsVwuI1KckH3aa1%2FvxRaj%2FMbwg%3D%3D&page=50&per=2&q=iphone>;
-    rel="last", <http://localhost:3000/api/search?oauth_token=Vr%2FAzbfQt3ywQlKUonZk25VqRg2ILFAFV%2Fvoi69FD9xlJl5Yp9DmDWb6PAEsVwuI1KckH3aa1%2FvxRaj%2FMbwg%3D%3D&page=2&per=2&q=iphone>;
-    rel="next"
-  content-type: application/json; charset=utf-8
-  x-meta-request-version: 0.2.1
-  x-ua-compatible: IE=Edge,chrome=1
-  etag: ! '"9311b397e8a8f104ab0aba8e4545a80f"'
-  cache-control: max-age=0, private, must-revalidate
-  x-request-id: 9ccaf9f1599fd605347681cc9865d2c8
-  x-runtime: '0.069555'
-  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
-  date: Fri, 20 Dec 2013 10:53:51 GMT
-  content-length: '533'
-  connection: close
-  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTI3MDZiOTMyYWMwMTgwYWMzOWVkMGY0MjY0MmQzNDg2BjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--23bbab2155992ae18796d6ea04b02f9726bee8c3;
-    path=/; expires=Thu, 20-Feb-2014 10:53:51 GMT; HttpOnly
-:body: ! '{"categories":[{"id":40,"name":"\u039a\u03b9\u03bd\u03b7\u03c4\u03ac \u03a4\u03b7\u03bb\u03ad\u03c6\u03c9\u03bd\u03b1","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/40.jpg","leaf":true,"match_count":8},{"id":579,"name":"\u0398\u03ae\u03ba\u03b5\u03c2
-  \u03ba\u03b9\u03bd\u03b7\u03c4\u03ce\u03bd \u03c4\u03b7\u03bb\u03b5\u03c6\u03ce\u03bd\u03c9\u03bd","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/579.jpg","leaf":true,"match_count":2937}],"meta":{"result_type":"category_facade"}}'
+  server: !binary |-
+    bmdpbng=
+  !binary "Y29udGVudC10eXBl": !binary |-
+    YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
+  !binary "dmFyeQ==": !binary |-
+    QWNjZXB0LUVuY29kaW5n
+  status: !binary |-
+    MjAwIE9L
+  !binary "bGluaw==": !binary |-
+    PGh0dHA6Ly9hcGkuc2tyb3V0ei5nci9hcGkvc2VhcmNoP3BhZ2U9NTgmcGVy
+    PTImcT1pcGhvbmU+OyByZWw9Imxhc3QiLCA8aHR0cDovL2FwaS5za3JvdXR6
+    LmdyL2FwaS9zZWFyY2g/cGFnZT0yJnBlcj0yJnE9aXBob25lPjsgcmVsPSJu
+    ZXh0Ig==
+  x-ua-compatible: !binary |-
+    SUU9RWRnZSxjaHJvbWU9MQ==
+  cache-control: !binary |-
+    bWF4LWFnZT0wLCBwcml2YXRlLCBtdXN0LXJldmFsaWRhdGU=
+  x-request-id: !binary |-
+    MjM3MDM3OTcyMA==
+  x-runtime: !binary |-
+    MC4yMDk2NTE=
+  x-dns-prefetch-control: !binary |-
+    b2Zm
+  x-app: !binary |-
+    bHVua3dpbGw=
+  content-length: !binary |-
+    Mjky
+  accept-ranges: !binary |-
+    Ynl0ZXM=
+  date: !binary |-
+    V2VkLCAxMiBGZWIgMjAxNCAxNToyNzoyMSBHTVQ=
+  x-varnish: !binary |-
+    MjM3MDM3OTcyMA==
+  age: !binary |-
+    MA==
+  via: !binary |-
+    MS4xIHZhcm5pc2g=
+  connection: !binary |-
+    Y2xvc2U=
+  x-origin: !binary |-
+    dmFybmlzaDE=
+  x-cache: !binary |-
+    TUlTUw==
+:body: !binary |-
+  eyJjYXRlZ29yaWVzIjpbeyJpZCI6NDAsIm5hbWUiOiJcdTAzOWFcdTAzYjlc
+  dTAzYmRcdTAzYjdcdTAzYzRcdTAzYWMgXHUwM2E0XHUwM2I3XHUwM2JiXHUw
+  M2FkXHUwM2M2XHUwM2M5XHUwM2JkXHUwM2IxIiwiY2hpbGRyZW5fY291bnQi
+  OjAsImltYWdlX3VybCI6Imh0dHA6Ly9hLnNjZG4uZ3IvaW1hZ2VzL2NhdGVn
+  b3JpZXMvbGFyZ2UvNDAuanBnIiwibGVhZiI6dHJ1ZSwicGFyZW50X2lkIjo4
+  NiwibWF0Y2hfY291bnQiOjE0fSx7ImlkIjo1NzksIm5hbWUiOiJcdTAzOThc
+  dTAzYWVcdTAzYmFcdTAzYjVcdTAzYzIgXHUwMzlhXHUwM2I5XHUwM2JkXHUw
+  M2I3XHUwM2M0XHUwM2NlXHUwM2JkIFx1MDNhNFx1MDNiN1x1MDNiYlx1MDNi
+  NVx1MDNjNlx1MDNjZVx1MDNiZFx1MDNjOVx1MDNiZCIsImNoaWxkcmVuX2Nv
+  dW50IjowLCJpbWFnZV91cmwiOiJodHRwOi8vYS5zY2RuLmdyL2ltYWdlcy9j
+  YXRlZ29yaWVzL2xhcmdlLzU3OS5qcGciLCJsZWFmIjp0cnVlLCJwYXJlbnRf
+  aWQiOjg2LCJtYXRjaF9jb3VudCI6Njk0M31dLCJtZXRhIjp7InJlc3VsdF90
+  eXBlIjoiY2F0ZWdvcnlfZmFjYWRlIiwicGFnaW5hdGlvbiI6eyJ0b3RhbF9y
+  ZXN1bHRzIjoxMTYsInRvdGFsX3BhZ2VzIjo1OCwicGFnZSI6MSwicGVyIjoy
+  fX19
