@@ -113,6 +113,9 @@ requests:
     key: skus_products
     request: 'GET {{base_url}}/skus/3703742/products'
   -
+    key: skus_similar
+    request: 'GET {{base_url}}/skus/3034682/similar'
+  -
     key: products_show
     request: 'GET {{base_url}}/products/13313788'
   -

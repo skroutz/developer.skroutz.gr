@@ -12,7 +12,7 @@ title: Sku | Skroutz API
 A SKU (Stock Keeping Unit) is an aggregation of products.  
 [Linked resources](<%= relative_path_to('/v3') %>#linked-resources): [product](<%= relative_path_to('/v3/product') %>)
 
-## List SKUs
+## List skus
 
 <pre class="terminal">
   GET /skus
@@ -20,7 +20,7 @@ A SKU (Stock Keeping Unit) is an aggregation of products.
 
 <%= render_recording :skus_index %>
 
-## List SKUS of specific category
+## List skus of specific category
 
 <pre class="terminal">
   GET /categories/:category_id/skus
@@ -28,7 +28,7 @@ A SKU (Stock Keeping Unit) is an aggregation of products.
 
 <%= render_recording :category_skus %>
 
-## Retrieve a single SKU
+## Retrieve a single sku
 
 <pre class="terminal">
   GET /skus/:id
@@ -36,7 +36,15 @@ A SKU (Stock Keeping Unit) is an aggregation of products.
 
 <%= render_recording :skus_show %>
 
-## Retrieve a SKU's products
+## Retrieve similar skus
+
+<pre class="terminal">
+  GET /skus/:id/similar
+</pre>
+
+<%= render_recording :skus_similar %>
+
+## Retrieve a sku's products
 
 <pre class="terminal">
   GET /skus/:id/products
@@ -44,7 +52,7 @@ A SKU (Stock Keeping Unit) is an aggregation of products.
 
 <%= render_recording :skus_products %>
 
-## Retrieve a SKU's reviews
+## Retrieve a sku's reviews
 
 <pre class="terminal">
   GET /skus/:id/reviews
