@@ -55,30 +55,28 @@
       <td><code>String</code></td>
       <td><code>The keyphrase to search by</code></td>
     </tr></tbody>
-</table><h3 id="case-invalid-the-query-was-invalid-eg-less-than-2-characters">Case <code>invalid</code> <em>The query was invalid. Eg. less than 2 characters</em>
-</h3>
+</table><h3 id="case-invalid-the-query-was-invalid-eg-less-than-2-characters">Case <code>invalid</code> The query was invalid. Eg. less than 2 characters</h3>
 
 <div class="example">        <p class="request">
           <span class="verb">GET</span>
-          <span class="path">/search</span>
+          <span class="path">/search?q=a</span>
         </p>
 <a href="javascript:void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
 <pre class="headers"><code>Status: 400</code></pre>
 <pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"message"</span><span class="o">:</span> <span class="s2">"Η αναζήτησή σου πρέπει να περιέχει τουλάχιστον 2 χαρακτήρες"</span><span class="p">,</span>
   <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">"result_type"</span><span class="o">:</span> <span class="s2">"invalid"</span>
-  <span class="p">},</span>
-  <span class="s2">"message"</span><span class="o">:</span> <span class="s2">"Η αναζήτησή σου πρέπει να περιέχει τουλάχιστον 2 χαρακτήρες"</span>
+  <span class="p">}</span>
 <span class="p">}</span></code></pre>
 </div>
 </div>
 
-<h3 id="case-noresults-nothing-seems-to-match-the-specified-query">Case <code>no_results</code> <em>Nothing seems to match the specified query</em>
-</h3>
+<h3 id="case-noresults-nothing-seems-to-match-the-specified-query">Case <code>no_results</code> Nothing seems to match the specified query</h3>
 
 <div class="example">        <p class="request">
           <span class="verb">GET</span>
-          <span class="path">/search</span>
+          <span class="path">/search?q=asdasdsagjgjgjweigrweji</span>
         </p>
 <a href="javascript:void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
 <pre class="headers"><code>Status: 200</code></pre>
@@ -90,106 +88,35 @@
 </div>
 </div>
 
-<h3 id="case-categorymatch-when-your-query-matched-a-category">Case <code>category_match</code> <em>When your query matched a category</em>
-</h3>
+<h3 id="case-categorymatch-when-your-query-matched-a-category">Case <code>category_match</code> When your query matched a category</h3>
 
 <div class="example">        <p class="request">
           <span class="verb">GET</span>
-          <span class="path">/search</span>
+          <span class="path">/search?q=Tablets</span>
         </p>
 <a href="javascript:void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
 <pre class="headers"><code>Status: 200</code></pre>
 <pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
-  <span class="s2">"categories"</span><span class="o">:</span> <span class="p">[</span>
-    <span class="p">{</span>
-      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">115</span><span class="p">,</span>
-      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Εφαρμογές Γραφείου"</span><span class="p">,</span>
-      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/categories/large/115.jpg"</span><span class="p">,</span>
-      <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">1</span>
-    <span class="p">},</span>
-    <span class="p">{</span>
-      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">37</span><span class="p">,</span>
-      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Gadgets"</span><span class="p">,</span>
-      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/37.jpg"</span><span class="p">,</span>
-      <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">1</span>
-    <span class="p">}</span>
-  <span class="p">],</span>
-  <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">"result_type"</span><span class="o">:</span> <span class="s2">"category_facade"</span>
-  <span class="p">}</span>
-<span class="p">}</span></code></pre>
-</div>
-</div>
-
-<h3 id="case-categoryfacade-when-your-query-matched-many-categories">Case <code>category_facade</code> <em>When your query matched many categories</em>
-</h3>
-
-<div class="example">        <p class="request">
-          <span class="verb">GET</span>
-          <span class="path">/search</span>
-        </p>
-<a href="javascript:void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
-<pre class="headers"><code>Status: 200</code></pre>
-<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
-  <span class="s2">"categories"</span><span class="o">:</span> <span class="p">[</span>
-    <span class="p">{</span>
-      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span>
-      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Κινητά Τηλέφωνα"</span><span class="p">,</span>
-      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/40.jpg"</span><span class="p">,</span>
-      <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">8</span>
-    <span class="p">},</span>
-    <span class="p">{</span>
-      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">579</span><span class="p">,</span>
-      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Θήκες κινητών τηλεφώνων"</span><span class="p">,</span>
-      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/579.jpg"</span><span class="p">,</span>
-      <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">2937</span>
-    <span class="p">}</span>
-  <span class="p">],</span>
-  <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">"result_type"</span><span class="o">:</span> <span class="s2">"category_facade"</span>
-  <span class="p">}</span>
-<span class="p">}</span></code></pre>
-</div>
-</div>
-
-<h3 id="case-manufacturermatch-your-query-matched-one-of-our-manufacturers">Case <code>manufacturer_match</code> *Your query matched one of our manufacturers</h3>
-<p>exactly*</p>
-
-<div class="example">        <p class="request">
-          <span class="verb">GET</span>
-          <span class="path">/search</span>
-        </p>
-<a href="javascript:void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
-<pre class="headers"><code>Status: 200</code></pre>
-<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
-  <span class="s2">"manufacturer"</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">"id"</span><span class="o">:</span> <span class="mi">356</span><span class="p">,</span>
-    <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Apple"</span><span class="p">,</span>
-    <span class="s2">"image_url"</span><span class="o">:</span> <span class="kc">null</span>
+  <span class="s2">"category"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"id"</span><span class="o">:</span> <span class="mi">1105</span><span class="p">,</span>
+    <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Tablets"</span><span class="p">,</span>
+    <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/1105.jpg"</span><span class="p">,</span>
+    <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">769</span>
   <span class="p">},</span>
   <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">"result_type"</span><span class="o">:</span> <span class="s2">"manufacturer_match"</span>
+    <span class="s2">"result_type"</span><span class="o">:</span> <span class="s2">"category_match"</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre>
 </div>
 </div>
 
-<h3 id="case-latinmapping-your-query-has-an-exact-match-in-its-latin-form">Case <code>latin_mapping</code> <em>Your query has an exact match in its latin form</em>
-</h3>
-
-<p>Note: You will have to follow one or more 302 redirections</p>
+<h3 id="case-categoryfacade-when-your-query-matched-many-categories">Case <code>category_facade</code> When your query matched many categories</h3>
 
 <div class="example">        <p class="request">
           <span class="verb">GET</span>
-          <span class="path">/search</span>
+          <span class="path">/search?q=iphone</span>
         </p>
 <a href="javascript:void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
 <pre class="headers"><code>Status: 200</code></pre>
@@ -211,16 +138,14 @@
       <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/579.jpg"</span><span class="p">,</span>
       <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
       <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">86</span><span class="p">,</span>
-      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">7208</span>
+      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">6943</span>
     <span class="p">}</span>
   <span class="p">],</span>
   <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">"result_type"</span><span class="o">:</span> <span class="s2">"category_facade"</span><span class="p">,</span>
-    <span class="s2">"latin_mapping_original"</span><span class="o">:</span> <span class="s2">"ιπηονε"</span><span class="p">,</span>
-    <span class="s2">"latin_mapping_latin"</span><span class="o">:</span> <span class="s2">"iphone"</span><span class="p">,</span>
     <span class="s2">"pagination"</span><span class="o">:</span> <span class="p">{</span>
-      <span class="s2">"total_results"</span><span class="o">:</span> <span class="mi">117</span><span class="p">,</span>
-      <span class="s2">"total_pages"</span><span class="o">:</span> <span class="mi">59</span><span class="p">,</span>
+      <span class="s2">"total_results"</span><span class="o">:</span> <span class="mi">116</span><span class="p">,</span>
+      <span class="s2">"total_pages"</span><span class="o">:</span> <span class="mi">58</span><span class="p">,</span>
       <span class="s2">"page"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
       <span class="s2">"per"</span><span class="o">:</span> <span class="mi">2</span>
     <span class="p">}</span>
@@ -229,12 +154,78 @@
 </div>
 </div>
 
-<h3 id="case-skumatch-your-query-matches-exactly-one-of-our-skus">Case <code>sku_match</code> <em>Your query matches exactly one of our skus</em>
-</h3>
+<h3 id="case-manufacturermatch-your-query-matched-one-of-our-manufacturers-exactly">Case <code>manufacturer_match</code> Your query matched one of our manufacturers exactly</h3>
 
 <div class="example">        <p class="request">
           <span class="verb">GET</span>
-          <span class="path">/search</span>
+          <span class="path">/search?q=apple</span>
+        </p>
+<a href="javascript:void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"manufacturer"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"id"</span><span class="o">:</span> <span class="mi">356</span><span class="p">,</span>
+    <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Apple"</span><span class="p">,</span>
+    <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/manufacturer_logos/000000/356/003730241e8ed691aa6b4e5f264a0e2d.jpg"</span>
+  <span class="p">},</span>
+  <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"result_type"</span><span class="o">:</span> <span class="s2">"manufacturer_match"</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre>
+</div>
+</div>
+
+<h3 id="case-latinmapping-your-query-has-an-exact-match-in-its-latin-form">Case <code>latin_mapping</code> Your query has an exact match in its latin form</h3>
+
+<p>Note: You will have to follow one or more 302 redirections</p>
+
+<div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/search?q=ιπηονε</span>
+        </p>
+<a href="javascript:void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"categories"</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Κινητά Τηλέφωνα"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/40.jpg"</span><span class="p">,</span>
+      <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">86</span><span class="p">,</span>
+      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">14</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">579</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Θήκες Κινητών Τηλεφώνων"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/579.jpg"</span><span class="p">,</span>
+      <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">86</span><span class="p">,</span>
+      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">6943</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"result_type"</span><span class="o">:</span> <span class="s2">"category_facade"</span><span class="p">,</span>
+    <span class="s2">"latin_mapping_original"</span><span class="o">:</span> <span class="s2">"ιπηονε"</span><span class="p">,</span>
+    <span class="s2">"latin_mapping_latin"</span><span class="o">:</span> <span class="s2">"iphone"</span><span class="p">,</span>
+    <span class="s2">"pagination"</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">"total_results"</span><span class="o">:</span> <span class="mi">116</span><span class="p">,</span>
+      <span class="s2">"total_pages"</span><span class="o">:</span> <span class="mi">58</span><span class="p">,</span>
+      <span class="s2">"page"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"per"</span><span class="o">:</span> <span class="mi">2</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre>
+</div>
+</div>
+
+<h3 id="case-skumatch-your-query-matches-exactly-one-of-our-skus">Case <code>sku_match</code> Your query matches exactly one of our skus</h3>
+
+<div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/search?q=Dimage%202300</span>
         </p>
 <a href="javascript:void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
 <pre class="headers"><code>Status: 200</code></pre>
@@ -246,14 +237,13 @@
     <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Dimage 2300"</span><span class="p">,</span>
     <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"Konica Minolta Dimage 2300"</span><span class="p">,</span>
     <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">434</span><span class="p">,</span>
-    <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="s2">"740|Photoqueen"</span><span class="p">,</span>
+    <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="s2">"740|Photoqueen|photoqueen"</span><span class="p">,</span>
     <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
     <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">49.0</span><span class="p">,</span>
     <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">49.0</span><span class="p">,</span>
     <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">0.0</span><span class="p">,</span>
     <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
     <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"Compact, Αισθητήρας: CCD, Οθόνη: 1.8 inches"</span><span class="p">,</span>
-    <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
     <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
       <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/000304/304460/small_0562a9b791f404abe339b0cf577bd302.jpg.jpg"</span><span class="p">,</span>
       <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/000304/304460/medium_0562a9b791f404abe339b0cf577bd302.jpg.jpg"</span><span class="p">,</span>
@@ -261,7 +251,9 @@
       <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/000304/304460/medium_0562a9b791f404abe339b0cf577bd302.jpg.jpg"</span><span class="p">,</span>
       <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/000304/304460/0562a9b791f404abe339b0cf577bd302.jpg.jpg"</span>
     <span class="p">},</span>
-    <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">152</span>
+    <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">152</span><span class="p">,</span>
+    <span class="s2">"future"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="s2">"reviews_count"</span><span class="o">:</span> <span class="mi">0</span>
   <span class="p">},</span>
   <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">"result_type"</span><span class="o">:</span> <span class="s2">"sku_match"</span>
@@ -270,12 +262,11 @@
 </div>
 </div>
 
-<h3 id="case-categoryskusmatch-your-query-matches-skus-from-a-category">Case <code>category_skus_match</code> <em>Your query matches skus from a category</em>
-</h3>
+<h3 id="case-categoryskusmatch-your-query-matches-skus-from-a-category">Case <code>category_skus_match</code> Your query matches skus from a category</h3>
 
 <div class="example">        <p class="request">
           <span class="verb">GET</span>
-          <span class="path">/search</span>
+          <span class="path">/search?q=Cubieboard2</span>
         </p>
 <a href="javascript:void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
 <pre class="headers"><code>Status: 200</code></pre>
@@ -285,7 +276,8 @@
     <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Μικροηλεκτρονικά"</span><span class="p">,</span>
     <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
     <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/146.jpg"</span><span class="p">,</span>
-    <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">true</span>
+    <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">144</span>
   <span class="p">},</span>
   <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">"result_type"</span><span class="o">:</span> <span class="s2">"category_skus_match"</span>
@@ -294,12 +286,11 @@
 </div>
 </div>
 
-<h3 id="case-drop-your-query-has-no-results-but-the-proposals-in-the">Case <code>drop</code> *Your query has no results but the proposals in the</h3>
-<p>response have*</p>
+<h3 id="case-drop-your-query-has-no-results-but-the-proposals-in-the-response-have">Case <code>drop</code> Your query has no results but the proposals in the response have</h3>
 
 <div class="example">        <p class="request">
           <span class="verb">GET</span>
-          <span class="path">/search</span>
+          <span class="path">/search?q=wrong%20iphone</span>
         </p>
 <a href="javascript:void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
 <pre class="headers"><code>Status: 200</code></pre>

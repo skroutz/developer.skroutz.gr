@@ -1,11 +1,10 @@
 ---
 :request:
   :verb: GET
-  :path: /search
+  :path: /search?q=ιπηονε
   :params:
-    q: ιπηονε
-    page: '1'
-    per: '2'
+    page: 1
+    per: 2
 :status: 200
 :headers:
   server: !binary |-
@@ -20,7 +19,7 @@
     PGh0dHA6Ly9hcGkuc2tyb3V0ei5nci9hcGkvc2VhcmNoP2tleXBocmFzZT0l
     Q0UlQjklQ0YlODAlQ0UlQjclQ0UlQkYlQ0UlQkQlQ0UlQjUmbGF0aW5fbWFw
     cGluZz0lQ0UlQjklQ0YlODAlQ0UlQjclQ0UlQkYlQ0UlQkQlQ0UlQjUmcGFn
-    ZT01OSZwZXI9MiZxPWlwaG9uZT47IHJlbD0ibGFzdCIsIDxodHRwOi8vYXBp
+    ZT01OCZwZXI9MiZxPWlwaG9uZT47IHJlbD0ibGFzdCIsIDxodHRwOi8vYXBp
     LnNrcm91dHouZ3IvYXBpL3NlYXJjaD9rZXlwaHJhc2U9JUNFJUI5JUNGJTgw
     JUNFJUI3JUNFJUJGJUNFJUJEJUNFJUI1JmxhdGluX21hcHBpbmc9JUNFJUI5
     JUNGJTgwJUNFJUI3JUNFJUJGJUNFJUJEJUNFJUI1JnBhZ2U9MiZwZXI9MiZx
@@ -30,21 +29,21 @@
   cache-control: !binary |-
     bWF4LWFnZT0wLCBwcml2YXRlLCBtdXN0LXJldmFsaWRhdGU=
   x-request-id: !binary |-
-    MjM0MTk4MzIyMg==
+    MjM3MDM3NzAwOQ==
   x-runtime: !binary |-
-    MC4xNTIxNDY=
+    MC4xNDg1NzI=
   x-dns-prefetch-control: !binary |-
     b2Zm
   x-app: !binary |-
-    YmVuank=
+    bHVua3dpbGw=
   content-length: !binary |-
     MzI3
   accept-ranges: !binary |-
     Ynl0ZXM=
   date: !binary |-
-    RnJpLCAwNyBGZWIgMjAxNCAxMzo1MzoyOSBHTVQ=
+    V2VkLCAxMiBGZWIgMjAxNCAxNToyNjo1MSBHTVQ=
   x-varnish: !binary |-
-    MjM0MTk4MzIyMg==
+    MjM3MDM3NzAwOQ==
   age: !binary |-
     MA==
   via: !binary |-
@@ -67,9 +66,9 @@
   NVx1MDNjNlx1MDNjZVx1MDNiZFx1MDNjOVx1MDNiZCIsImNoaWxkcmVuX2Nv
   dW50IjowLCJpbWFnZV91cmwiOiJodHRwOi8vYS5zY2RuLmdyL2ltYWdlcy9j
   YXRlZ29yaWVzL2xhcmdlLzU3OS5qcGciLCJsZWFmIjp0cnVlLCJwYXJlbnRf
-  aWQiOjg2LCJtYXRjaF9jb3VudCI6NzIwOH1dLCJtZXRhIjp7InJlc3VsdF90
+  aWQiOjg2LCJtYXRjaF9jb3VudCI6Njk0M31dLCJtZXRhIjp7InJlc3VsdF90
   eXBlIjoiY2F0ZWdvcnlfZmFjYWRlIiwibGF0aW5fbWFwcGluZ19vcmlnaW5h
   bCI6Ilx1MDNiOVx1MDNjMFx1MDNiN1x1MDNiZlx1MDNiZFx1MDNiNSIsImxh
   dGluX21hcHBpbmdfbGF0aW4iOiJpcGhvbmUiLCJwYWdpbmF0aW9uIjp7InRv
-  dGFsX3Jlc3VsdHMiOjExNywidG90YWxfcGFnZXMiOjU5LCJwYWdlIjoxLCJw
+  dGFsX3Jlc3VsdHMiOjExNiwidG90YWxfcGFnZXMiOjU4LCJwYWdlIjoxLCJw
   ZXIiOjJ9fX0=

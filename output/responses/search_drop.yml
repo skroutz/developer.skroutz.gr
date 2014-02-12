@@ -1,23 +1,47 @@
 ---
 :request:
   :verb: GET
-  :path: /search
-  :params:
-    q: wrong iphone
-    oauth_token: Vr/AzbfQt3ywQlKUonZk25VqRg2ILFAFV/voi69FD9xlJl5Yp9DmDWb6PAEsVwuI1KckH3aa1/vxRaj/Mbwg==
+  :path: /search?q=wrong%20iphone
 :status: 200
 :headers:
-  content-type: application/json; charset=utf-8
-  x-meta-request-version: 0.2.1
-  x-ua-compatible: IE=Edge,chrome=1
-  etag: ! '"46d9f5f8501f0fbd6720ff256ea7ed15"'
-  cache-control: max-age=0, private, must-revalidate
-  x-request-id: 521da6e854db143bdac77f641fdb6996
-  x-runtime: '0.085454'
-  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
-  date: Fri, 20 Dec 2013 10:53:51 GMT
-  content-length: '62'
-  connection: close
-  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTI4MTFjY2NjZTkxNGU5YzU5N2FiNGM5OTQ3ZjZkOTNiBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--7ba6f2ab3ef67e4eb1f2c2fd974e82603dd11965;
-    path=/; expires=Thu, 20-Feb-2014 10:53:51 GMT; HttpOnly
-:body: ! '{"proposals":["wrong","iphone"],"meta":{"result_type":"drop"}}'
+  server: !binary |-
+    bmdpbng=
+  !binary "Y29udGVudC10eXBl": !binary |-
+    YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
+  !binary "dmFyeQ==": !binary |-
+    QWNjZXB0LUVuY29kaW5n
+  status: !binary |-
+    MjAwIE9L
+  x-ua-compatible: !binary |-
+    SUU9RWRnZSxjaHJvbWU9MQ==
+  cache-control: !binary |-
+    bWF4LWFnZT0wLCBwcml2YXRlLCBtdXN0LXJldmFsaWRhdGU=
+  x-request-id: !binary |-
+    MjM3MDM3NzU3MQ==
+  x-runtime: !binary |-
+    MC4xODk0OTE=
+  x-dns-prefetch-control: !binary |-
+    b2Zm
+  x-app: !binary |-
+    bHVua3dpbGw=
+  content-length: !binary |-
+    ODE=
+  accept-ranges: !binary |-
+    Ynl0ZXM=
+  date: !binary |-
+    V2VkLCAxMiBGZWIgMjAxNCAxNToyNjo1NyBHTVQ=
+  x-varnish: !binary |-
+    MjM3MDM3NzU3MQ==
+  age: !binary |-
+    MA==
+  via: !binary |-
+    MS4xIHZhcm5pc2g=
+  connection: !binary |-
+    Y2xvc2U=
+  x-origin: !binary |-
+    dmFybmlzaDE=
+  x-cache: !binary |-
+    TUlTUw==
+:body: !binary |-
+  eyJwcm9wb3NhbHMiOlsid3JvbmciLCJpcGhvbmUiXSwibWV0YSI6eyJyZXN1
+  bHRfdHlwZSI6ImRyb3AifX0=
