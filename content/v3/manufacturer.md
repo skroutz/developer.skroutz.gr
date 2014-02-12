@@ -22,3 +22,35 @@ title: Manufacturers | Skroutz API
 </pre>
 
 <%= render_recording :manufacturers_show %>
+
+## Retrieve a manufacturer's categories
+
+### Order
+Valid Parameters to perform ordering
+
+Name        | Type     | Description
+------------|----------| -----------
+`order_by`  | `String` | `popularity (default) | name`
+`order_dir` | `String` | `asc (default) | desc`
+
+<pre class="terminal">
+  GET /manufacturers/:id/categories
+</pre>
+
+<%= render_recording :manufacturer_categories %>
+
+## Retrieve a manufacturer's skus
+
+### Order
+Valid Parameters to perform ordering
+
+Name        | Type     | Description
+------------|----------| -----------
+`order_by`  | `String` | `popularity (default) | name`
+`order_dir` | `String` | `asc (default) | desc`
+
+<pre class="terminal">
+  GET /manufacturers/:id/skus
+</pre>
+
+<%= render_recording :manufacturer_skus %>

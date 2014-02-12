@@ -1,744 +1,180 @@
-{
-  "id": "a71363fb-4dda-4d10-997a-374a66b1dbb1",
-  "name": "apiv3",
-  "requests": [
-    {
-      "id": "89c92269-14f9-420a-90ef-4dc884fe92a1",
-      "collectionId": "a71363fb-4dda-4d10-997a-374a66b1dbb1",
-      "data": [
-
-      ],
-      "description": "",
-      "method": "GET",
-      "name": "categories_index",
-      "url": "{{base_url}}/categories?page=1&per=5",
-      "version": 2,
-      "responses": [
-
-      ],
-      "dataMode": "params",
-      "headers": {
-        "accept": "application/vnd.skroutz+json; version=3",
-        "authorization": "Bearer {{oauth_token}}"
-      }
-    },
-    {
-      "id": "014441f4-2311-43e8-8c72-b04cf345597a",
-      "collectionId": "a71363fb-4dda-4d10-997a-374a66b1dbb1",
-      "data": [
-
-      ],
-      "description": "",
-      "method": "GET",
-      "name": "categories_top_level",
-      "url": "{{base_url}}/categories/top_level",
-      "version": 2,
-      "responses": [
-
-      ],
-      "dataMode": "params",
-      "headers": {
-        "accept": "application/vnd.skroutz+json; version=3",
-        "authorization": "Bearer {{oauth_token}}"
-      }
-    },
-    {
-      "id": "af65f007-e54d-44d9-9cf4-807379bce8cd",
-      "collectionId": "a71363fb-4dda-4d10-997a-374a66b1dbb1",
-      "data": [
-
-      ],
-      "description": "",
-      "method": "GET",
-      "name": "categories_root",
-      "url": "{{base_url}}/categories/root",
-      "version": 2,
-      "responses": [
-
-      ],
-      "dataMode": "params",
-      "headers": {
-        "accept": "application/vnd.skroutz+json; version=3",
-        "authorization": "Bearer {{oauth_token}}"
-      }
-    },
-    {
-      "id": "3903b542-8c67-4328-a17d-430556bfb8e9",
-      "collectionId": "a71363fb-4dda-4d10-997a-374a66b1dbb1",
-      "data": [
-
-      ],
-      "description": "",
-      "method": "GET",
-      "name": "categories_show",
-      "url": "{{base_url}}/categories/1442",
-      "version": 2,
-      "responses": [
-
-      ],
-      "dataMode": "params",
-      "headers": {
-        "accept": "application/vnd.skroutz+json; version=3",
-        "authorization": "Bearer {{oauth_token}}"
-      }
-    },
-    {
-      "id": "661dab0b-ad6c-431b-bfd0-379f50ad4d5d",
-      "collectionId": "a71363fb-4dda-4d10-997a-374a66b1dbb1",
-      "data": [
-
-      ],
-      "description": "",
-      "method": "GET",
-      "name": "children_api_category",
-      "url": "{{base_url}}/categories/73/children",
-      "version": 2,
-      "responses": [
-
-      ],
-      "dataMode": "params",
-      "headers": {
-        "accept": "application/vnd.skroutz+json; version=3",
-        "authorization": "Bearer {{oauth_token}}"
-      }
-    },
-    {
-      "id": "c3dd4fb0-990b-4f8b-ab8a-edf9356210fc",
-      "collectionId": "a71363fb-4dda-4d10-997a-374a66b1dbb1",
-      "data": [
-
-      ],
-      "description": "",
-      "method": "GET",
-      "name": "category_skus",
-      "url": "{{base_url}}/categories/1442/skus?page=1&per=3",
-      "version": 2,
-      "responses": [
-
-      ],
-      "dataMode": "params",
-      "headers": {
-        "accept": "application/vnd.skroutz+json; version=3",
-        "authorization": "Bearer {{oauth_token}}"
-      }
-    },
-    {
-      "id": "3df40b19-5cf0-42e1-b2f7-2e60576f0245",
-      "collectionId": "a71363fb-4dda-4d10-997a-374a66b1dbb1",
-      "data": [
-
-      ],
-      "description": "",
-      "method": "GET",
-      "name": "category_parent",
-      "url": "{{base_url}}/categories/1442/parent",
-      "version": 2,
-      "responses": [
-
-      ],
-      "dataMode": "params",
-      "headers": {
-        "accept": "application/vnd.skroutz+json; version=3",
-        "authorization": "Bearer {{oauth_token}}"
-      }
-    },
-    {
-      "id": "10583e62-8b7e-454d-bbcf-b3f08e6f6408",
-      "collectionId": "a71363fb-4dda-4d10-997a-374a66b1dbb1",
-      "data": [
-
-      ],
-      "description": "",
-      "method": "GET",
-      "name": "shops_index",
-      "url": "{{base_url}}/shops?per=2",
-      "version": 2,
-      "responses": [
-
-      ],
-      "dataMode": "params",
-      "headers": {
-        "accept": "application/vnd.skroutz+json; version=3",
-        "authorization": "Bearer {{oauth_token}}"
-      }
-    },
-    {
-      "id": "8296bf14-696c-45e8-beb2-d1844a0171f7",
-      "collectionId": "a71363fb-4dda-4d10-997a-374a66b1dbb1",
-      "data": [
-
-      ],
-      "description": "",
-      "method": "GET",
-      "name": "shops_show",
-      "url": "{{base_url}}/shops/3",
-      "version": 2,
-      "responses": [
-
-      ],
-      "dataMode": "params",
-      "headers": {
-        "accept": "application/vnd.skroutz+json; version=3",
-        "authorization": "Bearer {{oauth_token}}"
-      }
-    },
-    {
-      "id": "f53b3756-b737-4254-9c22-1bc5e23bd5f6",
-      "collectionId": "a71363fb-4dda-4d10-997a-374a66b1dbb1",
-      "data": [
-
-      ],
-      "description": "",
-      "method": "GET",
-      "name": "manufacturers_show",
-      "url": "{{base_url}}/manufacturers/12907",
-      "version": 2,
-      "responses": [
-
-      ],
-      "dataMode": "params",
-      "headers": {
-        "accept": "application/vnd.skroutz+json; version=3",
-        "authorization": "Bearer {{oauth_token}}"
-      }
-    },
-    {
-      "id": "523d8cd6-3447-4cc8-a000-744bf9f18677",
-      "collectionId": "a71363fb-4dda-4d10-997a-374a66b1dbb1",
-      "data": [
-
-      ],
-      "description": "",
-      "method": "GET",
-      "name": "manufacturers_index",
-      "url": "{{base_url}}/manufacturers?per=2",
-      "version": 2,
-      "responses": [
-
-      ],
-      "dataMode": "params",
-      "headers": {
-        "accept": "application/vnd.skroutz+json; version=3",
-        "authorization": "Bearer {{oauth_token}}"
-      }
-    },
-    {
-      "id": "34256b53-d723-4d19-baea-500bf4b031d0",
-      "collectionId": "a71363fb-4dda-4d10-997a-374a66b1dbb1",
-      "data": [
-
-      ],
-      "description": "",
-      "method": "GET",
-      "name": "autocomplete",
-      "url": "{{base_url}}/autocomplete?keyphrase=iph",
-      "version": 2,
-      "responses": [
-
-      ],
-      "dataMode": "params",
-      "headers": {
-        "accept": "application/vnd.skroutz+json; version=3",
-        "authorization": "Bearer {{oauth_token}}"
-      }
-    },
-    {
-      "id": "8115b7c4-92b6-440f-bd6f-ba2090248171",
-      "collectionId": "a71363fb-4dda-4d10-997a-374a66b1dbb1",
-      "data": [
-
-      ],
-      "description": "",
-      "method": "GET",
-      "name": "search_invalid",
-      "url": "{{base_url}}/search?q=a",
-      "version": 2,
-      "responses": [
-
-      ],
-      "dataMode": "params",
-      "headers": {
-        "accept": "application/vnd.skroutz+json; version=3",
-        "authorization": "Bearer {{oauth_token}}"
-      }
-    },
-    {
-      "id": "2c418b6a-3214-4066-874d-e7a03d1452fe",
-      "collectionId": "a71363fb-4dda-4d10-997a-374a66b1dbb1",
-      "data": [
-
-      ],
-      "description": "",
-      "method": "GET",
-      "name": "search_category_match",
-      "url": "{{base_url}}/search?per=2&q=computers",
-      "version": 2,
-      "responses": [
-
-      ],
-      "dataMode": "params",
-      "headers": {
-        "accept": "application/vnd.skroutz+json; version=3",
-        "authorization": "Bearer {{oauth_token}}"
-      }
-    },
-    {
-      "id": "f90b772a-847b-45fb-8e53-f4e3a7d95ace",
-      "collectionId": "a71363fb-4dda-4d10-997a-374a66b1dbb1",
-      "data": [
-
-      ],
-      "description": "",
-      "method": "GET",
-      "name": "search_manufacturer_match",
-      "url": "{{base_url}}/search?q=apple",
-      "version": 2,
-      "responses": [
-
-      ],
-      "dataMode": "params",
-      "headers": {
-        "accept": "application/vnd.skroutz+json; version=3",
-        "authorization": "Bearer {{oauth_token}}"
-      }
-    },
-    {
-      "id": "6ec2ee41-c2e6-4179-8b66-6f8d29f8034d",
-      "collectionId": "a71363fb-4dda-4d10-997a-374a66b1dbb1",
-      "data": [
-
-      ],
-      "description": "",
-      "method": "GET",
-      "name": "search_latin_mapping",
-      "url": "{{base_url}}/search?page=1&per=2&q=%CE%B9%CF%80%CE%B7%CE%BF%CE%BD%CE%B5",
-      "version": 2,
-      "responses": [
-
-      ],
-      "dataMode": "params",
-      "headers": {
-        "accept": "application/vnd.skroutz+json; version=3",
-        "authorization": "Bearer {{oauth_token}}"
-      }
-    },
-    {
-      "id": "6ba073c9-a239-42e0-8d3d-9a4815d3b4d7",
-      "collectionId": "a71363fb-4dda-4d10-997a-374a66b1dbb1",
-      "data": [
-
-      ],
-      "description": "",
-      "method": "GET",
-      "name": "search_drop",
-      "url": "{{base_url}}/search?q=wrong+iphone",
-      "version": 2,
-      "responses": [
-
-      ],
-      "dataMode": "params",
-      "headers": {
-        "accept": "application/vnd.skroutz+json; version=3",
-        "authorization": "Bearer {{oauth_token}}"
-      }
-    },
-    {
-      "id": "6b7e688a-fdef-4f88-95a7-95cba7d613f2",
-      "collectionId": "a71363fb-4dda-4d10-997a-374a66b1dbb1",
-      "data": [
-
-      ],
-      "description": "",
-      "method": "GET",
-      "name": "search_no_results",
-      "url": "{{base_url}}/search?q=asdasdsagjgjgjweigrweji",
-      "version": 2,
-      "responses": [
-
-      ],
-      "dataMode": "params",
-      "headers": {
-        "accept": "application/vnd.skroutz+json; version=3",
-        "authorization": "Bearer {{oauth_token}}"
-      }
-    },
-    {
-      "id": "d8382d76-3835-447d-b1ad-e8ab43640d4e",
-      "collectionId": "a71363fb-4dda-4d10-997a-374a66b1dbb1",
-      "data": [
-
-      ],
-      "description": "",
-      "method": "GET",
-      "name": "search_category_facade",
-      "url": "{{base_url}}/search?page=1&per=2&q=iphone",
-      "version": 2,
-      "responses": [
-
-      ],
-      "dataMode": "params",
-      "headers": {
-        "accept": "application/vnd.skroutz+json; version=3",
-        "authorization": "Bearer {{oauth_token}}"
-      }
-    },
-    {
-      "id": "e8740f1c-8660-4224-a107-9d3fefc0f726",
-      "collectionId": "a71363fb-4dda-4d10-997a-374a66b1dbb1",
-      "data": [
-
-      ],
-      "description": "",
-      "method": "GET",
-      "name": "search_sku_match",
-      "url": "{{base_url}}/search?q=Dimage+2300",
-      "version": 2,
-      "responses": [
-
-      ],
-      "dataMode": "params",
-      "headers": {
-        "accept": "application/vnd.skroutz+json; version=3",
-        "authorization": "Bearer {{oauth_token}}"
-      }
-    },
-    {
-      "id": "a0e006f5-2650-412e-b204-7b1721248bdb",
-      "collectionId": "a71363fb-4dda-4d10-997a-374a66b1dbb1",
-      "data": [
-
-      ],
-      "description": "",
-      "method": "GET",
-      "name": "search_skus_match",
-      "url": "{{base_url}}/search?page=1&per=2&q=Cubieboard2",
-      "version": 2,
-      "responses": [
-
-      ],
-      "dataMode": "params",
-      "headers": {
-        "accept": "application/vnd.skroutz+json; version=3",
-        "authorization": "Bearer {{oauth_token}}"
-      }
-    },
-    {
-      "id": "28b9f47d-b8c9-4fc3-a2ce-f4fb0542b8fa",
-      "collectionId": "a71363fb-4dda-4d10-997a-374a66b1dbb1",
-      "data": [
-
-      ],
-      "description": "",
-      "method": "GET",
-      "name": "autocomplete",
-      "url": "{{base_url}}/autocomplete?q=iphone",
-      "version": 2,
-      "responses": [
-
-      ],
-      "dataMode": "params",
-      "headers": {
-        "accept": "application/vnd.skroutz+json; version=3",
-        "authorization": "Bearer {{oauth_token}}"
-      }
-    },
-    {
-      "id": "f0dec0d8-2588-4374-95c0-c359e9305680",
-      "collectionId": "a71363fb-4dda-4d10-997a-374a66b1dbb1",
-      "data": [
-
-      ],
-      "description": "",
-      "method": "GET",
-      "name": "skus_index",
-      "url": "{{base_url}}/skus?page=1&per=3",
-      "version": 2,
-      "responses": [
-
-      ],
-      "dataMode": "params",
-      "headers": {
-        "accept": "application/vnd.skroutz+json; version=3",
-        "authorization": "Bearer {{oauth_token}}"
-      }
-    },
-    {
-      "id": "98481cc7-4f30-41da-92b6-4edfb211c4ae",
-      "collectionId": "a71363fb-4dda-4d10-997a-374a66b1dbb1",
-      "data": [
-
-      ],
-      "description": "",
-      "method": "GET",
-      "name": "skus_show",
-      "url": "{{base_url}}/skus/3703742",
-      "version": 2,
-      "responses": [
-
-      ],
-      "dataMode": "params",
-      "headers": {
-        "accept": "application/vnd.skroutz+json; version=3",
-        "authorization": "Bearer {{oauth_token}}"
-      }
-    },
-    {
-      "id": "5ba63c00-23f1-468c-8d4d-6d68b899337a",
-      "collectionId": "a71363fb-4dda-4d10-997a-374a66b1dbb1",
-      "data": [
-
-      ],
-      "description": "",
-      "method": "GET",
-      "name": "skus_products",
-      "url": "{{base_url}}/skus/3703742/products",
-      "version": 2,
-      "responses": [
-
-      ],
-      "dataMode": "params",
-      "headers": {
-        "accept": "application/vnd.skroutz+json; version=3",
-        "authorization": "Bearer {{oauth_token}}"
-      }
-    },
-    {
-      "id": "26f1a305-f7be-4399-818e-9ecef208be43",
-      "collectionId": "a71363fb-4dda-4d10-997a-374a66b1dbb1",
-      "data": [
-
-      ],
-      "description": "",
-      "method": "GET",
-      "name": "products_index",
-      "url": "{{base_url}}/products?page=1&per=2",
-      "version": 2,
-      "responses": [
-
-      ],
-      "dataMode": "params",
-      "headers": {
-        "accept": "application/vnd.skroutz+json; version=3",
-        "authorization": "Bearer {{oauth_token}}"
-      }
-    },
-    {
-      "id": "19fe7be0-06bf-4769-af3b-7f2d640cad67",
-      "collectionId": "a71363fb-4dda-4d10-997a-374a66b1dbb1",
-      "data": [
-
-      ],
-      "description": "",
-      "method": "GET",
-      "name": "products_show",
-      "url": "{{base_url}}/products/13313788",
-      "version": 2,
-      "responses": [
-
-      ],
-      "dataMode": "params",
-      "headers": {
-        "accept": "application/vnd.skroutz+json; version=3",
-        "authorization": "Bearer {{oauth_token}}"
-      }
-    },
-    {
-      "id": "1af68e22-5e80-47d5-8033-8ca40c5554f3",
-      "collectionId": "a71363fb-4dda-4d10-997a-374a66b1dbb1",
-      "data": [
-
-      ],
-      "description": "",
-      "method": "GET",
-      "name": "favorites_index",
-      "url": "{{base_url}}/favorites",
-      "version": 2,
-      "responses": [
-
-      ],
-      "dataMode": "params",
-      "headers": {
-        "accept": "application/vnd.skroutz+json; version=3",
-        "authorization": "Bearer {{oauth_token}}"
-      }
-    },
-    {
-      "id": "d87bd337-a7b6-44f9-ac6c-f94cbf75bb7a",
-      "collectionId": "a71363fb-4dda-4d10-997a-374a66b1dbb1",
-      "data": [
-
-      ],
-      "description": "",
-      "method": "GET",
-      "name": "favorites_show",
-      "url": "{{base_url}}/favorites/252116",
-      "version": 2,
-      "responses": [
-
-      ],
-      "dataMode": "params",
-      "headers": {
-        "accept": "application/vnd.skroutz+json; version=3",
-        "authorization": "Bearer {{oauth_token}}"
-      }
-    },
-    {
-      "id": "053f04c3-f668-4d42-b069-c40342fd063a",
-      "collectionId": "a71363fb-4dda-4d10-997a-374a66b1dbb1",
-      "data": [
-
-      ],
-      "description": "",
-      "method": "GET",
-      "name": "filter_groups_index",
-      "url": "{{base_url}}/categories/40/filter_groups?per=2",
-      "version": 2,
-      "responses": [
-
-      ],
-      "dataMode": "params",
-      "headers": {
-        "accept": "application/vnd.skroutz+json; version=3",
-        "authorization": "Bearer {{oauth_token}}"
-      }
-    },
-    {
-      "id": "d2923827-c77c-43a0-b864-b3dca746996f",
-      "collectionId": "a71363fb-4dda-4d10-997a-374a66b1dbb1",
-      "data": [
-
-      ],
-      "description": "",
-      "method": "GET",
-      "name": "category_skus_manufacturers",
-      "url": "{{base_url}}/categories/40/skus?manufacturer_ids[]=28&manufacturer_ids[]=2?per=4",
-      "version": 2,
-      "responses": [
-
-      ],
-      "dataMode": "params",
-      "headers": {
-        "accept": "application/vnd.skroutz+json; version=3",
-        "authorization": "Bearer {{oauth_token}}"
-      }
-    },
-    {
-      "id": "c15f9004-f78d-45a0-9031-05cd8279835c",
-      "collectionId": "a71363fb-4dda-4d10-997a-374a66b1dbb1",
-      "data": [
-
-      ],
-      "description": "",
-      "method": "GET",
-      "name": "category_skus_filters",
-      "url": "{{base_url}}/categories/40/skus?filter_ids[]=6282&filter_ids[]=6284?per=4",
-      "version": 2,
-      "responses": [
-
-      ],
-      "dataMode": "params",
-      "headers": {
-        "accept": "application/vnd.skroutz+json; version=3",
-        "authorization": "Bearer {{oauth_token}}"
-      }
-    },
-    {
-      "id": "d3f65a53-6964-44ba-ad0b-3a5281137cf2",
-      "collectionId": "a71363fb-4dda-4d10-997a-374a66b1dbb1",
-      "data": [
-
-      ],
-      "description": "",
-      "method": "GET",
-      "name": "category_skus_with_available_filters",
-      "url": "{{base_url}}/categories/279/skus?include_meta%5B%5D=available_filters&per=1",
-      "version": 2,
-      "responses": [
-
-      ],
-      "dataMode": "params",
-      "headers": {
-        "accept": "application/vnd.skroutz+json; version=3",
-        "authorization": "Bearer {{oauth_token}}"
-      }
-    },
-    {
-      "id": "33b1df8c-b2e3-45c6-ba1a-26fbfc07f491",
-      "collectionId": "a71363fb-4dda-4d10-997a-374a66b1dbb1",
-      "data": [
-
-      ],
-      "description": "",
-      "method": "GET",
-      "name": "notifications_index",
-      "url": "{{base_url}}/notifications?per=1",
-      "version": 2,
-      "responses": [
-
-      ],
-      "dataMode": "params",
-      "headers": {
-        "accept": "application/vnd.skroutz+json; version=3",
-        "authorization": "Bearer {{oauth_token}}"
-      }
-    },
-    {
-      "id": "f0f1357d-e0c1-4972-999e-cf81576f8619",
-      "collectionId": "a71363fb-4dda-4d10-997a-374a66b1dbb1",
-      "data": [
-
-      ],
-      "description": "",
-      "method": "GET",
-      "name": "notifications_show",
-      "url": "{{base_url}}/notifications/3642082",
-      "version": 2,
-      "responses": [
-
-      ],
-      "dataMode": "params",
-      "headers": {
-        "accept": "application/vnd.skroutz+json; version=3",
-        "authorization": "Bearer {{oauth_token}}"
-      }
-    }
-  ],
-  "order": [
-    "89c92269-14f9-420a-90ef-4dc884fe92a1",
-    "014441f4-2311-43e8-8c72-b04cf345597a",
-    "af65f007-e54d-44d9-9cf4-807379bce8cd",
-    "3903b542-8c67-4328-a17d-430556bfb8e9",
-    "661dab0b-ad6c-431b-bfd0-379f50ad4d5d",
-    "c3dd4fb0-990b-4f8b-ab8a-edf9356210fc",
-    "3df40b19-5cf0-42e1-b2f7-2e60576f0245",
-    "10583e62-8b7e-454d-bbcf-b3f08e6f6408",
-    "8296bf14-696c-45e8-beb2-d1844a0171f7",
-    "f53b3756-b737-4254-9c22-1bc5e23bd5f6",
-    "523d8cd6-3447-4cc8-a000-744bf9f18677",
-    "34256b53-d723-4d19-baea-500bf4b031d0",
-    "8115b7c4-92b6-440f-bd6f-ba2090248171",
-    "2c418b6a-3214-4066-874d-e7a03d1452fe",
-    "f90b772a-847b-45fb-8e53-f4e3a7d95ace",
-    "6ec2ee41-c2e6-4179-8b66-6f8d29f8034d",
-    "6ba073c9-a239-42e0-8d3d-9a4815d3b4d7",
-    "6b7e688a-fdef-4f88-95a7-95cba7d613f2",
-    "d8382d76-3835-447d-b1ad-e8ab43640d4e",
-    "e8740f1c-8660-4224-a107-9d3fefc0f726",
-    "a0e006f5-2650-412e-b204-7b1721248bdb",
-    "28b9f47d-b8c9-4fc3-a2ce-f4fb0542b8fa",
-    "f0dec0d8-2588-4374-95c0-c359e9305680",
-    "98481cc7-4f30-41da-92b6-4edfb211c4ae",
-    "5ba63c00-23f1-468c-8d4d-6d68b899337a",
-    "26f1a305-f7be-4399-818e-9ecef208be43",
-    "19fe7be0-06bf-4769-af3b-7f2d640cad67",
-    "1af68e22-5e80-47d5-8033-8ca40c5554f3",
-    "d87bd337-a7b6-44f9-ac6c-f94cbf75bb7a",
-    "053f04c3-f668-4d42-b069-c40342fd063a",
-    "d2923827-c77c-43a0-b864-b3dca746996f",
-    "c15f9004-f78d-45a0-9031-05cd8279835c",
-    "d3f65a53-6964-44ba-ad0b-3a5281137cf2",
-    "33b1df8c-b2e3-45c6-ba1a-26fbfc07f491",
-    "f0f1357d-e0c1-4972-999e-cf81576f8619"
-  ],
-  "timestamp": 1389957246
-}
+base_url: '{{domain}}/api'
+default_headers:
+  accept: 'application/vnd.skroutz+json; version=3'
+  authorization: "Bearer {{oauth_token}}"
+
+name: apiv3
+
+requests:
+  -
+    key: categories_index
+    request: 'GET {{base_url}}/categories?page=1&per=5'
+    meta:
+      description: 'Lists all categories'
+  -
+    key: categories_top_level
+    request: 'GET {{base_url}}/categories/top_level'
+    meta:
+      description: 'Lists top level categories'
+  -
+    key: categories_root
+    request: 'GET {{base_url}}/categories/root'
+  -
+    key: categories_show
+    request: 'GET {{base_url}}/categories/1442'
+  -
+    key: children_api_category
+    request: 'GET {{base_url}}/categories/73/children'
+  -
+    key: category_skus
+    request: 'GET {{base_url}}/categories/1442/skus?page=1&per=3'
+    meta:
+      description: "Lists only skus belonging to category specified in path"
+  -
+    key: category_parent
+    request: 'GET {{base_url}}/categories/1442/parent'
+  -
+    key: shops_index
+    request:
+      path: '{{base_url}}/shops'
+      params:
+        per:  2
+  -
+    key: shops_show
+    request: 'GET {{base_url}}/shops/3'
+  -
+    key: manufacturers_show
+    request: 'GET {{base_url}}/manufacturers/12907'
+  -
+    key: manufacturers_index
+    request:
+      path: '{{base_url}}/manufacturers'
+      params:
+        per:  2
+  -
+    key: manufacturer_categories
+    request:
+      path: '{{base_url}}/manufacturers/356/categories'
+      params:
+        per:  2
+  -
+    key: manufacturer_skus
+    request:
+      path: '{{base_url}}/manufacturers/356/skus'
+      params:
+        per:  2
+  -
+    key: autocomplete
+    request: 'GET {{base_url}}/autocomplete?keyphrase=iph'
+  -
+    key: search_invalid
+    request: 'GET {{base_url}}/search?q=a'
+  -
+    key: search_category_match
+    request:
+      path: '{{base_url}}/search'
+      params:
+        q: 'computers'
+        per:  2
+  -
+    key: search_manufacturer_match
+    request:
+      path: '{{base_url}}/search'
+      params:
+        q: 'apple'
+  -
+    key: search_latin_mapping
+    request: 'GET {{base_url}}/search?q=ιπηονε&page=1&per=2'
+  -
+    key: search_drop
+    request: 'GET {{base_url}}/search?q=wrong%20iphone'
+  -
+    key: search_no_results
+    request: 'GET {{base_url}}/search?q=asdasdsagjgjgjweigrweji'
+  -
+    key: search_category_facade
+    request: 'GET {{base_url}}/search?q=iphone&page=1&per=2'
+  -
+    key: search_sku_match
+    request: 'GET {{base_url}}/search?q=Dimage%202300'
+  -
+    key: search_skus_match
+    request: 'GET {{base_url}}/search?q=Cubieboard2&page=1&per=2'
+  -
+    key: autocomplete
+    request: 'GET {{base_url}}/autocomplete?q=iphone'
+  -
+    key: skus_index
+    request: 'GET {{base_url}}/skus?page=1&per=3'
+  -
+    key: skus_show
+    request: 'GET {{base_url}}/skus/3690169'
+  -
+    key: skus_products
+    request: 'GET {{base_url}}/skus/3703742/products'
+  -
+    key: products_show
+    request: 'GET {{base_url}}/products/13313788'
+  -
+    key: favorites_index
+    request: 'GET {{base_url}}/favorites'
+  -
+    key: favorites_show
+    request: 'GET {{base_url}}/favorites/252116'
+  -
+    key: filter_groups_index
+    request:
+      path: '{{base_url}}/categories/40/filter_groups'
+      params:
+        per: 2
+  -
+    key: category_skus_manufacturers
+    request:
+      path: '{{base_url}}/categories/40/skus?manufacturer_ids[]=28&manufacturer_ids[]=2'
+      params:
+        per: 4
+    meta:
+      description: 'Lists skus filtered by manufacturers.'
+  -
+    key: category_skus_filters
+    request:
+      path: '{{base_url}}/categories/40/skus?filter_ids[]=6282&filter_ids[]=6284'
+      params:
+        per: 4
+    meta:
+      description: 'Lists skus filtered given filters.'
+  -
+    key: category_skus_with_available_filters
+    request:
+      path: '{{base_url}}/categories/279/skus'
+      params:
+        per: 1
+        include_meta:
+          - available_filters
+
+  -
+    key: notifications_index
+    request:
+      path: '{{base_url}}/notifications'
+      params:
+        per: 1
+  -
+    key: notifications_show
+    request:
+      path: '{{base_url}}/notifications/3642082'
+  -
+    key: sku_reviews
+    request:
+      path: '{{base_url}}/skus/355766/reviews'
+  -
+    key: shop_reviews
+    request:
+      path: '{{base_url}}/shops/3/reviews'
+      params:
+        per: 3
+  -
+    key: shop_search
+    request:
+      path: '{{base_url}}/shops/search'
+      params:
+        q: 'plaisio'
