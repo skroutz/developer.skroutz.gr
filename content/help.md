@@ -38,8 +38,10 @@ thoroughly, if you can't find what you want it may be due to missing documentati
 
 ##Support
 
-<p>Chupa chups jujubes jelly beans tiramisu dessert cake. Macaroon bonbon lemon drops tart
-  caramels jujubes. Jelly beans dessert oat cake marzipan carrot cake brownie. Dessert
-  cookie danish powder croissant gummi bears bonbon. Candy canes wafer marshmallow jelly
-  liquorice. Donut danish unerdwear.com chupa chups gummi bears powder sugar plum chocolate
-  cake danish. Pie tiramisu w send <a href="mailto:api@skroutz.gr">us</a> an email.</p>
+
+<p>
+Have a question? Create an issue at 
+  <a href="https://github.com/skroutz/developer.skroutz.gr/issue">Github issue tracker</a></p>
+  Have something sensitive to report (eg security vulnerability)? Send us
+  <a href="mailto:api@skroutz.gr">an email</a>
+<p>
