@@ -65,44 +65,57 @@ requests:
         per:  2
   -
     key: autocomplete
-    request: 'GET {{base_url}}/autocomplete?keyphrase=iph'
+    request:
+      path: '{{base_url}}/autocomplete?keyphrase=iph'
   -
     key: search_invalid
-    request: 'GET {{base_url}}/search?q=a'
+    request:
+      path: '{{base_url}}/search?q=a'
   -
     key: search_category_match
     request:
-      path: '{{base_url}}/search'
+      path: '{{base_url}}/search?q=Tablets'
       params:
-        q: 'computers'
+        page: 1
         per:  2
   -
     key: search_manufacturer_match
     request:
-      path: '{{base_url}}/search'
-      params:
-        q: 'apple'
+      path: '{{base_url}}/search?q=apple'
   -
     key: search_latin_mapping
-    request: 'GET {{base_url}}/search?q=ιπηονε&page=1&per=2'
+    request:
+      path: '{{base_url}}/search?q=ιπηονε'
+      params:
+        page: 1
+        per: 2
   -
     key: search_drop
     request: 'GET {{base_url}}/search?q=wrong%20iphone'
+    request:
+      path: '{{base_url}}/search?q=wrong%20iphone'
   -
     key: search_no_results
-    request: 'GET {{base_url}}/search?q=asdasdsagjgjgjweigrweji'
+    request:
+      path: '{{base_url}}/search?q=asdasdsagjgjgjweigrweji'
   -
     key: search_category_facade
-    request: 'GET {{base_url}}/search?q=iphone&page=1&per=2'
+    request:
+      path: '{{base_url}}/search?q=iphone'
+      params:
+        page: 1
+        per: 2
   -
     key: search_sku_match
-    request: 'GET {{base_url}}/search?q=Dimage%202300'
+    request:
+      path: '{{base_url}}/search?q=Dimage%202300'
   -
     key: search_skus_match
-    request: 'GET {{base_url}}/search?q=Cubieboard2&page=1&per=2'
-  -
-    key: autocomplete
-    request: 'GET {{base_url}}/autocomplete?q=iphone'
+    request:
+      path: '{{base_url}}/search?q=Cubieboard2'
+      params:
+        page: 1
+        per: 2
   -
     key: skus_index
     request: 'GET {{base_url}}/skus?page=1&per=3'
