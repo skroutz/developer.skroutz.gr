@@ -93,19 +93,28 @@
 
 <h2 id="retrieve-a-manufacturers-categories">Retrieve a manufacturer’s categories</h2>
 
-<p>Set ordering with order_by parameter. Possible values:</p>
+<h3 id="order">Order</h3>
+<p>Valid Parameters to perform ordering</p>
 
-<pre><code>- 'popularity' (default)
-- 'name'
-</code></pre>
-
-<p>Set ordering direction with order_dir parameter. Possible values: </p>
-
-<pre><code>- 'asc' (default)
-- 'desc'
-</code></pre>
-
-<pre class="terminal">
+<table>
+<thead><tr>
+<th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr></thead>
+<tbody>
+<tr>
+<td><code>order_by</code></td>
+      <td><code>String</code></td>
+      <td><code>popularity (default) | name</code></td>
+    </tr>
+<tr>
+<td><code>order_dir</code></td>
+      <td><code>String</code></td>
+      <td><code>asc (default) | desc</code></td>
+    </tr>
+</tbody>
+</table><pre class="terminal">
   GET /manufacturers/:id/categories
 </pre>
 
@@ -148,19 +157,28 @@
 
 <h2 id="retrieve-a-manufacturers-skus">Retrieve a manufacturer’s skus</h2>
 
-<p>Set ordering with order_by parameter. Possible values:</p>
+<h3 id="order-1">Order</h3>
+<p>Valid Parameters to perform ordering</p>
 
-<pre><code>- 'popularity' (default)
-- 'name'
-</code></pre>
-
-<p>Set ordering direction with order_dir parameter. Possible values: </p>
-
-<pre><code>- 'asc' (default)
-- 'desc'
-</code></pre>
-
-<pre class="terminal">
+<table>
+<thead><tr>
+<th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr></thead>
+<tbody>
+<tr>
+<td><code>order_by</code></td>
+      <td><code>String</code></td>
+      <td><code>popularity (default) | name</code></td>
+    </tr>
+<tr>
+<td><code>order_dir</code></td>
+      <td><code>String</code></td>
+      <td><code>asc (default) | desc</code></td>
+    </tr>
+</tbody>
+</table><pre class="terminal">
   GET /manufacturers/:id/skus
 </pre>
 
