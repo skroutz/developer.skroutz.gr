@@ -25,15 +25,13 @@ title: Manufacturers | Skroutz API
 
 ## Retrieve a manufacturer's categories
 
-Set ordering with order_by parameter. Possible values:
+### Order
+Valid Parameters to perform ordering
 
-    - 'popularity' (default)
-    - 'name'
-
-Set ordering direction with order_dir parameter. Possible values:
-
-    - 'asc' (default)
-    - 'desc'
+Name        | Type     | Description
+------------|----------| -----------
+`order_by`  | `String` | `popularity (default) | name`
+`order_dir` | `String` | `asc (default) | desc`
 
 <pre class="terminal">
   GET /manufacturers/:id/categories
@@ -43,15 +41,13 @@ Set ordering direction with order_dir parameter. Possible values:
 
 ## Retrieve a manufacturer's skus
 
-Set ordering with order_by parameter. Possible values:
+### Order
+Valid Parameters to perform ordering
 
-    - 'popularity' (default)
-    - 'name'
-
-Set ordering direction with order_dir parameter. Possible values:
-
-    - 'asc' (default)
-    - 'desc'
+Name        | Type     | Description
+------------|----------| -----------
+`order_by`  | `String` | `popularity (default) | name`
+`order_dir` | `String` | `asc (default) | desc`
 
 <pre class="terminal">
   GET /manufacturers/:id/skus
