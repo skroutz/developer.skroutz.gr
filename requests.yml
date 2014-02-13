@@ -144,6 +144,12 @@ requests:
       params:
         per: 2
   -
+    key: category_skus_search
+    request:
+      path: '{{base_url}}/categories/40/skus?q=iphone'
+      params:
+        per: 2
+  -
     key: category_skus_manufacturers
     request:
       path: '{{base_url}}/categories/40/skus?manufacturer_ids[]=28&manufacturer_ids[]=2'
@@ -162,12 +168,9 @@ requests:
   -
     key: category_skus_with_available_filters
     request:
-      path: '{{base_url}}/categories/279/skus'
+      path: '{{base_url}}/categories/279/skus?include_meta=available_filters'
       params:
         per: 1
-        include_meta:
-          - available_filters
-
   -
     key: notifications_index
     request:
