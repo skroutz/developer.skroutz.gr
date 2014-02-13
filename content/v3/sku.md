@@ -66,18 +66,14 @@ You have to specify a category in order to perform filtering.
 You may supply the optional parameter `include_meta[]=available_filters`
 to get meta information about the filters that can be applied.
 
-## Meta
-You may choose to include extra meta information using the following parameters:
+
+### By search keyword 
 
 Name | Type | Description
 -----| -----| -----------
-`include_meta` | `Array` | `Extra meta info to be included in the response`
+`q` | `String` | The keyword to search by 
 
-<%= render_recording :category_skus_with_available_filters %>
-As you can see above the available_filters object contains two objects
-(filters, manufacturers) each of which has as keys the ids of the
-entities that can be applied and as values the number of SKUs that match
-the filter/manufacturer.
+<%= render_recording :category_skus_search %>
 
 ### By manufacturers
 
@@ -94,3 +90,16 @@ Name | Type | Description
 `filter_ids` | `Array` | The ids of the filters to be applied on the SKUs
 
 <%= render_recording :category_skus_filters %>
+
+### Meta
+You may choose to include extra meta information using the following parameters:
+
+Name | Type | Description
+-----| -----| -----------
+`include_meta` | `Array` | `Extra meta info to be included in the response`
+
+<%= render_recording :category_skus_with_available_filters %>
+As you can see above the available_filters object contains two objects
+(filters, manufacturers) each of which has as keys the ids of the
+entities that can be applied and as values the number of skus that match
+the filter/manufacturer.
