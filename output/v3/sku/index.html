@@ -5,7 +5,7 @@
   <meta http-equiv="Content-Language" content="en-us" />
   <meta http-equiv="imagetoolbar" content="false" />
   <meta name="MSSmartTagsPreventParsing" content="true" />
-  <title>Sku | Skroutz API</title>
+  <title>SKU | Skroutz API</title>
   <link rel="icon" href="../../assets/images/favicon.png" type="image/png" />
   <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400' rel='stylesheet' type='text/css'>
   <link rel="alternate" type="application/atom+xml" title="API Changes" href="../changes.atom" />
@@ -33,23 +33,23 @@
     <div class="content cf">
       <div id="right_container">
         <div class="container">
-          <h1 id="sku-api">Sku API</h1>
+          <h1 id="sku-api">SKU API</h1>
 
 <ul id="markdown-toc">
 <li><a href="#about">About</a></li>
-  <li><a href="#list-skus">List skus</a></li>
-  <li><a href="#list-skus-of-specific-category">List skus of specific category</a></li>
-  <li><a href="#retrieve-a-single-sku">Retrieve a single sku</a></li>
-  <li><a href="#retrieve-similar-skus">Retrieve similar skus</a></li>
-  <li><a href="#retrieve-a-skus-products">Retrieve a sku’s products</a></li>
-  <li><a href="#retrieve-a-skus-reviews">Retrieve a sku’s reviews</a></li>
+  <li><a href="#list-skus">List SKUs</a></li>
+  <li><a href="#list-skus-of-specific-category">List SKUs of specific category</a></li>
+  <li><a href="#retrieve-a-single-sku">Retrieve a single SKU</a></li>
+  <li><a href="#retrieve-similar-skus">Retrieve similar SKUs</a></li>
+  <li><a href="#retrieve-a-skus-products">Retrieve a SKU’s products</a></li>
+  <li><a href="#retrieve-a-skus-reviews">Retrieve a SKU’s reviews</a></li>
   <li><a href="#filtering">Filtering</a></li>
   <li><a href="#meta">Meta</a></li>
 </ul><h2 id="about">About</h2>
 
 <p>A SKU (Stock Keeping Unit) is an aggregation of products.<br><a href="..#linked-resources">Linked resources</a>: <a href="../product">product</a></p>
 
-<h2 id="list-skus">List skus</h2>
+<h2 id="list-skus">List SKUs</h2>
 
 <pre class="terminal">
   GET /skus
@@ -151,7 +151,7 @@
 </div>
 </div>
 
-<h2 id="list-skus-of-specific-category">List skus of specific category</h2>
+<h2 id="list-skus-of-specific-category">List SKUs of specific category</h2>
 
 <pre class="terminal">
   GET /categories/:category_id/skus
@@ -253,7 +253,7 @@
 </div>
 </div>
 
-<h2 id="retrieve-a-single-sku">Retrieve a single sku</h2>
+<h2 id="retrieve-a-single-sku">Retrieve a single SKU</h2>
 
 <pre class="terminal">
   GET /skus/:id
@@ -295,7 +295,7 @@
 </div>
 </div>
 
-<h2 id="retrieve-similar-skus">Retrieve similar skus</h2>
+<h2 id="retrieve-similar-skus">Retrieve similar SKUs</h2>
 
 <pre class="terminal">
   GET /skus/:id/similar
@@ -572,7 +572,7 @@
 </div>
 </div>
 
-<h2 id="retrieve-a-skus-products">Retrieve a sku’s products</h2>
+<h2 id="retrieve-a-skus-products">Retrieve a SKU’s products</h2>
 
 <pre class="terminal">
   GET /skus/:id/products
@@ -608,7 +608,7 @@
 </div>
 </div>
 
-<h2 id="retrieve-a-skus-reviews">Retrieve a sku’s reviews</h2>
+<h2 id="retrieve-a-skus-reviews">Retrieve a SKU’s reviews</h2>
 
 <pre class="terminal">
   GET /skus/:id/reviews
@@ -754,7 +754,7 @@ to get meta information about the filters that can be applied.</p>
 </div>
 <p>As you can see above the available_filters object contains two objects
 (filters, manufacturers) each of which has as keys the ids of the
-entities that can be applied and as values the number of skus that match
+entities that can be applied and as values the number of SKUs that match
 the filter/manufacturer.</p>
 
 <h3 id="by-manufacturers">By manufacturers</h3>
@@ -768,7 +768,7 @@ the filter/manufacturer.</p>
 <tbody><tr>
 <td><code>manufacturer_ids</code></td>
       <td><code>Array</code></td>
-      <td>The ids of the manufacturers of the skus</td>
+      <td>The ids of the manufacturers of the SKUs</td>
     </tr></tbody>
 </table><div class="example">        <p class="request">
           <span class="verb">GET</span>
@@ -902,7 +902,7 @@ the filter/manufacturer.</p>
 <tbody><tr>
 <td><code>filter_ids</code></td>
       <td><code>Array</code></td>
-      <td>The ids of the filters to be applied on the skus</td>
+      <td>The ids of the filters to be applied on the SKUs</td>
     </tr></tbody>
 </table><div class="example">        <p class="request">
           <span class="verb">GET</span>
@@ -1068,7 +1068,7 @@ the filter/manufacturer.</p>
       </li>
       <li class="js-topic">
         <h3>
-          <a href="./">Sku</a>
+          <a href="./">SKU</a>
         </h3>
       </li>
       <li class="js-topic">

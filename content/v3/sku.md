@@ -1,8 +1,8 @@
 ---
-title: Sku | Skroutz API
+title: SKU | Skroutz API
 ---
 
-# Sku API
+# SKU API
 
 * TOC
 {:toc}
@@ -12,7 +12,7 @@ title: Sku | Skroutz API
 A SKU (Stock Keeping Unit) is an aggregation of products.  
 [Linked resources](<%= relative_path_to('/v3') %>#linked-resources): [product](<%= relative_path_to('/v3/product') %>)
 
-## List skus
+## List SKUs
 
 <pre class="terminal">
   GET /skus
@@ -20,7 +20,7 @@ A SKU (Stock Keeping Unit) is an aggregation of products.
 
 <%= render_recording :skus_index %>
 
-## List skus of specific category
+## List SKUs of specific category
 
 <pre class="terminal">
   GET /categories/:category_id/skus
@@ -28,7 +28,7 @@ A SKU (Stock Keeping Unit) is an aggregation of products.
 
 <%= render_recording :category_skus %>
 
-## Retrieve a single sku
+## Retrieve a single SKU
 
 <pre class="terminal">
   GET /skus/:id
@@ -36,7 +36,7 @@ A SKU (Stock Keeping Unit) is an aggregation of products.
 
 <%= render_recording :skus_show %>
 
-## Retrieve similar skus
+## Retrieve similar SKUs
 
 <pre class="terminal">
   GET /skus/:id/similar
@@ -44,7 +44,7 @@ A SKU (Stock Keeping Unit) is an aggregation of products.
 
 <%= render_recording :skus_similar %>
 
-## Retrieve a sku's products
+## Retrieve a SKU's products
 
 <pre class="terminal">
   GET /skus/:id/products
@@ -52,7 +52,7 @@ A SKU (Stock Keeping Unit) is an aggregation of products.
 
 <%= render_recording :skus_products %>
 
-## Retrieve a sku's reviews
+## Retrieve a SKU's reviews
 
 <pre class="terminal">
   GET /skus/:id/reviews
@@ -76,14 +76,14 @@ Name | Type | Description
 <%= render_recording :category_skus_with_available_filters %>
 As you can see above the available_filters object contains two objects
 (filters, manufacturers) each of which has as keys the ids of the
-entities that can be applied and as values the number of skus that match
+entities that can be applied and as values the number of SKUs that match
 the filter/manufacturer.
 
 ### By manufacturers
 
 Name | Type | Description
 -----| -----| -----------
-`manufacturer_ids` | `Array` | The ids of the manufacturers of the skus
+`manufacturer_ids` | `Array` | The ids of the manufacturers of the SKUs
 
 <%= render_recording :category_skus_manufacturers %>
 
@@ -91,6 +91,6 @@ Name | Type | Description
 
 Name | Type | Description
 -----| -----| -----------
-`filter_ids` | `Array` | The ids of the filters to be applied on the skus
+`filter_ids` | `Array` | The ids of the filters to be applied on the SKUs
 
 <%= render_recording :category_skus_filters %>

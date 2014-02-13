@@ -39,7 +39,7 @@ Name        | Type     | Description
 
 <%= render_recording :manufacturer_categories %>
 
-## Retrieve a manufacturer's skus
+## Retrieve a manufacturer's SKUs
 
 ### Order
 Valid Parameters to perform ordering
