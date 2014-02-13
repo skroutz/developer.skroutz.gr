@@ -1,11 +1,9 @@
 ---
 :request:
   :verb: GET
-  :path: /categories/279/skus
+  :path: /categories/279/skus?include_meta=available_filters
   :params:
     per: 1
-    include_meta:
-    - available_filters
 :status: 200
 :headers:
   server: !binary |-
@@ -21,21 +19,21 @@
   cache-control: !binary |-
     bWF4LWFnZT0wLCBwcml2YXRlLCBtdXN0LXJldmFsaWRhdGU=
   x-request-id: !binary |-
-    MjM1ODAyNzY1MA==
+    MjM3NDQxNjc1MA==
   x-runtime: !binary |-
-    MC4wNTg2NTc=
+    MC4wNzA5MTE=
   x-dns-prefetch-control: !binary |-
     b2Zm
   x-app: !binary |-
-    ZnJhbmtpZQ==
+    bHVua3dpbGw=
   content-length: !binary |-
-    NzA0
+    Njk5
   accept-ranges: !binary |-
     Ynl0ZXM=
   date: !binary |-
-    TW9uLCAxMCBGZWIgMjAxNCAxMzozODowOSBHTVQ=
+    VGh1LCAxMyBGZWIgMjAxNCAxMDoxNDoxMyBHTVQ=
   x-varnish: !binary |-
-    MjM1ODAyNzY1MA==
+    MjM3NDQxNjc1MA==
   age: !binary |-
     MA==
   via: !binary |-
@@ -61,29 +59,28 @@
   ZV9taW4iOjAuMzIsInJldmlld3Njb3JlIjowLjAsInNob3BfY291bnQiOjEs
   InBsYWluX3NwZWNfc3VtbWFyeSI6Ilx1MDM5NVx1MDNhZlx1MDNiNFx1MDNi
   Zlx1MDNjMjogXHUwMzljXHUwM2MwXHUwM2JmXHUwM2JjXHUwM2MwXHUwM2Jm
-  XHUwM2JkXHUwM2I5XHUwM2FkXHUwM2MxXHUwM2I1XHUwM2MyIiwiYWN0aXZl
-  X3Byb2R1Y3RzX2NvdW50IjoxLCJtYWluX3BpY3R1cmUiOnsic21hbGxfdXJs
-  IjoiaHR0cDovL2Iuc2Nkbi5nci9pbWFnZXMvc2t1X21haW5faW1hZ2VzLzAw
-  NDExMi80MTEyODI4L3NtYWxsXzE0MDMzMjMzLW9yaWcuanBnIiwib3JpZ2lu
-  YWxfdXJsIjoiaHR0cDovL2Iuc2Nkbi5nci9pbWFnZXMvc2t1X21haW5faW1h
-  Z2VzLzAwNDExMi80MTEyODI4L21lZGl1bV8xNDAzMzIzMy1vcmlnLmpwZyIs
-  InRpbnlfdXJsIjoiaHR0cDovL2Muc2Nkbi5nci9pbWFnZXMvc2t1X21haW5f
-  aW1hZ2VzLzAwNDExMi80MTEyODI4L3RpbnlfMTQwMzMyMzMtb3JpZy5qcGci
-  LCJtZWRpdW1fdXJsIjoiaHR0cDovL2Iuc2Nkbi5nci9pbWFnZXMvc2t1X21h
-  aW5faW1hZ2VzLzAwNDExMi80MTEyODI4L21lZGl1bV8xNDAzMzIzMy1vcmln
-  LmpwZyIsImRhdGFtYXJ0X3VybCI6Imh0dHA6Ly9kLnNjZG4uZ3IvaW1hZ2Vz
-  L3NrdV9tYWluX2ltYWdlcy8wMDQxMTIvNDExMjgyOC8xNDAzMzIzMy1vcmln
-  LmpwZyJ9LCJtYW51ZmFjdHVyZXJfaWQiOjAsImZ1dHVyZSI6ZmFsc2V9XSwi
-  bWV0YSI6eyJhdmFpbGFibGVfZmlsdGVycyI6eyJmaWx0ZXJzIjp7IjM0Mjgy
-  OSI6ODk2LCIzNDI4MzQiOjMyNSwiMzQyODMwIjoyNDUsIjM0MjgyNyI6MTM1
-  LCIzNDI4MzIiOjk3LCIzNDI4MzEiOjU5LCIzNDI4MzMiOjU1LCIzNDI4Mjgi
-  OjUsIjQ1NTc1OCI6NTEzLCI0NTU3NTkiOjM5NCwiNDU1NzYyIjozNTUsIjQ1
-  NTc2MCI6Mjc4LCI0NTU3NjEiOjI2MiwiNDU1NzYzIjoxMTZ9LCJtYW51ZmFj
-  dHVyZXJzIjp7IjAiOjEyMDgsIjEwMTc5IjoyMDMsIjcyMjQiOjE3MywiMTY0
-  OSI6NzIsIjk5MTIiOjcwLCIxMDY0NSI6MjksIjEwMTgxIjoyNywiMTA2NTQi
-  OjIyLCI3OTk4IjoyMCwiMTAxODAiOjEwLCIxMDY0NyI6OSwiMTMxOCI6Nywi
-  MTExNTQiOjYsIjEyOTkiOjYsIjc5MzEiOjUsIjExODY2IjozLCI3MDMyIjoz
-  LCI1NTAzIjozLCI4MTM5IjoyLCI3NTY0IjoyLCIxMzQ1NCI6MSwiODc0NSI6
-  MSwiNzU1OCI6MSwiNTQ3OSI6MX19LCJwYWdpbmF0aW9uIjp7InRvdGFsX3Jl
-  c3VsdHMiOjE4ODQsInRvdGFsX3BhZ2VzIjoxODg0LCJwYWdlIjoxLCJwZXIi
-  OjF9fX0=
+  XHUwM2JkXHUwM2I5XHUwM2FkXHUwM2MxXHUwM2I1XHUwM2MyIiwibWFpbl9w
+  aWN0dXJlIjp7InNtYWxsX3VybCI6Imh0dHA6Ly9iLnNjZG4uZ3IvaW1hZ2Vz
+  L3NrdV9tYWluX2ltYWdlcy8wMDQxMTIvNDExMjgyOC9zbWFsbF8xNDAzMzIz
+  My1vcmlnLmpwZyIsIm9yaWdpbmFsX3VybCI6Imh0dHA6Ly9iLnNjZG4uZ3Iv
+  aW1hZ2VzL3NrdV9tYWluX2ltYWdlcy8wMDQxMTIvNDExMjgyOC9tZWRpdW1f
+  MTQwMzMyMzMtb3JpZy5qcGciLCJ0aW55X3VybCI6Imh0dHA6Ly9jLnNjZG4u
+  Z3IvaW1hZ2VzL3NrdV9tYWluX2ltYWdlcy8wMDQxMTIvNDExMjgyOC90aW55
+  XzE0MDMzMjMzLW9yaWcuanBnIiwibWVkaXVtX3VybCI6Imh0dHA6Ly9iLnNj
+  ZG4uZ3IvaW1hZ2VzL3NrdV9tYWluX2ltYWdlcy8wMDQxMTIvNDExMjgyOC9t
+  ZWRpdW1fMTQwMzMyMzMtb3JpZy5qcGciLCJkYXRhbWFydF91cmwiOiJodHRw
+  Oi8vZC5zY2RuLmdyL2ltYWdlcy9za3VfbWFpbl9pbWFnZXMvMDA0MTEyLzQx
+  MTI4MjgvMTQwMzMyMzMtb3JpZy5qcGcifSwibWFudWZhY3R1cmVyX2lkIjow
+  LCJmdXR1cmUiOmZhbHNlLCJyZXZpZXdzX2NvdW50IjowfV0sIm1ldGEiOnsi
+  YXZhaWxhYmxlX2ZpbHRlcnMiOnsiZmlsdGVycyI6eyIzNDI4MjkiOjg5Niwi
+  MzQyODM0IjozNDIsIjM0MjgzMCI6MjU0LCIzNDI4MjciOjEzNSwiMzQyODMy
+  Ijo5NywiMzQyODMxIjo1OSwiMzQyODMzIjo1NiwiMzQyODI4Ijo1LCI0NTU3
+  NTgiOjUzMCwiNDU1NzU5Ijo0MDMsIjQ1NTc2MiI6MzU4LCI0NTU3NjAiOjI4
+  NiwiNDU1NzYxIjoyNzIsIjQ1NTc2MyI6MTE2fSwibWFudWZhY3R1cmVycyI6
+  eyIwIjoxMjUzLCIxMDE3OSI6MjAzLCI3MjI0IjoxNzQsIjE2NDkiOjc0LCI5
+  OTEyIjo3MCwiMTA2NDUiOjI3LCIxMDE4MSI6MjcsIjEwNjU0IjoyMiwiNzk5
+  OCI6MjAsIjEwMTgwIjoxMCwiMTA2NDciOjksIjEzMTgiOjgsIjExMTU0Ijo2
+  LCIxMjk5Ijo2LCI3OTMxIjo1LCIxMTg2NiI6MywiNzAzMiI6MywiNTUwMyI6
+  MywiODEzOSI6MiwiNzU2NCI6MiwiMTM0NTQiOjEsIjg3NDUiOjEsIjc1NTgi
+  OjEsIjU0NzkiOjF9fSwicGFnaW5hdGlvbiI6eyJ0b3RhbF9yZXN1bHRzIjox
+  OTMxLCJ0b3RhbF9wYWdlcyI6MTkzMSwicGFnZSI6MSwicGVyIjoxfX19

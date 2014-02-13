@@ -44,7 +44,6 @@
   <li><a href="#retrieve-a-skus-products">Retrieve a SKU’s products</a></li>
   <li><a href="#retrieve-a-skus-reviews">Retrieve a SKU’s reviews</a></li>
   <li><a href="#filtering">Filtering</a></li>
-  <li><a href="#meta">Meta</a></li>
 </ul><h2 id="about">About</h2>
 
 <p>A SKU (Stock Keeping Unit) is an aggregation of products.<br><a href="..#linked-resources">Linked resources</a>: <a href="../product">product</a></p>
@@ -649,8 +648,7 @@
 You may supply the optional parameter <code>include_meta[]=available_filters</code>
 to get meta information about the filters that can be applied.</p>
 
-<h2 id="meta">Meta</h2>
-<p>You may choose to include extra meta information using the following parameters:</p>
+<h3 id="by-search-keyword">By search keyword</h3>
 
 <table>
 <thead><tr>
@@ -659,103 +657,80 @@ to get meta information about the filters that can be applied.</p>
       <th>Description</th>
     </tr></thead>
 <tbody><tr>
-<td><code>include_meta</code></td>
-      <td><code>Array</code></td>
-      <td><code>Extra meta info to be included in the response</code></td>
+<td><code>q</code></td>
+      <td><code>String</code></td>
+      <td>The keyword to search by</td>
     </tr></tbody>
 </table><div class="example">        <p class="request">
           <span class="verb">GET</span>
-          <span class="path">/categories/279/skus</span>
+          <span class="path">/categories/40/skus?q=iphone</span>
         </p>
 <a href="javascript:void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
 <pre class="headers"><code>Status: 200</code></pre>
 <pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"skus"</span><span class="o">:</span> <span class="p">[</span>
     <span class="p">{</span>
-      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">4112828</span><span class="p">,</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">3902581</span><span class="p">,</span>
       <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
       <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
-      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Πουγκί  Βουάλ  Ασύμμετρο    014S13"</span><span class="p">,</span>
-      <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"Πουγκί  Βουάλ  Ασύμμετρο    014S13"</span><span class="p">,</span>
-      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">279</span><span class="p">,</span>
-      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="s2">"2225|E-mpomponiera|empomponiera"</span><span class="p">,</span>
-      <span class="s2">"click_url"</span><span class="o">:</span> <span class="s2">"http://www.skroutz.gr/products/show/14033233"</span><span class="p">,</span>
-      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">0.32</span><span class="p">,</span>
-      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">0.32</span><span class="p">,</span>
-      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">0.0</span><span class="p">,</span>
-      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"Είδος: Μπομπονιέρες"</span><span class="p">,</span>
-      <span class="s2">"active_products_count"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"iPhone 4S (8GB)"</span><span class="p">,</span>
+      <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"Apple iPhone 4S (8GB)"</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">469.25</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">318.0</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">4.66667</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">47</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"Single SIM, Δίκτυο Σύνδεσης: 3G, Κάμερα: 8 MP,  Οθόνη: 3.5\" , Ανάλυση: 640 x 960 pixels, Χειρισμός: Οθόνη αφής (Touch screen),  Εσωτερική Μνήμη: 8.0 GB,  Ασύρματο Δίκτυο: Wi-Fi, Λειτουργικό Σύστημα: iOS, SAR: 0.99 W/kg, Έτος Κυκλοφορίας: 2011, SmartPhone"</span><span class="p">,</span>
       <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/004112/4112828/small_14033233-orig.jpg"</span><span class="p">,</span>
-        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/004112/4112828/medium_14033233-orig.jpg"</span><span class="p">,</span>
-        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/004112/4112828/tiny_14033233-orig.jpg"</span><span class="p">,</span>
-        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/004112/4112828/medium_14033233-orig.jpg"</span><span class="p">,</span>
-        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/004112/4112828/14033233-orig.jpg"</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/003902/3902581/small_color_white.jpg"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/003902/3902581/medium_color_white.jpg"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/sku_main_images/003902/3902581/tiny_color_white.jpg"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/003902/3902581/medium_color_white.jpg"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/003902/3902581/color_white.jpg"</span>
       <span class="p">},</span>
-      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-      <span class="s2">"future"</span><span class="o">:</span> <span class="kc">false</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">356</span><span class="p">,</span>
+      <span class="s2">"future"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"reviews_count"</span><span class="o">:</span> <span class="mi">6</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">392180</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">"iPhone 4 8GB"</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"iPhone 4 8GB"</span><span class="p">,</span>
+      <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"Apple iPhone 4 8GB"</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">461.94</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">338.0</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">4.47059</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"Single SIM, Δίκτυο Σύνδεσης: 3G, Κάμερα: 5 MP,  Οθόνη: 3.5\" , Ανάλυση: 640 x 960 pixels, Χειρισμός: Οθόνη αφής (Touch screen),  Εσωτερική Μνήμη: 8.0 GB,  Ασύρματο Δίκτυο: Wi-Fi, Λειτουργικό Σύστημα: iOS, SAR: 0.93 W/kg, Έτος Κυκλοφορίας: 2010, SmartPhone"</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/000392/392180/small_apple-iphone-4-ofic-3.jpg"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/000392/392180/medium_apple-iphone-4-ofic-3.jpg"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/000392/392180/tiny_apple-iphone-4-ofic-3.jpg"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/000392/392180/medium_apple-iphone-4-ofic-3.jpg"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/000392/392180/apple-iphone-4-ofic-3.jpg"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">356</span><span class="p">,</span>
+      <span class="s2">"future"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"reviews_count"</span><span class="o">:</span> <span class="mi">17</span>
     <span class="p">}</span>
   <span class="p">],</span>
   <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">"available_filters"</span><span class="o">:</span> <span class="p">{</span>
-      <span class="s2">"filters"</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">"342829"</span><span class="o">:</span> <span class="mi">896</span><span class="p">,</span>
-        <span class="s2">"342834"</span><span class="o">:</span> <span class="mi">325</span><span class="p">,</span>
-        <span class="s2">"342830"</span><span class="o">:</span> <span class="mi">245</span><span class="p">,</span>
-        <span class="s2">"342827"</span><span class="o">:</span> <span class="mi">135</span><span class="p">,</span>
-        <span class="s2">"342832"</span><span class="o">:</span> <span class="mi">97</span><span class="p">,</span>
-        <span class="s2">"342831"</span><span class="o">:</span> <span class="mi">59</span><span class="p">,</span>
-        <span class="s2">"342833"</span><span class="o">:</span> <span class="mi">55</span><span class="p">,</span>
-        <span class="s2">"342828"</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
-        <span class="s2">"455758"</span><span class="o">:</span> <span class="mi">513</span><span class="p">,</span>
-        <span class="s2">"455759"</span><span class="o">:</span> <span class="mi">394</span><span class="p">,</span>
-        <span class="s2">"455762"</span><span class="o">:</span> <span class="mi">355</span><span class="p">,</span>
-        <span class="s2">"455760"</span><span class="o">:</span> <span class="mi">278</span><span class="p">,</span>
-        <span class="s2">"455761"</span><span class="o">:</span> <span class="mi">262</span><span class="p">,</span>
-        <span class="s2">"455763"</span><span class="o">:</span> <span class="mi">116</span>
-      <span class="p">},</span>
-      <span class="s2">"manufacturers"</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">"0"</span><span class="o">:</span> <span class="mi">1208</span><span class="p">,</span>
-        <span class="s2">"10179"</span><span class="o">:</span> <span class="mi">203</span><span class="p">,</span>
-        <span class="s2">"7224"</span><span class="o">:</span> <span class="mi">173</span><span class="p">,</span>
-        <span class="s2">"1649"</span><span class="o">:</span> <span class="mi">72</span><span class="p">,</span>
-        <span class="s2">"9912"</span><span class="o">:</span> <span class="mi">70</span><span class="p">,</span>
-        <span class="s2">"10645"</span><span class="o">:</span> <span class="mi">29</span><span class="p">,</span>
-        <span class="s2">"10181"</span><span class="o">:</span> <span class="mi">27</span><span class="p">,</span>
-        <span class="s2">"10654"</span><span class="o">:</span> <span class="mi">22</span><span class="p">,</span>
-        <span class="s2">"7998"</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span>
-        <span class="s2">"10180"</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
-        <span class="s2">"10647"</span><span class="o">:</span> <span class="mi">9</span><span class="p">,</span>
-        <span class="s2">"1318"</span><span class="o">:</span> <span class="mi">7</span><span class="p">,</span>
-        <span class="s2">"11154"</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
-        <span class="s2">"1299"</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
-        <span class="s2">"7931"</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
-        <span class="s2">"11866"</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-        <span class="s2">"7032"</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-        <span class="s2">"5503"</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-        <span class="s2">"8139"</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-        <span class="s2">"7564"</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-        <span class="s2">"13454"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s2">"8745"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s2">"7558"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s2">"5479"</span><span class="o">:</span> <span class="mi">1</span>
-      <span class="p">}</span>
-    <span class="p">},</span>
     <span class="s2">"pagination"</span><span class="o">:</span> <span class="p">{</span>
-      <span class="s2">"total_results"</span><span class="o">:</span> <span class="mi">1884</span><span class="p">,</span>
-      <span class="s2">"total_pages"</span><span class="o">:</span> <span class="mi">1884</span><span class="p">,</span>
+      <span class="s2">"total_results"</span><span class="o">:</span> <span class="mi">14</span><span class="p">,</span>
+      <span class="s2">"total_pages"</span><span class="o">:</span> <span class="mi">7</span><span class="p">,</span>
       <span class="s2">"page"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-      <span class="s2">"per"</span><span class="o">:</span> <span class="mi">1</span>
+      <span class="s2">"per"</span><span class="o">:</span> <span class="mi">2</span>
     <span class="p">}</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre>
 </div>
 </div>
-<p>As you can see above the available_filters object contains two objects
-(filters, manufacturers) each of which has as keys the ids of the
-entities that can be applied and as values the number of SKUs that match
-the filter/manufacturer.</p>
 
 <h3 id="by-manufacturers">By manufacturers</h3>
 
@@ -1024,6 +999,114 @@ the filter/manufacturer.</p>
 <span class="p">}</span></code></pre>
 </div>
 </div>
+
+<h3 id="meta">Meta</h3>
+<p>You may choose to include extra meta information using the following parameters:</p>
+
+<table>
+<thead><tr>
+<th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr></thead>
+<tbody><tr>
+<td><code>include_meta</code></td>
+      <td><code>Array</code></td>
+      <td><code>Extra meta info to be included in the response</code></td>
+    </tr></tbody>
+</table><div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/categories/279/skus?include_meta=available_filters</span>
+        </p>
+<a href="javascript:void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"skus"</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">4112828</span><span class="p">,</span>
+      <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Πουγκί  Βουάλ  Ασύμμετρο    014S13"</span><span class="p">,</span>
+      <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"Πουγκί  Βουάλ  Ασύμμετρο    014S13"</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">279</span><span class="p">,</span>
+      <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="s2">"2225|E-mpomponiera|empomponiera"</span><span class="p">,</span>
+      <span class="s2">"click_url"</span><span class="o">:</span> <span class="s2">"http://www.skroutz.gr/products/show/14033233"</span><span class="p">,</span>
+      <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">0.32</span><span class="p">,</span>
+      <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">0.32</span><span class="p">,</span>
+      <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">0.0</span><span class="p">,</span>
+      <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"Είδος: Μπομπονιέρες"</span><span class="p">,</span>
+      <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/004112/4112828/small_14033233-orig.jpg"</span><span class="p">,</span>
+        <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/004112/4112828/medium_14033233-orig.jpg"</span><span class="p">,</span>
+        <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/004112/4112828/tiny_14033233-orig.jpg"</span><span class="p">,</span>
+        <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/004112/4112828/medium_14033233-orig.jpg"</span><span class="p">,</span>
+        <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/004112/4112828/14033233-orig.jpg"</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"future"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"reviews_count"</span><span class="o">:</span> <span class="mi">0</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"available_filters"</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">"filters"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"342829"</span><span class="o">:</span> <span class="mi">896</span><span class="p">,</span>
+        <span class="s2">"342834"</span><span class="o">:</span> <span class="mi">342</span><span class="p">,</span>
+        <span class="s2">"342830"</span><span class="o">:</span> <span class="mi">254</span><span class="p">,</span>
+        <span class="s2">"342827"</span><span class="o">:</span> <span class="mi">135</span><span class="p">,</span>
+        <span class="s2">"342832"</span><span class="o">:</span> <span class="mi">97</span><span class="p">,</span>
+        <span class="s2">"342831"</span><span class="o">:</span> <span class="mi">59</span><span class="p">,</span>
+        <span class="s2">"342833"</span><span class="o">:</span> <span class="mi">56</span><span class="p">,</span>
+        <span class="s2">"342828"</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="s2">"455758"</span><span class="o">:</span> <span class="mi">530</span><span class="p">,</span>
+        <span class="s2">"455759"</span><span class="o">:</span> <span class="mi">403</span><span class="p">,</span>
+        <span class="s2">"455762"</span><span class="o">:</span> <span class="mi">358</span><span class="p">,</span>
+        <span class="s2">"455760"</span><span class="o">:</span> <span class="mi">286</span><span class="p">,</span>
+        <span class="s2">"455761"</span><span class="o">:</span> <span class="mi">272</span><span class="p">,</span>
+        <span class="s2">"455763"</span><span class="o">:</span> <span class="mi">116</span>
+      <span class="p">},</span>
+      <span class="s2">"manufacturers"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"0"</span><span class="o">:</span> <span class="mi">1253</span><span class="p">,</span>
+        <span class="s2">"10179"</span><span class="o">:</span> <span class="mi">203</span><span class="p">,</span>
+        <span class="s2">"7224"</span><span class="o">:</span> <span class="mi">174</span><span class="p">,</span>
+        <span class="s2">"1649"</span><span class="o">:</span> <span class="mi">74</span><span class="p">,</span>
+        <span class="s2">"9912"</span><span class="o">:</span> <span class="mi">70</span><span class="p">,</span>
+        <span class="s2">"10645"</span><span class="o">:</span> <span class="mi">27</span><span class="p">,</span>
+        <span class="s2">"10181"</span><span class="o">:</span> <span class="mi">27</span><span class="p">,</span>
+        <span class="s2">"10654"</span><span class="o">:</span> <span class="mi">22</span><span class="p">,</span>
+        <span class="s2">"7998"</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span>
+        <span class="s2">"10180"</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="s2">"10647"</span><span class="o">:</span> <span class="mi">9</span><span class="p">,</span>
+        <span class="s2">"1318"</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+        <span class="s2">"11154"</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
+        <span class="s2">"1299"</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
+        <span class="s2">"7931"</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="s2">"11866"</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s2">"7032"</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s2">"5503"</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s2">"8139"</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">"7564"</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">"13454"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">"8745"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">"7558"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">"5479"</span><span class="o">:</span> <span class="mi">1</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s2">"pagination"</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">"total_results"</span><span class="o">:</span> <span class="mi">1931</span><span class="p">,</span>
+      <span class="s2">"total_pages"</span><span class="o">:</span> <span class="mi">1931</span><span class="p">,</span>
+      <span class="s2">"page"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"per"</span><span class="o">:</span> <span class="mi">1</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre>
+</div>
+</div>
+<p>As you can see above the available_filters object contains two objects
+(filters, manufacturers) each of which has as keys the ids of the
+entities that can be applied and as values the number of skus that match
+the filter/manufacturer.</p>
         </div>
       </div>
       <div id="js-sidebar" class="sidebar-shell">
