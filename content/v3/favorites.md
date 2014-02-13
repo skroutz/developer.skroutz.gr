@@ -11,7 +11,7 @@ To access any of the following endpoints a valid access_token is required.
 
 ## About
 
-User may pick one or more skus as favorites
+User may pick one or more SKUs as favorites
 
 ## List favorites 
 
