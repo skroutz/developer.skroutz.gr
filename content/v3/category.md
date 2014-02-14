@@ -51,3 +51,17 @@ A product/sku belongs to a leaf category.
 </pre>
 
 <%= render_recording :children_api_category %>
+
+## List a category's manufacturers
+
+Name | Type | Description
+-----| -----| -----------
+`order_by` | `String` | `(optional) order by 'name' or 'popularity'(default)`
+`order_dir` | `String` | `(optional) order direction 'asc'(default) or 'desc'`
+
+
+<pre class="terminal">
+  GET /categories/:id/manufacturers?order_by=popularity&order_dir=desc
+</pre>
+
+<%= render_recording :category_manufacturers %>
