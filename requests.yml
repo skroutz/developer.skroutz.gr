@@ -25,6 +25,15 @@ requests:
   -
     key: children_api_category
     request: 'GET {{base_url}}/categories/73/children'
+
+  -
+    key: category_manufacturers
+    request:
+      path: '{{base_url}}/categories/25/manufacturers'
+      params:
+        order_by: popularity
+        order_dir: desc
+        per: 2
   -
     key: category_skus
     request: 'GET {{base_url}}/categories/1442/skus?page=1&per=3'

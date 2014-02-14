@@ -55,6 +55,22 @@
       },
       {
          "collectionId":"701fe06f-eaf4-255e-a600-8870177f10a1",
+         "id":"0b6ca5ee-40ad-ffbf-3267-bbd091be81d9",
+         "name":"category_manufacturers",
+         "description":"Fetches a category's manufacturers",
+         "url":"{{base_url}}/categories/25/manufacturers?order_by=popularity&order_dir=desc",
+         "method":"GET",
+         "headers":"accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}\n",
+         "data":[
+
+         ],
+         "dataMode":"params",
+         "timestamp":0,
+         "version":2,
+         "time":1392195037698
+      },
+      {
+         "collectionId":"701fe06f-eaf4-255e-a600-8870177f10a1",
          "id":"0bb07cb8-9011-734e-cfaa-5f6d27ac4805",
          "name":"manufacturers_index",
          "description":"",
@@ -679,7 +695,12 @@
       "e87cda2c-29f6-15ab-5545-265aade7f176",
       "b92474da-7ab2-1b6f-7a21-47004c2685c2",
       "b47d47fc-1ccf-43d4-5f63-cbd28bcb3974",
-      "ab3a842c-69ab-61d4-e4a7-1a0413979030"
+      "ab3a842c-69ab-61d4-e4a7-1a0413979030",
+      "0b6ca5ee-40ad-ffbf-3267-bbd091be81d9"
    ],
    "timestamp":1389958720
 }
+
+
+
+
