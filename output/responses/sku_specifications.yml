@@ -1,0 +1,22 @@
+---
+:request:
+  :verb: GET
+  :path: /skus/2588170/specifications
+  :params:
+    include: specgroup
+:status: 200
+:headers:
+  content-type: application/json; charset=utf-8
+  x-meta-request-version: 0.2.1
+  x-ua-compatible: IE=Edge,chrome=1
+  etag: '"967ba0e977cf005ac4c87d2bbdacb214"'
+  cache-control: max-age=0, private, must-revalidate
+  x-request-id: 94c836a3d50e86f0147030a0756cd943
+  x-runtime: '1.424272'
+  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
+  date: Mon, 17 Feb 2014 11:53:31 GMT
+  content-length: '609'
+  connection: close
+  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWFiNWM1ZDYxN2I0NmY2ZjA3ODYwZGJlZmJhMDlkYmFkBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--ad8ba064068b14dddded2366f35efa738fc69822;
+    path=/; expires=Thu, 17-Apr-2014 10:53:31 GMT; HttpOnly
+:body: '{"groups":[{"id":234,"name":"\u03a7\u03b1\u03c1\u03b1\u03ba\u03c4\u03b7\u03c1\u03b9\u03c3\u03c4\u03b9\u03ba\u03ac","order":5}],"specifications":[{"id":867,"name":"\u03a6\u03cd\u03bb\u03bf","unit":"","values":["\u0391\u03bd\u03b4\u03c1\u03b9\u03ba\u03ac"],"group_id":234},{"id":868,"name":"\u03a5\u03bb\u03b9\u03ba\u03cc","unit":"","values":["\u039a\u03b1\u03bf\u03c5\u03c4\u03c3\u03bf\u03cd\u03ba/\u03a0\u03bb\u03b1\u03c3\u03c4\u03b9\u03ba\u03cc"],"group_id":234},{"id":869,"name":"\u03a4\u03cd\u03c0\u03bf\u03c2","unit":"","values":["\u0391\u03bd\u03b1\u03bb\u03bf\u03b3\u03b9\u03ba\u03cc"],"group_id":234}]}'
