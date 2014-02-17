@@ -42,6 +42,7 @@
   <li><a href="#retrieve-the-parent-of-a-category">Retrieve the parent of a category</a></li>
   <li><a href="#retrieve-the-root-category">Retrieve the root category</a></li>
   <li><a href="#list-the-children-categories-of-a-category">List the children categories of a category</a></li>
+  <li><a href="#list-a-categorys-manufacturers">List a category’s manufacturers</a></li>
 </ul><h2 id="about">About</h2>
 
 <p>Categories are organized in a tree-like structure.<br>
@@ -217,6 +218,61 @@ A product/sku belongs to a leaf category.</p>
       <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">true</span>
     <span class="p">}</span>
   <span class="p">]</span>
+<span class="p">}</span></code></pre>
+</div>
+</div>
+
+<h2 id="list-a-categorys-manufacturers">List a category’s manufacturers</h2>
+
+<table>
+<thead><tr>
+<th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr></thead>
+<tbody>
+<tr>
+<td><code>order_by</code></td>
+      <td><code>String</code></td>
+      <td><code>(optional) order by 'name' or 'popularity'(default)</code></td>
+    </tr>
+<tr>
+<td><code>order_dir</code></td>
+      <td><code>String</code></td>
+      <td><code>(optional) order direction 'asc'(default) or 'desc'</code></td>
+    </tr>
+</tbody>
+</table><pre class="terminal">
+  GET /categories/:id/manufacturers?order_by=popularity&amp;order_dir=desc
+</pre>
+
+<div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/categories/25/manufacturers</span>
+        </p>
+<a href="javascript:void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"manufacturers"</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">202</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Toshiba"</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="kc">null</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">1139</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Dell"</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="kc">null</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"pagination"</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">"total_results"</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>
+      <span class="s2">"total_pages"</span><span class="o">:</span> <span class="mi">9</span><span class="p">,</span>
+      <span class="s2">"page"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"per"</span><span class="o">:</span> <span class="mi">2</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
 <span class="p">}</span></code></pre>
 </div>
 </div>
