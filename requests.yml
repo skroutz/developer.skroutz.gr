@@ -205,6 +205,12 @@ requests:
     request:
       path: '{{base_url}}/skus/355766/reviews'
   -
+    key: sku_specifications
+    request:
+      path: '{{base_url}}/skus/2588170/specifications'
+      params:
+        include: group
+  -
     key: shop_reviews
     request:
       path: '{{base_url}}/shops/3/reviews'
