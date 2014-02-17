@@ -593,21 +593,6 @@
       },
       {
          "collectionId":"701fe06f-eaf4-255e-a600-8870177f10a1",
-         "id":"d7cdf1a6-0a66-36a6-6893-22175709b42a",
-         "name":"skus_index",
-         "description":"",
-         "url":"{{base_url}}/skus?page=1&per=3&category_id=25",
-         "method":"GET",
-         "headers":"accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}\n",
-         "data":[
-
-         ],
-         "dataMode":"params",
-         "timestamp":0,
-         "version":2
-      },
-      {
-         "collectionId":"701fe06f-eaf4-255e-a600-8870177f10a1",
          "id":"dd7d0a20-d660-3536-4d63-72a902ee9d8e",
          "name":"notifications_index",
          "description":"",
@@ -662,15 +647,14 @@
          "description":"",
          "url":"{{base_url}}/skus/3703742/products",
          "method":"GET",
-         "headers":"accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}",
+         "headers":"accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}\n",
          "data":[
 
          ],
          "dataMode":"params",
-         "responses":[
-
-         ],
-         "version":2
+         "timestamp":0,
+         "version":2,
+         "time":1392385684577
       }
    ],
    "order":[
@@ -696,7 +680,6 @@
       "81d86257-482d-fd08-cb8c-7a9a8284b861",
       "15bf98e7-e5fc-6148-c8bf-8e5cafeb355b",
       "0b073c71-e7ab-2c6d-b04b-021ee5775d8d",
-      "d7cdf1a6-0a66-36a6-6893-22175709b42a",
       "898ad28e-ef8e-249b-4866-9ae109d6f7e3",
       "f36e6c9f-ebe5-1f5f-dd2b-df5ca9b67a93",
       "e8b9d9c0-30cc-9b92-8104-2cfd72dbd900",
