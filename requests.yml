@@ -52,6 +52,16 @@ requests:
     key: shops_show
     request: 'GET {{base_url}}/shops/3'
   -
+    key: shop_locations_index
+    request:
+      path: '{{base_url}}/shops/11/locations'
+      params:
+        per:  2
+        embed: address
+  -
+    key: shop_locations_show
+    request: 'GET {{base_url}}/shops/11/locations/2'
+  -
     key: manufacturers_show
     request: 'GET {{base_url}}/manufacturers/12907'
   -
