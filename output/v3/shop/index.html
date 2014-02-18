@@ -39,6 +39,8 @@
 <li><a href="#list-shops">List shops</a></li>
   <li><a href="#retrieve-a-single-shop">Retrieve a single shop</a></li>
   <li><a href="#retrieve-a-shops-reviews">Retrieve a shop’s reviews</a></li>
+  <li><a href="#list-shop-locations">List shop locations</a></li>
+  <li><a href="#retrieve-a-single-shop-location">Retrieve a single shop location</a></li>
   <li><a href="#search-for-shops">Search for shops</a></li>
 </ul><h2 id="list-shops">List shops</h2>
 
@@ -151,6 +153,89 @@
       <span class="s2">"page"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
       <span class="s2">"per"</span><span class="o">:</span> <span class="mi">3</span>
     <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre>
+</div>
+</div>
+
+<h2 id="list-shop-locations">List shop locations</h2>
+
+<p><a href="..#linked-resources">Linked resource</a>: address</p>
+
+<pre class="terminal">
+  GET /shops/:shop_id/locations?embed=address
+</pre>
+
+<div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/shops/11/locations</span>
+        </p>
+<a href="javascript:void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"locations"</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="s2">"headquarter"</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="s2">"phones"</span><span class="o">:</span> <span class="p">[</span>
+        <span class="s2">"2105587700"</span>
+      <span class="p">],</span>
+      <span class="s2">"pickup_point"</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="s2">"store"</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="s2">"full_address"</span><span class="o">:</span> <span class="s2">"ΘΕΣΗ ΣΚΛΗΡΙ 1, Τ.Κ. 19600, ΜΑΓΟΥΛΑ, Αττικής"</span><span class="p">,</span>
+      <span class="s2">"lat"</span><span class="o">:</span> <span class="s2">"38.083786"</span><span class="p">,</span>
+      <span class="s2">"lng"</span><span class="o">:</span> <span class="s2">"23.526396"</span><span class="p">,</span>
+      <span class="s2">"info"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+      <span class="s2">"address"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"id"</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">"street_number"</span><span class="o">:</span> <span class="s2">"1"</span><span class="p">,</span>
+        <span class="s2">"street"</span><span class="o">:</span> <span class="s2">"ΘΕΣΗ ΣΚΛΗΡΙ"</span><span class="p">,</span>
+        <span class="s2">"postcode"</span><span class="o">:</span> <span class="s2">"19600"</span><span class="p">,</span>
+        <span class="s2">"city"</span><span class="o">:</span> <span class="s2">"ΜΑΓΟΥΛΑ"</span><span class="p">,</span>
+        <span class="s2">"region"</span><span class="o">:</span> <span class="s2">"Αττικής"</span><span class="p">,</span>
+        <span class="s2">"country"</span><span class="o">:</span> <span class="s2">"Ελλάδα"</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"pagination"</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">"total_results"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"total_pages"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"page"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"per"</span><span class="o">:</span> <span class="mi">2</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre>
+</div>
+</div>
+
+<h2 id="retrieve-a-single-shop-location">Retrieve a single shop location</h2>
+
+<p><a href="..#linked-resources">Linked resource</a>: address</p>
+
+<pre class="terminal">
+  GET /shops/:shop_id/locations/:id
+</pre>
+
+<div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/shops/11/locations/2</span>
+        </p>
+<a href="javascript:void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"location"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"id"</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="s2">"headquarter"</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="s2">"phones"</span><span class="o">:</span> <span class="p">[</span>
+      <span class="s2">"2105587700"</span>
+    <span class="p">],</span>
+    <span class="s2">"pickup_point"</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="s2">"store"</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="s2">"full_address"</span><span class="o">:</span> <span class="s2">"ΘΕΣΗ ΣΚΛΗΡΙ 1, Τ.Κ. 19600, ΜΑΓΟΥΛΑ, Αττικής"</span><span class="p">,</span>
+    <span class="s2">"lat"</span><span class="o">:</span> <span class="s2">"38.083786"</span><span class="p">,</span>
+    <span class="s2">"lng"</span><span class="o">:</span> <span class="s2">"23.526396"</span><span class="p">,</span>
+    <span class="s2">"info"</span><span class="o">:</span> <span class="s2">""</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre>
 </div>
