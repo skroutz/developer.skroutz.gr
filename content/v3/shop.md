@@ -36,6 +36,26 @@ Name | Type | Description
 
 <%= render_recording :shop_reviews %>
 
+## List shop locations
+
+[Linked resource](<%= relative_path_to('/v3') %>#linked-resources): address
+
+<pre class="terminal">
+  GET /shops/:shop_id/locations?embed=address
+</pre>
+
+<%= render_recording :shop_locations_index %>
+
+## Retrieve a single shop location
+
+[Linked resource](<%= relative_path_to('/v3') %>#linked-resources): address
+
+<pre class="terminal">
+  GET /shops/:shop_id/locations/:id
+</pre>
+
+<%= render_recording :shop_locations_show %>
+
 ## Search for shops
 
 <pre class="terminal">
