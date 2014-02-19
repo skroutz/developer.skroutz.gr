@@ -60,6 +60,20 @@ A SKU (Stock Keeping Unit) is an aggregation of products.
 
 <%= render_recording :sku_reviews %>
 
+## Retrieve a SKU's specifications
+
+Sku specifications can be retrieved with the following request. "values"
+attribute specifies the values this SKU has for the specification
+(more than one if applicable). Group can be included/embedded and represents
+a logical grouping of specifications. It can be used to show specifications in
+groups. No pagination is used in this endpoint.
+
+<pre class="terminal">
+  GET /skus/:id/specifications?include=group
+</pre>
+
+<%= render_recording :sku_specifications %>
+
 ## Filtering
 
 You have to specify a category in order to perform filtering.  
