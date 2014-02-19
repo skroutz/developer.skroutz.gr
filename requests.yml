@@ -136,9 +136,6 @@ requests:
         page: 1
         per: 2
   -
-    key: skus_index
-    request: 'GET {{base_url}}/skus?page=1&per=3'
-  -
     key: skus_show
     request: 'GET {{base_url}}/skus/3690169'
   -
