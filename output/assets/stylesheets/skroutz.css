@@ -131,16 +131,7 @@ header {
   #right_container h3 {
     font-size: 16px;
     margin: 20px 0;
-    color: #282828;
-    position: relative;
-    padding-left: 20px; }
-    #right_container h3:before {
-      content: "\1405";
-      position: absolute;
-      top: 1px;
-      left: 0;
-      font-size: 14px;
-      color: #666666; }
+    color: #282828; }
   #right_container .emph-link {
     display: inline-block;
     color: #282828;
