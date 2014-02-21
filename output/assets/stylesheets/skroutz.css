@@ -267,6 +267,8 @@ nav {
         color: #fbfbfb; }
       nav > h3 a.active {
         color: #f68b24; }
+        nav > h3 a.active:hover {
+          color: white; }
   nav h2 {
     position: relative;
     padding-left: 30px;
