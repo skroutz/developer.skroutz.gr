@@ -36,30 +36,38 @@
           <h1 id="shop">Shop</h1>
 
 <ul id="markdown-toc">
-<li><a href="#list-shops">List shops</a></li>
+  <li><a href="#list-shops">List shops</a></li>
   <li><a href="#retrieve-a-single-shop">Retrieve a single shop</a></li>
   <li><a href="#retrieve-a-shops-reviews">Retrieve a shop’s reviews</a></li>
   <li><a href="#list-shop-locations">List shop locations</a></li>
   <li><a href="#retrieve-a-single-shop-location">Retrieve a single shop location</a></li>
   <li><a href="#search-for-shops">Search for shops</a></li>
-</ul><h2 id="list-shops">List shops</h2>
+</ul>
+
+<h2 id="list-shops">List shops</h2>
 
 <pre class="terminal">
   GET /shops
 </pre>
 
 <table>
-<thead><tr>
-<th>Name</th>
+  <thead>
+    <tr>
+      <th>Name</th>
       <th>Type</th>
       <th>Description</th>
-    </tr></thead>
-<tbody><tr>
-<td><code>letter</code></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>letter</code></td>
       <td><code>String</code></td>
       <td><code>(optional) Filter shops of which the first letter matches the given value</code></td>
-    </tr></tbody>
-</table><div class="example">        <p class="request">
+    </tr>
+  </tbody>
+</table>
+
+<div class="example">        <p class="request">
           <span class="verb">GET</span>
           <span class="path">/shops</span>
         </p>
@@ -248,17 +256,23 @@
 </pre>
 
 <table>
-<thead><tr>
-<th>Name</th>
+  <thead>
+    <tr>
+      <th>Name</th>
       <th>Type</th>
       <th>Description</th>
-    </tr></thead>
-<tbody><tr>
-<td><code>q</code></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>q</code></td>
       <td><code>String</code></td>
       <td><code>(required) Search with the value of this parameter</code></td>
-    </tr></tbody>
-</table><div class="example">        <p class="request">
+    </tr>
+  </tbody>
+</table>
+
+<div class="example">        <p class="request">
           <span class="verb">GET</span>
           <span class="path">/shops/search</span>
         </p>
@@ -285,6 +299,7 @@
 <span class="p">}</span></code></pre>
 </div>
 </div>
+
         </div>
       </div>
       <div id="js-sidebar" class="sidebar-shell">

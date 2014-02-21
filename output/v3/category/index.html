@@ -36,14 +36,16 @@
           <h1 id="category">Category</h1>
 
 <ul id="markdown-toc">
-<li><a href="#about">About</a></li>
+  <li><a href="#about">About</a></li>
   <li><a href="#list-all-categories">List all categories</a></li>
   <li><a href="#retrieve-a-single-category">Retrieve a single category</a></li>
   <li><a href="#retrieve-the-parent-of-a-category">Retrieve the parent of a category</a></li>
   <li><a href="#retrieve-the-root-category">Retrieve the root category</a></li>
   <li><a href="#list-the-children-categories-of-a-category">List the children categories of a category</a></li>
   <li><a href="#list-a-categorys-manufacturers">List a category’s manufacturers</a></li>
-</ul><h2 id="about">About</h2>
+</ul>
+
+<h2 id="about">About</h2>
 
 <p>Categories are organized in a tree-like structure.<br>
 A product/sku belongs to a leaf category.</p>
@@ -58,7 +60,7 @@ A product/sku belongs to a leaf category.</p>
           <span class="verb">GET</span>
           <span class="path">/categories</span>
         </p>
-<a href="javascript:void(0)" class="toggler" data-target="js-response">view response</a><div class="response">
+<a href="javascript:void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
 <pre class="headers"><code>Status: 200</code></pre>
 <pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"categories"</span><span class="o">:</span> <span class="p">[</span>
@@ -112,7 +114,7 @@ A product/sku belongs to a leaf category.</p>
           <span class="verb">GET</span>
           <span class="path">/categories/1442</span>
         </p>
-<a href="javascript:void(0)" class="toggler" data-target="js-response">view response</a><div class="response">
+<a href="javascript:void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
 <pre class="headers"><code>Status: 200</code></pre>
 <pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"category"</span><span class="o">:</span> <span class="p">{</span>
@@ -136,7 +138,7 @@ A product/sku belongs to a leaf category.</p>
           <span class="verb">GET</span>
           <span class="path">/categories/1442/parent</span>
         </p>
-<a href="javascript:void(0)" class="toggler" data-target="js-response">view response</a><div class="response">
+<a href="javascript:void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
 <pre class="headers"><code>Status: 200</code></pre>
 <pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"category"</span><span class="o">:</span> <span class="p">{</span>
@@ -161,7 +163,7 @@ A product/sku belongs to a leaf category.</p>
           <span class="verb">GET</span>
           <span class="path">/categories/root</span>
         </p>
-<a href="javascript:void(0)" class="toggler" data-target="js-response">view response</a><div class="response">
+<a href="javascript:void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
 <pre class="headers"><code>Status: 200</code></pre>
 <pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"category"</span><span class="o">:</span> <span class="p">{</span>
@@ -185,7 +187,7 @@ A product/sku belongs to a leaf category.</p>
           <span class="verb">GET</span>
           <span class="path">/categories/73/children</span>
         </p>
-<a href="javascript:void(0)" class="toggler" data-target="js-response">view response</a><div class="response">
+<a href="javascript:void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
 <pre class="headers"><code>Status: 200</code></pre>
 <pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"categories"</span><span class="o">:</span> <span class="p">[</span>
@@ -225,24 +227,28 @@ A product/sku belongs to a leaf category.</p>
 <h2 id="list-a-categorys-manufacturers">List a category’s manufacturers</h2>
 
 <table>
-<thead><tr>
-<th>Name</th>
+  <thead>
+    <tr>
+      <th>Name</th>
       <th>Type</th>
       <th>Description</th>
-    </tr></thead>
-<tbody>
-<tr>
-<td><code>order_by</code></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>order_by</code></td>
       <td><code>String</code></td>
       <td><code>(optional) order by 'name' or 'popularity'(default)</code></td>
     </tr>
-<tr>
-<td><code>order_dir</code></td>
+    <tr>
+      <td><code>order_dir</code></td>
       <td><code>String</code></td>
       <td><code>(optional) order direction 'asc'(default) or 'desc'</code></td>
     </tr>
-</tbody>
-</table><pre class="terminal">
+  </tbody>
+</table>
+
+<pre class="terminal">
   GET /categories/:id/manufacturers?order_by=popularity&amp;order_dir=desc
 </pre>
 
@@ -250,7 +256,7 @@ A product/sku belongs to a leaf category.</p>
           <span class="verb">GET</span>
           <span class="path">/categories/25/manufacturers</span>
         </p>
-<a href="javascript:void(0)" class="toggler" data-target="js-response">view response</a><div class="response">
+<a href="javascript:void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
 <pre class="headers"><code>Status: 200</code></pre>
 <pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"manufacturers"</span><span class="o">:</span> <span class="p">[</span>
@@ -276,6 +282,7 @@ A product/sku belongs to a leaf category.</p>
 <span class="p">}</span></code></pre>
 </div>
 </div>
+
         </div>
       </div>
       <div id="js-sidebar" class="sidebar-shell">

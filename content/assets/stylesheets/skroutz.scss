@@ -260,6 +260,46 @@ header {
     }
   }
 
+  // LOCAL NAVIGATION
+
+  #markdown-toc {
+    display: inline-block;
+    list-style: none;
+
+    li {
+      font-size: 13px;
+      padding: 0 0 7px 0;
+      position: relative;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+
+      a {
+        color: $grey-9;
+        position: relative;
+        padding-left: 15px;
+
+        &:before {
+          content: "\25B8";
+          position: absolute;
+          top: 0;
+          left: 0;
+          color: $grey-9;
+        }
+
+        &:hover {
+          color: $orange-1;
+          text-decoration: none;
+
+          &:before {
+            color: $orange-1;
+          }
+        }
+      }
+    }
+  }
+
   // CODE
 
   code {
@@ -351,6 +391,12 @@ header {
       }
     }
   }
+}
+
+small {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 30px;
 }
 
 /* Sidebar */
