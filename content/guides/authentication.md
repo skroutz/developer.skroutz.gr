@@ -2,9 +2,6 @@
 title: Authentication | Skroutz API
 ---
 
-* TOC
-{:toc}
-
 <img src="<%= relative_path_to('/assets/images/oauth.png') %>" alt="oauth">
 
 We use [OAuth2.0](http://oauth.net/2/) for authorization.
