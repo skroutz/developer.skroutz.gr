@@ -2,7 +2,7 @@
 title: SKU | Skroutz API
 ---
 
-# SKU API
+# SKU
 
 * TOC
 {:toc}

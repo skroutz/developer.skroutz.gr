@@ -2,7 +2,7 @@
 title: Product | Skroutz API
 ---
 
-# Product API
+# Product
 
 * TOC
 {:toc}

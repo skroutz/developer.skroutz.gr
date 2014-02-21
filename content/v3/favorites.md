@@ -1,8 +1,8 @@
 ---
-title: User Favorites | Skroutz API
+title: User Favorite | Skroutz API
 ---
 
-# User Favorites API
+# User Favorite
 
 * TOC
 {:toc}

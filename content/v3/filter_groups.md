@@ -1,15 +1,15 @@
 ---
-title: FilterGroup | Skroutz API
+title: Filter Group | Skroutz API
 ---
 
-# FilterGroup API
+# Filter Group
 
 * TOC
 {:toc}
 
 ## About
 
-A FilterGroup is a collection of filters of the same kind.  
+A Filter Group is a collection of filters of the same kind.  
 [Linked resources](<%= relative_path_to('/v3') %>#linked-resources): [filter](<%= relative_path_to('/v3/filters') %>)
 
 ## List FilterGroups

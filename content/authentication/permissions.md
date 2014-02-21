@@ -1,5 +1,5 @@
 ---
-title: Authentication - Permissions | Skroutz API
+title: Permissions | Skroutz API
 ---
 
 # Permissions

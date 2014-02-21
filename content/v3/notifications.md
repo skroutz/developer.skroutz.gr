@@ -1,8 +1,8 @@
 ---
-title: User Notifications | Skroutz API
+title: User Notification | Skroutz API
 ---
 
-# User Notifications API
+# User Notification
 
 * TOC
 {:toc}
