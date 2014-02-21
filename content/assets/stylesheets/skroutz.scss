@@ -396,7 +396,6 @@ nav {
       }
 
       &.active {
-        background: inherit;
         color: $orange-1;
       }
     }
@@ -452,8 +451,11 @@ nav {
         color: $grey-5;
 
         &.active {
-          background: inherit;
           color: $orange-1;
+
+          &:hover {
+            color: $white;
+          }
         }
       }
 
