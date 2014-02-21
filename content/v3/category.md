@@ -1,8 +1,8 @@
 ---
-title: Categories | Skroutz API
+title: Category | Skroutz API
 ---
 
-# Categories API
+# Category
 
 * TOC
 {:toc}

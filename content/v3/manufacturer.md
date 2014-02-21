@@ -1,8 +1,8 @@
 ---
-title: Manufacturers | Skroutz API
+title: Manufacturer | Skroutz API
 ---
 
-# Manufacturers API
+# Manufacturer
 
 * TOC
 {:toc}

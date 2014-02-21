@@ -1,8 +1,8 @@
 ---
-title: Shops | Skroutz API
+title: Shop | Skroutz API
 ---
 
-# Shops API
+# Shop
 
 * TOC
 {:toc}

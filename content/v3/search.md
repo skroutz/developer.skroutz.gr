@@ -2,7 +2,7 @@
 title: Search | Skroutz API
 ---
 
-# Search API
+# Search
 
 * TOC
 {:toc}

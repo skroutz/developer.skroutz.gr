@@ -1,5 +1,5 @@
 ---
-title: Guides - Skroutz API
+title: Guides | Skroutz API
 ---
 
 <div class="guides">
