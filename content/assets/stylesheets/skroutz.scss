@@ -397,6 +397,10 @@ nav {
 
       &.active {
         color: $orange-1;
+
+        &:hover {
+          color: $white;
+        }
       }
     }
   }
