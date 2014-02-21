@@ -36,26 +36,34 @@
           <h1 id="search">Search</h1>
 
 <ul id="markdown-toc">
-<li><a href="#search-1">Search</a></li>
+  <li><a href="#search-1">Search</a></li>
   <li><a href="#autocomplete">Autocomplete</a></li>
-</ul><h2 id="search-1">Search</h2>
+</ul>
+
+<h2 id="search-1">Search</h2>
 
 <pre class="terminal">
   GET /search
 </pre>
 
 <table>
-<thead><tr>
-<th>Name</th>
+  <thead>
+    <tr>
+      <th>Name</th>
       <th>Type</th>
       <th>Description</th>
-    </tr></thead>
-<tbody><tr>
-<td><code>q</code></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>q</code></td>
       <td><code>String</code></td>
       <td><code>The keyphrase to search by</code></td>
-    </tr></tbody>
-</table><h3 id="case-invalid-the-query-was-invalid-eg-less-than-2-characters">Case <code>invalid</code> The query was invalid. Eg. less than 2 characters</h3>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="case-invalid-the-query-was-invalid-eg-less-than-2-characters">Case <code>invalid</code> The query was invalid. Eg. less than 2 characters</h3>
 
 <div class="example">        <p class="request">
           <span class="verb">GET</span>
@@ -313,17 +321,23 @@
 </pre>
 
 <table>
-<thead><tr>
-<th>Name</th>
+  <thead>
+    <tr>
+      <th>Name</th>
       <th>Type</th>
       <th>Description</th>
-    </tr></thead>
-<tbody><tr>
-<td><code>q</code></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>q</code></td>
       <td><code>String</code></td>
       <td><code>The term to be autocompleted</code></td>
-    </tr></tbody>
-</table><div class="example">        <p class="request">
+    </tr>
+  </tbody>
+</table>
+
+<div class="example">        <p class="request">
           <span class="verb">GET</span>
           <span class="path">/autocomplete</span>
         </p>
@@ -372,6 +386,7 @@
 <span class="p">}</span></code></pre>
 </div>
 </div>
+
         </div>
       </div>
       <div id="js-sidebar" class="sidebar-shell">

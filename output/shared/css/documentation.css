@@ -683,24 +683,6 @@ p code {
   padding-bottom: 5px;
 }
 
-#markdown-toc {
-  margin: 1em 1.5em 2em;
-}
-
-#markdown-toc li {
-  font-size: 14px;
-  list-style-type: lower-roman;
-}
-
-#markdown-toc li a {
-  color: #333;
-  text-decoration: underline;
-}
-
-#markdown-toc li a:hover {
-  color: #327fc7;
-}
-
 /*------------------------------------------------------------------------------
      Pre/Code Styles
 ------------------------------------------------------------------------------*/

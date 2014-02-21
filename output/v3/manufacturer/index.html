@@ -36,11 +36,13 @@
           <h1 id="manufacturer">Manufacturer</h1>
 
 <ul id="markdown-toc">
-<li><a href="#list-manufacturers">List manufacturers</a></li>
+  <li><a href="#list-manufacturers">List manufacturers</a></li>
   <li><a href="#retrieve-a-single-manufacturer">Retrieve a single manufacturer</a></li>
   <li><a href="#retrieve-a-manufacturers-categories">Retrieve a manufacturer’s categories</a></li>
   <li><a href="#retrieve-a-manufacturers-skus">Retrieve a manufacturer’s SKUs</a></li>
-</ul><h2 id="list-manufacturers">List manufacturers</h2>
+</ul>
+
+<h2 id="list-manufacturers">List manufacturers</h2>
 
 <pre class="terminal">
   GET /manufacturers
@@ -97,24 +99,28 @@
 <p>Valid Parameters to perform ordering</p>
 
 <table>
-<thead><tr>
-<th>Name</th>
+  <thead>
+    <tr>
+      <th>Name</th>
       <th>Type</th>
       <th>Description</th>
-    </tr></thead>
-<tbody>
-<tr>
-<td><code>order_by</code></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>order_by</code></td>
       <td><code>String</code></td>
       <td><code>popularity (default) | name</code></td>
     </tr>
-<tr>
-<td><code>order_dir</code></td>
+    <tr>
+      <td><code>order_dir</code></td>
       <td><code>String</code></td>
       <td><code>asc (default) | desc</code></td>
     </tr>
-</tbody>
-</table><pre class="terminal">
+  </tbody>
+</table>
+
+<pre class="terminal">
   GET /manufacturers/:id/categories
 </pre>
 
@@ -161,24 +167,28 @@
 <p>Valid Parameters to perform ordering</p>
 
 <table>
-<thead><tr>
-<th>Name</th>
+  <thead>
+    <tr>
+      <th>Name</th>
       <th>Type</th>
       <th>Description</th>
-    </tr></thead>
-<tbody>
-<tr>
-<td><code>order_by</code></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>order_by</code></td>
       <td><code>String</code></td>
       <td><code>popularity (default) | name</code></td>
     </tr>
-<tr>
-<td><code>order_dir</code></td>
+    <tr>
+      <td><code>order_dir</code></td>
       <td><code>String</code></td>
       <td><code>asc (default) | desc</code></td>
     </tr>
-</tbody>
-</table><pre class="terminal">
+  </tbody>
+</table>
+
+<pre class="terminal">
   GET /manufacturers/:id/skus
 </pre>
 
@@ -252,6 +262,7 @@
 <span class="p">}</span></code></pre>
 </div>
 </div>
+
         </div>
       </div>
       <div id="js-sidebar" class="sidebar-shell">
