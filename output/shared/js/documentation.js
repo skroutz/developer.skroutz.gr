@@ -16,10 +16,10 @@ $(function() {
     var $el = $(e.currentTarget),
         $target = $el.siblings('.response').toggle();
     if($el.data('open') || $el.data('open') == undefined) {
-      $el.text('hide example');
+      $el.text('hide response');
       $el.data('open', false);
     } else {
-      $el.text('view example');
+      $el.text('view response');
       $el.data('open', true);
     }
   });
