@@ -22,7 +22,7 @@
   <div class="content">
     <a href="../../">for Developers [beta]</a>
     <form class="search">
-        <input type="text" id="st-search-input" class="st-search-input"/>
+        <input type="text" id="st-search-input"/>
     </form>
   </div>
 </header>
@@ -37,61 +37,54 @@
 <p>A representations of the permissions granted to your app by Skroutz and a User.</p>
 
 <table>
-  <thead>
-    <tr>
-      <th>Code</th>
+<thead><tr>
+<th>Code</th>
       <th>Type</th>
       <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>public</td>
+    </tr></thead>
+<tbody>
+<tr>
+<td>public</td>
       <td>application</td>
       <td>All public resources*</td>
     </tr>
-    <tr>
-      <td>favorites</td>
+<tr>
+<td>favorites</td>
       <td>user</td>
       <td>User <a href="../../v3/favorites/">Favorites</a>
 </td>
     </tr>
-    <tr>
-      <td>notifications</td>
+<tr>
+<td>notifications</td>
       <td>user</td>
       <td>User <a href="../../v3/notifications/">notifications</a>
 </td>
     </tr>
-  </tbody>
-</table>
-
-<p>For more info about permission types check
+</tbody>
+</table><p>For more info about permission types check
 <a href="../flows">authentication flows</a>.</p>
 
 <h2 id="public-resources">Public Resources</h2>
 <p>Having obtained the public permission you can access the following resources:</p>
 
 <ul class="public-resources">
-  <li><a href="../../v3/category/">Categories</a></li>
+<li><a href="../../v3/category/">Categories</a></li>
   <li><a href="../../v3/sku/">Skus</a></li>
   <li><a href="../../v3/product/">Products</a></li>
   <li><a href="../../v3/shop/">Shops</a></li>
   <li><a href="../../v3/manufacturer/">Manufacturers</a></li>
   <li><a href="../../v3/search/">Search</a></li>
   <li><a href="../../v3/filter_groups/">Filter Groups</a></li>
-</ul>
-
-<h2 id="user-resources">User Resources</h2>
+</ul><h2 id="user-resources">User Resources</h2>
 <p>These permissions require that you have explicitly requested them using
 the scope param <a href="../../guides/authentication">see here</a>
 The user will have to consent to grant any of those permissions.
 You <strong>must not</strong> share these data to 3rd parties.</p>
 
 <ul class="private-resources">
-  <li><a href="../../v3/favorites/">Favorites</a></li>
+<li><a href="../../v3/favorites/">Favorites</a></li>
   <li><a href="../../v3/notifications/">Notifications</a></li>
 </ul>
-
           </div>
         </div>
         <div id="js-sidebar" class="sidebar-shell">

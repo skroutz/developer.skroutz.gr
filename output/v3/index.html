@@ -23,7 +23,7 @@
   <div class="content">
     <a href="../">for Developers [beta]</a>
     <form class="search">
-        <input type="text" id="st-search-input" class="st-search-input"/>
+        <input type="text" id="st-search-input"/>
     </form>
   </div>
 </header>
@@ -36,7 +36,7 @@
           <h1 id="overview">Overview</h1>
 
 <ul id="markdown-toc">
-  <li><a href="#schema">Schema</a></li>
+<li><a href="#schema">Schema</a></li>
   <li><a href="#linked-resources">Linked Resources</a></li>
   <li><a href="#pagination">Pagination</a></li>
   <li><a href="#rate-limiting">Rate Limiting</a></li>
@@ -44,9 +44,7 @@
   <li><a href="#http-redirects">HTTP Redirects</a></li>
   <li><a href="#cross-origin-resource-sharing">Cross Origin Resource Sharing</a></li>
   <li><a href="#json-p-callbacks">JSON-P Callbacks</a></li>
-</ul>
-
-<h2 id="schema">Schema</h2>
+</ul><h2 id="schema">Schema</h2>
 
 <p>All API access is over HTTPS, and accessed from the <code>api.skroutz.gr</code>
 domain. All data is sent and received as JSON.</p>
@@ -199,15 +197,13 @@ X-RateLimit-Reset: 1372700873
 <p>The headers tell you everything you need to know about your current rate limit status:</p>
 
 <dl>
-  <dt><code>X-RateLimit-Limit</code></dt>
+<dt><code>X-RateLimit-Limit</code></dt>
   <dd>The maximum number of requests that the consumer is permitted to make per hour.</dd>
   <dt><code>X-RateLimit-Remaining</code></dt>
   <dd>The number of requests remaining in the current rate limit window.</dd>
   <dt><code>X-RateLimit-Reset</code></dt>
   <dd>The time at which the current rate limit window resets in <a href="http://en.wikipedia.org/wiki/Unix_time">UTC epoch seconds</a>.</dd>
-</dl>
-
-<p>If you need the time in a different format, any modern programming language can get the job done. For example, if you open up the console on your web browser, you can easily get the reset time as a JavaScript Date object.</p>
+</dl><p>If you need the time in a different format, any modern programming language can get the job done. For example, if you open up the console on your web browser, you can easily get the reset time as a JavaScript Date object.</p>
 
 <pre class="highlight"><code class="language-javascript"><span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="mi">1372700873</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">)</span>
 <span class="c1">// =&gt; Mon Jul 01 2013 13:47:53 GMT-0400 (EDT)</span></code></pre>
@@ -287,7 +283,7 @@ error and clients should follow that redirect. Redirect responses will have a
 client should repeat the requests.</p>
 
 <dl>
-  <dt>301</dt>
+<dt>301</dt>
   <dd>Permanent redirection. The URI you used to make the request has been
 superseded by the one specified in the <code>Location</code> header field. This and all
 future requests to this resource should be directed to the new URI.</dd>
@@ -295,9 +291,7 @@ future requests to this resource should be directed to the new URI.</dd>
   <dd>Temporary redirection. The request should be repeated verbatim to the URI
 specified in the <code>Location</code> header field but clients should continue to use the
 original URI for future requests.</dd>
-</dl>
-
-<p>Other redirection status codes may be used in accordance with the HTTP 1.1 spec.</p>
+</dl><p>Other redirection status codes may be used in accordance with the HTTP 1.1 spec.</p>
 
 <h2 id="cross-origin-resource-sharing">Cross Origin Resource Sharing</h2>
 
@@ -361,7 +355,6 @@ foo({
   }
 })
 </pre>
-
         </div>
       </div>
       <div id="js-sidebar" class="sidebar-shell">
