@@ -23,7 +23,7 @@
   <div class="content">
     <a href="../../">for Developers [beta]</a>
     <form class="search">
-        <input type="text" id="st-search-input" class="st-search-input"/>
+        <input type="text" id="st-search-input" placeholder="Search"/>
     </form>
   </div>
 </header>
@@ -69,7 +69,7 @@
           <span class="verb">GET</span>
           <span class="path">/search?q=a</span>
         </p>
-<a href="javascript:void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<a href="javascript:void(0)" class="toggler" data-target="js-response">view response</a><div class="response">
 <pre class="headers"><code>Status: 400</code></pre>
 <pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"message"</span><span class="o">:</span> <span class="s2">"Η αναζήτησή σου πρέπει να περιέχει τουλάχιστον 2 χαρακτήρες"</span><span class="p">,</span>
@@ -86,7 +86,7 @@
           <span class="verb">GET</span>
           <span class="path">/search?q=asdasdsagjgjgjweigrweji</span>
         </p>
-<a href="javascript:void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<a href="javascript:void(0)" class="toggler" data-target="js-response">view response</a><div class="response">
 <pre class="headers"><code>Status: 200</code></pre>
 <pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
@@ -102,7 +102,7 @@
           <span class="verb">GET</span>
           <span class="path">/search?q=Tablets</span>
         </p>
-<a href="javascript:void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<a href="javascript:void(0)" class="toggler" data-target="js-response">view response</a><div class="response">
 <pre class="headers"><code>Status: 200</code></pre>
 <pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"category"</span><span class="o">:</span> <span class="p">{</span>
@@ -126,7 +126,7 @@
           <span class="verb">GET</span>
           <span class="path">/search?q=iphone</span>
         </p>
-<a href="javascript:void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<a href="javascript:void(0)" class="toggler" data-target="js-response">view response</a><div class="response">
 <pre class="headers"><code>Status: 200</code></pre>
 <pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"categories"</span><span class="o">:</span> <span class="p">[</span>
@@ -168,7 +168,7 @@
           <span class="verb">GET</span>
           <span class="path">/search?q=apple</span>
         </p>
-<a href="javascript:void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<a href="javascript:void(0)" class="toggler" data-target="js-response">view response</a><div class="response">
 <pre class="headers"><code>Status: 200</code></pre>
 <pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"manufacturer"</span><span class="o">:</span> <span class="p">{</span>
@@ -191,7 +191,7 @@
           <span class="verb">GET</span>
           <span class="path">/search?q=ιπηονε</span>
         </p>
-<a href="javascript:void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<a href="javascript:void(0)" class="toggler" data-target="js-response">view response</a><div class="response">
 <pre class="headers"><code>Status: 200</code></pre>
 <pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"categories"</span><span class="o">:</span> <span class="p">[</span>
@@ -235,7 +235,7 @@
           <span class="verb">GET</span>
           <span class="path">/search?q=Dimage%202300</span>
         </p>
-<a href="javascript:void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<a href="javascript:void(0)" class="toggler" data-target="js-response">view response</a><div class="response">
 <pre class="headers"><code>Status: 200</code></pre>
 <pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"sku"</span><span class="o">:</span> <span class="p">{</span>
@@ -276,7 +276,7 @@
           <span class="verb">GET</span>
           <span class="path">/search?q=Cubieboard2</span>
         </p>
-<a href="javascript:void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<a href="javascript:void(0)" class="toggler" data-target="js-response">view response</a><div class="response">
 <pre class="headers"><code>Status: 200</code></pre>
 <pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"category"</span><span class="o">:</span> <span class="p">{</span>
@@ -300,7 +300,7 @@
           <span class="verb">GET</span>
           <span class="path">/search?q=wrong%20iphone</span>
         </p>
-<a href="javascript:void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<a href="javascript:void(0)" class="toggler" data-target="js-response">view response</a><div class="response">
 <pre class="headers"><code>Status: 200</code></pre>
 <pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"proposals"</span><span class="o">:</span> <span class="p">[</span>
@@ -341,7 +341,7 @@
           <span class="verb">GET</span>
           <span class="path">/autocomplete</span>
         </p>
-<a href="javascript:void(0)" class="toggler" data-target="js-response">view example</a><div class="response">
+<a href="javascript:void(0)" class="toggler" data-target="js-response">view response</a><div class="response">
 <pre class="headers"><code>Status: 200</code></pre>
 <pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"autocomplete"</span><span class="o">:</span> <span class="p">[</span>
