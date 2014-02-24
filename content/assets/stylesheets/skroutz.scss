@@ -50,10 +50,6 @@ a {
   }
 }
 
-.search {
-  float: right;
-}
-
 ol {
   list-style-position: inside;
 }
@@ -385,6 +381,26 @@ small {
   display: block;
   font-size: 13px;
   margin-bottom: 30px;
+}
+
+// SEARCH
+
+.search {
+  float: right;
+}
+
+#st-search-input {
+  width: 200px;
+  background: $grey-3;
+  outline: none;
+  border: none;
+  padding: 8px 5px;
+  border-radius: 3px;
+  margin-top: -2px;
+}
+
+.swiftype-widget .autocomplete {
+  margin-top: 10px !important;
 }
 
 /* Sidebar */
