@@ -23,7 +23,7 @@
   <div class="content">
     <a href="../../">for Developers [beta]</a>
     <form class="search">
-        <input type="text" id="st-search-input"/>
+        <input type="text" id="st-search-input" placeholder="Search"/>
     </form>
   </div>
 </header>
@@ -36,7 +36,7 @@
           <h1 id="sku">SKU</h1>
 
 <ul id="markdown-toc">
-<li><a href="#about">About</a></li>
+  <li><a href="#about">About</a></li>
   <li><a href="#list-skus-of-specific-category">List SKUs of specific category</a></li>
   <li><a href="#retrieve-a-single-sku">Retrieve a single SKU</a></li>
   <li><a href="#retrieve-similar-skus">Retrieve similar SKUs</a></li>
@@ -44,9 +44,12 @@
   <li><a href="#retrieve-a-skus-reviews">Retrieve a SKU’s reviews</a></li>
   <li><a href="#retrieve-a-skus-specifications">Retrieve a SKU’s specifications</a></li>
   <li><a href="#filtering">Filtering</a></li>
-</ul><h2 id="about">About</h2>
+</ul>
 
-<p>A SKU (Stock Keeping Unit) is an aggregation of products.<br><a href="..#linked-resources">Linked resources</a>: <a href="../product">product</a></p>
+<h2 id="about">About</h2>
+
+<p>A SKU (Stock Keeping Unit) is an aggregation of products.<br>
+<a href="..#linked-resources">Linked resources</a>: <a href="../product">product</a></p>
 
 <h2 id="list-skus-of-specific-category">List SKUs of specific category</h2>
 
@@ -608,17 +611,23 @@ to get meta information about the filters that can be applied.</p>
 <h3 id="by-search-keyword">By search keyword</h3>
 
 <table>
-<thead><tr>
-<th>Name</th>
+  <thead>
+    <tr>
+      <th>Name</th>
       <th>Type</th>
       <th>Description</th>
-    </tr></thead>
-<tbody><tr>
-<td><code>q</code></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>q</code></td>
       <td><code>String</code></td>
       <td>The keyword to search by</td>
-    </tr></tbody>
-</table><div class="example">        <p class="request">
+    </tr>
+  </tbody>
+</table>
+
+<div class="example">        <p class="request">
           <span class="verb">GET</span>
           <span class="path">/categories/40/skus?q=iphone</span>
         </p>
@@ -692,17 +701,23 @@ to get meta information about the filters that can be applied.</p>
 <h3 id="by-manufacturers">By manufacturers</h3>
 
 <table>
-<thead><tr>
-<th>Name</th>
+  <thead>
+    <tr>
+      <th>Name</th>
       <th>Type</th>
       <th>Description</th>
-    </tr></thead>
-<tbody><tr>
-<td><code>manufacturer_ids</code></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>manufacturer_ids</code></td>
       <td><code>Array</code></td>
       <td>The ids of the manufacturers of the SKUs</td>
-    </tr></tbody>
-</table><div class="example">        <p class="request">
+    </tr>
+  </tbody>
+</table>
+
+<div class="example">        <p class="request">
           <span class="verb">GET</span>
           <span class="path">/categories/40/skus?manufacturer_ids[]=28&amp;manufacturer_ids[]=2</span>
         </p>
@@ -826,17 +841,23 @@ to get meta information about the filters that can be applied.</p>
 <h3 id="by-filters">By filters</h3>
 
 <table>
-<thead><tr>
-<th>Name</th>
+  <thead>
+    <tr>
+      <th>Name</th>
       <th>Type</th>
       <th>Description</th>
-    </tr></thead>
-<tbody><tr>
-<td><code>filter_ids</code></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>filter_ids</code></td>
       <td><code>Array</code></td>
       <td>The ids of the filters to be applied on the SKUs</td>
-    </tr></tbody>
-</table><div class="example">        <p class="request">
+    </tr>
+  </tbody>
+</table>
+
+<div class="example">        <p class="request">
           <span class="verb">GET</span>
           <span class="path">/categories/40/skus?filter_ids[]=6282&amp;filter_ids[]=6284</span>
         </p>
@@ -961,17 +982,23 @@ to get meta information about the filters that can be applied.</p>
 <p>You may choose to include extra meta information using the following parameters:</p>
 
 <table>
-<thead><tr>
-<th>Name</th>
+  <thead>
+    <tr>
+      <th>Name</th>
       <th>Type</th>
       <th>Description</th>
-    </tr></thead>
-<tbody><tr>
-<td><code>include_meta</code></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>include_meta</code></td>
       <td><code>Array</code></td>
       <td><code>Extra meta info to be included in the response</code></td>
-    </tr></tbody>
-</table><div class="example">        <p class="request">
+    </tr>
+  </tbody>
+</table>
+
+<div class="example">        <p class="request">
           <span class="verb">GET</span>
           <span class="path">/categories/279/skus?include_meta=available_filters</span>
         </p>
@@ -1064,6 +1091,7 @@ to get meta information about the filters that can be applied.</p>
 (filters, manufacturers) each of which has as keys the ids of the
 entities that can be applied and as values the number of skus that match
 the filter/manufacturer.</p>
+
         </div>
       </div>
       <div id="js-sidebar" class="sidebar-shell">

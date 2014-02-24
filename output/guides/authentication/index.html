@@ -23,7 +23,7 @@
   <div class="content">
     <a href="../../">for Developers [beta]</a>
     <form class="search">
-        <input type="text" id="st-search-input"/>
+        <input type="text" id="st-search-input" placeholder="Search"/>
     </form>
   </div>
 </header>
@@ -51,45 +51,49 @@ POST https://www.skroutz.gr/oauth2/token
 </pre>
 
 <table>
-<thead><tr>
-<th>Name</th>
+  <thead>
+    <tr>
+      <th>Name</th>
       <th>Type</th>
       <th>Required</th>
       <th>Description</th>
-    </tr></thead>
-<tbody>
-<tr>
-<td><code>client_id</code></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>client_id</code></td>
       <td>String</td>
       <td>yes</td>
       <td>The client_id supplied by skroutz for the application</td>
     </tr>
-<tr>
-<td><code>client_secret</code></td>
+    <tr>
+      <td><code>client_secret</code></td>
       <td>String</td>
       <td>yes</td>
       <td>The client_secret supplied by skroutz for the application</td>
     </tr>
-<tr>
-<td><code>redirect_uri</code></td>
+    <tr>
+      <td><code>redirect_uri</code></td>
       <td>String</td>
       <td>yes</td>
       <td>The redirect_uri set for the application</td>
     </tr>
-<tr>
-<td><code>grant_type</code></td>
+    <tr>
+      <td><code>grant_type</code></td>
       <td>String</td>
       <td>yes</td>
       <td>client_credentials</td>
     </tr>
-<tr>
-<td><code>scope</code></td>
+    <tr>
+      <td><code>scope</code></td>
       <td>String</td>
       <td>no</td>
       <td>The space separated set of permissions your application wishes</td>
     </tr>
-</tbody>
-</table><h2 id="user-token">User Token</h2>
+  </tbody>
+</table>
+
+<h2 id="user-token">User Token</h2>
 
 <h3 id="get-an-authorization-code">Get an authorization code</h3>
 <p>With a “user token” you can access resources associated to a user. Given that the user
@@ -102,39 +106,43 @@ GET https://www.skroutz.gr/oauth2/authorizations/new
 </pre>
 
 <table>
-<thead><tr>
-<th>Name</th>
+  <thead>
+    <tr>
+      <th>Name</th>
       <th>Type</th>
       <th>Required</th>
       <th>Description</th>
-    </tr></thead>
-<tbody>
-<tr>
-<td><code>client_id</code></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>client_id</code></td>
       <td>String</td>
       <td>yes</td>
       <td>The client_id supplied by skroutz for the application</td>
     </tr>
-<tr>
-<td><code>redirect_uri</code></td>
+    <tr>
+      <td><code>redirect_uri</code></td>
       <td>String</td>
       <td>yes</td>
       <td>The redirect_uri set for the application</td>
     </tr>
-<tr>
-<td><code>response_type</code></td>
+    <tr>
+      <td><code>response_type</code></td>
       <td>String</td>
       <td>yes</td>
       <td>The value should be “code”</td>
     </tr>
-<tr>
-<td><code>scope</code></td>
+    <tr>
+      <td><code>scope</code></td>
       <td>String</td>
       <td>no</td>
       <td>The space separated set of permissions your application wishes</td>
     </tr>
-</tbody>
-</table><p>If everything went OK and the user granted your the requested permissions declared in
+  </tbody>
+</table>
+
+<p>If everything went OK and the user granted your the requested permissions declared in
 the scope parameter, you are redirected to:</p>
 
 <pre class="terminal">
@@ -143,10 +151,12 @@ http://redirect_uri?code=a_valid_authorization_code
 
 <h3 id="obtainable-permissions">Obtainable permissions</h3>
 <ul class="permissions">
-<li>public</li>
+  <li>public</li>
   <li>favorites</li>
   <li>notifications</li>
-</ul><p><a href="../../authentication/permissions" class="emph-link" target="_blank">More info about permissions</a></p>
+</ul>
+
+<p><a href="../../authentication/permissions" class="emph-link" target="_blank">More info about permissions</a></p>
 
 <h3 id="get-an-oauthtoken">Get an oauth_token</h3>
 
@@ -155,51 +165,55 @@ POST https://www.skroutz.gr/oauth2/token
 </pre>
 
 <table>
-<thead><tr>
-<th>Name</th>
+  <thead>
+    <tr>
+      <th>Name</th>
       <th>Type</th>
       <th>Required</th>
       <th>Description</th>
-    </tr></thead>
-<tbody>
-<tr>
-<td><code>client_id</code></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>client_id</code></td>
       <td>String</td>
       <td>yes</td>
       <td>The client_id supplied by skroutz for the application</td>
     </tr>
-<tr>
-<td><code>client_secret</code></td>
+    <tr>
+      <td><code>client_secret</code></td>
       <td>String</td>
       <td>yes</td>
       <td>The client_secret supplied by skroutz for the application</td>
     </tr>
-<tr>
-<td><code>redirect_uri</code></td>
+    <tr>
+      <td><code>redirect_uri</code></td>
       <td>String</td>
       <td>yes</td>
       <td>The redirect_uri set for the application</td>
     </tr>
-<tr>
-<td><code>response_type</code></td>
+    <tr>
+      <td><code>response_type</code></td>
       <td>String</td>
       <td>yes</td>
       <td>The value should be “code”</td>
     </tr>
-<tr>
-<td><code>grant_type</code></td>
+    <tr>
+      <td><code>grant_type</code></td>
       <td>String</td>
       <td>yes</td>
       <td>authorization_code</td>
     </tr>
-<tr>
-<td><code>code</code></td>
+    <tr>
+      <td><code>code</code></td>
       <td>String</td>
       <td>yes</td>
       <td>authorization code obtained</td>
     </tr>
-</tbody>
-</table><p>If everything went OK, the response has the following form:</p>
+  </tbody>
+</table>
+
+<p>If everything went OK, the response has the following form:</p>
 
 <pre class="terminal">
 {
@@ -242,39 +256,43 @@ POST https://www.skroutz.gr/oauth2/token
 </pre>
 
 <table>
-<thead><tr>
-<th>Name</th>
+  <thead>
+    <tr>
+      <th>Name</th>
       <th>Type</th>
       <th>Required</th>
       <th>Description</th>
-    </tr></thead>
-<tbody>
-<tr>
-<td><code>client_id</code></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>client_id</code></td>
       <td>String</td>
       <td>yes</td>
       <td>The client_id supplied by skroutz for the application</td>
     </tr>
-<tr>
-<td><code>client_secret</code></td>
+    <tr>
+      <td><code>client_secret</code></td>
       <td>String</td>
       <td>yes</td>
       <td>The client_secret supplied by skroutz for the application</td>
     </tr>
-<tr>
-<td><code>refresh_token</code></td>
+    <tr>
+      <td><code>refresh_token</code></td>
       <td>String</td>
       <td>yes</td>
       <td>The value should be “code”</td>
     </tr>
-<tr>
-<td><code>grant_type</code></td>
+    <tr>
+      <td><code>grant_type</code></td>
       <td>String</td>
       <td>yes</td>
       <td>refresh_token</td>
     </tr>
-</tbody>
-</table><h3 id="application-token-1">Application Token</h3>
+  </tbody>
+</table>
+
+<h3 id="application-token-1">Application Token</h3>
 <p>If your application token you’re using gets expired you have to get a
 new one in the exact way you got the last one. </p>
 
@@ -283,46 +301,51 @@ POST https://www.skroutz.gr/oauth2/token
 </pre>
 
 <table>
-<thead><tr>
-<th>Name</th>
+  <thead>
+    <tr>
+      <th>Name</th>
       <th>Type</th>
       <th>Required</th>
       <th>Description</th>
-    </tr></thead>
-<tbody>
-<tr>
-<td><code>client_id</code></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>client_id</code></td>
       <td>String</td>
       <td>yes</td>
       <td>The client_id supplied by skroutz for the application</td>
     </tr>
-<tr>
-<td><code>client_secret</code></td>
+    <tr>
+      <td><code>client_secret</code></td>
       <td>String</td>
       <td>yes</td>
       <td>The client_secret supplied by skroutz for the application</td>
     </tr>
-<tr>
-<td><code>redirect_uri</code></td>
+    <tr>
+      <td><code>redirect_uri</code></td>
       <td>String</td>
       <td>yes</td>
       <td>The redirect_uri set for the application</td>
     </tr>
-<tr>
-<td><code>grant_type</code></td>
+    <tr>
+      <td><code>grant_type</code></td>
       <td>String</td>
       <td>yes</td>
       <td>client_credentials</td>
     </tr>
-<tr>
-<td><code>scope</code></td>
+    <tr>
+      <td><code>scope</code></td>
       <td>String</td>
       <td>no</td>
       <td>The space separated set of permissions your application wishes</td>
     </tr>
-</tbody>
-</table><p>The abore request will respond with an existing or a new application token. Notice that 
+  </tbody>
+</table>
+
+<p>The abore request will respond with an existing or a new application token. Notice that 
 in this case you don’t need to exchange a refresh token for an application token.</p>
+
           </div>
         </div>
         <div id="js-sidebar" class="sidebar-shell">

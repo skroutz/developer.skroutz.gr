@@ -23,7 +23,7 @@
   <div class="content">
     <a href="../../">for Developers [beta]</a>
     <form class="search">
-        <input type="text" id="st-search-input"/>
+        <input type="text" id="st-search-input" placeholder="Search"/>
     </form>
   </div>
 </header>
@@ -36,14 +36,16 @@
           <h1 id="category">Category</h1>
 
 <ul id="markdown-toc">
-<li><a href="#about">About</a></li>
+  <li><a href="#about">About</a></li>
   <li><a href="#list-all-categories">List all categories</a></li>
   <li><a href="#retrieve-a-single-category">Retrieve a single category</a></li>
   <li><a href="#retrieve-the-parent-of-a-category">Retrieve the parent of a category</a></li>
   <li><a href="#retrieve-the-root-category">Retrieve the root category</a></li>
   <li><a href="#list-the-children-categories-of-a-category">List the children categories of a category</a></li>
   <li><a href="#list-a-categorys-manufacturers">List a category’s manufacturers</a></li>
-</ul><h2 id="about">About</h2>
+</ul>
+
+<h2 id="about">About</h2>
 
 <p>Categories are organized in a tree-like structure.<br>
 A product/sku belongs to a leaf category.</p>
@@ -225,24 +227,28 @@ A product/sku belongs to a leaf category.</p>
 <h2 id="list-a-categorys-manufacturers">List a category’s manufacturers</h2>
 
 <table>
-<thead><tr>
-<th>Name</th>
+  <thead>
+    <tr>
+      <th>Name</th>
       <th>Type</th>
       <th>Description</th>
-    </tr></thead>
-<tbody>
-<tr>
-<td><code>order_by</code></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>order_by</code></td>
       <td><code>String</code></td>
       <td><code>(optional) order by 'name' or 'popularity'(default)</code></td>
     </tr>
-<tr>
-<td><code>order_dir</code></td>
+    <tr>
+      <td><code>order_dir</code></td>
       <td><code>String</code></td>
       <td><code>(optional) order direction 'asc'(default) or 'desc'</code></td>
     </tr>
-</tbody>
-</table><pre class="terminal">
+  </tbody>
+</table>
+
+<pre class="terminal">
   GET /categories/:id/manufacturers?order_by=popularity&amp;order_dir=desc
 </pre>
 
@@ -276,6 +282,7 @@ A product/sku belongs to a leaf category.</p>
 <span class="p">}</span></code></pre>
 </div>
 </div>
+
         </div>
       </div>
       <div id="js-sidebar" class="sidebar-shell">

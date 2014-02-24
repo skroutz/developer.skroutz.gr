@@ -25,6 +25,18 @@ a {
 .search {
   float: right; }
 
+#st-search-input {
+  width: 200px;
+  background: #ebebec;
+  outline: none;
+  border: none;
+  padding: 8px 5px;
+  border-radius: 3px;
+  margin-top: -2px; }
+
+.swiftype-widget .autocomplete {
+  margin-top: 10px !important; }
+
 .content {
   max-width: 1180px;
   width: 98%;
