@@ -38,6 +38,26 @@
       },
       {
          "collectionId":"701fe06f-eaf4-255e-a600-8870177f10a1",
+         "id":"09bceed7-5785-0350-89b7-3abe0eb99a43",
+         "name":"create favorite list",
+         "description":"POST /favorites_lists",
+         "url":"{{base_url}}/favorite_lists",
+         "method":"POST",
+         "headers":"accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}\n",
+         "data":[
+            {
+               "key":"favorite_list[name]",
+               "value":"Test45676",
+               "type":"text"
+            }
+         ],
+         "dataMode":"urlencoded",
+         "timestamp":0,
+         "version":2,
+         "time":1392894074345
+      },
+      {
+         "collectionId":"701fe06f-eaf4-255e-a600-8870177f10a1",
          "id":"0b073c71-e7ab-2c6d-b04b-021ee5775d8d",
          "name":"autocomplete",
          "description":"",
@@ -88,6 +108,42 @@
       },
       {
          "collectionId":"701fe06f-eaf4-255e-a600-8870177f10a1",
+         "id":"0e289c9c-fb61-989b-7850-c8e4b044f2b6",
+         "name":"destroy favorite list",
+         "description":"DELETE /favorites_lists/:id",
+         "url":"{{base_url}}/favorite_lists/183",
+         "method":"DELETE",
+         "headers":"accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}\n",
+         "data":[
+
+         ],
+         "dataMode":"params",
+         "timestamp":0,
+         "version":2,
+         "time":1392887474893
+      },
+      {
+         "collectionId":"701fe06f-eaf4-255e-a600-8870177f10a1",
+         "id":"107f5ec2-0f0d-6f86-d6be-5d413afd8d06",
+         "name":"update favorite",
+         "description":"",
+         "url":"{{base_url}}/favorites/331342",
+         "method":"PUT",
+         "headers":"accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}\n",
+         "data":[
+            {
+               "key":"favorite[have_it]",
+               "value":"true",
+               "type":"text"
+            }
+         ],
+         "dataMode":"params",
+         "timestamp":0,
+         "version":2,
+         "time":1393236898909
+      },
+      {
+         "collectionId":"701fe06f-eaf4-255e-a600-8870177f10a1",
          "id":"12e52359-8a3c-4736-94a3-20cc8a255fdf",
          "name":"search_category_match",
          "description":"",
@@ -119,6 +175,26 @@
 
          ],
          "version":2
+      },
+      {
+         "collectionId":"701fe06f-eaf4-255e-a600-8870177f10a1",
+         "id":"2bfe8f56-2718-58ad-8326-21afd0476864",
+         "name":"favorites_lists_index",
+         "description":"List favorite_lists",
+         "url":"{{base_url}}/favorite_lists",
+         "method":"GET",
+         "headers":"accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}\n",
+         "data":[
+            {
+               "key":"favorite_list[name]",
+               "value":"Test45676",
+               "type":"text"
+            }
+         ],
+         "dataMode":"urlencoded",
+         "timestamp":0,
+         "version":2,
+         "time":1393322969452
       },
       {
          "collectionId":"701fe06f-eaf4-255e-a600-8870177f10a1",
@@ -560,6 +636,22 @@
       },
       {
          "collectionId":"701fe06f-eaf4-255e-a600-8870177f10a1",
+         "id":"c6a56ff8-79ea-79fa-bd48-6a4fde57c3ca",
+         "name":"destroy favorite",
+         "description":"",
+         "url":"{{base_url}}/favorites/222463",
+         "method":"DELETE",
+         "headers":"accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}\n",
+         "data":[
+
+         ],
+         "dataMode":"params",
+         "timestamp":0,
+         "version":2,
+         "time":1393232038903
+      },
+      {
+         "collectionId":"701fe06f-eaf4-255e-a600-8870177f10a1",
          "id":"c7384d4d-a2e5-9bcc-4fe5-2575082a6f23",
          "name":"sku_specifications",
          "description":"Fetches the specifications (with value) of an SKU",
@@ -642,6 +734,26 @@
       },
       {
          "collectionId":"701fe06f-eaf4-255e-a600-8870177f10a1",
+         "id":"eb768f37-4caa-e4d0-5ef8-3503ac659cac",
+         "name":"create favorite",
+         "description":"POST /favorites",
+         "url":"{{base_url}}/favorites",
+         "method":"POST",
+         "headers":"accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}\n",
+         "data":[
+            {
+               "key":"favorite[sku_id]",
+               "value":"2504972",
+               "type":"text"
+            }
+         ],
+         "dataMode":"params",
+         "timestamp":0,
+         "version":2,
+         "time":1393231977265
+      },
+      {
+         "collectionId":"701fe06f-eaf4-255e-a600-8870177f10a1",
          "id":"f36e6c9f-ebe5-1f5f-dd2b-df5ca9b67a93",
          "name":"skus_products",
          "description":"",
@@ -696,7 +808,13 @@
       "b47d47fc-1ccf-43d4-5f63-cbd28bcb3974",
       "ab3a842c-69ab-61d4-e4a7-1a0413979030",
       "0b6ca5ee-40ad-ffbf-3267-bbd091be81d9",
-      "c7384d4d-a2e5-9bcc-4fe5-2575082a6f23"
+      "c7384d4d-a2e5-9bcc-4fe5-2575082a6f23",
+      "09bceed7-5785-0350-89b7-3abe0eb99a43",
+      "0e289c9c-fb61-989b-7850-c8e4b044f2b6",
+      "eb768f37-4caa-e4d0-5ef8-3503ac659cac",
+      "c6a56ff8-79ea-79fa-bd48-6a4fde57c3ca",
+      "107f5ec2-0f0d-6f86-d6be-5d413afd8d06",
+      "2bfe8f56-2718-58ad-8326-21afd0476864"
    ],
    "timestamp":1389958720
 }
