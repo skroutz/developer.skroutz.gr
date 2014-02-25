@@ -50,7 +50,7 @@ requests:
         per:  2
   -
     key: shops_show
-    request: 'GET {{base_url}}/shops/3'
+    request: 'GET {{base_url}}/shops/11'
   -
     key: shop_locations_index
     request:
