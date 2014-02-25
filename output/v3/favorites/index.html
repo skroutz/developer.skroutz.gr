@@ -38,16 +38,109 @@
 <p><small>Note: To access any of the following endpoints a valid access_token is required.</small></p>
 
 <ul id="markdown-toc">
-  <li><a href="#about">About</a></li>
+<li><a href="#about">About</a></li>
+  <li><a href="#list-favoritelists">List favorite_lists</a></li>
+  <li><a href="#create-a-favoritelist">Create a favorite_list</a></li>
+  <li><a href="#destroy-a-favoritelist">Destroy a favorite_list</a></li>
   <li><a href="#list-favorites">List favorites</a></li>
   <li><a href="#retrieve-a-single-favorite">Retrieve a single favorite</a></li>
-</ul>
+  <li><a href="#create-a-new-favorite">Create a new favorite</a></li>
+  <li><a href="#destroy-a-favorite">Destroy a favorite</a></li>
+  <li><a href="#update-a-favorite">Update a favorite</a></li>
+</ul><h2 id="about">About</h2>
 
-<h2 id="about">About</h2>
+<p>User may pick one or more SKUs as favorites. Favorites are organized in favorite_lists.
+3 ‘types’ of favorite_lists exist:
+  - custom lists. Can group SKUs from different categories. These are created
+    by the user.
+  - auto lists. These are connected with a category and can only group favorites
+    with SKUs from this category. These are created automatically when a new
+    favorite is created without specifing a favorite_list (and favorite is not
+    owned. See next)
+  - “owned” list. No such list exists but favorites that user has flagged as
+    “owned” have favorite_list_id =&gt; null and have_it =&gt; true attributes. In
+    this way owned favorites can be presented as a list.</p>
 
-<p>User may pick one or more SKUs as favorites</p>
+<p>Endpoints for favorites and favorite_lists are listed next.</p>
+
+<h2 id="list-favoritelists">List favorite_lists</h2>
+
+<pre class="terminal">
+  /favorite_lists
+</pre>
+
+<div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/favorite_lists</span>
+        </p>
+<a href="javascript:void(0)" class="toggler" data-target="js-response">view response</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"favorite_lists"</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">114490</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Κινητά Τηλέφωνα"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">114494</span><span class="p">,</span>
+      <span class="s2">"category_id"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"My custom list"</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"pagination"</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">"total_results"</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="s2">"total_pages"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"page"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"per"</span><span class="o">:</span> <span class="mi">25</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre>
+</div>
+</div>
+
+<h2 id="create-a-favoritelist">Create a favorite_list</h2>
+
+<p>It trying to create a custom list with the same name as an existing custom list
+you will be presented with an error message.</p>
+
+<pre class="terminal">
+  POST /favorite_lists?favorite_list[name]=a+new+list+name
+</pre>
+
+<div class="example">        <p class="request">
+          <span class="verb">POST</span>
+          <span class="path">/favorite_lists</span>
+        </p>
+<a href="javascript:void(0)" class="toggler" data-target="js-response">view response</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"favorite_list"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"id"</span><span class="o">:</span> <span class="mi">114493</span><span class="p">,</span>
+    <span class="s2">"category_id"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"a new list name"</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre>
+</div>
+</div>
+
+<h2 id="destroy-a-favoritelist">Destroy a favorite_list</h2>
+
+<p>The response status is 204 and with an empty response body when resource is
+destroyed. status code is 404 when the resource does not exist.</p>
+
+<pre class="terminal">
+  DELETE /favorite_lists/:id
+</pre>
 
 <h2 id="list-favorites">List favorites</h2>
+
+<p>The parameter ‘owned’ can be set to ‘true’ to fetch only owned favorites. By
+default favorites are sorted by creation date descending. order_dir=asc can be
+used to fetch them with ascending order.</p>
+
+<p><a href="..#linked-resources">Linked resources</a>: <a href="../sku">sku</a></p>
 
 <pre class="terminal">
   /favorites
@@ -118,6 +211,81 @@
 </div>
 </div>
 
+<h2 id="create-a-new-favorite">Create a new favorite</h2>
+
+<pre class="terminal">
+  POST /favorites?sku_id=79928
+</pre>
+
+<div class="example">        <p class="request">
+          <span class="verb">POST</span>
+          <span class="path">/favorites</span>
+        </p>
+<a href="javascript:void(0)" class="toggler" data-target="js-response">view response</a><div class="response">
+<pre class="headers"><code>Status: 201</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"favorite"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"id"</span><span class="o">:</span> <span class="mi">331343</span><span class="p">,</span>
+    <span class="s2">"have_it"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="s2">"user_id"</span><span class="o">:</span> <span class="mi">79928</span><span class="p">,</span>
+    <span class="s2">"user_notes"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="s2">"sku_id"</span><span class="o">:</span> <span class="mi">89645</span><span class="p">,</span>
+    <span class="s2">"created_at"</span><span class="o">:</span> <span class="s2">"2014-02-25T16:09:15+02:00"</span><span class="p">,</span>
+    <span class="s2">"updated_at"</span><span class="o">:</span> <span class="s2">"2014-02-25T16:09:15+02:00"</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre>
+</div>
+</div>
+
+<h2 id="destroy-a-favorite">Destroy a favorite</h2>
+
+<p>The response status is 204 and with an empty response body when resource is
+destroyed. status code is 404 when the resource does not exist.</p>
+
+<pre class="terminal">
+  DELETE /favorite/:id
+</pre>
+
+<h2 id="update-a-favorite">Update a favorite</h2>
+
+<p>A favorite update might be called to do one of the following:
+  - Move the favorite to an other list (custom probably)
+  - Mark favorite as “owned” (through have_it: true)
+  - Add the favorite to a new custom list</p>
+
+<p>When a favorite is <code>have_it: true</code> and it does not belong to a favorite_list.
+If you put a favorite_list_id and have_it: true, then only have_it will be
+respected (favorite_list_id will be ignored).</p>
+
+<p>You may choose to create a new custom list when creating or updating a favorite,
+by specifing the parameter <code>new_list_name</code>. A new custom list will be created
+(if one does not exist) with the given name and the favorite will be assigned to
+it. have_it attribute will be set to null.
+In case of an error, status 400 will be returned with errors in response body.</p>
+
+<pre class="terminal">
+  PUT /favorite/:id?have_it=true
+</pre>
+
+<div class="example">        <p class="request">
+          <span class="verb">PUT</span>
+          <span class="path">/favorites/331342</span>
+        </p>
+<a href="javascript:void(0)" class="toggler" data-target="js-response">view response</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"favorite"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"id"</span><span class="o">:</span> <span class="mi">331342</span><span class="p">,</span>
+    <span class="s2">"have_it"</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="s2">"user_id"</span><span class="o">:</span> <span class="mi">79928</span><span class="p">,</span>
+    <span class="s2">"user_notes"</span><span class="o">:</span> <span class="s2">"This is a favorite"</span><span class="p">,</span>
+    <span class="s2">"sku_id"</span><span class="o">:</span> <span class="mi">2504972</span><span class="p">,</span>
+    <span class="s2">"created_at"</span><span class="o">:</span> <span class="s2">"2014-02-24T12:14:31+02:00"</span><span class="p">,</span>
+    <span class="s2">"updated_at"</span><span class="o">:</span> <span class="s2">"2014-02-25T16:55:23+02:00"</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre>
+</div>
+</div>
         </div>
       </div>
       <div id="js-sidebar" class="sidebar-shell">
