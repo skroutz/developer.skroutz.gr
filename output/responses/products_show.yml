@@ -2,23 +2,53 @@
 :request:
   :verb: GET
   :path: /products/13313788
-  :params:
-    oauth_token: Vr/AzbfQt3ywQlKUonZk25VqRg2ILFAFV/voi69FD9xlJl5Yp9DmDWb6PAEsVwuI1KckH3aa1/vxRaj/Mbwg==
 :status: 200
 :headers:
-  content-type: application/json; charset=utf-8
-  x-meta-request-version: 0.2.1
-  x-ua-compatible: IE=Edge,chrome=1
-  etag: ! '"504281849cb792774aad94dd7cc8ed27"'
-  cache-control: max-age=0, private, must-revalidate
-  x-request-id: 10d93641f5017763c9b4904b307e7093
-  x-runtime: '0.032259'
-  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
-  date: Fri, 20 Dec 2013 10:53:53 GMT
-  content-length: '412'
-  connection: close
-  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTYyNzU1MTEzMzk1NzVlN2U4ZWI4NWE4MmVmZmJkYmExBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--67fbd307ed0abbb408cb135422aa073f9dbef54c;
-    path=/; expires=Thu, 20-Feb-2014 10:53:53 GMT; HttpOnly
-:body: ! '{"product":{"id":13313788,"name":"Sneaker Adidas Greenstar Q23032 0071-ss2013
-  \u0391\u03bd\u03b4\u03c1\u03b9\u03ba\u03cc","sku_id":3050591,"shop_id":821,"category_id":379,"visible":false,"availability":"72
-  \u03a9\u03a1\u0395\u03a3 \u03a0\u0391\u03a1\u0391\u0394\u039f\u03a3\u0397","price":55.97,"image_url":"http://www.z-mall.gr/ItemsContent/0002227/962661.0/0002227_962661.0_GENCOM-SS2013_0071-ss2013_0_4.jpg"}}'
+  server: !binary |-
+    bmdpbng=
+  !binary "Y29udGVudC10eXBl": !binary |-
+    YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
+  !binary "dmFyeQ==": !binary |-
+    QWNjZXB0LUVuY29kaW5n
+  status: !binary |-
+    MjAwIE9L
+  x-ua-compatible: !binary |-
+    SUU9RWRnZSxjaHJvbWU9MQ==
+  cache-control: !binary |-
+    bWF4LWFnZT0wLCBwcml2YXRlLCBtdXN0LXJldmFsaWRhdGU=
+  x-request-id: !binary |-
+    MTQyMjY3MjQ1NQ==
+  x-runtime: !binary |-
+    MC4wNTQyNTg=
+  x-dns-prefetch-control: !binary |-
+    b2Zm
+  x-app: !binary |-
+    bHVua3dpbGw=
+  content-length: !binary |-
+    Mjgw
+  accept-ranges: !binary |-
+    Ynl0ZXM=
+  date: !binary |-
+    VHVlLCAyNSBGZWIgMjAxNCAxMjo0OTo1NCBHTVQ=
+  x-varnish: !binary |-
+    MTQyMjY3MjQ1NQ==
+  age: !binary |-
+    MA==
+  via: !binary |-
+    MS4xIHZhcm5pc2g=
+  connection: !binary |-
+    Y2xvc2U=
+  x-origin: !binary |-
+    dmFybmlzaDI=
+  x-cache: !binary |-
+    TUlTUw==
+:body: !binary |-
+  eyJwcm9kdWN0Ijp7ImlkIjoxMzMxMzc4OCwibmFtZSI6IlNuZWFrZXIgQWRp
+  ZGFzIEdyZWVuc3RhciBRMjMwMzIgMDA3MS1zczIwMTMgXHUwMzkxXHUwM2Jk
+  XHUwM2I0XHUwM2MxXHUwM2I5XHUwM2JhXHUwM2NjIiwic2t1X2lkIjozMDUw
+  NTkxLCJzaG9wX2lkIjo4MjEsImNhdGVnb3J5X2lkIjozNzksImF2YWlsYWJp
+  bGl0eSI6IjEgXHUwM2FkXHUwM2M5XHUwM2MyIDMgXHUwM2I3XHUwM2JjXHUw
+  M2FkXHUwM2MxXHUwM2I1XHUwM2MyIiwiY2xpY2tfdXJsIjoiaHR0cDovL3d3
+  dy5za3JvdXR6LmdyL3Byb2R1Y3RzL3Nob3cvMTMzMTM3ODg/Y2xpZW50X2lk
+  PXA4TTJvSEdwNkliU0FjWTAzUHp2REElM0QlM0QmZnJvbT1hcGkiLCJwcmlj
+  ZSI6NTUuOTd9fQ==
