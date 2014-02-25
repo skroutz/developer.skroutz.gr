@@ -154,6 +154,31 @@ requests:
     key: favorites_show
     request: 'GET {{base_url}}/favorites/252116'
   -
+    key: favorite_create
+    request:
+      verb: POST
+      path: '{{base_url}}/favorites'
+      params:
+        favorite[sku_id]: 89645
+  -
+    key: favorite_update
+    request:
+      verb: PUT
+      path: '{{base_url}}/favorites/331342'
+      params:
+        favorite[have_it]: true
+  -
+    key: favorite_lists_index
+    request: 'GET {{base_url}}/favorite_lists'
+  -
+    key: favorite_list_create
+    request:
+      verb: POST
+      path: '{{base_url}}/favorite_lists'
+      params:
+        favorite_list[name]: a new list name
+
+  -
     key: filter_groups_index
     request:
       path: '{{base_url}}/categories/40/filter_groups'

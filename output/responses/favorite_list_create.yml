@@ -1,0 +1,22 @@
+---
+:request:
+  :verb: POST
+  :path: /favorite_lists
+  :params:
+    favorite_list[name]: a new list name
+:status: 200
+:headers:
+  content-type: application/json; charset=utf-8
+  x-meta-request-version: 0.2.1
+  x-ua-compatible: IE=Edge,chrome=1
+  etag: '"58e229b1f8e189bb30fa7215e2289475"'
+  cache-control: max-age=0, private, must-revalidate
+  x-request-id: 00ca85ade194a21e0de7e986bb87a870
+  x-runtime: '1.327981'
+  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
+  date: Tue, 25 Feb 2014 08:06:42 GMT
+  content-length: '75'
+  connection: close
+  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWEyYjVjOGIxYTRhNmVjM2E5ODkwYjJmYTJmM2U5NjYxBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--b95428603879b1064ccf87e53c0b796b5f1703be;
+    path=/; expires=Fri, 25-Apr-2014 07:06:42 GMT; HttpOnly
+:body: '{"favorite_list":{"id":114493,"category_id":null,"name":"a new list name"}}'
