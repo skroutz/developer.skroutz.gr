@@ -35,7 +35,8 @@ a {
   margin-top: -2px; }
 
 .swiftype-widget .autocomplete {
-  margin-top: 10px !important; }
+  margin-top: 10px !important;
+  margin-left: 8px !important; }
 
 .content {
   max-width: 1180px;
