@@ -23,7 +23,7 @@
   <div class="content">
     <a href="../../">for Developers [beta]</a>
     <form class="search">
-        <input type="text" id="st-search-input"/>
+        <input type="text" id="st-search-input" placeholder="Search"/>
     </form>
   </div>
 </header>
@@ -34,12 +34,23 @@
       <div id="right_container">
         <div class="container">
           <h2 id="about">About</h2>
-<p>Currently this resource can only be accessed via a <a href="../shops">Location</a>
+<p>Currently this resource can only be accessed via a <a href="../shop">Location</a> 
 which is associated to a shop.</p>
 
+<p>Example Representation of an address.</p>
+
 <pre class="highlight">
-  <code class="language-javascript">    <span class="p">{</span>
-    <span class="p">}</span></code>
+  <code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"address"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"id"</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="s2">"street_number"</span><span class="o">:</span> <span class="s2">"1"</span><span class="p">,</span>
+    <span class="s2">"street"</span><span class="o">:</span> <span class="s2">"ΘΕΣΗ ΣΚΛΗΡΙ"</span><span class="p">,</span>
+    <span class="s2">"postcode"</span><span class="o">:</span> <span class="s2">"19600"</span><span class="p">,</span>
+    <span class="s2">"city"</span><span class="o">:</span> <span class="s2">"ΜΑΓΟΥΛΑ"</span><span class="p">,</span>
+    <span class="s2">"region"</span><span class="o">:</span> <span class="s2">"Αττικής"</span><span class="p">,</span>
+    <span class="s2">"country"</span><span class="o">:</span> <span class="s2">"Ελλάδα"</span>
+  <span class="p">}</span>
+<span class="p">}</span></code>
 </pre>
         </div>
       </div>
