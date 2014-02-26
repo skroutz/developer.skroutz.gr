@@ -232,6 +232,23 @@
       },
       {
          "collectionId":"701fe06f-eaf4-255e-a600-8870177f10a1",
+         "id":"acf37bbf-ae1e-4b69-a0d3-caefb65e8585",
+         "name":"category_skus_with_applied_filters",
+         "description":"",
+         "url":"{{base_url}}/categories/279/skus?include_meta%5B%5D=applied_filters&per=1filter_ids[]=6273&manufacturer_ids=28",
+         "method":"GET",
+         "headers":"accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}",
+         "data":[
+
+         ],
+         "dataMode":"params",
+         "responses":[
+
+         ],
+         "version":2
+      },
+      {
+         "collectionId":"701fe06f-eaf4-255e-a600-8870177f10a1",
          "id":"50e8bb85-c2a8-aa42-b127-ffa5dc6495d2",
          "name":"categories_root",
          "description":"",
