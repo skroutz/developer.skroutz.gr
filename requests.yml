@@ -217,6 +217,12 @@ requests:
       params:
         per: 1
   -
+    key: category_skus_with_applied_filters
+    request:
+      path: '{{base_url}}/categories/40/skus?include_meta=applied_filters&filter_ids[]=6273&manufacturer_ids=28'
+      params:
+        per: 1
+  -
     key: notifications_index
     request:
       path: '{{base_url}}/notifications'

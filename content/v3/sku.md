@@ -20,6 +20,83 @@ A SKU (Stock Keeping Unit) is an aggregation of products.
 
 <%= render_recording :category_skus %>
 
+## Ordering
+
+Name      | Type   | Description
+----------|--------|------------
+order_by  | String | pricevat or popularity
+order_dir | String | asc or desc
+
+## Filtering
+
+You have to specify a category in order to perform filtering.  
+You may supply the optional parameter `include_meta[]=available_filters`
+to get meta information about the filters that can be applied.
+
+### By search keyword 
+
+Name | Type | Description
+-----| -----| -----------
+`q` | `String` | The keyword to search by 
+
+<%= render_recording :category_skus_search %>
+
+### By manufacturers
+
+Name | Type | Description
+-----| -----| -----------
+`manufacturer_ids` | `Array` | The ids of the manufacturers of the SKUs
+
+<%= render_recording :category_skus_manufacturers %>
+
+### By filters
+
+Name | Type | Description
+-----| -----| -----------
+`filter_ids` | `Array` | The ids of the filters to be applied on the SKUs
+
+<%= render_recording :category_skus_filters %>
+
+### Meta
+You may choose to include extra meta information using the following parameters:
+
+Name           | Type    | Description
+---------------| --------| -----------
+`include_meta` | `Array` | `Extra meta info to be included in the response`
+
+<p class="padded">
+Meta that can be included are:
+
+  <ul>
+    <li>available_filters (filters that can be applied)</li>
+    <li>applied_filters (filters currently applied)</li>
+  </ul>
+</p>
+
+<%= render_recording :category_skus_with_available_filters %>  
+
+<p class="padded">
+As you can see above the available_filters object contains two objects
+(filters, manufacturers) each of which has as keys the ids of the
+entities that can be applied and as values the number of skus that match
+the filter/manufacturer.    
+</p>
+
+<p class="padded">
+To retrieve skus matching a set of filters you have to 
+add `filter_ids[]=filter_id_1&filter_ids[]=filter_id_2` meaning that
+filter_ids is an array query parameter of filter ids.  
+</p>
+
+
+<p class="padded">
+To retrieve skus matching a set of filters you have to 
+To retrieve skus matching a set of manufacturers you have to add `manufacturer_ids[]=manufacturer_id_1&manufacturer_ids[]=manufacturer_id_2` meaning that
+manufacturer_ids is an array query parameter of manufacturer ids.  
+</p>
+
+<%= render_recording :category_skus_with_applied_filters %>
+
 ## Retrieve a single SKU
 
 <pre class="terminal">
@@ -66,46 +143,5 @@ groups. No pagination is used in this endpoint.
 
 <%= render_recording :sku_specifications %>
 
-## Filtering
-
-You have to specify a category in order to perform filtering.  
-You may supply the optional parameter `include_meta[]=available_filters`
-to get meta information about the filters that can be applied.
 
 
-### By search keyword 
-
-Name | Type | Description
------| -----| -----------
-`q` | `String` | The keyword to search by 
-
-<%= render_recording :category_skus_search %>
-
-### By manufacturers
-
-Name | Type | Description
------| -----| -----------
-`manufacturer_ids` | `Array` | The ids of the manufacturers of the SKUs
-
-<%= render_recording :category_skus_manufacturers %>
-
-### By filters
-
-Name | Type | Description
------| -----| -----------
-`filter_ids` | `Array` | The ids of the filters to be applied on the SKUs
-
-<%= render_recording :category_skus_filters %>
-
-### Meta
-You may choose to include extra meta information using the following parameters:
-
-Name | Type | Description
------| -----| -----------
-`include_meta` | `Array` | `Extra meta info to be included in the response`
-
-<%= render_recording :category_skus_with_available_filters %>
-As you can see above the available_filters object contains two objects
-(filters, manufacturers) each of which has as keys the ids of the
-entities that can be applied and as values the number of skus that match
-the filter/manufacturer.
