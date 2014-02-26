@@ -36,7 +36,11 @@ requests:
         per: 2
   -
     key: category_skus
-    request: 'GET {{base_url}}/categories/1442/skus?page=1&per=3'
+    request:
+      path: '{{base_url}}/categories/40/skus'
+      params:
+        page: 1
+        per: 3
     meta:
       description: "Lists only skus belonging to category specified in path"
   -
