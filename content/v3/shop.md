@@ -7,17 +7,6 @@ title: Shop | Skroutz API
 * TOC
 {:toc}
 
-## List shops
-
-<pre class="terminal">
-  GET /shops
-</pre>
-
-Name | Type | Description
------| -----| -----------
-`letter` | `String` | `(optional) Filter shops of which the first letter matches the given value`
-
-<%= render_recording :shops_index %>
 
 ## Retrieve a single shop
 
@@ -26,7 +15,6 @@ Name | Type | Description
 </pre>
 
 <%= render_recording :shops_show %>
-
 
 ## Retrieve a shop's reviews
 
@@ -38,7 +26,8 @@ Name | Type | Description
 
 ## List shop locations
 
-[Linked resource](<%= relative_path_to('/v3') %>#linked-resources): address
+[Linked resource](<%= relative_path_to('/v3') %>#linked-resources):
+[address](<%= relative_path_to('/v3/addresses') %>)
 
 <pre class="terminal">
   GET /shops/:shop_id/locations?embed=address
@@ -48,7 +37,8 @@ Name | Type | Description
 
 ## Retrieve a single shop location
 
-[Linked resource](<%= relative_path_to('/v3') %>#linked-resources): address
+[Linked resource](<%= relative_path_to('/v3') %>#linked-resources):
+[address](<%= relative_path_to('/v3/addresses') %>)
 
 <pre class="terminal">
   GET /shops/:shop_id/locations/:id
