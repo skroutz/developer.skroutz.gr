@@ -36,16 +36,14 @@
           <h1 id="category">Category</h1>
 
 <ul id="markdown-toc">
-  <li><a href="#about">About</a></li>
+<li><a href="#about">About</a></li>
   <li><a href="#list-all-categories">List all categories</a></li>
   <li><a href="#retrieve-a-single-category">Retrieve a single category</a></li>
   <li><a href="#retrieve-the-parent-of-a-category">Retrieve the parent of a category</a></li>
   <li><a href="#retrieve-the-root-category">Retrieve the root category</a></li>
   <li><a href="#list-the-children-categories-of-a-category">List the children categories of a category</a></li>
   <li><a href="#list-a-categorys-manufacturers">List a category’s manufacturers</a></li>
-</ul>
-
-<h2 id="about">About</h2>
+</ul><h2 id="about">About</h2>
 
 <p>Categories are organized in a tree-like structure.<br>
 A product/sku belongs to a leaf category.</p>
@@ -65,41 +63,62 @@ A product/sku belongs to a leaf category.</p>
 <pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
   <span class="s2">"categories"</span><span class="o">:</span> <span class="p">[</span>
     <span class="p">{</span>
-      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Σταθερή Τηλεφωνία"</span><span class="p">,</span>
-      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
-      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/1.jpg"</span><span class="p">,</span>
-      <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">false</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">1269</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Τεχνολογία"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/categories/large/1269.jpg"</span><span class="p">,</span>
+      <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">76</span>
     <span class="p">},</span>
     <span class="p">{</span>
-      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Τηλεφωνία"</span><span class="p">,</span>
-      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/2.jpg"</span><span class="p">,</span>
-      <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">false</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">274</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Μόδα - Ομορφιά"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">12</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/categories/large/274.jpg"</span><span class="p">,</span>
+      <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">76</span>
     <span class="p">},</span>
     <span class="p">{</span>
-      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
-      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Φωτογραφία &amp; Video"</span><span class="p">,</span>
-      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/5.jpg"</span><span class="p">,</span>
-      <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">false</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">417</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Παιδικά - Βρεφικά"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">14</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/417.jpg"</span><span class="p">,</span>
+      <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">76</span>
     <span class="p">},</span>
     <span class="p">{</span>
-      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
-      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Αξεσουάρ  Ήχου &amp; Εικόνας"</span><span class="p">,</span>
-      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/6.jpg"</span><span class="p">,</span>
-      <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">false</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">255</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Hobby - Αθλητισμός"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">9</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/255.jpg"</span><span class="p">,</span>
+      <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">76</span>
     <span class="p">},</span>
     <span class="p">{</span>
-      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
-      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Projectors"</span><span class="p">,</span>
-      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/categories/large/10.jpg"</span><span class="p">,</span>
-      <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">true</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">11</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Σπίτι - Κήπος"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">12</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/categories/large/11.jpg"</span><span class="p">,</span>
+      <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">76</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">33</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Auto - Moto"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/33.jpg"</span><span class="p">,</span>
+      <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">76</span>
     <span class="p">}</span>
-  <span class="p">]</span>
+  <span class="p">],</span>
+  <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"pagination"</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">"total_results"</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
+      <span class="s2">"total_pages"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"page"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"per"</span><span class="o">:</span> <span class="mi">25</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
 <span class="p">}</span></code></pre>
 </div>
 </div>
@@ -227,28 +246,24 @@ A product/sku belongs to a leaf category.</p>
 <h2 id="list-a-categorys-manufacturers">List a category’s manufacturers</h2>
 
 <table>
-  <thead>
-    <tr>
-      <th>Name</th>
+<thead><tr>
+<th>Name</th>
       <th>Type</th>
       <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>order_by</code></td>
+    </tr></thead>
+<tbody>
+<tr>
+<td><code>order_by</code></td>
       <td><code>String</code></td>
       <td><code>(optional) order by 'name' or 'popularity'(default)</code></td>
     </tr>
-    <tr>
-      <td><code>order_dir</code></td>
+<tr>
+<td><code>order_dir</code></td>
       <td><code>String</code></td>
       <td><code>(optional) order direction 'asc'(default) or 'desc'</code></td>
     </tr>
-  </tbody>
-</table>
-
-<pre class="terminal">
+</tbody>
+</table><pre class="terminal">
   GET /categories/:id/manufacturers?order_by=popularity&amp;order_dir=desc
 </pre>
 
@@ -282,7 +297,6 @@ A product/sku belongs to a leaf category.</p>
 <span class="p">}</span></code></pre>
 </div>
 </div>
-
         </div>
       </div>
       <div id="js-sidebar" class="sidebar-shell">
