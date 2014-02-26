@@ -21,23 +21,6 @@
       },
       {
          "collectionId":"701fe06f-eaf4-255e-a600-8870177f10a1",
-         "id":"06ddc94a-e944-4bd4-c415-e558481d406d",
-         "name":"shops_show",
-         "description":"",
-         "url":"{{base_url}}/shops/3",
-         "method":"GET",
-         "headers":"accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}",
-         "data":[
-
-         ],
-         "dataMode":"params",
-         "responses":[
-
-         ],
-         "version":2
-      },
-      {
-         "collectionId":"701fe06f-eaf4-255e-a600-8870177f10a1",
          "id":"09bceed7-5785-0350-89b7-3abe0eb99a43",
          "name":"create favorite list",
          "description":"POST /favorites_lists",
