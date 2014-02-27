@@ -21,11 +21,11 @@ POST https://www.skroutz.gr/oauth2/token
 
 Name            | Type     | Required | Description
 ----------------| ---------|----------| -----------
-`client_id`     | String | yes      | The client_id supplied by skroutz for the application
-`client_secret` | String | yes      | The client_secret supplied by skroutz for the application
-`redirect_uri`  | String | yes      | The redirect_uri set for the application
-`grant_type`    | String | yes      | client_credentials
-`scope`         | String | no        | The space separated set of permissions your application wishes
+`client_id`     | String | yes        | The client_id supplied by skroutz for the application
+`client_secret` | String | yes        | The client_secret supplied by skroutz for the application
+`redirect_uri`  | String | yes        | The redirect_uri set for the application
+`grant_type`    | String | yes        | client_credentials
+`scope`         | String | no         | The space separated set of permissions your application wishes
 
 ## User Token
 
@@ -77,8 +77,8 @@ Name            | Type     | Required | Description
 `client_secret` | String | yes      | The client_secret supplied by skroutz for the application
 `redirect_uri`  | String | yes      | The redirect_uri set for the application
 `response_type` | String | yes      | The value should be "code"
-`grant_type`    | String | yes      | authorization_code
-`code`          | String | yes      | authorization code obtained
+`grant_type`    | String | yes      | The value should be "authorization_code"
+`code`          | String | yes      | The authorization code obtained
 
 If everything went OK, the response has the following form:
 
