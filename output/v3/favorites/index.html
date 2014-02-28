@@ -39,31 +39,35 @@
 
 <ul id="markdown-toc">
 <li><a href="#about">About</a></li>
-  <li><a href="#list-favoritelists">List favorite_lists</a></li>
+  <li><a href="#list-favorite-lists">List favorite lists</a></li>
   <li><a href="#create-a-favoritelist">Create a favorite_list</a></li>
   <li><a href="#destroy-a-favoritelist">Destroy a favorite_list</a></li>
   <li><a href="#list-favorites">List favorites</a></li>
+  <li><a href="#list-favorites-belonging-to-list">List favorites belonging to list</a></li>
   <li><a href="#retrieve-a-single-favorite">Retrieve a single favorite</a></li>
   <li><a href="#create-a-new-favorite">Create a new favorite</a></li>
   <li><a href="#destroy-a-favorite">Destroy a favorite</a></li>
   <li><a href="#update-a-favorite">Update a favorite</a></li>
 </ul><h2 id="about">About</h2>
 
-<p>User may pick one or more SKUs as favorites. Favorites are organized in favorite_lists.
-3 ‘types’ of favorite_lists exist:
-  - custom lists. Can group SKUs from different categories. These are created
-    by the user.
-  - auto lists. These are connected with a category and can only group favorites
-    with SKUs from this category. These are created automatically when a new
-    favorite is created without specifing a favorite_list (and favorite is not
-    owned. See next)
-  - “owned” list. No such list exists but favorites that user has flagged as
-    “owned” have favorite_list_id =&gt; null and have_it =&gt; true attributes. In
-    this way owned favorites can be presented as a list.</p>
+<p>User may pick one or more SKUs as favorites.
+Favorites are organized in favorite_lists. 3 ‘types’ of favorite_lists exist:</p>
 
-<p>Endpoints for favorites and favorite_lists are listed next.</p>
+<ul>
+<li>custom lists
+Can group SKUs from different categories.  These are created by the user.</li>
+  <li>auto lists
+These are connected with a category and can only group favorites with SKUs
+from this category. These are created automatically when a new favorite is
+created without specifing a favorite_list (and favorite is not owned.
+See next)</li>
+  <li>“owned” list
+No such list exists but favorites that user has flagged as “owned” have
+favorite_list_id =&gt; null and have_it =&gt; true attributes.
+In this way owned favorites can be presented as a list.</li>
+</ul><p>Endpoints for favorites and favorite_lists are listed next.</p>
 
-<h2 id="list-favoritelists">List favorite_lists</h2>
+<h2 id="list-favorite-lists">List favorite lists</h2>
 
 <pre class="terminal">
   /favorite_lists
@@ -102,8 +106,8 @@
 
 <h2 id="create-a-favoritelist">Create a favorite_list</h2>
 
-<p>It trying to create a custom list with the same name as an existing custom list
-you will be presented with an error message.</p>
+<p>It trying to create a custom list with the same name as an existing custom
+list you will be presented with an error message.</p>
 
 <pre class="terminal">
   POST /favorite_lists?favorite_list[name]=a+new+list+name
@@ -136,11 +140,12 @@ destroyed. status code is 404 when the resource does not exist.</p>
 
 <h2 id="list-favorites">List favorites</h2>
 
-<p>The parameter ‘owned’ can be set to ‘true’ to fetch only owned favorites. By
-default favorites are sorted by creation date descending. order_dir=asc can be
-used to fetch them with ascending order.</p>
+<p>The parameter ‘owned’ can be set to ‘true’ to fetch only owned favorites.
+By default favorites are sorted by creation date descending. order_dir=asc can
+be used to fetch them with ascending order.</p>
 
-<p><a href="..#linked-resources">Linked resources</a>: <a href="../sku">sku</a></p>
+<p><a href="..#linked-resources">Linked resources</a>:
+<a href="../sku">sku</a></p>
 
 <pre class="terminal">
   /favorites
@@ -185,6 +190,14 @@ used to fetch them with ascending order.</p>
 </div>
 </div>
 
+<h2 id="list-favorites-belonging-to-list">List favorites belonging to list</h2>
+
+<p>The response contains only favorites belonging to the specified favorite list.</p>
+
+<pre class="terminal">
+  /favorite_lists/:id/favorites
+</pre>
+
 <h2 id="retrieve-a-single-favorite">Retrieve a single favorite</h2>
 
 <pre class="terminal">
@@ -214,7 +227,7 @@ used to fetch them with ascending order.</p>
 <h2 id="create-a-new-favorite">Create a new favorite</h2>
 
 <pre class="terminal">
-  POST /favorites?sku_id=79928
+  POST /favorites?sku_id=89645
 </pre>
 
 <div class="example">        <p class="request">
@@ -243,28 +256,29 @@ used to fetch them with ascending order.</p>
 destroyed. status code is 404 when the resource does not exist.</p>
 
 <pre class="terminal">
-  DELETE /favorite/:id
+  DELETE /favorites/:id
 </pre>
 
 <h2 id="update-a-favorite">Update a favorite</h2>
 
-<p>A favorite update might be called to do one of the following:
-  - Move the favorite to an other list (custom probably)
-  - Mark favorite as “owned” (through have_it: true)
-  - Add the favorite to a new custom list</p>
+<p>A favorite update might be called to do one of the following:</p>
 
-<p>When a favorite is <code>have_it: true</code> and it does not belong to a favorite_list.
+<ul>
+<li>Move the favorite to an other list (custom probably)</li>
+  <li>Mark favorite as “owned” (through have_it: true)</li>
+  <li>Add the favorite to a new custom list</li>
+</ul><p>When a favorite is have_it: true and it does not belong to a favorite_list.
 If you put a favorite_list_id and have_it: true, then only have_it will be
 respected (favorite_list_id will be ignored).</p>
 
 <p>You may choose to create a new custom list when creating or updating a favorite,
-by specifing the parameter <code>new_list_name</code>. A new custom list will be created
-(if one does not exist) with the given name and the favorite will be assigned to
-it. have_it attribute will be set to null.
-In case of an error, status 400 will be returned with errors in response body.</p>
+by specifing the parameter new_list_name. A new custom list will be created
+(if one does not exist) with the given name and the favorite will be assigned
+to it. have_it attribute will be set to null. In case of an error, status 400
+will be returned with errors in response body.</p>
 
 <pre class="terminal">
-  PUT /favorite/:id?have_it=true
+  PUT /favorites/:id?have_it=true
 </pre>
 
 <div class="example">        <p class="request">
