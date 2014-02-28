@@ -7,72 +7,30 @@
     per: '5'
 :status: 200
 :headers:
-  server: !binary |-
-    bmdpbng=
-  content-type: !binary |-
-    YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-  !binary "dmFyeQ==": !binary |-
-    QWNjZXB0LUVuY29kaW5n
-  status: !binary |-
-    MjAwIE9L
-  x-ua-compatible: !binary |-
-    SUU9RWRnZSxjaHJvbWU9MQ==
-  cache-control: !binary |-
-    bWF4LWFnZT0wLCBwcml2YXRlLCBtdXN0LXJldmFsaWRhdGU=
-  x-request-id: !binary |-
-    MTQyODg3ODg0MQ==
-  x-runtime: !binary |-
-    MC4wODY2MDM=
-  x-dns-prefetch-control: !binary |-
-    b2Zm
-  x-app: !binary |-
-    ZnJhbmtpZQ==
-  content-length: !binary |-
-    Mzg1
-  accept-ranges: !binary |-
-    Ynl0ZXM=
-  date: !binary |-
-    V2VkLCAyNiBGZWIgMjAxNCAwOToxNjo1MyBHTVQ=
-  x-varnish: !binary |-
-    MTQyODg3ODg0MQ==
-  age: !binary |-
-    MA==
-  via: !binary |-
-    MS4xIHZhcm5pc2g=
-  connection: !binary |-
-    Y2xvc2U=
-  x-origin: !binary |-
-    dmFybmlzaDI=
-  x-cache: !binary |-
-    TUlTUw==
-:body: !binary |-
-  eyJjYXRlZ29yaWVzIjpbeyJpZCI6MTI2OSwibmFtZSI6Ilx1MDNhNFx1MDNi
-  NVx1MDNjN1x1MDNiZFx1MDNiZlx1MDNiYlx1MDNiZlx1MDNiM1x1MDNhZlx1
-  MDNiMSIsImNoaWxkcmVuX2NvdW50Ijo4LCJpbWFnZV91cmwiOiJodHRwOi8v
-  Yi5zY2RuLmdyL2ltYWdlcy9jYXRlZ29yaWVzL2xhcmdlLzEyNjkuanBnIiwi
-  bGVhZiI6ZmFsc2UsInBhcmVudF9pZCI6NzZ9LHsiaWQiOjI3NCwibmFtZSI6
-  Ilx1MDM5Y1x1MDNjY1x1MDNiNFx1MDNiMSAtIFx1MDM5Zlx1MDNiY1x1MDNi
-  Zlx1MDNjMVx1MDNjNlx1MDNiOVx1MDNhYyIsImNoaWxkcmVuX2NvdW50Ijox
-  MiwiaW1hZ2VfdXJsIjoiaHR0cDovL2Quc2Nkbi5nci9pbWFnZXMvY2F0ZWdv
-  cmllcy9sYXJnZS8yNzQuanBnIiwibGVhZiI6ZmFsc2UsInBhcmVudF9pZCI6
-  NzZ9LHsiaWQiOjQxNywibmFtZSI6Ilx1MDNhMFx1MDNiMVx1MDNiOVx1MDNi
-  NFx1MDNiOVx1MDNiYVx1MDNhYyAtIFx1MDM5Mlx1MDNjMVx1MDNiNVx1MDNj
-  Nlx1MDNiOVx1MDNiYVx1MDNhYyIsImNoaWxkcmVuX2NvdW50IjoxNCwiaW1h
-  Z2VfdXJsIjoiaHR0cDovL2Euc2Nkbi5nci9pbWFnZXMvY2F0ZWdvcmllcy9s
-  YXJnZS80MTcuanBnIiwibGVhZiI6ZmFsc2UsInBhcmVudF9pZCI6NzZ9LHsi
-  aWQiOjI1NSwibmFtZSI6IkhvYmJ5IC0gXHUwMzkxXHUwM2I4XHUwM2JiXHUw
-  M2I3XHUwM2M0XHUwM2I5XHUwM2MzXHUwM2JjXHUwM2NjXHUwM2MyIiwiY2hp
-  bGRyZW5fY291bnQiOjksImltYWdlX3VybCI6Imh0dHA6Ly9hLnNjZG4uZ3Iv
-  aW1hZ2VzL2NhdGVnb3JpZXMvbGFyZ2UvMjU1LmpwZyIsImxlYWYiOmZhbHNl
-  LCJwYXJlbnRfaWQiOjc2fSx7ImlkIjoxMSwibmFtZSI6Ilx1MDNhM1x1MDNj
-  MFx1MDNhZlx1MDNjNFx1MDNiOSAtIFx1MDM5YVx1MDNhZVx1MDNjMFx1MDNi
-  Zlx1MDNjMiIsImNoaWxkcmVuX2NvdW50IjoxMiwiaW1hZ2VfdXJsIjoiaHR0
-  cDovL2Quc2Nkbi5nci9pbWFnZXMvY2F0ZWdvcmllcy9sYXJnZS8xMS5qcGci
-  LCJsZWFmIjpmYWxzZSwicGFyZW50X2lkIjo3Nn0seyJpZCI6MzMsIm5hbWUi
-  OiJBdXRvIC0gTW90byIsImNoaWxkcmVuX2NvdW50Ijo0LCJpbWFnZV91cmwi
-  OiJodHRwOi8vYS5zY2RuLmdyL2ltYWdlcy9jYXRlZ29yaWVzL2xhcmdlLzMz
-  LmpwZyIsImxlYWYiOmZhbHNlLCJwYXJlbnRfaWQiOjc2fV0sIm1ldGEiOnsi
-  cGFnaW5hdGlvbiI6eyJ0b3RhbF9yZXN1bHRzIjo2LCJ0b3RhbF9wYWdlcyI6
-  MSwicGFnZSI6MSwicGVyIjoyNX19fQ==
+  server: nginx
+  content-type: application/json; charset=utf-8
+  vary: Accept-Encoding
+  status: 200 OK
+  x-ua-compatible: IE=Edge,chrome=1
+  cache-control: max-age=0, private, must-revalidate
+  x-request-id: '1444415133'
+  x-runtime: '0.081658'
+  x-dns-prefetch-control: 'off'
+  x-app: frankie
+  content-length: '376'
+  accept-ranges: bytes
+  date: Fri, 28 Feb 2014 10:21:01 GMT
+  x-varnish: '1444415133'
+  age: '0'
+  via: 1.1 varnish
+  connection: close
+  x-origin: varnish2
+  x-cache: MISS
+:body: '{"categories":[{"id":1269,"name":"\u03a4\u03b5\u03c7\u03bd\u03bf\u03bb\u03bf\u03b3\u03af\u03b1","children_count":8,"image_url":"http://b.scdn.gr/images/categories/large/1269.jpg","parent_id":76},{"id":274,"name":"\u039c\u03cc\u03b4\u03b1
+  - \u039f\u03bc\u03bf\u03c1\u03c6\u03b9\u03ac","children_count":12,"image_url":"http://d.scdn.gr/images/categories/large/274.jpg","parent_id":76},{"id":417,"name":"\u03a0\u03b1\u03b9\u03b4\u03b9\u03ba\u03ac
+  - \u0392\u03c1\u03b5\u03c6\u03b9\u03ba\u03ac","children_count":14,"image_url":"http://a.scdn.gr/images/categories/large/417.jpg","parent_id":76},{"id":255,"name":"Hobby
+  - \u0391\u03b8\u03bb\u03b7\u03c4\u03b9\u03c3\u03bc\u03cc\u03c2","children_count":9,"image_url":"http://a.scdn.gr/images/categories/large/255.jpg","parent_id":76},{"id":11,"name":"\u03a3\u03c0\u03af\u03c4\u03b9
+  - \u039a\u03ae\u03c0\u03bf\u03c2","children_count":12,"image_url":"http://d.scdn.gr/images/categories/large/11.jpg","parent_id":76},{"id":33,"name":"Auto
+  - Moto","children_count":4,"image_url":"http://a.scdn.gr/images/categories/large/33.jpg","parent_id":76}],"meta":{"pagination":{"total_results":6,"total_pages":1,"page":1,"per":25}}}'
 :meta:
   description: Lists all categories

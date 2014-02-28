@@ -46,7 +46,8 @@
 </ul><h2 id="about">About</h2>
 
 <p>Categories are organized in a tree-like structure.<br>
-A product/sku belongs to a leaf category.</p>
+A product/sku belongs to a leaf category, which is one with
+children_count = 0.</p>
 
 <h2 id="list-all-categories">List all categories</h2>
 
@@ -67,7 +68,6 @@ A product/sku belongs to a leaf category.</p>
       <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Τεχνολογία"</span><span class="p">,</span>
       <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
       <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/categories/large/1269.jpg"</span><span class="p">,</span>
-      <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
       <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">76</span>
     <span class="p">},</span>
     <span class="p">{</span>
@@ -75,7 +75,6 @@ A product/sku belongs to a leaf category.</p>
       <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Μόδα - Ομορφιά"</span><span class="p">,</span>
       <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">12</span><span class="p">,</span>
       <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/categories/large/274.jpg"</span><span class="p">,</span>
-      <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
       <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">76</span>
     <span class="p">},</span>
     <span class="p">{</span>
@@ -83,7 +82,6 @@ A product/sku belongs to a leaf category.</p>
       <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Παιδικά - Βρεφικά"</span><span class="p">,</span>
       <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">14</span><span class="p">,</span>
       <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/417.jpg"</span><span class="p">,</span>
-      <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
       <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">76</span>
     <span class="p">},</span>
     <span class="p">{</span>
@@ -91,7 +89,6 @@ A product/sku belongs to a leaf category.</p>
       <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Hobby - Αθλητισμός"</span><span class="p">,</span>
       <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">9</span><span class="p">,</span>
       <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/255.jpg"</span><span class="p">,</span>
-      <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
       <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">76</span>
     <span class="p">},</span>
     <span class="p">{</span>
@@ -99,7 +96,6 @@ A product/sku belongs to a leaf category.</p>
       <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Σπίτι - Κήπος"</span><span class="p">,</span>
       <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">12</span><span class="p">,</span>
       <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/categories/large/11.jpg"</span><span class="p">,</span>
-      <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
       <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">76</span>
     <span class="p">},</span>
     <span class="p">{</span>
@@ -107,7 +103,6 @@ A product/sku belongs to a leaf category.</p>
       <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Auto - Moto"</span><span class="p">,</span>
       <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
       <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/33.jpg"</span><span class="p">,</span>
-      <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
       <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">76</span>
     <span class="p">}</span>
   <span class="p">],</span>
@@ -141,7 +136,7 @@ A product/sku belongs to a leaf category.</p>
     <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Ξαπλώστρες Κήπου &amp; Βεράντας"</span><span class="p">,</span>
     <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
     <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/categories/large/1442.jpg"</span><span class="p">,</span>
-    <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">true</span>
+    <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">1434</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre>
 </div>
@@ -163,9 +158,8 @@ A product/sku belongs to a leaf category.</p>
   <span class="s2">"category"</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">"id"</span><span class="o">:</span> <span class="mi">1434</span><span class="p">,</span>
     <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Έπιπλα Κήπου &amp; Βεράντας"</span><span class="p">,</span>
-    <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">11</span><span class="p">,</span>
     <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/categories/large/1434.jpg"</span><span class="p">,</span>
-    <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
     <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">1052</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre>
@@ -190,7 +184,7 @@ A product/sku belongs to a leaf category.</p>
     <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Skroutz"</span><span class="p">,</span>
     <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
     <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/categories/large/76.jpg"</span><span class="p">,</span>
-    <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">false</span>
+    <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">0</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre>
 </div>
@@ -215,30 +209,38 @@ A product/sku belongs to a leaf category.</p>
       <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Διάφορες Υπηρεσίες"</span><span class="p">,</span>
       <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
       <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/categories/large/365.jpg"</span><span class="p">,</span>
-      <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">true</span>
+      <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">73</span>
     <span class="p">},</span>
     <span class="p">{</span>
       <span class="s2">"id"</span><span class="o">:</span> <span class="mi">107</span><span class="p">,</span>
       <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Επεκτάσεις Εγγύησης"</span><span class="p">,</span>
       <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
       <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/categories/large/107.jpg"</span><span class="p">,</span>
-      <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">true</span>
+      <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">73</span>
     <span class="p">},</span>
     <span class="p">{</span>
       <span class="s2">"id"</span><span class="o">:</span> <span class="mi">106</span><span class="p">,</span>
       <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Συνδέσεις Internet"</span><span class="p">,</span>
       <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
       <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/categories/large/106.jpg"</span><span class="p">,</span>
-      <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">true</span>
+      <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">73</span>
     <span class="p">},</span>
     <span class="p">{</span>
       <span class="s2">"id"</span><span class="o">:</span> <span class="mi">364</span><span class="p">,</span>
       <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Υπηρεσίες Internet"</span><span class="p">,</span>
       <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
       <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/categories/large/364.jpg"</span><span class="p">,</span>
-      <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">true</span>
+      <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">73</span>
     <span class="p">}</span>
-  <span class="p">]</span>
+  <span class="p">],</span>
+  <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"pagination"</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">"total_results"</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+      <span class="s2">"total_pages"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"page"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"per"</span><span class="o">:</span> <span class="mi">25</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
 <span class="p">}</span></code></pre>
 </div>
 </div>
