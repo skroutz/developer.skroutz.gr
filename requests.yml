@@ -12,11 +12,6 @@ requests:
     meta:
       description: 'Lists all categories'
   -
-    key: categories_top_level
-    request: 'GET {{base_url}}/categories/top_level'
-    meta:
-      description: 'Lists top level categories'
-  -
     key: categories_root
     request: 'GET {{base_url}}/categories/root'
   -

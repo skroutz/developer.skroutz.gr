@@ -10,7 +10,8 @@ title: Category | Skroutz API
 ## About
 
 Categories are organized in a tree-like structure.  
-A product/sku belongs to a leaf category.
+A product/sku belongs to a leaf category. Leaves have children_count = 0 and
+only leaves have SKUs.
 
 ## List all categories
 

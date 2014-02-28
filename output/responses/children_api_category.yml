@@ -2,25 +2,29 @@
 :request:
   :verb: GET
   :path: /categories/73/children
-  :params:
-    oauth_token: Vr/AzbfQt3ywQlKUonZk25VqRg2ILFAFV/voi69FD9xlJl5Yp9DmDWb6PAEsVwuI1KckH3aa1/vxRaj/Mbwg==
 :status: 200
 :headers:
+  server: nginx
   content-type: application/json; charset=utf-8
-  x-meta-request-version: 0.2.1
+  vary: Accept-Encoding
+  status: 200 OK
   x-ua-compatible: IE=Edge,chrome=1
-  etag: ! '"e7beb4bf561eac18085e35efd802ef76"'
   cache-control: max-age=0, private, must-revalidate
-  x-request-id: 3a40c496dccfe4653d70ab39b0cc8f66
-  x-runtime: '0.035346'
-  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
-  date: Fri, 20 Dec 2013 10:53:50 GMT
-  content-length: '814'
+  x-request-id: '1444418269'
+  x-runtime: '0.101344'
+  x-dns-prefetch-control: 'off'
+  x-app: frankie
+  content-length: '297'
+  accept-ranges: bytes
+  date: Fri, 28 Feb 2014 10:21:28 GMT
+  x-varnish: '1444418269'
+  age: '0'
+  via: 1.1 varnish
   connection: close
-  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJThkMmNiNjRjYWU2MGVhODBmMTIwMDA1NTM2N2ZkMTdlBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--f96a8ba2c99a1f4469bbcfb60757dc0cee4be748;
-    path=/; expires=Thu, 20-Feb-2014 10:53:50 GMT; HttpOnly
-:body: ! '{"categories":[{"id":365,"name":"\u0394\u03b9\u03ac\u03c6\u03bf\u03c1\u03b5\u03c2
-  \u03a5\u03c0\u03b7\u03c1\u03b5\u03c3\u03af\u03b5\u03c2","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/365.jpg","leaf":true},{"id":107,"name":"\u0395\u03c0\u03b5\u03ba\u03c4\u03ac\u03c3\u03b5\u03b9\u03c2
-  \u0395\u03b3\u03b3\u03cd\u03b7\u03c3\u03b7\u03c2","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/107.jpg","leaf":true},{"id":106,"name":"\u03a3\u03c5\u03bd\u03b4\u03ad\u03c3\u03b5\u03b9\u03c2
-  Internet","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/106.jpg","leaf":true},{"id":364,"name":"\u03a5\u03c0\u03b7\u03c1\u03b5\u03c3\u03af\u03b5\u03c2
-  Internet","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/364.jpg","leaf":true}]}'
+  x-origin: varnish2
+  x-cache: MISS
+:body: '{"categories":[{"id":365,"name":"\u0394\u03b9\u03ac\u03c6\u03bf\u03c1\u03b5\u03c2
+  \u03a5\u03c0\u03b7\u03c1\u03b5\u03c3\u03af\u03b5\u03c2","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/365.jpg","parent_id":73},{"id":107,"name":"\u0395\u03c0\u03b5\u03ba\u03c4\u03ac\u03c3\u03b5\u03b9\u03c2
+  \u0395\u03b3\u03b3\u03cd\u03b7\u03c3\u03b7\u03c2","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/107.jpg","parent_id":73},{"id":106,"name":"\u03a3\u03c5\u03bd\u03b4\u03ad\u03c3\u03b5\u03b9\u03c2
+  Internet","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/106.jpg","parent_id":73},{"id":364,"name":"\u03a5\u03c0\u03b7\u03c1\u03b5\u03c3\u03af\u03b5\u03c2
+  Internet","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/364.jpg","parent_id":73}],"meta":{"pagination":{"total_results":4,"total_pages":1,"page":1,"per":25}}}'
