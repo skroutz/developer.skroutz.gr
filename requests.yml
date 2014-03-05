@@ -108,6 +108,13 @@ requests:
         page: 1
         per: 2
   -
+    key: search_spelling
+    request:
+      path: '{{base_url}}/search?q=ipone'
+      params:
+        page: 1
+        per: 2
+  -
     key: search_drop
     request: 'GET {{base_url}}/search?q=wrong%20iphone'
     request:
@@ -126,7 +133,7 @@ requests:
   -
     key: search_sku_match
     request:
-      path: '{{base_url}}/search?q=Dimage%202300'
+      path: '{{base_url}}/search?q=nikon%201%20j2'
   -
     key: search_skus_match
     request:
