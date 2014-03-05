@@ -42,12 +42,6 @@ requests:
     key: category_parent
     request: 'GET {{base_url}}/categories/1442/parent'
   -
-    key: shops_index
-    request:
-      path: '{{base_url}}/shops'
-      params:
-        per:  2
-  -
     key: shops_show
     request: 'GET {{base_url}}/shops/11'
   -
