@@ -4,50 +4,17 @@
   :path: /shops/11
 :status: 200
 :headers:
-  server: !binary |-
-    bmdpbng=
-  !binary "Y29udGVudC10eXBl": !binary |-
-    YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-  !binary "dmFyeQ==": !binary |-
-    QWNjZXB0LUVuY29kaW5n
-  status: !binary |-
-    MjAwIE9L
-  x-ua-compatible: !binary |-
-    SUU9RWRnZSxjaHJvbWU9MQ==
-  cache-control: !binary |-
-    bWF4LWFnZT0wLCBwcml2YXRlLCBtdXN0LXJldmFsaWRhdGU=
-  x-request-id: !binary |-
-    MjQ0MzY5MTg1NA==
-  x-runtime: !binary |-
-    MC4wNTQzNzc=
-  x-dns-prefetch-control: !binary |-
-    b2Zm
-  x-app: !binary |-
-    bHVua3dpbGw=
-  content-length: !binary |-
-    MjI5
-  accept-ranges: !binary |-
-    Ynl0ZXM=
-  date: !binary |-
-    VHVlLCAyNSBGZWIgMjAxNCAxMjo0Mzo1MyBHTVQ=
-  x-varnish: !binary |-
-    MjQ0MzY5MTg1NA==
-  age: !binary |-
-    MA==
-  via: !binary |-
-    MS4xIHZhcm5pc2g=
-  connection: !binary |-
-    Y2xvc2U=
-  x-origin: !binary |-
-    dmFybmlzaDE=
-  x-cache: !binary |-
-    TUlTUw==
-:body: !binary |-
-  eyJzaG9wIjp7ImlkIjoxMSwibmFtZSI6Ilx1MDNhMFx1MDNiYlx1MDNiMVx1
-  MDNhZlx1MDNjM1x1MDNiOVx1MDNiZiIsImxpbmsiOiJodHRwOi8vd3d3LnBs
-  YWlzaW8uZ3IvIiwicGhvbmUiOiI4MDAxMTEyMzQ1IiwiaW1hZ2VfdXJsIjoi
-  aHR0cDovL2Iuc2Nkbi5nci9pbWFnZXMvc2hvcHMvbG9nb3MvMDAwMC9taWRf
-  ZjQ0MDQ1ZmEtZTRjZi00NzIzLTk3MDItYWUxNjNiNWM0MDM2LmpwZyIsInRo
-  dW1ic2hvdF91cmwiOiJodHRwOi8vYS5zY2RuLmdyL2ltYWdlcy9zaG9wcy9z
-  Y3JlZW5zLzU5NDM1YjY0LTJkNjMtNGY0ZS1hMDM4LWNlMDUxMjgwZGEyYi5w
-  bmcifX0=
+  content-type: application/json; charset=utf-8
+  x-meta-request-version: 0.2.1
+  x-ua-compatible: IE=Edge,chrome=1
+  etag: '"ec11866790fb621d155dffe942500e1b"'
+  cache-control: max-age=0, private, must-revalidate
+  x-request-id: 95362287899c95487fef77fe4d6cf5f2
+  x-runtime: '3.702115'
+  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
+  date: Wed, 05 Mar 2014 12:58:56 GMT
+  content-length: '304'
+  connection: close
+  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTFjNTdlMjEyYzM3YmVhY2M3OTNmMGJmYWFlODhiZDA3BjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--958d692207e9b0126aaa83d79ff17b1d0f3503b1;
+    path=/; expires=Mon, 05-May-2014 11:58:56 GMT; HttpOnly
+:body: '{"shop":{"id":11,"name":"\u03a0\u03bb\u03b1\u03af\u03c3\u03b9\u03bf","link":"http://www.plaisio.gr/","phone":"8001112345","image_url":"http://d.scdn.gr/assets/merchants/el/no_logo.png","thumbshot_url":"http://a.scdn.gr/assets/helmet/el/no_scr_image_medium.png","reviews_count":201,"review_score":2.5814}}'
