@@ -17,41 +17,63 @@ Name | Type | Description
 -----| -----| -----------
 `q` | `String` | `The keyphrase to search by`
 
-### Case `invalid` The query was invalid. Eg. less than 2 characters
+The main response type is a collection of 
+[Categories](<%= relative_path_to('/v3/category')  %>).
+
+Any other resources matching the specified query are generally of lesser
+importance.
+
+Our suggestion system may provide alternative search queries in the
+`alternatives` key of `meta`.
+
+Any of those alternatives having a flag `important` set to `true`, hint
+the client to perform a search with the alternative query instead. 
+
+There may also exist matches of different resources under the key `strong_matches`.  
+Currently there may be up-to one of each of the following resources:
+
+* [Category](<%= relative_path_to('/v3/category') %>)
+* [SKU](<%= relative_path_to('/v3/sku') %>)
+* [Manufacturer](<%= relative_path_to('/v3/manufacturer') %>)
+* [Shop](<%= relative_path_to('/v3/shop') %>)
+
+### Query with less than 2 characters
 
 <%= render_recording :search_invalid %>
 
-### Case `no_results` Nothing seems to match the specified query
+### Query that doesn't match anything
 
 <%= render_recording :search_no_results %>
 
-### Case `category_match` When your query matched a category
+### Query with strong insights for a specific category
 
 <%= render_recording :search_category_match %>
 
-### Case `category_facade` When your query matched many categories
+### Query matching many categories
 
 <%= render_recording :search_category_facade %>
 
-### Case `manufacturer_match` Your query matched one of our manufacturers exactly
+### Query with strong insights for a specific manufacturer
 
 <%= render_recording :search_manufacturer_match %>
 
-### Case `latin_mapping` Your query has an exact match in its latin form
-
-Note: You will have to follow one or more 302 redirections
+### Query with more results when written in another language
 
 <%= render_recording :search_latin_mapping %>
 
-### Case `sku_match` Your query matches exactly one of our skus
+### Probably misspelled query
+
+<%= render_recording :search_spelling %>
+
+### Query with strong insights for a specific SKU
 
 <%= render_recording :search_sku_match %>
 
-### Case `category_skus_match` Your query matches skus from a category
+### Query that matches SKUS from a single category
 
 <%= render_recording :search_skus_match %> 
 
-### Case `drop` Your query has no results but the proposals in the response have
+### Query parts of which have results
 
 <%= render_recording :search_drop %>
 

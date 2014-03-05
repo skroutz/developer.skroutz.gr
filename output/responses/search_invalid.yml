@@ -2,25 +2,45 @@
 :request:
   :verb: GET
   :path: /search?q=a
-:status: 400
+:status: 200
 :headers:
-  server: nginx
-  content-type: application/json; charset=utf-8
-  status: 400 Bad Request
-  x-ua-compatible: IE=Edge,chrome=1
-  cache-control: no-cache
-  x-request-id: '2370375145'
-  x-runtime: '0.080677'
-  x-app: lunkwill
-  content-length: '356'
-  accept-ranges: bytes
-  date: Wed, 12 Feb 2014 15:26:29 GMT
-  x-varnish: '2370375145'
-  age: '0'
-  via: 1.1 varnish
-  connection: close
-  x-origin: varnish1
-  x-cache: MISS
-:body: ! '{"message":"\u0397 \u03b1\u03bd\u03b1\u03b6\u03ae\u03c4\u03b7\u03c3\u03ae
-  \u03c3\u03bf\u03c5 \u03c0\u03c1\u03ad\u03c0\u03b5\u03b9 \u03bd\u03b1 \u03c0\u03b5\u03c1\u03b9\u03ad\u03c7\u03b5\u03b9
-  \u03c4\u03bf\u03c5\u03bb\u03ac\u03c7\u03b9\u03c3\u03c4\u03bf\u03bd 2 \u03c7\u03b1\u03c1\u03b1\u03ba\u03c4\u03ae\u03c1\u03b5\u03c2","meta":{"result_type":"invalid"}}'
+  server: !binary |-
+    bmdpbng=
+  !binary "Y29udGVudC10eXBl": !binary |-
+    YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
+  !binary "dmFyeQ==": !binary |-
+    QWNjZXB0LUVuY29kaW5n
+  status: !binary |-
+    MjAwIE9L
+  x-ua-compatible: !binary |-
+    SUU9RWRnZSxjaHJvbWU9MQ==
+  cache-control: !binary |-
+    bWF4LWFnZT0wLCBwcml2YXRlLCBtdXN0LXJldmFsaWRhdGU=
+  x-request-id: !binary |-
+    MjQ4ODk1NzczMA==
+  x-runtime: !binary |-
+    MC4wNDk0NzE=
+  x-dns-prefetch-control: !binary |-
+    b2Zm
+  x-app: !binary |-
+    ZnJhbmtpZQ==
+  content-length: !binary |-
+    Mzc=
+  accept-ranges: !binary |-
+    Ynl0ZXM=
+  date: !binary |-
+    V2VkLCAwNSBNYXIgMjAxNCAxMDoyMjoyNSBHTVQ=
+  x-varnish: !binary |-
+    MjQ4ODk1NzczMA==
+  age: !binary |-
+    MA==
+  via: !binary |-
+    MS4xIHZhcm5pc2g=
+  connection: !binary |-
+    Y2xvc2U=
+  x-origin: !binary |-
+    dmFybmlzaDE=
+  x-cache: !binary |-
+    TUlTUw==
+:body: !binary |-
+  eyJjYXRlZ29yaWVzIjpbXX0=
