@@ -70,6 +70,7 @@ Meta that can be included are:
   <ul>
     <li>available_filters (filters that can be applied)</li>
     <li>applied_filters (filters currently applied)</li>
+    <li>show_in_tiles (whether the skus should be rendered in a tile view)</li>
   </ul>
 </p>
 
