@@ -1,0 +1,24 @@
+---
+:request:
+  :verb: GET
+  :path: /search?q=ipone
+  :params:
+    page: 1
+    per: 2
+:status: 200
+:headers:
+  content-type: application/json; charset=utf-8
+  x-meta-request-version: 0.2.1
+  x-ua-compatible: IE=Edge,chrome=1
+  etag: '"6ea9227bf5be007b924bbb9413513417"'
+  cache-control: max-age=0, private, must-revalidate
+  x-request-id: b2ca38de3eb1fb097815908eb65a5ffa
+  x-runtime: '5.086707'
+  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
+  date: Fri, 07 Mar 2014 10:55:31 GMT
+  content-length: '399'
+  connection: close
+  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTBiOGNlNWRiYjJiMTBiY2UwMWZmMzQ5NWY3YjQ1NGUxBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--8e9878b13d70788bb4c82c455e60c43359812e38;
+    path=/; expires=Wed, 07-May-2014 09:55:31 GMT; HttpOnly
+:body: '{"categories":[{"id":581,"name":"\u03a6\u03bf\u03c1\u03c4\u03b9\u03c3\u03c4\u03ad\u03c2
+  \u039a\u03b9\u03bd\u03b7\u03c4\u03ce\u03bd \u03a4\u03b7\u03bb\u03b5\u03c6\u03ce\u03bd\u03c9\u03bd","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/581.jpg","parent_id":86}],"meta":{"alternatives":[],"strong_matches":{},"pagination":{"total_results":1,"total_pages":1,"page":1,"per":2}}}'
