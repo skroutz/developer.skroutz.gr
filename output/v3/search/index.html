@@ -36,51 +36,62 @@
           <h1 id="search">Search</h1>
 
 <ul id="markdown-toc">
-  <li><a href="#search-1">Search</a></li>
+<li><a href="#search-1">Search</a></li>
   <li><a href="#autocomplete">Autocomplete</a></li>
-</ul>
-
-<h2 id="search-1">Search</h2>
+</ul><h2 id="search-1">Search</h2>
 
 <pre class="terminal">
   GET /search
 </pre>
 
 <table>
-  <thead>
-    <tr>
-      <th>Name</th>
+<thead><tr>
+<th>Name</th>
       <th>Type</th>
       <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>q</code></td>
+    </tr></thead>
+<tbody><tr>
+<td><code>q</code></td>
       <td><code>String</code></td>
       <td><code>The keyphrase to search by</code></td>
-    </tr>
-  </tbody>
-</table>
+    </tr></tbody>
+</table><p>The main response type is a collection of 
+<a href="../category">Categories</a>.</p>
 
-<h3 id="case-invalid-the-query-was-invalid-eg-less-than-2-characters">Case <code>invalid</code> The query was invalid. Eg. less than 2 characters</h3>
+<p>Any other resources matching the specified query are generally of lesser
+importance.</p>
+
+<p>Our suggestion system may provide alternative search queries in the
+<code>alternatives</code> key of <code>meta</code>.</p>
+
+<p>Any of those alternatives having a flag <code>important</code> set to <code>true</code>, hint
+the client to perform a search with the alternative query instead. </p>
+
+<p>There may also exist matches of different resources under the key <code>strong_matches</code>.<br>
+Currently there may be up-to one of each of the following resources:</p>
+
+<ul>
+<li><a href="../category">Category</a></li>
+  <li><a href="../sku">SKU</a></li>
+  <li><a href="../manufacturer">Manufacturer</a></li>
+  <li><a href="../shop">Shop</a></li>
+</ul><h3 id="query-with-less-than-2-characters">Query with less than 2 characters</h3>
 
 <div class="example">        <p class="request">
           <span class="verb">GET</span>
           <span class="path">/search?q=a</span>
         </p>
 <a href="javascript:void(0)" class="toggler" data-target="js-response">view response</a><div class="response">
-<pre class="headers"><code>Status: 400</code></pre>
+<pre class="headers"><code>Status: 200</code></pre>
 <pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
-  <span class="s2">"message"</span><span class="o">:</span> <span class="s2">"Η αναζήτησή σου πρέπει να περιέχει τουλάχιστον 2 χαρακτήρες"</span><span class="p">,</span>
-  <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">"result_type"</span><span class="o">:</span> <span class="s2">"invalid"</span>
-  <span class="p">}</span>
+  <span class="s2">"categories"</span><span class="o">:</span> <span class="p">[</span>
+
+  <span class="p">]</span>
 <span class="p">}</span></code></pre>
 </div>
 </div>
 
-<h3 id="case-noresults-nothing-seems-to-match-the-specified-query">Case <code>no_results</code> Nothing seems to match the specified query</h3>
+<h3 id="query-that-doesnt-match-anything">Query that doesn’t match anything</h3>
 
 <div class="example">        <p class="request">
           <span class="verb">GET</span>
@@ -89,14 +100,21 @@
 <a href="javascript:void(0)" class="toggler" data-target="js-response">view response</a><div class="response">
 <pre class="headers"><code>Status: 200</code></pre>
 <pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"categories"</span><span class="o">:</span> <span class="p">[</span>
+
+  <span class="p">],</span>
   <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">"result_type"</span><span class="o">:</span> <span class="s2">"no_results"</span>
+    <span class="s2">"alternatives"</span><span class="o">:</span> <span class="p">[</span>
+
+    <span class="p">],</span>
+    <span class="s2">"strong_matches"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="p">}</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre>
 </div>
 </div>
 
-<h3 id="case-categorymatch-when-your-query-matched-a-category">Case <code>category_match</code> When your query matched a category</h3>
+<h3 id="query-with-strong-insights-for-a-specific-category">Query with strong insights for a specific category</h3>
 
 <div class="example">        <p class="request">
           <span class="verb">GET</span>
@@ -105,22 +123,49 @@
 <a href="javascript:void(0)" class="toggler" data-target="js-response">view response</a><div class="response">
 <pre class="headers"><code>Status: 200</code></pre>
 <pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
-  <span class="s2">"category"</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">"id"</span><span class="o">:</span> <span class="mi">1105</span><span class="p">,</span>
-    <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Tablets"</span><span class="p">,</span>
-    <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-    <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/1105.jpg"</span><span class="p">,</span>
-    <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">769</span>
-  <span class="p">},</span>
+  <span class="s2">"categories"</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">1105</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Tablets"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/1105.jpg"</span><span class="p">,</span>
+      <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">1612</span><span class="p">,</span>
+      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">1022</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">1608</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Θήκες Tablet"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/categories/large/1608.jpg"</span><span class="p">,</span>
+      <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">1612</span><span class="p">,</span>
+      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">1771</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
   <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">"result_type"</span><span class="o">:</span> <span class="s2">"category_match"</span>
+    <span class="s2">"alternatives"</span><span class="o">:</span> <span class="p">[</span>
+
+    <span class="p">],</span>
+    <span class="s2">"strong_matches"</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">"category"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"id"</span><span class="o">:</span> <span class="mi">1105</span><span class="p">,</span>
+        <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Tablets"</span><span class="p">,</span>
+        <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/1105.jpg"</span><span class="p">,</span>
+        <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">1612</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s2">"pagination"</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">"total_results"</span><span class="o">:</span> <span class="mi">83</span><span class="p">,</span>
+      <span class="s2">"total_pages"</span><span class="o">:</span> <span class="mi">42</span><span class="p">,</span>
+      <span class="s2">"page"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"per"</span><span class="o">:</span> <span class="mi">2</span>
+    <span class="p">}</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre>
 </div>
 </div>
 
-<h3 id="case-categoryfacade-when-your-query-matched-many-categories">Case <code>category_facade</code> When your query matched many categories</h3>
+<h3 id="query-matching-many-categories">Query matching many categories</h3>
 
 <div class="example">        <p class="request">
           <span class="verb">GET</span>
@@ -135,25 +180,27 @@
       <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Κινητά Τηλέφωνα"</span><span class="p">,</span>
       <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
       <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/40.jpg"</span><span class="p">,</span>
-      <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
       <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">86</span><span class="p">,</span>
-      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">14</span>
+      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">13</span>
     <span class="p">},</span>
     <span class="p">{</span>
       <span class="s2">"id"</span><span class="o">:</span> <span class="mi">579</span><span class="p">,</span>
       <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Θήκες Κινητών Τηλεφώνων"</span><span class="p">,</span>
       <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
       <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/579.jpg"</span><span class="p">,</span>
-      <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
       <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">86</span><span class="p">,</span>
-      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">6943</span>
+      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">7729</span>
     <span class="p">}</span>
   <span class="p">],</span>
   <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">"result_type"</span><span class="o">:</span> <span class="s2">"category_facade"</span><span class="p">,</span>
+    <span class="s2">"alternatives"</span><span class="o">:</span> <span class="p">[</span>
+
+    <span class="p">],</span>
+    <span class="s2">"strong_matches"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="p">},</span>
     <span class="s2">"pagination"</span><span class="o">:</span> <span class="p">{</span>
-      <span class="s2">"total_results"</span><span class="o">:</span> <span class="mi">116</span><span class="p">,</span>
-      <span class="s2">"total_pages"</span><span class="o">:</span> <span class="mi">58</span><span class="p">,</span>
+      <span class="s2">"total_results"</span><span class="o">:</span> <span class="mi">119</span><span class="p">,</span>
+      <span class="s2">"total_pages"</span><span class="o">:</span> <span class="mi">60</span><span class="p">,</span>
       <span class="s2">"page"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
       <span class="s2">"per"</span><span class="o">:</span> <span class="mi">2</span>
     <span class="p">}</span>
@@ -162,34 +209,11 @@
 </div>
 </div>
 
-<h3 id="case-manufacturermatch-your-query-matched-one-of-our-manufacturers-exactly">Case <code>manufacturer_match</code> Your query matched one of our manufacturers exactly</h3>
+<h3 id="query-with-strong-insights-for-a-specific-manufacturer">Query with strong insights for a specific manufacturer</h3>
 
 <div class="example">        <p class="request">
           <span class="verb">GET</span>
           <span class="path">/search?q=apple</span>
-        </p>
-<a href="javascript:void(0)" class="toggler" data-target="js-response">view response</a><div class="response">
-<pre class="headers"><code>Status: 200</code></pre>
-<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
-  <span class="s2">"manufacturer"</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">"id"</span><span class="o">:</span> <span class="mi">356</span><span class="p">,</span>
-    <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Apple"</span><span class="p">,</span>
-    <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/manufacturer_logos/000000/356/003730241e8ed691aa6b4e5f264a0e2d.jpg"</span>
-  <span class="p">},</span>
-  <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">"result_type"</span><span class="o">:</span> <span class="s2">"manufacturer_match"</span>
-  <span class="p">}</span>
-<span class="p">}</span></code></pre>
-</div>
-</div>
-
-<h3 id="case-latinmapping-your-query-has-an-exact-match-in-its-latin-form">Case <code>latin_mapping</code> Your query has an exact match in its latin form</h3>
-
-<p>Note: You will have to follow one or more 302 redirections</p>
-
-<div class="example">        <p class="request">
-          <span class="verb">GET</span>
-          <span class="path">/search?q=ιπηονε</span>
         </p>
 <a href="javascript:void(0)" class="toggler" data-target="js-response">view response</a><div class="response">
 <pre class="headers"><code>Status: 200</code></pre>
@@ -200,27 +224,277 @@
       <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Κινητά Τηλέφωνα"</span><span class="p">,</span>
       <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
       <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/40.jpg"</span><span class="p">,</span>
-      <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
       <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">86</span><span class="p">,</span>
-      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">14</span>
+      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">13</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">1105</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Tablets"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/1105.jpg"</span><span class="p">,</span>
+      <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">1612</span><span class="p">,</span>
+      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">41</span>
     <span class="p">},</span>
     <span class="p">{</span>
       <span class="s2">"id"</span><span class="o">:</span> <span class="mi">579</span><span class="p">,</span>
       <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Θήκες Κινητών Τηλεφώνων"</span><span class="p">,</span>
       <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
       <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/579.jpg"</span><span class="p">,</span>
-      <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
       <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">86</span><span class="p">,</span>
-      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">6943</span>
+      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">5981</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">25</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Laptops"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/categories/large/25.jpg"</span><span class="p">,</span>
+      <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">769</span><span class="p">,</span>
+      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">26</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">583</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Ανταλλακτικά Kινητών τηλεφώνων"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/583.jpg"</span><span class="p">,</span>
+      <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">86</span><span class="p">,</span>
+      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">3406</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">1608</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Θήκες Tablet"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/categories/large/1608.jpg"</span><span class="p">,</span>
+      <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">1612</span><span class="p">,</span>
+      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">221</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">891</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Υπολογιστές Desktop Brand"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/categories/large/891.jpg"</span><span class="p">,</span>
+      <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">23</span><span class="p">,</span>
+      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">25</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">568</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"CD, MP3 &amp; Media Players"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/categories/large/568.jpg"</span><span class="p">,</span>
+      <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">767</span><span class="p">,</span>
+      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">12</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">612</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Προστασία Οθόνης"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/categories/large/612.jpg"</span><span class="p">,</span>
+      <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">86</span><span class="p">,</span>
+      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">1387</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">584</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Handsfree Ακουστικά"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/584.jpg"</span><span class="p">,</span>
+      <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">86</span><span class="p">,</span>
+      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">32</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">582</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Μπαταρίες Κινητών Τηλεφώνων"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/582.jpg"</span><span class="p">,</span>
+      <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">86</span><span class="p">,</span>
+      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">5</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">581</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Φορτιστές Κινητών Τηλεφώνων"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/581.jpg"</span><span class="p">,</span>
+      <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">86</span><span class="p">,</span>
+      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">215</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">699</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Μετατροπείς"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/categories/large/699.jpg"</span><span class="p">,</span>
+      <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">29</span><span class="p">,</span>
+      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">38</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">893</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Media Players"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/categories/large/893.jpg"</span><span class="p">,</span>
+      <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">309</span><span class="p">,</span>
+      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">1</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">1404</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Φορτιστές για Laptops"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/categories/large/1404.jpg"</span><span class="p">,</span>
+      <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">769</span><span class="p">,</span>
+      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">147</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">585</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Καλώδια δεδομένων"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/585.jpg"</span><span class="p">,</span>
+      <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">86</span><span class="p">,</span>
+      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">267</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">68</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Πληκτρολόγια"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/categories/large/68.jpg"</span><span class="p">,</span>
+      <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">51</span><span class="p">,</span>
+      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">11</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">587</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Διάφορα Αξεσουάρ Κινητής"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/587.jpg"</span><span class="p">,</span>
+      <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">86</span><span class="p">,</span>
+      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">201</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">239</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Ενισχυτές Hi-Fi"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/239.jpg"</span><span class="p">,</span>
+      <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">767</span><span class="p">,</span>
+      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">9</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">566</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Ηχοσυστήματα"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/566.jpg"</span><span class="p">,</span>
+      <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">767</span><span class="p">,</span>
+      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">10</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Κάρτες Τηλεόρασης και Video"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/categories/large/17.jpg"</span><span class="p">,</span>
+      <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">27</span><span class="p">,</span>
+      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">3</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">1518</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Universal Θήκες Κινητών Τηλεφώνων"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/categories/large/1518.jpg"</span><span class="p">,</span>
+      <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">86</span><span class="p">,</span>
+      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">457</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">1412</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Συμβατές Μπαταρίες Κινητών Τηλεφώνων"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/categories/large/1412.jpg"</span><span class="p">,</span>
+      <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">86</span><span class="p">,</span>
+      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">7</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">1417</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Φορτιστές Αναπτήρα Αυτοκινήτου"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/categories/large/1417.jpg"</span><span class="p">,</span>
+      <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">316</span><span class="p">,</span>
+      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">69</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">125</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Access Points"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/categories/large/125.jpg"</span><span class="p">,</span>
+      <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">72</span><span class="p">,</span>
+      <span class="s2">"match_count"</span><span class="o">:</span> <span class="mi">4</span>
     <span class="p">}</span>
   <span class="p">],</span>
   <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">"result_type"</span><span class="o">:</span> <span class="s2">"category_facade"</span><span class="p">,</span>
-    <span class="s2">"latin_mapping_original"</span><span class="o">:</span> <span class="s2">"ιπηονε"</span><span class="p">,</span>
-    <span class="s2">"latin_mapping_latin"</span><span class="o">:</span> <span class="s2">"iphone"</span><span class="p">,</span>
+    <span class="s2">"alternatives"</span><span class="o">:</span> <span class="p">[</span>
+
+    <span class="p">],</span>
+    <span class="s2">"strong_matches"</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">"manufacturer"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"id"</span><span class="o">:</span> <span class="mi">356</span><span class="p">,</span>
+        <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Apple"</span><span class="p">,</span>
+        <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/manufacturer_logos/000000/356/003730241e8ed691aa6b4e5f264a0e2d.jpg"</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
     <span class="s2">"pagination"</span><span class="o">:</span> <span class="p">{</span>
-      <span class="s2">"total_results"</span><span class="o">:</span> <span class="mi">116</span><span class="p">,</span>
-      <span class="s2">"total_pages"</span><span class="o">:</span> <span class="mi">58</span><span class="p">,</span>
+      <span class="s2">"total_results"</span><span class="o">:</span> <span class="mi">190</span><span class="p">,</span>
+      <span class="s2">"total_pages"</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+      <span class="s2">"page"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"per"</span><span class="o">:</span> <span class="mi">25</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre>
+</div>
+</div>
+
+<h3 id="query-with-more-results-when-written-in-another-language">Query with more results when written in another language</h3>
+
+<div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/search?q=ιπηονε</span>
+        </p>
+<a href="javascript:void(0)" class="toggler" data-target="js-response">view response</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"categories"</span><span class="o">:</span> <span class="p">[</span>
+
+  <span class="p">],</span>
+  <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"alternatives"</span><span class="o">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="s2">"term"</span><span class="o">:</span> <span class="s2">"iphone"</span><span class="p">,</span>
+        <span class="s2">"important"</span><span class="o">:</span> <span class="kc">true</span>
+      <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="s2">"strong_matches"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre>
+</div>
+</div>
+
+<h3 id="probably-misspelled-query">Probably misspelled query</h3>
+
+<div class="example">        <p class="request">
+          <span class="verb">GET</span>
+          <span class="path">/search?q=ipone</span>
+        </p>
+<a href="javascript:void(0)" class="toggler" data-target="js-response">view response</a><div class="response">
+<pre class="headers"><code>Status: 200</code></pre>
+<pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"categories"</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">581</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Φορτιστές Κινητών Τηλεφώνων"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/581.jpg"</span><span class="p">,</span>
+      <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">86</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"alternatives"</span><span class="o">:</span> <span class="p">[</span>
+
+    <span class="p">],</span>
+    <span class="s2">"strong_matches"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="p">},</span>
+    <span class="s2">"pagination"</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">"total_results"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"total_pages"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
       <span class="s2">"page"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
       <span class="s2">"per"</span><span class="o">:</span> <span class="mi">2</span>
     <span class="p">}</span>
@@ -229,48 +503,132 @@
 </div>
 </div>
 
-<h3 id="case-skumatch-your-query-matches-exactly-one-of-our-skus">Case <code>sku_match</code> Your query matches exactly one of our skus</h3>
+<h3 id="query-with-strong-insights-for-a-specific-sku">Query with strong insights for a specific SKU</h3>
 
 <div class="example">        <p class="request">
           <span class="verb">GET</span>
-          <span class="path">/search?q=Dimage%202300</span>
+          <span class="path">/search?q=nikon%201%20j2</span>
         </p>
 <a href="javascript:void(0)" class="toggler" data-target="js-response">view response</a><div class="response">
 <pre class="headers"><code>Status: 200</code></pre>
 <pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
-  <span class="s2">"sku"</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">"id"</span><span class="o">:</span> <span class="mi">304460</span><span class="p">,</span>
-    <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
-    <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
-    <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Dimage 2300"</span><span class="p">,</span>
-    <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"Konica Minolta Dimage 2300"</span><span class="p">,</span>
-    <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">434</span><span class="p">,</span>
-    <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="s2">"740|Photoqueen|photoqueen"</span><span class="p">,</span>
-    <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-    <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">49.0</span><span class="p">,</span>
-    <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">49.0</span><span class="p">,</span>
-    <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">0.0</span><span class="p">,</span>
-    <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-    <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"Compact, Αισθητήρας: CCD, Οθόνη: 1.8 inches"</span><span class="p">,</span>
-    <span class="s2">"main_picture"</span><span class="o">:</span> <span class="p">{</span>
-      <span class="s2">"small_url"</span><span class="o">:</span> <span class="s2">"http://b.scdn.gr/images/sku_main_images/000304/304460/small_0562a9b791f404abe339b0cf577bd302.jpg.jpg"</span><span class="p">,</span>
-      <span class="s2">"original_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/000304/304460/medium_0562a9b791f404abe339b0cf577bd302.jpg.jpg"</span><span class="p">,</span>
-      <span class="s2">"tiny_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/000304/304460/tiny_0562a9b791f404abe339b0cf577bd302.jpg.jpg"</span><span class="p">,</span>
-      <span class="s2">"medium_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/sku_main_images/000304/304460/medium_0562a9b791f404abe339b0cf577bd302.jpg.jpg"</span><span class="p">,</span>
-      <span class="s2">"datamart_url"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/000304/304460/0562a9b791f404abe339b0cf577bd302.jpg.jpg"</span>
-    <span class="p">},</span>
-    <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">152</span><span class="p">,</span>
-    <span class="s2">"future"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-    <span class="s2">"reviews_count"</span><span class="o">:</span> <span class="mi">0</span>
-  <span class="p">},</span>
+  <span class="s2">"categories"</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">434</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Ψηφιακές Φωτογραφικές Μηχανές"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://d.scdn.gr/images/categories/large/434.jpg"</span><span class="p">,</span>
+      <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">231</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
   <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">"result_type"</span><span class="o">:</span> <span class="s2">"sku_match"</span>
+    <span class="s2">"alternatives"</span><span class="o">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="s2">"term"</span><span class="o">:</span> <span class="s2">"nikon 1"</span><span class="p">,</span>
+        <span class="s2">"count"</span><span class="o">:</span> <span class="mi">386</span><span class="p">,</span>
+        <span class="s2">"drop"</span><span class="o">:</span> <span class="p">[</span>
+          <span class="p">{</span>
+            <span class="s2">"token"</span><span class="o">:</span> <span class="s2">"nikon"</span><span class="p">,</span>
+            <span class="s2">"dropped"</span><span class="o">:</span> <span class="kc">false</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+            <span class="s2">"token"</span><span class="o">:</span> <span class="s2">"1"</span><span class="p">,</span>
+            <span class="s2">"dropped"</span><span class="o">:</span> <span class="kc">false</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+            <span class="s2">"token"</span><span class="o">:</span> <span class="s2">"j2"</span><span class="p">,</span>
+            <span class="s2">"dropped"</span><span class="o">:</span> <span class="kc">true</span>
+          <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">"important"</span><span class="o">:</span> <span class="kc">false</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="s2">"term"</span><span class="o">:</span> <span class="s2">"nikon j2"</span><span class="p">,</span>
+        <span class="s2">"count"</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="s2">"drop"</span><span class="o">:</span> <span class="p">[</span>
+          <span class="p">{</span>
+            <span class="s2">"token"</span><span class="o">:</span> <span class="s2">"nikon"</span><span class="p">,</span>
+            <span class="s2">"dropped"</span><span class="o">:</span> <span class="kc">false</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+            <span class="s2">"token"</span><span class="o">:</span> <span class="s2">"1"</span><span class="p">,</span>
+            <span class="s2">"dropped"</span><span class="o">:</span> <span class="kc">true</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+            <span class="s2">"token"</span><span class="o">:</span> <span class="s2">"j2"</span><span class="p">,</span>
+            <span class="s2">"dropped"</span><span class="o">:</span> <span class="kc">false</span>
+          <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">"important"</span><span class="o">:</span> <span class="kc">false</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="s2">"term"</span><span class="o">:</span> <span class="s2">"1 j2"</span><span class="p">,</span>
+        <span class="s2">"count"</span><span class="o">:</span> <span class="mi">203</span><span class="p">,</span>
+        <span class="s2">"drop"</span><span class="o">:</span> <span class="p">[</span>
+          <span class="p">{</span>
+            <span class="s2">"token"</span><span class="o">:</span> <span class="s2">"nikon"</span><span class="p">,</span>
+            <span class="s2">"dropped"</span><span class="o">:</span> <span class="kc">true</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+            <span class="s2">"token"</span><span class="o">:</span> <span class="s2">"1"</span><span class="p">,</span>
+            <span class="s2">"dropped"</span><span class="o">:</span> <span class="kc">false</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+            <span class="s2">"token"</span><span class="o">:</span> <span class="s2">"j2"</span><span class="p">,</span>
+            <span class="s2">"dropped"</span><span class="o">:</span> <span class="kc">false</span>
+          <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">"important"</span><span class="o">:</span> <span class="kc">false</span>
+      <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="s2">"strong_matches"</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">"sku"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"id"</span><span class="o">:</span> <span class="mi">2287737</span><span class="p">,</span>
+        <span class="s2">"ean"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+        <span class="s2">"pn"</span><span class="o">:</span> <span class="s2">"VVA166K001 VVA165K001 VVA166K005 VVA165K005 VVA164K005 VVA161K005 VVA161K003 VVA163K001 VVA162K001 VVA161K001 VVA164K001 VVA163K005 VVA162K005"</span><span class="p">,</span>
+        <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"1 J2 Kit"</span><span class="p">,</span>
+        <span class="s2">"display_name"</span><span class="o">:</span> <span class="s2">"Nikon 1 J2 Kit"</span><span class="p">,</span>
+        <span class="s2">"category_id"</span><span class="o">:</span> <span class="mi">434</span><span class="p">,</span>
+        <span class="s2">"first_product_shop_info"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">"click_url"</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">"price_max"</span><span class="o">:</span> <span class="mf">580.25</span><span class="p">,</span>
+        <span class="s2">"price_min"</span><span class="o">:</span> <span class="mf">219.0</span><span class="p">,</span>
+        <span class="s2">"reviewscore"</span><span class="o">:</span> <span class="mf">5.0</span><span class="p">,</span>
+        <span class="s2">"shop_count"</span><span class="o">:</span> <span class="mi">9</span><span class="p">,</span>
+        <span class="s2">"plain_spec_summary"</span><span class="o">:</span> <span class="s2">"DSLR Kit, 10.1 MP, Αισθητήρας: CMOS, Οθόνη: 3.0 inches, Video: MOV, Ανάλυση Video: 1920 x 1080 pixels"</span><span class="p">,</span>
+        <span class="s2">"manufacturer_id"</span><span class="o">:</span> <span class="mi">156</span><span class="p">,</span>
+        <span class="s2">"future"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">"reviews_count"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">"virtual"</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">"images"</span><span class="o">:</span> <span class="p">{</span>
+          <span class="s2">"main"</span><span class="o">:</span> <span class="s2">"http://c.scdn.gr/images/sku_main_images/002287/2287737/medium_27572_Nikon_1_J2_left.png"</span><span class="p">,</span>
+          <span class="s2">"alternatives"</span><span class="o">:</span> <span class="p">[</span>
+            <span class="s2">"http://d.scdn.gr/images/sku_images/002916/2916078/27574_Nikon_1_J2_left.png"</span><span class="p">,</span>
+            <span class="s2">"http://a.scdn.gr/images/sku_images/002916/2916079/27575_Nikon_1_J2_left.png"</span><span class="p">,</span>
+            <span class="s2">"http://d.scdn.gr/images/sku_images/002916/2916080/27576_Nikon_1_J2_left.png"</span><span class="p">,</span>
+            <span class="s2">"http://a.scdn.gr/images/sku_images/002916/2916081/27577_Nikon_1_J2_left.png"</span><span class="p">,</span>
+            <span class="s2">"http://d.scdn.gr/images/sku_images/002916/2916090/27573_Nikon_1_J2_left.png"</span><span class="p">,</span>
+            <span class="s2">"http://a.scdn.gr/images/sku_images/002916/2916092/Nikon_1_J2_BK_front.jpg"</span><span class="p">,</span>
+            <span class="s2">"http://b.scdn.gr/images/sku_images/002916/2916094/27572_Nikon_1_J2_back.png"</span><span class="p">,</span>
+            <span class="s2">"http://d.scdn.gr/images/sku_images/002916/2916095/nikon_10-30mm-front-103286.jpg"</span><span class="p">,</span>
+            <span class="s2">"http://d.scdn.gr/images/sku_images/002916/2916096/1532262.jpg"</span><span class="p">,</span>
+            <span class="s2">"http://a.scdn.gr/images/sku_images/002916/2916097/5627_nikon_1_30-110mm_black.jpg"</span>
+          <span class="p">]</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s2">"pagination"</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">"total_results"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"total_pages"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"page"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"per"</span><span class="o">:</span> <span class="mi">25</span>
+    <span class="p">}</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre>
 </div>
 </div>
 
-<h3 id="case-categoryskusmatch-your-query-matches-skus-from-a-category">Case <code>category_skus_match</code> Your query matches skus from a category</h3>
+<h3 id="query-that-matches-skus-from-a-single-category">Query that matches SKUS from a single category</h3>
 
 <div class="example">        <p class="request">
           <span class="verb">GET</span>
@@ -279,22 +637,33 @@
 <a href="javascript:void(0)" class="toggler" data-target="js-response">view response</a><div class="response">
 <pre class="headers"><code>Status: 200</code></pre>
 <pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
-  <span class="s2">"category"</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">"id"</span><span class="o">:</span> <span class="mi">146</span><span class="p">,</span>
-    <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Μικροηλεκτρονικά"</span><span class="p">,</span>
-    <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-    <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/146.jpg"</span><span class="p">,</span>
-    <span class="s2">"leaf"</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">144</span>
-  <span class="p">},</span>
+  <span class="s2">"categories"</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">146</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Μικροηλεκτρονικά"</span><span class="p">,</span>
+      <span class="s2">"children_count"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">"image_url"</span><span class="o">:</span> <span class="s2">"http://a.scdn.gr/images/categories/large/146.jpg"</span><span class="p">,</span>
+      <span class="s2">"parent_id"</span><span class="o">:</span> <span class="mi">144</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
   <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">"result_type"</span><span class="o">:</span> <span class="s2">"category_skus_match"</span>
+    <span class="s2">"alternatives"</span><span class="o">:</span> <span class="p">[</span>
+
+    <span class="p">],</span>
+    <span class="s2">"strong_matches"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="p">},</span>
+    <span class="s2">"pagination"</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">"total_results"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"total_pages"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"page"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"per"</span><span class="o">:</span> <span class="mi">2</span>
+    <span class="p">}</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre>
 </div>
 </div>
 
-<h3 id="case-drop-your-query-has-no-results-but-the-proposals-in-the-response-have">Case <code>drop</code> Your query has no results but the proposals in the response have</h3>
+<h3 id="query-parts-of-which-have-results">Query parts of which have results</h3>
 
 <div class="example">        <p class="request">
           <span class="verb">GET</span>
@@ -303,12 +672,44 @@
 <a href="javascript:void(0)" class="toggler" data-target="js-response">view response</a><div class="response">
 <pre class="headers"><code>Status: 200</code></pre>
 <pre class="highlight body"><code class="language-javascript"><span class="p">{</span>
-  <span class="s2">"proposals"</span><span class="o">:</span> <span class="p">[</span>
-    <span class="s2">"wrong"</span><span class="p">,</span>
-    <span class="s2">"iphone"</span>
+  <span class="s2">"categories"</span><span class="o">:</span> <span class="p">[</span>
+
   <span class="p">],</span>
   <span class="s2">"meta"</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">"result_type"</span><span class="o">:</span> <span class="s2">"drop"</span>
+    <span class="s2">"alternatives"</span><span class="o">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="s2">"term"</span><span class="o">:</span> <span class="s2">"wrong"</span><span class="p">,</span>
+        <span class="s2">"count"</span><span class="o">:</span> <span class="mi">22</span><span class="p">,</span>
+        <span class="s2">"drop"</span><span class="o">:</span> <span class="p">[</span>
+          <span class="p">{</span>
+            <span class="s2">"token"</span><span class="o">:</span> <span class="s2">"wrong"</span><span class="p">,</span>
+            <span class="s2">"dropped"</span><span class="o">:</span> <span class="kc">false</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+            <span class="s2">"token"</span><span class="o">:</span> <span class="s2">"iphone"</span><span class="p">,</span>
+            <span class="s2">"dropped"</span><span class="o">:</span> <span class="kc">true</span>
+          <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">"important"</span><span class="o">:</span> <span class="kc">false</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="s2">"term"</span><span class="o">:</span> <span class="s2">"iphone"</span><span class="p">,</span>
+        <span class="s2">"count"</span><span class="o">:</span> <span class="mi">16734</span><span class="p">,</span>
+        <span class="s2">"drop"</span><span class="o">:</span> <span class="p">[</span>
+          <span class="p">{</span>
+            <span class="s2">"token"</span><span class="o">:</span> <span class="s2">"wrong"</span><span class="p">,</span>
+            <span class="s2">"dropped"</span><span class="o">:</span> <span class="kc">true</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+            <span class="s2">"token"</span><span class="o">:</span> <span class="s2">"iphone"</span><span class="p">,</span>
+            <span class="s2">"dropped"</span><span class="o">:</span> <span class="kc">false</span>
+          <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">"important"</span><span class="o">:</span> <span class="kc">false</span>
+      <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="s2">"strong_matches"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="p">}</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre>
 </div>
@@ -321,23 +722,17 @@
 </pre>
 
 <table>
-  <thead>
-    <tr>
-      <th>Name</th>
+<thead><tr>
+<th>Name</th>
       <th>Type</th>
       <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>q</code></td>
+    </tr></thead>
+<tbody><tr>
+<td><code>q</code></td>
       <td><code>String</code></td>
       <td><code>The term to be autocompleted</code></td>
-    </tr>
-  </tbody>
-</table>
-
-<div class="example">        <p class="request">
+    </tr></tbody>
+</table><div class="example">        <p class="request">
           <span class="verb">GET</span>
           <span class="path">/autocomplete</span>
         </p>
@@ -386,7 +781,6 @@
 <span class="p">}</span></code></pre>
 </div>
 </div>
-
         </div>
       </div>
       <div id="js-sidebar" class="sidebar-shell">
