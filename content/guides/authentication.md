@@ -9,6 +9,11 @@ We use [OAuth2.0](http://oauth.net/2/) for authorization.
 Make sure you have obtained a valid set of `client_id`, `client_secret`.  
 To get one <a href="mailto:api@skroutz.gr">contact us</a>.
 
+## Headers
+
+In the following POST request examples it is silently assumed that
+`content-type` header is set to `application/x-www-form-urlencoded`.
+
 ## Application Token
 With an application token you can only access resources not associated
 to a user. Have a look at related [permissions](<%= relative_path_to('/authentication/permissions') %>).
@@ -90,6 +95,8 @@ If everything went OK, the response has the following form:
     "expires_in": 3599
 }
 </pre>
+
+where "expires_in" field is counted in seconds
 
 ## Using the oauth_token
 There are 2 ways to specify your oauth_token for each request you make.
