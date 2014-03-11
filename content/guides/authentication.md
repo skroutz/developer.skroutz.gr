@@ -91,6 +91,8 @@ If everything went OK, the response has the following form:
 }
 </pre>
 
+where "expires_in" field is counted in seconds
+
 ## Using the oauth_token
 There are 2 ways to specify your oauth_token for each request you make.
 You may pick the one that suits you best.
