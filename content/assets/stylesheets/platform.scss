@@ -57,6 +57,14 @@ a {
   max-width: 1180px;
   width: 98%;
   margin: 0 auto;
+
+  a.logo {
+    float: left;
+
+    &:before {
+      top: 1px;
+    }
+  }
 }
 
 .cf {
