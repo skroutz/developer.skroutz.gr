@@ -42,6 +42,10 @@ a {
   max-width: 1180px;
   width: 98%;
   margin: 0 auto; }
+  .content a.logo {
+    float: left; }
+    .content a.logo:before {
+      top: 1px; }
 
 .cf:before, .cf:after {
   content: "";
