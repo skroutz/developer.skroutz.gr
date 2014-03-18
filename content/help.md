@@ -19,7 +19,16 @@ thoroughly, if you can't find what you want it may be due to missing documentati
   </li>
   <li>
     <p class="question">I found a typo in the documentation what do i do?</p>
-    <p class="answer">This website is a <a href="https://github.com/skroutz/developer.skroutz.gr">public Github repository</a>. Fix it and submit a pull request.</p>
+    <p class="answer">
+      This website is a <a href="https://github.com/skroutz/developer.skroutz.gr">public Github repository</a>. 
+      Fix it and submit a pull request.
+    </p>
+  </li>
+  <li>
+    <p class="question">Where can i find documentation on version 2?</p>
+    <p class="answer">
+      <a href="http://docs.skroutz.gr/apidoc">http://docs.skroutz.gr/apidoc</a>. 
+    </p>
   </li>
 </ol>
 
