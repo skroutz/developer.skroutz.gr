@@ -134,7 +134,7 @@ Name            | Type     | Required | Description
 ----------------| ---------|----------| -----------
 `client_id`     | String | yes      | The client_id supplied by skroutz for the application
 `client_secret` | String | yes      | The client_secret supplied by skroutz for the application
-`refresh_token` | String | yes      | The value should be "code"
+`refresh_token` | String | yes      | the refresh_token obtained in an earlier step
 `grant_type`    | String | yes      | refresh_token
 
 ### Application Token
