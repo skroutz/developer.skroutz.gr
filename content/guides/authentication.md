@@ -18,7 +18,7 @@ In the following POST request examples it is silently assumed that
 With an application token you can only access resources not associated
 to a user. Have a look at related [permissions](<%= relative_path_to('/authentication/permissions') %>).
 
-<a href="http://tools.ietf.org/html/rfc6749#section-4.4" class="emph-link" target="_blank">More info about client-credentials</a>
+<a href='http://tools.ietf.org/html/rfc6749#section-4.4' class="emph-link external" target="_blank">More info about client-credentials</a>
 
 <pre class="terminal">
 POST https://www.skroutz.gr/oauth2/token
@@ -38,7 +38,7 @@ Name            | Type     | Required | Description
 With a "user token" you can access resources associated to a user. Given that the user
 permits you to.
 
-<a href="http://tools.ietf.org/html/rfc6749#section-4.1" class="emph-link" target="_blank">More info about authorization code grant</a>
+<a href="http://tools.ietf.org/html/rfc6749#section-4.1" class="emph-link external" target="_blank">More info about authorization code grant</a>
 
 <pre class="terminal">
 GET https://www.skroutz.gr/oauth2/authorizations/new
