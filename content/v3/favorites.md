@@ -115,15 +115,16 @@ A favorite update might be called to do one of the following:
   - Add the favorite to a new custom list
 
 
-When a favorite is have_it: true and it does not belong to a favorite_list.
-If you put a favorite_list_id and have_it: true, then only have_it will be
+When a favorite is `have_it: true`, it does not belong to a favorite_list.
+
+If you put a favorite_list_id and `have_it: true`, then only have_it will be
 respected (favorite_list_id will be ignored).
 
 You may choose to create a new custom list when creating or updating a favorite,
-by specifing the parameter new_list_name. A new custom list will be created
-(if one does not exist) with the given name and the favorite will be assigned
-to it. have_it attribute will be set to null. In case of an error, status 400
-will be returned with errors in response body.
+by specifing the parameter `new_list_name`. A new custom list will be created
+(if it does not exist) with the given name and the favorite will be assigned
+to it, `have_it` attribute will be set to `null`.
+In case of an error, status 400 will be returned with errors in response body.
 
 <pre class="terminal">
   PUT /favorites/:id?have_it=true
