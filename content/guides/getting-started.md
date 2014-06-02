@@ -36,7 +36,7 @@ You may add the oauth_token parameter obtained above as access_token.
 Example Request
 
 <pre class="terminal">
-GET http://skroutz.gr/api/categories/40?oauth_token=your_token
+GET https:/api.skroutz.gr/categories/40?oauth_token=your_token
 </pre>
 
 ### Via Authorization HTTP header
