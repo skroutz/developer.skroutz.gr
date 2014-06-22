@@ -10,7 +10,9 @@ title: SKU | Skroutz API
 ## About
 
 A SKU (Stock Keeping Unit) is an aggregation of products.  
-[Linked resources](<%= relative_path_to('/v3') %>#linked-resources): [product](<%= relative_path_to('/v3/product') %>)
+Linked resources:
+  [product](<%= relative_path_to('/v3/product') %>),
+  [manufacturer](<%= relative_path_to('/v3/manufacturer') %>)
 
 ## List SKUs of specific category
 
