@@ -20,7 +20,6 @@ requests:
   -
     key: children_api_category
     request: 'GET {{base_url}}/categories/73/children'
-
   -
     key: category_manufacturers
     request:
@@ -78,7 +77,7 @@ requests:
   -
     key: autocomplete
     request:
-      path: '{{base_url}}/autocomplete?keyphrase=iph'
+      path: '{{base_url}}/autocomplete?q=iph'
   -
     key: search_invalid
     request:
