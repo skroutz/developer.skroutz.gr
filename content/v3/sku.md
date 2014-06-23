@@ -146,5 +146,14 @@ groups. No pagination is used in this endpoint.
 
 <%= render_recording :sku_specifications %>
 
+## Retrieve a SKU's favorite
 
+Note: Requires user token with the 'favorites' permission.
+If the SKU has been 'favorited' by the currently associated user, you may fetch it
+from the following endpoint:
 
+<pre class="terminal">
+  GET /skus/:id/favorite
+</pre>
+
+<%= render_recording :sku_favorite %>
