@@ -8,20 +8,57 @@
     per: 2
 :status: 200
 :headers:
-  link: <http://localhost:3000/api/categories/25/manufacturers?order_by=popularity&order_dir=desc&page=9&per=2>;
-    rel="last", <http://localhost:3000/api/categories/25/manufacturers?order_by=popularity&order_dir=desc&page=2&per=2>;
-    rel="next"
-  content-type: application/json; charset=utf-8
-  x-meta-request-version: 0.2.1
-  x-ua-compatible: IE=Edge,chrome=1
-  etag: '"4b774a2ca933efc5a28ad464af0cae64"'
-  cache-control: max-age=0, private, must-revalidate
-  x-request-id: c8a4a760e4fef34a78a7023a8a61fff3
-  x-runtime: '1.187608'
-  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
-  date: Fri, 14 Feb 2014 10:25:19 GMT
-  content-length: '183'
-  connection: close
-  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWIxNDI1OGJjNjk5NzBiNjNjNzQwZGZkZDRjOGJlYTQyBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--776b8327635583ceef6ae981c599783de89f5c17;
-    path=/; expires=Mon, 14-Apr-2014 09:25:19 GMT; HttpOnly
-:body: '{"manufacturers":[{"id":202,"name":"Toshiba","image_url":null},{"id":1139,"name":"Dell","image_url":null}],"meta":{"pagination":{"total_results":17,"total_pages":9,"page":1,"per":2}}}'
+  server: !binary |-
+    bmdpbng=
+  content-type: !binary |-
+    YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
+  !binary "dmFyeQ==": !binary |-
+    QWNjZXB0LUVuY29kaW5n
+  status: !binary |-
+    MjAwIE9L
+  !binary "bGluaw==": !binary |-
+    PGh0dHA6Ly9hcGkuc2tyb3V0ei5nci9hcGkvY2F0ZWdvcmllcy8yNS9tYW51
+    ZmFjdHVyZXJzP29yZGVyX2J5PXBvcHVsYXJpdHkmb3JkZXJfZGlyPWRlc2Mm
+    cGFnZT03JnBlcj0yPjsgcmVsPSJsYXN0IiwgPGh0dHA6Ly9hcGkuc2tyb3V0
+    ei5nci9hcGkvY2F0ZWdvcmllcy8yNS9tYW51ZmFjdHVyZXJzP29yZGVyX2J5
+    PXBvcHVsYXJpdHkmb3JkZXJfZGlyPWRlc2MmcGFnZT0yJnBlcj0yPjsgcmVs
+    PSJuZXh0Ig==
+  x-ua-compatible: !binary |-
+    SUU9RWRnZSxjaHJvbWU9MQ==
+  cache-control: !binary |-
+    bWF4LWFnZT0wLCBwcml2YXRlLCBtdXN0LXJldmFsaWRhdGU=
+  x-request-id: !binary |-
+    MzI1NTczMzkyNg==
+  x-runtime: !binary |-
+    MC4wNTkzMzQ=
+  x-dns-prefetch-control: !binary |-
+    b2Zm
+  x-app: !binary |-
+    YmVuank=
+  content-length: !binary |-
+    MjQw
+  accept-ranges: !binary |-
+    Ynl0ZXM=
+  date: !binary |-
+    TW9uLCAyMyBKdW4gMjAxNCAxMjo0NzozMyBHTVQ=
+  x-varnish: !binary |-
+    MzI1NTczMzkyNg==
+  age: !binary |-
+    MA==
+  via: !binary |-
+    MS4xIHZhcm5pc2g=
+  connection: !binary |-
+    Y2xvc2U=
+  x-origin: !binary |-
+    dmFybmlzaDE=
+  x-cache: !binary |-
+    TUlTUw==
+:body: !binary |-
+  eyJtYW51ZmFjdHVyZXJzIjpbeyJpZCI6MTEzOSwibmFtZSI6IkRlbGwiLCJp
+  bWFnZV91cmwiOiJodHRwOi8vYi5zY2RuLmdyL2ltYWdlcy9tYW51ZmFjdHVy
+  ZXJfbG9nb3MvMDAwMDAxLzExMzkvNTg1NGNjNWRjYjY5NDE0OGE1NTZkMWIz
+  YzMxNzg4NzYuanBnIn0seyJpZCI6Mjg4LCJuYW1lIjoiTGVub3ZvIiwiaW1h
+  Z2VfdXJsIjoiaHR0cDovL2Euc2Nkbi5nci9pbWFnZXMvbWFudWZhY3R1cmVy
+  X2xvZ29zLzAwMDAwMC8yODgvMTUyZmM2ZGI1MWVlOTdjMzcwZDkzMDcyOWRh
+  ZWE1OTMuanBnIn1dLCJtZXRhIjp7InBhZ2luYXRpb24iOnsidG90YWxfcmVz
+  dWx0cyI6MTQsInRvdGFsX3BhZ2VzIjo3LCJwYWdlIjoxLCJwZXIiOjJ9fX0=

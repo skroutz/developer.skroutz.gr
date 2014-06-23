@@ -4,23 +4,49 @@
   :path: /categories/root
 :status: 200
 :headers:
-  server: nginx
-  content-type: application/json; charset=utf-8
-  vary: Accept-Encoding
-  status: 200 OK
-  x-ua-compatible: IE=Edge,chrome=1
-  cache-control: max-age=0, private, must-revalidate
-  x-request-id: '1444416101'
-  x-runtime: '0.083046'
-  x-dns-prefetch-control: 'off'
-  x-app: frankie
-  content-length: '131'
-  accept-ranges: bytes
-  date: Fri, 28 Feb 2014 10:21:09 GMT
-  x-varnish: '1444416101'
-  age: '0'
-  via: 1.1 varnish
-  connection: close
-  x-origin: varnish2
-  x-cache: MISS
-:body: '{"category":{"id":76,"name":"Skroutz","children_count":6,"image_url":"http://c.scdn.gr/images/categories/large/76.jpg","parent_id":0}}'
+  server: !binary |-
+    bmdpbng=
+  content-type: !binary |-
+    YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
+  !binary "dmFyeQ==": !binary |-
+    QWNjZXB0LUVuY29kaW5n
+  status: !binary |-
+    MjAwIE9L
+  x-ua-compatible: !binary |-
+    SUU9RWRnZSxjaHJvbWU9MQ==
+  cache-control: !binary |-
+    bWF4LWFnZT0wLCBwcml2YXRlLCBtdXN0LXJldmFsaWRhdGU=
+  x-request-id: !binary |-
+    MzI1NTczMzg4Ng==
+  x-runtime: !binary |-
+    MC4wMjQ0MzI=
+  x-dns-prefetch-control: !binary |-
+    b2Zm
+  x-app: !binary |-
+    YmVuank=
+  content-length: !binary |-
+    MjAx
+  accept-ranges: !binary |-
+    Ynl0ZXM=
+  date: !binary |-
+    TW9uLCAyMyBKdW4gMjAxNCAxMjo0NzozMyBHTVQ=
+  x-varnish: !binary |-
+    MzI1NTczMzg4Ng==
+  age: !binary |-
+    MA==
+  via: !binary |-
+    MS4xIHZhcm5pc2g=
+  connection: !binary |-
+    Y2xvc2U=
+  x-origin: !binary |-
+    dmFybmlzaDE=
+  x-cache: !binary |-
+    TUlTUw==
+:body: !binary |-
+  eyJjYXRlZ29yeSI6eyJpZCI6NzYsIm5hbWUiOiJTa3JvdXR6IiwiY2hpbGRy
+  ZW5fY291bnQiOjYsImltYWdlX3VybCI6Imh0dHA6Ly9jLnNjZG4uZ3IvaW1h
+  Z2VzL2NhdGVnb3JpZXMvbGFyZ2UvNzYuanBnIiwicGFyZW50X2lkIjowLCJm
+  YXNoaW9uIjpmYWxzZSwic2hvd19zcGVjaWZpY2F0aW9ucyI6ZmFsc2UsIm1h
+  bnVmYWN0dXJlcl90aXRsZSI6Ilx1MDM5YVx1MDNiMVx1MDNjNFx1MDNiMVx1
+  MDNjM1x1MDNiYVx1MDNiNVx1MDNjNVx1MDNiMVx1MDNjM1x1MDNjNFx1MDNh
+  ZFx1MDNjMiJ9fQ==
