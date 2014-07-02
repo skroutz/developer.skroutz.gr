@@ -19,7 +19,7 @@ gem 'addressable'
 
 gem 'response_mate'
 gem 'response_mate-nanoc'
-gem 'sass'
+gem 'sass', '~> 3.3'
 
 group :development do
   gem 'adsf'
