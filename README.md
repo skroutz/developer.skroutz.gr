@@ -44,7 +44,7 @@ API docs should look like:
 
     <%= render_recording :sample_key %>
 
-### JSON Responses
+### API Responses
 
 We use [response_mate](https://github.com/Zorbash/response_mate) gem
 to record API responses.
@@ -65,8 +65,6 @@ help with each command.
   We use a manifest that describes requests we need to have recorded.
   This file is not checked in git so you have to ask for it, shoot a
 mail at [api@skroutz.gr](api@skroutz.gr) to get it.
-
-  Most of the times you'll have to either tweak an existing key
 
 ## Deploy
 
