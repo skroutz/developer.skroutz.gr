@@ -1,7 +1,6 @@
 source "http://rubygems.org"
 source "https://rubygems.skroutz.gr"
 
-gem 'builder'
 gem 'coderay'
 gem 'kramdown', '~> 0.13.2'
 gem 'mime-types', '~> 1.16'
