@@ -115,7 +115,7 @@ DEPENDENCIES
   guard-nanoc
   kramdown (~> 0.13.2)
   mime-types (~> 1.16)
-  nanoc
+  nanoc (~> 3.7)
   nokogiri (~> 1.4.4)
   pry
   pry-doc
