@@ -52,7 +52,7 @@ GEM
     multi_json (1.8.4)
     multipart-post (1.2.0)
     mustache (0.99.5)
-    nanoc (3.6.7)
+    nanoc (3.7.1)
       cri (~> 2.3)
     nokogiri (1.4.7)
     posix-spawn (0.3.8)
