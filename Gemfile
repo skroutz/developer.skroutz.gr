@@ -10,7 +10,7 @@ gem 'pygments.rb'
 gem 'rake', '~> 0.9.2'
 gem 'faraday'
 gem 'faraday_middleware'
-gem 'guard'
+gem 'guard', '~> 2.6'
 gem 'guard-nanoc'
 gem 'colored'
 
