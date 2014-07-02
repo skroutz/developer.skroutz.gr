@@ -15,7 +15,6 @@ gem 'thin'
 gem 'guard'
 gem 'guard-nanoc'
 gem 'colored'
-gem 'addressable'
 
 gem 'response_mate'
 gem 'response_mate-nanoc'
