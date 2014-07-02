@@ -13,14 +13,6 @@
 compile '/static/*' do
 end
 
-compile '/CNAME/' do
-end
-
-# To be used if hosted on github-pages
-route '/CNAME/' do
-  '/CNAME'
-end
-
 # This rule is for the index page, the introduction on the platform
 compile '/' do
   filter :erb
@@ -32,10 +24,6 @@ end
 
 route '/terms' do
   '/terms/index.html'
-end
-
-route '/v3/*' do
-  item.identifier + 'index.html'
 end
 
 route '/v3/*' do
