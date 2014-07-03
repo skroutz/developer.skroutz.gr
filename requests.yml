@@ -1,5 +1,5 @@
-base_url: '{{domain}}/api'
-default_headers:
+#base_url: '{{domain}}/api'
+default_headers: &default_headers
   accept: 'application/vnd.skroutz+json; version=3'
   authorization: "Bearer {{oauth_token}}"
 
@@ -8,22 +8,36 @@ name: apiv3
 requests:
   -
     key: categories_index
-    request: 'GET {{base_url}}/categories?page=1&per=5'
+    request:
+      url: '{{base_url}}/categories?page=1&per=5'
+      headers:
+        <<: *default_headers
     meta:
       description: 'Lists all categories'
   -
     key: categories_root
-    request: 'GET {{base_url}}/categories/root'
+    request:
+      url: '{{base_url}}/categories/root'
+      headers:
+        <<: *default_headers
   -
     key: categories_show
-    request: 'GET {{base_url}}/categories/1442'
+    request:
+      url: '{{base_url}}/categories/1442'
+      headers:
+        <<: *default_headers
   -
     key: children_api_category
-    request: 'GET {{base_url}}/categories/73/children'
+    request:
+      url: '{{base_url}}/categories/73/children'
+      headers:
+        <<: *default_headers
   -
     key: category_manufacturers
     request:
-      path: '{{base_url}}/categories/25/manufacturers'
+      url: '{{base_url}}/categories/25/manufacturers'
+      headers:
+        <<: *default_headers
       params:
         order_by: popularity
         order_dir: desc
@@ -31,7 +45,9 @@ requests:
   -
     key: category_skus
     request:
-      path: '{{base_url}}/categories/40/skus'
+      url: '{{base_url}}/categories/40/skus'
+      headers:
+        <<: *default_headers
       params:
         page: 1
         per: 3
@@ -39,163 +55,249 @@ requests:
       description: "Lists only skus belonging to category specified in path"
   -
     key: category_parent
-    request: 'GET {{base_url}}/categories/1442/parent'
+    request:
+      url: '{{base_url}}/categories/1442/parent'
+      headers:
+        <<: *default_headers
   -
     key: shops_show
-    request: 'GET {{base_url}}/shops/11'
+    request:
+      url: '{{base_url}}/shops/11'
+      headers:
+        <<: *default_headers
   -
     key: shop_locations_index
     request:
-      path: '{{base_url}}/shops/11/locations'
+      url: '{{base_url}}/shops/11/locations'
+      headers:
+        <<: *default_headers
       params:
         per:  2
         embed: address
   -
     key: shop_locations_show
-    request: 'GET {{base_url}}/shops/11/locations/2'
+    request:
+      url: '{{base_url}}/shops/11/locations/2'
+      headers:
+        <<: *default_headers
   -
     key: manufacturers_show
-    request: 'GET {{base_url}}/manufacturers/12907'
+    request:
+      url: '{{base_url}}/manufacturers/12907'
+      headers:
+        <<: *default_headers
   -
     key: manufacturers_index
     request:
-      path: '{{base_url}}/manufacturers'
+      url: '{{base_url}}/manufacturers'
+      headers:
+        <<: *default_headers
       params:
         per:  2
   -
     key: manufacturer_categories
     request:
-      path: '{{base_url}}/manufacturers/356/categories'
+      url: '{{base_url}}/manufacturers/356/categories'
+      headers:
+        <<: *default_headers
       params:
         per:  2
   -
     key: manufacturer_skus
     request:
-      path: '{{base_url}}/manufacturers/356/skus'
+      url: '{{base_url}}/manufacturers/356/skus'
+      headers:
+        <<: *default_headers
       params:
         per:  2
   -
     key: autocomplete
     request:
-      path: '{{base_url}}/autocomplete?q=iph'
+      url: '{{base_url}}/autocomplete?q=iph'
+      headers:
+        <<: *default_headers
   -
     key: search_invalid
     request:
-      path: '{{base_url}}/search?q=a'
+      url: '{{base_url}}/search?q=a'
+      headers:
+        <<: *default_headers
   -
     key: search_category_match
     request:
-      path: '{{base_url}}/search?q=Tablets'
+      url: '{{base_url}}/search?q=Tablets'
+      headers:
+        <<: *default_headers
       params:
         page: 1
         per:  2
   -
     key: search_manufacturer_match
     request:
-      path: '{{base_url}}/search?q=apple'
+      url: '{{base_url}}/search?q=apple'
+      headers:
+        <<: *default_headers
   -
     key: search_latin_mapping
     request:
-      path: '{{base_url}}/search?q=ιπηονε'
+      url: '{{base_url}}/search?q=ιπηονε'
+      headers:
+        <<: *default_headers
       params:
         page: 1
         per: 2
   -
     key: search_spelling
     request:
-      path: '{{base_url}}/search?q=ipone'
+      url: '{{base_url}}/search?q=ipone'
+      headers:
+        <<: *default_headers
       params:
         page: 1
         per: 2
   -
     key: search_drop
-    request: 'GET {{base_url}}/search?q=wrong%20iphone'
     request:
-      path: '{{base_url}}/search?q=wrong%20iphone'
+      url: '{{base_url}}/search'
+      headers:
+        <<: *default_headers
+      params:
+        q: 'wrong iphone'
   -
     key: search_no_results
     request:
-      path: '{{base_url}}/search?q=asdasdsagjgjgjweigrweji'
+      url: '{{base_url}}/search'
+      headers:
+        <<: *default_headers
+      params:
+        q: 'asdasdsagjgjgjweigrweji'
   -
     key: search_category_facade
     request:
-      path: '{{base_url}}/search?q=iphone'
+      url: '{{base_url}}/search'
+      headers:
+        <<: *default_headers
       params:
+        q: iphone
         page: 1
         per: 2
   -
     key: search_sku_match
     request:
-      path: '{{base_url}}/search?q=nikon%201%20j2'
+      url: '{{base_url}}/search'
+      headers:
+        <<: *default_headers
+      params:
+        q: 'nikon%201%20j2'
   -
     key: search_skus_match
     request:
-      path: '{{base_url}}/search?q=Cubieboard2'
+      url: '{{base_url}}/search'
+      headers:
+        <<: *default_headers
       params:
+        q: 'Cubieboard2'
         page: 1
         per: 2
   -
     key: skus_show
-    request: 'GET {{base_url}}/skus/3690169'
+    request:
+      url: '{{base_url}}/skus/3690169'
+      headers:
+        <<: *default_headers
   -
     key: skus_products
-    request: 'GET {{base_url}}/skus/3703742/products'
+    request:
+      url: '{{base_url}}/skus/3703742/products'
+      headers:
+        <<: *default_headers
   -
     key: skus_similar
-    request: 'GET {{base_url}}/skus/3034682/similar'
+    request:
+      url: '{{base_url}}/skus/3034682/similar'
+      headers:
+        <<: *default_headers
   -
     key: sku_favorite
-    request: 'GET {{base_url}}/skus/345333/favorite'
+    request:
+      url: '{{base_url}}/skus/345333/favorite'
+      headers:
+        <<: *default_headers
   -
     key: products_show
-    request: 'GET {{base_url}}/products/13313788'
+    request:
+      url: '{{base_url}}/products/13313788'
+      headers:
+        <<: *default_headers
   -
     key: favorites_index
-    request: 'GET {{base_url}}/favorites'
+    request:
+      url: '{{base_url}}/favorites'
+      headers:
+        <<: *default_headers
   -
     key: favorites_show
-    request: 'GET {{base_url}}/favorites/252116'
+    request:
+      url: '{{base_url}}/favorites/252116'
+      headers:
+        <<: *default_headers
   -
     key: favorite_create
     request:
       verb: POST
-      path: '{{base_url}}/favorites'
+      url: '{{base_url}}/favorites'
+      headers:
+        <<: *default_headers
       params:
         favorite[sku_id]: 89645
   -
     key: favorite_update
     request:
       verb: PUT
-      path: '{{base_url}}/favorites/331342'
+      url: '{{base_url}}/favorites/331342'
+      headers:
+        <<: *default_headers
       params:
         favorite[have_it]: true
   -
     key: favorite_lists_index
-    request: 'GET {{base_url}}/favorite_lists'
+    request:
+      url: '{{base_url}}/favorite_lists'
+      headers:
+        <<: *default_headers
   -
     key: favorite_list_create
     request:
       verb: POST
-      path: '{{base_url}}/favorite_lists'
+      url: '{{base_url}}/favorite_lists'
+      headers:
+        <<: *default_headers
       params:
         favorite_list[name]: a new list name
 
   -
     key: filter_groups_index
     request:
-      path: '{{base_url}}/categories/40/filter_groups'
+      url: '{{base_url}}/categories/40/filter_groups'
+      headers:
+        <<: *default_headers
       params:
         per: 2
   -
     key: category_skus_search
     request:
-      path: '{{base_url}}/categories/40/skus?q=iphone'
+      url: '{{base_url}}/categories/40/skus'
+      headers:
+        <<: *default_headers
       params:
+        q: 'iphone'
         per: 2
   -
     key: category_skus_manufacturers
     request:
-      path: '{{base_url}}/categories/40/skus?manufacturer_ids[]=28&manufacturer_ids[]=2'
+      url: '{{base_url}}/categories/40/skus?manufacturer_ids[]=28&manufacturer_ids[]=2'
+      headers:
+        <<: *default_headers
       params:
         per: 4
     meta:
@@ -203,7 +305,9 @@ requests:
   -
     key: category_skus_filters
     request:
-      path: '{{base_url}}/categories/40/skus?filter_ids[]=6282&filter_ids[]=6284'
+      url: '{{base_url}}/categories/40/skus?filter_ids[]=6282&filter_ids[]=6284'
+      headers:
+        <<: *default_headers
       params:
         per: 4
     meta:
@@ -211,44 +315,60 @@ requests:
   -
     key: category_skus_with_available_filters
     request:
-      path: '{{base_url}}/categories/279/skus?include_meta=available_filters'
+      url: '{{base_url}}/categories/279/skus?include_meta=available_filters'
+      headers:
+        <<: *default_headers
       params:
         per: 1
   -
     key: category_skus_with_applied_filters
     request:
-      path: '{{base_url}}/categories/40/skus?include_meta=applied_filters&filter_ids[]=6273&manufacturer_ids=28'
+      url: '{{base_url}}/categories/40/skus?include_meta=applied_filters&filter_ids[]=6273&manufacturer_ids=28'
+      headers:
+        <<: *default_headers
       params:
         per: 1
   -
     key: notifications_index
     request:
-      path: '{{base_url}}/notifications'
+      url: '{{base_url}}/notifications'
+      headers:
+        <<: *default_headers
       params:
         per: 1
   -
     key: notifications_show
     request:
-      path: '{{base_url}}/notifications/3642082'
+      url: '{{base_url}}/notifications/3642082'
+      headers:
+        <<: *default_headers
   -
     key: sku_reviews
     request:
-      path: '{{base_url}}/skus/355766/reviews'
+      url: '{{base_url}}/skus/355766/reviews'
+      headers:
+        <<: *default_headers
   -
     key: sku_specifications
     request:
-      path: '{{base_url}}/skus/2588170/specifications'
+      url: '{{base_url}}/skus/2588170/specifications'
+      headers:
+        <<: *default_headers
       params:
         include: group
   -
     key: shop_reviews
     request:
-      path: '{{base_url}}/shops/3/reviews'
+      url: '{{base_url}}/shops/3/reviews'
+      headers:
+        <<: *default_headers
       params:
         per: 3
   -
     key: shop_search
     request:
-      path: '{{base_url}}/shops/search'
+      url: '{{base_url}}/shops/search'
+      headers:
+        <<: *default_headers
       params:
         q: 'plaisio'
