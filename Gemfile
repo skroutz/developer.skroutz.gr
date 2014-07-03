@@ -14,8 +14,8 @@ gem 'guard', '~> 2.6'
 gem 'guard-nanoc'
 gem 'colored'
 
-gem 'response_mate'
-gem 'response_mate-nanoc'
+gem 'response_mate', '~> 0.2'
+gem 'response_mate-nanoc', '~> 0.1'
 gem 'sass', '~> 3.3'
 
 group :development do
