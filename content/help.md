@@ -14,7 +14,7 @@ title: Help | Skroutz API
   </li>
   <li>
     <p class="question">How do i access X resource?</p>
-    <p class="answer">Read our <a href="#">API documentation</a>
+    <p class="answer">Read our <a href="<%= relative_path_to('/v3') %>">API documentation</a>
 thoroughly, if you can't find what you want it may be due to missing documentation or it may something we've decided not to expose.</p>
   </li>
   <li>
@@ -27,7 +27,7 @@ thoroughly, if you can't find what you want it may be due to missing documentati
   <li>
     <p class="question">Where can i find documentation on version 2?</p>
     <p class="answer">
-      <a href="http://docs.skroutz.gr/apidoc">http://docs.skroutz.gr/apidoc</a>. 
+      <a href="http://docs.skroutz.gr/apiv2">http://docs.skroutz.gr/apiv2</a>. 
     </p>
   </li>
 </ol>
