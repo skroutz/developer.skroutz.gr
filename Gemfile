@@ -1,5 +1,4 @@
 source "http://rubygems.org"
-source "https://rubygems.skroutz.gr"
 
 gem 'coderay'
 gem 'kramdown', '~> 0.13.2'

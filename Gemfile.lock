@@ -1,6 +1,5 @@
 GEM
   remote: http://rubygems.org/
-  remote: https://rubygems.skroutz.gr/
   specs:
     activesupport (4.1.4)
       i18n (~> 0.6, >= 0.6.9)
