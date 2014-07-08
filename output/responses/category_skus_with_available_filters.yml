@@ -1,79 +1,82 @@
 ---
 :request:
-  :verb: GET
-  :path: /categories/279/skus?include_meta=available_filters
+  :url: http://skroutz.gr/api/categories/279/skus?include_meta=available_filters
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3
+    :authorization: Bearer 5JN7RHwWJ9ZPSBEKo0/bskSR0IOfNtETjwmMOPsGKZiXrRnP71w7cZbDZFKBaeNoJAyIKRMKjXeaBeF40Uxg==
   :params:
-    per: 1
-:status: 200
-:headers:
-  server: !binary |-
-    bmdpbng=
-  content-type: !binary |-
-    YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-  !binary "dmFyeQ==": !binary |-
-    QWNjZXB0LUVuY29kaW5n
-  status: !binary |-
-    MjAwIE9L
-  x-ua-compatible: !binary |-
-    SUU9RWRnZSxjaHJvbWU9MQ==
-  cache-control: !binary |-
-    bWF4LWFnZT0wLCBwcml2YXRlLCBtdXN0LXJldmFsaWRhdGU=
-  x-request-id: !binary |-
-    MjI3MjU5MDg3OQ==
-  x-runtime: !binary |-
-    MC4wNTgwMzY=
-  x-dns-prefetch-control: !binary |-
-    b2Zm
-  x-app: !binary |-
-    YmVuank=
-  content-length: !binary |-
-    NjY1
-  accept-ranges: !binary |-
-    Ynl0ZXM=
-  date: !binary |-
-    TW9uLCAyMyBKdW4gMjAxNCAxMjo0NzozNiBHTVQ=
-  x-varnish: !binary |-
-    MjI3MjU5MDg3OQ==
-  age: !binary |-
-    MA==
-  via: !binary |-
-    MS4xIHZhcm5pc2g=
-  connection: !binary |-
-    Y2xvc2U=
-  x-origin: !binary |-
-    dmFybmlzaDI=
-  x-cache: !binary |-
-    TUlTUw==
-:body: !binary |-
-  eyJza3VzIjpbeyJpZCI6MTA4NjA3NCwiZWFuIjoiIiwicG4iOiIiLCJuYW1l
-  IjoiXHUwM2E3XHUwM2FjXHUwM2JkXHUwM2M0XHUwM2MxXHUwM2I1XHUwM2My
-  IFx1MDM5Y1x1MDNiMVx1MDNjNFx1MDNhY1x1MDNiYVx1MDNiOVx1MDNiMSAo
-  XHUwM2EzXHUwMzk1XHUwM2E0IDEwMCBcdTAzYTRcdTAzOWNcdTAzYTcpIiwi
-  ZGlzcGxheV9uYW1lIjoiXHUwM2E3XHUwM2FjXHUwM2JkXHUwM2M0XHUwM2Mx
-  XHUwM2I1XHUwM2MyIFx1MDM5Y1x1MDNiMVx1MDNjNFx1MDNhY1x1MDNiYVx1
-  MDNiOVx1MDNiMSAoXHUwM2EzXHUwMzk1XHUwM2E0IDEwMCBcdTAzYTRcdTAz
-  OWNcdTAzYTcpIiwiY2F0ZWdvcnlfaWQiOjI3OSwiZmlyc3RfcHJvZHVjdF9z
-  aG9wX2luZm8iOiIxMzQ5fE1lZ2FNYWxsfG1lZ2FtYWxsIiwiY2xpY2tfdXJs
-  IjoiaHR0cDovL3d3dy5za3JvdXR6LmdyL3Byb2R1Y3RzL3Nob3cvNzkzNTE4
-  NSIsInByaWNlX21heCI6MC4wNCwicHJpY2VfbWluIjowLjA0LCJyZXZpZXdz
-  Y29yZSI6MC4wLCJzaG9wX2NvdW50IjoxLCJwbGFpbl9zcGVjX3N1bW1hcnki
-  OiJcdTAzOTVcdTAzYWZcdTAzYjRcdTAzYmZcdTAzYzI6IFx1MDM5Y1x1MDNj
-  MFx1MDNiZlx1MDNiY1x1MDNjMFx1MDNiZlx1MDNiZFx1MDNiOVx1MDNhZFx1
-  MDNjMVx1MDNiNVx1MDNjMiIsIm1hbnVmYWN0dXJlcl9pZCI6MjU0LCJmdXR1
-  cmUiOmZhbHNlLCJyZXZpZXdzX2NvdW50IjowLCJ2aXJ0dWFsIjp0cnVlLCJp
-  bWFnZXMiOnsibWFpbiI6Imh0dHA6Ly9iLnNjZG4uZ3IvaW1hZ2VzL3NrdV9t
-  YWluX2ltYWdlcy8wMDEwODYvMTA4NjA3NC9tZWRpdW1fMTA4NjA3NC5qcGci
-  LCJhbHRlcm5hdGl2ZXMiOltdfX1dLCJtZXRhIjp7ImF2YWlsYWJsZV9maWx0
-  ZXJzIjp7ImZpbHRlcnMiOnsiMzQyODI5IjoxMDA4LCIzNDI4MzAiOjkyMSwi
-  MzQyODM0Ijo2MTAsIjM0MjgyNyI6MjcxLCIzNDI4MzMiOjE1MiwiMzQyODMx
-  Ijo4MiwiNDgzOTUzIjo1MiwiMzQyODI4Ijo1LCIzNDI4MzIiOjMsIjQ4MzMy
-  OSI6MTI2NSwiNDgzMzI4Ijo4NjMsIjQ4MzMzMCI6Nzk4LCI0ODMzMzEiOjQ2
-  N30sIm1hbnVmYWN0dXJlcnMiOnsiMjU0IjozNzcsIjEwMTc5IjoxODgsIjE2
-  NDkiOjY5LCIxMDE4MSI6NjcsIjEwNjQ1IjozOCwiMTA2NTQiOjMxLCI3OTk4
-  IjoyMCwiMTA2NDYiOjE4LCIxMzE4IjoxNiwiMTAxODAiOjEyLCIxMDY0NyI6
-  OSwiMTA2NDQiOjksIjY1OTgiOjYsIjEyOTkiOjYsIjExODY3Ijo1LCIxNDgy
-  MyI6NCwiMTMxNzgiOjQsIjc5MzEiOjQsIjExODY2IjoyLCI3NTY0IjoyLCI1
-  NTAzIjoyLCIxMzQ2MSI6MSwiMTM0NTQiOjEsIjg3NDUiOjEsIjc1NTgiOjEs
-  IjcwMzIiOjEsIjU0NzkiOjF9fSwicGFnaW5hdGlvbiI6eyJ0b3RhbF9yZXN1
-  bHRzIjozMzYwLCJ0b3RhbF9wYWdlcyI6MzM2MCwicGFnZSI6MSwicGVyIjox
-  fX19
+    :per: 1
+  :verb: GET
+:response:
+  :status: 200
+  :headers: !ruby/hash:Faraday::Utils::Headers
+    server: !binary |-
+      bmdpbng=
+    content-type: !binary |-
+      YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
+    !binary "dmFyeQ==": !binary |-
+      QWNjZXB0LUVuY29kaW5n
+    status: !binary |-
+      MjAwIE9L
+    x-ua-compatible: !binary |-
+      SUU9RWRnZSxjaHJvbWU9MQ==
+    cache-control: !binary |-
+      bWF4LWFnZT0wLCBwcml2YXRlLCBtdXN0LXJldmFsaWRhdGU=
+    x-request-id: !binary |-
+      MjM2MTMwNDgyMA==
+    x-runtime: !binary |-
+      MC4wNzI2Nzg=
+    x-dns-prefetch-control: !binary |-
+      b2Zm
+    x-app: !binary |-
+      bHVua3dpbGw=
+    content-length: !binary |-
+      NjUz
+    accept-ranges: !binary |-
+      Ynl0ZXM=
+    date: !binary |-
+      TW9uLCAwNyBKdWwgMjAxNCAxMzowNzo1MyBHTVQ=
+    x-varnish: !binary |-
+      MjM2MTMwNDgyMA==
+    age: !binary |-
+      MA==
+    via: !binary |-
+      MS4xIHZhcm5pc2g=
+    connection: !binary |-
+      Y2xvc2U=
+    x-origin: !binary |-
+      dmFybmlzaDI=
+    x-cache: !binary |-
+      TUlTUw==
+  :body: !binary |-
+    eyJza3VzIjpbeyJpZCI6MTA4NjA3NCwiZWFuIjoiIiwicG4iOiIiLCJuYW1l
+    IjoiXHUwM2E3XHUwM2FjXHUwM2JkXHUwM2M0XHUwM2MxXHUwM2I1XHUwM2My
+    IFx1MDM5Y1x1MDNiMVx1MDNjNFx1MDNhY1x1MDNiYVx1MDNiOVx1MDNiMSAo
+    XHUwM2EzXHUwMzk1XHUwM2E0IDEwMCBcdTAzYTRcdTAzOWNcdTAzYTcpIiwi
+    ZGlzcGxheV9uYW1lIjoiXHUwM2E3XHUwM2FjXHUwM2JkXHUwM2M0XHUwM2Mx
+    XHUwM2I1XHUwM2MyIFx1MDM5Y1x1MDNiMVx1MDNjNFx1MDNhY1x1MDNiYVx1
+    MDNiOVx1MDNiMSAoXHUwM2EzXHUwMzk1XHUwM2E0IDEwMCBcdTAzYTRcdTAz
+    OWNcdTAzYTcpIiwiY2F0ZWdvcnlfaWQiOjI3OSwiZmlyc3RfcHJvZHVjdF9z
+    aG9wX2luZm8iOiIxMzQ5fE1lZ2FNYWxsfG1lZ2FtYWxsIiwiY2xpY2tfdXJs
+    IjoiaHR0cDovL3d3dy5za3JvdXR6LmdyL3Byb2R1Y3RzL3Nob3cvNzkzNTE4
+    NSIsInByaWNlX21heCI6MC4wNCwicHJpY2VfbWluIjowLjA0LCJyZXZpZXdz
+    Y29yZSI6MC4wLCJzaG9wX2NvdW50IjoxLCJwbGFpbl9zcGVjX3N1bW1hcnki
+    OiJcdTAzOTVcdTAzYWZcdTAzYjRcdTAzYmZcdTAzYzI6IFx1MDM5Y1x1MDNj
+    MFx1MDNiZlx1MDNiY1x1MDNjMFx1MDNiZlx1MDNiZFx1MDNiOVx1MDNhZFx1
+    MDNjMVx1MDNiNVx1MDNjMiIsIm1hbnVmYWN0dXJlcl9pZCI6MjU0LCJmdXR1
+    cmUiOmZhbHNlLCJyZXZpZXdzX2NvdW50IjowLCJ2aXJ0dWFsIjp0cnVlLCJp
+    bWFnZXMiOnsibWFpbiI6Imh0dHA6Ly9iLnNjZG4uZ3IvaW1hZ2VzL3NrdV9t
+    YWluX2ltYWdlcy8wMDEwODYvMTA4NjA3NC9tZWRpdW1fMTA4NjA3NC5qcGci
+    LCJhbHRlcm5hdGl2ZXMiOltdfX1dLCJtZXRhIjp7ImF2YWlsYWJsZV9maWx0
+    ZXJzIjp7ImZpbHRlcnMiOnsiMzQyODMwIjoxMTE4LCIzNDI4MjkiOjk4MSwi
+    MzQyODM0Ijo2MDgsIjM0MjgyNyI6Mjk2LCIzNDI4MzMiOjE1MCwiMzQyODMx
+    Ijo4MiwiNDgzOTUzIjo1MiwiMzQyODMyIjozLCI0ODg5ODgiOjEzNzIsIjQ4
+    ODk4OSI6ODg2LCI0ODg5ODciOjg3MCwiNDg4OTkwIjo0NjV9LCJtYW51ZmFj
+    dHVyZXJzIjp7IjI1NCI6MzcxLCIxMDE3OSI6MTgyLCIxNjQ5Ijo2OCwiMTAx
+    ODEiOjU3LCIxMDY0NSI6MzgsIjEwNjU0IjozMCwiNzk5OCI6MjAsIjEwNjQ2
+    IjoxOCwiMTMxOCI6MTYsIjEwMTgwIjoxMSwiMTA2NDciOjksIjEwNjQ0Ijo3
+    LCI2NTk4Ijo2LCIxMjk5Ijo2LCIxMTg2NyI6NSwiMTQ4MjMiOjQsIjEzMTc4
+    Ijo0LCI3OTMxIjo0LCIxMTg2NiI6MiwiNzU2NCI6MiwiMTM0NjEiOjEsIjEz
+    NDU0IjoxLCI3NTU4IjoxLCI3MDMyIjoxfX0sInBhZ2luYXRpb24iOnsidG90
+    YWxfcmVzdWx0cyI6MzU1MSwidG90YWxfcGFnZXMiOjM1NTEsInBhZ2UiOjEs
+    InBlciI6MX19fQ==

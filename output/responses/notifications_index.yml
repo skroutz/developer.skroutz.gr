@@ -1,25 +1,30 @@
 ---
 :request:
-  :verb: GET
-  :path: /notifications
+  :url: http://skroutz.gr/api/notifications
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3
+    :authorization: Bearer 5JN7RHwWJ9ZPSBEKo0/bskSR0IOfNtETjwmMOPsGKZiXrRnP71w7cZbDZFKBaeNoJAyIKRMKjXeaBeF40Uxg==
   :params:
-    per: 1
-:status: 200
-:headers:
-  content-type: application/json; charset=utf-8
-  x-meta-request-version: 0.2.1
-  x-ua-compatible: IE=Edge,chrome=1
-  etag: ! '"598785cb3a2f5008846d670330b4c532"'
-  cache-control: max-age=0, private, must-revalidate
-  x-request-id: 6b21dfaffb42bac7762539726cc3714a
-  x-runtime: '0.043500'
-  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
-  date: Thu, 16 Jan 2014 13:08:34 GMT
-  content-length: '661'
-  connection: close
-  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTNhZTJhMWFlMzVhYTkzODQ3NWExMTI2NzlkYTdjNGJlBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--cf150c138cea4f2821af54174cd0af04c81949ca;
-    path=/; expires=Sun, 16-Mar-2014 13:08:34 GMT; HttpOnly
-:body: ! '{"notifications":[{"event":{"confirmed":true,"created_at":"2014-01-16T15:07:52+02:00","etype":"generic","eventable_id":37,"eventable_type":"UserSkuAd","id":3642082,"is_viewed":false,"mail_event":false,"snapshot":{"event_text":"\u0397
-  \u03b1\u03b3\u03b3\u03b5\u03bb\u03af\u03b1 \u03c3\u03b1\u03c2 \"Logitech M185\"
-  \u03bc\u03b5 \u03c4\u03b9\u03bc\u03ae 8,99 \u20ac \u03ad\u03bb\u03b7\u03be\u03b5
-  \u03c3\u03c4\u03b9\u03c2 26/04/2013 00:44","eventable_path":"/account/inactive_ads"},"subscription_id":null,"updated_at":"2014-01-16T15:07:57+02:00","user_id":132950,"user_notified":false}}],"meta":{"pagination":{"total_results":1,"total_pages":1,"page":1,"per":1}}}'
+    :per: 1
+  :verb: GET
+:response:
+  :status: 401
+  :headers: !ruby/hash:Faraday::Utils::Headers
+    server: nginx
+    content-type: application/json; charset=utf-8
+    status: 401 Unauthorized
+    x-ua-compatible: IE=Edge,chrome=1
+    cache-control: no-cache
+    x-request-id: '2361304881'
+    x-runtime: '0.028883'
+    x-app: lunkwill
+    content-length: '51'
+    accept-ranges: bytes
+    date: Mon, 07 Jul 2014 13:07:54 GMT
+    x-varnish: '2361304881'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: varnish2
+    x-cache: MISS
+  :body: ! '{"error":"invalid_token :: User token is required"}'

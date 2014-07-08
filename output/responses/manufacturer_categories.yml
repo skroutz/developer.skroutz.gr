@@ -1,26 +1,72 @@
 ---
 :request:
-  :verb: GET
-  :path: /manufacturers/356/categories
+  :url: http://skroutz.gr/api/manufacturers/356/categories
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3
+    :authorization: Bearer 5JN7RHwWJ9ZPSBEKo0/bskSR0IOfNtETjwmMOPsGKZiXrRnP71w7cZbDZFKBaeNoJAyIKRMKjXeaBeF40Uxg==
   :params:
-    per: 2
-:status: 200
-:headers:
-  link: <http://localhost:3000/api/manufacturers/356/categories?page=25&per=2>; rel="last",
-    <http://localhost:3000/api/manufacturers/356/categories?page=2&per=2>; rel="next"
-  content-type: application/json; charset=utf-8
-  x-meta-request-version: 0.2.1
-  x-ua-compatible: IE=Edge,chrome=1
-  etag: '"1f9eb2f3a2c1afdbf848490a9945a2c0"'
-  cache-control: max-age=0, private, must-revalidate
-  x-request-id: 1e95a716f5f4f7703992eed2538bb998
-  x-runtime: '1.292290'
-  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
-  date: Tue, 11 Feb 2014 12:41:50 GMT
-  content-length: '613'
-  connection: close
-  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWY1ZWJiNzFiMTU1NmU1NzkzOWRlMzNmNTUzMWVjYjIxBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--28df2f86b815f67fd0e918ea971c25af1c7519b2;
-    path=/; expires=Fri, 11-Apr-2014 11:41:50 GMT; HttpOnly
-:body: '{"categories":[{"id":1109,"name":"\u0395\u03c6\u03b1\u03c1\u03bc\u03bf\u03b3\u03ad\u03c2
-  \u0395\u03c0\u03b5\u03be\u03b5\u03c1\u03b3\u03b1\u03c3\u03af\u03b1\u03c2 \u0389\u03c7\u03bf\u03c5","children_count":0,"image_url":"http://b.scdn.gr/images/categories/large/1109.jpg","leaf":true,"parent_id":16},{"id":154,"name":"\u039c\u03c0\u03b1\u03c4\u03b1\u03c1\u03af\u03b5\u03c2
-  & \u0391\u03be\u03b5\u03c3\u03bf\u03c5\u03ac\u03c1","children_count":0,"image_url":"http://b.scdn.gr/images/categories/large/154.jpg","leaf":true,"parent_id":425}],"meta":{"pagination":{"total_results":49,"total_pages":25,"page":1,"per":2}}}'
+    :per: 2
+  :verb: GET
+:response:
+  :status: 200
+  :headers: !ruby/hash:Faraday::Utils::Headers
+    server: !binary |-
+      bmdpbng=
+    content-type: !binary |-
+      YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
+    !binary "dmFyeQ==": !binary |-
+      QWNjZXB0LUVuY29kaW5n
+    status: !binary |-
+      MjAwIE9L
+    !binary "bGluaw==": !binary |-
+      PGh0dHA6Ly9hcGkuc2tyb3V0ei5nci9hcGkvbWFudWZhY3R1cmVycy8zNTYv
+      Y2F0ZWdvcmllcz9wYWdlPTI3JnBlcj0yPjsgcmVsPSJsYXN0IiwgPGh0dHA6
+      Ly9hcGkuc2tyb3V0ei5nci9hcGkvbWFudWZhY3R1cmVycy8zNTYvY2F0ZWdv
+      cmllcz9wYWdlPTImcGVyPTI+OyByZWw9Im5leHQi
+    x-ua-compatible: !binary |-
+      SUU9RWRnZSxjaHJvbWU9MQ==
+    cache-control: !binary |-
+      bWF4LWFnZT0wLCBwcml2YXRlLCBtdXN0LXJldmFsaWRhdGU=
+    x-request-id: !binary |-
+      MjM2MTI5MzI1NA==
+    x-runtime: !binary |-
+      MC4wNDU1MjM=
+    x-dns-prefetch-control: !binary |-
+      b2Zm
+    x-app: !binary |-
+      bHVua3dpbGw=
+    content-length: !binary |-
+      MzAw
+    accept-ranges: !binary |-
+      Ynl0ZXM=
+    date: !binary |-
+      TW9uLCAwNyBKdWwgMjAxNCAxMzowNjoxMSBHTVQ=
+    x-varnish: !binary |-
+      MjM2MTI5MzI1NA==
+    age: !binary |-
+      MA==
+    via: !binary |-
+      MS4xIHZhcm5pc2g=
+    connection: !binary |-
+      Y2xvc2U=
+    x-origin: !binary |-
+      dmFybmlzaDI=
+    x-cache: !binary |-
+      TUlTUw==
+  :body: !binary |-
+    eyJjYXRlZ29yaWVzIjpbeyJpZCI6NDAsIm5hbWUiOiJcdTAzOWFcdTAzYjlc
+    dTAzYmRcdTAzYjdcdTAzYzRcdTAzYWMgXHUwM2E0XHUwM2I3XHUwM2JiXHUw
+    M2FkXHUwM2M2XHUwM2M5XHUwM2JkXHUwM2IxIiwiY2hpbGRyZW5fY291bnQi
+    OjAsImltYWdlX3VybCI6Imh0dHA6Ly9hLnNjZG4uZ3IvaW1hZ2VzL2NhdGVn
+    b3JpZXMvbGFyZ2UvNDAuanBnIiwicGFyZW50X2lkIjo4NiwiZmFzaGlvbiI6
+    ZmFsc2UsInNob3dfc3BlY2lmaWNhdGlvbnMiOnRydWUsIm1hbnVmYWN0dXJl
+    cl90aXRsZSI6Ilx1MDM5YVx1MDNiMVx1MDNjNFx1MDNiMVx1MDNjM1x1MDNi
+    YVx1MDNiNVx1MDNjNVx1MDNiMVx1MDNjM1x1MDNjNFx1MDNhZFx1MDNjMiJ9
+    LHsiaWQiOjExMDUsIm5hbWUiOiJUYWJsZXRzIiwiY2hpbGRyZW5fY291bnQi
+    OjAsImltYWdlX3VybCI6Imh0dHA6Ly9hLnNjZG4uZ3IvaW1hZ2VzL2NhdGVn
+    b3JpZXMvbGFyZ2UvMTEwNS5qcGciLCJwYXJlbnRfaWQiOjE2MTIsImZhc2hp
+    b24iOmZhbHNlLCJzaG93X3NwZWNpZmljYXRpb25zIjp0cnVlLCJtYW51ZmFj
+    dHVyZXJfdGl0bGUiOiJcdTAzOWFcdTAzYjFcdTAzYzRcdTAzYjFcdTAzYzNc
+    dTAzYmFcdTAzYjVcdTAzYzVcdTAzYjFcdTAzYzNcdTAzYzRcdTAzYWRcdTAz
+    YzIifV0sIm1ldGEiOnsicGFnaW5hdGlvbiI6eyJ0b3RhbF9yZXN1bHRzIjo1
+    MywidG90YWxfcGFnZXMiOjI3LCJwYWdlIjoxLCJwZXIiOjJ9fX0=

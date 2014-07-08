@@ -1,22 +1,28 @@
 ---
 :request:
+  :url: http://skroutz.gr/api/favorite_lists
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3
+    :authorization: Bearer 5JN7RHwWJ9ZPSBEKo0/bskSR0IOfNtETjwmMOPsGKZiXrRnP71w7cZbDZFKBaeNoJAyIKRMKjXeaBeF40Uxg==
   :verb: GET
-  :path: /favorite_lists
-:status: 200
-:headers:
-  content-type: application/json; charset=utf-8
-  x-meta-request-version: 0.2.1
-  x-ua-compatible: IE=Edge,chrome=1
-  etag: '"ed8db9a4483ececfc86298f5bfd7bf09"'
-  cache-control: max-age=0, private, must-revalidate
-  x-request-id: c0aac2a3c0dca459ad1dcd649fda6016
-  x-runtime: '2.039539'
-  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
-  date: Tue, 25 Feb 2014 09:58:34 GMT
-  content-length: '279'
-  connection: close
-  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWI1YjM4MDcwNWNlM2EwZWNhZWJjMDVhNjE3NmQ5MjIyBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--37bac47277a3c93c9731568a5120816b81a012f7;
-    path=/; expires=Fri, 25-Apr-2014 08:58:34 GMT; HttpOnly
-:body: '{"favorite_lists":[{"id":114490,"category_id":40,"name":"\u039a\u03b9\u03bd\u03b7\u03c4\u03ac
-  \u03a4\u03b7\u03bb\u03ad\u03c6\u03c9\u03bd\u03b1"},{"id":114494,"category_id":null,"name":"My
-  custom list"}],"meta":{"pagination":{"total_results":2,"total_pages":1,"page":1,"per":25}}}'
+:response:
+  :status: 401
+  :headers: !ruby/hash:Faraday::Utils::Headers
+    server: nginx
+    content-type: application/json; charset=utf-8
+    status: 401 Unauthorized
+    x-ua-compatible: IE=Edge,chrome=1
+    cache-control: no-cache
+    x-request-id: '3373711139'
+    x-runtime: '0.017474'
+    x-app: lunkwill
+    content-length: '51'
+    accept-ranges: bytes
+    date: Mon, 07 Jul 2014 13:07:51 GMT
+    x-varnish: '3373711139'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: varnish1
+    x-cache: MISS
+  :body: ! '{"error":"invalid_token :: User token is required"}'

@@ -1,67 +1,79 @@
 ---
 :request:
-  :verb: GET
-  :path: /search?q=iphone
+  :url: http://skroutz.gr/api/search
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3
+    :authorization: Bearer 5JN7RHwWJ9ZPSBEKo0/bskSR0IOfNtETjwmMOPsGKZiXrRnP71w7cZbDZFKBaeNoJAyIKRMKjXeaBeF40Uxg==
   :params:
-    page: 1
-    per: 2
-:status: 200
-:headers:
-  server: !binary |-
-    bmdpbng=
-  !binary "Y29udGVudC10eXBl": !binary |-
-    YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-  !binary "dmFyeQ==": !binary |-
-    QWNjZXB0LUVuY29kaW5n
-  status: !binary |-
-    MjAwIE9L
-  !binary "bGluaw==": !binary |-
-    PGh0dHA6Ly9hcGkuc2tyb3V0ei5nci9hcGkvc2VhcmNoP3BhZ2U9NjAmcGVy
-    PTImcT1pcGhvbmU+OyByZWw9Imxhc3QiLCA8aHR0cDovL2FwaS5za3JvdXR6
-    LmdyL2FwaS9zZWFyY2g/cGFnZT0yJnBlcj0yJnE9aXBob25lPjsgcmVsPSJu
-    ZXh0Ig==
-  x-ua-compatible: !binary |-
-    SUU9RWRnZSxjaHJvbWU9MQ==
-  cache-control: !binary |-
-    bWF4LWFnZT0wLCBwcml2YXRlLCBtdXN0LXJldmFsaWRhdGU=
-  x-request-id: !binary |-
-    MjQ4ODk2MzA2MA==
-  x-runtime: !binary |-
-    MC4xMTM2MDQ=
-  x-dns-prefetch-control: !binary |-
-    b2Zm
-  x-app: !binary |-
-    ZnJhbmtpZQ==
-  content-length: !binary |-
-    Mjg1
-  accept-ranges: !binary |-
-    Ynl0ZXM=
-  date: !binary |-
-    V2VkLCAwNSBNYXIgMjAxNCAxMDoyMzoyNiBHTVQ=
-  x-varnish: !binary |-
-    MjQ4ODk2MzA2MA==
-  age: !binary |-
-    MA==
-  via: !binary |-
-    MS4xIHZhcm5pc2g=
-  connection: !binary |-
-    Y2xvc2U=
-  x-origin: !binary |-
-    dmFybmlzaDE=
-  x-cache: !binary |-
-    TUlTUw==
-:body: !binary |-
-  eyJjYXRlZ29yaWVzIjpbeyJpZCI6NDAsIm5hbWUiOiJcdTAzOWFcdTAzYjlc
-  dTAzYmRcdTAzYjdcdTAzYzRcdTAzYWMgXHUwM2E0XHUwM2I3XHUwM2JiXHUw
-  M2FkXHUwM2M2XHUwM2M5XHUwM2JkXHUwM2IxIiwiY2hpbGRyZW5fY291bnQi
-  OjAsImltYWdlX3VybCI6Imh0dHA6Ly9hLnNjZG4uZ3IvaW1hZ2VzL2NhdGVn
-  b3JpZXMvbGFyZ2UvNDAuanBnIiwicGFyZW50X2lkIjo4NiwibWF0Y2hfY291
-  bnQiOjEzfSx7ImlkIjo1NzksIm5hbWUiOiJcdTAzOThcdTAzYWVcdTAzYmFc
-  dTAzYjVcdTAzYzIgXHUwMzlhXHUwM2I5XHUwM2JkXHUwM2I3XHUwM2M0XHUw
-  M2NlXHUwM2JkIFx1MDNhNFx1MDNiN1x1MDNiYlx1MDNiNVx1MDNjNlx1MDNj
-  ZVx1MDNiZFx1MDNjOVx1MDNiZCIsImNoaWxkcmVuX2NvdW50IjowLCJpbWFn
-  ZV91cmwiOiJodHRwOi8vYS5zY2RuLmdyL2ltYWdlcy9jYXRlZ29yaWVzL2xh
-  cmdlLzU3OS5qcGciLCJwYXJlbnRfaWQiOjg2LCJtYXRjaF9jb3VudCI6Nzcy
-  OX1dLCJtZXRhIjp7ImFsdGVybmF0aXZlcyI6W10sInN0cm9uZ19tYXRjaGVz
-  Ijp7fSwicGFnaW5hdGlvbiI6eyJ0b3RhbF9yZXN1bHRzIjoxMTksInRvdGFs
-  X3BhZ2VzIjo2MCwicGFnZSI6MSwicGVyIjoyfX19
+    :q: iphone
+    :page: 1
+    :per: 2
+  :verb: GET
+:response:
+  :status: 200
+  :headers: !ruby/hash:Faraday::Utils::Headers
+    server: !binary |-
+      bmdpbng=
+    content-type: !binary |-
+      YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
+    !binary "dmFyeQ==": !binary |-
+      QWNjZXB0LUVuY29kaW5n
+    status: !binary |-
+      MjAwIE9L
+    !binary "bGluaw==": !binary |-
+      PGh0dHA6Ly9hcGkuc2tyb3V0ei5nci9hcGkvc2VhcmNoP3BhZ2U9NjEmcGVy
+      PTImcT1pcGhvbmU+OyByZWw9Imxhc3QiLCA8aHR0cDovL2FwaS5za3JvdXR6
+      LmdyL2FwaS9zZWFyY2g/cGFnZT0yJnBlcj0yJnE9aXBob25lPjsgcmVsPSJu
+      ZXh0Ig==
+    x-ua-compatible: !binary |-
+      SUU9RWRnZSxjaHJvbWU9MQ==
+    cache-control: !binary |-
+      bWF4LWFnZT0wLCBwcml2YXRlLCBtdXN0LXJldmFsaWRhdGU=
+    x-request-id: !binary |-
+      MjM2MTMwNDE1Ng==
+    x-runtime: !binary |-
+      MC4xMDQ0NTg=
+    x-dns-prefetch-control: !binary |-
+      b2Zm
+    x-app: !binary |-
+      bHVua3dpbGw=
+    content-length: !binary |-
+      MzQ5
+    accept-ranges: !binary |-
+      Ynl0ZXM=
+    date: !binary |-
+      TW9uLCAwNyBKdWwgMjAxNCAxMzowNzo0NyBHTVQ=
+    x-varnish: !binary |-
+      MjM2MTMwNDE1Ng==
+    age: !binary |-
+      MA==
+    via: !binary |-
+      MS4xIHZhcm5pc2g=
+    connection: !binary |-
+      Y2xvc2U=
+    x-origin: !binary |-
+      dmFybmlzaDI=
+    x-cache: !binary |-
+      TUlTUw==
+  :body: !binary |-
+    eyJjYXRlZ29yaWVzIjpbeyJpZCI6NDAsIm5hbWUiOiJcdTAzOWFcdTAzYjlc
+    dTAzYmRcdTAzYjdcdTAzYzRcdTAzYWMgXHUwM2E0XHUwM2I3XHUwM2JiXHUw
+    M2FkXHUwM2M2XHUwM2M5XHUwM2JkXHUwM2IxIiwiY2hpbGRyZW5fY291bnQi
+    OjAsImltYWdlX3VybCI6Imh0dHA6Ly9hLnNjZG4uZ3IvaW1hZ2VzL2NhdGVn
+    b3JpZXMvbGFyZ2UvNDAuanBnIiwicGFyZW50X2lkIjo4NiwiZmFzaGlvbiI6
+    ZmFsc2UsInNob3dfc3BlY2lmaWNhdGlvbnMiOnRydWUsIm1hbnVmYWN0dXJl
+    cl90aXRsZSI6Ilx1MDM5YVx1MDNiMVx1MDNjNFx1MDNiMVx1MDNjM1x1MDNi
+    YVx1MDNiNVx1MDNjNVx1MDNiMVx1MDNjM1x1MDNjNFx1MDNhZFx1MDNjMiIs
+    Im1hdGNoX2NvdW50IjoxM30seyJpZCI6NTc5LCJuYW1lIjoiXHUwMzk4XHUw
+    M2FlXHUwM2JhXHUwM2I1XHUwM2MyIFx1MDM5YVx1MDNiOVx1MDNiZFx1MDNi
+    N1x1MDNjNFx1MDNjZVx1MDNiZCBcdTAzYTRcdTAzYjdcdTAzYmJcdTAzYjVc
+    dTAzYzZcdTAzY2VcdTAzYmRcdTAzYzlcdTAzYmQiLCJjaGlsZHJlbl9jb3Vu
+    dCI6MCwiaW1hZ2VfdXJsIjoiaHR0cDovL2Euc2Nkbi5nci9pbWFnZXMvY2F0
+    ZWdvcmllcy9sYXJnZS81NzkuanBnIiwicGFyZW50X2lkIjo4NiwiZmFzaGlv
+    biI6ZmFsc2UsInNob3dfc3BlY2lmaWNhdGlvbnMiOmZhbHNlLCJtYW51ZmFj
+    dHVyZXJfdGl0bGUiOiJcdTAzOWFcdTAzYjFcdTAzYzRcdTAzYjFcdTAzYzNc
+    dTAzYmFcdTAzYjVcdTAzYzVcdTAzYjFcdTAzYzNcdTAzYzRcdTAzYWRcdTAz
+    YzIiLCJtYXRjaF9jb3VudCI6OTE0OX1dLCJtZXRhIjp7ImFsdGVybmF0aXZl
+    cyI6W10sInN0cm9uZ19tYXRjaGVzIjp7fSwicGFnaW5hdGlvbiI6eyJ0b3Rh
+    bF9yZXN1bHRzIjoxMjIsInRvdGFsX3BhZ2VzIjo2MSwicGFnZSI6MSwicGVy
+    IjoyfX19

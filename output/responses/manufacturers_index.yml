@@ -1,26 +1,65 @@
 ---
 :request:
-  :verb: GET
-  :path: /manufacturers
+  :url: http://skroutz.gr/api/manufacturers
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3
+    :authorization: Bearer 5JN7RHwWJ9ZPSBEKo0/bskSR0IOfNtETjwmMOPsGKZiXrRnP71w7cZbDZFKBaeNoJAyIKRMKjXeaBeF40Uxg==
   :params:
-    per: 2
-    oauth_token: Vr/AzbfQt3ywQlKUonZk25VqRg2ILFAFV/voi69FD9xlJl5Yp9DmDWb6PAEsVwuI1KckH3aa1/vxRaj/Mbwg==
-:status: 200
-:headers:
-  link: <http://localhost:3000/api/manufacturers?oauth_token=Vr%2FAzbfQt3ywQlKUonZk25VqRg2ILFAFV%2Fvoi69FD9xlJl5Yp9DmDWb6PAEsVwuI1KckH3aa1%2FvxRaj%2FMbwg%3D%3D&page=6339&per=2>;
-    rel="last", <http://localhost:3000/api/manufacturers?oauth_token=Vr%2FAzbfQt3ywQlKUonZk25VqRg2ILFAFV%2Fvoi69FD9xlJl5Yp9DmDWb6PAEsVwuI1KckH3aa1%2FvxRaj%2FMbwg%3D%3D&page=2&per=2>;
-    rel="next"
-  content-type: application/json; charset=utf-8
-  x-meta-request-version: 0.2.1
-  x-ua-compatible: IE=Edge,chrome=1
-  etag: ! '"5797cdd8c67656337b2bbcece1762e6e"'
-  cache-control: max-age=0, private, must-revalidate
-  x-request-id: 0687690fae57faeb362b3df4e66c1918
-  x-runtime: '0.039274'
-  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
-  date: Fri, 20 Dec 2013 10:53:50 GMT
-  content-length: '115'
-  connection: close
-  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWNkNGY2NGQyOTNhMDIzNzhhOWE1YzgzNmU3ZmI4MzNkBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--78334a09e25aa6cab1e4f76644a0553afdfc8e3d;
-    path=/; expires=Thu, 20-Feb-2014 10:53:50 GMT; HttpOnly
-:body: ! '{"manufacturers":[{"id":1,"name":"EA - Electronic Arts","image_url":null},{"id":2,"name":"Sony","image_url":null}]}'
+    :per: 2
+  :verb: GET
+:response:
+  :status: 200
+  :headers: !ruby/hash:Faraday::Utils::Headers
+    server: !binary |-
+      bmdpbng=
+    content-type: !binary |-
+      YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
+    !binary "dmFyeQ==": !binary |-
+      QWNjZXB0LUVuY29kaW5n
+    status: !binary |-
+      MjAwIE9L
+    !binary "bGluaw==": !binary |-
+      PGh0dHA6Ly9hcGkuc2tyb3V0ei5nci9hcGkvbWFudWZhY3R1cmVycz9wYWdl
+      PTgwMDYmcGVyPTI+OyByZWw9Imxhc3QiLCA8aHR0cDovL2FwaS5za3JvdXR6
+      LmdyL2FwaS9tYW51ZmFjdHVyZXJzP3BhZ2U9MiZwZXI9Mj47IHJlbD0ibmV4
+      dCI=
+    x-ua-compatible: !binary |-
+      SUU9RWRnZSxjaHJvbWU9MQ==
+    cache-control: !binary |-
+      bWF4LWFnZT0wLCBwcml2YXRlLCBtdXN0LXJldmFsaWRhdGU=
+    x-request-id: !binary |-
+      MjM2MTI5MjQyMA==
+    x-runtime: !binary |-
+      MC4wNDk5NjI=
+    x-dns-prefetch-control: !binary |-
+      b2Zm
+    x-app: !binary |-
+      bHVua3dpbGw=
+    content-length: !binary |-
+      MjQ2
+    accept-ranges: !binary |-
+      Ynl0ZXM=
+    date: !binary |-
+      TW9uLCAwNyBKdWwgMjAxNCAxMzowNjowNSBHTVQ=
+    x-varnish: !binary |-
+      MjM2MTI5MjQyMA==
+    age: !binary |-
+      MA==
+    via: !binary |-
+      MS4xIHZhcm5pc2g=
+    connection: !binary |-
+      Y2xvc2U=
+    x-origin: !binary |-
+      dmFybmlzaDI=
+    x-cache: !binary |-
+      TUlTUw==
+  :body: !binary |-
+    eyJtYW51ZmFjdHVyZXJzIjpbeyJpZCI6MSwibmFtZSI6IkVBIC0gRWxlY3Ry
+    b25pYyBBcnRzIiwiaW1hZ2VfdXJsIjoiaHR0cDovL2Euc2Nkbi5nci9pbWFn
+    ZXMvbWFudWZhY3R1cmVyX2xvZ29zLzAwMDAwMC8xL2UyZTAxOWVlYTgyYmZl
+    NmI4MmI0N2FiNzdmNmI0NDk3LnBuZyJ9LHsiaWQiOjIsIm5hbWUiOiJTb255
+    IiwiaW1hZ2VfdXJsIjoiaHR0cDovL2Euc2Nkbi5nci9pbWFnZXMvbWFudWZh
+    Y3R1cmVyX2xvZ29zLzAwMDAwMC8yLzUwMmYwNjk4YTQ0ZGYzMGY0ZmQ1NWZk
+    OWUwODkzMzY5LmpwZyJ9XSwibWV0YSI6eyJwYWdpbmF0aW9uIjp7InRvdGFs
+    X3Jlc3VsdHMiOjE2MDEyLCJ0b3RhbF9wYWdlcyI6ODAwNiwicGFnZSI6MSwi
+    cGVyIjoyfX19

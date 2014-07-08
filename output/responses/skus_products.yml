@@ -1,58 +1,48 @@
 ---
 :request:
+  :url: http://skroutz.gr/api/skus/3703742/products
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3
+    :authorization: Bearer 5JN7RHwWJ9ZPSBEKo0/bskSR0IOfNtETjwmMOPsGKZiXrRnP71w7cZbDZFKBaeNoJAyIKRMKjXeaBeF40Uxg==
   :verb: GET
-  :path: /skus/3703742/products
-:status: 200
-:headers:
-  server: !binary |-
-    bmdpbng=
-  !binary "Y29udGVudC10eXBl": !binary |-
-    YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-  !binary "dmFyeQ==": !binary |-
-    QWNjZXB0LUVuY29kaW5n
-  status: !binary |-
-    MjAwIE9L
-  x-ua-compatible: !binary |-
-    SUU9RWRnZSxjaHJvbWU9MQ==
-  cache-control: !binary |-
-    bWF4LWFnZT0wLCBwcml2YXRlLCBtdXN0LXJldmFsaWRhdGU=
-  x-request-id: !binary |-
-    MjQ0ODg4OTg3MQ==
-  x-runtime: !binary |-
-    MC4xMzEzMDk=
-  x-dns-prefetch-control: !binary |-
-    b2Zm
-  x-app: !binary |-
-    ZnJhbmtpZQ==
-  content-length: !binary |-
-    MzQ4
-  accept-ranges: !binary |-
-    Ynl0ZXM=
-  date: !binary |-
-    V2VkLCAyNiBGZWIgMjAxNCAwOTozMjowNCBHTVQ=
-  x-varnish: !binary |-
-    MjQ0ODg4OTg3MQ==
-  age: !binary |-
-    MA==
-  via: !binary |-
-    MS4xIHZhcm5pc2g=
-  connection: !binary |-
-    Y2xvc2U=
-  x-origin: !binary |-
-    dmFybmlzaDE=
-  x-cache: !binary |-
-    TUlTUw==
-:body: !binary |-
-  eyJwcm9kdWN0cyI6W3siaWQiOjEzMzEzNzg1LCJuYW1lIjoiXHUwMzljXHUw
-  M2MwXHUwM2JiXHUwM2JmXHUwM2NkXHUwM2I2XHUwM2IxIFx1MDM5YVx1MDNi
-  Zlx1MDNiZFx1MDNjNFx1MDNiZlx1MDNiY1x1MDNhY1x1MDNiZFx1MDNiOVx1
-  MDNiYVx1MDNiNyAybmQgU2tpbiAgU1MyMDEtNDExMyBuYXZ5LXNzMjAxMyBc
-  dTAzOTFcdTAzYmRcdTAzYjRcdTAzYzFcdTAzYjlcdTAzYmFcdTAzY2MiLCJz
-  a3VfaWQiOjM3MDM3NDIsInNob3BfaWQiOjgyMSwiY2F0ZWdvcnlfaWQiOjE1
-  NzcsImF2YWlsYWJpbGl0eSI6Ilx1MDNhM1x1MDNiNSBcdTAzYjFcdTAzYzBc
-  dTAzY2NcdTAzYjhcdTAzYjVcdTAzYmNcdTAzYjEiLCJjbGlja191cmwiOiJo
-  dHRwOi8vd3d3LnNrcm91dHouZ3IvcHJvZHVjdHMvc2hvdy8xMzMxMzc4NT9j
-  bGllbnRfaWQ9cDhNMm9IR3A2SWJTQWNZMDNQenZEQSUzRCUzRCZmcm9tPWFw
-  aSIsInByaWNlIjoxMS43fV0sIm1ldGEiOnsicGFnaW5hdGlvbiI6eyJ0b3Rh
-  bF9yZXN1bHRzIjoxLCJ0b3RhbF9wYWdlcyI6MSwicGFnZSI6MSwicGVyIjoy
-  NX19fQ==
+:response:
+  :status: 404
+  :headers: !ruby/hash:Faraday::Utils::Headers
+    server: !binary |-
+      bmdpbng=
+    content-type: !binary |-
+      YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
+    !binary "dmFyeQ==": !binary |-
+      QWNjZXB0LUVuY29kaW5n
+    status: !binary |-
+      NDA0IE5vdCBGb3VuZA==
+    cache-control: !binary |-
+      bWF4LWFnZT0zMDAsIHByaXZhdGU=
+    x-ua-compatible: !binary |-
+      SUU9RWRnZSxjaHJvbWU9MQ==
+    x-request-id: !binary |-
+      MzM3MzcxMDgwOQ==
+    x-runtime: !binary |-
+      MC4wMzY4Njk=
+    x-app: !binary |-
+      bHVua3dpbGw=
+    content-length: !binary |-
+      NjI=
+    accept-ranges: !binary |-
+      Ynl0ZXM=
+    date: !binary |-
+      TW9uLCAwNyBKdWwgMjAxNCAxMzowNzo0OSBHTVQ=
+    x-varnish: !binary |-
+      MzM3MzcxMDgwOQ==
+    age: !binary |-
+      MA==
+    via: !binary |-
+      MS4xIHZhcm5pc2g=
+    connection: !binary |-
+      Y2xvc2U=
+    x-origin: !binary |-
+      dmFybmlzaDE=
+    x-cache: !binary |-
+      TUlTUw==
+  :body: !binary |-
+    WW91IHJlcXVlc3RlZCBzb21ldGhpbmcgdGhhdCBkb2VzIG5vdCBleGlzdA==

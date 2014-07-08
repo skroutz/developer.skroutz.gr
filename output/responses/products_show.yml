@@ -1,54 +1,48 @@
 ---
 :request:
+  :url: http://skroutz.gr/api/products/13313788
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3
+    :authorization: Bearer 5JN7RHwWJ9ZPSBEKo0/bskSR0IOfNtETjwmMOPsGKZiXrRnP71w7cZbDZFKBaeNoJAyIKRMKjXeaBeF40Uxg==
   :verb: GET
-  :path: /products/13313788
-:status: 200
-:headers:
-  server: !binary |-
-    bmdpbng=
-  !binary "Y29udGVudC10eXBl": !binary |-
-    YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-  !binary "dmFyeQ==": !binary |-
-    QWNjZXB0LUVuY29kaW5n
-  status: !binary |-
-    MjAwIE9L
-  x-ua-compatible: !binary |-
-    SUU9RWRnZSxjaHJvbWU9MQ==
-  cache-control: !binary |-
-    bWF4LWFnZT0wLCBwcml2YXRlLCBtdXN0LXJldmFsaWRhdGU=
-  x-request-id: !binary |-
-    MTQyMjY3MjQ1NQ==
-  x-runtime: !binary |-
-    MC4wNTQyNTg=
-  x-dns-prefetch-control: !binary |-
-    b2Zm
-  x-app: !binary |-
-    bHVua3dpbGw=
-  content-length: !binary |-
-    Mjgw
-  accept-ranges: !binary |-
-    Ynl0ZXM=
-  date: !binary |-
-    VHVlLCAyNSBGZWIgMjAxNCAxMjo0OTo1NCBHTVQ=
-  x-varnish: !binary |-
-    MTQyMjY3MjQ1NQ==
-  age: !binary |-
-    MA==
-  via: !binary |-
-    MS4xIHZhcm5pc2g=
-  connection: !binary |-
-    Y2xvc2U=
-  x-origin: !binary |-
-    dmFybmlzaDI=
-  x-cache: !binary |-
-    TUlTUw==
-:body: !binary |-
-  eyJwcm9kdWN0Ijp7ImlkIjoxMzMxMzc4OCwibmFtZSI6IlNuZWFrZXIgQWRp
-  ZGFzIEdyZWVuc3RhciBRMjMwMzIgMDA3MS1zczIwMTMgXHUwMzkxXHUwM2Jk
-  XHUwM2I0XHUwM2MxXHUwM2I5XHUwM2JhXHUwM2NjIiwic2t1X2lkIjozMDUw
-  NTkxLCJzaG9wX2lkIjo4MjEsImNhdGVnb3J5X2lkIjozNzksImF2YWlsYWJp
-  bGl0eSI6IjEgXHUwM2FkXHUwM2M5XHUwM2MyIDMgXHUwM2I3XHUwM2JjXHUw
-  M2FkXHUwM2MxXHUwM2I1XHUwM2MyIiwiY2xpY2tfdXJsIjoiaHR0cDovL3d3
-  dy5za3JvdXR6LmdyL3Byb2R1Y3RzL3Nob3cvMTMzMTM3ODg/Y2xpZW50X2lk
-  PXA4TTJvSEdwNkliU0FjWTAzUHp2REElM0QlM0QmZnJvbT1hcGkiLCJwcmlj
-  ZSI6NTUuOTd9fQ==
+:response:
+  :status: 404
+  :headers: !ruby/hash:Faraday::Utils::Headers
+    server: !binary |-
+      bmdpbng=
+    content-type: !binary |-
+      YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
+    !binary "dmFyeQ==": !binary |-
+      QWNjZXB0LUVuY29kaW5n
+    status: !binary |-
+      NDA0IE5vdCBGb3VuZA==
+    cache-control: !binary |-
+      bWF4LWFnZT0zMDAsIHByaXZhdGU=
+    x-ua-compatible: !binary |-
+      SUU9RWRnZSxjaHJvbWU9MQ==
+    x-request-id: !binary |-
+      MjM2MTMwNDQ1MQ==
+    x-runtime: !binary |-
+      MC4wMjE4OTM=
+    x-app: !binary |-
+      bHVua3dpbGw=
+    content-length: !binary |-
+      NjI=
+    accept-ranges: !binary |-
+      Ynl0ZXM=
+    date: !binary |-
+      TW9uLCAwNyBKdWwgMjAxNCAxMzowNzo1MCBHTVQ=
+    x-varnish: !binary |-
+      MjM2MTMwNDQ1MQ==
+    age: !binary |-
+      MA==
+    via: !binary |-
+      MS4xIHZhcm5pc2g=
+    connection: !binary |-
+      Y2xvc2U=
+    x-origin: !binary |-
+      dmFybmlzaDI=
+    x-cache: !binary |-
+      TUlTUw==
+  :body: !binary |-
+    WW91IHJlcXVlc3RlZCBzb21ldGhpbmcgdGhhdCBkb2VzIG5vdCBleGlzdA==

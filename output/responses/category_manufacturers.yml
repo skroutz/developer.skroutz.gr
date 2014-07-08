@@ -1,64 +1,68 @@
 ---
 :request:
-  :verb: GET
-  :path: /categories/25/manufacturers
+  :url: http://skroutz.gr/api/categories/25/manufacturers
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3
+    :authorization: Bearer 5JN7RHwWJ9ZPSBEKo0/bskSR0IOfNtETjwmMOPsGKZiXrRnP71w7cZbDZFKBaeNoJAyIKRMKjXeaBeF40Uxg==
   :params:
-    order_by: popularity
-    order_dir: desc
-    per: 2
-:status: 200
-:headers:
-  server: !binary |-
-    bmdpbng=
-  content-type: !binary |-
-    YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-  !binary "dmFyeQ==": !binary |-
-    QWNjZXB0LUVuY29kaW5n
-  status: !binary |-
-    MjAwIE9L
-  !binary "bGluaw==": !binary |-
-    PGh0dHA6Ly9hcGkuc2tyb3V0ei5nci9hcGkvY2F0ZWdvcmllcy8yNS9tYW51
-    ZmFjdHVyZXJzP29yZGVyX2J5PXBvcHVsYXJpdHkmb3JkZXJfZGlyPWRlc2Mm
-    cGFnZT03JnBlcj0yPjsgcmVsPSJsYXN0IiwgPGh0dHA6Ly9hcGkuc2tyb3V0
-    ei5nci9hcGkvY2F0ZWdvcmllcy8yNS9tYW51ZmFjdHVyZXJzP29yZGVyX2J5
-    PXBvcHVsYXJpdHkmb3JkZXJfZGlyPWRlc2MmcGFnZT0yJnBlcj0yPjsgcmVs
-    PSJuZXh0Ig==
-  x-ua-compatible: !binary |-
-    SUU9RWRnZSxjaHJvbWU9MQ==
-  cache-control: !binary |-
-    bWF4LWFnZT0wLCBwcml2YXRlLCBtdXN0LXJldmFsaWRhdGU=
-  x-request-id: !binary |-
-    MzI1NTczMzkyNg==
-  x-runtime: !binary |-
-    MC4wNTkzMzQ=
-  x-dns-prefetch-control: !binary |-
-    b2Zm
-  x-app: !binary |-
-    YmVuank=
-  content-length: !binary |-
-    MjQw
-  accept-ranges: !binary |-
-    Ynl0ZXM=
-  date: !binary |-
-    TW9uLCAyMyBKdW4gMjAxNCAxMjo0NzozMyBHTVQ=
-  x-varnish: !binary |-
-    MzI1NTczMzkyNg==
-  age: !binary |-
-    MA==
-  via: !binary |-
-    MS4xIHZhcm5pc2g=
-  connection: !binary |-
-    Y2xvc2U=
-  x-origin: !binary |-
-    dmFybmlzaDE=
-  x-cache: !binary |-
-    TUlTUw==
-:body: !binary |-
-  eyJtYW51ZmFjdHVyZXJzIjpbeyJpZCI6MTEzOSwibmFtZSI6IkRlbGwiLCJp
-  bWFnZV91cmwiOiJodHRwOi8vYi5zY2RuLmdyL2ltYWdlcy9tYW51ZmFjdHVy
-  ZXJfbG9nb3MvMDAwMDAxLzExMzkvNTg1NGNjNWRjYjY5NDE0OGE1NTZkMWIz
-  YzMxNzg4NzYuanBnIn0seyJpZCI6Mjg4LCJuYW1lIjoiTGVub3ZvIiwiaW1h
-  Z2VfdXJsIjoiaHR0cDovL2Euc2Nkbi5nci9pbWFnZXMvbWFudWZhY3R1cmVy
-  X2xvZ29zLzAwMDAwMC8yODgvMTUyZmM2ZGI1MWVlOTdjMzcwZDkzMDcyOWRh
-  ZWE1OTMuanBnIn1dLCJtZXRhIjp7InBhZ2luYXRpb24iOnsidG90YWxfcmVz
-  dWx0cyI6MTQsInRvdGFsX3BhZ2VzIjo3LCJwYWdlIjoxLCJwZXIiOjJ9fX0=
+    :order_by: popularity
+    :order_dir: desc
+    :per: 2
+  :verb: GET
+:response:
+  :status: 200
+  :headers: !ruby/hash:Faraday::Utils::Headers
+    server: !binary |-
+      bmdpbng=
+    content-type: !binary |-
+      YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
+    !binary "dmFyeQ==": !binary |-
+      QWNjZXB0LUVuY29kaW5n
+    status: !binary |-
+      MjAwIE9L
+    !binary "bGluaw==": !binary |-
+      PGh0dHA6Ly9hcGkuc2tyb3V0ei5nci9hcGkvY2F0ZWdvcmllcy8yNS9tYW51
+      ZmFjdHVyZXJzP29yZGVyX2J5PXBvcHVsYXJpdHkmb3JkZXJfZGlyPWRlc2Mm
+      cGFnZT03JnBlcj0yPjsgcmVsPSJsYXN0IiwgPGh0dHA6Ly9hcGkuc2tyb3V0
+      ei5nci9hcGkvY2F0ZWdvcmllcy8yNS9tYW51ZmFjdHVyZXJzP29yZGVyX2J5
+      PXBvcHVsYXJpdHkmb3JkZXJfZGlyPWRlc2MmcGFnZT0yJnBlcj0yPjsgcmVs
+      PSJuZXh0Ig==
+    cache-control: !binary |-
+      bWF4LWFnZT0zMDAsIHByaXZhdGU=
+    x-ua-compatible: !binary |-
+      SUU9RWRnZSxjaHJvbWU9MQ==
+    x-request-id: !binary |-
+      MzM3MzY4MTk1NA==
+    x-runtime: !binary |-
+      MC4wMzE5OTg=
+    x-dns-prefetch-control: !binary |-
+      b2Zm
+    x-app: !binary |-
+      bHVua3dpbGw=
+    content-length: !binary |-
+      MjQw
+    accept-ranges: !binary |-
+      Ynl0ZXM=
+    date: !binary |-
+      TW9uLCAwNyBKdWwgMjAxNCAxMzowNToxMCBHTVQ=
+    x-varnish: !binary |-
+      MzM3MzY4MTk1NA==
+    age: !binary |-
+      MA==
+    via: !binary |-
+      MS4xIHZhcm5pc2g=
+    connection: !binary |-
+      Y2xvc2U=
+    x-origin: !binary |-
+      dmFybmlzaDE=
+    x-cache: !binary |-
+      TUlTUw==
+  :body: !binary |-
+    eyJtYW51ZmFjdHVyZXJzIjpbeyJpZCI6MTEzOSwibmFtZSI6IkRlbGwiLCJp
+    bWFnZV91cmwiOiJodHRwOi8vYi5zY2RuLmdyL2ltYWdlcy9tYW51ZmFjdHVy
+    ZXJfbG9nb3MvMDAwMDAxLzExMzkvNTg1NGNjNWRjYjY5NDE0OGE1NTZkMWIz
+    YzMxNzg4NzYuanBnIn0seyJpZCI6Mjg4LCJuYW1lIjoiTGVub3ZvIiwiaW1h
+    Z2VfdXJsIjoiaHR0cDovL2Euc2Nkbi5nci9pbWFnZXMvbWFudWZhY3R1cmVy
+    X2xvZ29zLzAwMDAwMC8yODgvMTUyZmM2ZGI1MWVlOTdjMzcwZDkzMDcyOWRh
+    ZWE1OTMuanBnIn1dLCJtZXRhIjp7InBhZ2luYXRpb24iOnsidG90YWxfcmVz
+    dWx0cyI6MTQsInRvdGFsX3BhZ2VzIjo3LCJwYWdlIjoxLCJwZXIiOjJ9fX0=

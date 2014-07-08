@@ -1,96 +1,97 @@
 ---
 :request:
+  :url: http://skroutz.gr/api/categories?page=1&per=5
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3
+    :authorization: Bearer 5JN7RHwWJ9ZPSBEKo0/bskSR0IOfNtETjwmMOPsGKZiXrRnP71w7cZbDZFKBaeNoJAyIKRMKjXeaBeF40Uxg==
   :verb: GET
-  :path: /categories
-  :params:
-    page: '1'
-    per: '5'
-:status: 200
-:headers:
-  server: !binary |-
-    bmdpbng=
-  content-type: !binary |-
-    YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-  !binary "dmFyeQ==": !binary |-
-    QWNjZXB0LUVuY29kaW5n
-  status: !binary |-
-    MjAwIE9L
-  x-ua-compatible: !binary |-
-    SUU9RWRnZSxjaHJvbWU9MQ==
-  cache-control: !binary |-
-    bWF4LWFnZT0wLCBwcml2YXRlLCBtdXN0LXJldmFsaWRhdGU=
-  x-request-id: !binary |-
-    MjI3MjU5MDQ2Mg==
-  x-runtime: !binary |-
-    MC4wNjU0ODE=
-  x-dns-prefetch-control: !binary |-
-    b2Zm
-  x-app: !binary |-
-    YmVuank=
-  content-length: !binary |-
-    NDQz
-  accept-ranges: !binary |-
-    Ynl0ZXM=
-  date: !binary |-
-    TW9uLCAyMyBKdW4gMjAxNCAxMjo0NzozMyBHTVQ=
-  x-varnish: !binary |-
-    MjI3MjU5MDQ2Mg==
-  age: !binary |-
-    MA==
-  via: !binary |-
-    MS4xIHZhcm5pc2g=
-  connection: !binary |-
-    Y2xvc2U=
-  x-origin: !binary |-
-    dmFybmlzaDI=
-  x-cache: !binary |-
-    TUlTUw==
-:body: !binary |-
-  eyJjYXRlZ29yaWVzIjpbeyJpZCI6MTI2OSwibmFtZSI6Ilx1MDNhNFx1MDNi
-  NVx1MDNjN1x1MDNiZFx1MDNiZlx1MDNiYlx1MDNiZlx1MDNiM1x1MDNhZlx1
-  MDNiMSIsImNoaWxkcmVuX2NvdW50Ijo4LCJpbWFnZV91cmwiOiJodHRwOi8v
-  Yi5zY2RuLmdyL2ltYWdlcy9jYXRlZ29yaWVzL2xhcmdlLzEyNjkuanBnIiwi
-  cGFyZW50X2lkIjo3NiwiZmFzaGlvbiI6ZmFsc2UsInNob3dfc3BlY2lmaWNh
-  dGlvbnMiOmZhbHNlLCJtYW51ZmFjdHVyZXJfdGl0bGUiOiJcdTAzOWFcdTAz
-  YjFcdTAzYzRcdTAzYjFcdTAzYzNcdTAzYmFcdTAzYjVcdTAzYzVcdTAzYjFc
-  dTAzYzNcdTAzYzRcdTAzYWRcdTAzYzIifSx7ImlkIjoyNzQsIm5hbWUiOiJc
-  dTAzOWNcdTAzY2NcdTAzYjRcdTAzYjEgLSBcdTAzOWZcdTAzYmNcdTAzYmZc
-  dTAzYzFcdTAzYzZcdTAzYjlcdTAzYWMiLCJjaGlsZHJlbl9jb3VudCI6MTIs
-  ImltYWdlX3VybCI6Imh0dHA6Ly9kLnNjZG4uZ3IvaW1hZ2VzL2NhdGVnb3Jp
-  ZXMvbGFyZ2UvMjc0LmpwZyIsInBhcmVudF9pZCI6NzYsImZhc2hpb24iOmZh
-  bHNlLCJzaG93X3NwZWNpZmljYXRpb25zIjpmYWxzZSwibWFudWZhY3R1cmVy
-  X3RpdGxlIjoiXHUwMzlhXHUwM2IxXHUwM2M0XHUwM2IxXHUwM2MzXHUwM2Jh
-  XHUwM2I1XHUwM2M1XHUwM2IxXHUwM2MzXHUwM2M0XHUwM2FkXHUwM2MyIn0s
-  eyJpZCI6NDE3LCJuYW1lIjoiXHUwM2EwXHUwM2IxXHUwM2I5XHUwM2I0XHUw
-  M2I5XHUwM2JhXHUwM2FjIC0gXHUwMzkyXHUwM2MxXHUwM2I1XHUwM2M2XHUw
-  M2I5XHUwM2JhXHUwM2FjIiwiY2hpbGRyZW5fY291bnQiOjE0LCJpbWFnZV91
-  cmwiOiJodHRwOi8vYS5zY2RuLmdyL2ltYWdlcy9jYXRlZ29yaWVzL2xhcmdl
-  LzQxNy5qcGciLCJwYXJlbnRfaWQiOjc2LCJmYXNoaW9uIjpmYWxzZSwic2hv
-  d19zcGVjaWZpY2F0aW9ucyI6ZmFsc2UsIm1hbnVmYWN0dXJlcl90aXRsZSI6
-  Ilx1MDM5YVx1MDNiMVx1MDNjNFx1MDNiMVx1MDNjM1x1MDNiYVx1MDNiNVx1
-  MDNjNVx1MDNiMVx1MDNjM1x1MDNjNFx1MDNhZFx1MDNjMiJ9LHsiaWQiOjI1
-  NSwibmFtZSI6IkhvYmJ5IC0gXHUwMzkxXHUwM2I4XHUwM2JiXHUwM2I3XHUw
-  M2M0XHUwM2I5XHUwM2MzXHUwM2JjXHUwM2NjXHUwM2MyIiwiY2hpbGRyZW5f
-  Y291bnQiOjEwLCJpbWFnZV91cmwiOiJodHRwOi8vYS5zY2RuLmdyL2ltYWdl
-  cy9jYXRlZ29yaWVzL2xhcmdlLzI1NS5qcGciLCJwYXJlbnRfaWQiOjc2LCJm
-  YXNoaW9uIjpmYWxzZSwic2hvd19zcGVjaWZpY2F0aW9ucyI6ZmFsc2UsIm1h
-  bnVmYWN0dXJlcl90aXRsZSI6Ilx1MDM5YVx1MDNiMVx1MDNjNFx1MDNiMVx1
-  MDNjM1x1MDNiYVx1MDNiNVx1MDNjNVx1MDNiMVx1MDNjM1x1MDNjNFx1MDNh
-  ZFx1MDNjMiJ9LHsiaWQiOjExLCJuYW1lIjoiXHUwM2EzXHUwM2MwXHUwM2Fm
-  XHUwM2M0XHUwM2I5IC0gXHUwMzlhXHUwM2FlXHUwM2MwXHUwM2JmXHUwM2My
-  IiwiY2hpbGRyZW5fY291bnQiOjEzLCJpbWFnZV91cmwiOiJodHRwOi8vZC5z
-  Y2RuLmdyL2ltYWdlcy9jYXRlZ29yaWVzL2xhcmdlLzExLmpwZyIsInBhcmVu
-  dF9pZCI6NzYsImZhc2hpb24iOmZhbHNlLCJzaG93X3NwZWNpZmljYXRpb25z
-  IjpmYWxzZSwibWFudWZhY3R1cmVyX3RpdGxlIjoiXHUwMzlhXHUwM2IxXHUw
-  M2M0XHUwM2IxXHUwM2MzXHUwM2JhXHUwM2I1XHUwM2M1XHUwM2IxXHUwM2Mz
-  XHUwM2M0XHUwM2FkXHUwM2MyIn0seyJpZCI6MzMsIm5hbWUiOiJBdXRvIC0g
-  TW90byIsImNoaWxkcmVuX2NvdW50Ijo0LCJpbWFnZV91cmwiOiJodHRwOi8v
-  YS5zY2RuLmdyL2ltYWdlcy9jYXRlZ29yaWVzL2xhcmdlLzMzLmpwZyIsInBh
-  cmVudF9pZCI6NzYsImZhc2hpb24iOmZhbHNlLCJzaG93X3NwZWNpZmljYXRp
-  b25zIjpmYWxzZSwibWFudWZhY3R1cmVyX3RpdGxlIjoiXHUwMzlhXHUwM2Ix
-  XHUwM2M0XHUwM2IxXHUwM2MzXHUwM2JhXHUwM2I1XHUwM2M1XHUwM2IxXHUw
-  M2MzXHUwM2M0XHUwM2FkXHUwM2MyIn1dLCJtZXRhIjp7InBhZ2luYXRpb24i
-  OnsidG90YWxfcmVzdWx0cyI6NiwidG90YWxfcGFnZXMiOjEsInBhZ2UiOjEs
-  InBlciI6MjV9fX0=
+:response:
+  :status: 200
+  :headers: !ruby/hash:Faraday::Utils::Headers
+    server: !binary |-
+      bmdpbng=
+    content-type: !binary |-
+      YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
+    !binary "dmFyeQ==": !binary |-
+      QWNjZXB0LUVuY29kaW5n
+    status: !binary |-
+      MjAwIE9L
+    cache-control: !binary |-
+      bWF4LWFnZT0zMDAsIHByaXZhdGU=
+    x-ua-compatible: !binary |-
+      SUU9RWRnZSxjaHJvbWU9MQ==
+    x-request-id: !binary |-
+      MjM2MTI4MjY2Ng==
+    x-runtime: !binary |-
+      MC4wMzE1Mjg=
+    x-dns-prefetch-control: !binary |-
+      b2Zm
+    x-app: !binary |-
+      bHVua3dpbGw=
+    content-length: !binary |-
+      NDQy
+    accept-ranges: !binary |-
+      Ynl0ZXM=
+    date: !binary |-
+      TW9uLCAwNyBKdWwgMjAxNCAxMzowNDo0NSBHTVQ=
+    x-varnish: !binary |-
+      MjM2MTI4MjY2Ng==
+    age: !binary |-
+      MA==
+    via: !binary |-
+      MS4xIHZhcm5pc2g=
+    connection: !binary |-
+      Y2xvc2U=
+    x-origin: !binary |-
+      dmFybmlzaDI=
+    x-cache: !binary |-
+      TUlTUw==
+  :body: !binary |-
+    eyJjYXRlZ29yaWVzIjpbeyJpZCI6MTI2OSwibmFtZSI6Ilx1MDNhNFx1MDNi
+    NVx1MDNjN1x1MDNiZFx1MDNiZlx1MDNiYlx1MDNiZlx1MDNiM1x1MDNhZlx1
+    MDNiMSIsImNoaWxkcmVuX2NvdW50Ijo4LCJpbWFnZV91cmwiOiJodHRwOi8v
+    Yi5zY2RuLmdyL2ltYWdlcy9jYXRlZ29yaWVzL2xhcmdlLzEyNjkuanBnIiwi
+    cGFyZW50X2lkIjo3NiwiZmFzaGlvbiI6ZmFsc2UsInNob3dfc3BlY2lmaWNh
+    dGlvbnMiOmZhbHNlLCJtYW51ZmFjdHVyZXJfdGl0bGUiOiJcdTAzOWFcdTAz
+    YjFcdTAzYzRcdTAzYjFcdTAzYzNcdTAzYmFcdTAzYjVcdTAzYzVcdTAzYjFc
+    dTAzYzNcdTAzYzRcdTAzYWRcdTAzYzIifSx7ImlkIjoyNzQsIm5hbWUiOiJc
+    dTAzOWNcdTAzY2NcdTAzYjRcdTAzYjEgLSBcdTAzOWZcdTAzYmNcdTAzYmZc
+    dTAzYzFcdTAzYzZcdTAzYjlcdTAzYWMiLCJjaGlsZHJlbl9jb3VudCI6MTIs
+    ImltYWdlX3VybCI6Imh0dHA6Ly9kLnNjZG4uZ3IvaW1hZ2VzL2NhdGVnb3Jp
+    ZXMvbGFyZ2UvMjc0LmpwZyIsInBhcmVudF9pZCI6NzYsImZhc2hpb24iOmZh
+    bHNlLCJzaG93X3NwZWNpZmljYXRpb25zIjpmYWxzZSwibWFudWZhY3R1cmVy
+    X3RpdGxlIjoiXHUwMzlhXHUwM2IxXHUwM2M0XHUwM2IxXHUwM2MzXHUwM2Jh
+    XHUwM2I1XHUwM2M1XHUwM2IxXHUwM2MzXHUwM2M0XHUwM2FkXHUwM2MyIn0s
+    eyJpZCI6NDE3LCJuYW1lIjoiXHUwM2EwXHUwM2IxXHUwM2I5XHUwM2I0XHUw
+    M2I5XHUwM2JhXHUwM2FjIC0gXHUwMzkyXHUwM2MxXHUwM2I1XHUwM2M2XHUw
+    M2I5XHUwM2JhXHUwM2FjIiwiY2hpbGRyZW5fY291bnQiOjE0LCJpbWFnZV91
+    cmwiOiJodHRwOi8vYS5zY2RuLmdyL2ltYWdlcy9jYXRlZ29yaWVzL2xhcmdl
+    LzQxNy5qcGciLCJwYXJlbnRfaWQiOjc2LCJmYXNoaW9uIjpmYWxzZSwic2hv
+    d19zcGVjaWZpY2F0aW9ucyI6ZmFsc2UsIm1hbnVmYWN0dXJlcl90aXRsZSI6
+    Ilx1MDM5YVx1MDNiMVx1MDNjNFx1MDNiMVx1MDNjM1x1MDNiYVx1MDNiNVx1
+    MDNjNVx1MDNiMVx1MDNjM1x1MDNjNFx1MDNhZFx1MDNjMiJ9LHsiaWQiOjI1
+    NSwibmFtZSI6IkhvYmJ5IC0gXHUwMzkxXHUwM2I4XHUwM2JiXHUwM2I3XHUw
+    M2M0XHUwM2I5XHUwM2MzXHUwM2JjXHUwM2NjXHUwM2MyIiwiY2hpbGRyZW5f
+    Y291bnQiOjEwLCJpbWFnZV91cmwiOiJodHRwOi8vYS5zY2RuLmdyL2ltYWdl
+    cy9jYXRlZ29yaWVzL2xhcmdlLzI1NS5qcGciLCJwYXJlbnRfaWQiOjc2LCJm
+    YXNoaW9uIjpmYWxzZSwic2hvd19zcGVjaWZpY2F0aW9ucyI6ZmFsc2UsIm1h
+    bnVmYWN0dXJlcl90aXRsZSI6Ilx1MDM5YVx1MDNiMVx1MDNjNFx1MDNiMVx1
+    MDNjM1x1MDNiYVx1MDNiNVx1MDNjNVx1MDNiMVx1MDNjM1x1MDNjNFx1MDNh
+    ZFx1MDNjMiJ9LHsiaWQiOjExLCJuYW1lIjoiXHUwM2EzXHUwM2MwXHUwM2Fm
+    XHUwM2M0XHUwM2I5IC0gXHUwMzlhXHUwM2FlXHUwM2MwXHUwM2JmXHUwM2My
+    IiwiY2hpbGRyZW5fY291bnQiOjEyLCJpbWFnZV91cmwiOiJodHRwOi8vZC5z
+    Y2RuLmdyL2ltYWdlcy9jYXRlZ29yaWVzL2xhcmdlLzExLmpwZyIsInBhcmVu
+    dF9pZCI6NzYsImZhc2hpb24iOmZhbHNlLCJzaG93X3NwZWNpZmljYXRpb25z
+    IjpmYWxzZSwibWFudWZhY3R1cmVyX3RpdGxlIjoiXHUwMzlhXHUwM2IxXHUw
+    M2M0XHUwM2IxXHUwM2MzXHUwM2JhXHUwM2I1XHUwM2M1XHUwM2IxXHUwM2Mz
+    XHUwM2M0XHUwM2FkXHUwM2MyIn0seyJpZCI6MzMsIm5hbWUiOiJBdXRvIC0g
+    TW90byIsImNoaWxkcmVuX2NvdW50Ijo0LCJpbWFnZV91cmwiOiJodHRwOi8v
+    YS5zY2RuLmdyL2ltYWdlcy9jYXRlZ29yaWVzL2xhcmdlLzMzLmpwZyIsInBh
+    cmVudF9pZCI6NzYsImZhc2hpb24iOmZhbHNlLCJzaG93X3NwZWNpZmljYXRp
+    b25zIjpmYWxzZSwibWFudWZhY3R1cmVyX3RpdGxlIjoiXHUwMzlhXHUwM2Ix
+    XHUwM2M0XHUwM2IxXHUwM2MzXHUwM2JhXHUwM2I1XHUwM2M1XHUwM2IxXHUw
+    M2MzXHUwM2M0XHUwM2FkXHUwM2MyIn1dLCJtZXRhIjp7InBhZ2luYXRpb24i
+    OnsidG90YWxfcmVzdWx0cyI6NiwidG90YWxfcGFnZXMiOjEsInBhZ2UiOjEs
+    InBlciI6MjV9fX0=
 :meta:
-  description: Lists all categories
+  :description: Lists all categories
