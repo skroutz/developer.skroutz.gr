@@ -1,24 +1,79 @@
 ---
 :request:
-  :verb: GET
-  :path: /search?q=ipone
+  :url: http://skroutz.gr/api/search?q=ipone
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3
+    :authorization: Bearer 5JN7RHwWJ9ZPSBEKo0/bskSR0IOfNtETjwmMOPsGKZiXrRnP71w7cZbDZFKBaeNoJAyIKRMKjXeaBeF40Uxg==
   :params:
-    page: 1
-    per: 2
-:status: 200
-:headers:
-  content-type: application/json; charset=utf-8
-  x-meta-request-version: 0.2.1
-  x-ua-compatible: IE=Edge,chrome=1
-  etag: '"6ea9227bf5be007b924bbb9413513417"'
-  cache-control: max-age=0, private, must-revalidate
-  x-request-id: b2ca38de3eb1fb097815908eb65a5ffa
-  x-runtime: '5.086707'
-  server: WEBrick/1.3.1 (Ruby/1.9.3/2012-11-10)
-  date: Fri, 07 Mar 2014 10:55:31 GMT
-  content-length: '399'
-  connection: close
-  set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTBiOGNlNWRiYjJiMTBiY2UwMWZmMzQ5NWY3YjQ1NGUxBjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--8e9878b13d70788bb4c82c455e60c43359812e38;
-    path=/; expires=Wed, 07-May-2014 09:55:31 GMT; HttpOnly
-:body: '{"categories":[{"id":581,"name":"\u03a6\u03bf\u03c1\u03c4\u03b9\u03c3\u03c4\u03ad\u03c2
-  \u039a\u03b9\u03bd\u03b7\u03c4\u03ce\u03bd \u03a4\u03b7\u03bb\u03b5\u03c6\u03ce\u03bd\u03c9\u03bd","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/581.jpg","parent_id":86}],"meta":{"alternatives":[],"strong_matches":{},"pagination":{"total_results":1,"total_pages":1,"page":1,"per":2}}}'
+    :page: 1
+    :per: 2
+  :verb: GET
+:response:
+  :status: 200
+  :headers: !ruby/hash:Faraday::Utils::Headers
+    server: !binary |-
+      bmdpbng=
+    content-type: !binary |-
+      YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
+    !binary "dmFyeQ==": !binary |-
+      QWNjZXB0LUVuY29kaW5n
+    status: !binary |-
+      MjAwIE9L
+    !binary "bGluaw==": !binary |-
+      PGh0dHA6Ly9hcGkuc2tyb3V0ei5nci9hcGkvc2VhcmNoP3BhZ2U9MyZwZXI9
+      MiZxPWlwb25lPjsgcmVsPSJsYXN0IiwgPGh0dHA6Ly9hcGkuc2tyb3V0ei5n
+      ci9hcGkvc2VhcmNoP3BhZ2U9MiZwZXI9MiZxPWlwb25lPjsgcmVsPSJuZXh0
+      Ig==
+    x-ua-compatible: !binary |-
+      SUU9RWRnZSxjaHJvbWU9MQ==
+    cache-control: !binary |-
+      bWF4LWFnZT0wLCBwcml2YXRlLCBtdXN0LXJldmFsaWRhdGU=
+    x-request-id: !binary |-
+      MjM2MTMwMDgzNA==
+    x-runtime: !binary |-
+      MC4wNzYzNDY=
+    x-dns-prefetch-control: !binary |-
+      b2Zm
+    x-app: !binary |-
+      bHVua3dpbGw=
+    content-length: !binary |-
+      Mzkw
+    accept-ranges: !binary |-
+      Ynl0ZXM=
+    date: !binary |-
+      TW9uLCAwNyBKdWwgMjAxNCAxMzowNzoyMCBHTVQ=
+    x-varnish: !binary |-
+      MjM2MTMwMDgzNA==
+    age: !binary |-
+      MA==
+    via: !binary |-
+      MS4xIHZhcm5pc2g=
+    connection: !binary |-
+      Y2xvc2U=
+    x-origin: !binary |-
+      dmFybmlzaDI=
+    x-cache: !binary |-
+      TUlTUw==
+  :body: !binary |-
+    eyJjYXRlZ29yaWVzIjpbeyJpZCI6MTIyOSwibmFtZSI6Ilx1MDM5Ylx1MDNi
+    OVx1MDNjMFx1MDNiMVx1MDNiZFx1MDNjNFx1MDNiOVx1MDNiYVx1MDNhYyBN
+    b3RvIiwiY2hpbGRyZW5fY291bnQiOjAsImltYWdlX3VybCI6Imh0dHA6Ly9k
+    LnNjZG4uZ3IvaW1hZ2VzL2NhdGVnb3JpZXMvbGFyZ2UvMTIyOS5qcGciLCJw
+    YXJlbnRfaWQiOjEyMjcsImZhc2hpb24iOmZhbHNlLCJzaG93X3NwZWNpZmlj
+    YXRpb25zIjpmYWxzZSwibWFudWZhY3R1cmVyX3RpdGxlIjoiXHUwMzlhXHUw
+    M2IxXHUwM2M0XHUwM2IxXHUwM2MzXHUwM2JhXHUwM2I1XHUwM2M1XHUwM2Ix
+    XHUwM2MzXHUwM2M0XHUwM2FkXHUwM2MyIiwibWF0Y2hfY291bnQiOjI0fSx7
+    ImlkIjoxMjU3LCJuYW1lIjoiXHUwMzlhXHUwM2IxXHUwM2I4XHUwM2IxXHUw
+    M2MxXHUwM2I5XHUwM2MzXHUwM2JjXHUwM2NjXHUwM2MyICYgXHUwM2EwXHUw
+    M2I1XHUwM2MxXHUwM2I5XHUwM2MwXHUwM2JmXHUwM2FmXHUwM2I3XHUwM2Mz
+    XHUwM2I3IFx1MDM5Y1x1MDNiZlx1MDNjNFx1MDNiZlx1MDNjM1x1MDNjNVx1
+    MDNiYVx1MDNiYlx1MDNhZFx1MDNjNFx1MDNiMVx1MDNjMiIsImNoaWxkcmVu
+    X2NvdW50IjowLCJpbWFnZV91cmwiOiJodHRwOi8vYy5zY2RuLmdyL2ltYWdl
+    cy9jYXRlZ29yaWVzL2xhcmdlLzEyNTcuanBnIiwicGFyZW50X2lkIjo1Nzcs
+    ImZhc2hpb24iOmZhbHNlLCJzaG93X3NwZWNpZmljYXRpb25zIjpmYWxzZSwi
+    bWFudWZhY3R1cmVyX3RpdGxlIjoiXHUwMzlhXHUwM2IxXHUwM2M0XHUwM2Ix
+    XHUwM2MzXHUwM2JhXHUwM2I1XHUwM2M1XHUwM2IxXHUwM2MzXHUwM2M0XHUw
+    M2FkXHUwM2MyIiwibWF0Y2hfY291bnQiOjI1fV0sIm1ldGEiOnsiYWx0ZXJu
+    YXRpdmVzIjpbeyJ0ZXJtIjoiaXBob25lIiwiaW1wb3J0YW50IjpmYWxzZX1d
+    LCJzdHJvbmdfbWF0Y2hlcyI6e30sInBhZ2luYXRpb24iOnsidG90YWxfcmVz
+    dWx0cyI6NSwidG90YWxfcGFnZXMiOjMsInBhZ2UiOjEsInBlciI6Mn19fQ==

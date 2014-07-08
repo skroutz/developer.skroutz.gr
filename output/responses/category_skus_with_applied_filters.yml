@@ -1,46 +1,50 @@
 ---
 :request:
-  :verb: GET
-  :path: /categories/40/skus?include_meta=applied_filters&filter_ids[]=6273&manufacturer_ids=28
+  :url: http://skroutz.gr/api/categories/40/skus?include_meta=applied_filters&filter_ids[]=6273&manufacturer_ids=28
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3
+    :authorization: Bearer 5JN7RHwWJ9ZPSBEKo0/bskSR0IOfNtETjwmMOPsGKZiXrRnP71w7cZbDZFKBaeNoJAyIKRMKjXeaBeF40Uxg==
   :params:
-    per: 1
-:status: 404
-:headers:
-  server: !binary |-
-    bmdpbng=
-  content-type: !binary |-
-    YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-  !binary "dmFyeQ==": !binary |-
-    QWNjZXB0LUVuY29kaW5n
-  status: !binary |-
-    NDA0IE5vdCBGb3VuZA==
-  x-ua-compatible: !binary |-
-    SUU9RWRnZSxjaHJvbWU9MQ==
-  cache-control: !binary |-
-    bm8tY2FjaGU=
-  x-request-id: !binary |-
-    MjI3MjU5MDg5MA==
-  x-runtime: !binary |-
-    MC4wMjg4Nzg=
-  x-app: !binary |-
-    YmVuank=
-  content-length: !binary |-
-    NjI=
-  accept-ranges: !binary |-
-    Ynl0ZXM=
-  date: !binary |-
-    TW9uLCAyMyBKdW4gMjAxNCAxMjo0NzozNiBHTVQ=
-  x-varnish: !binary |-
-    MjI3MjU5MDg5MA==
-  age: !binary |-
-    MA==
-  via: !binary |-
-    MS4xIHZhcm5pc2g=
-  connection: !binary |-
-    Y2xvc2U=
-  x-origin: !binary |-
-    dmFybmlzaDI=
-  x-cache: !binary |-
-    TUlTUw==
-:body: !binary |-
-  WW91IHJlcXVlc3RlZCBzb21ldGhpbmcgdGhhdCBkb2VzIG5vdCBleGlzdA==
+    :per: 1
+  :verb: GET
+:response:
+  :status: 404
+  :headers: !ruby/hash:Faraday::Utils::Headers
+    server: !binary |-
+      bmdpbng=
+    content-type: !binary |-
+      YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
+    !binary "dmFyeQ==": !binary |-
+      QWNjZXB0LUVuY29kaW5n
+    status: !binary |-
+      NDA0IE5vdCBGb3VuZA==
+    x-ua-compatible: !binary |-
+      SUU9RWRnZSxjaHJvbWU9MQ==
+    cache-control: !binary |-
+      bm8tY2FjaGU=
+    x-request-id: !binary |-
+      MjM2MTMwNDg1MQ==
+    x-runtime: !binary |-
+      MC4wMzQ1Njc=
+    x-app: !binary |-
+      bHVua3dpbGw=
+    content-length: !binary |-
+      NjI=
+    accept-ranges: !binary |-
+      Ynl0ZXM=
+    date: !binary |-
+      TW9uLCAwNyBKdWwgMjAxNCAxMzowNzo1MyBHTVQ=
+    x-varnish: !binary |-
+      MjM2MTMwNDg1MQ==
+    age: !binary |-
+      MA==
+    via: !binary |-
+      MS4xIHZhcm5pc2g=
+    connection: !binary |-
+      Y2xvc2U=
+    x-origin: !binary |-
+      dmFybmlzaDI=
+    x-cache: !binary |-
+      TUlTUw==
+  :body: !binary |-
+    WW91IHJlcXVlc3RlZCBzb21ldGhpbmcgdGhhdCBkb2VzIG5vdCBleGlzdA==

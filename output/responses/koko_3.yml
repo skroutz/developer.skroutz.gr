@@ -1,0 +1,63 @@
+---
+:request:
+  :url: http://skroutz.gr/api/categories/1105/skus?manufacturer_ids[]=288&page=3
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3
+    :authorization: Bearer 5JN7RHwWJ9ZPSBEKo0/bskSR0IOfNtETjwmMOPsGKZiXrRnP71w7cZbDZFKBaeNoJAyIKRMKjXeaBeF40Uxg==
+  :verb: GET
+:response:
+  :status: 200
+  :headers:
+    server: nginx
+    content-type: application/json; charset=utf-8
+    !binary "dmFyeQ==": Accept-Encoding
+    status: 200 OK
+    x-ua-compatible: IE=Edge,chrome=1
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '3345862810'
+    x-runtime: '0.075306'
+    x-dns-prefetch-control: 'off'
+    x-app: lunkwill
+    content-length: '1068'
+    accept-ranges: bytes
+    date: Fri, 04 Jul 2014 10:34:19 GMT
+    x-varnish: '3345862810'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: varnish1
+    x-cache: MISS
+  :body: ! '{"skus":[{"id":3603467,"ean":"","pn":"N3Z6NUK","name":"ThinkPad Helix
+    3698 (i5-3337U/4GB/128GB)","display_name":"Lenovo ThinkPad Helix 3698 (i5-3337U/4GB/128GB)","category_id":1105,"first_product_shop_info":"597|Bestdeals|bestdeals","click_url":null,"price_max":1799.0,"price_min":1799.0,"reviewscore":0.0,"shop_count":1,"plain_spec_summary":"\u039f\u03b8\u03cc\u03bd\u03b7:
+    11.6\", 1920 x 1080 pixels, \u03a4\u03b1\u03c7\u03cd\u03c4\u03b7\u03c4\u03b1 \u0395\u03c0\u03b5\u03be\u03b5\u03c1\u03b3\u03b1\u03c3\u03c4\u03ae:
+    1800 MHz, \u03a0\u03c5\u03c1\u03ae\u03bd\u03b5\u03c2 \u0395\u03c0\u03b5\u03be\u03b5\u03c1\u03b3\u03b1\u03c3\u03c4\u03ae:
+    2, \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc: Windows,
+    \u039c\u03bd\u03ae\u03bc\u03b7 RAM: 4 GB, \u0394\u03af\u03ba\u03c4\u03c5\u03bf
+    \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2: N/A, Media: \u0388\u03be\u03bf\u03b4\u03bf\u03c2
+    \u0391\u03ba\u03bf\u03c5\u03c3\u03c4\u03b9\u03ba\u03ce\u03bd / Audio / USB","manufacturer_id":288,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://a.scdn.gr/images/sku_main_images/003603/3603467/medium_Helix_203698.jpg","alternatives":["http://c.scdn.gr/images/sku_images/010964/10964217/Helix_203698_20sec.jpg"]}},{"id":3479138,"ean":"","pn":"36984SU","name":"ThinkPad
+    Helix 3698 (i7-3667U/8GB/256GB) (36984SU)","display_name":"Lenovo ThinkPad Helix
+    3698 (i7-3667U/8GB/256GB) (36984SU)","category_id":1105,"first_product_shop_info":"597|Bestdeals|bestdeals","click_url":null,"price_max":2099.0,"price_min":2099.0,"reviewscore":0.0,"shop_count":1,"plain_spec_summary":"\u039f\u03b8\u03cc\u03bd\u03b7:
+    11.6\", 1920 x 1080 pixels, \u03a4\u03b1\u03c7\u03cd\u03c4\u03b7\u03c4\u03b1 \u0395\u03c0\u03b5\u03be\u03b5\u03c1\u03b3\u03b1\u03c3\u03c4\u03ae:
+    2000 MHz, \u03a0\u03c5\u03c1\u03ae\u03bd\u03b5\u03c2 \u0395\u03c0\u03b5\u03be\u03b5\u03c1\u03b3\u03b1\u03c3\u03c4\u03ae:
+    2, \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc: Windows,
+    \u039c\u03bd\u03ae\u03bc\u03b7 RAM: 8 GB, \u0394\u03af\u03ba\u03c4\u03c5\u03bf
+    \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2: N/A, Media: \u0388\u03be\u03bf\u03b4\u03bf\u03c2
+    \u0391\u03ba\u03bf\u03c5\u03c3\u03c4\u03b9\u03ba\u03ce\u03bd / Audio / USB","manufacturer_id":288,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://a.scdn.gr/images/sku_main_images/003479/3479138/medium_36382_Helix.jpg","alternatives":["http://b.scdn.gr/images/sku_images/010491/10491477/36382_Helix_20sec.jpg"]}},{"id":3210998,"ean":"","pn":"N3Z6CUK","name":"ThinkPad
+    Helix 3698 (i7-3667U/8GB/256GB)","display_name":"Lenovo ThinkPad Helix 3698 (i7-3667U/8GB/256GB)","category_id":1105,"first_product_shop_info":"597|Bestdeals|bestdeals","click_url":null,"price_max":2449.0,"price_min":2449.0,"reviewscore":0.0,"shop_count":1,"plain_spec_summary":"\u039f\u03b8\u03cc\u03bd\u03b7:
+    11.6\", 1920 x 1080 pixels, \u03a4\u03b1\u03c7\u03cd\u03c4\u03b7\u03c4\u03b1 \u0395\u03c0\u03b5\u03be\u03b5\u03c1\u03b3\u03b1\u03c3\u03c4\u03ae:
+    2000 MHz, \u03a0\u03c5\u03c1\u03ae\u03bd\u03b5\u03c2 \u0395\u03c0\u03b5\u03be\u03b5\u03c1\u03b3\u03b1\u03c3\u03c4\u03ae:
+    2, \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc: Windows,
+    \u039c\u03bd\u03ae\u03bc\u03b7 RAM: 8 GB, \u0394\u03af\u03ba\u03c4\u03c5\u03bf
+    \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2: N/A, Media: Mic In / \u0388\u03be\u03bf\u03b4\u03bf\u03c2
+    \u0391\u03ba\u03bf\u03c5\u03c3\u03c4\u03b9\u03ba\u03ce\u03bd / Audio / USB","manufacturer_id":288,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://a.scdn.gr/images/sku_main_images/003210/3210998/medium_lenovo-convertibles_screenshot_20121207130425_4_original.jpg","alternatives":["http://d.scdn.gr/images/sku_images/008286/8286736/9433993_xxlg.jpg"]}},{"id":3793032,"ean":"","pn":"N3Z6CGM
+    N3Z45GM","name":"ThinkPad Helix (i7-3667U/8GB/256GB)","display_name":"Lenovo ThinkPad
+    Helix (i7-3667U/8GB/256GB)","category_id":1105,"first_product_shop_info":null,"click_url":null,"price_max":2617.44,"price_min":2589.0,"reviewscore":0.0,"shop_count":2,"plain_spec_summary":"\u039f\u03b8\u03cc\u03bd\u03b7:
+    11.6\", 1920 x 1080 pixels, \u03a4\u03b1\u03c7\u03cd\u03c4\u03b7\u03c4\u03b1 \u0395\u03c0\u03b5\u03be\u03b5\u03c1\u03b3\u03b1\u03c3\u03c4\u03ae:
+    2000 MHz, \u03a0\u03c5\u03c1\u03ae\u03bd\u03b5\u03c2 \u0395\u03c0\u03b5\u03be\u03b5\u03c1\u03b3\u03b1\u03c3\u03c4\u03ae:
+    2, \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc: Windows,
+    \u039c\u03bd\u03ae\u03bc\u03b7 RAM: 8 GB, \u0394\u03af\u03ba\u03c4\u03c5\u03bf
+    \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2: \u03a5\u03c0\u03bf\u03c3\u03c4\u03ae\u03c1\u03b9\u03be\u03b7
+    GSM / \u0395\u03bd\u03c3\u03c9\u03bc\u03b1\u03c4\u03c9\u03bc\u03ad\u03bd\u03bf
+    GPS, Media: Mic In / \u0388\u03be\u03bf\u03b4\u03bf\u03c2 \u0391\u03ba\u03bf\u03c5\u03c3\u03c4\u03b9\u03ba\u03ce\u03bd
+    / Audio / USB","manufacturer_id":288,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://b.scdn.gr/images/sku_main_images/003793/3793032/medium_36334_Helix.jpg","alternatives":["http://b.scdn.gr/images/sku_images/011229/11229673/lenovo-convertible-tablet-thinkPad-helix-stand-view-2.jpg","http://b.scdn.gr/images/sku_images/011229/11229674/lenovo-convertible-tablet-thinkPad-helix-tablet-view-with-keyboard-5.jpg","http://d.scdn.gr/images/sku_images/011229/11229675/lenovo-convertible-tablet-thinkPad-helix-back-view-with-keyboard-8.jpg","http://a.scdn.gr/images/sku_images/011229/11229676/lenovo-convertible-tablet-thinkPad-helix-front-multi-view-1.jpg"]}}],"meta":{"pagination":{"total_results":54,"total_pages":3,"page":3,"per":25}}}'
+:created_at: 2014-07-04 13:34:19.150394445 +03:00

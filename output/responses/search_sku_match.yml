@@ -1,100 +1,53 @@
 ---
 :request:
+  :url: http://skroutz.gr/api/search
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3
+    :authorization: Bearer 5JN7RHwWJ9ZPSBEKo0/bskSR0IOfNtETjwmMOPsGKZiXrRnP71w7cZbDZFKBaeNoJAyIKRMKjXeaBeF40Uxg==
+  :params:
+    :q: nikon%201%20j2
   :verb: GET
-  :path: /search?q=nikon%201%20j2
-:status: 200
-:headers:
-  server: !binary |-
-    bmdpbng=
-  !binary "Y29udGVudC10eXBl": !binary |-
-    YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-  !binary "dmFyeQ==": !binary |-
-    QWNjZXB0LUVuY29kaW5n
-  status: !binary |-
-    MjAwIE9L
-  x-ua-compatible: !binary |-
-    SUU9RWRnZSxjaHJvbWU9MQ==
-  cache-control: !binary |-
-    bWF4LWFnZT0wLCBwcml2YXRlLCBtdXN0LXJldmFsaWRhdGU=
-  x-request-id: !binary |-
-    MjQ4OTA5MTA1MQ==
-  x-runtime: !binary |-
-    MC4xMjU4NDQ=
-  x-dns-prefetch-control: !binary |-
-    b2Zm
-  x-app: !binary |-
-    ZnJhbmtpZQ==
-  content-length: !binary |-
-    ODQ0
-  accept-ranges: !binary |-
-    Ynl0ZXM=
-  date: !binary |-
-    V2VkLCAwNSBNYXIgMjAxNCAxMDo0Njo0MyBHTVQ=
-  x-varnish: !binary |-
-    MjQ4OTA5MTA1MQ==
-  age: !binary |-
-    MA==
-  via: !binary |-
-    MS4xIHZhcm5pc2g=
-  connection: !binary |-
-    Y2xvc2U=
-  x-origin: !binary |-
-    dmFybmlzaDE=
-  x-cache: !binary |-
-    TUlTUw==
-:body: !binary |-
-  eyJjYXRlZ29yaWVzIjpbeyJpZCI6NDM0LCJuYW1lIjoiXHUwM2E4XHUwM2I3
-  XHUwM2M2XHUwM2I5XHUwM2IxXHUwM2JhXHUwM2FkXHUwM2MyIFx1MDNhNlx1
-  MDNjOVx1MDNjNFx1MDNiZlx1MDNiM1x1MDNjMVx1MDNiMVx1MDNjNlx1MDNi
-  OVx1MDNiYVx1MDNhZFx1MDNjMiBcdTAzOWNcdTAzYjdcdTAzYzdcdTAzYjFc
-  dTAzYmRcdTAzYWRcdTAzYzIiLCJjaGlsZHJlbl9jb3VudCI6MCwiaW1hZ2Vf
-  dXJsIjoiaHR0cDovL2Quc2Nkbi5nci9pbWFnZXMvY2F0ZWdvcmllcy9sYXJn
-  ZS80MzQuanBnIiwicGFyZW50X2lkIjoyMzF9XSwibWV0YSI6eyJhbHRlcm5h
-  dGl2ZXMiOlt7InRlcm0iOiJuaWtvbiAxIiwiY291bnQiOjM4NiwiZHJvcCI6
-  W3sidG9rZW4iOiJuaWtvbiIsImRyb3BwZWQiOmZhbHNlfSx7InRva2VuIjoi
-  MSIsImRyb3BwZWQiOmZhbHNlfSx7InRva2VuIjoiajIiLCJkcm9wcGVkIjp0
-  cnVlfV0sImltcG9ydGFudCI6ZmFsc2V9LHsidGVybSI6Im5pa29uIGoyIiwi
-  Y291bnQiOjQsImRyb3AiOlt7InRva2VuIjoibmlrb24iLCJkcm9wcGVkIjpm
-  YWxzZX0seyJ0b2tlbiI6IjEiLCJkcm9wcGVkIjp0cnVlfSx7InRva2VuIjoi
-  ajIiLCJkcm9wcGVkIjpmYWxzZX1dLCJpbXBvcnRhbnQiOmZhbHNlfSx7InRl
-  cm0iOiIxIGoyIiwiY291bnQiOjIwMywiZHJvcCI6W3sidG9rZW4iOiJuaWtv
-  biIsImRyb3BwZWQiOnRydWV9LHsidG9rZW4iOiIxIiwiZHJvcHBlZCI6ZmFs
-  c2V9LHsidG9rZW4iOiJqMiIsImRyb3BwZWQiOmZhbHNlfV0sImltcG9ydGFu
-  dCI6ZmFsc2V9XSwic3Ryb25nX21hdGNoZXMiOnsic2t1Ijp7ImlkIjoyMjg3
-  NzM3LCJlYW4iOiIiLCJwbiI6IlZWQTE2NkswMDEgVlZBMTY1SzAwMSBWVkEx
-  NjZLMDA1IFZWQTE2NUswMDUgVlZBMTY0SzAwNSBWVkExNjFLMDA1IFZWQTE2
-  MUswMDMgVlZBMTYzSzAwMSBWVkExNjJLMDAxIFZWQTE2MUswMDEgVlZBMTY0
-  SzAwMSBWVkExNjNLMDA1IFZWQTE2MkswMDUiLCJuYW1lIjoiMSBKMiBLaXQi
-  LCJkaXNwbGF5X25hbWUiOiJOaWtvbiAxIEoyIEtpdCIsImNhdGVnb3J5X2lk
-  Ijo0MzQsImZpcnN0X3Byb2R1Y3Rfc2hvcF9pbmZvIjpudWxsLCJjbGlja191
-  cmwiOm51bGwsInByaWNlX21heCI6NTgwLjI1LCJwcmljZV9taW4iOjIxOS4w
-  LCJyZXZpZXdzY29yZSI6NS4wLCJzaG9wX2NvdW50Ijo5LCJwbGFpbl9zcGVj
-  X3N1bW1hcnkiOiJEU0xSIEtpdCwgMTAuMSBNUCwgXHUwMzkxXHUwM2I5XHUw
-  M2MzXHUwM2I4XHUwM2I3XHUwM2M0XHUwM2FlXHUwM2MxXHUwM2IxXHUwM2My
-  OiBDTU9TLCBcdTAzOWZcdTAzYjhcdTAzY2NcdTAzYmRcdTAzYjc6IDMuMCBp
-  bmNoZXMsIFZpZGVvOiBNT1YsIFx1MDM5MVx1MDNiZFx1MDNhY1x1MDNiYlx1
-  MDNjNVx1MDNjM1x1MDNiNyBWaWRlbzogMTkyMCB4IDEwODAgcGl4ZWxzIiwi
-  bWFudWZhY3R1cmVyX2lkIjoxNTYsImZ1dHVyZSI6ZmFsc2UsInJldmlld3Nf
-  Y291bnQiOjEsInZpcnR1YWwiOmZhbHNlLCJpbWFnZXMiOnsibWFpbiI6Imh0
-  dHA6Ly9jLnNjZG4uZ3IvaW1hZ2VzL3NrdV9tYWluX2ltYWdlcy8wMDIyODcv
-  MjI4NzczNy9tZWRpdW1fMjc1NzJfTmlrb25fMV9KMl9sZWZ0LnBuZyIsImFs
-  dGVybmF0aXZlcyI6WyJodHRwOi8vZC5zY2RuLmdyL2ltYWdlcy9za3VfaW1h
-  Z2VzLzAwMjkxNi8yOTE2MDc4LzI3NTc0X05pa29uXzFfSjJfbGVmdC5wbmci
-  LCJodHRwOi8vYS5zY2RuLmdyL2ltYWdlcy9za3VfaW1hZ2VzLzAwMjkxNi8y
-  OTE2MDc5LzI3NTc1X05pa29uXzFfSjJfbGVmdC5wbmciLCJodHRwOi8vZC5z
-  Y2RuLmdyL2ltYWdlcy9za3VfaW1hZ2VzLzAwMjkxNi8yOTE2MDgwLzI3NTc2
-  X05pa29uXzFfSjJfbGVmdC5wbmciLCJodHRwOi8vYS5zY2RuLmdyL2ltYWdl
-  cy9za3VfaW1hZ2VzLzAwMjkxNi8yOTE2MDgxLzI3NTc3X05pa29uXzFfSjJf
-  bGVmdC5wbmciLCJodHRwOi8vZC5zY2RuLmdyL2ltYWdlcy9za3VfaW1hZ2Vz
-  LzAwMjkxNi8yOTE2MDkwLzI3NTczX05pa29uXzFfSjJfbGVmdC5wbmciLCJo
-  dHRwOi8vYS5zY2RuLmdyL2ltYWdlcy9za3VfaW1hZ2VzLzAwMjkxNi8yOTE2
-  MDkyL05pa29uXzFfSjJfQktfZnJvbnQuanBnIiwiaHR0cDovL2Iuc2Nkbi5n
-  ci9pbWFnZXMvc2t1X2ltYWdlcy8wMDI5MTYvMjkxNjA5NC8yNzU3Ml9OaWtv
-  bl8xX0oyX2JhY2sucG5nIiwiaHR0cDovL2Quc2Nkbi5nci9pbWFnZXMvc2t1
-  X2ltYWdlcy8wMDI5MTYvMjkxNjA5NS9uaWtvbl8xMC0zMG1tLWZyb250LTEw
-  MzI4Ni5qcGciLCJodHRwOi8vZC5zY2RuLmdyL2ltYWdlcy9za3VfaW1hZ2Vz
-  LzAwMjkxNi8yOTE2MDk2LzE1MzIyNjIuanBnIiwiaHR0cDovL2Euc2Nkbi5n
-  ci9pbWFnZXMvc2t1X2ltYWdlcy8wMDI5MTYvMjkxNjA5Ny81NjI3X25pa29u
-  XzFfMzAtMTEwbW1fYmxhY2suanBnIl19fX0sInBhZ2luYXRpb24iOnsidG90
-  YWxfcmVzdWx0cyI6MSwidG90YWxfcGFnZXMiOjEsInBhZ2UiOjEsInBlciI6
-  MjV9fX0=
+:response:
+  :status: 200
+  :headers: !ruby/hash:Faraday::Utils::Headers
+    server: !binary |-
+      bmdpbng=
+    content-type: !binary |-
+      YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
+    !binary "dmFyeQ==": !binary |-
+      QWNjZXB0LUVuY29kaW5n
+    status: !binary |-
+      MjAwIE9L
+    x-ua-compatible: !binary |-
+      SUU9RWRnZSxjaHJvbWU9MQ==
+    cache-control: !binary |-
+      bWF4LWFnZT0wLCBwcml2YXRlLCBtdXN0LXJldmFsaWRhdGU=
+    x-request-id: !binary |-
+      MjM2MTMwNDI0MQ==
+    x-runtime: !binary |-
+      MC4wNDgyNTg=
+    x-dns-prefetch-control: !binary |-
+      b2Zm
+    x-app: !binary |-
+      bHVua3dpbGw=
+    content-length: !binary |-
+      NzU=
+    accept-ranges: !binary |-
+      Ynl0ZXM=
+    date: !binary |-
+      TW9uLCAwNyBKdWwgMjAxNCAxMzowNzo0OCBHTVQ=
+    x-varnish: !binary |-
+      MjM2MTMwNDI0MQ==
+    age: !binary |-
+      MA==
+    via: !binary |-
+      MS4xIHZhcm5pc2g=
+    connection: !binary |-
+      Y2xvc2U=
+    x-origin: !binary |-
+      dmFybmlzaDI=
+    x-cache: !binary |-
+      TUlTUw==
+  :body: !binary |-
+    eyJjYXRlZ29yaWVzIjpbXSwibWV0YSI6eyJhbHRlcm5hdGl2ZXMiOltdLCJz
+    dHJvbmdfbWF0Y2hlcyI6e319fQ==

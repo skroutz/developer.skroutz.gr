@@ -1,28 +1,57 @@
 ---
 :request:
+  :url: http://skroutz.gr/api/shops/11/locations/2
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3
+    :authorization: Bearer 5JN7RHwWJ9ZPSBEKo0/bskSR0IOfNtETjwmMOPsGKZiXrRnP71w7cZbDZFKBaeNoJAyIKRMKjXeaBeF40Uxg==
   :verb: GET
-  :path: /shops/11/locations/2
-:status: 200
-:headers:
-  server: nginx
-  content-type: application/json; charset=utf-8
-  vary: Accept-Encoding
-  status: 200 OK
-  x-ua-compatible: IE=Edge,chrome=1
-  cache-control: max-age=0, private, must-revalidate
-  x-request-id: '2402612583'
-  x-runtime: '0.149152'
-  x-dns-prefetch-control: 'off'
-  x-app: frankie
-  content-length: '209'
-  accept-ranges: bytes
-  date: Tue, 18 Feb 2014 13:54:53 GMT
-  x-varnish: '2402612583'
-  age: '0'
-  via: 1.1 varnish
-  connection: close
-  x-origin: varnish1
-  x-cache: MISS
-:body: '{"location":{"id":2,"headquarter":true,"phones":["2105587700"],"pickup_point":true,"store":true,"full_address":"\u0398\u0395\u03a3\u0397
-  \u03a3\u039a\u039b\u0397\u03a1\u0399 1, \u03a4.\u039a. 19600, \u039c\u0391\u0393\u039f\u03a5\u039b\u0391,
-  \u0391\u03c4\u03c4\u03b9\u03ba\u03ae\u03c2","lat":"38.083786","lng":"23.526396","info":""}}'
+:response:
+  :status: 200
+  :headers: !ruby/hash:Faraday::Utils::Headers
+    server: !binary |-
+      bmdpbng=
+    content-type: !binary |-
+      YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
+    !binary "dmFyeQ==": !binary |-
+      QWNjZXB0LUVuY29kaW5n
+    status: !binary |-
+      MjAwIE9L
+    cache-control: !binary |-
+      bWF4LWFnZT0zMDAsIHByaXZhdGU=
+    x-ua-compatible: !binary |-
+      SUU9RWRnZSxjaHJvbWU9MQ==
+    x-request-id: !binary |-
+      MzM3MzY4ODU2Ng==
+    x-runtime: !binary |-
+      MC4wNTEwNTU=
+    x-dns-prefetch-control: !binary |-
+      b2Zm
+    x-app: !binary |-
+      bHVua3dpbGw=
+    content-length: !binary |-
+      MjA5
+    accept-ranges: !binary |-
+      Ynl0ZXM=
+    date: !binary |-
+      TW9uLCAwNyBKdWwgMjAxNCAxMzowNTo0NSBHTVQ=
+    x-varnish: !binary |-
+      MzM3MzY4ODU2Ng==
+    age: !binary |-
+      MA==
+    via: !binary |-
+      MS4xIHZhcm5pc2g=
+    connection: !binary |-
+      Y2xvc2U=
+    x-origin: !binary |-
+      dmFybmlzaDE=
+    x-cache: !binary |-
+      TUlTUw==
+  :body: !binary |-
+    eyJsb2NhdGlvbiI6eyJpZCI6MiwiaGVhZHF1YXJ0ZXIiOnRydWUsInBob25l
+    cyI6WyIyMTA1NTg3NzAwIl0sInBpY2t1cF9wb2ludCI6dHJ1ZSwic3RvcmUi
+    OnRydWUsImZ1bGxfYWRkcmVzcyI6Ilx1MDM5OFx1MDM5NVx1MDNhM1x1MDM5
+    NyBcdTAzYTNcdTAzOWFcdTAzOWJcdTAzOTdcdTAzYTFcdTAzOTkgMSwgXHUw
+    M2E0Llx1MDM5YS4gMTk2MDAsIFx1MDM5Y1x1MDM5MVx1MDM5M1x1MDM5Zlx1
+    MDNhNVx1MDM5Ylx1MDM5MSwgXHUwMzkxXHUwM2M0XHUwM2M0XHUwM2I5XHUw
+    M2JhXHUwM2FlXHUwM2MyIiwibGF0IjoiMzguMDgzNzg2IiwibG5nIjoiMjMu
+    NTI2Mzk2IiwiaW5mbyI6IiJ9fQ==

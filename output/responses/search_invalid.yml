@@ -1,46 +1,28 @@
 ---
 :request:
+  :url: http://skroutz.gr/api/search?q=a
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3
+    :authorization: Bearer 5JN7RHwWJ9ZPSBEKo0/bskSR0IOfNtETjwmMOPsGKZiXrRnP71w7cZbDZFKBaeNoJAyIKRMKjXeaBeF40Uxg==
   :verb: GET
-  :path: /search?q=a
-:status: 200
-:headers:
-  server: !binary |-
-    bmdpbng=
-  !binary "Y29udGVudC10eXBl": !binary |-
-    YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-  !binary "dmFyeQ==": !binary |-
-    QWNjZXB0LUVuY29kaW5n
-  status: !binary |-
-    MjAwIE9L
-  x-ua-compatible: !binary |-
-    SUU9RWRnZSxjaHJvbWU9MQ==
-  cache-control: !binary |-
-    bWF4LWFnZT0wLCBwcml2YXRlLCBtdXN0LXJldmFsaWRhdGU=
-  x-request-id: !binary |-
-    MjQ4ODk1NzczMA==
-  x-runtime: !binary |-
-    MC4wNDk0NzE=
-  x-dns-prefetch-control: !binary |-
-    b2Zm
-  x-app: !binary |-
-    ZnJhbmtpZQ==
-  content-length: !binary |-
-    Mzc=
-  accept-ranges: !binary |-
-    Ynl0ZXM=
-  date: !binary |-
-    V2VkLCAwNSBNYXIgMjAxNCAxMDoyMjoyNSBHTVQ=
-  x-varnish: !binary |-
-    MjQ4ODk1NzczMA==
-  age: !binary |-
-    MA==
-  via: !binary |-
-    MS4xIHZhcm5pc2g=
-  connection: !binary |-
-    Y2xvc2U=
-  x-origin: !binary |-
-    dmFybmlzaDE=
-  x-cache: !binary |-
-    TUlTUw==
-:body: !binary |-
-  eyJjYXRlZ29yaWVzIjpbXX0=
+:response:
+  :status: 400
+  :headers: !ruby/hash:Faraday::Utils::Headers
+    server: nginx
+    content-type: application/json; charset=utf-8
+    status: 400 Bad Request
+    x-ua-compatible: IE=Edge,chrome=1
+    cache-control: no-cache
+    x-request-id: '2361296052'
+    x-runtime: '0.021874'
+    x-app: lunkwill
+    content-length: '1'
+    accept-ranges: bytes
+    date: Mon, 07 Jul 2014 13:06:37 GMT
+    x-varnish: '2361296052'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: varnish2
+    x-cache: MISS
+  :body: ! ' '
