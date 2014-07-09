@@ -416,6 +416,9 @@ pre.terminal {
   border: 1px solid rgba(128, 128, 128, 0.1);
   margin-top: 15px; }
 
+.request-description {
+  display: none; }
+
 /* Guides */
 .classroom {
   display: block;
