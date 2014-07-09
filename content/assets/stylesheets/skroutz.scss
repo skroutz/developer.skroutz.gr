@@ -206,6 +206,15 @@ header {
     }
   }
 
+  // BLOCKQUOTES
+
+  blockquote {
+    margin: 20px auto;
+    padding: 10px;
+    background-color: $grey-3;
+    border-left: 10px solid $grey-6;
+  }
+
   // LISTS
 
   ul {
