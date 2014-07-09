@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="Content-Language" content="en-us" />
+  <meta http-equiv="imagetoolbar" content="false" />
+  <meta name="MSSmartTagsPreventParsing" content="true" />
+  <title>Overview | Analytics</title>
+  <link rel="icon" href="../assets/images/favicon.png" type="image/png" />
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400' rel='stylesheet' type='text/css'>
+  <link rel="alternate" type="application/atom+xml" title="API Changes" href="../changes.atom" />
+  <link href="../css/reset.css" rel="stylesheet" type="text/css" />
+  <link href="../css/960.css" rel="stylesheet" type="text/css" />
+  <link href="../css/uv_active4d.css" rel="stylesheet" type="text/css" />
+  <link href="../shared/css/documentation.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="../shared/css/pygments.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="../assets/stylesheets/skroutz.css" media="screen" rel="stylesheet" type="text/css">
+  <script src="../shared/js/jquery.js" type="text/javascript"></script>
+  <script src="../shared/js/documentation.js" type="text/javascript"></script>
+</head>
+<body class="api" id="analytics">
+  <header>
+  <div class="content">
+    <a class="logo" href="../">for Developers [beta]</a>
+    <form class="search">
+        <input type="text" id="st-search-input" placeholder="Search"/>
+    </form>
+  </div>
+</header>
+
+
+  <div id="main" class="cf">
+    <div class="content cf">
+      <div id="right_container">
+        <div class="container">
+          <h1 id="analytics">Analytics</h1>
+
+<p>Analytics is a project to measure how users interact with our partners websites.</p>
+
+<ul id="markdown-toc">
+  <li><a href="#add-the-javascript-reporting-snippet">Add the JavaScript reporting snippet</a></li>
+  <li><a href="#register-actions-for-the-completed-orders-and-purchased-items">Register actions for the completed orders and purchased items</a></li>
+  <li><a href="#analyticsjs">Analytics.js</a></li>
+  <li><a href="#faq">FAQ</a></li>
+</ul>
+
+<h2 id="add-the-javascript-reporting-snippet">Add the JavaScript reporting snippet</h2>
+
+<p>To successfully report your sales insights you have to add the JavaScript snippet and 
+declare actions, at least inside the page which informs the user 
+that the order is completed (eg. “thank you page”).</p>
+
+<p>You may add the snippet just before closing either the <code>&lt;head&gt;</code> or <code>&lt;body&gt;</code> section.</p>
+
+<blockquote>
+  <p><strong>Note:</strong>
+You <strong>have to</strong> replace the <code>'SA-XXXX-Y'</code> property with the actual <em>Shop Account ID</em> 
+you received from us.</p>
+</blockquote>
+
+<pre class="highlight"><code class="language-html"><span class="nt">&lt;script&gt;</span>
+  <span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">,</span><span class="nx">c</span><span class="p">,</span><span class="nx">d</span><span class="p">,</span><span class="nx">e</span><span class="p">,</span><span class="nx">f</span><span class="p">,</span><span class="nx">g</span><span class="p">){</span><span class="nx">a</span><span class="p">[</span><span class="nx">e</span><span class="p">]</span><span class="o">=</span> <span class="nx">a</span><span class="p">[</span><span class="nx">e</span><span class="p">]</span> <span class="o">||</span> <span class="kd">function</span><span class="p">(){</span>
+    <span class="p">(</span><span class="nx">a</span><span class="p">[</span><span class="nx">e</span><span class="p">].</span><span class="nx">q</span> <span class="o">=</span> <span class="nx">a</span><span class="p">[</span><span class="nx">e</span><span class="p">].</span><span class="nx">q</span> <span class="o">||</span> <span class="p">[]).</span><span class="nx">push</span><span class="p">(</span><span class="nx">arguments</span><span class="p">);};</span><span class="nx">f</span><span class="o">=</span><span class="nx">b</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="nx">c</span><span class="p">);</span><span class="nx">f</span><span class="p">.</span><span class="nx">async</span><span class="o">=</span><span class="kc">true</span><span class="p">;</span>
+    <span class="nx">f</span><span class="p">.</span><span class="nx">src</span><span class="o">=</span><span class="nx">d</span><span class="p">;</span><span class="nx">g</span><span class="o">=</span><span class="nx">b</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="nx">c</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span><span class="nx">g</span><span class="p">.</span><span class="nx">parentNode</span><span class="p">.</span><span class="nx">insertBefore</span><span class="p">(</span><span class="nx">f</span><span class="p">,</span><span class="nx">g</span><span class="p">);</span>
+  <span class="p">})(</span><span class="nb">window</span><span class="p">,</span><span class="nb">document</span><span class="p">,</span><span class="s1">'script'</span><span class="p">,</span><span class="s1">'https://analytics.skroutz.gr/analytics.js'</span><span class="p">,</span><span class="s1">'sa'</span><span class="p">);</span>
+
+  <span class="nx">sa</span><span class="p">(</span><span class="s1">'settings'</span><span class="p">,</span> <span class="s1">'setAccount'</span><span class="p">,</span> <span class="s1">'SA-XXX-YY'</span><span class="p">);</span>  <span class="c1">// Configure your Account.</span>
+<span class="nt">&lt;/script&gt;</span></code></pre>
+
+<h2 id="register-actions-for-the-completed-orders-and-purchased-items">Register actions for the completed orders and purchased items</h2>
+
+<p>You need to at least register the events shown in the examples below:</p>
+
+<p>Below you can see example code that constructs the action declarations.</p>
+
+<pre class="highlight"><code class="language-php"><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="sd">/**</span>
+<span class="sd"> * Builds an Analytics Ecommerce addOrder action.</span>
+<span class="sd"> *</span>
+<span class="sd"> * @param array $order The completed order to report.</span>
+<span class="sd"> * @return string The JavaScript representation of an Analytics Ecommerce</span>
+<span class="sd"> *  addOrder action.</span>
+<span class="sd"> */</span>
+<span class="k">function</span> <span class="nf">addOrderAction</span><span class="p">(</span><span class="o">&amp;</span><span class="nv">$order</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nv">$order_data</span> <span class="o">=</span> <span class="nb">json_encode</span><span class="p">(</span><span class="k">array</span><span class="p">(</span>
+    <span class="s1">'id'</span>        <span class="o">=&gt;</span> <span class="nv">$order</span><span class="p">[</span><span class="s1">'id'</span><span class="p">],</span>
+    <span class="s1">'revenue'</span>   <span class="o">=&gt;</span> <span class="nv">$order</span><span class="p">[</span><span class="s1">'revenue'</span><span class="p">],</span>
+    <span class="s1">'shipping'</span>  <span class="o">=&gt;</span> <span class="nv">$order</span><span class="p">[</span><span class="s1">'shipping'</span><span class="p">],</span>
+    <span class="s1">'tax'</span>       <span class="o">=&gt;</span> <span class="nv">$order</span><span class="p">[</span><span class="s1">'tax'</span><span class="p">]</span>
+  <span class="p">));</span>
+
+  <span class="k">return</span> <span class="s2">"sa('ecommerce', 'addOrder', </span><span class="si">{</span><span class="nv">$order_data</span><span class="si">}</span><span class="s2">);"</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="sd">/**</span>
+<span class="sd"> * Builds an Analytics Ecommerce addItem action.</span>
+<span class="sd"> *</span>
+<span class="sd"> * @param int $orderID The ID of the order</span>
+<span class="sd"> * @param array $item The purchesed item to report</span>
+<span class="sd"> * @return string The JavaScript representation of an Analytics Ecommerce</span>
+<span class="sd"> *  addItem action.</span>
+<span class="sd"> */</span>
+<span class="k">function</span> <span class="nf">addItemAction</span><span class="p">(</span><span class="nv">$orderID</span><span class="p">,</span> <span class="o">&amp;</span><span class="nv">$item</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nv">$item_data</span> <span class="o">=</span> <span class="nb">json_encode</span><span class="p">(</span><span class="k">array</span><span class="p">(</span>
+    <span class="s1">'order_id'</span>    <span class="o">=&gt;</span> <span class="nv">$orderID</span><span class="p">,</span>
+    <span class="s1">'product_id'</span>  <span class="o">=&gt;</span> <span class="nv">$item</span><span class="p">[</span><span class="s1">'id'</span><span class="p">],</span>
+    <span class="s1">'price'</span>       <span class="o">=&gt;</span> <span class="nv">$item</span><span class="p">[</span><span class="s1">'price'</span><span class="p">],</span>
+    <span class="s1">'quantity'</span>    <span class="o">=&gt;</span> <span class="nv">$item</span><span class="p">[</span><span class="s1">'quantity'</span><span class="p">]</span>
+  <span class="p">));</span>
+
+  <span class="k">return</span> <span class="s2">"sa('ecommerce', 'addItem', '</span><span class="si">{</span><span class="nv">$item_data</span><span class="si">}</span><span class="s2">');"</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre>
+
+<p>Your completed order and purchased items could have the following structure:</p>
+
+<pre class="highlight"><code class="language-php"><span class="o">&lt;?</span><span class="nx">php</span>
+
+<span class="c1">// Example of an Order to report with Analytics</span>
+<span class="nv">$order</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+  <span class="s1">'id'</span>        <span class="o">=&gt;</span> <span class="mi">123456</span><span class="p">,</span>
+  <span class="s1">'revenue'</span>   <span class="o">=&gt;</span> <span class="s1">'300.50'</span><span class="p">,</span>
+  <span class="s1">'shipping'</span>  <span class="o">=&gt;</span> <span class="s1">'3.50'</span><span class="p">,</span>
+  <span class="s1">'tax'</span>       <span class="o">=&gt;</span> <span class="s1">'10.00'</span>
+<span class="p">);</span>
+
+<span class="c1">// Example of Order Items to report with Analytics</span>
+<span class="nv">$items</span> <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
+<span class="nv">$items</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+  <span class="s1">'id'</span>        <span class="o">=&gt;</span> <span class="mi">43667</span><span class="p">,</span>
+  <span class="s1">'price'</span>     <span class="o">=&gt;</span> <span class="s1">'100.50'</span><span class="p">,</span>
+  <span class="s1">'quantity'</span>  <span class="o">=&gt;</span> <span class="mi">1</span>
+<span class="p">);</span>
+<span class="nv">$items</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+  <span class="s1">'id'</span>        <span class="o">=&gt;</span> <span class="mi">25668</span><span class="p">,</span>
+  <span class="s1">'price'</span>     <span class="o">=&gt;</span> <span class="s1">'200.00'</span><span class="p">,</span>
+  <span class="s1">'quantity'</span>  <span class="o">=&gt;</span> <span class="mi">2</span>
+<span class="p">);</span>
+
+<span class="cp">?&gt;</span><span class="x"></span></code></pre>
+
+<p>Before the closing tag of your <code>&lt;/body&gt;</code> add the following, for the declaration of actions
+to happen:</p>
+
+<pre class="highlight"><code class="language-html"><span class="nt">&lt;script&gt;</span>
+<span class="o">&lt;?</span><span class="nx">php</span>
+  <span class="c1">// Print the Analytics Ecommerce AddOrder action</span>
+  <span class="nx">echo</span> <span class="nx">addOrderAction</span><span class="p">(</span><span class="nx">$order</span><span class="p">);</span>
+
+  <span class="c1">// Print each Analytics Ecommerce AddItem action</span>
+  <span class="nx">foreach</span> <span class="p">(</span><span class="nx">$items</span> <span class="nx">as</span> <span class="o">&amp;</span><span class="nx">$item</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">echo</span> <span class="nx">addItemAction</span><span class="p">(</span><span class="nx">$order</span><span class="p">[</span><span class="s1">'id'</span><span class="p">],</span> <span class="nx">$item</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="o">?&gt;</span>
+<span class="nt">&lt;/script&gt;</span></code></pre>
+
+<h2 id="analyticsjs">Analytics.js</h2>
+
+<p>The source of the tracking script is hosted on <a href="https://www.github.com/skroutz/analytics.js">github</a>.<br>
+The tracking script, registers a new global function named <code>sa</code>, and then asynchronously loads the <code>analytics.js</code> library onto the page.</p>
+
+<p>The <code>sa</code> global function is the main way you interact with the Analytics library. 
+It accepts a sequence of parameters, that represent:</p>
+
+<ol>
+  <li>
+<strong>Category</strong>
+<em>the API category</em>
+</li>
+  <li>
+<strong>Command</strong>
+<em>the Command of the API category you be executed</em>
+</li>
+  <li>
+<strong>Data</strong>
+<em>the Data to be reported by the Command</em>
+</li>
+</ol>
+
+<blockquote>
+  <p><strong>Note</strong>
+<em>Categories</em> and <em>Commands</em> are <strong>case-sensitive</strong>. Be careful when registering new calls for <code>sa</code>.</p>
+</blockquote>
+
+<h3 id="settings">Settings</h3>
+
+<h4 id="setaccount">setAccount</h4>
+<p>The <code>setAccount</code> command initializes the tracker object for your Account. This is a required call, in order to set up correctly the tracking code. Usually it is the first call you will do.</p>
+
+<h5 id="data-parameters">Data Parameters:</h5>
+<table>
+    <thead>
+        <th>Value</th>
+        <th>Type</th>
+        <th>Required</th>
+        <th>Description</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>shop_account_id</td>
+            <td>String</td>
+            <td><strong>Yes</strong></td>
+            <td>The unique <em>Shop Account ID</em> that you received from us. (e.g. SA-XXXX-Y)</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="ecommerce">Ecommerce</h3>
+
+<h4 id="addtransaction">addTransaction</h4>
+<p>The <code>addOrder</code> command creates a shopping cart object.</p>
+
+<h5 id="data-parameters-1">Data Parameters:</h5>
+<table>
+    <thead>
+        <th>Value</th>
+        <th>Type</th>
+        <th>Required</th>
+        <th>Description</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>order_id</td>
+            <td>String</td>
+            <td><strong>Yes</strong></td>
+            <td>The Order ID that produced and stored at your e-shop to identify the transaction. This id is what links items to the orders to which they belong. (e.g. 123456)</td>
+        </tr>
+        <tr>
+            <td>revenue</td>
+            <td>String</td>
+            <td>No</td>
+            <td>The total revenue or grand total of the order (e.g. 120.99). This value may include shipping, tax costs, or other adjustments to total revenue that you want to include as part of your revenue calculations.</td>
+        </tr>
+        <tr>
+            <td>shipping</td>
+            <td>String</td>
+            <td>No</td>
+            <td>The total shipping cost of the order. (e.g. 5.45)</td>
+        </tr>
+        <tr>
+            <td>tax</td>
+            <td>String</td>
+            <td>No</td>
+            <td>The total tax of the order. (e.g. 10.50)</td>
+        </tr>
+    </tbody>
+</table>
+
+<h5 id="example">Example</h5>
+<pre class="highlight"><code class="language-javascript"><span class="nx">sa</span><span class="p">(</span><span class="s1">'ecommerce'</span><span class="p">,</span> <span class="s1">'addOrder'</span><span class="p">,</span> <span class="p">{</span>
+  <span class="s1">'order_id'</span><span class="o">:</span> <span class="s1">'123456'</span><span class="p">,</span>  <span class="c1">// Order ID. Required.</span>
+  <span class="s1">'revenue'</span><span class="o">:</span> <span class="s1">'120.99'</span><span class="p">,</span>   <span class="c1">// Grand Total.</span>
+  <span class="s1">'shipping'</span><span class="o">:</span> <span class="s1">'5.45'</span><span class="p">,</span>    <span class="c1">// Total Shipping Cost.</span>
+  <span class="s1">'tax'</span><span class="o">:</span> <span class="s1">'10.50'</span>         <span class="c1">// Total Tax.</span>
+<span class="p">});</span></code></pre>
+
+<h4 id="additem">addItem</h4>
+<p>The <code>addItem</code> command adds a new item to the shopping cart object.</p>
+
+<h5 id="data-parameters-2">Data Parameters:</h5>
+<table>
+    <thead>
+        <th>Value</th>
+        <th>Type</th>
+        <th>Required</th>
+        <th>Description</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>order_id</td>
+            <td>String</td>
+            <td><strong>Yes</strong></td>
+            <td>The Order ID that produced and stored at your e-shop to identify the transaction. This id is what links items to the orders to which they belong. (e.g. 123456)</td>
+        </tr>
+        <tr>
+            <td>product_id</td>
+            <td>String</td>
+            <td><strong>Yes</strong></td>
+            <td>The id of the product as stored at your e-shop. (e.g. 987)</td>
+        </tr>
+        <tr>
+            <td>price</td>
+            <td>String</td>
+            <td><strong>Yes</strong></td>
+            <td>The individual, unit, final price for each item. (e.g. 10.50)</td>
+        </tr>
+        <tr>
+            <td>quantity</td>
+            <td>String</td>
+            <td><strong>Yes</strong></td>
+            <td>The number of units purchased in the order. (e.g. 4)</td>
+        </tr>
+    </tbody>
+</table>
+
+<h5 id="example-1">Example</h5>
+<pre class="highlight"><code class="language-javascript"><span class="nx">sa</span><span class="p">(</span><span class="s1">'ecommerce'</span><span class="p">,</span> <span class="s1">'addItem'</span><span class="p">,{</span>
+    <span class="s1">'order_id'</span><span class="o">:</span> <span class="s1">'123456'</span><span class="p">,</span>  <span class="c1">// Order ID. Required.</span>
+    <span class="s1">'product_id'</span><span class="o">:</span> <span class="s1">'987'</span><span class="p">,</span>   <span class="c1">// Product ID. Required.</span>
+    <span class="s1">'price'</span><span class="o">:</span> <span class="s1">'10.50'</span><span class="p">,</span>      <span class="c1">// Price per Unit. Required.</span>
+    <span class="s1">'quantity'</span><span class="o">:</span> <span class="s1">'4'</span>        <span class="c1">// Quantity of Items. Required.</span>
+<span class="p">});</span></code></pre>
+
+<h2 id="faq">FAQ</h2>
+
+<ol>
+  <li>Will adding this script affect the performance of my website?  </li>
+</ol>
+
+<p>
+No, we've put a lot of effort, and used some of the most cutting edge techniques to make sure 
+that our script runs sandboxed without affecting the experience of your users.
+</p>
+
+<ol>
+  <li>What kind of info is emitted from this script?</li>
+</ol>
+
+<p>
+We take user privacy seriously. The data retained by our service remain anonymous, and are 
+neither exposed or sold to 3rd parties. We only report what you agree to be reported.
+</p>
+
+<ol>
+  <li>Where can i view the source of this script?</li>
+</ol>
+
+<p>
+The script is open sourced on <a href="https://www.github.com/skroutz/analytics.js">github</a>.
+Feel free to create issues there, or even contribute.
+</p>
+
+<ol>
+  <li>Are there any dependencies?</li>
+</ol>
+
+<p>
+No. The script is self-sufficient.
+</p>
+
+<ol>
+  <li>What about browser support?</li>
+</ol>
+
+<p>
+The script is tested to work on all modern browsers. [Internet Explorer &gt; 6, Chrome, Firefox, Opera, Safari]
+</p>
+
+        </div>
+      </div>
+      <div id="js-sidebar" class="sidebar-shell">
+<nav class="js-toggle-list sidebar-module expandable">
+  <h2 class="manual">Analytics Manual</h2>
+
+  <ul>
+    <li class="js-topic">
+      <h3><a href=".">Overview</a></h3>
+    </li>
+  </ul>
+
+ </nav>
+  <footer>
+  <p>
+    &copy; 20[0-9]{2} Skroutz A.E. All Rights and Lefts reserved.
+    <br />
+    <a href="#">Terms of Service</a>
+  </p>
+
+  <script type="text/javascript">
+  var Swiftype = window.Swiftype || {};
+  (function() {
+    Swiftype.key = 'qbNiqUVxzUseXtdSCSUy';
+
+    /** DO NOT EDIT BELOW THIS LINE **/
+    var script = document.createElement('script'); script.type =
+      'text/javascript'; script.async = true;
+    script.src = "//s.swiftypecdn.com/embed.js";
+    var entry = document.getElementsByTagName('script')[0];
+    entry.parentNode.insertBefore(script, entry);
+  }());
+</script>
+
+  <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-48017177-1', 'skroutz.gr');
+ga('send', 'pageview');
+</script>
+
+</footer>
+
+</div> <!-- /sidebar-module -->
+
+    </div>
+  </div>
+</body>
+</html>
