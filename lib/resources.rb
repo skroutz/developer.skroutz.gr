@@ -33,6 +33,15 @@ module Skroutz
         md5 = AUTHORS[login.to_sym]
         default = "https://secure.gravatar.com/avatar/%s?s=20&d=%s" % [md5, default]
       end
+
+      def render_code(snippet, language)
+        %(<pre class="highlight"><code class="language-#{language}">#{CGI.escapeHTML snippet}</code></pre>)
+      end
+
+      def render_code_from_file(filename)
+        content = YAML.load_file(File.expand_path(File.join('./output', 'code_examples', "#{filename}.yml")))
+        render_code(content[:code], content[:language])
+      end
     end
   end
 end
