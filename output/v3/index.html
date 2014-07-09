@@ -21,7 +21,7 @@
 <body class="api" id="v3">
   <header>
   <div class="content">
-    <a href="../">for Developers [beta]</a>
+    <a class="logo" href="../">for Developers [beta]</a>
     <form class="search">
         <input type="text" id="st-search-input" placeholder="Search"/>
     </form>
@@ -96,19 +96,17 @@ Resource Foo has “linked resources: bar”</p>
   <code>GET /foos/42?embed=bars</code>
 </pre>
 
-<pre class="terminal">
-{
-  "foo": {
-    "id": 42,
-    "bars": [
-      {
-        "id": 1,
-        ...
-      }
-    ]
-  }
-}
-</pre>
+<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"foo"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"id"</span><span class="o">:</span> <span class="mi">42</span><span class="p">,</span>
+    <span class="s2">"bars"</span><span class="o">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="s2">"id"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">"baz"</span><span class="o">:</span> <span class="mi">42</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre>
 
 <p>Case: embed_ids</p>
 
@@ -116,14 +114,12 @@ Resource Foo has “linked resources: bar”</p>
   <code>GET /foos/42?embed_ids=bars</code>
 </pre>
 
-<pre class="terminal">
-{
-  "foo": {
-    "id": 42,
-    "bars": [1,2,3,4]
-  }
-}
-</pre>
+<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"foo"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"id"</span><span class="o">:</span> <span class="mi">42</span><span class="p">,</span>
+    <span class="s2">"bars"</span><span class="o">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre>
 
 <p>Case: include</p>
 
@@ -131,31 +127,28 @@ Resource Foo has “linked resources: bar”</p>
   <code>GET /foos?include=bars</code>
 </pre>
 
-<pre class="terminal">
-{
-  "foos: [
-    {
-      "id": 42,
-      "bars": [1,4]
-    },
-    {
-      "id": 43,
-      "bars": [3,4]
-    }
-  ],
-  "bars": [
-    {
-      "id": 1,
-      ...
-    },
-    {
-      "id": 3,
-      ...
-    },
-    ...
-  ]
-}
-</pre>
+<pre class="highlight"><code class="language-javascript"><span class="p">{</span>
+  <span class="s2">"foos"</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">42</span><span class="p">,</span>
+      <span class="s2">"bars"</span><span class="o">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">43</span><span class="p">,</span>
+      <span class="s2">"bars"</span><span class="o">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="s2">"bars"</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"baz"</span><span class="o">:</span> <span class="mi">42</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"id"</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+      <span class="s2">"baz"</span><span class="o">:</span> <span class="mi">42</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span></code></pre>
 
 <h2 id="pagination">Pagination</h2>
 
