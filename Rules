@@ -26,6 +26,10 @@ route '/terms' do
   '/terms/index.html'
 end
 
+route '/analytics/*' do
+  item.identifier + 'index.html'
+end
+
 route '/v3/*' do
   item.identifier + 'index.html'
 end
@@ -60,6 +64,8 @@ compile '*' do
       layout 'statics'
     elsif item.identifier =~ /^\/help\//
       layout 'help'
+    elsif item.identifier =~ /^\/analytics\//
+      layout 'analytics'
     else
       layout 'default'
     end
