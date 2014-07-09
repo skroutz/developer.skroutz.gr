@@ -1,0 +1,26 @@
+:language: php
+:code: |
+  <?php
+
+  // Example of an Order to report with Analytics
+  $order = array(
+    'id'        => 123456,
+    'revenue'   => '300.50',
+    'shipping'  => '3.50',
+    'tax'       => '10.00'
+  );
+
+  // Example of Order Items to report with Analytics
+  $items = array();
+  $items[0] = array(
+    'id'        => 43667,
+    'price'     => '100.50',
+    'quantity'  => 1
+  );
+  $items[1] = array(
+    'id'        => 25668,
+    'price'     => '200.00',
+    'quantity'  => 2
+  );
+
+  ?>
