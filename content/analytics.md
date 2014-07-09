@@ -88,7 +88,7 @@ The `setAccount` command initializes the tracker object for your Account. This i
 
 ### Ecommerce
 
-#### addTransaction
+#### addOrder
 The `addOrder` command creates a shopping cart object.
 
 ##### Data Parameters:
