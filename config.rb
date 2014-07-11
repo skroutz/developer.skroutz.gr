@@ -7,6 +7,9 @@ page 'index.html', layout: false
 activate :directory_indexes
 set :relative_links, true
 
+# Syntax Highlight
+activate :syntax, line_numbers: false
+
 ###
 # Helpers
 ###

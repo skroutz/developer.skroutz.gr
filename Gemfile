@@ -1,6 +1,7 @@
 source "http://rubygems.org"
 
 gem 'middleman', '~> 3.3'
+gem 'middleman-syntax', '~> 2.0.0'
 gem 'rake', '~> 0.9.2'
 gem 'colored'
 
