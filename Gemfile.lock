@@ -53,13 +53,15 @@ GEM
       cri (~> 2.3)
     nokogiri (1.4.7)
     posix-spawn (0.3.8)
-    pry (0.10.0)
-      coderay (~> 1.1.0)
-      method_source (~> 0.8.1)
+    pry (0.9.12.6)
+      coderay (~> 1.0)
+      method_source (~> 0.8)
       slop (~> 3.4)
     pry-doc (0.5.1)
       pry (>= 0.9)
       yard (>= 0.8)
+    pry-nav (0.2.3)
+      pry (~> 0.9.10)
     pygments.rb (0.5.4)
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.1.0)
@@ -114,6 +116,7 @@ DEPENDENCIES
   nokogiri (~> 1.4.4)
   pry
   pry-doc
+  pry-nav
   pygments.rb
   rake (~> 0.9.2)
   response_mate (~> 0.2)
