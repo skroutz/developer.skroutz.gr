@@ -22,6 +22,7 @@ group :development do
   gem 'thin'
   gem 'fssm'
   gem 'pry'
+  gem 'pry-nav'
   gem 'pry-doc'
   gem 'awesome_print'
 end
