@@ -2,8 +2,7 @@
 title: Authentication | Skroutz API
 ---
 
-<%= img_tag '/assets/images/oauth.png' %>
-<img src="<%= relative_path_to('/assets/images/oauth.png') %>" alt="oauth">
+<%= image_tag 'oauth.png' %>
 
 We use [OAuth2.0](http://oauth.net/2/) for authorization.
 
@@ -17,7 +16,7 @@ In the following POST request examples it is silently assumed that
 
 ## Application Token
 With an application token you can only access resources not associated
-to a user. Have a look at related [permissions](<%= relative_path_to('/authentication/permissions') %>).
+to a user. Have a look at related <%= link_to 'permissions', '/authentication/permissions' %>.
 
 <a href='http://tools.ietf.org/html/rfc6749#section-4.4' class="emph-link external" target="_blank">More info about client-credentials</a>
 
@@ -66,9 +65,7 @@ http://redirect_uri?code=a_valid_authorization_code
   <li>notifications</li>
 </ul>
 
-<a href="<%= relative_path_to('/authentication/permissions') %>" class="emph-link" target="_blank">More info about permissions</a>
-
-
+<%= link_to 'More info about permissions', '/authentication/permissions' %>
 
 ### Get an oauth_token
 
