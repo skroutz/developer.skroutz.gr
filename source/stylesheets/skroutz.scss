@@ -491,13 +491,13 @@ nav {
     &.guides:before {
       width: 14px;
       height: 14px;
-      background: url("../../assets/images/sprite.png") 0 0;
+      background: image-url('sprite.png') 0 0;
     }
 
     &.manual:before {
       width: 16px;
       height: 13px;
-      background: url("../../assets/images/sprite.png") -20px -1px;
+      background: image-url('sprite.png') -20px -1px;
     }
   }
 
