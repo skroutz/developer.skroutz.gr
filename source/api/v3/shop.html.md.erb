@@ -7,7 +7,6 @@ title: Shop | Skroutz API
 * TOC
 {:toc}
 
-
 ## Retrieve a single shop
 
 <pre class="terminal">
@@ -26,8 +25,8 @@ title: Shop | Skroutz API
 
 ## List shop locations
 
-[Linked resource](<%= relative_path_to('/v3') %>#linked-resources):
-[address](<%= relative_path_to('/v3/addresses') %>)
+<%= link_to 'Linked Resources', '/api/v3#linked-resources' %>: 
+<%= link_to 'Address', '/api/addresses' %>
 
 <pre class="terminal">
   GET /shops/:shop_id/locations?embed=address
@@ -37,8 +36,8 @@ title: Shop | Skroutz API
 
 ## Retrieve a single shop location
 
-[Linked resource](<%= relative_path_to('/v3') %>#linked-resources):
-[address](<%= relative_path_to('/v3/addresses') %>)
+<%= link_to 'Linked Resources', '/api/v3#linked-resources' %>: 
+<%= link_to 'Address', '/api/addresses' %>
 
 <pre class="terminal">
   GET /shops/:shop_id/locations/:id
