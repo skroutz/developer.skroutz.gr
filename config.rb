@@ -1,28 +1,4 @@
-###
-# Compass
-###
-
-# Change Compass configuration
-# compass_config do |config|
-#   config.output_style = :compact
-# end
-
-###
-# Page options, layouts, aliases and proxies
-###
-
-# Per-page layout changes:
-#
-# With no layout
-# page "/path/to/file.html", :layout => false
-#
-# With alternative layout
-# page "/path/to/file.html", :layout => :otherlayout
-#
-# A path which all have the same layout
-# with_layout :admin do
-#   page "/admin/*"
-# end
+require 'lib/code_example_helper'
 
 page 'index.html', layout: false
 # Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
@@ -34,6 +10,7 @@ set :relative_links, true
 ###
 # Helpers
 ###
+helpers CodeExampleHelper
 
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
