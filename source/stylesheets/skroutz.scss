@@ -648,6 +648,26 @@ pre.terminal {
   margin-top: 15px;
 }
 
+pre {
+  margin: 15px auto 20px;
+  border: 1px solid #cacaca;
+  padding: 10px;
+  overflow: auto;
+  border-radius: 3px;
+  background-color: #fafafb;
+  color: #393939;
+  box-shadow: inset 1px 1px 3px rgba(0,0,0,0.1);
+
+  .highlight {
+    background: transparent;
+    box-shadow: 0 0 0 transparent;
+    border-radius: 0;
+    margin-bottom: 20px;
+    border: 0 none;
+    margin-top: 15px;
+  }
+}
+
 .request-description {
   display: none;
 }
@@ -676,5 +696,3 @@ pre.terminal {
     font-size: 13px;
   }
 }
-
-
