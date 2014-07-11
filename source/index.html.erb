@@ -7,12 +7,12 @@
     <meta name="MSSmartTagsPreventParsing" content="true" />
     <title>Skroutz API</title>
     <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400' rel='stylesheet' type='text/css'>
-    <link href="<%= relative_path_to('/css/reset.css') %>" rel="stylesheet" type="text/css" />
-    <link href="<%= relative_path_to('/assets/stylesheets/platform.css') %>" media="screen" rel="stylesheet" type="text/css">
+    <%= stylesheet_link_tag('reset') %>
+    <%= stylesheet_link_tag('platform') %>
   </head>
   <body>
 
-    <%= render '_header' %>
+    <%= partial 'partials/header' %>
 
     <div id="pattern">
       <div class="content">
@@ -24,7 +24,7 @@
 
     <div id="main" class="content cf">
       <div class="col first">
-        <a href="guides/"></a>
+        <%= link_to '', 'guides' %>
         <h3>Development Guides</h3>
         <p>
         Ready to develop an app powered by Skroutz? Check out our quick-start guide
@@ -33,7 +33,7 @@
       </div>
 
       <div class="col second">
-        <a href="v3/"></a>
+        <%= link_to '', 'api/v3' %>
         <h3>Reference Manual</h3>
         <p>
         Browse our documentation to fully master the Skroutz API.
@@ -41,7 +41,7 @@
       </div>
 
       <div class="col third">
-        <a href="help/"></a>
+        <%= link_to '', 'help' %>
         <h3>Get Help</h3>
         <p>
           We're here to help. Search in our help pages for the solution.
@@ -53,10 +53,10 @@
 
     <footer>
       <div class="content cf">
-        <a href="#">Terms of Service</a>
+        <%= link_to 'Terms of Service', '' %>
         <p>© 20[0-9]{2} Skroutz A.E. All Rights and Lefts reserved.</p>
       </div>
     </footer>
-    <%= render '_swiftype' %>
+    <%= partial 'partials/swiftype' %>
   </body>
 </html>
