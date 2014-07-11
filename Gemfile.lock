@@ -74,6 +74,9 @@ GEM
       sprockets (~> 2.2)
       sprockets-helpers (~> 1.1.0)
       sprockets-sass (~> 1.1.0)
+    middleman-syntax (2.0.0)
+      middleman-core (~> 3.2)
+      rouge (~> 1.0)
     minitest (5.3.5)
     multi_json (1.10.1)
     multipart-post (2.0.0)
@@ -115,6 +118,7 @@ GEM
     response_mate-nanoc (0.1.0)
       activesupport
       response_mate (~> 0.2)
+    rouge (1.4.0)
     sass (3.2.19)
     slop (3.5.0)
     sprockets (2.12.1)
@@ -150,6 +154,7 @@ DEPENDENCIES
   colored
   fssm
   middleman (~> 3.3)
+  middleman-syntax (~> 2.0.0)
   pry
   pry-doc
   pry-nav
