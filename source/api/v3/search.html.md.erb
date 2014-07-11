@@ -17,8 +17,7 @@ Name | Type | Description
 -----| -----| -----------
 `q` | `String` | `The keyphrase to search by`
 
-The main response type is a collection of 
-[Categories](<%= relative_path_to('/v3/category')  %>).
+The main response type is a collection of <%= link_to 'Categories', '/api/v3/category' %>
 
 Any other resources matching the specified query are generally of lesser
 importance.
@@ -32,10 +31,12 @@ the client to perform a search with the alternative query instead.
 There may also exist matches of different resources under the key `strong_matches`.  
 Currently there may be up-to one of each of the following resources:
 
-* [Category](<%= relative_path_to('/v3/category') %>)
-* [SKU](<%= relative_path_to('/v3/sku') %>)
-* [Manufacturer](<%= relative_path_to('/v3/manufacturer') %>)
-* [Shop](<%= relative_path_to('/v3/shop') %>)
+<ul>
+  <li><%= link_to 'Category', '/api/v3/category' %></li>
+  <li><%= link_to 'SKU', '/api/v3/sku' %></li>
+  <li><%= link_to 'Manufacturer', '/api/v3/manufacturer' %></li>
+  <li><%= link_to 'Shop', '/api/v3/shop' %></li>
+</ul>
 
 ### Query with less than 2 characters
 
