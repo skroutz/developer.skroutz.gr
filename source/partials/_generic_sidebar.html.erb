@@ -6,17 +6,17 @@
     <ul>
       <li class="js-topic">
         <h3>
-          <a href="<%= relative_path_to('/guides/getting-started') %>">Getting Started</a>
+          <%= link_to 'Getting Started', '/guides/getting-started' %>
         </h3>
       </li>
       <li class="js-topic">
         <h3>
-          <a href="<%= relative_path_to('/guides/authentication') %>">Authentication</a>
+          <%= link_to 'Authentication', '/guides/authentication' %>
         </h3>
       </li>
       <li class="js-topic">
         <h3>
-          <a href="<%= relative_path_to('/authentication/permissions') %>">Permissions</a>
+          <%= link_to 'Permissions', '/authentication/permissions' %>
         </h3>
       </li>
     </ul>
@@ -26,62 +26,62 @@
     <ul>
       <li class="js-topic">
         <h3>
-          <a href="<%= relative_path_to('/v3/') %>">Overview</a>
+          <%= link_to 'Overview', '/api/v3/' %>
         </h3>
       </li>
       <li class="js-topic">
         <h3>
-          <a href="<%= relative_path_to('/v3/category/') %>">Category</a>
+          <%= link_to 'Category', '/api/v3/category' %>
         </h3>
       </li>
       <li class="js-topic">
         <h3>
-          <a href="<%= relative_path_to('/v3/sku/') %>">SKU</a>
+          <%= link_to 'SKU', '/api/v3/sku/' %>
         </h3>
       </li>
       <li class="js-topic">
         <h3>
-          <a href="<%= relative_path_to('/v3/product/') %>">Product</a>
+          <%= link_to 'Product', '/api/v3/product/' %>
         </h3>
       </li>
       <li class="js-topic">
         <h3>
-          <a href="<%= relative_path_to('/v3/shop/') %>">Shop</a>
+          <%= link_to 'Shop', '/api/v3/shop/' %>
         </h3>
       </li>
       <li class="js-topic">
         <h3>
-          <a href="<%= relative_path_to('/v3/manufacturer/') %>">Manufacturer</a>
+          <%= link_to 'Manufacturer', '/api/v3/manufacturer/' %>
         </h3>
       <li class="js-topic">
         <h3>
-          <a href="<%= relative_path_to('/v3/search/') %>">Search</a>
+          <%= link_to 'Search', '/api/v3/search/' %>
         </h3>
       </li>
       </li>
       <li class="js-topic">
         <h3>
-          <a href="<%= relative_path_to('/v3/filter_groups/') %>">Filter Group</a>
+          <%= link_to 'Filter Group', '/api/v3/filter_groups/' %>
         </h3>
       </li>
       <li class="js-topic user">
         <h3>
-          <a href="<%= relative_path_to('/v3/favorites/') %>">User Favorite</a>
+          <%= link_to 'User Favorite', '/api/v3/favorites' %>
         </h3>
       </li>
       <li class="js-topic user">
         <h3>
-          <a href="<%= relative_path_to('/v3/notifications/') %>">User Notification</a>
+          <%= link_to 'User Notification', '/api/v3/notifications' %>
         </h3>
       </li>
     </ul>
 
     <h3>
-      <a href="<%= relative_path_to('/help') %>">Help</a>
+      <%= link_to 'Help', '/help' %>
     </h3>
 
    </nav>
 
-  <%= render '_footer' %>
+  <%= partial 'partials/footer' %>
 
 </div> <!-- /sidebar-module -->

@@ -193,7 +193,7 @@ If you are exceeding your rate limit, you can likely fix the issue by caching AP
 and using [conditional requests](#conditional-requests).
 
 If you're using conditional requests and still exceeding your rate
-limit, please [contact us](<%= relative_path_to('/help') %>) to request a higher rate limit for your application.
+limit, please <%= link_to 'contact us', '/help' %> to request a higher rate limit for your application.
 
 ## Conditional requests
 
