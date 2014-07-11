@@ -50,6 +50,8 @@ set :relative_links, true
 #   end
 # end
 
+set :markdown, toc_levels: '2'
+
 set :css_dir, 'stylesheets'
 
 set :js_dir, 'javascripts'
