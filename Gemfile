@@ -1,24 +1,13 @@
 source "http://rubygems.org"
 
-gem 'coderay'
-gem 'kramdown', '~> 0.13.2'
-gem 'mime-types', '~> 1.16'
-gem 'nanoc', '~> 3.7'
-gem 'nokogiri', '~> 1.4.4'
-gem 'pygments.rb'
+gem 'middleman', '~> 3.3'
 gem 'rake', '~> 0.9.2'
-gem 'faraday'
-gem 'faraday_middleware'
-gem 'guard', '~> 2.6'
-gem 'guard-nanoc'
 gem 'colored'
 
 gem 'response_mate', '~> 0.2'
 gem 'response_mate-nanoc', '~> 0.1'
-gem 'sass', '~> 3.3'
 
 group :development do
-  gem 'adsf'
   gem 'thin'
   gem 'fssm'
   gem 'pry'
