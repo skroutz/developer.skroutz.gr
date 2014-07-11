@@ -50,7 +50,7 @@ set :relative_links, true
 #   end
 # end
 
-set :markdown, toc_levels: '2'
+set :markdown, layout_engine: :erb, toc_levels: '2'
 
 set :css_dir, 'stylesheets'
 
