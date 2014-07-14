@@ -3,70 +3,34 @@
   :url: http://skroutz.gr/api/manufacturers/356/categories
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer 5JN7RHwWJ9ZPSBEKo0/bskSR0IOfNtETjwmMOPsGKZiXrRnP71w7cZbDZFKBaeNoJAyIKRMKjXeaBeF40Uxg==
+    :authorization: Bearer fYxk5iZjO44DwXwkwP5SW7cHwaqFMbc5riQ4JQFgeVNe1epmAHlDtGjvAPhVAIH1aPLiQt67RSrVasw9o7EEQ==
   :params:
     :per: 2
   :verb: GET
 :response:
   :status: 200
-  :headers: !ruby/hash:Faraday::Utils::Headers
-    server: !binary |-
-      bmdpbng=
-    content-type: !binary |-
-      YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-    !binary "dmFyeQ==": !binary |-
-      QWNjZXB0LUVuY29kaW5n
-    status: !binary |-
-      MjAwIE9L
-    !binary "bGluaw==": !binary |-
-      PGh0dHA6Ly9hcGkuc2tyb3V0ei5nci9hcGkvbWFudWZhY3R1cmVycy8zNTYv
-      Y2F0ZWdvcmllcz9wYWdlPTI3JnBlcj0yPjsgcmVsPSJsYXN0IiwgPGh0dHA6
-      Ly9hcGkuc2tyb3V0ei5nci9hcGkvbWFudWZhY3R1cmVycy8zNTYvY2F0ZWdv
-      cmllcz9wYWdlPTImcGVyPTI+OyByZWw9Im5leHQi
-    x-ua-compatible: !binary |-
-      SUU9RWRnZSxjaHJvbWU9MQ==
-    cache-control: !binary |-
-      bWF4LWFnZT0wLCBwcml2YXRlLCBtdXN0LXJldmFsaWRhdGU=
-    x-request-id: !binary |-
-      MjM2MTI5MzI1NA==
-    x-runtime: !binary |-
-      MC4wNDU1MjM=
-    x-dns-prefetch-control: !binary |-
-      b2Zm
-    x-app: !binary |-
-      bHVua3dpbGw=
-    content-length: !binary |-
-      MzAw
-    accept-ranges: !binary |-
-      Ynl0ZXM=
-    date: !binary |-
-      TW9uLCAwNyBKdWwgMjAxNCAxMzowNjoxMSBHTVQ=
-    x-varnish: !binary |-
-      MjM2MTI5MzI1NA==
-    age: !binary |-
-      MA==
-    via: !binary |-
-      MS4xIHZhcm5pc2g=
-    connection: !binary |-
-      Y2xvc2U=
-    x-origin: !binary |-
-      dmFybmlzaDI=
-    x-cache: !binary |-
-      TUlTUw==
-  :body: !binary |-
-    eyJjYXRlZ29yaWVzIjpbeyJpZCI6NDAsIm5hbWUiOiJcdTAzOWFcdTAzYjlc
-    dTAzYmRcdTAzYjdcdTAzYzRcdTAzYWMgXHUwM2E0XHUwM2I3XHUwM2JiXHUw
-    M2FkXHUwM2M2XHUwM2M5XHUwM2JkXHUwM2IxIiwiY2hpbGRyZW5fY291bnQi
-    OjAsImltYWdlX3VybCI6Imh0dHA6Ly9hLnNjZG4uZ3IvaW1hZ2VzL2NhdGVn
-    b3JpZXMvbGFyZ2UvNDAuanBnIiwicGFyZW50X2lkIjo4NiwiZmFzaGlvbiI6
-    ZmFsc2UsInNob3dfc3BlY2lmaWNhdGlvbnMiOnRydWUsIm1hbnVmYWN0dXJl
-    cl90aXRsZSI6Ilx1MDM5YVx1MDNiMVx1MDNjNFx1MDNiMVx1MDNjM1x1MDNi
-    YVx1MDNiNVx1MDNjNVx1MDNiMVx1MDNjM1x1MDNjNFx1MDNhZFx1MDNjMiJ9
-    LHsiaWQiOjExMDUsIm5hbWUiOiJUYWJsZXRzIiwiY2hpbGRyZW5fY291bnQi
-    OjAsImltYWdlX3VybCI6Imh0dHA6Ly9hLnNjZG4uZ3IvaW1hZ2VzL2NhdGVn
-    b3JpZXMvbGFyZ2UvMTEwNS5qcGciLCJwYXJlbnRfaWQiOjE2MTIsImZhc2hp
-    b24iOmZhbHNlLCJzaG93X3NwZWNpZmljYXRpb25zIjp0cnVlLCJtYW51ZmFj
-    dHVyZXJfdGl0bGUiOiJcdTAzOWFcdTAzYjFcdTAzYzRcdTAzYjFcdTAzYzNc
-    dTAzYmFcdTAzYjVcdTAzYzVcdTAzYjFcdTAzYzNcdTAzYzRcdTAzYWRcdTAz
-    YzIifV0sIm1ldGEiOnsicGFnaW5hdGlvbiI6eyJ0b3RhbF9yZXN1bHRzIjo1
-    MywidG90YWxfcGFnZXMiOjI3LCJwYWdlIjoxLCJwZXIiOjJ9fX0=
+  :headers:
+    server: nginx
+    content-type: application/json; charset=utf-8
+    !binary "dmFyeQ==": Accept-Encoding
+    status: 200 OK
+    !binary "bGluaw==": <http://api.skroutz.gr/api/manufacturers/356/categories?page=28&per=2>;
+      rel="last", <http://api.skroutz.gr/api/manufacturers/356/categories?page=2&per=2>;
+      rel="next"
+    x-ua-compatible: IE=Edge,chrome=1
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '2406163911'
+    x-runtime: '0.043087'
+    x-dns-prefetch-control: 'off'
+    x-app: lunkwill
+    content-length: '300'
+    accept-ranges: bytes
+    date: Mon, 14 Jul 2014 12:06:28 GMT
+    x-varnish: '2406163911'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: varnish2
+    x-cache: MISS
+  :body: ! '{"categories":[{"id":40,"name":"\u039a\u03b9\u03bd\u03b7\u03c4\u03ac \u03a4\u03b7\u03bb\u03ad\u03c6\u03c9\u03bd\u03b1","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/40.jpg","parent_id":86,"fashion":false,"show_specifications":true,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"},{"id":1105,"name":"Tablets","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/1105.jpg","parent_id":1612,"fashion":false,"show_specifications":true,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"}],"meta":{"pagination":{"total_results":55,"total_pages":28,"page":1,"per":2}}}'
+:created_at: 2014-07-14 15:06:28.729909679 +03:00

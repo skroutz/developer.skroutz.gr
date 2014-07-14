@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Language" content="en-us" />
+    <meta http-equiv="imagetoolbar" content="false" />
+    <meta name="MSSmartTagsPreventParsing" content="true" />
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <%= favicon_tag 'images/favicon.ico' %>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400' rel='stylesheet' type='text/css'>
+    <link rel="alternate" type="application/atom+xml" title="API Changes" href="../changes.atom" />
+
+    <%= stylesheet_link_tag('reset') %>
+    <%= stylesheet_link_tag('documentation') %>
+    <%= stylesheet_link_tag('pygments') %>
+    <%= stylesheet_link_tag('960') %>
+    <%= stylesheet_link_tag('uv_active4d') %>
+    <%= stylesheet_link_tag('skroutz') %>
+
+    <%= javascript_include_tag 'jquery' %>
+    <%= javascript_include_tag 'documentation' %>
+
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= current_page.data.title %></title>
+  </head>
+
+  <body class="<%= page_classes %>">
+    <%= partial 'partials/header' %>
+
+    <div id="main" class="cf">
+      <div class="content cf">
+        <div id="right_container">
+          <div class="container">
+            <%= yield %>
+          </div>
+        </div>
+        <%= partial current_page.metadata[:options].fetch(:sidebar, 'partials/generic_sidebar') %>
+      </div>
+    </div>
+  </body>
+</html>

@@ -3,83 +3,39 @@
   :url: http://skroutz.gr/api/shops/11/locations
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer 5JN7RHwWJ9ZPSBEKo0/bskSR0IOfNtETjwmMOPsGKZiXrRnP71w7cZbDZFKBaeNoJAyIKRMKjXeaBeF40Uxg==
+    :authorization: Bearer fYxk5iZjO44DwXwkwP5SW7cHwaqFMbc5riQ4JQFgeVNe1epmAHlDtGjvAPhVAIH1aPLiQt67RSrVasw9o7EEQ==
   :params:
     :per: 2
     :embed: address
   :verb: GET
 :response:
   :status: 200
-  :headers: !ruby/hash:Faraday::Utils::Headers
-    server: !binary |-
-      bmdpbng=
-    content-type: !binary |-
-      YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-    !binary "dmFyeQ==": !binary |-
-      QWNjZXB0LUVuY29kaW5n
-    status: !binary |-
-      MjAwIE9L
-    !binary "bGluaw==": !binary |-
-      PGh0dHA6Ly9hcGkuc2tyb3V0ei5nci9hcGkvc2hvcHMvMTEvbG9jYXRpb25z
-      P2VtYmVkPWFkZHJlc3MmcGFnZT0xMSZwZXI9Mj47IHJlbD0ibGFzdCIsIDxo
-      dHRwOi8vYXBpLnNrcm91dHouZ3IvYXBpL3Nob3BzLzExL2xvY2F0aW9ucz9l
-      bWJlZD1hZGRyZXNzJnBhZ2U9MiZwZXI9Mj47IHJlbD0ibmV4dCI=
-    cache-control: !binary |-
-      bWF4LWFnZT0zMDAsIHByaXZhdGU=
-    x-ua-compatible: !binary |-
-      SUU9RWRnZSxjaHJvbWU9MQ==
-    x-request-id: !binary |-
-      MzM3MzY4NzA4NA==
-    x-runtime: !binary |-
-      MC4wNzk3Mzc=
-    x-dns-prefetch-control: !binary |-
-      b2Zm
-    x-app: !binary |-
-      bHVua3dpbGw=
-    content-length: !binary |-
-      NDE2
-    accept-ranges: !binary |-
-      Ynl0ZXM=
-    date: !binary |-
-      TW9uLCAwNyBKdWwgMjAxNCAxMzowNTozNyBHTVQ=
-    x-varnish: !binary |-
-      MzM3MzY4NzA4NA==
-    age: !binary |-
-      MA==
-    via: !binary |-
-      MS4xIHZhcm5pc2g=
-    connection: !binary |-
-      Y2xvc2U=
-    x-origin: !binary |-
-      dmFybmlzaDE=
-    x-cache: !binary |-
-      TUlTUw==
-  :body: !binary |-
-    eyJsb2NhdGlvbnMiOlt7ImlkIjoyLCJoZWFkcXVhcnRlciI6dHJ1ZSwicGhv
-    bmVzIjpbIjIxMDU1ODc3MDAiXSwicGlja3VwX3BvaW50Ijp0cnVlLCJzdG9y
-    ZSI6dHJ1ZSwiZnVsbF9hZGRyZXNzIjoiXHUwMzk4XHUwMzk1XHUwM2EzXHUw
-    Mzk3IFx1MDNhM1x1MDM5YVx1MDM5Ylx1MDM5N1x1MDNhMVx1MDM5OSAxLCBc
-    dTAzYTQuXHUwMzlhLiAxOTYwMCwgXHUwMzljXHUwMzkxXHUwMzkzXHUwMzlm
-    XHUwM2E1XHUwMzliXHUwMzkxLCBcdTAzOTFcdTAzYzRcdTAzYzRcdTAzYjlc
-    dTAzYmFcdTAzYWVcdTAzYzIiLCJsYXQiOiIzOC4wODM3ODYiLCJsbmciOiIy
-    My41MjYzOTYiLCJpbmZvIjoiIiwiYWRkcmVzcyI6eyJpZCI6Miwic3RyZWV0
-    X251bWJlciI6IjEiLCJzdHJlZXQiOiJcdTAzOThcdTAzOTVcdTAzYTNcdTAz
-    OTcgXHUwM2EzXHUwMzlhXHUwMzliXHUwMzk3XHUwM2ExXHUwMzk5IiwicG9z
-    dGNvZGUiOiIxOTYwMCIsImNpdHkiOiJcdTAzOWNcdTAzOTFcdTAzOTNcdTAz
-    OWZcdTAzYTVcdTAzOWJcdTAzOTEiLCJyZWdpb24iOiJcdTAzOTFcdTAzYzRc
-    dTAzYzRcdTAzYjlcdTAzYmFcdTAzYWVcdTAzYzIiLCJjb3VudHJ5IjoiXHUw
-    Mzk1XHUwM2JiXHUwM2JiXHUwM2FjXHUwM2I0XHUwM2IxIn19LHsiaWQiOjE5
-    MTIsImhlYWRxdWFydGVyIjpmYWxzZSwicGhvbmVzIjpbIjgwMDExMTIzNDUi
-    XSwicGlja3VwX3BvaW50IjpmYWxzZSwic3RvcmUiOnRydWUsImZ1bGxfYWRk
-    cmVzcyI6Ilx1MDM5Mlx1MDM5Zlx1MDNhNVx1MDM5Ylx1MDM5N1x1MDNhMyAz
-    LCBcdTAzYTQuXHUwMzlhLiAxMDU2MiwgXHUwMzkxXHUwMzk4XHUwMzk3XHUw
-    MzlkXHUwMzkxLCBcdTAzOTFcdTAzYzRcdTAzYzRcdTAzYjlcdTAzYmFcdTAz
-    YWVcdTAzYzIiLCJsYXQiOiIzNy45NzcxNTQiLCJsbmciOiIyMy43MzI4NDMi
-    LCJpbmZvIjoiIiwiYWRkcmVzcyI6eyJpZCI6MTkxMiwic3RyZWV0X251bWJl
-    ciI6IjMiLCJzdHJlZXQiOiJcdTAzOTJcdTAzOWZcdTAzYTVcdTAzOWJcdTAz
-    OTdcdTAzYTMiLCJwb3N0Y29kZSI6IjEwNTYyIiwiY2l0eSI6Ilx1MDM5MVx1
-    MDM5OFx1MDM5N1x1MDM5ZFx1MDM5MSIsInJlZ2lvbiI6Ilx1MDM5MVx1MDNj
-    NFx1MDNjNFx1MDNiOVx1MDNiYVx1MDNhZVx1MDNjMiIsImNvdW50cnkiOiJc
-    dTAzOTVcdTAzYmJcdTAzYmJcdTAzYWNcdTAzYjRcdTAzYjEifX1dLCJtZXRh
-    Ijp7InBhZ2luYXRpb24iOnsidG90YWxfcmVzdWx0cyI6MjEsInRvdGFsX3Bh
-    Z2VzIjoxMSwicGFnZSI6MSwicGVyIjoyfX19
+  :headers:
+    server: nginx
+    content-type: application/json; charset=utf-8
+    !binary "dmFyeQ==": Accept-Encoding
+    status: 200 OK
+    !binary "bGluaw==": <http://api.skroutz.gr/api/shops/11/locations?embed=address&page=11&per=2>;
+      rel="last", <http://api.skroutz.gr/api/shops/11/locations?embed=address&page=2&per=2>;
+      rel="next"
+    cache-control: max-age=300, private
+    x-ua-compatible: IE=Edge,chrome=1
+    x-request-id: '225151580'
+    x-runtime: '0.103530'
+    x-dns-prefetch-control: 'off'
+    x-app: lunkwill
+    content-length: '416'
+    accept-ranges: bytes
+    date: Mon, 14 Jul 2014 12:06:28 GMT
+    x-varnish: '225151580'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: varnish1
+    x-cache: MISS
+  :body: ! '{"locations":[{"id":2,"headquarter":true,"phones":["2105587700"],"pickup_point":true,"store":true,"full_address":"\u0398\u0395\u03a3\u0397
+    \u03a3\u039a\u039b\u0397\u03a1\u0399 1, \u03a4.\u039a. 19600, \u039c\u0391\u0393\u039f\u03a5\u039b\u0391,
+    \u0391\u03c4\u03c4\u03b9\u03ba\u03ae\u03c2","lat":"38.083786","lng":"23.526396","info":"","address":{"id":2,"street_number":"1","street":"\u0398\u0395\u03a3\u0397
+    \u03a3\u039a\u039b\u0397\u03a1\u0399","postcode":"19600","city":"\u039c\u0391\u0393\u039f\u03a5\u039b\u0391","region":"\u0391\u03c4\u03c4\u03b9\u03ba\u03ae\u03c2","country":"\u0395\u03bb\u03bb\u03ac\u03b4\u03b1"}},{"id":1912,"headquarter":false,"phones":["8001112345"],"pickup_point":false,"store":true,"full_address":"\u0392\u039f\u03a5\u039b\u0397\u03a3
+    3, \u03a4.\u039a. 10562, \u0391\u0398\u0397\u039d\u0391, \u0391\u03c4\u03c4\u03b9\u03ba\u03ae\u03c2","lat":"37.977154","lng":"23.732843","info":"","address":{"id":1912,"street_number":"3","street":"\u0392\u039f\u03a5\u039b\u0397\u03a3","postcode":"10562","city":"\u0391\u0398\u0397\u039d\u0391","region":"\u0391\u03c4\u03c4\u03b9\u03ba\u03ae\u03c2","country":"\u0395\u03bb\u03bb\u03ac\u03b4\u03b1"}}],"meta":{"pagination":{"total_results":21,"total_pages":11,"page":1,"per":2}}}'
+:created_at: 2014-07-14 15:06:28.315321241 +03:00

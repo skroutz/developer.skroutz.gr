@@ -1,50 +1,40 @@
 ---
 :request:
-  :url: http://skroutz.gr/api/categories/40/skus?include_meta=applied_filters&filter_ids[]=6273&manufacturer_ids=28
+  :url: http://skroutz.gr/api/categories/40/skus?include_meta=applied_filters&filter_ids[]=6282&manufacturer_ids=28
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer 5JN7RHwWJ9ZPSBEKo0/bskSR0IOfNtETjwmMOPsGKZiXrRnP71w7cZbDZFKBaeNoJAyIKRMKjXeaBeF40Uxg==
+    :authorization: Bearer fYxk5iZjO44DwXwkwP5SW7cHwaqFMbc5riQ4JQFgeVNe1epmAHlDtGjvAPhVAIH1aPLiQt67RSrVasw9o7EEQ==
   :params:
     :per: 1
   :verb: GET
 :response:
-  :status: 404
-  :headers: !ruby/hash:Faraday::Utils::Headers
-    server: !binary |-
-      bmdpbng=
-    content-type: !binary |-
-      YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-    !binary "dmFyeQ==": !binary |-
-      QWNjZXB0LUVuY29kaW5n
-    status: !binary |-
-      NDA0IE5vdCBGb3VuZA==
-    x-ua-compatible: !binary |-
-      SUU9RWRnZSxjaHJvbWU9MQ==
-    cache-control: !binary |-
-      bm8tY2FjaGU=
-    x-request-id: !binary |-
-      MjM2MTMwNDg1MQ==
-    x-runtime: !binary |-
-      MC4wMzQ1Njc=
-    x-app: !binary |-
-      bHVua3dpbGw=
-    content-length: !binary |-
-      NjI=
-    accept-ranges: !binary |-
-      Ynl0ZXM=
-    date: !binary |-
-      TW9uLCAwNyBKdWwgMjAxNCAxMzowNzo1MyBHTVQ=
-    x-varnish: !binary |-
-      MjM2MTMwNDg1MQ==
-    age: !binary |-
-      MA==
-    via: !binary |-
-      MS4xIHZhcm5pc2g=
-    connection: !binary |-
-      Y2xvc2U=
-    x-origin: !binary |-
-      dmFybmlzaDI=
-    x-cache: !binary |-
-      TUlTUw==
-  :body: !binary |-
-    WW91IHJlcXVlc3RlZCBzb21ldGhpbmcgdGhhdCBkb2VzIG5vdCBleGlzdA==
+  :status: 200
+  :headers:
+    server: nginx
+    content-type: application/json; charset=utf-8
+    !binary "dmFyeQ==": Accept-Encoding
+    status: 200 OK
+    x-ua-compatible: IE=Edge,chrome=1
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '2406164396'
+    x-runtime: '0.074838'
+    x-dns-prefetch-control: 'off'
+    x-app: lunkwill
+    content-length: '792'
+    accept-ranges: bytes
+    date: Mon, 14 Jul 2014 12:06:32 GMT
+    x-varnish: '2406164396'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: varnish2
+    x-cache: MISS
+  :body: ! '{"skus":[{"id":3508132,"ean":"","pn":"","name":"Galaxy Pocket Neo S5310","display_name":"Samsung
+    Galaxy Pocket Neo S5310","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":99.9,"price_min":48.65,"reviewscore":3.375,"shop_count":20,"plain_spec_summary":"Single
+    SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
+    2G / 3G, \u039a\u03ac\u03bc\u03b5\u03c1\u03b1: 2 MP,  \u039f\u03b8\u03cc\u03bd\u03b7:
+    3.0\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7: 320 x 240 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2:
+    \u039f\u03b8\u03cc\u03bd\u03b7 \u03b1\u03c6\u03ae\u03c2 (Touch screen),  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
+    \u039c\u03bd\u03ae\u03bc\u03b7: 4.0 GB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
+    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: Android, SmartPhone","manufacturer_id":28,"future":false,"reviews_count":8,"virtual":false,"images":{"main":"http://b.scdn.gr/images/sku_main_images/003508/3508132/medium_gr_GT-S5310RWACYO_000186410_Front_blue","alternatives":["http://d.scdn.gr/images/sku_images/012917/12917536/gr_GT-S5310RWACYO_000186482_R-Perspective_blue","http://a.scdn.gr/images/sku_images/012917/12917538/gr_GT-S5310RWACYO_000186512_Dynamic_blue","http://d.scdn.gr/images/sku_images/012917/12917539/gr_GT-S5310RWACYO_000186428_Right_blue","http://b.scdn.gr/images/sku_images/012917/12917540/gr_GT-S5310RWACYO_000186419_Back_blue","http://a.scdn.gr/images/sku_images/012917/12917564/gr_GT-S5310RWACYO_001_Front_silver","http://a.scdn.gr/images/sku_images/012917/12917565/gr_GT-S5310RWACYO_005_Dynamic_silver","http://c.scdn.gr/images/sku_images/012917/12917566/gr_GT-S5310RWACYO_002_Back_silver","http://a.scdn.gr/images/sku_images/012917/12917567/gr_GT-S5310RWACYO_000186446_Front_white","http://d.scdn.gr/images/sku_images/012917/12917568/gr_GT-S5310RWACYO_000186532_R-Perspective_white","http://d.scdn.gr/images/sku_images/012917/12917569/gr_GT-S5310RWACYO_000186455_Back_white"]}}],"meta":{"applied_filters":{"filters":[6282],"manufacturers":[28]},"pagination":{"total_results":69,"total_pages":69,"page":1,"per":1}}}'
+:created_at: 2014-07-14 15:06:32.373960029 +03:00

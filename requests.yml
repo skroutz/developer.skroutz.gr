@@ -208,7 +208,7 @@ requests:
   -
     key: skus_products
     request:
-      url: '{{base_url}}/skus/3703742/products'
+      url: '{{base_url}}/skus/3783654/products'
       headers:
         <<: *default_headers
   -
@@ -226,7 +226,7 @@ requests:
   -
     key: products_show
     request:
-      url: '{{base_url}}/products/13313788'
+      url: '{{base_url}}/products/12176638'
       headers:
         <<: *default_headers
   -
@@ -254,7 +254,7 @@ requests:
     key: favorite_update
     request:
       verb: PUT
-      url: '{{base_url}}/favorites/331342'
+      url: '{{base_url}}/favorites/340676'
       headers:
         <<: *default_headers
       params:
@@ -305,7 +305,7 @@ requests:
   -
     key: category_skus_filters
     request:
-      url: '{{base_url}}/categories/40/skus?filter_ids[]=6282&filter_ids[]=6284'
+      url: '{{base_url}}/categories/40/skus?filter_ids[]=355559&filter_ids[]=6282'
       headers:
         <<: *default_headers
       params:
@@ -323,7 +323,7 @@ requests:
   -
     key: category_skus_with_applied_filters
     request:
-      url: '{{base_url}}/categories/40/skus?include_meta=applied_filters&filter_ids[]=6273&manufacturer_ids=28'
+      url: '{{base_url}}/categories/40/skus?include_meta=applied_filters&filter_ids[]=6282&manufacturer_ids=28'
       headers:
         <<: *default_headers
       params:

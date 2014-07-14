@@ -3,28 +3,33 @@
   :url: http://skroutz.gr/api/notifications
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer 5JN7RHwWJ9ZPSBEKo0/bskSR0IOfNtETjwmMOPsGKZiXrRnP71w7cZbDZFKBaeNoJAyIKRMKjXeaBeF40Uxg==
+    :authorization: Bearer fYxk5iZjO44DwXwkwP5SW7cHwaqFMbc5riQ4JQFgeVNe1epmAHlDtGjvAPhVAIH1aPLiQt67RSrVasw9o7EEQ==
   :params:
     :per: 1
   :verb: GET
 :response:
-  :status: 401
-  :headers: !ruby/hash:Faraday::Utils::Headers
+  :status: 200
+  :headers:
     server: nginx
     content-type: application/json; charset=utf-8
-    status: 401 Unauthorized
+    !binary "dmFyeQ==": Accept-Encoding
+    status: 200 OK
+    !binary "bGluaw==": <http://api.skroutz.gr/api/notifications?page=91&per=1>; rel="last",
+      <http://api.skroutz.gr/api/notifications?page=2&per=1>; rel="next"
     x-ua-compatible: IE=Edge,chrome=1
-    cache-control: no-cache
-    x-request-id: '2361304881'
-    x-runtime: '0.028883'
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '2406164413'
+    x-runtime: '0.085850'
+    x-dns-prefetch-control: 'off'
     x-app: lunkwill
-    content-length: '51'
+    content-length: '280'
     accept-ranges: bytes
-    date: Mon, 07 Jul 2014 13:07:54 GMT
-    x-varnish: '2361304881'
+    date: Mon, 14 Jul 2014 12:06:32 GMT
+    x-varnish: '2406164413'
     age: '0'
     via: 1.1 varnish
     connection: close
     x-origin: varnish2
     x-cache: MISS
-  :body: ! '{"error":"invalid_token :: User token is required"}'
+  :body: ! '{"notifications":[{"event":{"aggregated":false,"confirmed":true,"created_at":"2014-07-14T10:33:18+03:00","etype":"sku_comment_broadcast","eventable_id":17515,"eventable_type":"SkuComment","id":35570478,"is_viewed":true,"mail_event":false,"snapshot":null,"subscription_id":3554988,"updated_at":"2014-07-14T14:28:03+03:00","user_id":132950,"user_notified":false}}],"meta":{"pagination":{"total_results":91,"total_pages":91,"page":1,"per":1}}}'
+:created_at: 2014-07-14 15:06:32.516600149 +03:00

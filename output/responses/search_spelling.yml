@@ -3,77 +3,36 @@
   :url: http://skroutz.gr/api/search?q=ipone
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer 5JN7RHwWJ9ZPSBEKo0/bskSR0IOfNtETjwmMOPsGKZiXrRnP71w7cZbDZFKBaeNoJAyIKRMKjXeaBeF40Uxg==
+    :authorization: Bearer fYxk5iZjO44DwXwkwP5SW7cHwaqFMbc5riQ4JQFgeVNe1epmAHlDtGjvAPhVAIH1aPLiQt67RSrVasw9o7EEQ==
   :params:
     :page: 1
     :per: 2
   :verb: GET
 :response:
   :status: 200
-  :headers: !ruby/hash:Faraday::Utils::Headers
-    server: !binary |-
-      bmdpbng=
-    content-type: !binary |-
-      YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-    !binary "dmFyeQ==": !binary |-
-      QWNjZXB0LUVuY29kaW5n
-    status: !binary |-
-      MjAwIE9L
-    !binary "bGluaw==": !binary |-
-      PGh0dHA6Ly9hcGkuc2tyb3V0ei5nci9hcGkvc2VhcmNoP3BhZ2U9MyZwZXI9
-      MiZxPWlwb25lPjsgcmVsPSJsYXN0IiwgPGh0dHA6Ly9hcGkuc2tyb3V0ei5n
-      ci9hcGkvc2VhcmNoP3BhZ2U9MiZwZXI9MiZxPWlwb25lPjsgcmVsPSJuZXh0
-      Ig==
-    x-ua-compatible: !binary |-
-      SUU9RWRnZSxjaHJvbWU9MQ==
-    cache-control: !binary |-
-      bWF4LWFnZT0wLCBwcml2YXRlLCBtdXN0LXJldmFsaWRhdGU=
-    x-request-id: !binary |-
-      MjM2MTMwMDgzNA==
-    x-runtime: !binary |-
-      MC4wNzYzNDY=
-    x-dns-prefetch-control: !binary |-
-      b2Zm
-    x-app: !binary |-
-      bHVua3dpbGw=
-    content-length: !binary |-
-      Mzkw
-    accept-ranges: !binary |-
-      Ynl0ZXM=
-    date: !binary |-
-      TW9uLCAwNyBKdWwgMjAxNCAxMzowNzoyMCBHTVQ=
-    x-varnish: !binary |-
-      MjM2MTMwMDgzNA==
-    age: !binary |-
-      MA==
-    via: !binary |-
-      MS4xIHZhcm5pc2g=
-    connection: !binary |-
-      Y2xvc2U=
-    x-origin: !binary |-
-      dmFybmlzaDI=
-    x-cache: !binary |-
-      TUlTUw==
-  :body: !binary |-
-    eyJjYXRlZ29yaWVzIjpbeyJpZCI6MTIyOSwibmFtZSI6Ilx1MDM5Ylx1MDNi
-    OVx1MDNjMFx1MDNiMVx1MDNiZFx1MDNjNFx1MDNiOVx1MDNiYVx1MDNhYyBN
-    b3RvIiwiY2hpbGRyZW5fY291bnQiOjAsImltYWdlX3VybCI6Imh0dHA6Ly9k
-    LnNjZG4uZ3IvaW1hZ2VzL2NhdGVnb3JpZXMvbGFyZ2UvMTIyOS5qcGciLCJw
-    YXJlbnRfaWQiOjEyMjcsImZhc2hpb24iOmZhbHNlLCJzaG93X3NwZWNpZmlj
-    YXRpb25zIjpmYWxzZSwibWFudWZhY3R1cmVyX3RpdGxlIjoiXHUwMzlhXHUw
-    M2IxXHUwM2M0XHUwM2IxXHUwM2MzXHUwM2JhXHUwM2I1XHUwM2M1XHUwM2Ix
-    XHUwM2MzXHUwM2M0XHUwM2FkXHUwM2MyIiwibWF0Y2hfY291bnQiOjI0fSx7
-    ImlkIjoxMjU3LCJuYW1lIjoiXHUwMzlhXHUwM2IxXHUwM2I4XHUwM2IxXHUw
-    M2MxXHUwM2I5XHUwM2MzXHUwM2JjXHUwM2NjXHUwM2MyICYgXHUwM2EwXHUw
-    M2I1XHUwM2MxXHUwM2I5XHUwM2MwXHUwM2JmXHUwM2FmXHUwM2I3XHUwM2Mz
-    XHUwM2I3IFx1MDM5Y1x1MDNiZlx1MDNjNFx1MDNiZlx1MDNjM1x1MDNjNVx1
-    MDNiYVx1MDNiYlx1MDNhZFx1MDNjNFx1MDNiMVx1MDNjMiIsImNoaWxkcmVu
-    X2NvdW50IjowLCJpbWFnZV91cmwiOiJodHRwOi8vYy5zY2RuLmdyL2ltYWdl
-    cy9jYXRlZ29yaWVzL2xhcmdlLzEyNTcuanBnIiwicGFyZW50X2lkIjo1Nzcs
-    ImZhc2hpb24iOmZhbHNlLCJzaG93X3NwZWNpZmljYXRpb25zIjpmYWxzZSwi
-    bWFudWZhY3R1cmVyX3RpdGxlIjoiXHUwMzlhXHUwM2IxXHUwM2M0XHUwM2Ix
-    XHUwM2MzXHUwM2JhXHUwM2I1XHUwM2M1XHUwM2IxXHUwM2MzXHUwM2M0XHUw
-    M2FkXHUwM2MyIiwibWF0Y2hfY291bnQiOjI1fV0sIm1ldGEiOnsiYWx0ZXJu
-    YXRpdmVzIjpbeyJ0ZXJtIjoiaXBob25lIiwiaW1wb3J0YW50IjpmYWxzZX1d
-    LCJzdHJvbmdfbWF0Y2hlcyI6e30sInBhZ2luYXRpb24iOnsidG90YWxfcmVz
-    dWx0cyI6NSwidG90YWxfcGFnZXMiOjMsInBhZ2UiOjEsInBlciI6Mn19fQ==
+  :headers:
+    server: nginx
+    content-type: application/json; charset=utf-8
+    !binary "dmFyeQ==": Accept-Encoding
+    status: 200 OK
+    !binary "bGluaw==": <http://api.skroutz.gr/api/search?page=2&per=2&q=ipone>; rel="last",
+      <http://api.skroutz.gr/api/search?page=2&per=2&q=ipone>; rel="next"
+    x-ua-compatible: IE=Edge,chrome=1
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '2406164032'
+    x-runtime: '0.059520'
+    x-dns-prefetch-control: 'off'
+    x-app: lunkwill
+    content-length: '389'
+    accept-ranges: bytes
+    date: Mon, 14 Jul 2014 12:06:29 GMT
+    x-varnish: '2406164032'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: varnish2
+    x-cache: MISS
+  :body: ! '{"categories":[{"id":1229,"name":"\u039b\u03b9\u03c0\u03b1\u03bd\u03c4\u03b9\u03ba\u03ac
+    Moto","children_count":0,"image_url":"http://d.scdn.gr/images/categories/large/1229.jpg","parent_id":1227,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":3},{"id":1257,"name":"\u039a\u03b1\u03b8\u03b1\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2
+    & \u03a0\u03b5\u03c1\u03b9\u03c0\u03bf\u03af\u03b7\u03c3\u03b7 \u039c\u03bf\u03c4\u03bf\u03c3\u03c5\u03ba\u03bb\u03ad\u03c4\u03b1\u03c2","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/1257.jpg","parent_id":577,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":11}],"meta":{"alternatives":[{"term":"iphone","important":false}],"strong_matches":{},"pagination":{"total_results":3,"total_pages":2,"page":1,"per":2}}}'
+:created_at: 2014-07-14 15:06:29.570897320 +03:00
