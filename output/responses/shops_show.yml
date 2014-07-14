@@ -3,61 +3,31 @@
   :url: http://skroutz.gr/api/shops/11
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer 5JN7RHwWJ9ZPSBEKo0/bskSR0IOfNtETjwmMOPsGKZiXrRnP71w7cZbDZFKBaeNoJAyIKRMKjXeaBeF40Uxg==
+    :authorization: Bearer fYxk5iZjO44DwXwkwP5SW7cHwaqFMbc5riQ4JQFgeVNe1epmAHlDtGjvAPhVAIH1aPLiQt67RSrVasw9o7EEQ==
   :verb: GET
 :response:
   :status: 200
-  :headers: !ruby/hash:Faraday::Utils::Headers
-    server: !binary |-
-      bmdpbng=
-    content-type: !binary |-
-      YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-    !binary "dmFyeQ==": !binary |-
-      QWNjZXB0LUVuY29kaW5n
-    status: !binary |-
-      MjAwIE9L
-    cache-control: !binary |-
-      bWF4LWFnZT0zMDAsIHByaXZhdGU=
-    x-ua-compatible: !binary |-
-      SUU9RWRnZSxjaHJvbWU9MQ==
-    x-request-id: !binary |-
-      MzM3MzY4NTk3NQ==
-    x-runtime: !binary |-
-      MC4wMzU3NTY=
-    x-dns-prefetch-control: !binary |-
-      b2Zm
-    x-app: !binary |-
-      bHVua3dpbGw=
-    content-length: !binary |-
-      MzYx
-    accept-ranges: !binary |-
-      Ynl0ZXM=
-    date: !binary |-
-      TW9uLCAwNyBKdWwgMjAxNCAxMzowNTozMSBHTVQ=
-    x-varnish: !binary |-
-      MzM3MzY4NTk3NQ==
-    age: !binary |-
-      MA==
-    via: !binary |-
-      MS4xIHZhcm5pc2g=
-    connection: !binary |-
-      Y2xvc2U=
-    x-origin: !binary |-
-      dmFybmlzaDE=
-    x-cache: !binary |-
-      TUlTUw==
-  :body: !binary |-
-    eyJzaG9wIjp7ImlkIjoxMSwibmFtZSI6Ilx1MDNhMFx1MDNiYlx1MDNiMVx1
-    MDNhZlx1MDNjM1x1MDNiOVx1MDNiZiIsImxpbmsiOiJodHRwOi8vd3d3LnBs
-    YWlzaW8uZ3IvIiwicGhvbmUiOiI4MDAxMTEyMzQ1IiwiaW1hZ2VfdXJsIjoi
-    aHR0cDovL2Iuc2Nkbi5nci9pbWFnZXMvc2hvcHMvbG9nb3MvMDAwMC9taWRf
-    ZjQ0MDQ1ZmEtZTRjZi00NzIzLTk3MDItYWUxNjNiNWM0MDM2LmpwZyIsInRo
-    dW1ic2hvdF91cmwiOiJodHRwOi8vYS5zY2RuLmdyL2ltYWdlcy9zaG9wcy9z
-    Y3JlZW5zLzU5NDM1YjY0LTJkNjMtNGY0ZS1hMDM4LWNlMDUxMjgwZGEyYi5w
-    bmciLCJyZXZpZXdzX2NvdW50IjoyNTYsInJldmlld19zY29yZSI6Mi42OCwi
-    cGF5bWVudF9tZXRob2RzIjp7ImNyZWRpdF9jYXJkIjp0cnVlLCJwYXlwYWwi
-    OmZhbHNlLCJiYW5rIjp0cnVlLCJzcG90X2Nhc2giOnRydWUsImluc3RhbGxt
-    ZW50cyI6Ilx1MDNhZFx1MDNjOVx1MDNjMiA0OCAgXHUwM2I0XHUwM2NjXHUw
-    M2MzXHUwM2I1XHUwM2I5XHUwM2MyIFx1MDNiY1x1MDNiNSBcdTAzYzBcdTAz
-    YjlcdTAzYzNcdTAzYzRcdTAzYzlcdTAzYzRcdTAzYjlcdTAzYmFcdTAzYWUg
-    XHUwM2JhXHUwM2FjXHUwM2MxXHUwM2M0XHUwM2IxICJ9fX0=
+  :headers:
+    server: nginx
+    content-type: application/json; charset=utf-8
+    !binary "dmFyeQ==": Accept-Encoding
+    status: 200 OK
+    cache-control: max-age=300, private
+    x-ua-compatible: IE=Edge,chrome=1
+    x-request-id: '225151562'
+    x-runtime: '0.044580'
+    x-dns-prefetch-control: 'off'
+    x-app: lunkwill
+    content-length: '360'
+    accept-ranges: bytes
+    date: Mon, 14 Jul 2014 12:06:28 GMT
+    x-varnish: '225151562'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: varnish1
+    x-cache: MISS
+  :body: ! '{"shop":{"id":11,"name":"\u03a0\u03bb\u03b1\u03af\u03c3\u03b9\u03bf","link":"http://www.plaisio.gr/","phone":"8001112345","image_url":"http://b.scdn.gr/images/shops/logos/0000/mid_f44045fa-e4cf-4723-9702-ae163b5c4036.jpg","thumbshot_url":"http://a.scdn.gr/images/shops/screens/59435b64-2d63-4f4e-a038-ce051280da2b.png","reviews_count":257,"review_score":2.75,"payment_methods":{"credit_card":true,"paypal":false,"bank":true,"spot_cash":true,"installments":"\u03ad\u03c9\u03c2
+    48  \u03b4\u03cc\u03c3\u03b5\u03b9\u03c2 \u03bc\u03b5 \u03c0\u03b9\u03c3\u03c4\u03c9\u03c4\u03b9\u03ba\u03ae
+    \u03ba\u03ac\u03c1\u03c4\u03b1 "}}}'
+:created_at: 2014-07-14 15:06:28.128311131 +03:00

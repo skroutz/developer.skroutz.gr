@@ -3,67 +3,36 @@
   :url: http://skroutz.gr/api/categories/40/filter_groups
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer 5JN7RHwWJ9ZPSBEKo0/bskSR0IOfNtETjwmMOPsGKZiXrRnP71w7cZbDZFKBaeNoJAyIKRMKjXeaBeF40Uxg==
+    :authorization: Bearer fYxk5iZjO44DwXwkwP5SW7cHwaqFMbc5riQ4JQFgeVNe1epmAHlDtGjvAPhVAIH1aPLiQt67RSrVasw9o7EEQ==
   :params:
     :per: 2
   :verb: GET
 :response:
   :status: 200
-  :headers: !ruby/hash:Faraday::Utils::Headers
-    server: !binary |-
-      bmdpbng=
-    content-type: !binary |-
-      YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-    !binary "dmFyeQ==": !binary |-
-      QWNjZXB0LUVuY29kaW5n
-    status: !binary |-
-      MjAwIE9L
-    !binary "bGluaw==": !binary |-
-      PGh0dHA6Ly9hcGkuc2tyb3V0ei5nci9hcGkvY2F0ZWdvcmllcy80MC9maWx0
-      ZXJfZ3JvdXBzP3BhZ2U9NiZwZXI9Mj47IHJlbD0ibGFzdCIsIDxodHRwOi8v
-      YXBpLnNrcm91dHouZ3IvYXBpL2NhdGVnb3JpZXMvNDAvZmlsdGVyX2dyb3Vw
-      cz9wYWdlPTImcGVyPTI+OyByZWw9Im5leHQi
-    x-ua-compatible: !binary |-
-      SUU9RWRnZSxjaHJvbWU9MQ==
-    cache-control: !binary |-
-      bWF4LWFnZT0wLCBwcml2YXRlLCBtdXN0LXJldmFsaWRhdGU=
-    x-request-id: !binary |-
-      MzM3MzcxMTIwNA==
-    x-runtime: !binary |-
-      MC4wMzc0ODI=
-    x-dns-prefetch-control: !binary |-
-      b2Zm
-    x-app: !binary |-
-      bHVua3dpbGw=
-    content-length: !binary |-
-      Mjc3
-    accept-ranges: !binary |-
-      Ynl0ZXM=
-    date: !binary |-
-      TW9uLCAwNyBKdWwgMjAxNCAxMzowNzo1MSBHTVQ=
-    x-varnish: !binary |-
-      MzM3MzcxMTIwNA==
-    age: !binary |-
-      MA==
-    via: !binary |-
-      MS4xIHZhcm5pc2g=
-    connection: !binary |-
-      Y2xvc2U=
-    x-origin: !binary |-
-      dmFybmlzaDE=
-    x-cache: !binary |-
-      TUlTUw==
-  :body: !binary |-
-    eyJmaWx0ZXJfZ3JvdXBzIjpbeyJpZCI6NDg2MzYsIm5hbWUiOiJcdTAzOWNc
-    dTAzYWRcdTAzYjNcdTAzYjVcdTAzYjhcdTAzYmZcdTAzYzIgXHUwMzlmXHUw
-    M2I4XHUwM2NjXHUwM2JkXHUwM2I3XHUwM2MyIiwiYWN0aXZlIjp0cnVlLCJj
-    YXRlZ29yeV9pZCI6NDAsImNyZWF0ZWRfYXQiOm51bGwsInVwZGF0ZWRfYXQi
-    OiIyMDE0LTA3LTA2VDIyOjMwOjMyKzAzOjAwIiwiaGludCI6IiIsImNvbWJp
-    bmVkIjpmYWxzZX0seyJpZCI6OTY4LCJuYW1lIjoiXHUwMzliXHUwM2I1XHUw
-    M2I5XHUwM2M0XHUwM2JmXHUwM2M1XHUwM2MxXHUwM2IzXHUwM2I5XHUwM2Jh
-    XHUwM2NjIFx1MDNhM1x1MDNjZFx1MDNjM1x1MDNjNFx1MDNiN1x1MDNiY1x1
-    MDNiMSIsImFjdGl2ZSI6dHJ1ZSwiY2F0ZWdvcnlfaWQiOjQwLCJjcmVhdGVk
-    X2F0IjpudWxsLCJ1cGRhdGVkX2F0IjoiMjAxNC0wNy0wNlQyMjozMDozMysw
-    MzowMCIsImhpbnQiOiIiLCJjb21iaW5lZCI6ZmFsc2V9XSwibWV0YSI6eyJw
-    YWdpbmF0aW9uIjp7InRvdGFsX3Jlc3VsdHMiOjExLCJ0b3RhbF9wYWdlcyI6
-    NiwicGFnZSI6MSwicGVyIjoyfX19
+  :headers:
+    server: nginx
+    content-type: application/json; charset=utf-8
+    !binary "dmFyeQ==": Accept-Encoding
+    status: 200 OK
+    !binary "bGluaw==": <http://api.skroutz.gr/api/categories/40/filter_groups?page=6&per=2>;
+      rel="last", <http://api.skroutz.gr/api/categories/40/filter_groups?page=2&per=2>;
+      rel="next"
+    x-ua-compatible: IE=Edge,chrome=1
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '225152119'
+    x-runtime: '0.036690'
+    x-dns-prefetch-control: 'off'
+    x-app: lunkwill
+    content-length: '272'
+    accept-ranges: bytes
+    date: Mon, 14 Jul 2014 12:06:31 GMT
+    x-varnish: '225152119'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: varnish1
+    x-cache: MISS
+  :body: ! '{"filter_groups":[{"id":48636,"name":"\u039c\u03ad\u03b3\u03b5\u03b8\u03bf\u03c2
+    \u039f\u03b8\u03cc\u03bd\u03b7\u03c2","active":true,"category_id":40,"created_at":null,"updated_at":"2014-07-13T22:30:37+03:00","hint":"","combined":false},{"id":968,"name":"\u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
+    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1","active":true,"category_id":40,"created_at":null,"updated_at":"2014-07-13T22:30:37+03:00","hint":"","combined":false}],"meta":{"pagination":{"total_results":11,"total_pages":6,"page":1,"per":2}}}'
+:created_at: 2014-07-14 15:06:31.699836736 +03:00

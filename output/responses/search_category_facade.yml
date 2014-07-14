@@ -3,7 +3,7 @@
   :url: http://skroutz.gr/api/search
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer 5JN7RHwWJ9ZPSBEKo0/bskSR0IOfNtETjwmMOPsGKZiXrRnP71w7cZbDZFKBaeNoJAyIKRMKjXeaBeF40Uxg==
+    :authorization: Bearer fYxk5iZjO44DwXwkwP5SW7cHwaqFMbc5riQ4JQFgeVNe1epmAHlDtGjvAPhVAIH1aPLiQt67RSrVasw9o7EEQ==
   :params:
     :q: iphone
     :page: 1
@@ -11,69 +11,28 @@
   :verb: GET
 :response:
   :status: 200
-  :headers: !ruby/hash:Faraday::Utils::Headers
-    server: !binary |-
-      bmdpbng=
-    content-type: !binary |-
-      YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-    !binary "dmFyeQ==": !binary |-
-      QWNjZXB0LUVuY29kaW5n
-    status: !binary |-
-      MjAwIE9L
-    !binary "bGluaw==": !binary |-
-      PGh0dHA6Ly9hcGkuc2tyb3V0ei5nci9hcGkvc2VhcmNoP3BhZ2U9NjEmcGVy
-      PTImcT1pcGhvbmU+OyByZWw9Imxhc3QiLCA8aHR0cDovL2FwaS5za3JvdXR6
-      LmdyL2FwaS9zZWFyY2g/cGFnZT0yJnBlcj0yJnE9aXBob25lPjsgcmVsPSJu
-      ZXh0Ig==
-    x-ua-compatible: !binary |-
-      SUU9RWRnZSxjaHJvbWU9MQ==
-    cache-control: !binary |-
-      bWF4LWFnZT0wLCBwcml2YXRlLCBtdXN0LXJldmFsaWRhdGU=
-    x-request-id: !binary |-
-      MjM2MTMwNDE1Ng==
-    x-runtime: !binary |-
-      MC4xMDQ0NTg=
-    x-dns-prefetch-control: !binary |-
-      b2Zm
-    x-app: !binary |-
-      bHVua3dpbGw=
-    content-length: !binary |-
-      MzQ5
-    accept-ranges: !binary |-
-      Ynl0ZXM=
-    date: !binary |-
-      TW9uLCAwNyBKdWwgMjAxNCAxMzowNzo0NyBHTVQ=
-    x-varnish: !binary |-
-      MjM2MTMwNDE1Ng==
-    age: !binary |-
-      MA==
-    via: !binary |-
-      MS4xIHZhcm5pc2g=
-    connection: !binary |-
-      Y2xvc2U=
-    x-origin: !binary |-
-      dmFybmlzaDI=
-    x-cache: !binary |-
-      TUlTUw==
-  :body: !binary |-
-    eyJjYXRlZ29yaWVzIjpbeyJpZCI6NDAsIm5hbWUiOiJcdTAzOWFcdTAzYjlc
-    dTAzYmRcdTAzYjdcdTAzYzRcdTAzYWMgXHUwM2E0XHUwM2I3XHUwM2JiXHUw
-    M2FkXHUwM2M2XHUwM2M5XHUwM2JkXHUwM2IxIiwiY2hpbGRyZW5fY291bnQi
-    OjAsImltYWdlX3VybCI6Imh0dHA6Ly9hLnNjZG4uZ3IvaW1hZ2VzL2NhdGVn
-    b3JpZXMvbGFyZ2UvNDAuanBnIiwicGFyZW50X2lkIjo4NiwiZmFzaGlvbiI6
-    ZmFsc2UsInNob3dfc3BlY2lmaWNhdGlvbnMiOnRydWUsIm1hbnVmYWN0dXJl
-    cl90aXRsZSI6Ilx1MDM5YVx1MDNiMVx1MDNjNFx1MDNiMVx1MDNjM1x1MDNi
-    YVx1MDNiNVx1MDNjNVx1MDNiMVx1MDNjM1x1MDNjNFx1MDNhZFx1MDNjMiIs
-    Im1hdGNoX2NvdW50IjoxM30seyJpZCI6NTc5LCJuYW1lIjoiXHUwMzk4XHUw
-    M2FlXHUwM2JhXHUwM2I1XHUwM2MyIFx1MDM5YVx1MDNiOVx1MDNiZFx1MDNi
-    N1x1MDNjNFx1MDNjZVx1MDNiZCBcdTAzYTRcdTAzYjdcdTAzYmJcdTAzYjVc
-    dTAzYzZcdTAzY2VcdTAzYmRcdTAzYzlcdTAzYmQiLCJjaGlsZHJlbl9jb3Vu
-    dCI6MCwiaW1hZ2VfdXJsIjoiaHR0cDovL2Euc2Nkbi5nci9pbWFnZXMvY2F0
-    ZWdvcmllcy9sYXJnZS81NzkuanBnIiwicGFyZW50X2lkIjo4NiwiZmFzaGlv
-    biI6ZmFsc2UsInNob3dfc3BlY2lmaWNhdGlvbnMiOmZhbHNlLCJtYW51ZmFj
-    dHVyZXJfdGl0bGUiOiJcdTAzOWFcdTAzYjFcdTAzYzRcdTAzYjFcdTAzYzNc
-    dTAzYmFcdTAzYjVcdTAzYzVcdTAzYjFcdTAzYzNcdTAzYzRcdTAzYWRcdTAz
-    YzIiLCJtYXRjaF9jb3VudCI6OTE0OX1dLCJtZXRhIjp7ImFsdGVybmF0aXZl
-    cyI6W10sInN0cm9uZ19tYXRjaGVzIjp7fSwicGFnaW5hdGlvbiI6eyJ0b3Rh
-    bF9yZXN1bHRzIjoxMjIsInRvdGFsX3BhZ2VzIjo2MSwicGFnZSI6MSwicGVy
-    IjoyfX19
+  :headers:
+    server: nginx
+    content-type: application/json; charset=utf-8
+    !binary "dmFyeQ==": Accept-Encoding
+    status: 200 OK
+    !binary "bGluaw==": <http://api.skroutz.gr/api/search?page=62&per=2&q=iphone>;
+      rel="last", <http://api.skroutz.gr/api/search?page=2&per=2&q=iphone>; rel="next"
+    x-ua-compatible: IE=Edge,chrome=1
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '2406164067'
+    x-runtime: '0.131825'
+    x-dns-prefetch-control: 'off'
+    x-app: lunkwill
+    content-length: '351'
+    accept-ranges: bytes
+    date: Mon, 14 Jul 2014 12:06:29 GMT
+    x-varnish: '2406164067'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: varnish2
+    x-cache: MISS
+  :body: ! '{"categories":[{"id":40,"name":"\u039a\u03b9\u03bd\u03b7\u03c4\u03ac \u03a4\u03b7\u03bb\u03ad\u03c6\u03c9\u03bd\u03b1","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/40.jpg","parent_id":86,"fashion":false,"show_specifications":true,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":13},{"id":579,"name":"\u0398\u03ae\u03ba\u03b5\u03c2
+    \u039a\u03b9\u03bd\u03b7\u03c4\u03ce\u03bd \u03a4\u03b7\u03bb\u03b5\u03c6\u03ce\u03bd\u03c9\u03bd","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/579.jpg","parent_id":86,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":9423}],"meta":{"alternatives":[],"strong_matches":{},"pagination":{"total_results":124,"total_pages":62,"page":1,"per":2}}}'
+:created_at: 2014-07-14 15:06:29.964768583 +03:00

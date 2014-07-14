@@ -3,56 +3,30 @@
   :url: http://skroutz.gr/api/categories/1442/parent
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer 5JN7RHwWJ9ZPSBEKo0/bskSR0IOfNtETjwmMOPsGKZiXrRnP71w7cZbDZFKBaeNoJAyIKRMKjXeaBeF40Uxg==
+    :authorization: Bearer fYxk5iZjO44DwXwkwP5SW7cHwaqFMbc5riQ4JQFgeVNe1epmAHlDtGjvAPhVAIH1aPLiQt67RSrVasw9o7EEQ==
   :verb: GET
 :response:
   :status: 200
-  :headers: !ruby/hash:Faraday::Utils::Headers
-    server: !binary |-
-      bmdpbng=
-    content-type: !binary |-
-      YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-    !binary "dmFyeQ==": !binary |-
-      QWNjZXB0LUVuY29kaW5n
-    status: !binary |-
-      MjAwIE9L
-    cache-control: !binary |-
-      bWF4LWFnZT0zMDAsIHByaXZhdGU=
-    x-ua-compatible: !binary |-
-      SUU9RWRnZSxjaHJvbWU9MQ==
-    x-request-id: !binary |-
-      MjM2MTI4NzcwNg==
-    x-runtime: !binary |-
-      MC4wNDY0Mjc=
-    x-dns-prefetch-control: !binary |-
-      b2Zm
-    x-app: !binary |-
-      bHVua3dpbGw=
-    content-length: !binary |-
-      MjM5
-    accept-ranges: !binary |-
-      Ynl0ZXM=
-    date: !binary |-
-      TW9uLCAwNyBKdWwgMjAxNCAxMzowNToyNiBHTVQ=
-    x-varnish: !binary |-
-      MjM2MTI4NzcwNg==
-    age: !binary |-
-      MA==
-    via: !binary |-
-      MS4xIHZhcm5pc2g=
-    connection: !binary |-
-      Y2xvc2U=
-    x-origin: !binary |-
-      dmFybmlzaDI=
-    x-cache: !binary |-
-      TUlTUw==
-  :body: !binary |-
-    eyJjYXRlZ29yeSI6eyJpZCI6MTQzNCwibmFtZSI6Ilx1MDM4OFx1MDNjMFx1
-    MDNiOVx1MDNjMFx1MDNiYlx1MDNiMSBcdTAzOWFcdTAzYWVcdTAzYzBcdTAz
-    YmZcdTAzYzUgJiBcdTAzOTJcdTAzYjVcdTAzYzFcdTAzYWNcdTAzYmRcdTAz
-    YzRcdTAzYjFcdTAzYzIiLCJjaGlsZHJlbl9jb3VudCI6MTEsImltYWdlX3Vy
-    bCI6Imh0dHA6Ly9iLnNjZG4uZ3IvaW1hZ2VzL2NhdGVnb3JpZXMvbGFyZ2Uv
-    MTQzNC5qcGciLCJwYXJlbnRfaWQiOjEwNTIsImZhc2hpb24iOmZhbHNlLCJz
-    aG93X3NwZWNpZmljYXRpb25zIjpmYWxzZSwibWFudWZhY3R1cmVyX3RpdGxl
-    IjoiXHUwMzlhXHUwM2IxXHUwM2M0XHUwM2IxXHUwM2MzXHUwM2JhXHUwM2I1
-    XHUwM2M1XHUwM2IxXHUwM2MzXHUwM2M0XHUwM2FkXHUwM2MyIn19
+  :headers:
+    server: nginx
+    content-type: application/json; charset=utf-8
+    !binary "dmFyeQ==": Accept-Encoding
+    status: 200 OK
+    cache-control: max-age=300, private
+    x-ua-compatible: IE=Edge,chrome=1
+    x-request-id: '2406163830'
+    x-runtime: '0.030405'
+    x-dns-prefetch-control: 'off'
+    x-app: lunkwill
+    content-length: '239'
+    accept-ranges: bytes
+    date: Mon, 14 Jul 2014 12:06:27 GMT
+    x-varnish: '2406163830'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: varnish2
+    x-cache: MISS
+  :body: ! '{"category":{"id":1434,"name":"\u0388\u03c0\u03b9\u03c0\u03bb\u03b1 \u039a\u03ae\u03c0\u03bf\u03c5
+    & \u0392\u03b5\u03c1\u03ac\u03bd\u03c4\u03b1\u03c2","children_count":11,"image_url":"http://b.scdn.gr/images/categories/large/1434.jpg","parent_id":1052,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"}}'
+:created_at: 2014-07-14 15:06:27.988213691 +03:00

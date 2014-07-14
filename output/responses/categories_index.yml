@@ -3,95 +3,36 @@
   :url: http://skroutz.gr/api/categories?page=1&per=5
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer 5JN7RHwWJ9ZPSBEKo0/bskSR0IOfNtETjwmMOPsGKZiXrRnP71w7cZbDZFKBaeNoJAyIKRMKjXeaBeF40Uxg==
+    :authorization: Bearer fYxk5iZjO44DwXwkwP5SW7cHwaqFMbc5riQ4JQFgeVNe1epmAHlDtGjvAPhVAIH1aPLiQt67RSrVasw9o7EEQ==
   :verb: GET
 :response:
   :status: 200
-  :headers: !ruby/hash:Faraday::Utils::Headers
-    server: !binary |-
-      bmdpbng=
-    content-type: !binary |-
-      YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-    !binary "dmFyeQ==": !binary |-
-      QWNjZXB0LUVuY29kaW5n
-    status: !binary |-
-      MjAwIE9L
-    cache-control: !binary |-
-      bWF4LWFnZT0zMDAsIHByaXZhdGU=
-    x-ua-compatible: !binary |-
-      SUU9RWRnZSxjaHJvbWU9MQ==
-    x-request-id: !binary |-
-      MjM2MTI4MjY2Ng==
-    x-runtime: !binary |-
-      MC4wMzE1Mjg=
-    x-dns-prefetch-control: !binary |-
-      b2Zm
-    x-app: !binary |-
-      bHVua3dpbGw=
-    content-length: !binary |-
-      NDQy
-    accept-ranges: !binary |-
-      Ynl0ZXM=
-    date: !binary |-
-      TW9uLCAwNyBKdWwgMjAxNCAxMzowNDo0NSBHTVQ=
-    x-varnish: !binary |-
-      MjM2MTI4MjY2Ng==
-    age: !binary |-
-      MA==
-    via: !binary |-
-      MS4xIHZhcm5pc2g=
-    connection: !binary |-
-      Y2xvc2U=
-    x-origin: !binary |-
-      dmFybmlzaDI=
-    x-cache: !binary |-
-      TUlTUw==
-  :body: !binary |-
-    eyJjYXRlZ29yaWVzIjpbeyJpZCI6MTI2OSwibmFtZSI6Ilx1MDNhNFx1MDNi
-    NVx1MDNjN1x1MDNiZFx1MDNiZlx1MDNiYlx1MDNiZlx1MDNiM1x1MDNhZlx1
-    MDNiMSIsImNoaWxkcmVuX2NvdW50Ijo4LCJpbWFnZV91cmwiOiJodHRwOi8v
-    Yi5zY2RuLmdyL2ltYWdlcy9jYXRlZ29yaWVzL2xhcmdlLzEyNjkuanBnIiwi
-    cGFyZW50X2lkIjo3NiwiZmFzaGlvbiI6ZmFsc2UsInNob3dfc3BlY2lmaWNh
-    dGlvbnMiOmZhbHNlLCJtYW51ZmFjdHVyZXJfdGl0bGUiOiJcdTAzOWFcdTAz
-    YjFcdTAzYzRcdTAzYjFcdTAzYzNcdTAzYmFcdTAzYjVcdTAzYzVcdTAzYjFc
-    dTAzYzNcdTAzYzRcdTAzYWRcdTAzYzIifSx7ImlkIjoyNzQsIm5hbWUiOiJc
-    dTAzOWNcdTAzY2NcdTAzYjRcdTAzYjEgLSBcdTAzOWZcdTAzYmNcdTAzYmZc
-    dTAzYzFcdTAzYzZcdTAzYjlcdTAzYWMiLCJjaGlsZHJlbl9jb3VudCI6MTIs
-    ImltYWdlX3VybCI6Imh0dHA6Ly9kLnNjZG4uZ3IvaW1hZ2VzL2NhdGVnb3Jp
-    ZXMvbGFyZ2UvMjc0LmpwZyIsInBhcmVudF9pZCI6NzYsImZhc2hpb24iOmZh
-    bHNlLCJzaG93X3NwZWNpZmljYXRpb25zIjpmYWxzZSwibWFudWZhY3R1cmVy
-    X3RpdGxlIjoiXHUwMzlhXHUwM2IxXHUwM2M0XHUwM2IxXHUwM2MzXHUwM2Jh
-    XHUwM2I1XHUwM2M1XHUwM2IxXHUwM2MzXHUwM2M0XHUwM2FkXHUwM2MyIn0s
-    eyJpZCI6NDE3LCJuYW1lIjoiXHUwM2EwXHUwM2IxXHUwM2I5XHUwM2I0XHUw
-    M2I5XHUwM2JhXHUwM2FjIC0gXHUwMzkyXHUwM2MxXHUwM2I1XHUwM2M2XHUw
-    M2I5XHUwM2JhXHUwM2FjIiwiY2hpbGRyZW5fY291bnQiOjE0LCJpbWFnZV91
-    cmwiOiJodHRwOi8vYS5zY2RuLmdyL2ltYWdlcy9jYXRlZ29yaWVzL2xhcmdl
-    LzQxNy5qcGciLCJwYXJlbnRfaWQiOjc2LCJmYXNoaW9uIjpmYWxzZSwic2hv
-    d19zcGVjaWZpY2F0aW9ucyI6ZmFsc2UsIm1hbnVmYWN0dXJlcl90aXRsZSI6
-    Ilx1MDM5YVx1MDNiMVx1MDNjNFx1MDNiMVx1MDNjM1x1MDNiYVx1MDNiNVx1
-    MDNjNVx1MDNiMVx1MDNjM1x1MDNjNFx1MDNhZFx1MDNjMiJ9LHsiaWQiOjI1
-    NSwibmFtZSI6IkhvYmJ5IC0gXHUwMzkxXHUwM2I4XHUwM2JiXHUwM2I3XHUw
-    M2M0XHUwM2I5XHUwM2MzXHUwM2JjXHUwM2NjXHUwM2MyIiwiY2hpbGRyZW5f
-    Y291bnQiOjEwLCJpbWFnZV91cmwiOiJodHRwOi8vYS5zY2RuLmdyL2ltYWdl
-    cy9jYXRlZ29yaWVzL2xhcmdlLzI1NS5qcGciLCJwYXJlbnRfaWQiOjc2LCJm
-    YXNoaW9uIjpmYWxzZSwic2hvd19zcGVjaWZpY2F0aW9ucyI6ZmFsc2UsIm1h
-    bnVmYWN0dXJlcl90aXRsZSI6Ilx1MDM5YVx1MDNiMVx1MDNjNFx1MDNiMVx1
-    MDNjM1x1MDNiYVx1MDNiNVx1MDNjNVx1MDNiMVx1MDNjM1x1MDNjNFx1MDNh
-    ZFx1MDNjMiJ9LHsiaWQiOjExLCJuYW1lIjoiXHUwM2EzXHUwM2MwXHUwM2Fm
-    XHUwM2M0XHUwM2I5IC0gXHUwMzlhXHUwM2FlXHUwM2MwXHUwM2JmXHUwM2My
-    IiwiY2hpbGRyZW5fY291bnQiOjEyLCJpbWFnZV91cmwiOiJodHRwOi8vZC5z
-    Y2RuLmdyL2ltYWdlcy9jYXRlZ29yaWVzL2xhcmdlLzExLmpwZyIsInBhcmVu
-    dF9pZCI6NzYsImZhc2hpb24iOmZhbHNlLCJzaG93X3NwZWNpZmljYXRpb25z
-    IjpmYWxzZSwibWFudWZhY3R1cmVyX3RpdGxlIjoiXHUwMzlhXHUwM2IxXHUw
-    M2M0XHUwM2IxXHUwM2MzXHUwM2JhXHUwM2I1XHUwM2M1XHUwM2IxXHUwM2Mz
-    XHUwM2M0XHUwM2FkXHUwM2MyIn0seyJpZCI6MzMsIm5hbWUiOiJBdXRvIC0g
-    TW90byIsImNoaWxkcmVuX2NvdW50Ijo0LCJpbWFnZV91cmwiOiJodHRwOi8v
-    YS5zY2RuLmdyL2ltYWdlcy9jYXRlZ29yaWVzL2xhcmdlLzMzLmpwZyIsInBh
-    cmVudF9pZCI6NzYsImZhc2hpb24iOmZhbHNlLCJzaG93X3NwZWNpZmljYXRp
-    b25zIjpmYWxzZSwibWFudWZhY3R1cmVyX3RpdGxlIjoiXHUwMzlhXHUwM2Ix
-    XHUwM2M0XHUwM2IxXHUwM2MzXHUwM2JhXHUwM2I1XHUwM2M1XHUwM2IxXHUw
-    M2MzXHUwM2M0XHUwM2FkXHUwM2MyIn1dLCJtZXRhIjp7InBhZ2luYXRpb24i
-    OnsidG90YWxfcmVzdWx0cyI6NiwidG90YWxfcGFnZXMiOjEsInBhZ2UiOjEs
-    InBlciI6MjV9fX0=
+  :headers:
+    server: nginx
+    content-type: application/json; charset=utf-8
+    !binary "dmFyeQ==": Accept-Encoding
+    status: 200 OK
+    cache-control: max-age=300, private
+    x-ua-compatible: IE=Edge,chrome=1
+    x-request-id: '2406163737'
+    x-runtime: '0.038719'
+    x-dns-prefetch-control: 'off'
+    x-app: lunkwill
+    content-length: '442'
+    accept-ranges: bytes
+    date: Mon, 14 Jul 2014 12:06:27 GMT
+    x-varnish: '2406163737'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: varnish2
+    x-cache: MISS
+  :body: ! '{"categories":[{"id":1269,"name":"\u03a4\u03b5\u03c7\u03bd\u03bf\u03bb\u03bf\u03b3\u03af\u03b1","children_count":8,"image_url":"http://b.scdn.gr/images/categories/large/1269.jpg","parent_id":76,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"},{"id":274,"name":"\u039c\u03cc\u03b4\u03b1
+    - \u039f\u03bc\u03bf\u03c1\u03c6\u03b9\u03ac","children_count":12,"image_url":"http://d.scdn.gr/images/categories/large/274.jpg","parent_id":76,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"},{"id":417,"name":"\u03a0\u03b1\u03b9\u03b4\u03b9\u03ba\u03ac
+    - \u0392\u03c1\u03b5\u03c6\u03b9\u03ba\u03ac","children_count":14,"image_url":"http://a.scdn.gr/images/categories/large/417.jpg","parent_id":76,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"},{"id":255,"name":"Hobby
+    - \u0391\u03b8\u03bb\u03b7\u03c4\u03b9\u03c3\u03bc\u03cc\u03c2","children_count":10,"image_url":"http://a.scdn.gr/images/categories/large/255.jpg","parent_id":76,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"},{"id":11,"name":"\u03a3\u03c0\u03af\u03c4\u03b9
+    - \u039a\u03ae\u03c0\u03bf\u03c2","children_count":12,"image_url":"http://d.scdn.gr/images/categories/large/11.jpg","parent_id":76,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"},{"id":33,"name":"Auto
+    - Moto","children_count":4,"image_url":"http://a.scdn.gr/images/categories/large/33.jpg","parent_id":76,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"}],"meta":{"pagination":{"total_results":6,"total_pages":1,"page":1,"per":25}}}'
+:created_at: 2014-07-14 15:06:27.274508920 +03:00
 :meta:
   :description: Lists all categories
