@@ -2,7 +2,7 @@
 
 set -e
 
-tmp_path=./output
+tmp_path=./build
 deploy_to=/var/sites/developer.skroutz.gr
 deploy_user=wowbagger
 deploy_server=developer.skroutz.gr
@@ -10,7 +10,7 @@ deploy_server=developer.skroutz.gr
 #Check for rsync
 type rsync >/dev/null || echo "apt-get install rsync"
 
-bundle exec nanoc compile
+bundle exec middleman build
 
 echo -e "\n ==> Deploying to $deploy_user@$deploy_server\n"
 rsync -e ssh -avz --delete $tmp_path/ $deploy_user@$deploy_server:$deploy_to
