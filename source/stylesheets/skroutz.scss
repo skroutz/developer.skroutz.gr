@@ -232,7 +232,7 @@ header {
   ul {
     list-style-position: inside;
     font-size: 14px;
-    margin-top: 10px;
+    margin: 10px 20px 20px;
 
     li {
       margin-bottom: 3px;
@@ -342,6 +342,7 @@ header {
 
   .example {
     position: relative;
+    margin: 20px auto;
     border: 1px solid #dbdbdb;
     background: #fff;
     overflow: hidden;
