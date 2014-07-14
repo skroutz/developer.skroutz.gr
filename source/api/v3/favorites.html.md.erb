@@ -13,21 +13,37 @@ title: User Favorite | Skroutz API
 ## About
 
 User may pick one or more SKUs as favorites.
-Favorites are organized in favorite_lists. 3 ‘types’ of favorite_lists exist:
+Favorites are organized in `favorite_lists`. 3 *types* of `favorite_lists` exist:
 
-  - custom lists
-    Can group SKUs from different categories.  These are created by the user.
-  - auto lists
-    These are connected with a category and can only group favorites with SKUs
-    from this category. These are created automatically when a new favorite is
-    created without specifing a favorite_list (and favorite is not owned.
-    See next)
-  - “owned” list
-    No such list exists but favorites that user has flagged as “owned” have
-    favorite_list_id => null and have_it => true attributes.
-    In this way owned favorites can be presented as a list.
+<ol>
+  <li>
+    <p class="term">custom lists</p>
+    <p class="description">
+      Can group SKUs from different categories. These are created by the user.
+    </p>
+  </li>
+  
+  <li>
+    <p class="term">auto lists</p>
+    <p class="description">
+      These are connected with a category and can only group favorites with SKUs
+      from this category. These are created automatically when a new favorite is
+      created without specifying a <code>favorite_list</code> (and favorite is
+      not owned. See next)
+    </p>
+  </li>
+  
+  <li>
+    <p class="term">“owned” list</p>
+    <p class="description">
+      No such list exists but favorites that user has flagged as “owned” have
+      <code>favorite_list_id => null</code> and <code>have_it => true</code>
+      attributes. In this way owned favorites can be presented as a list.
+    </p>
+  </li>
+</ol>
 
-Endpoints for favorites and favorite_lists are listed next.
+Endpoints for `favorites` and `favorite_lists` are listed next.
 
 
 ## List favorite lists
@@ -115,13 +131,13 @@ A favorite update might be called to do one of the following:
   - Add the favorite to a new custom list
 
 
-When a favorite is `have_it: true`, it does not belong to a favorite_list.
+When a favorite is `have_it: true`, it does not belong to a *favorite_list*.
 
-If you put a favorite_list_id and `have_it: true`, then only have_it will be
-respected (favorite_list_id will be ignored).
+If you put a *favorite_list_id* and `have_it: true`, then only *have_it* will be
+respected (*favorite_list_id* will be ignored).
 
 You may choose to create a new custom list when creating or updating a favorite,
-by specifing the parameter `new_list_name`. A new custom list will be created
+by specifying the parameter `new_list_name`. A new custom list will be created
 (if it does not exist) with the given name and the favorite will be assigned
 to it, `have_it` attribute will be set to `null`.
 In case of an error, status 400 will be returned with errors in response body.
