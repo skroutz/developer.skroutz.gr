@@ -40,7 +40,7 @@
             <%= yield %>
           </div>
         </div>
-        <%= partial 'partials/generic_sidebar' %>
+        <%= partial current_page.metadata[:options].fetch(:sidebar, 'partials/generic_sidebar') %>
       </div>
     </div>
   </body>
