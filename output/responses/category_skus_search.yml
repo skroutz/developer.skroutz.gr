@@ -3,107 +3,46 @@
   :url: http://skroutz.gr/api/categories/40/skus
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer 5JN7RHwWJ9ZPSBEKo0/bskSR0IOfNtETjwmMOPsGKZiXrRnP71w7cZbDZFKBaeNoJAyIKRMKjXeaBeF40Uxg==
+    :authorization: Bearer fYxk5iZjO44DwXwkwP5SW7cHwaqFMbc5riQ4JQFgeVNe1epmAHlDtGjvAPhVAIH1aPLiQt67RSrVasw9o7EEQ==
   :params:
     :q: iphone
     :per: 2
   :verb: GET
 :response:
   :status: 200
-  :headers: !ruby/hash:Faraday::Utils::Headers
-    server: !binary |-
-      bmdpbng=
-    content-type: !binary |-
-      YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-    !binary "dmFyeQ==": !binary |-
-      QWNjZXB0LUVuY29kaW5n
-    status: !binary |-
-      MjAwIE9L
-    x-ua-compatible: !binary |-
-      SUU9RWRnZSxjaHJvbWU9MQ==
-    cache-control: !binary |-
-      bWF4LWFnZT0wLCBwcml2YXRlLCBtdXN0LXJldmFsaWRhdGU=
-    x-request-id: !binary |-
-      MjM2MTMwNDY2Nw==
-    x-runtime: !binary |-
-      MC4wNjQ0NzY=
-    x-dns-prefetch-control: !binary |-
-      b2Zm
-    x-app: !binary |-
-      bHVua3dpbGw=
-    content-length: !binary |-
-      NzY0
-    accept-ranges: !binary |-
-      Ynl0ZXM=
-    date: !binary |-
-      TW9uLCAwNyBKdWwgMjAxNCAxMzowNzo1MiBHTVQ=
-    x-varnish: !binary |-
-      MjM2MTMwNDY2Nw==
-    age: !binary |-
-      MA==
-    via: !binary |-
-      MS4xIHZhcm5pc2g=
-    connection: !binary |-
-      Y2xvc2U=
-    x-origin: !binary |-
-      dmFybmlzaDI=
-    x-cache: !binary |-
-      TUlTUw==
-  :body: !binary |-
-    eyJza3VzIjpbeyJpZCI6MzkwMjU4MSwiZWFuIjoiIiwicG4iOiIiLCJuYW1l
-    IjoiaVBob25lIDRTICg4R0IpIiwiZGlzcGxheV9uYW1lIjoiQXBwbGUgaVBo
-    b25lIDRTICg4R0IpIiwiY2F0ZWdvcnlfaWQiOjQwLCJmaXJzdF9wcm9kdWN0
-    X3Nob3BfaW5mbyI6bnVsbCwiY2xpY2tfdXJsIjpudWxsLCJwcmljZV9tYXgi
-    OjM5OS4wLCJwcmljZV9taW4iOjI4Ny43NywicmV2aWV3c2NvcmUiOjQuODMz
-    MzMsInNob3BfY291bnQiOjQyLCJwbGFpbl9zcGVjX3N1bW1hcnkiOiJTaW5n
-    bGUgU0lNLCBcdTAzOTRcdTAzYWZcdTAzYmFcdTAzYzRcdTAzYzVcdTAzYmYg
-    XHUwM2EzXHUwM2NkXHUwM2JkXHUwM2I0XHUwM2I1XHUwM2MzXHUwM2I3XHUw
-    M2MyOiAzRywgXHUwMzlhXHUwM2FjXHUwM2JjXHUwM2I1XHUwM2MxXHUwM2Ix
-    OiA4IE1QLCAgXHUwMzlmXHUwM2I4XHUwM2NjXHUwM2JkXHUwM2I3OiAzLjVc
-    IiAsIFx1MDM5MVx1MDNiZFx1MDNhY1x1MDNiYlx1MDNjNVx1MDNjM1x1MDNi
-    NzogNjQwIHggOTYwIHBpeGVscywgXHUwM2E3XHUwM2I1XHUwM2I5XHUwM2Mx
-    XHUwM2I5XHUwM2MzXHUwM2JjXHUwM2NjXHUwM2MyOiBcdTAzOWZcdTAzYjhc
-    dTAzY2NcdTAzYmRcdTAzYjcgXHUwM2IxXHUwM2M2XHUwM2FlXHUwM2MyIChU
-    b3VjaCBzY3JlZW4pLCAgXHUwMzk1XHUwM2MzXHUwM2M5XHUwM2M0XHUwM2I1
-    XHUwM2MxXHUwM2I5XHUwM2JhXHUwM2FlIFx1MDM5Y1x1MDNiZFx1MDNhZVx1
-    MDNiY1x1MDNiNzogOC4wIEdCLCAgXHUwMzliXHUwM2I1XHUwM2I5XHUwM2M0
-    XHUwM2JmXHUwM2M1XHUwM2MxXHUwM2IzXHUwM2I5XHUwM2JhXHUwM2NjIFx1
-    MDNhM1x1MDNjZFx1MDNjM1x1MDNjNFx1MDNiN1x1MDNiY1x1MDNiMTogaU9T
-    LCBTbWFydFBob25lIiwibWFudWZhY3R1cmVyX2lkIjozNTYsImZ1dHVyZSI6
-    ZmFsc2UsInJldmlld3NfY291bnQiOjEyLCJ2aXJ0dWFsIjpmYWxzZSwiaW1h
-    Z2VzIjp7Im1haW4iOiJodHRwOi8vZC5zY2RuLmdyL2ltYWdlcy9za3VfbWFp
-    bl9pbWFnZXMvMDAzOTAyLzM5MDI1ODEvbWVkaXVtX2NvbG9yX3doaXRlLmpw
-    ZyIsImFsdGVybmF0aXZlcyI6WyJodHRwOi8vYy5zY2RuLmdyL2ltYWdlcy9z
-    a3VfaW1hZ2VzLzAxMTM1MC8xMTM1MDc1NC9jb2xvcl9ibGFjay5qcGciXX19
-    LHsiaWQiOjM5MjE4MCwiZWFuIjoiIiwicG4iOiJpUGhvbmUgNCA4R0IiLCJu
-    YW1lIjoiaVBob25lIDQgOEdCIiwiZGlzcGxheV9uYW1lIjoiQXBwbGUgaVBo
-    b25lIDQgOEdCIiwiY2F0ZWdvcnlfaWQiOjQwLCJmaXJzdF9wcm9kdWN0X3No
-    b3BfaW5mbyI6bnVsbCwiY2xpY2tfdXJsIjpudWxsLCJwcmljZV9tYXgiOjM5
-    OS4yNiwicHJpY2VfbWluIjozMjAuMCwicmV2aWV3c2NvcmUiOjQuMjEwNTMs
-    InNob3BfY291bnQiOjIsInBsYWluX3NwZWNfc3VtbWFyeSI6IlNpbmdsZSBT
-    SU0sIFx1MDM5NFx1MDNhZlx1MDNiYVx1MDNjNFx1MDNjNVx1MDNiZiBcdTAz
-    YTNcdTAzY2RcdTAzYmRcdTAzYjRcdTAzYjVcdTAzYzNcdTAzYjdcdTAzYzI6
-    IDNHLCBcdTAzOWFcdTAzYWNcdTAzYmNcdTAzYjVcdTAzYzFcdTAzYjE6IDUg
-    TVAsICBcdTAzOWZcdTAzYjhcdTAzY2NcdTAzYmRcdTAzYjc6IDMuNVwiICwg
-    XHUwMzkxXHUwM2JkXHUwM2FjXHUwM2JiXHUwM2M1XHUwM2MzXHUwM2I3OiA2
-    NDAgeCA5NjAgcGl4ZWxzLCBcdTAzYTdcdTAzYjVcdTAzYjlcdTAzYzFcdTAz
-    YjlcdTAzYzNcdTAzYmNcdTAzY2NcdTAzYzI6IFx1MDM5Zlx1MDNiOFx1MDNj
-    Y1x1MDNiZFx1MDNiNyBcdTAzYjFcdTAzYzZcdTAzYWVcdTAzYzIgKFRvdWNo
-    IHNjcmVlbiksICBcdTAzOTVcdTAzYzNcdTAzYzlcdTAzYzRcdTAzYjVcdTAz
-    YzFcdTAzYjlcdTAzYmFcdTAzYWUgXHUwMzljXHUwM2JkXHUwM2FlXHUwM2Jj
-    XHUwM2I3OiA4LjAgR0IsICBcdTAzOWJcdTAzYjVcdTAzYjlcdTAzYzRcdTAz
-    YmZcdTAzYzVcdTAzYzFcdTAzYjNcdTAzYjlcdTAzYmFcdTAzY2MgXHUwM2Ez
-    XHUwM2NkXHUwM2MzXHUwM2M0XHUwM2I3XHUwM2JjXHUwM2IxOiBpT1MsIFNt
-    YXJ0UGhvbmUiLCJtYW51ZmFjdHVyZXJfaWQiOjM1NiwiZnV0dXJlIjpmYWxz
-    ZSwicmV2aWV3c19jb3VudCI6MTksInZpcnR1YWwiOmZhbHNlLCJpbWFnZXMi
-    OnsibWFpbiI6Imh0dHA6Ly9hLnNjZG4uZ3IvaW1hZ2VzL3NrdV9tYWluX2lt
-    YWdlcy8wMDAzOTIvMzkyMTgwL21lZGl1bV9za2lsbG5hZGlwaG9uZTRpcGhv
-    bmU0cy5qcGciLCJhbHRlcm5hdGl2ZXMiOlsiaHR0cDovL2Iuc2Nkbi5nci9p
-    bWFnZXMvc2t1X2ltYWdlcy8wMTI5MzUvMTI5MzU0ODgvYXBwbGUtaXBob25l
-    LTQtYmwuanBnIiwiaHR0cDovL2Iuc2Nkbi5nci9pbWFnZXMvc2t1X2ltYWdl
-    cy8wMTI5MzUvMTI5MzU1MjcvaXBob25lLTRzLXNwcmludC5qcGciLCJodHRw
-    Oi8vZC5zY2RuLmdyL2ltYWdlcy9za3VfaW1hZ2VzLzAxMjkzNS8xMjkzNTUz
-    OS9hcHBsZS1pcGhvbmUtNC1vZmljLTMuanBnIiwiaHR0cDovL2Quc2Nkbi5n
-    ci9pbWFnZXMvc2t1X2ltYWdlcy8wMTI5MzUvMTI5MzU1NTAvaXBob25lNC13
-    aGl0ZS5qcGciXX19XSwibWV0YSI6eyJwYWdpbmF0aW9uIjp7InRvdGFsX3Jl
-    c3VsdHMiOjEzLCJ0b3RhbF9wYWdlcyI6NywicGFnZSI6MSwicGVyIjoyfX19
+  :headers:
+    server: nginx
+    content-type: application/json; charset=utf-8
+    !binary "dmFyeQ==": Accept-Encoding
+    status: 200 OK
+    x-ua-compatible: IE=Edge,chrome=1
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '2406164328'
+    x-runtime: '0.057956'
+    x-dns-prefetch-control: 'off'
+    x-app: lunkwill
+    content-length: '764'
+    accept-ranges: bytes
+    date: Mon, 14 Jul 2014 12:06:31 GMT
+    x-varnish: '2406164328'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: varnish2
+    x-cache: MISS
+  :body: ! '{"skus":[{"id":3902581,"ean":"","pn":"","name":"iPhone 4S (8GB)","display_name":"Apple
+    iPhone 4S (8GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":399.0,"price_min":288.4,"reviewscore":4.83333,"shop_count":41,"plain_spec_summary":"Single
+    SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
+    3G, \u039a\u03ac\u03bc\u03b5\u03c1\u03b1: 8 MP,  \u039f\u03b8\u03cc\u03bd\u03b7:
+    3.5\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7: 640 x 960 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2:
+    \u039f\u03b8\u03cc\u03bd\u03b7 \u03b1\u03c6\u03ae\u03c2 (Touch screen),  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
+    \u039c\u03bd\u03ae\u03bc\u03b7: 8.0 GB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
+    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: iOS, SmartPhone","manufacturer_id":356,"future":false,"reviews_count":12,"virtual":false,"images":{"main":"http://d.scdn.gr/images/sku_main_images/003902/3902581/medium_color_white.jpg","alternatives":["http://c.scdn.gr/images/sku_images/011350/11350754/color_black.jpg"]}},{"id":392180,"ean":"","pn":"iPhone
+    4 8GB","name":"iPhone 4 8GB","display_name":"Apple iPhone 4 8GB","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":399.26,"price_min":320.0,"reviewscore":4.21053,"shop_count":2,"plain_spec_summary":"Single
+    SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
+    3G, \u039a\u03ac\u03bc\u03b5\u03c1\u03b1: 5 MP,  \u039f\u03b8\u03cc\u03bd\u03b7:
+    3.5\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7: 640 x 960 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2:
+    \u039f\u03b8\u03cc\u03bd\u03b7 \u03b1\u03c6\u03ae\u03c2 (Touch screen),  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
+    \u039c\u03bd\u03ae\u03bc\u03b7: 8.0 GB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
+    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: iOS, SmartPhone","manufacturer_id":356,"future":false,"reviews_count":19,"virtual":false,"images":{"main":"http://a.scdn.gr/images/sku_main_images/000392/392180/medium_skillnadiphone4iphone4s.jpg","alternatives":["http://b.scdn.gr/images/sku_images/012935/12935488/apple-iphone-4-bl.jpg","http://b.scdn.gr/images/sku_images/012935/12935527/iphone-4s-sprint.jpg","http://d.scdn.gr/images/sku_images/012935/12935539/apple-iphone-4-ofic-3.jpg","http://d.scdn.gr/images/sku_images/012935/12935550/iphone4-white.jpg"]}}],"meta":{"pagination":{"total_results":13,"total_pages":7,"page":1,"per":2}}}'
+:created_at: 2014-07-14 15:06:31.815326755 +03:00

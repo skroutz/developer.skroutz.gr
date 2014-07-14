@@ -3,260 +3,52 @@
   :url: http://skroutz.gr/api/search?q=apple
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer 5JN7RHwWJ9ZPSBEKo0/bskSR0IOfNtETjwmMOPsGKZiXrRnP71w7cZbDZFKBaeNoJAyIKRMKjXeaBeF40Uxg==
+    :authorization: Bearer fYxk5iZjO44DwXwkwP5SW7cHwaqFMbc5riQ4JQFgeVNe1epmAHlDtGjvAPhVAIH1aPLiQt67RSrVasw9o7EEQ==
   :verb: GET
 :response:
   :status: 200
-  :headers: !ruby/hash:Faraday::Utils::Headers
-    server: !binary |-
-      bmdpbng=
-    content-type: !binary |-
-      YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-    !binary "dmFyeQ==": !binary |-
-      QWNjZXB0LUVuY29kaW5n
-    status: !binary |-
-      MjAwIE9L
-    !binary "bGluaw==": !binary |-
-      PGh0dHA6Ly9hcGkuc2tyb3V0ei5nci9hcGkvc2VhcmNoP3BhZ2U9OCZxPWFw
-      cGxlPjsgcmVsPSJsYXN0IiwgPGh0dHA6Ly9hcGkuc2tyb3V0ei5nci9hcGkv
-      c2VhcmNoP3BhZ2U9MiZxPWFwcGxlPjsgcmVsPSJuZXh0Ig==
-    x-ua-compatible: !binary |-
-      SUU9RWRnZSxjaHJvbWU9MQ==
-    cache-control: !binary |-
-      bWF4LWFnZT0wLCBwcml2YXRlLCBtdXN0LXJldmFsaWRhdGU=
-    x-request-id: !binary |-
-      MjM2MTI5ODM3MQ==
-    x-runtime: !binary |-
-      MC4yMzU5NDQ=
-    x-dns-prefetch-control: !binary |-
-      b2Zm
-    x-app: !binary |-
-      bHVua3dpbGw=
-    content-length: !binary |-
-      MTE0Mw==
-    accept-ranges: !binary |-
-      Ynl0ZXM=
-    date: !binary |-
-      TW9uLCAwNyBKdWwgMjAxNCAxMzowNjo1OCBHTVQ=
-    x-varnish: !binary |-
-      MjM2MTI5ODM3MQ==
-    age: !binary |-
-      MA==
-    via: !binary |-
-      MS4xIHZhcm5pc2g=
-    connection: !binary |-
-      Y2xvc2U=
-    x-origin: !binary |-
-      dmFybmlzaDI=
-    x-cache: !binary |-
-      TUlTUw==
-  :body: !binary |-
-    eyJjYXRlZ29yaWVzIjpbeyJpZCI6NDAsIm5hbWUiOiJcdTAzOWFcdTAzYjlc
-    dTAzYmRcdTAzYjdcdTAzYzRcdTAzYWMgXHUwM2E0XHUwM2I3XHUwM2JiXHUw
-    M2FkXHUwM2M2XHUwM2M5XHUwM2JkXHUwM2IxIiwiY2hpbGRyZW5fY291bnQi
-    OjAsImltYWdlX3VybCI6Imh0dHA6Ly9hLnNjZG4uZ3IvaW1hZ2VzL2NhdGVn
-    b3JpZXMvbGFyZ2UvNDAuanBnIiwicGFyZW50X2lkIjo4NiwiZmFzaGlvbiI6
-    ZmFsc2UsInNob3dfc3BlY2lmaWNhdGlvbnMiOnRydWUsIm1hbnVmYWN0dXJl
-    cl90aXRsZSI6Ilx1MDM5YVx1MDNiMVx1MDNjNFx1MDNiMVx1MDNjM1x1MDNi
-    YVx1MDNiNVx1MDNjNVx1MDNiMVx1MDNjM1x1MDNjNFx1MDNhZFx1MDNjMiIs
-    Im1hdGNoX2NvdW50IjoxM30seyJpZCI6MTEwNSwibmFtZSI6IlRhYmxldHMi
-    LCJjaGlsZHJlbl9jb3VudCI6MCwiaW1hZ2VfdXJsIjoiaHR0cDovL2Euc2Nk
-    bi5nci9pbWFnZXMvY2F0ZWdvcmllcy9sYXJnZS8xMTA1LmpwZyIsInBhcmVu
-    dF9pZCI6MTYxMiwiZmFzaGlvbiI6ZmFsc2UsInNob3dfc3BlY2lmaWNhdGlv
-    bnMiOnRydWUsIm1hbnVmYWN0dXJlcl90aXRsZSI6Ilx1MDM5YVx1MDNiMVx1
-    MDNjNFx1MDNiMVx1MDNjM1x1MDNiYVx1MDNiNVx1MDNjNVx1MDNiMVx1MDNj
-    M1x1MDNjNFx1MDNhZFx1MDNjMiIsIm1hdGNoX2NvdW50IjozN30seyJpZCI6
-    NTc5LCJuYW1lIjoiXHUwMzk4XHUwM2FlXHUwM2JhXHUwM2I1XHUwM2MyIFx1
-    MDM5YVx1MDNiOVx1MDNiZFx1MDNiN1x1MDNjNFx1MDNjZVx1MDNiZCBcdTAz
-    YTRcdTAzYjdcdTAzYmJcdTAzYjVcdTAzYzZcdTAzY2VcdTAzYmRcdTAzYzlc
-    dTAzYmQiLCJjaGlsZHJlbl9jb3VudCI6MCwiaW1hZ2VfdXJsIjoiaHR0cDov
-    L2Euc2Nkbi5nci9pbWFnZXMvY2F0ZWdvcmllcy9sYXJnZS81NzkuanBnIiwi
-    cGFyZW50X2lkIjo4NiwiZmFzaGlvbiI6ZmFsc2UsInNob3dfc3BlY2lmaWNh
-    dGlvbnMiOmZhbHNlLCJtYW51ZmFjdHVyZXJfdGl0bGUiOiJcdTAzOWFcdTAz
-    YjFcdTAzYzRcdTAzYjFcdTAzYzNcdTAzYmFcdTAzYjVcdTAzYzVcdTAzYjFc
-    dTAzYzNcdTAzYzRcdTAzYWRcdTAzYzIiLCJtYXRjaF9jb3VudCI6NjQ4MX0s
-    eyJpZCI6MjUsIm5hbWUiOiJMYXB0b3BzIiwiY2hpbGRyZW5fY291bnQiOjAs
-    ImltYWdlX3VybCI6Imh0dHA6Ly9iLnNjZG4uZ3IvaW1hZ2VzL2NhdGVnb3Jp
-    ZXMvbGFyZ2UvMjUuanBnIiwicGFyZW50X2lkIjo3NjksImZhc2hpb24iOmZh
-    bHNlLCJzaG93X3NwZWNpZmljYXRpb25zIjp0cnVlLCJtYW51ZmFjdHVyZXJf
-    dGl0bGUiOiJcdTAzOWFcdTAzYjFcdTAzYzRcdTAzYjFcdTAzYzNcdTAzYmFc
-    dTAzYjVcdTAzYzVcdTAzYjFcdTAzYzNcdTAzYzRcdTAzYWRcdTAzYzIiLCJt
-    YXRjaF9jb3VudCI6MzB9LHsiaWQiOjU4MywibmFtZSI6Ilx1MDM5MVx1MDNi
-    ZFx1MDNjNFx1MDNiMVx1MDNiYlx1MDNiYlx1MDNiMVx1MDNiYVx1MDNjNFx1
-    MDNiOVx1MDNiYVx1MDNhYyBcdTAzOWFcdTAzYjlcdTAzYmRcdTAzYjdcdTAz
-    YzRcdTAzY2VcdTAzYmQgXHUwM2M0XHUwM2I3XHUwM2JiXHUwM2I1XHUwM2M2
-    XHUwM2NlXHUwM2JkXHUwM2M5XHUwM2JkIiwiY2hpbGRyZW5fY291bnQiOjAs
-    ImltYWdlX3VybCI6Imh0dHA6Ly9hLnNjZG4uZ3IvaW1hZ2VzL2NhdGVnb3Jp
-    ZXMvbGFyZ2UvNTgzLmpwZyIsInBhcmVudF9pZCI6ODYsImZhc2hpb24iOmZh
-    bHNlLCJzaG93X3NwZWNpZmljYXRpb25zIjpmYWxzZSwibWFudWZhY3R1cmVy
-    X3RpdGxlIjoiXHUwMzlhXHUwM2IxXHUwM2M0XHUwM2IxXHUwM2MzXHUwM2Jh
-    XHUwM2I1XHUwM2M1XHUwM2IxXHUwM2MzXHUwM2M0XHUwM2FkXHUwM2MyIiwi
-    bWF0Y2hfY291bnQiOjMzMTh9LHsiaWQiOjE2MDgsIm5hbWUiOiJcdTAzOThc
-    dTAzYWVcdTAzYmFcdTAzYjVcdTAzYzIgVGFibGV0IiwiY2hpbGRyZW5fY291
-    bnQiOjAsImltYWdlX3VybCI6Imh0dHA6Ly9kLnNjZG4uZ3IvaW1hZ2VzL2Nh
-    dGVnb3JpZXMvbGFyZ2UvMTYwOC5qcGciLCJwYXJlbnRfaWQiOjE2MTIsImZh
-    c2hpb24iOmZhbHNlLCJzaG93X3NwZWNpZmljYXRpb25zIjp0cnVlLCJtYW51
-    ZmFjdHVyZXJfdGl0bGUiOiJcdTAzOWFcdTAzYjFcdTAzYzRcdTAzYjFcdTAz
-    YzNcdTAzYmFcdTAzYjVcdTAzYzVcdTAzYjFcdTAzYzNcdTAzYzRcdTAzYWRc
-    dTAzYzIiLCJtYXRjaF9jb3VudCI6MjkxfSx7ImlkIjo4OTEsIm5hbWUiOiJc
-    dTAzYTVcdTAzYzBcdTAzYmZcdTAzYmJcdTAzYmZcdTAzYjNcdTAzYjlcdTAz
-    YzNcdTAzYzRcdTAzYWRcdTAzYzIgRGVza3RvcCBCcmFuZCIsImNoaWxkcmVu
-    X2NvdW50IjowLCJpbWFnZV91cmwiOiJodHRwOi8vYi5zY2RuLmdyL2ltYWdl
-    cy9jYXRlZ29yaWVzL2xhcmdlLzg5MS5qcGciLCJwYXJlbnRfaWQiOjIzLCJm
-    YXNoaW9uIjpmYWxzZSwic2hvd19zcGVjaWZpY2F0aW9ucyI6dHJ1ZSwibWFu
-    dWZhY3R1cmVyX3RpdGxlIjoiXHUwMzlhXHUwM2IxXHUwM2M0XHUwM2IxXHUw
-    M2MzXHUwM2JhXHUwM2I1XHUwM2M1XHUwM2IxXHUwM2MzXHUwM2M0XHUwM2Fk
-    XHUwM2MyIiwibWF0Y2hfY291bnQiOjM0fSx7ImlkIjo1NjgsIm5hbWUiOiJD
-    RCwgTVAzICYgTWVkaWEgUGxheWVycyIsImNoaWxkcmVuX2NvdW50IjowLCJp
-    bWFnZV91cmwiOiJodHRwOi8vYi5zY2RuLmdyL2ltYWdlcy9jYXRlZ29yaWVz
-    L2xhcmdlLzU2OC5qcGciLCJwYXJlbnRfaWQiOjc2NywiZmFzaGlvbiI6ZmFs
-    c2UsInNob3dfc3BlY2lmaWNhdGlvbnMiOnRydWUsIm1hbnVmYWN0dXJlcl90
-    aXRsZSI6Ilx1MDM5YVx1MDNiMVx1MDNjNFx1MDNiMVx1MDNjM1x1MDNiYVx1
-    MDNiNVx1MDNjNVx1MDNiMVx1MDNjM1x1MDNjNFx1MDNhZFx1MDNjMiIsIm1h
-    dGNoX2NvdW50IjoxM30seyJpZCI6NjEyLCJuYW1lIjoiXHUwM2EwXHUwM2Mx
-    XHUwM2JmXHUwM2MzXHUwM2M0XHUwM2IxXHUwM2MzXHUwM2FmXHUwM2IxIFx1
-    MDM5Zlx1MDNiOFx1MDNjY1x1MDNiZFx1MDNiN1x1MDNjMiIsImNoaWxkcmVu
-    X2NvdW50IjowLCJpbWFnZV91cmwiOiJodHRwOi8vYi5zY2RuLmdyL2ltYWdl
-    cy9jYXRlZ29yaWVzL2xhcmdlLzYxMi5qcGciLCJwYXJlbnRfaWQiOjg2LCJm
-    YXNoaW9uIjpmYWxzZSwic2hvd19zcGVjaWZpY2F0aW9ucyI6ZmFsc2UsIm1h
-    bnVmYWN0dXJlcl90aXRsZSI6Ilx1MDM5YVx1MDNiMVx1MDNjNFx1MDNiMVx1
-    MDNjM1x1MDNiYVx1MDNiNVx1MDNjNVx1MDNiMVx1MDNjM1x1MDNjNFx1MDNh
-    ZFx1MDNjMiIsIm1hdGNoX2NvdW50IjoxNTQ5fSx7ImlkIjo1ODQsIm5hbWUi
-    OiJIYW5kc2ZyZWUgXHUwMzkxXHUwM2JhXHUwM2JmXHUwM2M1XHUwM2MzXHUw
-    M2M0XHUwM2I5XHUwM2JhXHUwM2FjIiwiY2hpbGRyZW5fY291bnQiOjAsImlt
-    YWdlX3VybCI6Imh0dHA6Ly9hLnNjZG4uZ3IvaW1hZ2VzL2NhdGVnb3JpZXMv
-    bGFyZ2UvNTg0LmpwZyIsInBhcmVudF9pZCI6ODYsImZhc2hpb24iOmZhbHNl
-    LCJzaG93X3NwZWNpZmljYXRpb25zIjpmYWxzZSwibWFudWZhY3R1cmVyX3Rp
-    dGxlIjoiXHUwMzlhXHUwM2IxXHUwM2M0XHUwM2IxXHUwM2MzXHUwM2JhXHUw
-    M2I1XHUwM2M1XHUwM2IxXHUwM2MzXHUwM2M0XHUwM2FkXHUwM2MyIiwibWF0
-    Y2hfY291bnQiOjMxfSx7ImlkIjo1ODIsIm5hbWUiOiJcdTAzOWNcdTAzYzBc
-    dTAzYjFcdTAzYzRcdTAzYjFcdTAzYzFcdTAzYWZcdTAzYjVcdTAzYzIgXHUw
-    MzlhXHUwM2I5XHUwM2JkXHUwM2I3XHUwM2M0XHUwM2NlXHUwM2JkIFx1MDNh
-    NFx1MDNiN1x1MDNiYlx1MDNiNVx1MDNjNlx1MDNjZVx1MDNiZFx1MDNjOVx1
-    MDNiZCIsImNoaWxkcmVuX2NvdW50IjowLCJpbWFnZV91cmwiOiJodHRwOi8v
-    YS5zY2RuLmdyL2ltYWdlcy9jYXRlZ29yaWVzL2xhcmdlLzU4Mi5qcGciLCJw
-    YXJlbnRfaWQiOjg2LCJmYXNoaW9uIjpmYWxzZSwic2hvd19zcGVjaWZpY2F0
-    aW9ucyI6ZmFsc2UsIm1hbnVmYWN0dXJlcl90aXRsZSI6Ilx1MDM5YVx1MDNi
-    MVx1MDNjNFx1MDNiMVx1MDNjM1x1MDNiYVx1MDNiNVx1MDNjNVx1MDNiMVx1
-    MDNjM1x1MDNjNFx1MDNhZFx1MDNjMiIsIm1hdGNoX2NvdW50Ijo4fSx7Imlk
-    Ijo1ODEsIm5hbWUiOiJcdTAzYTZcdTAzYmZcdTAzYzFcdTAzYzRcdTAzYjlc
-    dTAzYzNcdTAzYzRcdTAzYWRcdTAzYzIgXHUwMzlhXHUwM2I5XHUwM2JkXHUw
-    M2I3XHUwM2M0XHUwM2NlXHUwM2JkIFx1MDNhNFx1MDNiN1x1MDNiYlx1MDNi
-    NVx1MDNjNlx1MDNjZVx1MDNiZFx1MDNjOVx1MDNiZCIsImNoaWxkcmVuX2Nv
-    dW50IjowLCJpbWFnZV91cmwiOiJodHRwOi8vYS5zY2RuLmdyL2ltYWdlcy9j
-    YXRlZ29yaWVzL2xhcmdlLzU4MS5qcGciLCJwYXJlbnRfaWQiOjg2LCJmYXNo
-    aW9uIjpmYWxzZSwic2hvd19zcGVjaWZpY2F0aW9ucyI6ZmFsc2UsIm1hbnVm
-    YWN0dXJlcl90aXRsZSI6Ilx1MDM5YVx1MDNiMVx1MDNjNFx1MDNiMVx1MDNj
-    M1x1MDNiYVx1MDNiNVx1MDNjNVx1MDNiMVx1MDNjM1x1MDNjNFx1MDNhZFx1
-    MDNjMiIsIm1hdGNoX2NvdW50Ijo5Nn0seyJpZCI6MTQwNCwibmFtZSI6Ilx1
-    MDNhNlx1MDNiZlx1MDNjMVx1MDNjNFx1MDNiOVx1MDNjM1x1MDNjNFx1MDNh
-    ZFx1MDNjMiBcdTAzYjNcdTAzYjlcdTAzYjEgTGFwdG9wcyIsImNoaWxkcmVu
-    X2NvdW50IjowLCJpbWFnZV91cmwiOiJodHRwOi8vZC5zY2RuLmdyL2ltYWdl
-    cy9jYXRlZ29yaWVzL2xhcmdlLzE0MDQuanBnIiwicGFyZW50X2lkIjo3Njks
-    ImZhc2hpb24iOmZhbHNlLCJzaG93X3NwZWNpZmljYXRpb25zIjpmYWxzZSwi
-    bWFudWZhY3R1cmVyX3RpdGxlIjoiXHUwMzlhXHUwM2IxXHUwM2M0XHUwM2Ix
-    XHUwM2MzXHUwM2JhXHUwM2I1XHUwM2M1XHUwM2IxXHUwM2MzXHUwM2M0XHUw
-    M2FkXHUwM2MyIiwibWF0Y2hfY291bnQiOjE0M30seyJpZCI6NTg1LCJuYW1l
-    IjoiXHUwMzlhXHUwM2IxXHUwM2JiXHUwM2NlXHUwM2I0XHUwM2I5XHUwM2Ix
-    IFx1MDNiNFx1MDNiNVx1MDNiNFx1MDNiZlx1MDNiY1x1MDNhZFx1MDNiZFx1
-    MDNjOVx1MDNiZCIsImNoaWxkcmVuX2NvdW50IjowLCJpbWFnZV91cmwiOiJo
-    dHRwOi8vYS5zY2RuLmdyL2ltYWdlcy9jYXRlZ29yaWVzL2xhcmdlLzU4NS5q
-    cGciLCJwYXJlbnRfaWQiOjg2LCJmYXNoaW9uIjpmYWxzZSwic2hvd19zcGVj
-    aWZpY2F0aW9ucyI6ZmFsc2UsIm1hbnVmYWN0dXJlcl90aXRsZSI6Ilx1MDM5
-    YVx1MDNiMVx1MDNjNFx1MDNiMVx1MDNjM1x1MDNiYVx1MDNiNVx1MDNjNVx1
-    MDNiMVx1MDNjM1x1MDNjNFx1MDNhZFx1MDNjMiIsIm1hdGNoX2NvdW50Ijoy
-    Njd9LHsiaWQiOjU4NywibmFtZSI6Ilx1MDM5NFx1MDNiOVx1MDNhY1x1MDNj
-    Nlx1MDNiZlx1MDNjMVx1MDNiMSBcdTAzOTFcdTAzYmVcdTAzYjVcdTAzYzNc
-    dTAzYmZcdTAzYzVcdTAzYWNcdTAzYzEgXHUwMzlhXHUwM2I5XHUwM2JkXHUw
-    M2I3XHUwM2M0XHUwM2FlXHUwM2MyIiwiY2hpbGRyZW5fY291bnQiOjAsImlt
-    YWdlX3VybCI6Imh0dHA6Ly9hLnNjZG4uZ3IvaW1hZ2VzL2NhdGVnb3JpZXMv
-    bGFyZ2UvNTg3LmpwZyIsInBhcmVudF9pZCI6ODYsImZhc2hpb24iOmZhbHNl
-    LCJzaG93X3NwZWNpZmljYXRpb25zIjpmYWxzZSwibWFudWZhY3R1cmVyX3Rp
-    dGxlIjoiXHUwMzlhXHUwM2IxXHUwM2M0XHUwM2IxXHUwM2MzXHUwM2JhXHUw
-    M2I1XHUwM2M1XHUwM2IxXHUwM2MzXHUwM2M0XHUwM2FkXHUwM2MyIiwibWF0
-    Y2hfY291bnQiOjIzMn0seyJpZCI6Njk5LCJuYW1lIjoiXHUwMzljXHUwM2I1
-    XHUwM2M0XHUwM2IxXHUwM2M0XHUwM2MxXHUwM2JmXHUwM2MwXHUwM2I1XHUw
-    M2FmXHUwM2MyIiwiY2hpbGRyZW5fY291bnQiOjAsImltYWdlX3VybCI6Imh0
-    dHA6Ly9iLnNjZG4uZ3IvaW1hZ2VzL2NhdGVnb3JpZXMvbGFyZ2UvNjk5Lmpw
-    ZyIsInBhcmVudF9pZCI6MjksImZhc2hpb24iOmZhbHNlLCJzaG93X3NwZWNp
-    ZmljYXRpb25zIjp0cnVlLCJtYW51ZmFjdHVyZXJfdGl0bGUiOiJcdTAzOWFc
-    dTAzYjFcdTAzYzRcdTAzYjFcdTAzYzNcdTAzYmFcdTAzYjVcdTAzYzVcdTAz
-    YjFcdTAzYzNcdTAzYzRcdTAzYWRcdTAzYzIiLCJtYXRjaF9jb3VudCI6NDh9
-    LHsiaWQiOjE3LCJuYW1lIjoiXHUwMzlhXHUwM2FjXHUwM2MxXHUwM2M0XHUw
-    M2I1XHUwM2MyIFx1MDNhNFx1MDNiN1x1MDNiYlx1MDNiNVx1MDNjY1x1MDNj
-    MVx1MDNiMVx1MDNjM1x1MDNiN1x1MDNjMiBcdTAzYmFcdTAzYjFcdTAzYjkg
-    VmlkZW8iLCJjaGlsZHJlbl9jb3VudCI6MCwiaW1hZ2VfdXJsIjoiaHR0cDov
-    L2Quc2Nkbi5nci9pbWFnZXMvY2F0ZWdvcmllcy9sYXJnZS8xNy5qcGciLCJw
-    YXJlbnRfaWQiOjI3LCJmYXNoaW9uIjpmYWxzZSwic2hvd19zcGVjaWZpY2F0
-    aW9ucyI6ZmFsc2UsIm1hbnVmYWN0dXJlcl90aXRsZSI6Ilx1MDM5YVx1MDNi
-    MVx1MDNjNFx1MDNiMVx1MDNjM1x1MDNiYVx1MDNiNVx1MDNjNVx1MDNiMVx1
-    MDNjM1x1MDNjNFx1MDNhZFx1MDNjMiIsIm1hdGNoX2NvdW50IjozfSx7Imlk
-    Ijo4OTMsIm5hbWUiOiJNZWRpYSBQbGF5ZXJzIiwiY2hpbGRyZW5fY291bnQi
-    OjAsImltYWdlX3VybCI6Imh0dHA6Ly9iLnNjZG4uZ3IvaW1hZ2VzL2NhdGVn
-    b3JpZXMvbGFyZ2UvODkzLmpwZyIsInBhcmVudF9pZCI6MzA5LCJmYXNoaW9u
-    IjpmYWxzZSwic2hvd19zcGVjaWZpY2F0aW9ucyI6dHJ1ZSwibWFudWZhY3R1
-    cmVyX3RpdGxlIjoiXHUwMzlhXHUwM2IxXHUwM2M0XHUwM2IxXHUwM2MzXHUw
-    M2JhXHUwM2I1XHUwM2M1XHUwM2IxXHUwM2MzXHUwM2M0XHUwM2FkXHUwM2My
-    IiwibWF0Y2hfY291bnQiOjF9LHsiaWQiOjE1MTgsIm5hbWUiOiJVbml2ZXJz
-    YWwgXHUwMzk4XHUwM2FlXHUwM2JhXHUwM2I1XHUwM2MyIFx1MDM5YVx1MDNi
-    OVx1MDNiZFx1MDNiN1x1MDNjNFx1MDNjZVx1MDNiZCBcdTAzYTRcdTAzYjdc
-    dTAzYmJcdTAzYjVcdTAzYzZcdTAzY2VcdTAzYmRcdTAzYzlcdTAzYmQiLCJj
-    aGlsZHJlbl9jb3VudCI6MCwiaW1hZ2VfdXJsIjoiaHR0cDovL2Quc2Nkbi5n
-    ci9pbWFnZXMvY2F0ZWdvcmllcy9sYXJnZS8xNTE4LmpwZyIsInBhcmVudF9p
-    ZCI6ODYsImZhc2hpb24iOmZhbHNlLCJzaG93X3NwZWNpZmljYXRpb25zIjpm
-    YWxzZSwibWFudWZhY3R1cmVyX3RpdGxlIjoiXHUwMzlhXHUwM2IxXHUwM2M0
-    XHUwM2IxXHUwM2MzXHUwM2JhXHUwM2I1XHUwM2M1XHUwM2IxXHUwM2MzXHUw
-    M2M0XHUwM2FkXHUwM2MyIiwibWF0Y2hfY291bnQiOjQ2NH0seyJpZCI6Njgs
-    Im5hbWUiOiJcdTAzYTBcdTAzYmJcdTAzYjdcdTAzYmFcdTAzYzRcdTAzYzFc
-    dTAzYmZcdTAzYmJcdTAzY2NcdTAzYjNcdTAzYjlcdTAzYjEiLCJjaGlsZHJl
-    bl9jb3VudCI6MCwiaW1hZ2VfdXJsIjoiaHR0cDovL2Muc2Nkbi5nci9pbWFn
-    ZXMvY2F0ZWdvcmllcy9sYXJnZS82OC5qcGciLCJwYXJlbnRfaWQiOjUxLCJm
-    YXNoaW9uIjpmYWxzZSwic2hvd19zcGVjaWZpY2F0aW9ucyI6dHJ1ZSwibWFu
-    dWZhY3R1cmVyX3RpdGxlIjoiXHUwMzlhXHUwM2IxXHUwM2M0XHUwM2IxXHUw
-    M2MzXHUwM2JhXHUwM2I1XHUwM2M1XHUwM2IxXHUwM2MzXHUwM2M0XHUwM2Fk
-    XHUwM2MyIiwibWF0Y2hfY291bnQiOjl9LHsiaWQiOjIzOSwibmFtZSI6Ilx1
-    MDM5NVx1MDNiZFx1MDNiOVx1MDNjM1x1MDNjN1x1MDNjNVx1MDNjNFx1MDNh
-    ZFx1MDNjMiBIaS1GaSIsImNoaWxkcmVuX2NvdW50IjowLCJpbWFnZV91cmwi
-    OiJodHRwOi8vYS5zY2RuLmdyL2ltYWdlcy9jYXRlZ29yaWVzL2xhcmdlLzIz
-    OS5qcGciLCJwYXJlbnRfaWQiOjc2NywiZmFzaGlvbiI6ZmFsc2UsInNob3df
-    c3BlY2lmaWNhdGlvbnMiOmZhbHNlLCJtYW51ZmFjdHVyZXJfdGl0bGUiOiJc
-    dTAzOWFcdTAzYjFcdTAzYzRcdTAzYjFcdTAzYzNcdTAzYmFcdTAzYjVcdTAz
-    YzVcdTAzYjFcdTAzYzNcdTAzYzRcdTAzYWRcdTAzYzIiLCJtYXRjaF9jb3Vu
-    dCI6MTF9LHsiaWQiOjU2NiwibmFtZSI6Ilx1MDM5N1x1MDNjN1x1MDNiZlx1
-    MDNjM1x1MDNjNVx1MDNjM1x1MDNjNFx1MDNhZVx1MDNiY1x1MDNiMVx1MDNj
-    NFx1MDNiMSIsImNoaWxkcmVuX2NvdW50IjowLCJpbWFnZV91cmwiOiJodHRw
-    Oi8vYS5zY2RuLmdyL2ltYWdlcy9jYXRlZ29yaWVzL2xhcmdlLzU2Ni5qcGci
-    LCJwYXJlbnRfaWQiOjc2NywiZmFzaGlvbiI6ZmFsc2UsInNob3dfc3BlY2lm
-    aWNhdGlvbnMiOnRydWUsIm1hbnVmYWN0dXJlcl90aXRsZSI6Ilx1MDM5YVx1
-    MDNiMVx1MDNjNFx1MDNiMVx1MDNjM1x1MDNiYVx1MDNiNVx1MDNjNVx1MDNi
-    MVx1MDNjM1x1MDNjNFx1MDNhZFx1MDNjMiIsIm1hdGNoX2NvdW50IjoxMX0s
-    eyJpZCI6Nzg4LCJuYW1lIjoiXHUwM2EwXHUwM2IxXHUwM2I5XHUwM2I0XHUw
-    M2I5XHUwM2JhXHUwM2FjIFx1MDM5YVx1MDNiMVx1MDNjMVx1MDNiZlx1MDNj
-    NFx1MDNjM1x1MDNhY1x1MDNiYVx1MDNiOVx1MDNiMSIsImNoaWxkcmVuX2Nv
-    dW50IjowLCJpbWFnZV91cmwiOiJodHRwOi8vYS5zY2RuLmdyL2ltYWdlcy9j
-    YXRlZ29yaWVzL2xhcmdlLzc4OC5qcGciLCJwYXJlbnRfaWQiOjE1ODMsImZh
-    c2hpb24iOmZhbHNlLCJzaG93X3NwZWNpZmljYXRpb25zIjp0cnVlLCJtYW51
-    ZmFjdHVyZXJfdGl0bGUiOiJcdTAzOWFcdTAzYjFcdTAzYzRcdTAzYjFcdTAz
-    YzNcdTAzYmFcdTAzYjVcdTAzYzVcdTAzYjFcdTAzYzNcdTAzYzRcdTAzYWRc
-    dTAzYzIiLCJtYXRjaF9jb3VudCI6M30seyJpZCI6NjksIm5hbWUiOiJcdTAz
-    YTBcdTAzYmZcdTAzYmRcdTAzYzRcdTAzYWZcdTAzYmFcdTAzYjlcdTAzYjEi
-    LCJjaGlsZHJlbl9jb3VudCI6MCwiaW1hZ2VfdXJsIjoiaHR0cDovL2Muc2Nk
-    bi5nci9pbWFnZXMvY2F0ZWdvcmllcy9sYXJnZS82OS5qcGciLCJwYXJlbnRf
-    aWQiOjUxLCJmYXNoaW9uIjpmYWxzZSwic2hvd19zcGVjaWZpY2F0aW9ucyI6
-    dHJ1ZSwibWFudWZhY3R1cmVyX3RpdGxlIjoiXHUwMzlhXHUwM2IxXHUwM2M0
-    XHUwM2IxXHUwM2MzXHUwM2JhXHUwM2I1XHUwM2M1XHUwM2IxXHUwM2MzXHUw
-    M2M0XHUwM2FkXHUwM2MyIiwibWF0Y2hfY291bnQiOjN9LHsiaWQiOjI4OSwi
-    bmFtZSI6Ilx1MDM5Y1x1MDNjMFx1MDNiMVx1MDNjNFx1MDNiMVx1MDNjMVx1
-    MDNhZlx1MDNiNVx1MDNjMiBcdTAzYjNcdTAzYjlcdTAzYjEgTGFwdG9wIiwi
-    Y2hpbGRyZW5fY291bnQiOjAsImltYWdlX3VybCI6Imh0dHA6Ly9kLnNjZG4u
-    Z3IvaW1hZ2VzL2NhdGVnb3JpZXMvbGFyZ2UvMjg5LmpwZyIsInBhcmVudF9p
-    ZCI6NzY5LCJmYXNoaW9uIjpmYWxzZSwic2hvd19zcGVjaWZpY2F0aW9ucyI6
-    ZmFsc2UsIm1hbnVmYWN0dXJlcl90aXRsZSI6Ilx1MDM5YVx1MDNiMVx1MDNj
-    NFx1MDNiMVx1MDNjM1x1MDNiYVx1MDNiNVx1MDNjNVx1MDNiMVx1MDNjM1x1
-    MDNjNFx1MDNhZFx1MDNjMiIsIm1hdGNoX2NvdW50IjoxMTJ9XSwibWV0YSI6
-    eyJhbHRlcm5hdGl2ZXMiOltdLCJzdHJvbmdfbWF0Y2hlcyI6eyJtYW51ZmFj
-    dHVyZXIiOnsiaWQiOjM1NiwibmFtZSI6IkFwcGxlIiwiaW1hZ2VfdXJsIjoi
-    aHR0cDovL2Iuc2Nkbi5nci9pbWFnZXMvbWFudWZhY3R1cmVyX2xvZ29zLzAw
-    MDAwMC8zNTYvMDAzNzMwMjQxZThlZDY5MWFhNmI0ZTVmMjY0YTBlMmQuanBn
-    In19LCJwYWdpbmF0aW9uIjp7InRvdGFsX3Jlc3VsdHMiOjE5OCwidG90YWxf
-    cGFnZXMiOjgsInBhZ2UiOjEsInBlciI6MjV9fX0=
+  :headers:
+    server: nginx
+    content-type: application/json; charset=utf-8
+    !binary "dmFyeQ==": Accept-Encoding
+    status: 200 OK
+    !binary "bGluaw==": <http://api.skroutz.gr/api/search?page=8&q=apple>; rel="last",
+      <http://api.skroutz.gr/api/search?page=2&q=apple>; rel="next"
+    x-ua-compatible: IE=Edge,chrome=1
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '2406163981'
+    x-runtime: '0.146223'
+    x-dns-prefetch-control: 'off'
+    x-app: lunkwill
+    content-length: '1165'
+    accept-ranges: bytes
+    date: Mon, 14 Jul 2014 12:06:29 GMT
+    x-varnish: '2406163981'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: varnish2
+    x-cache: MISS
+  :body: ! '{"categories":[{"id":40,"name":"\u039a\u03b9\u03bd\u03b7\u03c4\u03ac \u03a4\u03b7\u03bb\u03ad\u03c6\u03c9\u03bd\u03b1","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/40.jpg","parent_id":86,"fashion":false,"show_specifications":true,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":13},{"id":1105,"name":"Tablets","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/1105.jpg","parent_id":1612,"fashion":false,"show_specifications":true,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":37},{"id":579,"name":"\u0398\u03ae\u03ba\u03b5\u03c2
+    \u039a\u03b9\u03bd\u03b7\u03c4\u03ce\u03bd \u03a4\u03b7\u03bb\u03b5\u03c6\u03ce\u03bd\u03c9\u03bd","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/579.jpg","parent_id":86,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":6776},{"id":25,"name":"Laptops","children_count":0,"image_url":"http://b.scdn.gr/images/categories/large/25.jpg","parent_id":769,"fashion":false,"show_specifications":true,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":30},{"id":583,"name":"\u0391\u03bd\u03c4\u03b1\u03bb\u03bb\u03b1\u03ba\u03c4\u03b9\u03ba\u03ac
+    \u039a\u03b9\u03bd\u03b7\u03c4\u03ce\u03bd \u03c4\u03b7\u03bb\u03b5\u03c6\u03ce\u03bd\u03c9\u03bd","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/583.jpg","parent_id":86,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":3528},{"id":1608,"name":"\u0398\u03ae\u03ba\u03b5\u03c2
+    Tablet","children_count":0,"image_url":"http://d.scdn.gr/images/categories/large/1608.jpg","parent_id":1612,"fashion":false,"show_specifications":true,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":306},{"id":891,"name":"\u03a5\u03c0\u03bf\u03bb\u03bf\u03b3\u03b9\u03c3\u03c4\u03ad\u03c2
+    Desktop Brand","children_count":0,"image_url":"http://b.scdn.gr/images/categories/large/891.jpg","parent_id":23,"fashion":false,"show_specifications":true,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":33},{"id":568,"name":"CD,
+    MP3 & Media Players","children_count":0,"image_url":"http://b.scdn.gr/images/categories/large/568.jpg","parent_id":767,"fashion":false,"show_specifications":true,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":13},{"id":584,"name":"Handsfree
+    \u0391\u03ba\u03bf\u03c5\u03c3\u03c4\u03b9\u03ba\u03ac","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/584.jpg","parent_id":86,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":33},{"id":612,"name":"\u03a0\u03c1\u03bf\u03c3\u03c4\u03b1\u03c3\u03af\u03b1
+    \u039f\u03b8\u03cc\u03bd\u03b7\u03c2","children_count":0,"image_url":"http://b.scdn.gr/images/categories/large/612.jpg","parent_id":86,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":1616},{"id":582,"name":"\u039c\u03c0\u03b1\u03c4\u03b1\u03c1\u03af\u03b5\u03c2
+    \u039a\u03b9\u03bd\u03b7\u03c4\u03ce\u03bd \u03a4\u03b7\u03bb\u03b5\u03c6\u03ce\u03bd\u03c9\u03bd","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/582.jpg","parent_id":86,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":8},{"id":581,"name":"\u03a6\u03bf\u03c1\u03c4\u03b9\u03c3\u03c4\u03ad\u03c2
+    \u039a\u03b9\u03bd\u03b7\u03c4\u03ce\u03bd \u03a4\u03b7\u03bb\u03b5\u03c6\u03ce\u03bd\u03c9\u03bd","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/581.jpg","parent_id":86,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":101},{"id":1404,"name":"\u03a6\u03bf\u03c1\u03c4\u03b9\u03c3\u03c4\u03ad\u03c2
+    \u03b3\u03b9\u03b1 Laptops","children_count":0,"image_url":"http://d.scdn.gr/images/categories/large/1404.jpg","parent_id":769,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":141},{"id":585,"name":"\u039a\u03b1\u03bb\u03ce\u03b4\u03b9\u03b1
+    \u03b4\u03b5\u03b4\u03bf\u03bc\u03ad\u03bd\u03c9\u03bd","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/585.jpg","parent_id":86,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":295},{"id":699,"name":"\u039c\u03b5\u03c4\u03b1\u03c4\u03c1\u03bf\u03c0\u03b5\u03af\u03c2","children_count":0,"image_url":"http://b.scdn.gr/images/categories/large/699.jpg","parent_id":29,"fashion":false,"show_specifications":true,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":48},{"id":17,"name":"\u039a\u03ac\u03c1\u03c4\u03b5\u03c2
+    \u03a4\u03b7\u03bb\u03b5\u03cc\u03c1\u03b1\u03c3\u03b7\u03c2 \u03ba\u03b1\u03b9
+    Video","children_count":0,"image_url":"http://d.scdn.gr/images/categories/large/17.jpg","parent_id":27,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":3},{"id":587,"name":"\u0394\u03b9\u03ac\u03c6\u03bf\u03c1\u03b1
+    \u0391\u03be\u03b5\u03c3\u03bf\u03c5\u03ac\u03c1 \u039a\u03b9\u03bd\u03b7\u03c4\u03ae\u03c2","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/587.jpg","parent_id":86,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":235},{"id":68,"name":"\u03a0\u03bb\u03b7\u03ba\u03c4\u03c1\u03bf\u03bb\u03cc\u03b3\u03b9\u03b1","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/68.jpg","parent_id":51,"fashion":false,"show_specifications":true,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":11},{"id":1518,"name":"Universal
+    \u0398\u03ae\u03ba\u03b5\u03c2 \u039a\u03b9\u03bd\u03b7\u03c4\u03ce\u03bd \u03a4\u03b7\u03bb\u03b5\u03c6\u03ce\u03bd\u03c9\u03bd","children_count":0,"image_url":"http://d.scdn.gr/images/categories/large/1518.jpg","parent_id":86,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":484},{"id":893,"name":"Media
+    Players","children_count":0,"image_url":"http://b.scdn.gr/images/categories/large/893.jpg","parent_id":309,"fashion":false,"show_specifications":true,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":1},{"id":239,"name":"\u0395\u03bd\u03b9\u03c3\u03c7\u03c5\u03c4\u03ad\u03c2
+    Hi-Fi","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/239.jpg","parent_id":767,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":11},{"id":566,"name":"\u0397\u03c7\u03bf\u03c3\u03c5\u03c3\u03c4\u03ae\u03bc\u03b1\u03c4\u03b1","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/566.jpg","parent_id":767,"fashion":false,"show_specifications":true,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":11},{"id":1417,"name":"\u03a6\u03bf\u03c1\u03c4\u03b9\u03c3\u03c4\u03ad\u03c2
+    \u0391\u03bd\u03b1\u03c0\u03c4\u03ae\u03c1\u03b1 \u0391\u03c5\u03c4\u03bf\u03ba\u03b9\u03bd\u03ae\u03c4\u03bf\u03c5","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/1417.jpg","parent_id":316,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":75},{"id":788,"name":"\u03a0\u03b1\u03b9\u03b4\u03b9\u03ba\u03ac
+    \u039a\u03b1\u03c1\u03bf\u03c4\u03c3\u03ac\u03ba\u03b9\u03b1","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/788.jpg","parent_id":1583,"fashion":false,"show_specifications":true,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":3},{"id":1412,"name":"\u03a3\u03c5\u03bc\u03b2\u03b1\u03c4\u03ad\u03c2
+    \u039c\u03c0\u03b1\u03c4\u03b1\u03c1\u03af\u03b5\u03c2 \u039a\u03b9\u03bd\u03b7\u03c4\u03ce\u03bd
+    \u03a4\u03b7\u03bb\u03b5\u03c6\u03ce\u03bd\u03c9\u03bd","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/1412.jpg","parent_id":86,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":9}],"meta":{"alternatives":[],"strong_matches":{"manufacturer":{"id":356,"name":"Apple","image_url":"http://b.scdn.gr/images/manufacturer_logos/000000/356/003730241e8ed691aa6b4e5f264a0e2d.jpg"}},"pagination":{"total_results":200,"total_pages":8,"page":1,"per":25}}}'
+:created_at: 2014-07-14 15:06:29.339895814 +03:00

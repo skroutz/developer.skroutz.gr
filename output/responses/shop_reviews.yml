@@ -3,257 +3,123 @@
   :url: http://skroutz.gr/api/shops/3/reviews
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer 5JN7RHwWJ9ZPSBEKo0/bskSR0IOfNtETjwmMOPsGKZiXrRnP71w7cZbDZFKBaeNoJAyIKRMKjXeaBeF40Uxg==
+    :authorization: Bearer fYxk5iZjO44DwXwkwP5SW7cHwaqFMbc5riQ4JQFgeVNe1epmAHlDtGjvAPhVAIH1aPLiQt67RSrVasw9o7EEQ==
   :params:
     :per: 3
   :verb: GET
 :response:
   :status: 200
-  :headers: !ruby/hash:Faraday::Utils::Headers
-    server: !binary |-
-      bmdpbng=
-    content-type: !binary |-
-      YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-    !binary "dmFyeQ==": !binary |-
-      QWNjZXB0LUVuY29kaW5n
-    status: !binary |-
-      MjAwIE9L
-    !binary "bGluaw==": !binary |-
-      PGh0dHA6Ly9hcGkuc2tyb3V0ei5nci9hcGkvc2hvcHMvMy9yZXZpZXdzP3Bh
-      Z2U9NTQmcGVyPTM+OyByZWw9Imxhc3QiLCA8aHR0cDovL2FwaS5za3JvdXR6
-      LmdyL2FwaS9zaG9wcy8zL3Jldmlld3M/cGFnZT0yJnBlcj0zPjsgcmVsPSJu
-      ZXh0Ig==
-    cache-control: !binary |-
-      bWF4LWFnZT0zMDAsIHByaXZhdGU=
-    x-ua-compatible: !binary |-
-      SUU9RWRnZSxjaHJvbWU9MQ==
-    x-request-id: !binary |-
-      MzM3MzcxMTc2MA==
-    x-runtime: !binary |-
-      MC4wNzc2NDk=
-    x-dns-prefetch-control: !binary |-
-      b2Zm
-    x-app: !binary |-
-      bHVua3dpbGw=
-    content-length: !binary |-
-      MTcxMg==
-    accept-ranges: !binary |-
-      Ynl0ZXM=
-    date: !binary |-
-      TW9uLCAwNyBKdWwgMjAxNCAxMzowNzo1NCBHTVQ=
-    x-varnish: !binary |-
-      MzM3MzcxMTc2MA==
-    age: !binary |-
-      MA==
-    via: !binary |-
-      MS4xIHZhcm5pc2g=
-    connection: !binary |-
-      Y2xvc2U=
-    x-origin: !binary |-
-      dmFybmlzaDE=
-    x-cache: !binary |-
-      TUlTUw==
-  :body: !binary |-
-    eyJyZXZpZXdzIjpbeyJpZCI6Mzk4NCwidXNlcl9pZCI6NjY0MzAsInJldmll
-    dyI6Ilx1MDM5NVx1MDNhZlx1MDNjN1x1MDNiMSBcdTAzYzBcdTAzYjFcdTAz
-    YzFcdTAzYjFcdTAzYjNcdTAzYjNcdTAzYjVcdTAzYWZcdTAzYmJcdTAzYjVc
-    dTAzYjkgXHUwM2JhXHUwM2FjXHUwM2MwXHUwM2JmXHUwM2I5XHUwM2I1XHUw
-    M2MyIFx1MDNjNFx1MDNiMVx1MDNiOVx1MDNiZFx1MDNhZlx1MDNiNVx1MDNj
-    MiBcdTAzYzNcdTAzYjUgRFZEIFx1MDNiYVx1MDNiMVx1MDNiOSBCTFVFUkFZ
-    IFx1MDNiYVx1MDNiOSBcdTAzYWRcdTAzYmRcdTAzYjEgcGMgZ2FtZS4gVG8g
-    Z2FtZSBcdTAzYjRcdTAzYjVcdTAzYmQgXHUwM2M0XHUwM2JmIFx1MDNiNVx1
-    MDNhZlx1MDNjN1x1MDNiMVx1MDNiZCBcdTAzYzRcdTAzYjVcdTAzYmJcdTAz
-    YjlcdTAzYmFcdTAzYWMgXHUwM2IxXHUwM2JiXHUwM2JiXHUwM2FjIFx1MDNi
-    Y1x1MDNiNSBcdTAzYzBcdTAzYWVcdTAzYzFcdTAzYjFcdTAzYmQgXHUwM2M0
-    XHUwM2I3XHUwM2JiXHUwM2FkXHUwM2M2XHUwM2M5XHUwM2JkXHUwM2JmIFx1
-    MDNiMVx1MDNiY1x1MDNhZFx1MDNjM1x1MDNjOVx1MDNjMiBcdTAzYjNcdTAz
-    YjlcdTAzYjEgXHUwM2JkXHUwM2IxIFx1MDNiY1x1MDNiZlx1MDNjNSBcdTAz
-    YzRcdTAzYmYgXHUwM2MwXHUwM2JmXHUwM2M1XHUwM2JkIFx1MDNiYVx1MDNi
-    MVx1MDNiOFx1MDNjZVx1MDNjMiBcdTAzYmFcdTAzYjFcdTAzYjkgXHUwM2Iz
-    XHUwM2I5XHUwM2IxIFx1MDNiZFx1MDNiMSBcdTAzYmNcdTAzYjUgXHUwM2Mx
-    XHUwM2M5XHUwM2M0XHUwM2FlXHUwM2MzXHUwM2JmXHUwM2M1XHUwM2JkIFx1
-    MDNiMVx1MDNiZCBcdTAzYzRcdTAzYjVcdTAzYmJcdTAzYjlcdTAzYmFcdTAz
-    YWMgXHUwM2I4XHUwM2FkXHUwM2JiXHUwM2M5IFx1MDNiZFx1MDNiMSBcdTAz
-    YzBcdTAzYjFcdTAzYzFcdTAzYjFcdTAzYmJcdTAzYWNcdTAzYjJcdTAzYzkg
-    XHUwM2M0XHUwM2IxIFx1MDNjNVx1MDNjMFx1MDNjY1x1MDNiYlx1MDNiZlx1
-    MDNiOVx1MDNjMFx1MDNiMSBcdTAzYzBcdTAzYzFcdTAzYWNcdTAzYjNcdTAz
-    YmNcdTAzYjFcdTAzYzRcdTAzYjEgXHUwM2MwXHUwM2JmXHUwM2M1IFx1MDNi
-    NVx1MDNhZlx1MDNjN1x1MDNiMSBcdTAzYzBcdTAzYjFcdTAzYzFcdTAzYjFc
-    dTAzYjNcdTAzYjNcdTAzYjVcdTAzYWZcdTAzYmJcdTAzYjVcdTAzYjkuIFx1
-    MDM5NFx1MDNhZFx1MDNjN1x1MDNjNFx1MDNiN1x1MDNiYVx1MDNiMSBcdTAz
-    YzZcdTAzYzVcdTAzYzNcdTAzYjlcdTAzYmFcdTAzYWMgXHUwM2JhXHUwM2Ix
-    XHUwM2I5IFx1MDNjNFx1MDNiN1x1MDNiZCBcdTAzYjVcdTAzYzBcdTAzY2Nc
-    dTAzYmNcdTAzYjVcdTAzYmRcdTAzYjcgXHUwM2JjXHUwM2FkXHUwM2MxXHUw
-    M2IxIFx1MDNjMFx1MDNiMVx1MDNjMVx1MDNhZFx1MDNiYlx1MDNiMVx1MDNi
-    Mlx1MDNiMSBcdTAzYzRcdTAzYjdcdTAzYmQgXHUwM2MwXHUwM2IxXHUwM2Mx
-    XHUwM2IxXHUwM2IzXHUwM2IzXHUwM2I1XHUwM2JiXHUwM2I1XHUwM2FmXHUw
-    M2IxIFx1MDNiY1x1MDNiZlx1MDNjNS4gXHUwMzg4XHUwM2M3XHUwM2M5IFx1
-    MDNiY1x1MDNiNVx1MDNhZlx1MDNiZFx1MDNiNVx1MDNiOSBcdTAzYjFcdTAz
-    YzBcdTAzY2NcdTAzYmJcdTAzYzVcdTAzYzRcdTAzYjEgXHUwM2I1XHUwM2M1
-    XHUwM2M3XHUwM2IxXHUwM2MxXHUwM2I5XHUwM2MzXHUwM2M0XHUwM2I3XHUw
-    M2JjXHUwM2FkXHUwM2JkXHUwM2JmXHUwM2MyLiAiLCJyYXRpbmciOjUsInNo
-    b3BfcmVwbHkiOm51bGwsImNyZWF0ZWRfYXQiOiIyMDEwLTEyLTI4VDAyOjMx
-    OjEyKzAyOjAwIn0seyJpZCI6Mzk0MCwidXNlcl9pZCI6NjYzOTYsInJldmll
-    dyI6Ilx1MDM5NyBcdTAzYzRcdTAzYjVcdTAzYmJcdTAzYjVcdTAzYzVcdTAz
-    YzRcdTAzYjFcdTAzYWZcdTAzYjEgXHUwM2MwXHUwM2IxXHUwM2MxXHUwM2Ix
-    XHUwM2JiXHUwM2IxXHUwM2IyXHUwM2FlIFx1MDNiY1x1MDNiZlx1MDNjNSBc
-    dTAzYjdcdTAzYzRcdTAzYjFcdTAzYmQgXHUwM2M3XHUwM2I4XHUwM2I1XHUw
-    M2MyIFx1MDNjNFx1MDNiZiBcdTAzYjJcdTAzYzFcdTAzYWNcdTAzYjRcdTAz
-    YjkgXHUwM2IxXHUwM2MwXHUwM2JmIFx1MDNjNFx1MDNiZiBcdTAzYmFcdTAz
-    YjFcdTAzYzRcdTAzYWNcdTAzYzNcdTAzYzRcdTAzYjdcdTAzYmNcdTAzYjEg
-    XHUwMzk2XHUwM2M5XHUwM2IzXHUwM2MxXHUwM2FjXHUwM2M2XHUwM2JmXHUw
-    M2M1IFx1MDNiYVx1MDNiMVx1MDNiOSBcdTAzYjcgXHUwM2M5XHUwM2MxXHUw
-    M2IxIFx1MDNjMFx1MDNiZlx1MDNjNSBcdTAzYWVcdTAzYzRcdTAzYjFcdTAz
-    YmQgOSBcdTAzYzRcdTAzYmYgXHUwM2IyXHUwM2MxXHUwM2FjXHUwM2I0XHUw
-    M2I5IFx1MDNiYVx1MDNiMVx1MDNiOSBcdTAzYzdcdTAzYzlcdTAzYzFcdTAz
-    YWZcdTAzYzIgXHUwM2JhXHUwM2IxXHUwM2JkXHUwM2FkXHUwM2JkXHUwM2Ix
-    IFx1MDNjMFx1MDNjMVx1MDNjY1x1MDNiMlx1MDNiYlx1MDNiN1x1MDNiY1x1
-    MDNiMS5cdTAzOTcgXHUwM2JjXHUwM2I5XHUwM2M0XHUwM2MxXHUwM2I5XHUw
-    M2JhXHUwM2FlIFx1MDNjMFx1MDNiZlx1MDNjNSBcdTAzYzBcdTAzYWVcdTAz
-    YzFcdTAzYjEgQVNVUyBNNEE4OFQtViBFVk8gXHUwM2JjXHUwM2I1XHUwM2M0
-    XHUwM2FjIFx1MDNiYVx1MDNiMVx1MDNjNFx1MDNhY1x1MDNiYlx1MDNiMVx1
-    MDNiMlx1MDNiMSBcdTAzYzNcdTAzYzRcdTAzYmYgXHUwM2MzXHUwM2MwXHUw
-    M2FmXHUwM2M0XHUwM2I5IFx1MDNjY1x1MDNjNFx1MDNiOSBcdTAzYzRcdTAz
-    YmYgXHUwM2JhXHUwM2JmXHUwM2M1XHUwM2M0XHUwM2FmIFx1MDNhZVx1MDNj
-    NFx1MDNiMVx1MDNiZCBcdTAzYjFcdTAzYmRcdTAzYmZcdTAzYjlcdTAzYzdc
-    dTAzYzRcdTAzY2MsXHUwM2JjXHUwM2FjXHUwM2JiXHUwM2JiXHUwM2JmXHUw
-    M2JkIFx1MDNjNFx1MDNiZiBcdTAzYjVcdTAzYWZcdTAzYzdcdTAzYjFcdTAz
-    YmQgXHUwM2M0XHUwM2MzXHUwM2I1XHUwM2JhXHUwM2FjXHUwM2MxXHUwM2I1
-    XHUwM2I5IFx1MDNiMVx1MDNiZCBcdTAzYjVcdTAzYWZcdTAzYmRcdTAzYjFc
-    dTAzYjkgXHUwM2NjXHUwM2JiXHUwM2JiXHUwM2IxIFx1MDNiY1x1MDNiNVx1
-    MDNjM1x1MDNiMSBcdTAzYWUgXHUwM2JhXHUwM2IxXHUwM2M0XHUwM2I5IFx1
-    MDNhY1x1MDNiYlx1MDNiYlx1MDNiZiBcdTAzYzRcdTAzYmYgXHUwM2JmXHUw
-    M2MwXHUwM2JmXHUwM2FmXHUwM2JmIFx1MDNjY1x1MDNiY1x1MDNjOVx1MDNj
-    MiBcdTAzYjRcdTAzYjVcdTAzYmQgXHUwM2FkXHUwM2M3XHUwM2I1XHUwM2I5
-    IFx1MDNjMFx1MDNjMVx1MDNjY1x1MDNiMlx1MDNiYlx1MDNiN1x1MDNiY1x1
-    MDNiMSxcdTAzYjVcdTAzYzBcdTAzYjVcdTAzYjlcdTAzYjRcdTAzYWUgXHUw
-    M2I1XHUwM2FmXHUwM2I0XHUwM2IxIFx1MDNjY1x1MDNiYlx1MDNiYlx1MDNi
-    MSBcdTAzYWVcdTAzYzRcdTAzYjFcdTAzYmQgXHUwM2JjXHUwM2FkXHUwM2Mz
-    XHUwM2IxLlx1MDM5NVx1MDNhZlx1MDNiZFx1MDNiMVx1MDNiOSBcdTAzYzBc
-    dTAzYzFcdTAzY2VcdTAzYzRcdTAzYjcgXHUwM2M2XHUwM2JmXHUwM2MxXHUw
-    M2FjIFx1MDNjMFx1MDNiZlx1MDNjNSBcdTAzYjNcdTAzYzFcdTAzYWNcdTAz
-    YzZcdTAzYzkgXHUwM2I1XHUwM2I0XHUwM2NlIFx1MDNjM1x1MDNjNFx1MDNi
-    ZiBcdTAzYzNcdTAzYmFcdTAzYzFcdTAzYmZcdTAzY2RcdTAzYzRcdTAzYjYg
-    XHUwM2IzXHUwM2I5XHUwM2IxIFx1MDNjNFx1MDNiZiBcdTAzYzBcdTAzYmZc
-    dTAzYmJcdTAzY2QgXHUwM2JhXHUwM2IxXHUwM2JiXHUwM2NjIGUtc2hvcCBc
-    dTAzYzRcdTAzYmZcdTAzYzVcdTAzYmJcdTAzYWNcdTAzYzdcdTAzYjlcdTAz
-    YzNcdTAzYzRcdTAzYmZcdTAzYmQgXHUwM2JjXHUwM2FkXHUwM2M3XHUwM2Mx
-    XHUwM2I5IFx1MDNjNFx1MDNjZVx1MDNjMVx1MDNiMSBcdTAzYjRcdTAzYjVc
-    dTAzYmQgXHUwM2I1XHUwM2FmXHUwM2M3XHUwM2IxIFx1MDNiYVx1MDNiMVx1
-    MDNiZFx1MDNhZFx1MDNiZFx1MDNiMSBcdTAzYzBcdTAzYzFcdTAzY2NcdTAz
-    YjJcdTAzYmJcdTAzYjdcdTAzYmNcdTAzYjEgXHUwM2JjXHUwM2I1IFx1MDNj
-    NFx1MDNiZiBcdTAzYjFcdTAzYzVcdTAzYzRcdTAzY2MgXHUwM2M0XHUwM2Jm
-    IFx1MDNiY1x1MDNiMVx1MDNiM1x1MDNiMVx1MDNiNlx1MDNhZi5cdTAzOTNc
-    dTAzYjlcdTAzYjEnXHUwM2JjXHUwM2FkXHUwM2JkXHUwM2IxIFx1MDNjNFx1
-    MDNiZiBlLXNob3AgXHUwM2I1XHUwM2FmXHUwM2JkXHUwM2IxXHUwM2I5IFx1
-    MDNiY1x1MDNiOVx1MDNiMSBcdTAzYmFcdTAzYjFcdTAzYmJcdTAzYWUgXHUw
-    M2JhXHUwM2IxXHUwM2I5IFx1MDNhY1x1MDNjMVx1MDNiOVx1MDNjM1x1MDNj
-    NFx1MDNiNyBcdTAzYjVcdTAzYzBcdTAzYjlcdTAzYmJcdTAzYmZcdTAzYjNc
-    dTAzYWUgXHUwM2MzXHUwM2I1IFx1MDNiYVx1MDNhY1x1MDNjMFx1MDNiZlx1
-    MDNiOVx1MDNiMSBcdTAzYzBcdTAzYzFcdTAzYmZcdTAzYjlcdTAzY2NcdTAz
-    YmRcdTAzYzRcdTAzYjEuXHUwMzkzXHUwM2I5XHUwM2IxIFx1MDNiMVx1MDNj
-    ZFx1MDNjMVx1MDNiOVx1MDNiZiBcdTAzYzBcdTAzYjVcdTAzYzFcdTAzYjlc
-    dTAzYmNcdTAzYWRcdTAzYmRcdTAzYzkgXHUwM2FjXHUwM2JiXHUwM2JiXHUw
-    M2I1XHUwM2MyIFx1MDNjNFx1MDNhZFx1MDNjM1x1MDNjM1x1MDNiNVx1MDNj
-    MVx1MDNiOVx1MDNjMiBcdTAzYzNcdTAzYzVcdTAzYzNcdTAzYmFcdTAzYjVc
-    dTAzY2RcdTAzYjVcdTAzYzIgXHUwM2JhXHUwM2IxXHUwM2I5IFx1MDNjMFx1
-    MDNiOVx1MDNjM1x1MDNjNFx1MDNiNVx1MDNjZFx1MDNjOSBcdTAzYmRcdTAz
-    YjEgXHUwM2JjXHUwM2I3XHUwM2JkIFx1MDNhZFx1MDNjN1x1MDNiZlx1MDNj
-    NVx1MDNiZCBcdTAzYmFcdTAzYjFcdTAzYmRcdTAzYWRcdTAzYmRcdTAzYjEg
-    XHUwM2MwXHUwM2MxXHUwM2NjXHUwM2IyXHUwM2JiXHUwM2I3XHUwM2JjXHUw
-    M2IxIFx1MDNjY1x1MDNjMFx1MDNjOVx1MDNjMiBcdTAzYmNcdTAzYWRcdTAz
-    YzdcdTAzYzFcdTAzYjkgXHUwM2M0XHUwM2NlXHUwM2MxXHUwM2IxLiIsInJh
-    dGluZyI6NSwic2hvcF9yZXBseSI6bnVsbCwiY3JlYXRlZF9hdCI6IjIwMTAt
-    MTItMjNUMDA6MTQ6MzErMDI6MDAifSx7ImlkIjozNjkyLCJ1c2VyX2lkIjo2
-    NDIyOCwicmV2aWV3IjoiXHUwMzk4XHUwM2FkXHUwM2JiXHUwM2JmXHUwM2Jk
-    XHUwM2M0XHUwM2IxXHUwM2MyIFx1MDNiZFx1MDNiMSBcdTAzYjFcdTAzYzBc
-    dTAzYmZcdTAzYmFcdTAzYzRcdTAzYWVcdTAzYzNcdTAzYzkgXHUwM2M0XHUw
-    M2I3XHUwM2JkIFx1MDNjNFx1MDNiN1x1MDNiYlx1MDNiNVx1MDNjY1x1MDNj
-    MVx1MDNiMVx1MDNjM1x1MDNiNyBTQU1TVU5HIFVFIDQwQzYwMDAgXHUwM2Fk
-    XHUwM2JhXHUwM2IxXHUwM2JkXHUwM2IxIFx1MDNhZFx1MDNjMVx1MDNiNVx1
-    MDNjNVx1MDNiZFx1MDNiMSBcdTAzYjFcdTAzYjNcdTAzYmZcdTAzYzFcdTAz
-    YWNcdTAzYzIgXHUwM2JjXHUwM2FkXHUwM2MzXHUwM2M5IElOVEVSTkVUIFx1
-    MDNiYVx1MDNiMVx1MDNiOSBcdTAzYmFcdTAzYjFcdTAzYzRcdTAzYWRcdTAz
-    YmJcdTAzYjdcdTAzYmVcdTAzYjEgIFx1MDNjM1x1MDNjNFx1MDNiZiBcdTAz
-    YmFcdTAzYjFcdTAzYzQvXHUwM2JjXHUwM2IxIFx1MDNjNFx1MDNiZlx1MDNj
-    NSBlLXNob3AgXHUwM2IyXHUwM2IxXHUwM2MzXHUwM2I5XHUwM2JhXHUwM2Fj
-    IFx1MDNiYlx1MDNjY1x1MDNiM1x1MDNjOSBcdTAzYzRcdTAzYjlcdTAzYmNc
-    dTAzYWVcdTAzYzIgXHUwM2IxXHUwM2JiXHUwM2JiXHUwM2FjIFx1MDNiYVx1
-    MDNiMVx1MDNiOSBcdTAzYmJcdTAzY2NcdTAzYjNcdTAzYzkgXHUwM2JmXHUw
-    M2JkXHUwM2NjXHUwM2JjXHUwM2IxXHUwM2M0XHUwM2JmXHUwM2MyLiBcdTAz
-    OWRcdTAzYjEgXHUwM2MzXHUwM2I3XHUwM2JjXHUwM2I1XHUwM2I5XHUwM2M5
-    XHUwM2I4XHUwM2I1XHUwM2FmIFx1MDNiZlx1MDNjNFx1MDNiOSBcdTAzYzNc
-    dTAzYzRcdTAzYmYgXHUwM2JhXHUwM2FjXHUwM2M0XHUwM2M5IFx1MDNiY1x1
-    MDNhZFx1MDNjMVx1MDNiZlx1MDNjMiBcdTAzYzRcdTAzYjdcdTAzYzIgXHUw
-    M2JhXHUwM2IxXHUwM2M0XHUwM2IxXHUwM2M3XHUwM2NlXHUwM2MxXHUwM2I5
-    XHUwM2MzXHUwM2I3XHUwM2MyLCBcdTAzY2NcdTAzYzRcdTAzYjFcdTAzYmQg
-    XHUwM2FkXHUwM2JhXHUwM2IxXHUwM2JkXHUwM2IxIFx1MDNjNFx1MDNiN1x1
-    MDNiZCBcdTAzYWRcdTAzYzFcdTAzYjVcdTAzYzVcdTAzYmRcdTAzYjEsIFx1
-    MDNjNVx1MDNjMFx1MDNhZVx1MDNjMVx1MDNjN1x1MDNiNSBcdTAzYjcgXHUw
-    M2FkXHUwM2JkXHUwM2I0XHUwM2I1XHUwM2I5XHUwM2JlXHUwM2I3IFx1MDNi
-    Zlx1MDNjNFx1MDNiOSBcdTAzYjFcdTAzYmRcdTAzYjFcdTAzYmNcdTAzYWRc
-    dTAzYmRcdTAzYjVcdTAzYzRcdTAzYjFcdTAzYjkgXHUwM2JkXHUwM2FkXHUw
-    M2IxIFx1MDNjMFx1MDNiMVx1MDNjMVx1MDNiMVx1MDNiYlx1MDNiMVx1MDNi
-    Mlx1MDNhZSAgXHUwM2I3IDIzXHUwM2I3IFx1MDM5Zlx1MDNiYVx1MDNjNFx1
-    MDNjOVx1MDNiMlx1MDNjMVx1MDNhZlx1MDNiZlx1MDNjNSwgXHUwM2I3IFx1
-    MDNiZlx1MDNjMFx1MDNiZlx1MDNhZlx1MDNiMSBcdTAzYmFcdTAzYWNcdTAz
-    YjhcdTAzYjUgXHUwM2I1XHUwM2IyXHUwM2I0XHUwM2JmXHUwM2JjXHUwM2Fj
-    XHUwM2I0XHUwM2IxIFx1MDNiMVx1MDNiZFx1MDNiMVx1MDNiZFx1MDNiNVx1
-    MDNjZVx1MDNiZFx1MDNiZlx1MDNiZFx1MDNjNFx1MDNiMVx1MDNiZC4gXHUw
-    M2EwXHUwM2IxXHUwM2MxIFx1MDNjY1x1MDNiYlx1MDNiMSBcdTAzYjFcdTAz
-    YzVcdTAzYzRcdTAzYWMgXHUwM2M0XHUwM2I3XHUwM2JkIDIuMTEuMjAxMCBc
-    dTAzYzBcdTAzYjFcdTAzYzFcdTAzYWVcdTAzYjNcdTAzYjNcdTAzYjVcdTAz
-    YjlcdTAzYmJcdTAzYjEgXHUwM2M0XHUwM2JmIFx1MDNjM1x1MDNjNVx1MDNi
-    M1x1MDNiYVx1MDNiNVx1MDNiYVx1MDNjMVx1MDNiOVx1MDNiY1x1MDNhZFx1
-    MDNiZFx1MDNiZiBcdTAzYzBcdTAzYzFcdTAzYmZcdTAzY2FcdTAzY2NcdTAz
-    YmQgKFx1MDNiYVx1MDNjOVx1MDNiNC4gXHUwM2MwXHUwM2IxXHUwM2MxXHUw
-    M2IxXHUwM2IzXHUwM2IzXHUwM2I1XHUwM2JiXHUwM2FmXHUwM2IxXHUwM2My
-    IDEwMTAyNTIwMjE0MDE3ODEyODI0MzIwNSkgXHUwM2JjXHUwM2I1IFx1MDNi
-    NVx1MDNiZFx1MDNiNFx1MDNiNVx1MDNjN1x1MDNjY1x1MDNiY1x1MDNiNVx1
-    MDNiZFx1MDNiNyBcdTAzYjdcdTAzYmNcdTAzYjVcdTAzYzFcdTAzYmZcdTAz
-    YmNcdTAzYjdcdTAzYmRcdTAzYWZcdTAzYjEgXHUwM2JkXHUwM2FkXHUwM2Ix
-    XHUwM2MyIFx1MDNjMFx1MDNiMVx1MDNjMVx1MDNiMVx1MDNiYlx1MDNiMVx1
-    MDNiMlx1MDNhZVx1MDNjMiA3LjExLjIwMTAuIFx1MDM5NFx1MDNjNVx1MDNj
-    M1x1MDNjNFx1MDNjNVx1MDNjN1x1MDNjZVx1MDNjMiBcdTAzYjcgXHUwM2I3
-    XHUwM2JjXHUwM2I1XHUwM2MxXHUwM2JmXHUwM2JjXHUwM2I3XHUwM2JkXHUw
-    M2FmXHUwM2IxIFx1MDNiMVx1MDNjNVx1MDNjNFx1MDNhZSBcdTAzYWNcdTAz
-    YmJcdTAzYmJcdTAzYjFcdTAzYjZcdTAzYjUgXHUwM2JhXHUwM2FjXHUwM2I4
-    XHUwM2I1IFx1MDNiNVx1MDNiMlx1MDNiNFx1MDNiZlx1MDNiY1x1MDNhY1x1
-    MDNiNFx1MDNiMS4gXHUwMzkxXHUwM2JhXHUwM2NjXHUwM2JjXHUwM2I3IFx1
-    MDNiYVx1MDNiMVx1MDNiOSBcdTAzYzNcdTAzYWVcdTAzYmNcdTAzYjVcdTAz
-    YzFcdTAzYjEgXHUwM2I1XHUwM2JjXHUwM2M2XHUwM2IxXHUwM2JkXHUwM2Fm
-    XHUwM2I2XHUwM2I1XHUwM2M0XHUwM2IxXHUwM2I5IFx1MDNjOVx1MDNjMiBc
-    dTAzYjdcdTAzYmNcdTAzYjVcdTAzYzFcdTAzYmZcdTAzYmNcdTAzYjdcdTAz
-    YmRcdTAzYWZcdTAzYjEgXHUwM2MwXHUwM2IxXHUwM2MxXHUwM2IxXHUwM2Ji
-    XHUwM2IxXHUwM2IyXHUwM2FlXHUwM2MyIFx1MDNiNyA2XHUwM2I3IFx1MDM5
-    NFx1MDNiNVx1MDNiYVx1MDNiNVx1MDNiY1x1MDNiMlx1MDNjMVx1MDNhZlx1
-    MDNiZlx1MDNjNSAyMDEwLiBcdTAzOTVcdTAzYzRcdTAzYzNcdTAzYjkgXHUw
-    M2IxXHUwM2JkXHUwM2IxXHUwM2IzXHUwM2JhXHUwM2FjXHUwM2MzXHUwM2M0
-    XHUwM2I3XHUwM2JhXHUwM2IxIFx1MDNiZFx1MDNiMSBcdTAzYjFcdTAzYmFc
-    dTAzYzVcdTAzYzFcdTAzY2VcdTAzYzNcdTAzYzkgXHUwM2M0XHUwM2I3XHUw
-    M2JkIFx1MDNjMFx1MDNiMVx1MDNjMVx1MDNiMVx1MDNiM1x1MDNiM1x1MDNi
-    NVx1MDNiYlx1MDNhZlx1MDNiMSBcdTAzYjhcdTAzYjVcdTAzYzlcdTAzYzFc
-    dTAzY2VcdTAzYmRcdTAzYzRcdTAzYjFcdTAzYzIgXHUwM2JmXHUwM2M0XHUw
-    M2I5IFx1MDNjNFx1MDNiZiBcdTAzYzNcdTAzYzVcdTAzYjNcdTAzYmFcdTAz
-    YjVcdTAzYmFcdTAzYzFcdTAzYjlcdTAzYmNcdTAzYWRcdTAzYmRcdTAzYmYg
-    XHUwM2JhXHUwM2IxXHUwM2M0XHUwM2FjXHUwM2MzXHUwM2M0XHUwM2I3XHUw
-    M2JjXHUwM2IxIFx1MDNiY1x1MDNiMVx1MDNjMiBcdTAzYjVcdTAzYmNcdTAz
-    YzBcdTAzYjFcdTAzYWZcdTAzYjZcdTAzYjVcdTAzYjkgXHUwM2JhXHUwM2Ix
-    XHUwM2I5IFx1MDNiZFx1MDNiMSBcdTAzYzNcdTAzYzRcdTAzYzFcdTAzYjFc
-    dTAzYzZcdTAzY2UgXHUwM2MzXHUwM2M0XHUwM2I3XHUwM2JkIFx1MDNiMVx1
-    MDNiM1x1MDNiZlx1MDNjMVx1MDNhYyBcdTAzYzRcdTAzYmZcdTAzYzUgXHUw
-    M2MzXHUwM2M1XHUwM2IzXHUwM2JhXHUwM2I1XHUwM2JhXHUwM2MxXHUwM2I5
-    XHUwM2JjXHUwM2FkXHUwM2JkXHUwM2JmXHUwM2M1IFx1MDNjMFx1MDNjMVx1
-    MDNiZlx1MDNjYVx1MDNjY1x1MDNiZFx1MDNjNFx1MDNiZlx1MDNjMiBcdTAz
-    YmFcdTAzYjFcdTAzYjkgXHUwM2JjXHUwM2FjXHUwM2JiXHUwM2I5XHUwM2Mz
-    XHUwM2M0XHUwM2IxIFx1MDNiY1x1MDNiNSBcdTAzYjVcdTAzYzVcdTAzYmRc
-    dTAzYmZcdTAzY2FcdTAzYmFcdTAzY2NcdTAzYzRcdTAzYjVcdTAzYzFcdTAz
-    YmZcdTAzYzVcdTAzYzIgXHUwM2NjXHUwM2MxXHUwM2JmXHUwM2M1XHUwM2My
-    IFx1MDNiMVx1MDNjMFx1MDNjYyBcdTAzYWNcdTAzYmJcdTAzYmJcdTAzYmYg
-    XHUwM2I5XHUwM2JkXHUwM2M0XHUwM2I1XHUwM2MxXHUwM2JkXHUwM2I1XHUw
-    M2M0XHUwM2I5XHUwM2JhXHUwM2NjIFx1MDNiYVx1MDNiMVx1MDNjNFx1MDNh
-    Y1x1MDNjM1x1MDNjNFx1MDNiN1x1MDNiY1x1MDNiMS4gIiwicmF0aW5nIjox
-    LCJzaG9wX3JlcGx5IjpudWxsLCJjcmVhdGVkX2F0IjoiMjAxMC0xMS0zMFQy
-    MDozMToyMSswMjowMCJ9XSwibWV0YSI6eyJwYWdpbmF0aW9uIjp7InRvdGFs
-    X3Jlc3VsdHMiOjE2MiwidG90YWxfcGFnZXMiOjU0LCJwYWdlIjoxLCJwZXIi
-    OjN9fX0=
+  :headers:
+    server: nginx
+    content-type: application/json; charset=utf-8
+    !binary "dmFyeQ==": Accept-Encoding
+    status: 200 OK
+    !binary "bGluaw==": <http://api.skroutz.gr/api/shops/3/reviews?page=54&per=3>;
+      rel="last", <http://api.skroutz.gr/api/shops/3/reviews?page=2&per=3>; rel="next"
+    cache-control: max-age=300, private
+    x-ua-compatible: IE=Edge,chrome=1
+    x-request-id: '225152310'
+    x-runtime: '0.068030'
+    x-dns-prefetch-control: 'off'
+    x-app: lunkwill
+    content-length: '1712'
+    accept-ranges: bytes
+    date: Mon, 14 Jul 2014 12:06:33 GMT
+    x-varnish: '225152310'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: varnish1
+    x-cache: MISS
+  :body: ! '{"reviews":[{"id":3984,"user_id":66430,"review":"\u0395\u03af\u03c7\u03b1
+    \u03c0\u03b1\u03c1\u03b1\u03b3\u03b3\u03b5\u03af\u03bb\u03b5\u03b9 \u03ba\u03ac\u03c0\u03bf\u03b9\u03b5\u03c2
+    \u03c4\u03b1\u03b9\u03bd\u03af\u03b5\u03c2 \u03c3\u03b5 DVD \u03ba\u03b1\u03b9
+    BLUERAY \u03ba\u03b9 \u03ad\u03bd\u03b1 pc game. To game \u03b4\u03b5\u03bd \u03c4\u03bf
+    \u03b5\u03af\u03c7\u03b1\u03bd \u03c4\u03b5\u03bb\u03b9\u03ba\u03ac \u03b1\u03bb\u03bb\u03ac
+    \u03bc\u03b5 \u03c0\u03ae\u03c1\u03b1\u03bd \u03c4\u03b7\u03bb\u03ad\u03c6\u03c9\u03bd\u03bf
+    \u03b1\u03bc\u03ad\u03c3\u03c9\u03c2 \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03bc\u03bf\u03c5
+    \u03c4\u03bf \u03c0\u03bf\u03c5\u03bd \u03ba\u03b1\u03b8\u03ce\u03c2 \u03ba\u03b1\u03b9
+    \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03bc\u03b5 \u03c1\u03c9\u03c4\u03ae\u03c3\u03bf\u03c5\u03bd
+    \u03b1\u03bd \u03c4\u03b5\u03bb\u03b9\u03ba\u03ac \u03b8\u03ad\u03bb\u03c9 \u03bd\u03b1
+    \u03c0\u03b1\u03c1\u03b1\u03bb\u03ac\u03b2\u03c9 \u03c4\u03b1 \u03c5\u03c0\u03cc\u03bb\u03bf\u03b9\u03c0\u03b1
+    \u03c0\u03c1\u03ac\u03b3\u03bc\u03b1\u03c4\u03b1 \u03c0\u03bf\u03c5 \u03b5\u03af\u03c7\u03b1
+    \u03c0\u03b1\u03c1\u03b1\u03b3\u03b3\u03b5\u03af\u03bb\u03b5\u03b9. \u0394\u03ad\u03c7\u03c4\u03b7\u03ba\u03b1
+    \u03c6\u03c5\u03c3\u03b9\u03ba\u03ac \u03ba\u03b1\u03b9 \u03c4\u03b7\u03bd \u03b5\u03c0\u03cc\u03bc\u03b5\u03bd\u03b7
+    \u03bc\u03ad\u03c1\u03b1 \u03c0\u03b1\u03c1\u03ad\u03bb\u03b1\u03b2\u03b1 \u03c4\u03b7\u03bd
+    \u03c0\u03b1\u03c1\u03b1\u03b3\u03b3\u03b5\u03bb\u03b5\u03af\u03b1 \u03bc\u03bf\u03c5.
+    \u0388\u03c7\u03c9 \u03bc\u03b5\u03af\u03bd\u03b5\u03b9 \u03b1\u03c0\u03cc\u03bb\u03c5\u03c4\u03b1
+    \u03b5\u03c5\u03c7\u03b1\u03c1\u03b9\u03c3\u03c4\u03b7\u03bc\u03ad\u03bd\u03bf\u03c2.
+    ","rating":5,"shop_reply":null,"created_at":"2010-12-28T02:31:12+02:00"},{"id":3940,"user_id":66396,"review":"\u0397
+    \u03c4\u03b5\u03bb\u03b5\u03c5\u03c4\u03b1\u03af\u03b1 \u03c0\u03b1\u03c1\u03b1\u03bb\u03b1\u03b2\u03ae
+    \u03bc\u03bf\u03c5 \u03b7\u03c4\u03b1\u03bd \u03c7\u03b8\u03b5\u03c2 \u03c4\u03bf
+    \u03b2\u03c1\u03ac\u03b4\u03b9 \u03b1\u03c0\u03bf \u03c4\u03bf \u03ba\u03b1\u03c4\u03ac\u03c3\u03c4\u03b7\u03bc\u03b1
+    \u0396\u03c9\u03b3\u03c1\u03ac\u03c6\u03bf\u03c5 \u03ba\u03b1\u03b9 \u03b7 \u03c9\u03c1\u03b1
+    \u03c0\u03bf\u03c5 \u03ae\u03c4\u03b1\u03bd 9 \u03c4\u03bf \u03b2\u03c1\u03ac\u03b4\u03b9
+    \u03ba\u03b1\u03b9 \u03c7\u03c9\u03c1\u03af\u03c2 \u03ba\u03b1\u03bd\u03ad\u03bd\u03b1
+    \u03c0\u03c1\u03cc\u03b2\u03bb\u03b7\u03bc\u03b1.\u0397 \u03bc\u03b9\u03c4\u03c1\u03b9\u03ba\u03ae
+    \u03c0\u03bf\u03c5 \u03c0\u03ae\u03c1\u03b1 ASUS M4A88T-V EVO \u03bc\u03b5\u03c4\u03ac
+    \u03ba\u03b1\u03c4\u03ac\u03bb\u03b1\u03b2\u03b1 \u03c3\u03c4\u03bf \u03c3\u03c0\u03af\u03c4\u03b9
+    \u03cc\u03c4\u03b9 \u03c4\u03bf \u03ba\u03bf\u03c5\u03c4\u03af \u03ae\u03c4\u03b1\u03bd
+    \u03b1\u03bd\u03bf\u03b9\u03c7\u03c4\u03cc,\u03bc\u03ac\u03bb\u03bb\u03bf\u03bd
+    \u03c4\u03bf \u03b5\u03af\u03c7\u03b1\u03bd \u03c4\u03c3\u03b5\u03ba\u03ac\u03c1\u03b5\u03b9
+    \u03b1\u03bd \u03b5\u03af\u03bd\u03b1\u03b9 \u03cc\u03bb\u03bb\u03b1 \u03bc\u03b5\u03c3\u03b1
+    \u03ae \u03ba\u03b1\u03c4\u03b9 \u03ac\u03bb\u03bb\u03bf \u03c4\u03bf \u03bf\u03c0\u03bf\u03af\u03bf
+    \u03cc\u03bc\u03c9\u03c2 \u03b4\u03b5\u03bd \u03ad\u03c7\u03b5\u03b9 \u03c0\u03c1\u03cc\u03b2\u03bb\u03b7\u03bc\u03b1,\u03b5\u03c0\u03b5\u03b9\u03b4\u03ae
+    \u03b5\u03af\u03b4\u03b1 \u03cc\u03bb\u03bb\u03b1 \u03ae\u03c4\u03b1\u03bd \u03bc\u03ad\u03c3\u03b1.\u0395\u03af\u03bd\u03b1\u03b9
+    \u03c0\u03c1\u03ce\u03c4\u03b7 \u03c6\u03bf\u03c1\u03ac \u03c0\u03bf\u03c5 \u03b3\u03c1\u03ac\u03c6\u03c9
+    \u03b5\u03b4\u03ce \u03c3\u03c4\u03bf \u03c3\u03ba\u03c1\u03bf\u03cd\u03c4\u03b6
+    \u03b3\u03b9\u03b1 \u03c4\u03bf \u03c0\u03bf\u03bb\u03cd \u03ba\u03b1\u03bb\u03cc
+    e-shop \u03c4\u03bf\u03c5\u03bb\u03ac\u03c7\u03b9\u03c3\u03c4\u03bf\u03bd \u03bc\u03ad\u03c7\u03c1\u03b9
+    \u03c4\u03ce\u03c1\u03b1 \u03b4\u03b5\u03bd \u03b5\u03af\u03c7\u03b1 \u03ba\u03b1\u03bd\u03ad\u03bd\u03b1
+    \u03c0\u03c1\u03cc\u03b2\u03bb\u03b7\u03bc\u03b1 \u03bc\u03b5 \u03c4\u03bf \u03b1\u03c5\u03c4\u03cc
+    \u03c4\u03bf \u03bc\u03b1\u03b3\u03b1\u03b6\u03af.\u0393\u03b9\u03b1''\u03bc\u03ad\u03bd\u03b1
+    \u03c4\u03bf e-shop \u03b5\u03af\u03bd\u03b1\u03b9 \u03bc\u03b9\u03b1 \u03ba\u03b1\u03bb\u03ae
+    \u03ba\u03b1\u03b9 \u03ac\u03c1\u03b9\u03c3\u03c4\u03b7 \u03b5\u03c0\u03b9\u03bb\u03bf\u03b3\u03ae
+    \u03c3\u03b5 \u03ba\u03ac\u03c0\u03bf\u03b9\u03b1 \u03c0\u03c1\u03bf\u03b9\u03cc\u03bd\u03c4\u03b1.\u0393\u03b9\u03b1
+    \u03b1\u03cd\u03c1\u03b9\u03bf \u03c0\u03b5\u03c1\u03b9\u03bc\u03ad\u03bd\u03c9
+    \u03ac\u03bb\u03bb\u03b5\u03c2 \u03c4\u03ad\u03c3\u03c3\u03b5\u03c1\u03b9\u03c2
+    \u03c3\u03c5\u03c3\u03ba\u03b5\u03cd\u03b5\u03c2 \u03ba\u03b1\u03b9 \u03c0\u03b9\u03c3\u03c4\u03b5\u03cd\u03c9
+    \u03bd\u03b1 \u03bc\u03b7\u03bd \u03ad\u03c7\u03bf\u03c5\u03bd \u03ba\u03b1\u03bd\u03ad\u03bd\u03b1
+    \u03c0\u03c1\u03cc\u03b2\u03bb\u03b7\u03bc\u03b1 \u03cc\u03c0\u03c9\u03c2 \u03bc\u03ad\u03c7\u03c1\u03b9
+    \u03c4\u03ce\u03c1\u03b1.","rating":5,"shop_reply":null,"created_at":"2010-12-23T00:14:31+02:00"},{"id":3692,"user_id":64228,"review":"\u0398\u03ad\u03bb\u03bf\u03bd\u03c4\u03b1\u03c2
+    \u03bd\u03b1 \u03b1\u03c0\u03bf\u03ba\u03c4\u03ae\u03c3\u03c9 \u03c4\u03b7\u03bd
+    \u03c4\u03b7\u03bb\u03b5\u03cc\u03c1\u03b1\u03c3\u03b7 SAMSUNG UE 40C6000 \u03ad\u03ba\u03b1\u03bd\u03b1
+    \u03ad\u03c1\u03b5\u03c5\u03bd\u03b1 \u03b1\u03b3\u03bf\u03c1\u03ac\u03c2 \u03bc\u03ad\u03c3\u03c9
+    INTERNET \u03ba\u03b1\u03b9 \u03ba\u03b1\u03c4\u03ad\u03bb\u03b7\u03be\u03b1  \u03c3\u03c4\u03bf
+    \u03ba\u03b1\u03c4/\u03bc\u03b1 \u03c4\u03bf\u03c5 e-shop \u03b2\u03b1\u03c3\u03b9\u03ba\u03ac
+    \u03bb\u03cc\u03b3\u03c9 \u03c4\u03b9\u03bc\u03ae\u03c2 \u03b1\u03bb\u03bb\u03ac
+    \u03ba\u03b1\u03b9 \u03bb\u03cc\u03b3\u03c9 \u03bf\u03bd\u03cc\u03bc\u03b1\u03c4\u03bf\u03c2.
+    \u039d\u03b1 \u03c3\u03b7\u03bc\u03b5\u03b9\u03c9\u03b8\u03b5\u03af \u03bf\u03c4\u03b9
+    \u03c3\u03c4\u03bf \u03ba\u03ac\u03c4\u03c9 \u03bc\u03ad\u03c1\u03bf\u03c2 \u03c4\u03b7\u03c2
+    \u03ba\u03b1\u03c4\u03b1\u03c7\u03ce\u03c1\u03b9\u03c3\u03b7\u03c2, \u03cc\u03c4\u03b1\u03bd
+    \u03ad\u03ba\u03b1\u03bd\u03b1 \u03c4\u03b7\u03bd \u03ad\u03c1\u03b5\u03c5\u03bd\u03b1,
+    \u03c5\u03c0\u03ae\u03c1\u03c7\u03b5 \u03b7 \u03ad\u03bd\u03b4\u03b5\u03b9\u03be\u03b7
+    \u03bf\u03c4\u03b9 \u03b1\u03bd\u03b1\u03bc\u03ad\u03bd\u03b5\u03c4\u03b1\u03b9
+    \u03bd\u03ad\u03b1 \u03c0\u03b1\u03c1\u03b1\u03bb\u03b1\u03b2\u03ae  \u03b7 23\u03b7
+    \u039f\u03ba\u03c4\u03c9\u03b2\u03c1\u03af\u03bf\u03c5, \u03b7 \u03bf\u03c0\u03bf\u03af\u03b1
+    \u03ba\u03ac\u03b8\u03b5 \u03b5\u03b2\u03b4\u03bf\u03bc\u03ac\u03b4\u03b1 \u03b1\u03bd\u03b1\u03bd\u03b5\u03ce\u03bd\u03bf\u03bd\u03c4\u03b1\u03bd.
+    \u03a0\u03b1\u03c1 \u03cc\u03bb\u03b1 \u03b1\u03c5\u03c4\u03ac \u03c4\u03b7\u03bd
+    2.11.2010 \u03c0\u03b1\u03c1\u03ae\u03b3\u03b3\u03b5\u03b9\u03bb\u03b1 \u03c4\u03bf
+    \u03c3\u03c5\u03b3\u03ba\u03b5\u03ba\u03c1\u03b9\u03bc\u03ad\u03bd\u03bf \u03c0\u03c1\u03bf\u03ca\u03cc\u03bd
+    (\u03ba\u03c9\u03b4. \u03c0\u03b1\u03c1\u03b1\u03b3\u03b3\u03b5\u03bb\u03af\u03b1\u03c2
+    101025202140178128243205) \u03bc\u03b5 \u03b5\u03bd\u03b4\u03b5\u03c7\u03cc\u03bc\u03b5\u03bd\u03b7
+    \u03b7\u03bc\u03b5\u03c1\u03bf\u03bc\u03b7\u03bd\u03af\u03b1 \u03bd\u03ad\u03b1\u03c2
+    \u03c0\u03b1\u03c1\u03b1\u03bb\u03b1\u03b2\u03ae\u03c2 7.11.2010. \u0394\u03c5\u03c3\u03c4\u03c5\u03c7\u03ce\u03c2
+    \u03b7 \u03b7\u03bc\u03b5\u03c1\u03bf\u03bc\u03b7\u03bd\u03af\u03b1 \u03b1\u03c5\u03c4\u03ae
+    \u03ac\u03bb\u03bb\u03b1\u03b6\u03b5 \u03ba\u03ac\u03b8\u03b5 \u03b5\u03b2\u03b4\u03bf\u03bc\u03ac\u03b4\u03b1.
+    \u0391\u03ba\u03cc\u03bc\u03b7 \u03ba\u03b1\u03b9 \u03c3\u03ae\u03bc\u03b5\u03c1\u03b1
+    \u03b5\u03bc\u03c6\u03b1\u03bd\u03af\u03b6\u03b5\u03c4\u03b1\u03b9 \u03c9\u03c2
+    \u03b7\u03bc\u03b5\u03c1\u03bf\u03bc\u03b7\u03bd\u03af\u03b1 \u03c0\u03b1\u03c1\u03b1\u03bb\u03b1\u03b2\u03ae\u03c2
+    \u03b7 6\u03b7 \u0394\u03b5\u03ba\u03b5\u03bc\u03b2\u03c1\u03af\u03bf\u03c5 2010.
+    \u0395\u03c4\u03c3\u03b9 \u03b1\u03bd\u03b1\u03b3\u03ba\u03ac\u03c3\u03c4\u03b7\u03ba\u03b1
+    \u03bd\u03b1 \u03b1\u03ba\u03c5\u03c1\u03ce\u03c3\u03c9 \u03c4\u03b7\u03bd \u03c0\u03b1\u03c1\u03b1\u03b3\u03b3\u03b5\u03bb\u03af\u03b1
+    \u03b8\u03b5\u03c9\u03c1\u03ce\u03bd\u03c4\u03b1\u03c2 \u03bf\u03c4\u03b9 \u03c4\u03bf
+    \u03c3\u03c5\u03b3\u03ba\u03b5\u03ba\u03c1\u03b9\u03bc\u03ad\u03bd\u03bf \u03ba\u03b1\u03c4\u03ac\u03c3\u03c4\u03b7\u03bc\u03b1
+    \u03bc\u03b1\u03c2 \u03b5\u03bc\u03c0\u03b1\u03af\u03b6\u03b5\u03b9 \u03ba\u03b1\u03b9
+    \u03bd\u03b1 \u03c3\u03c4\u03c1\u03b1\u03c6\u03ce \u03c3\u03c4\u03b7\u03bd \u03b1\u03b3\u03bf\u03c1\u03ac
+    \u03c4\u03bf\u03c5 \u03c3\u03c5\u03b3\u03ba\u03b5\u03ba\u03c1\u03b9\u03bc\u03ad\u03bd\u03bf\u03c5
+    \u03c0\u03c1\u03bf\u03ca\u03cc\u03bd\u03c4\u03bf\u03c2 \u03ba\u03b1\u03b9 \u03bc\u03ac\u03bb\u03b9\u03c3\u03c4\u03b1
+    \u03bc\u03b5 \u03b5\u03c5\u03bd\u03bf\u03ca\u03ba\u03cc\u03c4\u03b5\u03c1\u03bf\u03c5\u03c2
+    \u03cc\u03c1\u03bf\u03c5\u03c2 \u03b1\u03c0\u03cc \u03ac\u03bb\u03bb\u03bf \u03b9\u03bd\u03c4\u03b5\u03c1\u03bd\u03b5\u03c4\u03b9\u03ba\u03cc
+    \u03ba\u03b1\u03c4\u03ac\u03c3\u03c4\u03b7\u03bc\u03b1. ","rating":1,"shop_reply":null,"created_at":"2010-11-30T20:31:21+02:00"}],"meta":{"pagination":{"total_results":162,"total_pages":54,"page":1,"per":3}}}'
+:created_at: 2014-07-14 15:06:33.012438178 +03:00

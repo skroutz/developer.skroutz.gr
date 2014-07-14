@@ -3,117 +3,48 @@
   :url: http://skroutz.gr/api/manufacturers/356/skus
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer 5JN7RHwWJ9ZPSBEKo0/bskSR0IOfNtETjwmMOPsGKZiXrRnP71w7cZbDZFKBaeNoJAyIKRMKjXeaBeF40Uxg==
+    :authorization: Bearer fYxk5iZjO44DwXwkwP5SW7cHwaqFMbc5riQ4JQFgeVNe1epmAHlDtGjvAPhVAIH1aPLiQt67RSrVasw9o7EEQ==
   :params:
     :per: 2
   :verb: GET
 :response:
   :status: 200
-  :headers: !ruby/hash:Faraday::Utils::Headers
-    server: !binary |-
-      bmdpbng=
-    content-type: !binary |-
-      YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-    !binary "dmFyeQ==": !binary |-
-      QWNjZXB0LUVuY29kaW5n
-    status: !binary |-
-      MjAwIE9L
-    !binary "bGluaw==": !binary |-
-      PGh0dHA6Ly9hcGkuc2tyb3V0ei5nci9hcGkvbWFudWZhY3R1cmVycy8zNTYv
-      c2t1cz9wYWdlPTQwMSZwZXI9Mj47IHJlbD0ibGFzdCIsIDxodHRwOi8vYXBp
-      LnNrcm91dHouZ3IvYXBpL21hbnVmYWN0dXJlcnMvMzU2L3NrdXM/cGFnZT0y
-      JnBlcj0yPjsgcmVsPSJuZXh0Ig==
-    x-ua-compatible: !binary |-
-      SUU9RWRnZSxjaHJvbWU9MQ==
-    cache-control: !binary |-
-      bWF4LWFnZT0wLCBwcml2YXRlLCBtdXN0LXJldmFsaWRhdGU=
-    x-request-id: !binary |-
-      MjM2MTI5NDEyNg==
-    x-runtime: !binary |-
-      MC4wNjkyOTg=
-    x-dns-prefetch-control: !binary |-
-      b2Zm
-    x-app: !binary |-
-      bHVua3dpbGw=
-    content-length: !binary |-
-      ODA3
-    accept-ranges: !binary |-
-      Ynl0ZXM=
-    date: !binary |-
-      TW9uLCAwNyBKdWwgMjAxNCAxMzowNjoyMCBHTVQ=
-    x-varnish: !binary |-
-      MjM2MTI5NDEyNg==
-    age: !binary |-
-      MA==
-    via: !binary |-
-      MS4xIHZhcm5pc2g=
-    connection: !binary |-
-      Y2xvc2U=
-    x-origin: !binary |-
-      dmFybmlzaDI=
-    x-cache: !binary |-
-      TUlTUw==
-  :body: !binary |-
-    eyJza3VzIjpbeyJpZCI6Mzc4MzY1NCwiZWFuIjoiIiwicG4iOiIiLCJuYW1l
-    IjoiaVBob25lIDVTICgxNkdCKSIsImRpc3BsYXlfbmFtZSI6IkFwcGxlIGlQ
-    aG9uZSA1UyAoMTZHQikiLCJjYXRlZ29yeV9pZCI6NDAsImZpcnN0X3Byb2R1
-    Y3Rfc2hvcF9pbmZvIjpudWxsLCJjbGlja191cmwiOm51bGwsInByaWNlX21h
-    eCI6NzU2LjUyLCJwcmljZV9taW4iOjUzNC4wLCJyZXZpZXdzY29yZSI6NC4x
-    MDE0NSwic2hvcF9jb3VudCI6NDYsInBsYWluX3NwZWNfc3VtbWFyeSI6IlNp
-    bmdsZSBTSU0sIFx1MDM5NFx1MDNhZlx1MDNiYVx1MDNjNFx1MDNjNVx1MDNi
-    ZiBcdTAzYTNcdTAzY2RcdTAzYmRcdTAzYjRcdTAzYjVcdTAzYzNcdTAzYjdc
-    dTAzYzI6IDRHIC0gTFRFLCBcdTAzOWFcdTAzYWNcdTAzYmNcdTAzYjVcdTAz
-    YzFcdTAzYjE6IDguMCBNUCwgIFx1MDM5Zlx1MDNiOFx1MDNjY1x1MDNiZFx1
-    MDNiNzogNC4wXCIgLCBcdTAzOTFcdTAzYmRcdTAzYWNcdTAzYmJcdTAzYzVc
-    dTAzYzNcdTAzYjc6IDExMzYgeCA2NDAgcGl4ZWxzLCBcdTAzYTdcdTAzYjVc
-    dTAzYjlcdTAzYzFcdTAzYjlcdTAzYzNcdTAzYmNcdTAzY2NcdTAzYzI6IFx1
-    MDM5Zlx1MDNiOFx1MDNjY1x1MDNiZFx1MDNiNyBcdTAzYjFcdTAzYzZcdTAz
-    YWVcdTAzYzIgKFRvdWNoIHNjcmVlbiksICBcdTAzOTVcdTAzYzNcdTAzYzlc
-    dTAzYzRcdTAzYjVcdTAzYzFcdTAzYjlcdTAzYmFcdTAzYWUgXHUwMzljXHUw
-    M2JkXHUwM2FlXHUwM2JjXHUwM2I3OiAxNi4wIEdCLCAgXHUwMzliXHUwM2I1
-    XHUwM2I5XHUwM2M0XHUwM2JmXHUwM2M1XHUwM2MxXHUwM2IzXHUwM2I5XHUw
-    M2JhXHUwM2NjIFx1MDNhM1x1MDNjZFx1MDNjM1x1MDNjNFx1MDNiN1x1MDNi
-    Y1x1MDNiMTogaU9TLCBTbWFydFBob25lIiwibWFudWZhY3R1cmVyX2lkIjoz
-    NTYsImZ1dHVyZSI6ZmFsc2UsInJldmlld3NfY291bnQiOjY5LCJ2aXJ0dWFs
-    IjpmYWxzZSwiaW1hZ2VzIjp7Im1haW4iOiJodHRwOi8vZC5zY2RuLmdyL2lt
-    YWdlcy9za3VfbWFpbl9pbWFnZXMvMDAzNzgzLzM3ODM2NTQvbWVkaXVtX2lw
-    aG9uZTVzLWdhbGxlcnkxLTIwMTMuanBnIiwiYWx0ZXJuYXRpdmVzIjpbImh0
-    dHA6Ly9iLnNjZG4uZ3IvaW1hZ2VzL3NrdV9pbWFnZXMvMDEyMTc2LzEyMTc2
-    NjI5L2lwaG9uZTVzLWdhbGxlcnkyLTIwMTMiLCJodHRwOi8vZC5zY2RuLmdy
-    L2ltYWdlcy9za3VfaW1hZ2VzLzAxMjE3Ni8xMjE3NjY0My9pcGhvbmU1cy1n
-    YWxsZXJ5My0yMDEzIiwiaHR0cDovL2Quc2Nkbi5nci9pbWFnZXMvc2t1X2lt
-    YWdlcy8wMTIxNzYvMTIxNzY2NTQvaXBob25lNXMtZ2FsbGVyeTUtMjAxMyIs
-    Imh0dHA6Ly9iLnNjZG4uZ3IvaW1hZ2VzL3NrdV9pbWFnZXMvMDEyMTc2LzEy
-    MTc2NjYwL2lwaG9uZTVzLWdhbGxlcnk2LTIwMTMiLCJodHRwOi8vYy5zY2Ru
-    LmdyL2ltYWdlcy9za3VfaW1hZ2VzLzAxMjE3Ni8xMjE3NjY2NC9pcGhvbmU1
-    cy1nYWxsZXJ5OC0yMDEzIiwiaHR0cDovL2Euc2Nkbi5nci9pbWFnZXMvc2t1
-    X2ltYWdlcy8wMTIyNzkvMTIyNzkwMDMvaXBob25lNXMtZ2FsbGVyeTQtMjAx
-    MyIsImh0dHA6Ly9iLnNjZG4uZ3IvaW1hZ2VzL3NrdV9pbWFnZXMvMDEyMjc5
-    LzEyMjc5MDI3L2lwaG9uZTVzLWdhbGxlcnkxLTIwMTMiXX19LHsiaWQiOjM5
-    MDI1ODEsImVhbiI6IiIsInBuIjoiIiwibmFtZSI6ImlQaG9uZSA0UyAoOEdC
-    KSIsImRpc3BsYXlfbmFtZSI6IkFwcGxlIGlQaG9uZSA0UyAoOEdCKSIsImNh
-    dGVnb3J5X2lkIjo0MCwiZmlyc3RfcHJvZHVjdF9zaG9wX2luZm8iOm51bGws
-    ImNsaWNrX3VybCI6bnVsbCwicHJpY2VfbWF4IjozOTkuMCwicHJpY2VfbWlu
-    IjoyODcuNzcsInJldmlld3Njb3JlIjo0LjgzMzMzLCJzaG9wX2NvdW50Ijo0
-    MSwicGxhaW5fc3BlY19zdW1tYXJ5IjoiU2luZ2xlIFNJTSwgXHUwMzk0XHUw
-    M2FmXHUwM2JhXHUwM2M0XHUwM2M1XHUwM2JmIFx1MDNhM1x1MDNjZFx1MDNi
-    ZFx1MDNiNFx1MDNiNVx1MDNjM1x1MDNiN1x1MDNjMjogM0csIFx1MDM5YVx1
-    MDNhY1x1MDNiY1x1MDNiNVx1MDNjMVx1MDNiMTogOCBNUCwgIFx1MDM5Zlx1
-    MDNiOFx1MDNjY1x1MDNiZFx1MDNiNzogMy41XCIgLCBcdTAzOTFcdTAzYmRc
-    dTAzYWNcdTAzYmJcdTAzYzVcdTAzYzNcdTAzYjc6IDY0MCB4IDk2MCBwaXhl
-    bHMsIFx1MDNhN1x1MDNiNVx1MDNiOVx1MDNjMVx1MDNiOVx1MDNjM1x1MDNi
-    Y1x1MDNjY1x1MDNjMjogXHUwMzlmXHUwM2I4XHUwM2NjXHUwM2JkXHUwM2I3
-    IFx1MDNiMVx1MDNjNlx1MDNhZVx1MDNjMiAoVG91Y2ggc2NyZWVuKSwgIFx1
-    MDM5NVx1MDNjM1x1MDNjOVx1MDNjNFx1MDNiNVx1MDNjMVx1MDNiOVx1MDNi
-    YVx1MDNhZSBcdTAzOWNcdTAzYmRcdTAzYWVcdTAzYmNcdTAzYjc6IDguMCBH
-    QiwgIFx1MDM5Ylx1MDNiNVx1MDNiOVx1MDNjNFx1MDNiZlx1MDNjNVx1MDNj
-    MVx1MDNiM1x1MDNiOVx1MDNiYVx1MDNjYyBcdTAzYTNcdTAzY2RcdTAzYzNc
-    dTAzYzRcdTAzYjdcdTAzYmNcdTAzYjE6IGlPUywgU21hcnRQaG9uZSIsIm1h
-    bnVmYWN0dXJlcl9pZCI6MzU2LCJmdXR1cmUiOmZhbHNlLCJyZXZpZXdzX2Nv
-    dW50IjoxMiwidmlydHVhbCI6ZmFsc2UsImltYWdlcyI6eyJtYWluIjoiaHR0
-    cDovL2Quc2Nkbi5nci9pbWFnZXMvc2t1X21haW5faW1hZ2VzLzAwMzkwMi8z
-    OTAyNTgxL21lZGl1bV9jb2xvcl93aGl0ZS5qcGciLCJhbHRlcm5hdGl2ZXMi
-    OlsiaHR0cDovL2Muc2Nkbi5nci9pbWFnZXMvc2t1X2ltYWdlcy8wMTEzNTAv
-    MTEzNTA3NTQvY29sb3JfYmxhY2suanBnIl19fV0sIm1ldGEiOnsicGFnaW5h
-    dGlvbiI6eyJ0b3RhbF9yZXN1bHRzIjo4MDEsInRvdGFsX3BhZ2VzIjo0MDEs
-    InBhZ2UiOjEsInBlciI6Mn19fQ==
+  :headers:
+    server: nginx
+    content-type: application/json; charset=utf-8
+    !binary "dmFyeQ==": Accept-Encoding
+    status: 200 OK
+    !binary "bGluaw==": <http://api.skroutz.gr/api/manufacturers/356/skus?page=402&per=2>;
+      rel="last", <http://api.skroutz.gr/api/manufacturers/356/skus?page=2&per=2>;
+      rel="next"
+    x-ua-compatible: IE=Edge,chrome=1
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '2406163921'
+    x-runtime: '0.055076'
+    x-dns-prefetch-control: 'off'
+    x-app: lunkwill
+    content-length: '808'
+    accept-ranges: bytes
+    date: Mon, 14 Jul 2014 12:06:28 GMT
+    x-varnish: '2406163921'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: varnish2
+    x-cache: MISS
+  :body: ! '{"skus":[{"id":3783654,"ean":"","pn":"","name":"iPhone 5S (16GB)","display_name":"Apple
+    iPhone 5S (16GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":756.52,"price_min":534.8,"reviewscore":4.10145,"shop_count":48,"plain_spec_summary":"Single
+    SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
+    4G - LTE, \u039a\u03ac\u03bc\u03b5\u03c1\u03b1: 8.0 MP,  \u039f\u03b8\u03cc\u03bd\u03b7:
+    4.0\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7: 1136 x 640 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2:
+    \u039f\u03b8\u03cc\u03bd\u03b7 \u03b1\u03c6\u03ae\u03c2 (Touch screen),  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
+    \u039c\u03bd\u03ae\u03bc\u03b7: 16.0 GB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
+    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: iOS, SmartPhone","manufacturer_id":356,"future":false,"reviews_count":69,"virtual":false,"images":{"main":"http://d.scdn.gr/images/sku_main_images/003783/3783654/medium_iphone5s-gallery1-2013.jpg","alternatives":["http://b.scdn.gr/images/sku_images/012176/12176629/iphone5s-gallery2-2013","http://d.scdn.gr/images/sku_images/012176/12176643/iphone5s-gallery3-2013","http://d.scdn.gr/images/sku_images/012176/12176654/iphone5s-gallery5-2013","http://b.scdn.gr/images/sku_images/012176/12176660/iphone5s-gallery6-2013","http://c.scdn.gr/images/sku_images/012176/12176664/iphone5s-gallery8-2013","http://a.scdn.gr/images/sku_images/012279/12279003/iphone5s-gallery4-2013","http://b.scdn.gr/images/sku_images/012279/12279027/iphone5s-gallery1-2013"]}},{"id":3902581,"ean":"","pn":"","name":"iPhone
+    4S (8GB)","display_name":"Apple iPhone 4S (8GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":399.0,"price_min":288.4,"reviewscore":4.83333,"shop_count":41,"plain_spec_summary":"Single
+    SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
+    3G, \u039a\u03ac\u03bc\u03b5\u03c1\u03b1: 8 MP,  \u039f\u03b8\u03cc\u03bd\u03b7:
+    3.5\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7: 640 x 960 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2:
+    \u039f\u03b8\u03cc\u03bd\u03b7 \u03b1\u03c6\u03ae\u03c2 (Touch screen),  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
+    \u039c\u03bd\u03ae\u03bc\u03b7: 8.0 GB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
+    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: iOS, SmartPhone","manufacturer_id":356,"future":false,"reviews_count":12,"virtual":false,"images":{"main":"http://d.scdn.gr/images/sku_main_images/003902/3902581/medium_color_white.jpg","alternatives":["http://c.scdn.gr/images/sku_images/011350/11350754/color_black.jpg"]}}],"meta":{"pagination":{"total_results":804,"total_pages":402,"page":1,"per":2}}}'
+:created_at: 2014-07-14 15:06:28.836504288 +03:00

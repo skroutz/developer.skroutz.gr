@@ -3,49 +3,29 @@
   :url: http://skroutz.gr/api/manufacturers/12907
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer 5JN7RHwWJ9ZPSBEKo0/bskSR0IOfNtETjwmMOPsGKZiXrRnP71w7cZbDZFKBaeNoJAyIKRMKjXeaBeF40Uxg==
+    :authorization: Bearer fYxk5iZjO44DwXwkwP5SW7cHwaqFMbc5riQ4JQFgeVNe1epmAHlDtGjvAPhVAIH1aPLiQt67RSrVasw9o7EEQ==
   :verb: GET
 :response:
   :status: 200
-  :headers: !ruby/hash:Faraday::Utils::Headers
-    server: !binary |-
-      bmdpbng=
-    content-type: !binary |-
-      YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-    !binary "dmFyeQ==": !binary |-
-      QWNjZXB0LUVuY29kaW5n
-    status: !binary |-
-      MjAwIE9L
-    x-ua-compatible: !binary |-
-      SUU9RWRnZSxjaHJvbWU9MQ==
-    cache-control: !binary |-
-      bWF4LWFnZT0wLCBwcml2YXRlLCBtdXN0LXJldmFsaWRhdGU=
-    x-request-id: !binary |-
-      MzM3MzY5MDY3OQ==
-    x-runtime: !binary |-
-      MC4wMzg2MjI=
-    x-dns-prefetch-control: !binary |-
-      b2Zm
-    x-app: !binary |-
-      bHVua3dpbGw=
-    content-length: !binary |-
-      ODI=
-    accept-ranges: !binary |-
-      Ynl0ZXM=
-    date: !binary |-
-      TW9uLCAwNyBKdWwgMjAxNCAxMzowNTo1NiBHTVQ=
-    x-varnish: !binary |-
-      MzM3MzY5MDY3OQ==
-    age: !binary |-
-      MA==
-    via: !binary |-
-      MS4xIHZhcm5pc2g=
-    connection: !binary |-
-      Y2xvc2U=
-    x-origin: !binary |-
-      dmFybmlzaDE=
-    x-cache: !binary |-
-      TUlTUw==
-  :body: !binary |-
-    eyJtYW51ZmFjdHVyZXIiOnsiaWQiOjEyOTA3LCJuYW1lIjoiUmFwYWxhIiwi
-    aW1hZ2VfdXJsIjpudWxsfX0=
+  :headers:
+    server: nginx
+    content-type: application/json; charset=utf-8
+    !binary "dmFyeQ==": Accept-Encoding
+    status: 200 OK
+    x-ua-compatible: IE=Edge,chrome=1
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '225151638'
+    x-runtime: '0.034580'
+    x-dns-prefetch-control: 'off'
+    x-app: lunkwill
+    content-length: '82'
+    accept-ranges: bytes
+    date: Mon, 14 Jul 2014 12:06:28 GMT
+    x-varnish: '225151638'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: varnish1
+    x-cache: MISS
+  :body: ! '{"manufacturer":{"id":12907,"name":"Rapala","image_url":null}}'
+:created_at: 2014-07-14 15:06:28.547966455 +03:00

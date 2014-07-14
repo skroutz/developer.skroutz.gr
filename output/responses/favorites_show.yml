@@ -3,26 +3,33 @@
   :url: http://skroutz.gr/api/favorites/252116
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer 5JN7RHwWJ9ZPSBEKo0/bskSR0IOfNtETjwmMOPsGKZiXrRnP71w7cZbDZFKBaeNoJAyIKRMKjXeaBeF40Uxg==
+    :authorization: Bearer fYxk5iZjO44DwXwkwP5SW7cHwaqFMbc5riQ4JQFgeVNe1epmAHlDtGjvAPhVAIH1aPLiQt67RSrVasw9o7EEQ==
   :verb: GET
 :response:
-  :status: 401
-  :headers: !ruby/hash:Faraday::Utils::Headers
+  :status: 200
+  :headers:
     server: nginx
     content-type: application/json; charset=utf-8
-    status: 401 Unauthorized
+    !binary "dmFyeQ==": Accept-Encoding
+    status: 200 OK
     x-ua-compatible: IE=Edge,chrome=1
-    cache-control: no-cache
-    x-request-id: '2361304498'
-    x-runtime: '0.030290'
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '2406164233'
+    x-runtime: '0.032947'
+    x-dns-prefetch-control: 'off'
     x-app: lunkwill
-    content-length: '51'
+    content-length: '243'
     accept-ranges: bytes
-    date: Mon, 07 Jul 2014 13:07:50 GMT
-    x-varnish: '2361304498'
+    date: Mon, 14 Jul 2014 12:06:31 GMT
+    x-varnish: '2406164233'
     age: '0'
     via: 1.1 varnish
     connection: close
     x-origin: varnish2
     x-cache: MISS
-  :body: ! '{"error":"invalid_token :: User token is required"}'
+  :body: ! '{"favorite":{"id":252116,"have_it":true,"user_id":132950,"user_notes":"\u039a\u03cc\u03b2\u03b5\u03b9
+    \u03c4\u03bf \u03b6\u03b1\u03bc\u03c0\u03cc\u03bd \u03c3\u03b1\u03bd \u03bd\u03b1
+    \u03ae\u03c4\u03b1\u03bd \u03b2\u03bf\u03cd\u03c4\u03b7\u03c1\u03bf. \u0395\u03af\u03bd\u03b1\u03b9
+    \u03c0\u03c1\u03b1\u03b3\u03bc\u03b1\u03c4\u03b9\u03ba\u03cc \u03ad\u03c1\u03b3\u03bf
+    \u03c4\u03ad\u03c7\u03bd\u03b7\u03c2.","sku_id":1137426,"created_at":"2013-04-09T16:16:25+03:00","updated_at":"2013-04-09T16:17:02+03:00"}}'
+:created_at: 2014-07-14 15:06:31.132501626 +03:00

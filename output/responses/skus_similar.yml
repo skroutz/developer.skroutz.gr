@@ -3,195 +3,57 @@
   :url: http://skroutz.gr/api/skus/3034682/similar
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer 5JN7RHwWJ9ZPSBEKo0/bskSR0IOfNtETjwmMOPsGKZiXrRnP71w7cZbDZFKBaeNoJAyIKRMKjXeaBeF40Uxg==
+    :authorization: Bearer fYxk5iZjO44DwXwkwP5SW7cHwaqFMbc5riQ4JQFgeVNe1epmAHlDtGjvAPhVAIH1aPLiQt67RSrVasw9o7EEQ==
   :verb: GET
 :response:
   :status: 200
-  :headers: !ruby/hash:Faraday::Utils::Headers
-    server: !binary |-
-      bmdpbng=
-    content-type: !binary |-
-      YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-    !binary "dmFyeQ==": !binary |-
-      QWNjZXB0LUVuY29kaW5n
-    status: !binary |-
-      MjAwIE9L
-    cache-control: !binary |-
-      bWF4LWFnZT0zMDAsIHByaXZhdGU=
-    x-ua-compatible: !binary |-
-      SUU9RWRnZSxjaHJvbWU9MQ==
-    x-request-id: !binary |-
-      MjM2MTMwNDM1OA==
-    x-runtime: !binary |-
-      MC4wNzAzMzc=
-    x-dns-prefetch-control: !binary |-
-      b2Zm
-    x-app: !binary |-
-      bHVua3dpbGw=
-    content-length: !binary |-
-      MTQ0NA==
-    accept-ranges: !binary |-
-      Ynl0ZXM=
-    date: !binary |-
-      TW9uLCAwNyBKdWwgMjAxNCAxMzowNzo0OSBHTVQ=
-    x-varnish: !binary |-
-      MjM2MTMwNDM1OA==
-    age: !binary |-
-      MA==
-    via: !binary |-
-      MS4xIHZhcm5pc2g=
-    connection: !binary |-
-      Y2xvc2U=
-    x-origin: !binary |-
-      dmFybmlzaDI=
-    x-cache: !binary |-
-      TUlTUw==
-  :body: !binary |-
-    eyJza3VzIjpbeyJpZCI6NDUwMzYxMywiZWFuIjoiIiwicG4iOiIiLCJuYW1l
-    IjoiR2FsYXh5IFM1ICgxNkdCKSIsImRpc3BsYXlfbmFtZSI6IlNhbXN1bmcg
-    R2FsYXh5IFM1ICgxNkdCKSIsImNhdGVnb3J5X2lkIjo0MCwiZmlyc3RfcHJv
-    ZHVjdF9zaG9wX2luZm8iOm51bGwsImNsaWNrX3VybCI6bnVsbCwicHJpY2Vf
-    bWF4Ijo3NTkuMCwicHJpY2VfbWluIjo0NzkuOTksInJldmlld3Njb3JlIjoz
-    Ljc5NDEyLCJzaG9wX2NvdW50Ijo1OSwicGxhaW5fc3BlY19zdW1tYXJ5Ijoi
-    U2luZ2xlIFNJTSwgXHUwMzk0XHUwM2FmXHUwM2JhXHUwM2M0XHUwM2M1XHUw
-    M2JmIFx1MDNhM1x1MDNjZFx1MDNiZFx1MDNiNFx1MDNiNVx1MDNjM1x1MDNi
-    N1x1MDNjMjogNEcgLSBMVEUsIFx1MDM5YVx1MDNhY1x1MDNiY1x1MDNiNVx1
-    MDNjMVx1MDNiMTogMTYgTVAsICBcdTAzOWZcdTAzYjhcdTAzY2NcdTAzYmRc
-    dTAzYjc6IDUuMVwiICwgXHUwMzkxXHUwM2JkXHUwM2FjXHUwM2JiXHUwM2M1
-    XHUwM2MzXHUwM2I3OiAxOTIwIHggMTA4MCBwaXhlbHMsIFx1MDNhN1x1MDNi
-    NVx1MDNiOVx1MDNjMVx1MDNiOVx1MDNjM1x1MDNiY1x1MDNjY1x1MDNjMjog
-    XHUwMzlmXHUwM2I4XHUwM2NjXHUwM2JkXHUwM2I3IFx1MDNiMVx1MDNjNlx1
-    MDNhZVx1MDNjMiAoVG91Y2ggc2NyZWVuKSwgIFx1MDM5NVx1MDNjM1x1MDNj
-    OVx1MDNjNFx1MDNiNVx1MDNjMVx1MDNiOVx1MDNiYVx1MDNhZSBcdTAzOWNc
-    dTAzYmRcdTAzYWVcdTAzYmNcdTAzYjc6IDE2IEdCLCAgXHUwMzliXHUwM2I1
-    XHUwM2I5XHUwM2M0XHUwM2JmXHUwM2M1XHUwM2MxXHUwM2IzXHUwM2I5XHUw
-    M2JhXHUwM2NjIFx1MDNhM1x1MDNjZFx1MDNjM1x1MDNjNFx1MDNiN1x1MDNi
-    Y1x1MDNiMTogQW5kcm9pZCwgU21hcnRQaG9uZSIsIm1hbnVmYWN0dXJlcl9p
-    ZCI6MjgsImZ1dHVyZSI6ZmFsc2UsInJldmlld3NfY291bnQiOjM0LCJ2aXJ0
-    dWFsIjpmYWxzZSwiaW1hZ2VzIjp7Im1haW4iOiJodHRwOi8vZC5zY2RuLmdy
-    L2ltYWdlcy9za3VfbWFpbl9pbWFnZXMvMDA0NTAzLzQ1MDM2MTMvbWVkaXVt
-    XzE5Nzg1OTBfNjc2MDg2OTE5MTIzMDcxXzg1MDQzNjkwMl9vLmpwZyIsImFs
-    dGVybmF0aXZlcyI6WyJodHRwOi8vYy5zY2RuLmdyL2ltYWdlcy9za3VfaW1h
-    Z2VzLzAxMjI3NS8xMjI3NTM5MC8xOTA5MTQ3XzY3NjA4Njg4MjQ1NjQwOF8x
-    NjEyNjU2NDQzX28uanBnIiwiaHR0cDovL2Iuc2Nkbi5nci9pbWFnZXMvc2t1
-    X2ltYWdlcy8wMTIyNzUvMTIyNzUzOTEvMTg5MDU2OV82NzYwODY5NjI0NTY0
-    MDBfMTQ0MDkwNDY3Ml9vLmpwZyIsImh0dHA6Ly9iLnNjZG4uZ3IvaW1hZ2Vz
-    L3NrdV9pbWFnZXMvMDEyMjc1LzEyMjc1MzkyLzE2MDIwODBfNjc2MDg2OTc5
-    MTIzMDY1XzE2MjcxMzUzNTNfby5qcGciLCJodHRwOi8vYi5zY2RuLmdyL2lt
-    YWdlcy9za3VfaW1hZ2VzLzAxMjI3NS8xMjI3NTM5My8xOTczNTQzXzY3NjA4
-    NzA1MjQ1NjM5MV8xOTI4ODI2MzIxX28uanBnIiwiaHR0cDovL2Iuc2Nkbi5n
-    ci9pbWFnZXMvc2t1X2ltYWdlcy8wMTIyNzUvMTIyNzUzOTQvMTQ5MzM3MV82
-    NzYwODcwNzU3ODk3MjJfOTUzMzQ4NDY1X28uanBnIiwiaHR0cDovL2Quc2Nk
-    bi5nci9pbWFnZXMvc2t1X2ltYWdlcy8wMTIyNzUvMTIyNzUzOTYvMTk0MTM0
-    NF82NzYwODcxNDU3ODk3MTVfMTA0MTYwMDA1OV9vLmpwZyIsImh0dHA6Ly9i
-    LnNjZG4uZ3IvaW1hZ2VzL3NrdV9pbWFnZXMvMDEyMjc1LzEyMjc1Mzk3LzE2
-    MDE5OTVfNjc2MDg3Mjk1Nzg5NzAwXzEyMDExMDcyOTNfby5qcGciLCJodHRw
-    Oi8vYy5zY2RuLmdyL2ltYWdlcy9za3VfaW1hZ2VzLzAxMjI3NS8xMjI3NTQw
-    MS8xOTQxNjAxXzY3NjA4NzM4NTc4OTY5MV80OTc2ODgyNl9vLmpwZyIsImh0
-    dHA6Ly9iLnNjZG4uZ3IvaW1hZ2VzL3NrdV9pbWFnZXMvMDEyMjc1LzEyMjc1
-    NDAyLzE5NjU2MzNfNjc2MDg3NTA1Nzg5Njc5XzE3ODk3MDM5MDZfby5qcGci
-    LCJodHRwOi8vZC5zY2RuLmdyL2ltYWdlcy9za3VfaW1hZ2VzLzAxMjI3NS8x
-    MjI3NTQwMy8xOTU3ODUwXzY3NjA4NzUzNTc4OTY3Nl8xMTExODgxNTk0X28u
-    anBnIiwiaHR0cDovL2Euc2Nkbi5nci9pbWFnZXMvc2t1X2ltYWdlcy8wMTIy
-    NzUvMTIyNzU0MDYvMTY1NTUwNV82NzYwODc1NjkxMjMwMDZfNTg4MTIwMDkw
-    X28uanBnIiwiaHR0cDovL2Muc2Nkbi5nci9pbWFnZXMvc2t1X2ltYWdlcy8w
-    MTIyNzUvMTIyNzU0MDcvMTgwMTE5NF82NzYwODc3NTI0NTYzMjFfMTg5MjI4
-    NzAzNF9vLmpwZyJdfX0seyJpZCI6MTgyODUwNSwiZWFuIjoiIiwicG4iOiJJ
-    OTMwMCIsIm5hbWUiOiJHYWxheHkgUyBJSUkgaTkzMDAgMTZHQiIsImRpc3Bs
-    YXlfbmFtZSI6IlNhbXN1bmcgR2FsYXh5IFMgSUlJIGk5MzAwIDE2R0IiLCJj
-    YXRlZ29yeV9pZCI6NDAsImZpcnN0X3Byb2R1Y3Rfc2hvcF9pbmZvIjpudWxs
-    LCJjbGlja191cmwiOm51bGwsInByaWNlX21heCI6MzY5LjAsInByaWNlX21p
-    biI6MjMxLjgsInJldmlld3Njb3JlIjo0LjM5NzU5LCJzaG9wX2NvdW50Ijo0
-    OSwicGxhaW5fc3BlY19zdW1tYXJ5IjoiU2luZ2xlIFNJTSwgXHUwMzk0XHUw
-    M2FmXHUwM2JhXHUwM2M0XHUwM2M1XHUwM2JmIFx1MDNhM1x1MDNjZFx1MDNi
-    ZFx1MDNiNFx1MDNiNVx1MDNjM1x1MDNiN1x1MDNjMjogM0csIFx1MDM5YVx1
-    MDNhY1x1MDNiY1x1MDNiNVx1MDNjMVx1MDNiMTogOCBNUCwgIFx1MDM5Zlx1
-    MDNiOFx1MDNjY1x1MDNiZFx1MDNiNzogNC44XCIgLCBcdTAzOTFcdTAzYmRc
-    dTAzYWNcdTAzYmJcdTAzYzVcdTAzYzNcdTAzYjc6IDEyODAgeCA3MjAgcGl4
-    ZWxzLCBcdTAzYTdcdTAzYjVcdTAzYjlcdTAzYzFcdTAzYjlcdTAzYzNcdTAz
-    YmNcdTAzY2NcdTAzYzI6IFx1MDM5Zlx1MDNiOFx1MDNjY1x1MDNiZFx1MDNi
-    NyBcdTAzYjFcdTAzYzZcdTAzYWVcdTAzYzIgKFRvdWNoIHNjcmVlbiksICBc
-    dTAzOTVcdTAzYzNcdTAzYzlcdTAzYzRcdTAzYjVcdTAzYzFcdTAzYjlcdTAz
-    YmFcdTAzYWUgXHUwMzljXHUwM2JkXHUwM2FlXHUwM2JjXHUwM2I3OiAxNi4w
-    IEdCLCAgXHUwMzliXHUwM2I1XHUwM2I5XHUwM2M0XHUwM2JmXHUwM2M1XHUw
-    M2MxXHUwM2IzXHUwM2I5XHUwM2JhXHUwM2NjIFx1MDNhM1x1MDNjZFx1MDNj
-    M1x1MDNjNFx1MDNiN1x1MDNiY1x1MDNiMTogQW5kcm9pZCwgU21hcnRQaG9u
-    ZSIsIm1hbnVmYWN0dXJlcl9pZCI6MjgsImZ1dHVyZSI6ZmFsc2UsInJldmll
-    d3NfY291bnQiOjE2NiwidmlydHVhbCI6ZmFsc2UsImltYWdlcyI6eyJtYWlu
-    IjoiaHR0cDovL2Quc2Nkbi5nci9pbWFnZXMvc2t1X21haW5faW1hZ2VzLzAw
-    MTgyOC8xODI4NTA1L21lZGl1bV9zYW1zdW5nLWk5MzAwLWdhbGF4eS1zLWlp
-    aS0xLmpwZyIsImFsdGVybmF0aXZlcyI6WyJodHRwOi8vYy5zY2RuLmdyL2lt
-    YWdlcy9za3VfaW1hZ2VzLzAwMDg5My84OTMxNjkvc2Ftc3VuZy1pOTMwMC1n
-    YWxheHktcy1paWktZ2xvc3N5LXdoaXRlLmpwZyIsImh0dHA6Ly9jLnNjZG4u
-    Z3IvaW1hZ2VzL3NrdV9pbWFnZXMvMDAxMzEwLzEzMTA2OTAvc2Ftc3VuZy1p
-    OTMwMC1nYWxheHktcy1paWktb2ZpYy5qcGciLCJodHRwOi8vYS5zY2RuLmdy
-    L2ltYWdlcy9za3VfaW1hZ2VzLzAwNjQyMS82NDIxNzk2L3NhbXN1bmctZ2Fs
-    YXh5LXMzLXJlZDEuanBnIiwiaHR0cDovL2Euc2Nkbi5nci9pbWFnZXMvc2t1
-    X2ltYWdlcy8wMDY0MjEvNjQyMTg0MC9TYW1zdW5nLUdhbGF4eS1TMy1pbi1T
-    YXBwaGlyZS1ibGFjay5qcGciLCJodHRwOi8vZC5zY2RuLmdyL2ltYWdlcy9z
-    a3VfaW1hZ2VzLzAwNjQyMi82NDIyMTQwL3NhbXN1bmctaTkzMDAtZ2FsYXh5
-    LXMtaWlpLWFtYmVyLWJyb3duLWdhcm5ldC1yZWQtc2FwcGhpcmUtYmxhY2st
-    dGl0YW5pdW0tZ3JleS5qcGciXX19LHsiaWQiOjMzODU1ODIsImVhbiI6IiIs
-    InBuIjoiR1QtaTkxOTUiLCJuYW1lIjoiR2FsYXh5IFM0IG1pbmkgaTkxOTUg
-    TFRFICg4R0IpIiwiZGlzcGxheV9uYW1lIjoiU2Ftc3VuZyBHYWxheHkgUzQg
-    bWluaSBpOTE5NSBMVEUgKDhHQikiLCJjYXRlZ29yeV9pZCI6NDAsImZpcnN0
-    X3Byb2R1Y3Rfc2hvcF9pbmZvIjpudWxsLCJjbGlja191cmwiOm51bGwsInBy
-    aWNlX21heCI6NDM5LjAsInByaWNlX21pbiI6MjM2Ljg5LCJyZXZpZXdzY29y
-    ZSI6NC40MzQ3OCwic2hvcF9jb3VudCI6NTEsInBsYWluX3NwZWNfc3VtbWFy
-    eSI6IlNpbmdsZSBTSU0sIFx1MDM5NFx1MDNhZlx1MDNiYVx1MDNjNFx1MDNj
-    NVx1MDNiZiBcdTAzYTNcdTAzY2RcdTAzYmRcdTAzYjRcdTAzYjVcdTAzYzNc
-    dTAzYjdcdTAzYzI6IDRHIC0gTFRFLCBcdTAzOWFcdTAzYWNcdTAzYmNcdTAz
-    YjVcdTAzYzFcdTAzYjE6IDggTVAsICBcdTAzOWZcdTAzYjhcdTAzY2NcdTAz
-    YmRcdTAzYjc6IDQuM1wiICwgXHUwMzkxXHUwM2JkXHUwM2FjXHUwM2JiXHUw
-    M2M1XHUwM2MzXHUwM2I3OiA5NjAgeCA1NDAgcGl4ZWxzLCBcdTAzYTdcdTAz
-    YjVcdTAzYjlcdTAzYzFcdTAzYjlcdTAzYzNcdTAzYmNcdTAzY2NcdTAzYzI6
-    IFx1MDM5Zlx1MDNiOFx1MDNjY1x1MDNiZFx1MDNiNyBcdTAzYjFcdTAzYzZc
-    dTAzYWVcdTAzYzIgKFRvdWNoIHNjcmVlbiksICBcdTAzOTVcdTAzYzNcdTAz
-    YzlcdTAzYzRcdTAzYjVcdTAzYzFcdTAzYjlcdTAzYmFcdTAzYWUgXHUwMzlj
-    XHUwM2JkXHUwM2FlXHUwM2JjXHUwM2I3OiA4LjAgR0IsICBcdTAzOWJcdTAz
-    YjVcdTAzYjlcdTAzYzRcdTAzYmZcdTAzYzVcdTAzYzFcdTAzYjNcdTAzYjlc
-    dTAzYmFcdTAzY2MgXHUwM2EzXHUwM2NkXHUwM2MzXHUwM2M0XHUwM2I3XHUw
-    M2JjXHUwM2IxOiBBbmRyb2lkLCBTbWFydFBob25lIiwibWFudWZhY3R1cmVy
-    X2lkIjoyOCwiZnV0dXJlIjpmYWxzZSwicmV2aWV3c19jb3VudCI6NjksInZp
-    cnR1YWwiOmZhbHNlLCJpbWFnZXMiOnsibWFpbiI6Imh0dHA6Ly9iLnNjZG4u
-    Z3IvaW1hZ2VzL3NrdV9tYWluX2ltYWdlcy8wMDMzODUvMzM4NTU4Mi9tZWRp
-    dW1fc2Ftc3VuZy1nYWxheHktczQtbWluaS1JOTE5MC0xLmpwZyIsImFsdGVy
-    bmF0aXZlcyI6WyJodHRwOi8vYi5zY2RuLmdyL2ltYWdlcy9za3VfaW1hZ2Vz
-    LzAwOTgwMC85ODAwMzU4L3NhbXN1bmctZ2FsYXh5LXM0LW1pbmktSTkxOTAt
-    Mi5qcGciLCJodHRwOi8vYS5zY2RuLmdyL2ltYWdlcy9za3VfaW1hZ2VzLzAw
-    OTgwMC85ODAwMzU5L3NhbXN1bmctZ2FsYXh5LXM0LW1pbmktSTkxOTAtMy5q
-    cGciXX19LHsiaWQiOjM1OTg2NDUsImVhbiI6IiIsInBuIjoiSTkyOTUiLCJu
-    YW1lIjoiR2FsYXh5IFM0IEFjdGl2ZSAoMTZHQikiLCJkaXNwbGF5X25hbWUi
-    OiJTYW1zdW5nIEdhbGF4eSBTNCBBY3RpdmUgKDE2R0IpIiwiY2F0ZWdvcnlf
-    aWQiOjQwLCJmaXJzdF9wcm9kdWN0X3Nob3BfaW5mbyI6bnVsbCwiY2xpY2tf
-    dXJsIjpudWxsLCJwcmljZV9tYXgiOjQ0OS4wLCJwcmljZV9taW4iOjMxMy4w
-    LCJyZXZpZXdzY29yZSI6NC4wLCJzaG9wX2NvdW50IjoxNiwicGxhaW5fc3Bl
-    Y19zdW1tYXJ5IjoiU2luZ2xlIFNJTSwgXHUwMzk0XHUwM2FmXHUwM2JhXHUw
-    M2M0XHUwM2M1XHUwM2JmIFx1MDNhM1x1MDNjZFx1MDNiZFx1MDNiNFx1MDNi
-    NVx1MDNjM1x1MDNiN1x1MDNjMjogMkcgLyAzRyAvIDRHIC0gTFRFLCBcdTAz
-    OWFcdTAzYWNcdTAzYmNcdTAzYjVcdTAzYzFcdTAzYjE6IDggTVAsICBcdTAz
-    OWZcdTAzYjhcdTAzY2NcdTAzYmRcdTAzYjc6IDUuMFwiICwgXHUwMzkxXHUw
-    M2JkXHUwM2FjXHUwM2JiXHUwM2M1XHUwM2MzXHUwM2I3OiAxOTIwIHggMTA4
-    MCBwaXhlbHMsIFx1MDNhN1x1MDNiNVx1MDNiOVx1MDNjMVx1MDNiOVx1MDNj
-    M1x1MDNiY1x1MDNjY1x1MDNjMjogXHUwMzlmXHUwM2I4XHUwM2NjXHUwM2Jk
-    XHUwM2I3IFx1MDNiMVx1MDNjNlx1MDNhZVx1MDNjMiAoVG91Y2ggc2NyZWVu
-    KSwgIFx1MDM5NVx1MDNjM1x1MDNjOVx1MDNjNFx1MDNiNVx1MDNjMVx1MDNi
-    OVx1MDNiYVx1MDNhZSBcdTAzOWNcdTAzYmRcdTAzYWVcdTAzYmNcdTAzYjc6
-    IDE2LjAgR0IsICBcdTAzOWJcdTAzYjVcdTAzYjlcdTAzYzRcdTAzYmZcdTAz
-    YzVcdTAzYzFcdTAzYjNcdTAzYjlcdTAzYmFcdTAzY2MgXHUwM2EzXHUwM2Nk
-    XHUwM2MzXHUwM2M0XHUwM2I3XHUwM2JjXHUwM2IxOiBBbmRyb2lkLCBTbWFy
-    dFBob25lIiwibWFudWZhY3R1cmVyX2lkIjoyOCwiZnV0dXJlIjpmYWxzZSwi
-    cmV2aWV3c19jb3VudCI6MTAsInZpcnR1YWwiOmZhbHNlLCJpbWFnZXMiOnsi
-    bWFpbiI6Imh0dHA6Ly9iLnNjZG4uZ3IvaW1hZ2VzL3NrdV9tYWluX2ltYWdl
-    cy8wMDM1OTgvMzU5ODY0NS9tZWRpdW1fU2Ftc3VuZy1JOTI5NS1HYWxheHkt
-    UzQtMC5qcGciLCJhbHRlcm5hdGl2ZXMiOlsiaHR0cDovL2Quc2Nkbi5nci9p
-    bWFnZXMvc2t1X2ltYWdlcy8wMTA5NTgvMTA5NTgxMDUvU2Ftc3VuZy1HYWxh
-    eHktUzQtQWN0aXZlLUk5Mjk1XzYuanBnIiwiaHR0cDovL2Iuc2Nkbi5nci9p
-    bWFnZXMvc2t1X2ltYWdlcy8wMTA5NTgvMTA5NTgxMDYvZ2FsYXh5LXM0LWFj
-    dGl2ZS1mcm9udC5qcGciLCJodHRwOi8vZC5zY2RuLmdyL2ltYWdlcy9za3Vf
-    aW1hZ2VzLzAxMDk1OC8xMDk1ODEwNy9zYW1zdW5nLWk5Mjk1LWdhbGF4eS1z
-    NC1hY3RpdmUtb2ZpYy5qcGciLCJodHRwOi8vZC5zY2RuLmdyL2ltYWdlcy9z
-    a3VfaW1hZ2VzLzAxMDk1OC8xMDk1ODEwOC9zYW1zdW5nLWk5Mjk1LWdhbGF4
-    eS1zNC1hY3RpdmUtb2ZpYzAuanBnIl19fV0sIm1ldGEiOnsicGFnaW5hdGlv
-    biI6eyJ0b3RhbF9yZXN1bHRzIjo0LCJ0b3RhbF9wYWdlcyI6MSwicGFnZSI6
-    MSwicGVyIjoyNX19fQ==
+  :headers:
+    server: nginx
+    content-type: application/json; charset=utf-8
+    !binary "dmFyeQ==": Accept-Encoding
+    status: 200 OK
+    cache-control: max-age=300, private
+    x-ua-compatible: IE=Edge,chrome=1
+    x-request-id: '2406164164'
+    x-runtime: '0.065127'
+    x-dns-prefetch-control: 'off'
+    x-app: lunkwill
+    content-length: '1436'
+    accept-ranges: bytes
+    date: Mon, 14 Jul 2014 12:06:30 GMT
+    x-varnish: '2406164164'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: varnish2
+    x-cache: MISS
+  :body: ! '{"skus":[{"id":4503613,"ean":"","pn":"","name":"Galaxy S5 (16GB)","display_name":"Samsung
+    Galaxy S5 (16GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":759.0,"price_min":473.0,"reviewscore":3.71429,"shop_count":59,"plain_spec_summary":"Single
+    SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
+    4G - LTE, \u039a\u03ac\u03bc\u03b5\u03c1\u03b1: 16 MP,  \u039f\u03b8\u03cc\u03bd\u03b7:
+    5.1\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7: 1920 x 1080 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2:
+    \u039f\u03b8\u03cc\u03bd\u03b7 \u03b1\u03c6\u03ae\u03c2 (Touch screen),  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
+    \u039c\u03bd\u03ae\u03bc\u03b7: 16 GB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
+    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: Android, SmartPhone","manufacturer_id":28,"future":false,"reviews_count":35,"virtual":false,"images":{"main":"http://d.scdn.gr/images/sku_main_images/004503/4503613/medium_1978590_676086919123071_850436902_o.jpg","alternatives":["http://c.scdn.gr/images/sku_images/012275/12275390/1909147_676086882456408_1612656443_o.jpg","http://b.scdn.gr/images/sku_images/012275/12275391/1890569_676086962456400_1440904672_o.jpg","http://b.scdn.gr/images/sku_images/012275/12275392/1602080_676086979123065_1627135353_o.jpg","http://b.scdn.gr/images/sku_images/012275/12275393/1973543_676087052456391_1928826321_o.jpg","http://b.scdn.gr/images/sku_images/012275/12275394/1493371_676087075789722_953348465_o.jpg","http://d.scdn.gr/images/sku_images/012275/12275396/1941344_676087145789715_1041600059_o.jpg","http://b.scdn.gr/images/sku_images/012275/12275397/1601995_676087295789700_1201107293_o.jpg","http://c.scdn.gr/images/sku_images/012275/12275401/1941601_676087385789691_49768826_o.jpg","http://b.scdn.gr/images/sku_images/012275/12275402/1965633_676087505789679_1789703906_o.jpg","http://d.scdn.gr/images/sku_images/012275/12275403/1957850_676087535789676_1111881594_o.jpg","http://a.scdn.gr/images/sku_images/012275/12275406/1655505_676087569123006_588120090_o.jpg","http://c.scdn.gr/images/sku_images/012275/12275407/1801194_676087752456321_1892287034_o.jpg"]}},{"id":1828505,"ean":"","pn":"I9300","name":"Galaxy
+    S III i9300 16GB","display_name":"Samsung Galaxy S III i9300 16GB","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":369.0,"price_min":221.2,"reviewscore":4.4012,"shop_count":53,"plain_spec_summary":"Single
+    SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
+    3G, \u039a\u03ac\u03bc\u03b5\u03c1\u03b1: 8 MP,  \u039f\u03b8\u03cc\u03bd\u03b7:
+    4.8\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7: 1280 x 720 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2:
+    \u039f\u03b8\u03cc\u03bd\u03b7 \u03b1\u03c6\u03ae\u03c2 (Touch screen),  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
+    \u039c\u03bd\u03ae\u03bc\u03b7: 16.0 GB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
+    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: Android, SmartPhone","manufacturer_id":28,"future":false,"reviews_count":167,"virtual":false,"images":{"main":"http://d.scdn.gr/images/sku_main_images/001828/1828505/medium_samsung-i9300-galaxy-s-iii-1.jpg","alternatives":["http://c.scdn.gr/images/sku_images/000893/893169/samsung-i9300-galaxy-s-iii-glossy-white.jpg","http://c.scdn.gr/images/sku_images/001310/1310690/samsung-i9300-galaxy-s-iii-ofic.jpg","http://a.scdn.gr/images/sku_images/006421/6421796/samsung-galaxy-s3-red1.jpg","http://a.scdn.gr/images/sku_images/006421/6421840/Samsung-Galaxy-S3-in-Sapphire-black.jpg","http://d.scdn.gr/images/sku_images/006422/6422140/samsung-i9300-galaxy-s-iii-amber-brown-garnet-red-sapphire-black-titanium-grey.jpg"]}},{"id":3385582,"ean":"","pn":"GT-i9195","name":"Galaxy
+    S4 mini i9195 LTE (8GB)","display_name":"Samsung Galaxy S4 mini i9195 LTE (8GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":439.0,"price_min":231.15,"reviewscore":4.44286,"shop_count":55,"plain_spec_summary":"Single
+    SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
+    4G - LTE, \u039a\u03ac\u03bc\u03b5\u03c1\u03b1: 8 MP,  \u039f\u03b8\u03cc\u03bd\u03b7:
+    4.3\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7: 960 x 540 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2:
+    \u039f\u03b8\u03cc\u03bd\u03b7 \u03b1\u03c6\u03ae\u03c2 (Touch screen),  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
+    \u039c\u03bd\u03ae\u03bc\u03b7: 8.0 GB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
+    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: Android, SmartPhone","manufacturer_id":28,"future":false,"reviews_count":70,"virtual":false,"images":{"main":"http://b.scdn.gr/images/sku_main_images/003385/3385582/medium_samsung-galaxy-s4-mini-I9190-1.jpg","alternatives":["http://b.scdn.gr/images/sku_images/009800/9800358/samsung-galaxy-s4-mini-I9190-2.jpg","http://a.scdn.gr/images/sku_images/009800/9800359/samsung-galaxy-s4-mini-I9190-3.jpg"]}},{"id":3598645,"ean":"","pn":"I9295","name":"Galaxy
+    S4 Active (16GB)","display_name":"Samsung Galaxy S4 Active (16GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":449.0,"price_min":318.5,"reviewscore":4.0,"shop_count":13,"plain_spec_summary":"Single
+    SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
+    2G / 3G / 4G - LTE, \u039a\u03ac\u03bc\u03b5\u03c1\u03b1: 8 MP,  \u039f\u03b8\u03cc\u03bd\u03b7:
+    5.0\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7: 1920 x 1080 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2:
+    \u039f\u03b8\u03cc\u03bd\u03b7 \u03b1\u03c6\u03ae\u03c2 (Touch screen),  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
+    \u039c\u03bd\u03ae\u03bc\u03b7: 16.0 GB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
+    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: Android, SmartPhone","manufacturer_id":28,"future":false,"reviews_count":11,"virtual":false,"images":{"main":"http://b.scdn.gr/images/sku_main_images/003598/3598645/medium_Samsung-I9295-Galaxy-S4-0.jpg","alternatives":["http://d.scdn.gr/images/sku_images/010958/10958105/Samsung-Galaxy-S4-Active-I9295_6.jpg","http://b.scdn.gr/images/sku_images/010958/10958106/galaxy-s4-active-front.jpg","http://d.scdn.gr/images/sku_images/010958/10958107/samsung-i9295-galaxy-s4-active-ofic.jpg","http://d.scdn.gr/images/sku_images/010958/10958108/samsung-i9295-galaxy-s4-active-ofic0.jpg"]}}],"meta":{"pagination":{"total_results":4,"total_pages":1,"page":1,"per":25}}}'
+:created_at: 2014-07-14 15:06:30.703029654 +03:00

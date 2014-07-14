@@ -1,48 +1,82 @@
 ---
 :request:
-  :url: http://skroutz.gr/api/skus/3703742/products
+  :url: http://skroutz.gr/api/skus/3783654/products
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer 5JN7RHwWJ9ZPSBEKo0/bskSR0IOfNtETjwmMOPsGKZiXrRnP71w7cZbDZFKBaeNoJAyIKRMKjXeaBeF40Uxg==
+    :authorization: Bearer fYxk5iZjO44DwXwkwP5SW7cHwaqFMbc5riQ4JQFgeVNe1epmAHlDtGjvAPhVAIH1aPLiQt67RSrVasw9o7EEQ==
   :verb: GET
 :response:
-  :status: 404
-  :headers: !ruby/hash:Faraday::Utils::Headers
-    server: !binary |-
-      bmdpbng=
-    content-type: !binary |-
-      YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-    !binary "dmFyeQ==": !binary |-
-      QWNjZXB0LUVuY29kaW5n
-    status: !binary |-
-      NDA0IE5vdCBGb3VuZA==
-    cache-control: !binary |-
-      bWF4LWFnZT0zMDAsIHByaXZhdGU=
-    x-ua-compatible: !binary |-
-      SUU9RWRnZSxjaHJvbWU9MQ==
-    x-request-id: !binary |-
-      MzM3MzcxMDgwOQ==
-    x-runtime: !binary |-
-      MC4wMzY4Njk=
-    x-app: !binary |-
-      bHVua3dpbGw=
-    content-length: !binary |-
-      NjI=
-    accept-ranges: !binary |-
-      Ynl0ZXM=
-    date: !binary |-
-      TW9uLCAwNyBKdWwgMjAxNCAxMzowNzo0OSBHTVQ=
-    x-varnish: !binary |-
-      MzM3MzcxMDgwOQ==
-    age: !binary |-
-      MA==
-    via: !binary |-
-      MS4xIHZhcm5pc2g=
-    connection: !binary |-
-      Y2xvc2U=
-    x-origin: !binary |-
-      dmFybmlzaDE=
-    x-cache: !binary |-
-      TUlTUw==
-  :body: !binary |-
-    WW91IHJlcXVlc3RlZCBzb21ldGhpbmcgdGhhdCBkb2VzIG5vdCBleGlzdA==
+  :status: 200
+  :headers:
+    server: nginx
+    content-type: application/json; charset=utf-8
+    !binary "dmFyeQ==": Accept-Encoding
+    status: 200 OK
+    !binary "bGluaw==": <http://api.skroutz.gr/api/skus/3783654/products?page=4>;
+      rel="last", <http://api.skroutz.gr/api/skus/3783654/products?page=2>; rel="next"
+    cache-control: max-age=300, private
+    x-ua-compatible: IE=Edge,chrome=1
+    x-request-id: '225151876'
+    x-runtime: '0.220160'
+    x-dns-prefetch-control: 'off'
+    x-app: lunkwill
+    content-length: '961'
+    accept-ranges: bytes
+    date: Mon, 14 Jul 2014 12:06:30 GMT
+    x-varnish: '225151876'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: varnish1
+    x-cache: MISS
+  :body: ! '{"products":[{"id":16226882,"name":"Apple iPhone 5S GOLD (16GB) EU","sku_id":3783654,"shop_id":2581,"category_id":40,"availability":"\u039a\u03b1\u03c4\u03cc\u03c0\u03b9\u03bd
+    \u03a0\u03b1\u03c1\u03b1\u03b3\u03b3\u03b5\u03bb\u03af\u03b1\u03c2","click_url":"https://www.skroutz.gr/products/show/16226882?client_id=8oZYTomOpA73fxIrDfkTzg%3D%3D&from=api","price":534.8},{"id":15281726,"name":"Apple
+    iPhone 5S (16GB) gold white EU","sku_id":3783654,"shop_id":2281,"category_id":40,"availability":"\u039a\u03b1\u03c4\u03cc\u03c0\u03b9\u03bd
+    \u03a0\u03b1\u03c1\u03b1\u03b3\u03b3\u03b5\u03bb\u03af\u03b1\u03c2","click_url":"https://www.skroutz.gr/products/show/15281726?client_id=8oZYTomOpA73fxIrDfkTzg%3D%3D&from=api","price":535.0},{"id":14208300,"name":"Apple
+    iPhone 5S (16GB) (white-silver) ME432DN","sku_id":3783654,"shop_id":2241,"category_id":40,"availability":"4
+    \u03ad\u03c9\u03c2 7 \u03b7\u03bc\u03ad\u03c1\u03b5\u03c2","click_url":"https://www.skroutz.gr/products/show/14208300?client_id=8oZYTomOpA73fxIrDfkTzg%3D%3D&from=api","price":535.0},{"id":15281727,"name":"Apple
+    iPhone 5S (16GB) silver white EU","sku_id":3783654,"shop_id":2281,"category_id":40,"availability":"\u03a3\u03b5
+    \u03b1\u03c0\u03cc\u03b8\u03b5\u03bc\u03b1","click_url":"https://www.skroutz.gr/products/show/15281727?client_id=8oZYTomOpA73fxIrDfkTzg%3D%3D&from=api","price":538.0},{"id":15281728,"name":"Apple
+    iPhone 5S (16GB) space grey EU","sku_id":3783654,"shop_id":2281,"category_id":40,"availability":"\u03a3\u03b5
+    \u03b1\u03c0\u03cc\u03b8\u03b5\u03bc\u03b1","click_url":"https://www.skroutz.gr/products/show/15281728?client_id=8oZYTomOpA73fxIrDfkTzg%3D%3D&from=api","price":538.0},{"id":16268536,"name":"Apple
+    iPhone 5S 16GB Space Grey","sku_id":3783654,"shop_id":661,"category_id":40,"availability":"\u039a\u03b1\u03c4\u03cc\u03c0\u03b9\u03bd
+    \u03a0\u03b1\u03c1\u03b1\u03b3\u03b3\u03b5\u03bb\u03af\u03b1\u03c2","click_url":"https://www.skroutz.gr/products/show/16268536?client_id=8oZYTomOpA73fxIrDfkTzg%3D%3D&from=api","price":538.0},{"id":16226883,"name":"Apple
+    Iphone 5S (16GB) Space Grey EU","sku_id":3783654,"shop_id":2581,"category_id":40,"availability":"\u039a\u03b1\u03c4\u03cc\u03c0\u03b9\u03bd
+    \u03a0\u03b1\u03c1\u03b1\u03b3\u03b3\u03b5\u03bb\u03af\u03b1\u03c2","click_url":"https://www.skroutz.gr/products/show/16226883?client_id=8oZYTomOpA73fxIrDfkTzg%3D%3D&from=api","price":539.5},{"id":13626014,"name":"APPLE
+    IPHONE 5s(16GB) gold EU","sku_id":3783654,"shop_id":2032,"category_id":40,"availability":"\u039a\u03b1\u03c4\u03cc\u03c0\u03b9\u03bd
+    \u03a0\u03b1\u03c1\u03b1\u03b3\u03b3\u03b5\u03bb\u03af\u03b1\u03c2","click_url":"https://www.skroutz.gr/products/show/13626014?client_id=8oZYTomOpA73fxIrDfkTzg%3D%3D&from=api","price":539.9},{"id":14433170,"name":"Iphone
+    5s (16gb) Gray EU","sku_id":3783654,"shop_id":322,"category_id":40,"availability":"1
+    \u03ad\u03c9\u03c2 3 \u03b7\u03bc\u03ad\u03c1\u03b5\u03c2","click_url":"https://www.skroutz.gr/products/show/14433170?client_id=8oZYTomOpA73fxIrDfkTzg%3D%3D&from=api","price":540.95},{"id":13704406,"name":"Apple
+    iPhone 5s 16GB Gold EU","sku_id":3783654,"shop_id":1164,"category_id":40,"availability":"4
+    \u03ad\u03c9\u03c2 7 \u03b7\u03bc\u03ad\u03c1\u03b5\u03c2","click_url":"https://www.skroutz.gr/products/show/13704406?client_id=8oZYTomOpA73fxIrDfkTzg%3D%3D&from=api","price":541.9},{"id":13582184,"name":"iPhone
+    5S 16GB Gold EU","sku_id":3783654,"shop_id":1967,"category_id":40,"availability":"\u03a3\u03b5
+    \u03b1\u03c0\u03cc\u03b8\u03b5\u03bc\u03b1","click_url":"https://www.skroutz.gr/products/show/13582184?client_id=8oZYTomOpA73fxIrDfkTzg%3D%3D&from=api","price":542.0},{"id":13654643,"name":"Apple
+    iPhone 5S 16GB Space Gray EU","sku_id":3783654,"shop_id":820,"category_id":40,"availability":"\u03a3\u03b5
+    \u03b1\u03c0\u03cc\u03b8\u03b5\u03bc\u03b1","click_url":"https://www.skroutz.gr/products/show/13654643?client_id=8oZYTomOpA73fxIrDfkTzg%3D%3D&from=api","price":543.8},{"id":13904057,"name":"Apple
+    iPhone 5S 16GB Gold EU","sku_id":3783654,"shop_id":820,"category_id":40,"availability":"\u03a3\u03b5
+    \u03b1\u03c0\u03cc\u03b8\u03b5\u03bc\u03b1","click_url":"https://www.skroutz.gr/products/show/13904057?client_id=8oZYTomOpA73fxIrDfkTzg%3D%3D&from=api","price":543.8},{"id":16284546,"name":"Apple
+    iPhone 5S 16GB Gold EU","sku_id":3783654,"shop_id":2387,"category_id":40,"availability":"1
+    \u03ad\u03c9\u03c2 3 \u03b7\u03bc\u03ad\u03c1\u03b5\u03c2","click_url":"https://www.skroutz.gr/products/show/16284546?client_id=8oZYTomOpA73fxIrDfkTzg%3D%3D&from=api","price":545.19},{"id":16284547,"name":"Apple
+    iPhone 5S 16GB Space Gray EU","sku_id":3783654,"shop_id":2387,"category_id":40,"availability":"1
+    \u03ad\u03c9\u03c2 3 \u03b7\u03bc\u03ad\u03c1\u03b5\u03c2","click_url":"https://www.skroutz.gr/products/show/16284547?client_id=8oZYTomOpA73fxIrDfkTzg%3D%3D&from=api","price":545.19},{"id":14029251,"name":"Apple
+    iPhone 5S GOLD (16GB) EU","sku_id":3783654,"shop_id":2218,"category_id":40,"availability":"1
+    \u03ad\u03c9\u03c2 3 \u03b7\u03bc\u03ad\u03c1\u03b5\u03c2","click_url":"https://www.skroutz.gr/products/show/14029251?client_id=8oZYTomOpA73fxIrDfkTzg%3D%3D&from=api","price":547.9},{"id":14029323,"name":"Apple
+    Iphone 5S (16GB) Space Grey EU","sku_id":3783654,"shop_id":2218,"category_id":40,"availability":"\u03a3\u03b5
+    \u03b1\u03c0\u03cc\u03b8\u03b5\u03bc\u03b1","click_url":"https://www.skroutz.gr/products/show/14029323?client_id=8oZYTomOpA73fxIrDfkTzg%3D%3D&from=api","price":547.9},{"id":13702456,"name":"Apple
+    iPhone 5S 16GB Space Grey EU","sku_id":3783654,"shop_id":2047,"category_id":40,"availability":"\u03a3\u03b5
+    \u03b1\u03c0\u03cc\u03b8\u03b5\u03bc\u03b1","click_url":"https://www.skroutz.gr/products/show/13702456?client_id=8oZYTomOpA73fxIrDfkTzg%3D%3D&from=api","price":547.94},{"id":13706734,"name":"Apple
+    iPhone 5S 16GB Space Grey","sku_id":3783654,"shop_id":329,"category_id":40,"availability":"\u03a3\u03b5
+    \u03b1\u03c0\u03cc\u03b8\u03b5\u03bc\u03b1","click_url":"https://www.skroutz.gr/products/show/13706734?client_id=8oZYTomOpA73fxIrDfkTzg%3D%3D&from=api","price":547.97},{"id":15912237,"name":"APPLE
+    iPhone 5S 16GB Space Gray EU","sku_id":3783654,"shop_id":2274,"category_id":40,"availability":"\u03a3\u03b5
+    \u03b1\u03c0\u03cc\u03b8\u03b5\u03bc\u03b1","click_url":"https://www.skroutz.gr/products/show/15912237?client_id=8oZYTomOpA73fxIrDfkTzg%3D%3D&from=api","price":548.0},{"id":16222156,"name":"Apple
+    iPhone 5S (16GB)","sku_id":3783654,"shop_id":2475,"category_id":40,"availability":"\u039a\u03b1\u03c4\u03cc\u03c0\u03b9\u03bd
+    \u03a0\u03b1\u03c1\u03b1\u03b3\u03b3\u03b5\u03bb\u03af\u03b1\u03c2","click_url":"https://www.skroutz.gr/products/show/16222156?client_id=8oZYTomOpA73fxIrDfkTzg%3D%3D&from=api","price":549.0},{"id":13626013,"name":"APPLE
+    IPHONE 5s (16GB) space-grey EU","sku_id":3783654,"shop_id":2032,"category_id":40,"availability":"\u039a\u03b1\u03c4\u03cc\u03c0\u03b9\u03bd
+    \u03a0\u03b1\u03c1\u03b1\u03b3\u03b3\u03b5\u03bb\u03af\u03b1\u03c2","click_url":"https://www.skroutz.gr/products/show/13626013?client_id=8oZYTomOpA73fxIrDfkTzg%3D%3D&from=api","price":549.99},{"id":14015729,"name":"Apple
+    Iphone 5s 16gb","sku_id":3783654,"shop_id":708,"category_id":40,"availability":"\u03a3\u03b5
+    \u03b1\u03c0\u03cc\u03b8\u03b5\u03bc\u03b1","click_url":"https://www.skroutz.gr/products/show/14015729?client_id=8oZYTomOpA73fxIrDfkTzg%3D%3D&from=api","price":551.0},{"id":13773649,"name":"Apple
+    iPhone 5S 16GB Space Gray EU","sku_id":3783654,"shop_id":282,"category_id":40,"availability":"\u03a3\u03b5
+    \u03b1\u03c0\u03cc\u03b8\u03b5\u03bc\u03b1","click_url":"https://www.skroutz.gr/products/show/13773649?client_id=8oZYTomOpA73fxIrDfkTzg%3D%3D&from=api","price":552.0},{"id":13944554,"name":"Apple
+    Iphone 5S Space Grey 16 GB (EU)","sku_id":3783654,"shop_id":1093,"category_id":40,"availability":"\u039a\u03b1\u03c4\u03cc\u03c0\u03b9\u03bd
+    \u03a0\u03b1\u03c1\u03b1\u03b3\u03b3\u03b5\u03bb\u03af\u03b1\u03c2","click_url":"https://www.skroutz.gr/products/show/13944554?client_id=8oZYTomOpA73fxIrDfkTzg%3D%3D&from=api","price":559.9}],"meta":{"pagination":{"total_results":94,"total_pages":4,"page":1,"per":25}}}'
+:created_at: 2014-07-14 15:06:30.546115469 +03:00

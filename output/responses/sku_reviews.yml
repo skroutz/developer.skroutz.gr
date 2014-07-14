@@ -3,95 +3,49 @@
   :url: http://skroutz.gr/api/skus/355766/reviews
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer 5JN7RHwWJ9ZPSBEKo0/bskSR0IOfNtETjwmMOPsGKZiXrRnP71w7cZbDZFKBaeNoJAyIKRMKjXeaBeF40Uxg==
+    :authorization: Bearer fYxk5iZjO44DwXwkwP5SW7cHwaqFMbc5riQ4JQFgeVNe1epmAHlDtGjvAPhVAIH1aPLiQt67RSrVasw9o7EEQ==
   :verb: GET
 :response:
   :status: 200
-  :headers: !ruby/hash:Faraday::Utils::Headers
-    server: !binary |-
-      bmdpbng=
-    content-type: !binary |-
-      YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-    !binary "dmFyeQ==": !binary |-
-      QWNjZXB0LUVuY29kaW5n
-    status: !binary |-
-      MjAwIE9L
-    cache-control: !binary |-
-      bWF4LWFnZT0zMDAsIHByaXZhdGU=
-    x-ua-compatible: !binary |-
-      SUU9RWRnZSxjaHJvbWU9MQ==
-    x-request-id: !binary |-
-      MjM2MTMwNDkwOQ==
-    x-runtime: !binary |-
-      MC4wNTYyMzc=
-    x-dns-prefetch-control: !binary |-
-      b2Zm
-    x-app: !binary |-
-      bHVua3dpbGw=
-    content-length: !binary |-
-      NTkz
-    accept-ranges: !binary |-
-      Ynl0ZXM=
-    date: !binary |-
-      TW9uLCAwNyBKdWwgMjAxNCAxMzowNzo1NCBHTVQ=
-    x-varnish: !binary |-
-      MjM2MTMwNDkwOQ==
-    age: !binary |-
-      MA==
-    via: !binary |-
-      MS4xIHZhcm5pc2g=
-    connection: !binary |-
-      Y2xvc2U=
-    x-origin: !binary |-
-      dmFybmlzaDI=
-    x-cache: !binary |-
-      TUlTUw==
-  :body: !binary |-
-    eyJyZXZpZXdzIjpbeyJpZCI6MTA4NzUsInVzZXJfaWQiOjE0NzU5NiwicmV2
-    aWV3IjoiXHUwMzk1XHUwM2MwXHUwM2I5XHUwM2JiXHUwM2FkXHUwM2JlXHUw
-    M2M0XHUwM2I1IFx1MDNjNFx1MDNiZiAhICBcdTAzYTRcdTAzYjEgXHUwM2M0
-    XHUwM2MxXHUwM2NjXHUwM2M2XHUwM2I5XHUwM2JjXHUwM2IxIFx1MDNiNFx1
-    MDNiOVx1MDNiMVx1MDNjNFx1MDNiN1x1MDNjMVx1MDNiZlx1MDNjZFx1MDNi
-    ZFx1MDNjNFx1MDNiMVx1MDNiOSBcdTAzYzdcdTAzYzlcdTAzYzFcdTAzYWZc
-    dTAzYzIgXHUwM2M0XHUwM2JmIFx1MDNjMFx1MDNiMVx1MDNjMVx1MDNiMVx1
-    MDNiY1x1MDNiOVx1MDNiYVx1MDNjMVx1MDNjYyBcdTAzYzBcdTAzYzFcdTAz
-    Y2NcdTAzYjJcdTAzYmJcdTAzYjdcdTAzYmNcdTAzYjEuIFx1MDNhNFx1MDNi
-    ZiBcdTAzYmRcdTAzYjVcdTAzYzFcdTAzY2MgXHUwM2M0XHUwM2JmIFx1MDNi
-    YVx1MDNjMVx1MDNjNVx1MDNjZVx1MDNiZFx1MDNiNVx1MDNiOSwgXHUwM2I0
-    XHUwM2I1XHUwM2JkIFx1MDNjNFx1MDNiZiBcdTAzYzBcdTAzYjFcdTAzYjNc
-    dTAzY2VcdTAzYmRcdTAzYjVcdTAzYjksIFx1MDNiM1x1MDNiOVx1MDNiMSBc
-    dTAzYmRcdTAzYjEgXHUwM2M0XHUwM2JmIFx1MDNjMFx1MDNhZlx1MDNiZFx1
-    MDNiNVx1MDNiOVx1MDNjMiBcdTAzYjVcdTAzYzVcdTAzYzdcdTAzYWNcdTAz
-    YzFcdTAzYjlcdTAzYzNcdTAzYzRcdTAzYjEuIFx1MDM5Y1x1MDNiNVx1MDNi
-    M1x1MDNhY1x1MDNiYlx1MDNiNyBcdTAzYjVcdTAzYzVcdTAzYmFcdTAzYmZc
-    dTAzYmJcdTAzYWZcdTAzYjEgXHUwM2M0XHUwM2JmIFx1MDNiNFx1MDNiZlx1
-    MDNjN1x1MDNiNVx1MDNhZlx1MDNiZiBcdTAzYmRcdTAzYjVcdTAzYzFcdTAz
-    YmZcdTAzY2QgMyw1IFx1MDNiYlx1MDNhZlx1MDNjNFx1MDNjMVx1MDNjOVx1
-    MDNiZCAhIChcdTAzYjNcdTAzYjlcdTAzYjEgXHUwM2JkXHUwM2IxIFx1MDNi
-    Y1x1MDNiN1x1MDNiZCBcdTAzYjFcdTAzYmRcdTAzYmZcdTAzYWZcdTAzYjNc
-    dTAzYjVcdTAzYjlcdTAzYzIgXHUwM2MzXHUwM2M1XHUwM2M3XHUwM2JkXHUw
-    M2FjIFx1MDNjNFx1MDNiN1x1MDNiZCBcdTAzYzBcdTAzY2NcdTAzYzFcdTAz
-    YzRcdTAzYjEpLiBcdTAzOWYgXHUwM2JhXHUwM2IxXHUwM2M0XHUwM2IxXHUw
-    M2M4XHUwM2NkXHUwM2JhXHUwM2M0XHUwM2I3XHUwM2MyIFx1MDNjNlx1MDNi
-    Zlx1MDNiMlx1MDNiNVx1MDNjMVx1MDNjY1x1MDNjMi4gXHUwM2E0XHUwM2Mx
-    XHUwM2M5XHUwM2MyIFx1MDNjNFx1MDNiZiBcdTAzYzBcdTAzYjFcdTAzYjNc
-    dTAzYzlcdTAzYzRcdTAzY2MgXHUwM2MzXHUwM2JmXHUwM2M1LCBcdTAzY2Nc
-    dTAzYzBcdTAzYzlcdTAzYzIgXHUwM2MzXHUwM2M0XHUwM2JmIFx1MDNjM1x1
-    MDNiNVx1MDNjMVx1MDNiMlx1MDNhZlx1MDNjMVx1MDNiZlx1MDNjNVx1MDNi
-    ZCBcdTAzYzNcdTAzYzRcdTAzYjdcdTAzYmQgXHUwM2IxXHUwM2IzXHUwM2Jm
-    XHUwM2MxXHUwM2FjIChcdTAzYmFcdTAzYjFcdTAzYzZcdTAzYjVcdTAzYzRc
-    dTAzYWRcdTAzYzFcdTAzYjlcdTAzYjEgXHUwM2FlIFx1MDNjN1x1MDNjOVx1
-    MDNiZFx1MDNhY1x1MDNiYVx1MDNiOSkuIFx1MDM5MVx1MDNiOFx1MDNjY1x1
-    MDNjMVx1MDNjNVx1MDNiMlx1MDNiZi4gXHUwM2E0XHUwM2JmIFx1MDNiY1x1
-    MDNjY1x1MDNiZFx1MDNiZiBcdTAzYmNcdTAzYWUgXHUwM2FjXHUwM2MxXHUw
-    M2I5XHUwM2MzXHUwM2M0XHUwM2JmIFx1MDNiNVx1MDNhZlx1MDNiZFx1MDNi
-    MVx1MDNiOSBcdTAzYjcgXHUwM2M3XHUwM2M5XHUwM2MxXHUwM2I3XHUwM2M0
-    XHUwM2I5XHUwM2JhXHUwM2NjXHUwM2M0XHUwM2I3XHUwM2M0XHUwM2FjIFx1
-    MDNjNFx1MDNiZlx1MDNjNS4gXHUwMzljXHUwM2I1IFx1MDNiYlx1MDNhZlx1
-    MDNiM1x1MDNiMSBcdTAzYzBcdTAzYjFcdTAzYzFcdTAzYjFcdTAzYzBcdTAz
-    YWNcdTAzYmRcdTAzYzkgXHUwM2JiXHUwM2FmXHUwM2M0XHUwM2MxXHUwM2Ix
-    IFx1MDNiOFx1MDNiMSBcdTAzYWVcdTAzYzRcdTAzYjFcdTAzYmQgXHUwM2M0
-    XHUwM2FkXHUwM2JiXHUwM2I1XHUwM2I5XHUwM2JmLiIsInJhdGluZyI6NSwi
-    Y3JlYXRlZF9hdCI6IjIwMTMtMDgtMTNUMjI6MDA6MjQrMDM6MDAiLCJkZW1v
-    dGVkIjpmYWxzZX1dLCJtZXRhIjp7InBhZ2luYXRpb24iOnsidG90YWxfcmVz
-    dWx0cyI6MSwidG90YWxfcGFnZXMiOjEsInBhZ2UiOjEsInBlciI6MjV9fX0=
+  :headers:
+    server: nginx
+    content-type: application/json; charset=utf-8
+    !binary "dmFyeQ==": Accept-Encoding
+    status: 200 OK
+    cache-control: max-age=300, private
+    x-ua-compatible: IE=Edge,chrome=1
+    x-request-id: '2406164444'
+    x-runtime: '0.033942'
+    x-dns-prefetch-control: 'off'
+    x-app: lunkwill
+    content-length: '593'
+    accept-ranges: bytes
+    date: Mon, 14 Jul 2014 12:06:32 GMT
+    x-varnish: '2406164444'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: varnish2
+    x-cache: MISS
+  :body: ! '{"reviews":[{"id":10875,"user_id":147596,"review":"\u0395\u03c0\u03b9\u03bb\u03ad\u03be\u03c4\u03b5
+    \u03c4\u03bf !  \u03a4\u03b1 \u03c4\u03c1\u03cc\u03c6\u03b9\u03bc\u03b1 \u03b4\u03b9\u03b1\u03c4\u03b7\u03c1\u03bf\u03cd\u03bd\u03c4\u03b1\u03b9
+    \u03c7\u03c9\u03c1\u03af\u03c2 \u03c4\u03bf \u03c0\u03b1\u03c1\u03b1\u03bc\u03b9\u03ba\u03c1\u03cc
+    \u03c0\u03c1\u03cc\u03b2\u03bb\u03b7\u03bc\u03b1. \u03a4\u03bf \u03bd\u03b5\u03c1\u03cc
+    \u03c4\u03bf \u03ba\u03c1\u03c5\u03ce\u03bd\u03b5\u03b9, \u03b4\u03b5\u03bd \u03c4\u03bf
+    \u03c0\u03b1\u03b3\u03ce\u03bd\u03b5\u03b9, \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03c4\u03bf
+    \u03c0\u03af\u03bd\u03b5\u03b9\u03c2 \u03b5\u03c5\u03c7\u03ac\u03c1\u03b9\u03c3\u03c4\u03b1.
+    \u039c\u03b5\u03b3\u03ac\u03bb\u03b7 \u03b5\u03c5\u03ba\u03bf\u03bb\u03af\u03b1
+    \u03c4\u03bf \u03b4\u03bf\u03c7\u03b5\u03af\u03bf \u03bd\u03b5\u03c1\u03bf\u03cd
+    3,5 \u03bb\u03af\u03c4\u03c1\u03c9\u03bd ! (\u03b3\u03b9\u03b1 \u03bd\u03b1 \u03bc\u03b7\u03bd
+    \u03b1\u03bd\u03bf\u03af\u03b3\u03b5\u03b9\u03c2 \u03c3\u03c5\u03c7\u03bd\u03ac
+    \u03c4\u03b7\u03bd \u03c0\u03cc\u03c1\u03c4\u03b1). \u039f \u03ba\u03b1\u03c4\u03b1\u03c8\u03cd\u03ba\u03c4\u03b7\u03c2
+    \u03c6\u03bf\u03b2\u03b5\u03c1\u03cc\u03c2. \u03a4\u03c1\u03c9\u03c2 \u03c4\u03bf
+    \u03c0\u03b1\u03b3\u03c9\u03c4\u03cc \u03c3\u03bf\u03c5, \u03cc\u03c0\u03c9\u03c2
+    \u03c3\u03c4\u03bf \u03c3\u03b5\u03c1\u03b2\u03af\u03c1\u03bf\u03c5\u03bd \u03c3\u03c4\u03b7\u03bd
+    \u03b1\u03b3\u03bf\u03c1\u03ac (\u03ba\u03b1\u03c6\u03b5\u03c4\u03ad\u03c1\u03b9\u03b1
+    \u03ae \u03c7\u03c9\u03bd\u03ac\u03ba\u03b9). \u0391\u03b8\u03cc\u03c1\u03c5\u03b2\u03bf.
+    \u03a4\u03bf \u03bc\u03cc\u03bd\u03bf \u03bc\u03ae \u03ac\u03c1\u03b9\u03c3\u03c4\u03bf
+    \u03b5\u03af\u03bd\u03b1\u03b9 \u03b7 \u03c7\u03c9\u03c1\u03b7\u03c4\u03b9\u03ba\u03cc\u03c4\u03b7\u03c4\u03ac
+    \u03c4\u03bf\u03c5. \u039c\u03b5 \u03bb\u03af\u03b3\u03b1 \u03c0\u03b1\u03c1\u03b1\u03c0\u03ac\u03bd\u03c9
+    \u03bb\u03af\u03c4\u03c1\u03b1 \u03b8\u03b1 \u03ae\u03c4\u03b1\u03bd \u03c4\u03ad\u03bb\u03b5\u03b9\u03bf.","rating":5,"created_at":"2013-08-13T22:00:24+03:00","demoted":false}],"meta":{"pagination":{"total_results":1,"total_pages":1,"page":1,"per":25}}}'
+:created_at: 2014-07-14 15:06:32.745927879 +03:00

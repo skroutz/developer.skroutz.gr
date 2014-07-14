@@ -3,79 +3,36 @@
   :url: http://skroutz.gr/api/skus/3690169
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer 5JN7RHwWJ9ZPSBEKo0/bskSR0IOfNtETjwmMOPsGKZiXrRnP71w7cZbDZFKBaeNoJAyIKRMKjXeaBeF40Uxg==
+    :authorization: Bearer fYxk5iZjO44DwXwkwP5SW7cHwaqFMbc5riQ4JQFgeVNe1epmAHlDtGjvAPhVAIH1aPLiQt67RSrVasw9o7EEQ==
   :verb: GET
 :response:
   :status: 200
-  :headers: !ruby/hash:Faraday::Utils::Headers
-    server: !binary |-
-      bmdpbng=
-    content-type: !binary |-
-      YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-    !binary "dmFyeQ==": !binary |-
-      QWNjZXB0LUVuY29kaW5n
-    status: !binary |-
-      MjAwIE9L
-    cache-control: !binary |-
-      bWF4LWFnZT0zMDAsIHByaXZhdGU=
-    x-ua-compatible: !binary |-
-      SUU9RWRnZSxjaHJvbWU9MQ==
-    x-request-id: !binary |-
-      MjM2MTMwNDMxMg==
-    x-runtime: !binary |-
-      MC4wMjk2Mzc=
-    x-dns-prefetch-control: !binary |-
-      b2Zm
-    x-app: !binary |-
-      bHVua3dpbGw=
-    content-length: !binary |-
-      NjIz
-    accept-ranges: !binary |-
-      Ynl0ZXM=
-    date: !binary |-
-      TW9uLCAwNyBKdWwgMjAxNCAxMzowNzo0OSBHTVQ=
-    x-varnish: !binary |-
-      MjM2MTMwNDMxMg==
-    age: !binary |-
-      MA==
-    via: !binary |-
-      MS4xIHZhcm5pc2g=
-    connection: !binary |-
-      Y2xvc2U=
-    x-origin: !binary |-
-      dmFybmlzaDI=
-    x-cache: !binary |-
-      TUlTUw==
-  :body: !binary |-
-    eyJza3UiOnsiaWQiOjM2OTAxNjksImVhbiI6IiIsInBuIjoiRDgwMiAxNkdC
-    IiwibmFtZSI6IkcyICgxNkdCKSIsImRpc3BsYXlfbmFtZSI6IkxHIEcyICgx
-    NkdCKSIsImNhdGVnb3J5X2lkIjo0MCwiZmlyc3RfcHJvZHVjdF9zaG9wX2lu
-    Zm8iOm51bGwsImNsaWNrX3VybCI6bnVsbCwicHJpY2VfbWF4Ijo1OTkuMCwi
-    cHJpY2VfbWluIjoyOTguMzksInJldmlld3Njb3JlIjo0LjYyMDE1LCJzaG9w
-    X2NvdW50Ijo0MywicGxhaW5fc3BlY19zdW1tYXJ5IjoiU2luZ2xlIFNJTSwg
-    XHUwMzk0XHUwM2FmXHUwM2JhXHUwM2M0XHUwM2M1XHUwM2JmIFx1MDNhM1x1
-    MDNjZFx1MDNiZFx1MDNiNFx1MDNiNVx1MDNjM1x1MDNiN1x1MDNjMjogMkcg
-    LyAzRyAvIDRHIC0gTFRFLCBcdTAzOWFcdTAzYWNcdTAzYmNcdTAzYjVcdTAz
-    YzFcdTAzYjE6IDEzIE1QLCAgXHUwMzlmXHUwM2I4XHUwM2NjXHUwM2JkXHUw
-    M2I3OiA1LjJcIiAsIFx1MDM5MVx1MDNiZFx1MDNhY1x1MDNiYlx1MDNjNVx1
-    MDNjM1x1MDNiNzogMTkyMCB4IDEwODAgcGl4ZWxzLCBcdTAzYTdcdTAzYjVc
-    dTAzYjlcdTAzYzFcdTAzYjlcdTAzYzNcdTAzYmNcdTAzY2NcdTAzYzI6IFx1
-    MDM5Zlx1MDNiOFx1MDNjY1x1MDNiZFx1MDNiNyBcdTAzYjFcdTAzYzZcdTAz
-    YWVcdTAzYzIgKFRvdWNoIHNjcmVlbiksICBcdTAzOTVcdTAzYzNcdTAzYzlc
-    dTAzYzRcdTAzYjVcdTAzYzFcdTAzYjlcdTAzYmFcdTAzYWUgXHUwMzljXHUw
-    M2JkXHUwM2FlXHUwM2JjXHUwM2I3OiAxNi4wIEdCLCAgXHUwMzliXHUwM2I1
-    XHUwM2I5XHUwM2M0XHUwM2JmXHUwM2M1XHUwM2MxXHUwM2IzXHUwM2I5XHUw
-    M2JhXHUwM2NjIFx1MDNhM1x1MDNjZFx1MDNjM1x1MDNjNFx1MDNiN1x1MDNi
-    Y1x1MDNiMTogQW5kcm9pZCwgU21hcnRQaG9uZSIsIm1hbnVmYWN0dXJlcl9p
-    ZCI6MzAsImZ1dHVyZSI6ZmFsc2UsInJldmlld3NfY291bnQiOjEyOSwidmly
-    dHVhbCI6ZmFsc2UsImltYWdlcyI6eyJtYWluIjoiaHR0cDovL2Iuc2Nkbi5n
-    ci9pbWFnZXMvc2t1X21haW5faW1hZ2VzLzAwMzY5MC8zNjkwMTY5L21lZGl1
-    bV9MR0cyX0Zyb250LmpwZyIsImFsdGVybmF0aXZlcyI6WyJodHRwOi8vYS5z
-    Y2RuLmdyL2ltYWdlcy9za3VfaW1hZ2VzLzAxMTA5My8xMTA5MzY1OC9MR0cy
-    X1NpZGUuanBnIiwiaHR0cDovL2Euc2Nkbi5nci9pbWFnZXMvc2t1X2ltYWdl
-    cy8wMTEwOTMvMTEwOTM2NjIvdGh1bV9nYWxsZXJ5My5wbmciLCJodHRwOi8v
-    YS5zY2RuLmdyL2ltYWdlcy9za3VfaW1hZ2VzLzAxMTA5My8xMTA5MzY2My90
-    aHVtX2dhbGxlcnk2LnBuZyIsImh0dHA6Ly9iLnNjZG4uZ3IvaW1hZ2VzL3Nr
-    dV9pbWFnZXMvMDExMDkzLzExMDkzNjY3L0xHRzIuanBnIiwiaHR0cDovL2Eu
-    c2Nkbi5nci9pbWFnZXMvc2t1X2ltYWdlcy8wMTEwOTMvMTEwOTM2NjkvdGh1
-    bV9nYWxsZXJ5NC5wbmciXX19fQ==
+  :headers:
+    server: nginx
+    content-type: application/json; charset=utf-8
+    !binary "dmFyeQ==": Accept-Encoding
+    status: 200 OK
+    cache-control: max-age=300, private
+    x-ua-compatible: IE=Edge,chrome=1
+    x-request-id: '2406164114'
+    x-runtime: '0.046120'
+    x-dns-prefetch-control: 'off'
+    x-app: lunkwill
+    content-length: '623'
+    accept-ranges: bytes
+    date: Mon, 14 Jul 2014 12:06:30 GMT
+    x-varnish: '2406164114'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: varnish2
+    x-cache: MISS
+  :body: ! '{"sku":{"id":3690169,"ean":"","pn":"D802 16GB","name":"G2 (16GB)","display_name":"LG
+    G2 (16GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":599.0,"price_min":291.48,"reviewscore":4.63235,"shop_count":49,"plain_spec_summary":"Single
+    SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
+    2G / 3G / 4G - LTE, \u039a\u03ac\u03bc\u03b5\u03c1\u03b1: 13 MP,  \u039f\u03b8\u03cc\u03bd\u03b7:
+    5.2\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7: 1920 x 1080 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2:
+    \u039f\u03b8\u03cc\u03bd\u03b7 \u03b1\u03c6\u03ae\u03c2 (Touch screen),  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
+    \u039c\u03bd\u03ae\u03bc\u03b7: 16.0 GB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
+    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: Android, SmartPhone","manufacturer_id":30,"future":false,"reviews_count":136,"virtual":false,"images":{"main":"http://b.scdn.gr/images/sku_main_images/003690/3690169/medium_LGG2_Front.jpg","alternatives":["http://a.scdn.gr/images/sku_images/011093/11093658/LGG2_Side.jpg","http://a.scdn.gr/images/sku_images/011093/11093662/thum_gallery3.png","http://a.scdn.gr/images/sku_images/011093/11093663/thum_gallery6.png","http://b.scdn.gr/images/sku_images/011093/11093667/LGG2.jpg","http://a.scdn.gr/images/sku_images/011093/11093669/thum_gallery4.png"]}}}'
+:created_at: 2014-07-14 15:06:30.268768082 +03:00

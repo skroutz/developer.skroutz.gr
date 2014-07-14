@@ -3,65 +3,33 @@
   :url: http://skroutz.gr/api/shops/search
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer 5JN7RHwWJ9ZPSBEKo0/bskSR0IOfNtETjwmMOPsGKZiXrRnP71w7cZbDZFKBaeNoJAyIKRMKjXeaBeF40Uxg==
+    :authorization: Bearer fYxk5iZjO44DwXwkwP5SW7cHwaqFMbc5riQ4JQFgeVNe1epmAHlDtGjvAPhVAIH1aPLiQt67RSrVasw9o7EEQ==
   :params:
     :q: plaisio
   :verb: GET
 :response:
   :status: 200
-  :headers: !ruby/hash:Faraday::Utils::Headers
-    server: !binary |-
-      bmdpbng=
-    content-type: !binary |-
-      YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-    !binary "dmFyeQ==": !binary |-
-      QWNjZXB0LUVuY29kaW5n
-    status: !binary |-
-      MjAwIE9L
-    cache-control: !binary |-
-      bWF4LWFnZT0zMDAsIHByaXZhdGU=
-    x-ua-compatible: !binary |-
-      SUU9RWRnZSxjaHJvbWU9MQ==
-    x-request-id: !binary |-
-      MjM2MTMwNTAyOQ==
-    x-runtime: !binary |-
-      MC4wNTY2ODU=
-    x-dns-prefetch-control: !binary |-
-      b2Zm
-    x-app: !binary |-
-      bHVua3dpbGw=
-    content-length: !binary |-
-      NDA0
-    accept-ranges: !binary |-
-      Ynl0ZXM=
-    date: !binary |-
-      TW9uLCAwNyBKdWwgMjAxNCAxMzowNzo1NSBHTVQ=
-    x-varnish: !binary |-
-      MjM2MTMwNTAyOQ==
-    age: !binary |-
-      MA==
-    via: !binary |-
-      MS4xIHZhcm5pc2g=
-    connection: !binary |-
-      Y2xvc2U=
-    x-origin: !binary |-
-      dmFybmlzaDI=
-    x-cache: !binary |-
-      TUlTUw==
-  :body: !binary |-
-    eyJzaG9wcyI6W3siaWQiOjExLCJuYW1lIjoiXHUwM2EwXHUwM2JiXHUwM2Ix
-    XHUwM2FmXHUwM2MzXHUwM2I5XHUwM2JmIiwibGluayI6Imh0dHA6Ly93d3cu
-    cGxhaXNpby5nci8iLCJwaG9uZSI6IjgwMDExMTIzNDUiLCJpbWFnZV91cmwi
-    OiJodHRwOi8vYi5zY2RuLmdyL2ltYWdlcy9zaG9wcy9sb2dvcy8wMDAwL21p
-    ZF9mNDQwNDVmYS1lNGNmLTQ3MjMtOTcwMi1hZTE2M2I1YzQwMzYuanBnIiwi
-    dGh1bWJzaG90X3VybCI6Imh0dHA6Ly9hLnNjZG4uZ3IvaW1hZ2VzL3Nob3Bz
-    L3NjcmVlbnMvNTk0MzViNjQtMmQ2My00ZjRlLWEwMzgtY2UwNTEyODBkYTJi
-    LnBuZyIsInJldmlld3NfY291bnQiOjI1NiwicmV2aWV3X3Njb3JlIjoyLjY4
-    LCJwYXltZW50X21ldGhvZHMiOnsiY3JlZGl0X2NhcmQiOnRydWUsInBheXBh
-    bCI6ZmFsc2UsImJhbmsiOnRydWUsInNwb3RfY2FzaCI6dHJ1ZSwiaW5zdGFs
-    bG1lbnRzIjoiXHUwM2FkXHUwM2M5XHUwM2MyIDQ4ICBcdTAzYjRcdTAzY2Nc
-    dTAzYzNcdTAzYjVcdTAzYjlcdTAzYzIgXHUwM2JjXHUwM2I1IFx1MDNjMFx1
-    MDNiOVx1MDNjM1x1MDNjNFx1MDNjOVx1MDNjNFx1MDNiOVx1MDNiYVx1MDNh
-    ZSBcdTAzYmFcdTAzYWNcdTAzYzFcdTAzYzRcdTAzYjEgIn19XSwibWV0YSI6
-    eyJwYWdpbmF0aW9uIjp7InRvdGFsX3Jlc3VsdHMiOjEsInRvdGFsX3BhZ2Vz
-    IjoxLCJwYWdlIjoxLCJwZXIiOjI1fX19
+  :headers:
+    server: nginx
+    content-type: application/json; charset=utf-8
+    !binary "dmFyeQ==": Accept-Encoding
+    status: 200 OK
+    cache-control: max-age=300, private
+    x-ua-compatible: IE=Edge,chrome=1
+    x-request-id: '2406164491'
+    x-runtime: '0.047069'
+    x-dns-prefetch-control: 'off'
+    x-app: lunkwill
+    content-length: '404'
+    accept-ranges: bytes
+    date: Mon, 14 Jul 2014 12:06:33 GMT
+    x-varnish: '2406164491'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: varnish2
+    x-cache: MISS
+  :body: ! '{"shops":[{"id":11,"name":"\u03a0\u03bb\u03b1\u03af\u03c3\u03b9\u03bf","link":"http://www.plaisio.gr/","phone":"8001112345","image_url":"http://b.scdn.gr/images/shops/logos/0000/mid_f44045fa-e4cf-4723-9702-ae163b5c4036.jpg","thumbshot_url":"http://a.scdn.gr/images/shops/screens/59435b64-2d63-4f4e-a038-ce051280da2b.png","reviews_count":257,"review_score":2.75,"payment_methods":{"credit_card":true,"paypal":false,"bank":true,"spot_cash":true,"installments":"\u03ad\u03c9\u03c2
+    48  \u03b4\u03cc\u03c3\u03b5\u03b9\u03c2 \u03bc\u03b5 \u03c0\u03b9\u03c3\u03c4\u03c9\u03c4\u03b9\u03ba\u03ae
+    \u03ba\u03ac\u03c1\u03c4\u03b1 "}}],"meta":{"pagination":{"total_results":1,"total_pages":1,"page":1,"per":25}}}'
+:created_at: 2014-07-14 15:06:33.111493449 +03:00
