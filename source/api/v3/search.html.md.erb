@@ -17,18 +17,29 @@ Name | Type | Description
 -----| -----| -----------
 `q` | `String` | `The keyphrase to search by`
 
-The main response type is a collection of <%= link_to 'Categories', '/api/v3/category' %>
+The main response type is a collection of <%= link_to 'Categories', '/api/v3/category' %>.
+
+<br/>
 
 Any other resources matching the specified query are generally of lesser
 importance.
 
+<br/>
+
 Our suggestion system may provide alternative search queries in the
 `alternatives` key of `meta`.
+
+<br/>
 
 Any of those alternatives having a flag `important` set to `true`, hint
 the client to perform a search with the alternative query instead. 
 
+<br/>
+
 There may also exist matches of different resources under the key `strong_matches`.  
+
+<br/>
+
 Currently there may be up-to one of each of the following resources:
 
 <ul>
