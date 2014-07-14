@@ -80,25 +80,22 @@ Meta that can be included are:
 
 <%= render_recording :category_skus_with_available_filters %>  
 
-<p class="padded">
-As you can see above the available_filters object contains two objects
+As you can see above the `available_filters` object contains two objects
 (filters, manufacturers) each of which has as keys the ids of the
 entities that can be applied and as values the number of skus that match
 the filter/manufacturer.    
-</p>
 
-<p class="padded">
-To retrieve skus matching a set of filters you have to 
+<br/>
+
+To retrieve *SKUs* matching a set of *filters* you have to 
 add `filter_ids[]=filter_id_1&filter_ids[]=filter_id_2` meaning that
-filter_ids is an array query parameter of filter ids.  
-</p>
+`filter_ids` is an array query parameter of filter ids.
 
+<br/>
 
-<p class="padded">
-To retrieve skus matching a set of filters you have to 
-To retrieve skus matching a set of manufacturers you have to add `manufacturer_ids[]=manufacturer_id_1&manufacturer_ids[]=manufacturer_id_2` meaning that
-manufacturer_ids is an array query parameter of manufacturer ids.  
-</p>
+To retrieve *SKUs* matching a set of *manufacturers* you have to add
+`manufacturer_ids[]=manufacturer_id_1&manufacturer_ids[]=manufacturer_id_2`
+meaning that `manufacturer_ids` is an array query parameter of manufacturer ids.  
 
 <%= render_recording :category_skus_with_applied_filters %>
 
