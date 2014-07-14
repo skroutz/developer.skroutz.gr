@@ -639,13 +639,8 @@ pre.terminal {
   margin: 30px 0;
 }
 
-.highlight {
-  background: #ffffff;
-  box-shadow: inset 1px 1px 3px rgba(0,0,0,0.1);
-  border-radius: 5px;
-  margin-bottom: 20px;
-  border: 1px solid rgba(128, 128, 128, 0.1);
-  margin-top: 15px;
+pre > code.highlight {
+  background-color: inherit;
 }
 
 pre {
@@ -654,18 +649,22 @@ pre {
   padding: 10px;
   overflow: auto;
   border-radius: 3px;
-  background-color: #fafafb;
   color: #393939;
   box-shadow: inset 1px 1px 3px rgba(0,0,0,0.1);
 
   .highlight {
-    background: transparent;
     box-shadow: 0 0 0 transparent;
     border-radius: 0;
     margin-bottom: 20px;
     border: 0 none;
     margin-top: 15px;
   }
+}
+
+.example > .response pre {
+  border-radius: none;
+  margin: 0;
+  box-shadow: none;
 }
 
 .request-description {
