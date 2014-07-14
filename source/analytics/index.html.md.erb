@@ -50,12 +50,20 @@ The tracking script, registers a new global function named `sa`, and then asynch
 The `sa` global function is the main way you interact with the Analytics library. 
 It accepts a sequence of parameters, that represent:
 
- 1. **Category**
-    *the API category*
- 2. **Command**
-    *the Command of the API category you be executed*
- 3. **Data**
-    *the Data to be reported by the Command*
+<ol>
+  <li>
+    <p class="term">Category</p>
+    <p class="description">The API category</p>
+  </li>
+  <li>
+    <p class="term">Command</p>
+    <p class="description">The Command of the API category you be executed</p>
+  </li>
+  <li>
+    <p class="term">Data</p>
+    <p class="description">The Data to be reported by the Command</p>
+  </li>
+</ol>
 
 > **Note**
 > *Categories* and *Commands* are **case-sensitive**. Be careful when registering new calls for `sa`.
@@ -188,35 +196,56 @@ sa('ecommerce', 'addItem', JSON.strigify({
 
 ## FAQ
 
-1. Will adding this script affect the performance of my website?  
-
-<p>
-No, we've put a lot of effort, and used some of the most cutting edge techniques to make sure 
-that our script runs sandboxed without affecting the experience of your users.
-</p>
-
-2. What kind of info is emitted from this script?
-
-<p>
-We take user privacy seriously. The data retained by our service remain anonymous, and are 
-neither exposed or sold to 3rd parties. We only report what you agree to be reported.
-</p>
-
-3. Where can i view the source of this script?
-
-<p>
-The script is open sourced on <a href="https://www.github.com/skroutz/analytics.js">github</a>.
-Feel free to create issues there, or even contribute.
-</p>
-
-4. Are there any dependencies?
-
-<p>
-No. The script is self-sufficient.
-</p>
-
-5. What about browser support?
-
-<p>
-The script is tested to work on all modern browsers. [Internet Explorer > 6, Chrome, Firefox, Opera, Safari]
-</p>
+<ol>
+  <li>
+    <p class="term">
+      Will adding this script affect the performance of my website?
+    </p>
+    <p class="description">
+      No, we've put a lot of effort, and used some of the most cutting edge
+      techniques to make sure that our script runs sandboxed without affecting
+      the experience of your users.
+    </p>
+  </li>
+  
+  <li>
+    <p class="term">
+      What kind of info is emitted from this script?
+    </p>
+    <p class="description">
+      We take user privacy seriously. The data retained by our service remain
+      anonymous, and are neither exposed or sold to 3rd parties. We only report
+      what you agree to be reported.
+    </p>
+  </li>
+  
+  <li>
+    <p class="term">
+      Where can I view the source of this script?
+    </p>
+    <p class="description">
+      The script is open sourced on
+      <a href="https://www.github.com/skroutz/analytics.js">github</a>.
+      Feel free to create issues there, or even contribute.
+    </p>
+  </li>
+  
+  <li>
+    <p class="term">
+      Are there any dependencies?
+    </p>
+    <p class="description">
+      No. The script is self-sufficient.
+    </p>
+  </li>
+  
+  <li>
+    <p class="term">
+      What about browser support?
+    </p>
+    <p class="description">
+      The script is tested to work on all modern browsers.
+      [Internet Explorer > 6, Chrome, Firefox, Opera, Safari]
+    </p>
+  </li>
+</ol>
