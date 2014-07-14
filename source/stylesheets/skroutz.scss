@@ -227,6 +227,26 @@ header {
     }
   }
 
+  ol {
+    margin: 15px 15px 20px;
+
+    li {
+      margin-bottom: 3px;
+    }
+  }
+
+  li {
+    .term {
+      font-weight: 700;
+    }
+
+    .description {
+      margin-bottom: 15px;
+      padding-left: 22px;
+      color: $grey-8;
+    }
+  }
+
   // TABLE
 
   table {
