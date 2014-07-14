@@ -3,81 +3,33 @@
   :url: http://skroutz.gr/api/categories/73/children
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer 5JN7RHwWJ9ZPSBEKo0/bskSR0IOfNtETjwmMOPsGKZiXrRnP71w7cZbDZFKBaeNoJAyIKRMKjXeaBeF40Uxg==
+    :authorization: Bearer fYxk5iZjO44DwXwkwP5SW7cHwaqFMbc5riQ4JQFgeVNe1epmAHlDtGjvAPhVAIH1aPLiQt67RSrVasw9o7EEQ==
   :verb: GET
 :response:
   :status: 200
-  :headers: !ruby/hash:Faraday::Utils::Headers
-    server: !binary |-
-      bmdpbng=
-    content-type: !binary |-
-      YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-    !binary "dmFyeQ==": !binary |-
-      QWNjZXB0LUVuY29kaW5n
-    status: !binary |-
-      MjAwIE9L
-    cache-control: !binary |-
-      bWF4LWFnZT0zMDAsIHByaXZhdGU=
-    x-ua-compatible: !binary |-
-      SUU9RWRnZSxjaHJvbWU9MQ==
-    x-request-id: !binary |-
-      MjM2MTI4NDg5NQ==
-    x-runtime: !binary |-
-      MC4wNTcwOTY=
-    x-dns-prefetch-control: !binary |-
-      b2Zm
-    x-app: !binary |-
-      bHVua3dpbGw=
-    content-length: !binary |-
-      MzYy
-    accept-ranges: !binary |-
-      Ynl0ZXM=
-    date: !binary |-
-      TW9uLCAwNyBKdWwgMjAxNCAxMzowNTowMyBHTVQ=
-    x-varnish: !binary |-
-      MjM2MTI4NDg5NQ==
-    age: !binary |-
-      MA==
-    via: !binary |-
-      MS4xIHZhcm5pc2g=
-    connection: !binary |-
-      Y2xvc2U=
-    x-origin: !binary |-
-      dmFybmlzaDI=
-    x-cache: !binary |-
-      TUlTUw==
-  :body: !binary |-
-    eyJjYXRlZ29yaWVzIjpbeyJpZCI6MTA2LCJuYW1lIjoiXHUwM2EzXHUwM2M1
-    XHUwM2JkXHUwM2I0XHUwM2FkXHUwM2MzXHUwM2I1XHUwM2I5XHUwM2MyIElu
-    dGVybmV0IiwiY2hpbGRyZW5fY291bnQiOjAsImltYWdlX3VybCI6Imh0dHA6
-    Ly9jLnNjZG4uZ3IvaW1hZ2VzL2NhdGVnb3JpZXMvbGFyZ2UvMTA2LmpwZyIs
-    InBhcmVudF9pZCI6NzMsImZhc2hpb24iOmZhbHNlLCJzaG93X3NwZWNpZmlj
-    YXRpb25zIjpmYWxzZSwibWFudWZhY3R1cmVyX3RpdGxlIjoiXHUwMzlhXHUw
-    M2IxXHUwM2M0XHUwM2IxXHUwM2MzXHUwM2JhXHUwM2I1XHUwM2M1XHUwM2Ix
-    XHUwM2MzXHUwM2M0XHUwM2FkXHUwM2MyIn0seyJpZCI6MTA3LCJuYW1lIjoi
-    XHUwMzk1XHUwM2MwXHUwM2I1XHUwM2JhXHUwM2M0XHUwM2FjXHUwM2MzXHUw
-    M2I1XHUwM2I5XHUwM2MyIFx1MDM5NVx1MDNiM1x1MDNiM1x1MDNjZFx1MDNi
-    N1x1MDNjM1x1MDNiN1x1MDNjMiIsImNoaWxkcmVuX2NvdW50IjowLCJpbWFn
-    ZV91cmwiOiJodHRwOi8vYy5zY2RuLmdyL2ltYWdlcy9jYXRlZ29yaWVzL2xh
-    cmdlLzEwNy5qcGciLCJwYXJlbnRfaWQiOjczLCJmYXNoaW9uIjpmYWxzZSwi
-    c2hvd19zcGVjaWZpY2F0aW9ucyI6ZmFsc2UsIm1hbnVmYWN0dXJlcl90aXRs
-    ZSI6Ilx1MDM5YVx1MDNiMVx1MDNjNFx1MDNiMVx1MDNjM1x1MDNiYVx1MDNi
-    NVx1MDNjNVx1MDNiMVx1MDNjM1x1MDNjNFx1MDNhZFx1MDNjMiJ9LHsiaWQi
-    OjM2NCwibmFtZSI6Ilx1MDNhNVx1MDNjMFx1MDNiN1x1MDNjMVx1MDNiNVx1
-    MDNjM1x1MDNhZlx1MDNiNVx1MDNjMiBJbnRlcm5ldCIsImNoaWxkcmVuX2Nv
-    dW50IjowLCJpbWFnZV91cmwiOiJodHRwOi8vYy5zY2RuLmdyL2ltYWdlcy9j
-    YXRlZ29yaWVzL2xhcmdlLzM2NC5qcGciLCJwYXJlbnRfaWQiOjczLCJmYXNo
-    aW9uIjpmYWxzZSwic2hvd19zcGVjaWZpY2F0aW9ucyI6ZmFsc2UsIm1hbnVm
-    YWN0dXJlcl90aXRsZSI6Ilx1MDM5YVx1MDNiMVx1MDNjNFx1MDNiMVx1MDNj
-    M1x1MDNiYVx1MDNiNVx1MDNjNVx1MDNiMVx1MDNjM1x1MDNjNFx1MDNhZFx1
-    MDNjMiJ9LHsiaWQiOjM2NSwibmFtZSI6Ilx1MDM5NFx1MDNiOVx1MDNhY1x1
-    MDNjNlx1MDNiZlx1MDNjMVx1MDNiNVx1MDNjMiBcdTAzYTVcdTAzYzBcdTAz
-    YjdcdTAzYzFcdTAzYjVcdTAzYzNcdTAzYWZcdTAzYjVcdTAzYzIiLCJjaGls
-    ZHJlbl9jb3VudCI6MCwiaW1hZ2VfdXJsIjoiaHR0cDovL2Muc2Nkbi5nci9p
-    bWFnZXMvY2F0ZWdvcmllcy9sYXJnZS8zNjUuanBnIiwicGFyZW50X2lkIjo3
-    MywiZmFzaGlvbiI6ZmFsc2UsInNob3dfc3BlY2lmaWNhdGlvbnMiOmZhbHNl
-    LCJtYW51ZmFjdHVyZXJfdGl0bGUiOiJcdTAzOWFcdTAzYjFcdTAzYzRcdTAz
-    YjFcdTAzYzNcdTAzYmFcdTAzYjVcdTAzYzVcdTAzYjFcdTAzYzNcdTAzYzRc
-    dTAzYWRcdTAzYzIifV0sIm1ldGEiOnsicGFnaW5hdGlvbiI6eyJ0b3RhbF9y
-    ZXN1bHRzIjo0LCJ0b3RhbF9wYWdlcyI6MSwicGFnZSI6MSwicGVyIjoyNX19
-    fQ==
+  :headers:
+    server: nginx
+    content-type: application/json; charset=utf-8
+    !binary "dmFyeQ==": Accept-Encoding
+    status: 200 OK
+    cache-control: max-age=300, private
+    x-ua-compatible: IE=Edge,chrome=1
+    x-request-id: '2406163796'
+    x-runtime: '0.056366'
+    x-dns-prefetch-control: 'off'
+    x-app: lunkwill
+    content-length: '362'
+    accept-ranges: bytes
+    date: Mon, 14 Jul 2014 12:06:27 GMT
+    x-varnish: '2406163796'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: varnish2
+    x-cache: MISS
+  :body: ! '{"categories":[{"id":106,"name":"\u03a3\u03c5\u03bd\u03b4\u03ad\u03c3\u03b5\u03b9\u03c2
+    Internet","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/106.jpg","parent_id":73,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"},{"id":107,"name":"\u0395\u03c0\u03b5\u03ba\u03c4\u03ac\u03c3\u03b5\u03b9\u03c2
+    \u0395\u03b3\u03b3\u03cd\u03b7\u03c3\u03b7\u03c2","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/107.jpg","parent_id":73,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"},{"id":365,"name":"\u0394\u03b9\u03ac\u03c6\u03bf\u03c1\u03b5\u03c2
+    \u03a5\u03c0\u03b7\u03c1\u03b5\u03c3\u03af\u03b5\u03c2","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/365.jpg","parent_id":73,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"},{"id":364,"name":"\u03a5\u03c0\u03b7\u03c1\u03b5\u03c3\u03af\u03b5\u03c2
+    Internet","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/364.jpg","parent_id":73,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"}],"meta":{"pagination":{"total_results":4,"total_pages":1,"page":1,"per":25}}}'
+:created_at: 2014-07-14 15:06:27.687534660 +03:00

@@ -3,53 +3,32 @@
   :url: http://skroutz.gr/api/search?q=%CE%B9%CF%80%CE%B7%CE%BF%CE%BD%CE%B5
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer 5JN7RHwWJ9ZPSBEKo0/bskSR0IOfNtETjwmMOPsGKZiXrRnP71w7cZbDZFKBaeNoJAyIKRMKjXeaBeF40Uxg==
+    :authorization: Bearer fYxk5iZjO44DwXwkwP5SW7cHwaqFMbc5riQ4JQFgeVNe1epmAHlDtGjvAPhVAIH1aPLiQt67RSrVasw9o7EEQ==
   :params:
     :page: 1
     :per: 2
   :verb: GET
 :response:
   :status: 200
-  :headers: !ruby/hash:Faraday::Utils::Headers
-    server: !binary |-
-      bmdpbng=
-    content-type: !binary |-
-      YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-    !binary "dmFyeQ==": !binary |-
-      QWNjZXB0LUVuY29kaW5n
-    status: !binary |-
-      MjAwIE9L
-    x-ua-compatible: !binary |-
-      SUU9RWRnZSxjaHJvbWU9MQ==
-    cache-control: !binary |-
-      bWF4LWFnZT0wLCBwcml2YXRlLCBtdXN0LXJldmFsaWRhdGU=
-    x-request-id: !binary |-
-      MjM2MTI5OTgyNA==
-    x-runtime: !binary |-
-      MC4wNTU2Mjg=
-    x-dns-prefetch-control: !binary |-
-      b2Zm
-    x-app: !binary |-
-      bHVua3dpbGw=
-    content-length: !binary |-
-      MTAx
-    accept-ranges: !binary |-
-      Ynl0ZXM=
-    date: !binary |-
-      TW9uLCAwNyBKdWwgMjAxNCAxMzowNzoxMCBHTVQ=
-    x-varnish: !binary |-
-      MjM2MTI5OTgyNA==
-    age: !binary |-
-      MA==
-    via: !binary |-
-      MS4xIHZhcm5pc2g=
-    connection: !binary |-
-      Y2xvc2U=
-    x-origin: !binary |-
-      dmFybmlzaDI=
-    x-cache: !binary |-
-      TUlTUw==
-  :body: !binary |-
-    eyJjYXRlZ29yaWVzIjpbXSwibWV0YSI6eyJhbHRlcm5hdGl2ZXMiOlt7InRl
-    cm0iOiJpcGhvbmUiLCJpbXBvcnRhbnQiOnRydWV9XSwic3Ryb25nX21hdGNo
-    ZXMiOnt9fX0=
+  :headers:
+    server: nginx
+    content-type: application/json; charset=utf-8
+    !binary "dmFyeQ==": Accept-Encoding
+    status: 200 OK
+    x-ua-compatible: IE=Edge,chrome=1
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '2406164012'
+    x-runtime: '0.057947'
+    x-dns-prefetch-control: 'off'
+    x-app: lunkwill
+    content-length: '101'
+    accept-ranges: bytes
+    date: Mon, 14 Jul 2014 12:06:29 GMT
+    x-varnish: '2406164012'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: varnish2
+    x-cache: MISS
+  :body: ! '{"categories":[],"meta":{"alternatives":[{"term":"iphone","important":true}],"strong_matches":{}}}'
+:created_at: 2014-07-14 15:06:29.460752791 +03:00

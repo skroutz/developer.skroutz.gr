@@ -3,54 +3,29 @@
   :url: http://skroutz.gr/api/categories/root
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer 5JN7RHwWJ9ZPSBEKo0/bskSR0IOfNtETjwmMOPsGKZiXrRnP71w7cZbDZFKBaeNoJAyIKRMKjXeaBeF40Uxg==
+    :authorization: Bearer fYxk5iZjO44DwXwkwP5SW7cHwaqFMbc5riQ4JQFgeVNe1epmAHlDtGjvAPhVAIH1aPLiQt67RSrVasw9o7EEQ==
   :verb: GET
 :response:
   :status: 200
-  :headers: !ruby/hash:Faraday::Utils::Headers
-    server: !binary |-
-      bmdpbng=
-    content-type: !binary |-
-      YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-    !binary "dmFyeQ==": !binary |-
-      QWNjZXB0LUVuY29kaW5n
-    status: !binary |-
-      MjAwIE9L
-    cache-control: !binary |-
-      bWF4LWFnZT0zMDAsIHByaXZhdGU=
-    x-ua-compatible: !binary |-
-      SUU9RWRnZSxjaHJvbWU9MQ==
-    x-request-id: !binary |-
-      MjM2MTI4MzUzMw==
-    x-runtime: !binary |-
-      MC4wMzMyNTM=
-    x-dns-prefetch-control: !binary |-
-      b2Zm
-    x-app: !binary |-
-      bHVua3dpbGw=
-    content-length: !binary |-
-      MjAx
-    accept-ranges: !binary |-
-      Ynl0ZXM=
-    date: !binary |-
-      TW9uLCAwNyBKdWwgMjAxNCAxMzowNDo1MiBHTVQ=
-    x-varnish: !binary |-
-      MjM2MTI4MzUzMw==
-    age: !binary |-
-      MA==
-    via: !binary |-
-      MS4xIHZhcm5pc2g=
-    connection: !binary |-
-      Y2xvc2U=
-    x-origin: !binary |-
-      dmFybmlzaDI=
-    x-cache: !binary |-
-      TUlTUw==
-  :body: !binary |-
-    eyJjYXRlZ29yeSI6eyJpZCI6NzYsIm5hbWUiOiJTa3JvdXR6IiwiY2hpbGRy
-    ZW5fY291bnQiOjYsImltYWdlX3VybCI6Imh0dHA6Ly9jLnNjZG4uZ3IvaW1h
-    Z2VzL2NhdGVnb3JpZXMvbGFyZ2UvNzYuanBnIiwicGFyZW50X2lkIjowLCJm
-    YXNoaW9uIjpmYWxzZSwic2hvd19zcGVjaWZpY2F0aW9ucyI6ZmFsc2UsIm1h
-    bnVmYWN0dXJlcl90aXRsZSI6Ilx1MDM5YVx1MDNiMVx1MDNjNFx1MDNiMVx1
-    MDNjM1x1MDNiYVx1MDNiNVx1MDNjNVx1MDNiMVx1MDNjM1x1MDNjNFx1MDNh
-    ZFx1MDNjMiJ9fQ==
+  :headers:
+    server: nginx
+    content-type: application/json; charset=utf-8
+    !binary "dmFyeQ==": Accept-Encoding
+    status: 200 OK
+    cache-control: max-age=300, private
+    x-ua-compatible: IE=Edge,chrome=1
+    x-request-id: '2406163755'
+    x-runtime: '0.041067'
+    x-dns-prefetch-control: 'off'
+    x-app: lunkwill
+    content-length: '201'
+    accept-ranges: bytes
+    date: Mon, 14 Jul 2014 12:06:27 GMT
+    x-varnish: '2406163755'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: varnish2
+    x-cache: MISS
+  :body: ! '{"category":{"id":76,"name":"Skroutz","children_count":6,"image_url":"http://c.scdn.gr/images/categories/large/76.jpg","parent_id":0,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"}}'
+:created_at: 2014-07-14 15:06:27.385303758 +03:00

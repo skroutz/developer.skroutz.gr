@@ -3,26 +3,29 @@
   :url: http://skroutz.gr/api/skus/345333/favorite
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer 5JN7RHwWJ9ZPSBEKo0/bskSR0IOfNtETjwmMOPsGKZiXrRnP71w7cZbDZFKBaeNoJAyIKRMKjXeaBeF40Uxg==
+    :authorization: Bearer fYxk5iZjO44DwXwkwP5SW7cHwaqFMbc5riQ4JQFgeVNe1epmAHlDtGjvAPhVAIH1aPLiQt67RSrVasw9o7EEQ==
   :verb: GET
 :response:
-  :status: 401
-  :headers: !ruby/hash:Faraday::Utils::Headers
+  :status: 200
+  :headers:
     server: nginx
     content-type: application/json; charset=utf-8
-    status: 401 Unauthorized
+    !binary "dmFyeQ==": Accept-Encoding
+    status: 200 OK
     x-ua-compatible: IE=Edge,chrome=1
-    cache-control: no-cache
-    x-request-id: '2361304401'
-    x-runtime: '0.026399'
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '2406164181'
+    x-runtime: '0.049031'
+    x-dns-prefetch-control: 'off'
     x-app: lunkwill
-    content-length: '51'
+    content-length: '150'
     accept-ranges: bytes
-    date: Mon, 07 Jul 2014 13:07:49 GMT
-    x-varnish: '2361304401'
+    date: Mon, 14 Jul 2014 12:06:30 GMT
+    x-varnish: '2406164181'
     age: '0'
     via: 1.1 varnish
     connection: close
     x-origin: varnish2
     x-cache: MISS
-  :body: ! '{"error":"invalid_token :: User token is required"}'
+  :body: ! '{"favorites":[{"id":254728,"have_it":true,"user_id":132950,"user_notes":null,"sku_id":345333,"created_at":"2013-04-12T00:57:44+03:00","updated_at":"2013-07-16T23:11:00+03:00"}]}'
+:created_at: 2014-07-14 15:06:30.819833032 +03:00

@@ -1,48 +1,32 @@
 ---
 :request:
-  :url: http://skroutz.gr/api/products/13313788
+  :url: http://skroutz.gr/api/products/12176638
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer 5JN7RHwWJ9ZPSBEKo0/bskSR0IOfNtETjwmMOPsGKZiXrRnP71w7cZbDZFKBaeNoJAyIKRMKjXeaBeF40Uxg==
+    :authorization: Bearer fYxk5iZjO44DwXwkwP5SW7cHwaqFMbc5riQ4JQFgeVNe1epmAHlDtGjvAPhVAIH1aPLiQt67RSrVasw9o7EEQ==
   :verb: GET
 :response:
-  :status: 404
-  :headers: !ruby/hash:Faraday::Utils::Headers
-    server: !binary |-
-      bmdpbng=
-    content-type: !binary |-
-      YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-    !binary "dmFyeQ==": !binary |-
-      QWNjZXB0LUVuY29kaW5n
-    status: !binary |-
-      NDA0IE5vdCBGb3VuZA==
-    cache-control: !binary |-
-      bWF4LWFnZT0zMDAsIHByaXZhdGU=
-    x-ua-compatible: !binary |-
-      SUU9RWRnZSxjaHJvbWU9MQ==
-    x-request-id: !binary |-
-      MjM2MTMwNDQ1MQ==
-    x-runtime: !binary |-
-      MC4wMjE4OTM=
-    x-app: !binary |-
-      bHVua3dpbGw=
-    content-length: !binary |-
-      NjI=
-    accept-ranges: !binary |-
-      Ynl0ZXM=
-    date: !binary |-
-      TW9uLCAwNyBKdWwgMjAxNCAxMzowNzo1MCBHTVQ=
-    x-varnish: !binary |-
-      MjM2MTMwNDQ1MQ==
-    age: !binary |-
-      MA==
-    via: !binary |-
-      MS4xIHZhcm5pc2g=
-    connection: !binary |-
-      Y2xvc2U=
-    x-origin: !binary |-
-      dmFybmlzaDI=
-    x-cache: !binary |-
-      TUlTUw==
-  :body: !binary |-
-    WW91IHJlcXVlc3RlZCBzb21ldGhpbmcgdGhhdCBkb2VzIG5vdCBleGlzdA==
+  :status: 200
+  :headers:
+    server: nginx
+    content-type: application/json; charset=utf-8
+    !binary "dmFyeQ==": Accept-Encoding
+    status: 200 OK
+    cache-control: max-age=300, private
+    x-ua-compatible: IE=Edge,chrome=1
+    x-request-id: '2406164200'
+    x-runtime: '0.038350'
+    x-dns-prefetch-control: 'off'
+    x-app: lunkwill
+    content-length: '261'
+    accept-ranges: bytes
+    date: Mon, 14 Jul 2014 12:06:30 GMT
+    x-varnish: '2406164200'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: varnish2
+    x-cache: MISS
+  :body: ! '{"product":{"id":12176638,"name":"SAMSUNG E1200","sku_id":2119391,"shop_id":670,"category_id":40,"availability":"\u039a\u03b1\u03c4\u03cc\u03c0\u03b9\u03bd
+    \u03a0\u03b1\u03c1\u03b1\u03b3\u03b3\u03b5\u03bb\u03af\u03b1\u03c2","click_url":"https://www.skroutz.gr/products/show/12176638?client_id=8oZYTomOpA73fxIrDfkTzg%3D%3D&from=api","price":13.82}}'
+:created_at: 2014-07-14 15:06:30.911713958 +03:00

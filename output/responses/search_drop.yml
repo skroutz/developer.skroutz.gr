@@ -3,56 +3,31 @@
   :url: http://skroutz.gr/api/search
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer 5JN7RHwWJ9ZPSBEKo0/bskSR0IOfNtETjwmMOPsGKZiXrRnP71w7cZbDZFKBaeNoJAyIKRMKjXeaBeF40Uxg==
+    :authorization: Bearer fYxk5iZjO44DwXwkwP5SW7cHwaqFMbc5riQ4JQFgeVNe1epmAHlDtGjvAPhVAIH1aPLiQt67RSrVasw9o7EEQ==
   :params:
     :q: wrong iphone
   :verb: GET
 :response:
   :status: 200
-  :headers: !ruby/hash:Faraday::Utils::Headers
-    server: !binary |-
-      bmdpbng=
-    content-type: !binary |-
-      YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-    !binary "dmFyeQ==": !binary |-
-      QWNjZXB0LUVuY29kaW5n
-    status: !binary |-
-      MjAwIE9L
-    x-ua-compatible: !binary |-
-      SUU9RWRnZSxjaHJvbWU9MQ==
-    cache-control: !binary |-
-      bWF4LWFnZT0wLCBwcml2YXRlLCBtdXN0LXJldmFsaWRhdGU=
-    x-request-id: !binary |-
-      MjM2MTMwMTkxOA==
-    x-runtime: !binary |-
-      MC4xMTI2MDM=
-    x-dns-prefetch-control: !binary |-
-      b2Zm
-    x-app: !binary |-
-      bHVua3dpbGw=
-    content-length: !binary |-
-      MTY2
-    accept-ranges: !binary |-
-      Ynl0ZXM=
-    date: !binary |-
-      TW9uLCAwNyBKdWwgMjAxNCAxMzowNzoyOSBHTVQ=
-    x-varnish: !binary |-
-      MjM2MTMwMTkxOA==
-    age: !binary |-
-      MA==
-    via: !binary |-
-      MS4xIHZhcm5pc2g=
-    connection: !binary |-
-      Y2xvc2U=
-    x-origin: !binary |-
-      dmFybmlzaDI=
-    x-cache: !binary |-
-      TUlTUw==
-  :body: !binary |-
-    eyJjYXRlZ29yaWVzIjpbXSwibWV0YSI6eyJhbHRlcm5hdGl2ZXMiOlt7InRl
-    cm0iOiJ3cm9uZyIsImNvdW50IjoyNSwiZHJvcCI6W3sidG9rZW4iOiJ3cm9u
-    ZyIsImRyb3BwZWQiOmZhbHNlfSx7InRva2VuIjoiaXBob25lIiwiZHJvcHBl
-    ZCI6dHJ1ZX1dLCJpbXBvcnRhbnQiOmZhbHNlfSx7InRlcm0iOiJpcGhvbmUi
-    LCJjb3VudCI6MTc3ODIsImRyb3AiOlt7InRva2VuIjoid3JvbmciLCJkcm9w
-    cGVkIjp0cnVlfSx7InRva2VuIjoiaXBob25lIiwiZHJvcHBlZCI6ZmFsc2V9
-    XSwiaW1wb3J0YW50IjpmYWxzZX1dLCJzdHJvbmdfbWF0Y2hlcyI6e319fQ==
+  :headers:
+    server: nginx
+    content-type: application/json; charset=utf-8
+    !binary "dmFyeQ==": Accept-Encoding
+    status: 200 OK
+    x-ua-compatible: IE=Edge,chrome=1
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '2406164041'
+    x-runtime: '0.067751'
+    x-dns-prefetch-control: 'off'
+    x-app: lunkwill
+    content-length: '167'
+    accept-ranges: bytes
+    date: Mon, 14 Jul 2014 12:06:29 GMT
+    x-varnish: '2406164041'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: varnish2
+    x-cache: MISS
+  :body: ! '{"categories":[],"meta":{"alternatives":[{"term":"wrong","count":21,"drop":[{"token":"wrong","dropped":false},{"token":"iphone","dropped":true}],"important":false},{"term":"iphone","count":18375,"drop":[{"token":"wrong","dropped":true},{"token":"iphone","dropped":false}],"important":false}],"strong_matches":{}}}'
+:created_at: 2014-07-14 15:06:29.677550867 +03:00
