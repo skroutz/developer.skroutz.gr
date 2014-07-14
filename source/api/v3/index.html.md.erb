@@ -52,7 +52,7 @@ Resource Foo has "linked resources: bar"
 
 Case: embed
 
-<pre>
+<pre class="terminal">
   <code>GET /foos/42?embed=bars</code>
 </pre>
 
@@ -71,7 +71,7 @@ Case: embed
 
 Case: embed_ids
 
-<pre>
+<pre class="terminal">
   <code>GET /foos/42?embed_ids=bars</code>
 </pre>
 
@@ -87,7 +87,7 @@ Case: embed_ids
 Case: include
 
 
-<pre>
+<pre class="terminal">
   <code>GET /foos?include=bars</code>
 </pre>
 
@@ -126,7 +126,7 @@ $ curl https://api.skroutz.gr/categories?page=2&per=10
 </pre>
 
 When there are other pages the response will contain the [Link](http://tools.ietf.org/html/rfc5988) header.
-    
+
     Link
 
     <https://api.skroutz.gr/categories?page=508&per=4>; rel="last",
@@ -305,7 +305,10 @@ plus the relevant HTTP Header information.
 
 <pre class="terminal">
 $ curl https://api.skroutz.gr/categories/1442?callback=foo
+</pre>
 
+
+~~~ javascript
 foo({
   "meta": {
     "status": 200
@@ -319,4 +322,4 @@ foo({
     }
   }
 })
-</pre>
+~~~
