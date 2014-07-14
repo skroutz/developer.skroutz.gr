@@ -67,20 +67,20 @@ The `setAccount` command initializes the tracker object for your Account. This i
 
 ##### Data Parameters:
 <table>
-    <thead>
-        <th>Value</th>
-        <th>Type</th>
-        <th>Required</th>
-        <th>Description</th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>shop_account_id</td>
-            <td>String</td>
-            <td><strong>Yes</strong></td>
-            <td>The unique <em>Shop Account ID</em> that you received from us. (e.g. SA-XXXX-Y)</td>
-        </tr>
-    </tbody>
+  <thead>
+    <th>Value</th>
+    <th>Type</th>
+    <th>Required</th>
+    <th>Description</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>shop_account_id</td>
+      <td>String</td>
+      <td><strong>Yes</strong></td>
+      <td>The unique <em>Shop Account ID</em> that you received from us. (e.g. SA-XXXX-Y)</td>
+    </tr>
+  </tbody>
 </table>
 
 
@@ -91,38 +91,38 @@ The `addOrder` command creates a shopping cart object.
 
 ##### Data Parameters:
 <table>
-    <thead>
-        <th>Value</th>
-        <th>Type</th>
-        <th>Required</th>
-        <th>Description</th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>order_id</td>
-            <td>String</td>
-            <td><strong>Yes</strong></td>
-            <td>The Order ID that produced and stored at your e-shop to identify the transaction. This id is what links items to the orders to which they belong. (e.g. 123456)</td>
-        </tr>
-        <tr>
-            <td>revenue</td>
-            <td>String</td>
-            <td>No</td>
-            <td>The total revenue or grand total of the order (e.g. 120.99). This value may include shipping, tax costs, or other adjustments to total revenue that you want to include as part of your revenue calculations.</td>
-        </tr>
-        <tr>
-            <td>shipping</td>
-            <td>String</td>
-            <td>No</td>
-            <td>The total shipping cost of the order. (e.g. 5.45)</td>
-        </tr>
-        <tr>
-            <td>tax</td>
-            <td>String</td>
-            <td>No</td>
-            <td>The total tax of the order. (e.g. 10.50)</td>
-        </tr>
-    </tbody>
+  <thead>
+    <th>Value</th>
+    <th>Type</th>
+    <th>Required</th>
+    <th>Description</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>order_id</td>
+      <td>String</td>
+      <td><strong>Yes</strong></td>
+      <td>The Order ID that produced and stored at your e-shop to identify the transaction. This id is what links items to the orders to which they belong. (e.g. 123456)</td>
+    </tr>
+    <tr>
+      <td>revenue</td>
+      <td>String</td>
+      <td>No</td>
+      <td>The total revenue or grand total of the order (e.g. 120.99). This value may include shipping, tax costs, or other adjustments to total revenue that you want to include as part of your revenue calculations.</td>
+    </tr>
+    <tr>
+      <td>shipping</td>
+      <td>String</td>
+      <td>No</td>
+      <td>The total shipping cost of the order. (e.g. 5.45)</td>
+    </tr>
+    <tr>
+      <td>tax</td>
+      <td>String</td>
+      <td>No</td>
+      <td>The total tax of the order. (e.g. 10.50)</td>
+    </tr>
+  </tbody>
 </table>
 
 ##### Example
@@ -141,38 +141,38 @@ The `addItem` command adds a new item to the shopping cart object.
 
 ##### Data Parameters:
 <table>
-    <thead>
-        <th>Value</th>
-        <th>Type</th>
-        <th>Required</th>
-        <th>Description</th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>order_id</td>
-            <td>String</td>
-            <td><strong>Yes</strong></td>
-            <td>The Order ID that produced and stored at your e-shop to identify the transaction. This id is what links items to the orders to which they belong. (e.g. 123456)</td>
-        </tr>
-        <tr>
-            <td>product_id</td>
-            <td>String</td>
-            <td><strong>Yes</strong></td>
-            <td>The id of the product as stored at your e-shop. (e.g. 987)</td>
-        </tr>
-        <tr>
-            <td>price</td>
-            <td>String</td>
-            <td><strong>Yes</strong></td>
-            <td>The individual, unit, final price for each item. (e.g. 10.50)</td>
-        </tr>
-        <tr>
-            <td>quantity</td>
-            <td>String</td>
-            <td><strong>Yes</strong></td>
-            <td>The number of units purchased in the order. (e.g. 4)</td>
-        </tr>
-    </tbody>
+  <thead>
+    <th>Value</th>
+    <th>Type</th>
+    <th>Required</th>
+    <th>Description</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>order_id</td>
+      <td>String</td>
+      <td><strong>Yes</strong></td>
+      <td>The Order ID that produced and stored at your e-shop to identify the transaction. This id is what links items to the orders to which they belong. (e.g. 123456)</td>
+    </tr>
+    <tr>
+      <td>product_id</td>
+      <td>String</td>
+      <td><strong>Yes</strong></td>
+      <td>The id of the product as stored at your e-shop. (e.g. 987)</td>
+    </tr>
+    <tr>
+      <td>price</td>
+      <td>String</td>
+      <td><strong>Yes</strong></td>
+      <td>The individual, unit, final price for each item. (e.g. 10.50)</td>
+    </tr>
+    <tr>
+      <td>quantity</td>
+      <td>String</td>
+      <td><strong>Yes</strong></td>
+      <td>The number of units purchased in the order. (e.g. 4)</td>
+    </tr>
+  </tbody>
 </table>
 
 ##### Example
