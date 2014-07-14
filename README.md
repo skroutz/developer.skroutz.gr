@@ -1,25 +1,21 @@
 # developer.skroutz.gr
 
-This is the Skroutz developer platform built with [nanoc][nanoc].
+This is the Skroutz developer platform built with [middleman][middleman].
 
 Submissions are welcome.
 
 ## Contributing
 The following steps will get you started
 
-1. `git pull`                # make sure you get latest changes
-* `bundle install`          # make sure dependencies are met
-* `bundle exec guard`       # have changes autocompiled (leave it running)
-* `bundle exec nanoc view`  # start a local webserver to view the compiled static files found in `./output`
+1. `git pull`                     # make sure you get latest changes
+* `bundle install`                # make sure dependencies are met
+* `bundle exec middleman server`  # have changes auto-compiled (leave it running)
 * Submit pull request
 
 If you have deploy rights you may:
 * `bundle exec rake deploy` # deploy changes
 
-[nanoc]: http://nanoc.stoneship.org/
-
-If your interested in performing non-trivial changes (eg. structural)
-you are suggested to read [nanoc documentation](http://nanoc.stoneship.org/docs/3-getting-started/)
+[middleman]: http://middlemanapp.com/
 
 ## Styleguide
 
