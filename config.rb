@@ -1,4 +1,5 @@
 require 'lib/code_example_helper'
+require 'lib/response_mate_helper'
 
 page 'index.html', layout: false, sidebar: 'koko'
 
@@ -20,6 +21,7 @@ activate :syntax, line_numbers: false
 # Helpers
 ###
 helpers CodeExampleHelper
+helpers ResponseMateHelper
 
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
