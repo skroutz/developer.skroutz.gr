@@ -187,9 +187,20 @@ header {
   }
 
   h3 {
-    font-size: 16px;
-    margin: 20px 0;
+    font-size: 18px;
+    margin: 30px 0 15px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e0e0e0;
     color: $black;
+  }
+
+  h4 {
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+
+  h5 {
+    margin-top: 15px;
   }
 
   // EMPHASIZED LINK
@@ -212,7 +223,8 @@ header {
     margin: 20px auto;
     padding: 10px;
     background-color: $grey-3;
-    border-left: 10px solid $grey-6;
+    border-left: 8px solid $grey-6;
+    border-radius: 4px;
   }
 
   // LISTS
@@ -252,7 +264,7 @@ header {
   table {
     font-size: 13px;
     width: 100%;
-    margin: 20px auto;
+    margin: 10px auto 30px;
     background: #fff;
     -moz-box-shadow: 1px 1px 3px #ebebec, -1px -1px 3px #ebebec;
     -webkit-box-shadow: 1px 1px 3px #ebebec, -1px -1px 3px #ebebec;
@@ -664,7 +676,7 @@ pre > code.highlight {
 }
 
 pre {
-  margin: 15px auto 20px;
+  margin: 10px auto 30px;
   border: 1px solid rgba(128, 128, 128, 0.125);
   padding: 10px;
   overflow: auto;
