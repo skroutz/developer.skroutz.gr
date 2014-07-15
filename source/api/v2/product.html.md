@@ -1,118 +1,137 @@
 ---
-title: Product | Skroutz API v2
+title: API Προϊόντων | Skroutz API v2
 ---
 
-## API Προϊόντων ##
+# API Προϊόντων
 
-### Εύρεση Sku ###
+* toc
+{:toc}
 
-    # Με βάση το id
-    /sku/:sku_id/
-    
-    # Με βάση τον κωδικό προιόντος <sku> που έχει στο κατάστημα με shop_id <shop_id>
-    /sku/lookup/shop/:shop_id/sku/:sku/
 
-    # Με βάση το part number του κατασκευαστή
-    /sku/lookup/pn/:pn/
+## Εύρεση SKU
 
-    # Με βάση το barcode
-    /sku/lookup/barcode/:barcode/
+### Με βάση το id
+
+<pre class="terminal">
+GET  /sku/:sku_id/
+</pre>
+
+### Με βάση τον κωδικό προιόντος `sku` που έχει στο κατάστημα με shop_id `shop_id`
+
+<pre class="terminal">
+GET /sku/lookup/shop/:shop_id/sku/:sku/
+</pre>
+
+### Με βάση το part number του κατασκευαστή
+
+<pre class="terminal">
+GET /sku/lookup/pn/:pn/
+</pre>
+
+# Με βάση το barcode
+<pre class="terminal">
+GET /sku/lookup/barcode/:barcode/
+</pre>
 
 **Returns:** Sku
 
-    $ curl -F 'access_token=36c57b67...'  http://apiv2.skroutz.gr/xml/sku/13304/
-    ---
-    <?xml version="1.0" encoding="UTF-8"?>
-    <SkroutzApi>
-        <type>sku</type>
-        <result>
-            <sku>
-                <id>13304</id>
-                <ean nil="true"></ean>
-                <id>13304</id>
-                <pn nil="true"></pn>
-                <price_max>264.0</price_max>
-                <price_min>264.0</price_min>
-                <display_name>Nokia 6270</display_name>
-                <active_products>
-                    <active_product>
-                        <id>1234</id>
-                        <imageurl>...</imageurl>
-                        <name>
-                            <![CDATA[NOKIA 6270  Κινητό Τηλέφωνο]]>
-                        </name>
-                        <click_url>http://www.skroutz.gr/products/show/1234/</click_url>
-                        <pricevat>264.0</pricevat>
-                        <category>
-                            <children_count>0</children_count>
-                            <id>40</id>
-                            <name>
-                                <![CDATA[Κινητά Τηλέφωνα]]>
-                            </name>
-                            <family_id>2</family_id>
-                            <family_name>
-                                 <![CDATA[Τηλεφωνία]]>
-                            </family_name>
-                        </category>
-                        <shop>
-                            <free_from>90</free_from>
-                            <free_from_info></free_from_info>
-                            <free_shipping>true</free_shipping>
-                            <id>681</id>
-                            <name>
-                                <![CDATA[A-shop]]>
-                            </name>
-                            <reviews_count>2</reviews_count>
-                            <reviewscore>3.0</reviewscore>
-                            <spot_cash>true</spot_cash>
-                            <spot_cash_cost>0.0</spot_cash_cost>
-                            <image_url>http://www.skroutz.gr/...</image_url>
-                        </shop>
-                        </active_product>
-                    <active_product>
-                    </active_product>
-                </active_products>
-                <category>
-                    <children_count>0</children_count>
-                    <id>40</id>
+<pre class="terminal">
+$ curl -F 'access_token=36c57b67...'  http://apiv2.skroutz.gr/xml/sku/13304/
+</pre>
+
+~~~ xml
+<?xml version="1.0" encoding="UTF-8"?>
+<SkroutzApi>
+    <type>sku</type>
+    <result>
+        <sku>
+            <id>13304</id>
+            <ean nil="true"></ean>
+            <id>13304</id>
+            <pn nil="true"></pn>
+            <price_max>264.0</price_max>
+            <price_min>264.0</price_min>
+            <display_name>Nokia 6270</display_name>
+            <active_products>
+                <active_product>
+                    <id>1234</id>
+                    <imageurl>...</imageurl>
                     <name>
-                        <![CDATA[Κινητά Τηλέφωνα]]>
+                        <![CDATA[NOKIA 6270  Κινητό Τηλέφωνο]]>
                     </name>
-                </category>
-                <sku_reviews>
-                    <sku_review>
-                        <created_on>2007-12-10T10:53:09+02:00</created_on>
-                        <positives>
-                            <![CDATA[Camera, Σήμα κλασσικά Nokia, Κατασκευή]]>
-                        </positives>
-                        <rating>4</rating>
-                        <review>
-                            <![CDATA[Είμαι απόλυτα ευχαριστημένος.]]>
-                        </review>
-                    </sku_review>
-                </sku_reviews>
-                <skuspecs>
-                    <skuspec>
-                        <value>Slide</value>
-                        <specification_name>
-                            <![CDATA[Τύπος Κινητού]]>
-                        </specification_name>
-                        <specification_group>
-                            <![CDATA[Βασικά Χαρακτηριστικά]]>
-                        </specification_group>
-                    </skuspec>
-                    <skuspec>
-                        <value>TFT, 256K colors</value>
-                        <specification_name>
-                            <![CDATA[Τύπος Οθόνης]]>
-                        </specification_name>
-                        <specification_group>
-                            <![CDATA[Τεχνικά Χαρακτηριστικά]]>
-                        </specification_group>
-                    </skuspec>
-                </skuspecs>
-            </sku>
-    
+                    <click_url>http://www.skroutz.gr/products/show/1234/</click_url>
+                    <pricevat>264.0</pricevat>
+                    <category>
+                        <children_count>0</children_count>
+                        <id>40</id>
+                        <name>
+                            <![CDATA[Κινητά Τηλέφωνα]]>
+                        </name>
+                        <family_id>2</family_id>
+                        <family_name>
+                             <![CDATA[Τηλεφωνία]]>
+                        </family_name>
+                    </category>
+                    <shop>
+                        <free_from>90</free_from>
+                        <free_from_info></free_from_info>
+                        <free_shipping>true</free_shipping>
+                        <id>681</id>
+                        <name>
+                            <![CDATA[A-shop]]>
+                        </name>
+                        <reviews_count>2</reviews_count>
+                        <reviewscore>3.0</reviewscore>
+                        <spot_cash>true</spot_cash>
+                        <spot_cash_cost>0.0</spot_cash_cost>
+                        <image_url>http://www.skroutz.gr/...</image_url>
+                    </shop>
+                    </active_product>
+                <active_product>
+                </active_product>
+            </active_products>
+            <category>
+                <children_count>0</children_count>
+                <id>40</id>
+                <name>
+                    <![CDATA[Κινητά Τηλέφωνα]]>
+                </name>
+            </category>
+            <sku_reviews>
+                <sku_review>
+                    <created_on>2007-12-10T10:53:09+02:00</created_on>
+                    <positives>
+                        <![CDATA[Camera, Σήμα κλασσικά Nokia, Κατασκευή]]>
+                    </positives>
+                    <rating>4</rating>
+                    <review>
+                        <![CDATA[Είμαι απόλυτα ευχαριστημένος.]]>
+                    </review>
+                </sku_review>
+            </sku_reviews>
+            <skuspecs>
+                <skuspec>
+                    <value>Slide</value>
+                    <specification_name>
+                        <![CDATA[Τύπος Κινητού]]>
+                    </specification_name>
+                    <specification_group>
+                        <![CDATA[Βασικά Χαρακτηριστικά]]>
+                    </specification_group>
+                </skuspec>
+                <skuspec>
+                    <value>TFT, 256K colors</value>
+                    <specification_name>
+                        <![CDATA[Τύπος Οθόνης]]>
+                    </specification_name>
+                    <specification_group>
+                        <![CDATA[Τεχνικά Χαρακτηριστικά]]>
+                    </specification_group>
+                </skuspec>
+            </skuspecs>
+        </sku>
+~~~ xml
+
 
 ### Κατηγορίες ###
 
