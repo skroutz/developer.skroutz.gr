@@ -3,6 +3,7 @@ require 'lib/response_mate_helper'
 
 page 'index.html', layout: false, sidebar: 'koko'
 
+page 'api/v2/*', sidebar: 'partials/sidebars/api/v2'
 page 'api/v3/*', sidebar: 'partials/sidebars/api/v3'
 page 'guides/*', sidebar: 'partials/sidebars/guides'
 page 'authentication/*', sidebar: 'partials/sidebars/authentication'
