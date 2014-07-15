@@ -1,13 +1,16 @@
 ---
-title: Data Model | Skroutz API v2
+title: Μοντέλο Δεδομένων | Skroutz API v2
 ---
 
-## Μοντέλων Δεδομένων ##
+# Μοντέλο Δεδομένων
 
-### Category ###
+* TOC
+{:toc}
+
+## Category
 
 Η κατηγοριοποίηση του Skroutz.gr αποτελείται από ένα δέντρο περίπου
-800 κατηγορίων. Τα προιόντα και τα Skus ανήκουν **υποχρεωτικά** σε κάποια
+800 κατηγορίων. Τα προϊόντα και τα Skus ανήκουν **υποχρεωτικά** σε κάποια
 τελική κατηγορία, μια κατηγορία δηλαδή χωρίς υποκατηγορίες.
 
 Υπάρχουν δύο τύποι κατηγοριών, αυτές που περιέχουν Sku και αυτές που
@@ -22,7 +25,7 @@ title: Data Model | Skroutz API v2
 * `family_name`
 * `image_url`
 
-### Product ###
+## Product
 
 Το Product αναφέρεται σε ένα συγκεκριμένο προϊόν κάποιου
 καταστήματος. Η ομάδα του Skroutz.gr στις περισσότερες δημοφιλείς
@@ -40,7 +43,7 @@ title: Data Model | Skroutz API v2
  * `Manufacturer`
  * `Shop`
 
-### Sku ###
+## Sku
 
 Το Sku είναι ένα `γενικό προϊόν` που ομαδοποίει όμοια προιόντα ανάμεσα
 στα καταστήματα. Το Sku μπορεί να περιέχει κριτικές ή specifications,
@@ -66,7 +69,7 @@ title: Data Model | Skroutz API v2
  * `Proposals` (type Sku with fewer attrs)
 
 
-### SkuPicture ###
+## SkuPicture
 
 Αποτελείται από τα εξής πεδία:
 
@@ -75,7 +78,7 @@ title: Data Model | Skroutz API v2
 * `small_url`
 * `medium_url`
 
-### Reviews ###
+## Reviews
 
 Αποτελείται από τα εξής πεδία:
 
@@ -87,7 +90,7 @@ title: Data Model | Skroutz API v2
 * `User`
 * `Sku`
 
-### Specifications ###
+## Specifications
 
 Αποτελείται από τα εξής πεδία:
 
@@ -96,7 +99,7 @@ title: Data Model | Skroutz API v2
  * `specification_name`
  * `specification_group`
 
-### Manufacturer ###
+## Manufacturer
 
 Αποτελείται από τα εξής πεδία:
 
@@ -104,7 +107,7 @@ title: Data Model | Skroutz API v2
  * `name`
  * `image_url`
 
-### Shop ###
+## Shop
 
 Αποτελείται από τα εξής πεδία:
 
@@ -142,7 +145,7 @@ title: Data Model | Skroutz API v2
  * `Locations`
  * `ApprovedShopReviews` (type ShopReviews)
 
-### ShopReviews ###
+## ShopReviews
 Αποτελείται από τα εξής πεδία:
 
 * `review`
@@ -150,7 +153,7 @@ title: Data Model | Skroutz API v2
 * `shop_reply`
 * `created_on`
 
-### Location ###
+## Location
 Αποτελείται από τα εξής πεδία:
 
 * `phone`
@@ -158,7 +161,7 @@ title: Data Model | Skroutz API v2
 * `latitude`
 * `longitude`
 
-### Book ###
+## Book
 Ένα sku που ανήκει στην κατηγορία βιβλίων. Αποτελείται από τα εξής
 πεδία:
 
@@ -177,26 +180,26 @@ title: Data Model | Skroutz API v2
 * `ActiveProducts`
 * `Reviews`
 
-### User ###
+## User
 
  * `username`
  * `avatar_url`
 
-### Bookmarklist ###
+## Bookmarklist
 
  * `id`
  * `name`
  * `is_public`
  * `Bookmarks`
 
-### Bookmark ###
+## Bookmark
 
  * `id`
- * `resource_type` `Product` | `Sku` | `Book`
+ * `resource_type` `Product`, `Sku`, `Book`
  * `resource_id`
  * `bookmarklist_id`
 
-### SearchResults ###
+## SearchResults
 
 Τα αποτελέσματα μιας αναζήτησης
 
