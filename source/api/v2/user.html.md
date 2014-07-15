@@ -1,6 +1,5 @@
 ---
-layout: default
-title: ΑPI Χρήστη
+title: User | Skroutz API v2
 ---
 ## API Χρήστη ##
 

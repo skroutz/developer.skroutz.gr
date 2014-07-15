@@ -1,6 +1,5 @@
 ---
-layout: default
-title: Παραδείγματα Widgets
+title: Widgets | Skroutz API v2
 ---
 ## Παραδείγματα για Widget
 

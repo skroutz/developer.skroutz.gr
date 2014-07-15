@@ -1,5 +1,5 @@
 ---
-title: API Προϊόντων
+title: Product | Skroutz API v2
 ---
 
 ## API Προϊόντων ##

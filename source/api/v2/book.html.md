@@ -1,6 +1,5 @@
 ---
-layout: default
-title: API Βιβλίων
+title: Book | Skroutz API v2
 ---
 
 ## API Βιβλίων ##
