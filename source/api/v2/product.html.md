@@ -133,7 +133,7 @@ $ curl -F 'access_token=36c57b67...'  http://apiv2.skroutz.gr/xml/sku/13304/
 ~~~
 
 
-### Κατηγορίες ###
+## Κατηγορίες
 
 #### Εύρεση υποκατηγοριών για μη τελικές κατηγορίες
 
@@ -169,7 +169,7 @@ $ curl -F 'access_token=36c57b67...'  http://apiv2.skroutz.gr/xml/subcategories/
 </SkroutzApi>
 ~~~
 
-### Αναζητήση ###
+## Αναζήτηση
 
 *Γενική* αναζήτηση, δηλαδή αναζήτηση που δεν αναφέρεται σε συγκεκριμένη κατηγορία
 
@@ -179,7 +179,7 @@ $ curl -F 'access_token=36c57b67...'  http://apiv2.skroutz.gr/xml/subcategories/
 GET /search/
 </pre>
 
-#### Μια αναζήτηση μπορεί να επιστρέψει απαντήσεις με type: ####
+### Μια αναζήτηση μπορεί να επιστρέψει απαντήσεις με type:
 
  * `multiple_results` - Βρέθηκαν αποτελέσματα σε πολλαπλές κατηγορίες
    (Οι κατηγορίες που επιστρέφονται είναι πάντα τελικές κατηγορίες)
@@ -228,6 +228,7 @@ $ curl -F 'access_token=36c57b67...' -F 'keyphrase=ipad' http://apiv2.skroutz.gr
  * `category_match` - Το keyphrase είναι το όνομα μια κατηγορίας
 
    **Result:** Category
+
 <pre class="terminal">
 $ curl -F 'access_token=36c57b67...' -F 'keyphrase=Κινητά Τηλέφωνα' \
      http://apiv2.skroutz.gr/xml/search/
@@ -257,6 +258,7 @@ $ curl -F 'access_token=36c57b67...' -F 'keyphrase=Κινητά Τηλέφωνα
  * `manufacturer` - Το keyphrase είναι το όνομα κατασκευαστή
 
    **Result:** Manufacturer
+
 <pre class="terminal">
 $ curl -F 'access_token=36c57b67...' -F 'keyphrase=sony' http://apiv2.skroutz.gr/xml/search/
 </pre>
@@ -417,7 +419,7 @@ $ curl -F 'access_token=36c57b67...' -F 'keyphrase=υποβρύχια κυκλο
 </SkroutzApi>
 ~~~
 
-#### Είδη λαθών: ####
+## Είδη λαθών
 
  * `invalid` - To keyphrase δεν είναι σωστό, π.χ. είναι μικρότερο από 2 χαρακτήρες
 
@@ -436,7 +438,7 @@ $ curl -F 'access_token=36c57b67...' -F 'keyphrase=E' http://apiv2.skroutz.gr/xm
 </SkroutzApi>
 ~~~
 
-#### Correction ####
+## Correction
 
 Σε μια αναζήτηση ενδεχομένως να περιέχεται και το πεδίο `correction`.
 Το πεδίο αυτό προτείνει μια *εναλλακτική αναζήτηση* στον χρήστη.
@@ -446,7 +448,7 @@ $ curl -F 'access_token=36c57b67...' -F 'keyphrase=E' http://apiv2.skroutz.gr/xm
 
 **Χειρισμός:** Αν ο χρήστης το επιλέξει, εκ νέου αναζήτηση με το καινούριο `keyphrase`.
 
-#### Proposer ####
+## Proposer
 
 Σε μια αναζήτηση ενδεχομένως να περιέχεται και το πεδίο `proposer`.
 Το πεδίο αυτό μπορεί να υπάρχει **μόνο** στον τύπο `multiple_results`
@@ -468,20 +470,20 @@ $ curl -F 'access_token=36c57b67...' -F 'keyphrase=E' http://apiv2.skroutz.gr/xm
 
 
 
-### Προβολή Τελικών Κατηγοριών - Listing ###
+## Προβολή Τελικών Κατηγοριών - Listing
 Οι τελικές κατηγορίες του skroutz.gr έχουν μια ειδική μορφή. Μπορεί να
 περιέχουν φίλτρα, ονόματα κατασκευαστών, κ.α.
 Δείτε την κατηγορία [Laptop](http://www.skroutz.gr/c/25/laptop.html) για παράδειγμα.
 
 Με αυτή την κλήση api γίνεται **αναζήτηση σε τελικές κατηγορίες**.
 
-#### Παράμετροι ####
+### Παράμετροι
  * `keyphrase` - Προαιρετική φράση αναζήτησης
  * `filter_id` - Ενεργά φίλτρα, για πολλαπλά φίλτρα ενώστε τα ids με underscores
  * `manufacturer_id` - Επιλογή ενός κατασκευαστή
  * `page` - Επιλογή σελίδας
 
-#### Μορφή Απάντησης ####
+### Μορφή Απάντησης
 
 * `SelectedFilters`
  * `Skus`
@@ -575,12 +577,12 @@ $ curl -F 'access_token=36c57b67...' http://apiv2.skroutz.gr/xml/list/25/
 </SkroutzApi>
 ~~~
 
-### Manufacturer ###
+## Manufacturer
 <pre class="terminal">
 GET /manufacturer/:manuf_id/
 </pre>
 
-#### Μορφή Απάντησης ####
+### Μορφή Απάντησης
 
 * `Manufacturer`
 * `popular_categories`
@@ -588,6 +590,7 @@ GET /manufacturer/:manuf_id/
 * `search_results`
 
 **Παράδειγμα**
+
 <pre class="terminal">
 $ curl -F 'access_token=36c57b67...' \
        http://apiv2.skroutz.gr/xml/manufacturer/2/  # Sony
@@ -650,12 +653,12 @@ $ curl -F 'access_token=36c57b67...' \
 </SkroutzApi>
 ~~~
 
-### Shop ###
+## Shop
 <pre class="terminal">
 GET  /shop/:shop_id/
 </pre>
 
-#### Μορφή Απάντησης ####
+### Μορφή Απάντησης
 
 **Παράδειγμα**
 
@@ -707,9 +710,9 @@ $ curl -F 'access_token=36c57b67...' \
 </SkroutzApi>
 ~~~
 
-### Shops ###
+## Shops
 
-#### Όλα τα shops (Αλφαβητικά)
+### Όλα τα shops (Αλφαβητικά)
 
 <pre class="terminal">
 GET /shops/
@@ -721,9 +724,10 @@ GET /shops/
 GET /shops/?letter=b
 </pre>
 
-#### Μορφή Απάντησης ####
+### Μορφή Απάντησης
 
 **Παράδειγμα**
+
 <pre class="terminal">
 $ curl -F 'access_token=36c57b67...' -F letter=b \
        http://apiv2.skroutz.gr/xml/shops/
@@ -747,13 +751,14 @@ $ curl -F 'access_token=36c57b67...' -F letter=b \
                 ...
 ~~~
 
-### Index Skroutz.gr ###
+## Index Skroutz.gr
 
-Διάφορα widgets από την κεντρική σελίδα του skroutz.gr /index/ 
+Διάφορα widgets από την κεντρική σελίδα του skroutz.gr /index/
 
 * `search_cloud`
 
 **Παράδειγμα:**
+
 <pre class="terminal">
 $ curl -F 'access_token=36c57b67...' http://apiv2.skroutz.gr/xml/index/
 </pre>
@@ -781,7 +786,7 @@ $ curl -F 'access_token=36c57b67...' http://apiv2.skroutz.gr/xml/index/
 </SkroutzApi>
 ~~~
 
-### Top 5 Sku για αναζήτηση ###
+## Top 5 Sku για αναζήτηση
 
 <pre class="terminal">
 GET /search/sku/ # Keyphrase parameters
