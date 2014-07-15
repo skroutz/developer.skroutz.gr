@@ -240,7 +240,7 @@ header {
   }
 
   ol {
-    margin: 15px 15px 20px;
+    margin: 15px 20px 20px;
 
     li {
       margin-bottom: 3px;
@@ -248,11 +248,13 @@ header {
   }
 
   li {
-    .term {
+    .term,
+    .question {
       font-weight: 700;
     }
 
-    .description {
+    .description,
+    .answer {
       margin-bottom: 15px;
       padding-left: 22px;
       color: $grey-8;
@@ -709,22 +711,4 @@ pre {
 .classroom {
   display: block;
   margin: 0 auto;
-}
-
-/* Help */
-
-#help {
-  ol li {
-    margin-bottom: 20px;
-  }
-
-  .question {
-
-  }
-
-  .answer {
-    color: $grey-8;
-    padding-left: 22px;
-    font-size: 13px;
-  }
 }
