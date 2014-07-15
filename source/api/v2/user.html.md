@@ -1,31 +1,39 @@
 ---
-title: User | Skroutz API v2
+title: Χρήστης | Skroutz API v2
 ---
-## API Χρήστη ##
+# API Χρήστη
 
-### Γενικά ###
+* toc
+{:toc}
+
+## Γενικά
 
 Για τις κλήσεις API που αφορούν τον χρήστη χρειάζεται full token.
 
-### Bookmarklists ###
+## Bookmarklists
 Τα Bookmarklists του χρήστη
 
 **Παράδειγμα**
-    /bookmarklists
+
+<pre class="terminal">
+GET /bookmarklists
+</pre>
 
 **Returns:**
 
  * `bookmarklists`
 
-### Δημιουργία Bookmark ###
-Δημιουργία Bookmark
+## Δημιουργία Bookmark
 
-#### Παράμετροι ####
+### Παράμετροι
  * `type` - `sku` ή `product` ή `book`
  * `id` - Το `id` του Sku/προϊόντος/βιβλίου
 
 **Παράδειγμα**
-    /bookmark/create type=sku id=145
+
+<pre class="terminal">
+GET /bookmark/create&type=sku&id=145
+</pre>
 
 **Returns:**
 
@@ -37,15 +45,17 @@ title: User | Skroutz API v2
  * `bookmark_create` - Υπήρξε κάποιο άλλο πρόβλημα με την δημιουργία
 
 
-### Διαγραφή Bookmark ###
-Διαγραφή Bookmark
+## Διαγραφή Bookmark
 
-#### Παράμετροι ####
+### Παράμετροι
  * `type` - `sku` ή `product` ή `book`
  * `id` - Το `id` του Sku ή προϊόντος
 
 **Παράδειγμα**
-    /bookmark/destroy type=sku id=145
+
+<pre class="terminal">
+GET /bookmark/destroy&type=sku&id=145
+</pre>
 
 **Returns:**
 
