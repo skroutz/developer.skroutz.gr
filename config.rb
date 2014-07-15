@@ -1,7 +1,7 @@
 require 'lib/code_example_helper'
 require 'lib/response_mate_helper'
 
-page 'index.html', layout: false, sidebar: 'koko'
+page 'index.html', layout: false
 
 page 'api/v2/*', sidebar: 'partials/sidebars/api/v2'
 page 'api/v3/*', sidebar: 'partials/sidebars/api/v3'
