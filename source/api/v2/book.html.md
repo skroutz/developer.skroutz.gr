@@ -9,15 +9,16 @@ title: Βιβλία | Skroutz API v2
 
 ## Εύρεση Sku
 
+### Με βάση το id
+
 <pre class="terminal">
-  # Με βάση το id
-  /book/:book_id/
+GET /book/:book_id/
 </pre>
 
 **Παράδειγμα:**
- 
+
 <pre class="terminal">
-  $ curl -F 'access_to  ken=36c57b67...' http://apiv2.skroutz.gr/xml/book/258276/
+$ curl -F 'access_to  ken=36c57b67...' http://apiv2.skroutz.gr/xml/book/258276/
 </pre>
 
 ~~~ xml
@@ -58,18 +59,18 @@ title: Βιβλία | Skroutz API v2
   <error nil="true"></error>
 </SkroutzApi>
 ~~~
-    
+
 
 ## Listing
 
 Με αυτή την κλήση api εκτός του `listing` γίνεται και **αναζήτηση στα βιβλία**.
 
 <pre class="terminal">
-  /books/list/
+GET /books/list/
 </pre>
 
 #### Παράμετροι
- 
+
  * `keyphrase` - Προαιρετική φράση αναζήτησης
  * `id` - Dewey id (Βιβλιοθηκονομική κατηγοριοποίηση)
  * `page` - Επιλογή σελίδας
@@ -87,7 +88,7 @@ title: Βιβλία | Skroutz API v2
 **Παράδειγμα:**
 
 <pre class="terminal">
-  $ curl -F 'access_token=36c57b67...' -F 'id=866' http://apiv2.skroutz.gr/xml/books/list/
+$ curl -F 'access_token=36c57b67...' -F 'id=866' http://apiv2.skroutz.gr/xml/books/list/
 </pre>
 
 ~~~ xml
@@ -146,13 +147,13 @@ title: Βιβλία | Skroutz API v2
         </name>
         ...
 ~~~
-    
+
 ## Index Βιβλίων
 
 Διάφορα widgets από την κεντρική σελίδα βιβλιών του skroutz.gr
 
 <pre class="terminal">
-  /books
+GET /books
 </pre>
 
 * `recommendations`
@@ -166,7 +167,7 @@ title: Βιβλία | Skroutz API v2
 **Παράδειγμα:**
 
 <pre class="terminal">
-  $ curl -F 'access_`token=36c57b67...' http://apiv2.skroutz.gr/xml/books/
+$ curl -F 'access_`token=36c57b67...' http://apiv2.skroutz.gr/xml/books/
 </pre>
 
 ~~~ xml
