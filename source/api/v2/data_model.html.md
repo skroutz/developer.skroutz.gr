@@ -1,6 +1,5 @@
 ---
-layout: default
-title: Μοντέλο Δεδομένων
+title: Data Model | Skroutz API v2
 ---
 
 ## Μοντέλων Δεδομένων ##

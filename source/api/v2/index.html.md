@@ -1,6 +1,5 @@
 ---
-layout: default
-title: Γενικές Πληροφορίες
+title: Overview | Skroutz API v2
 ---
 
 ## Γενικές πληροφορίες ##
