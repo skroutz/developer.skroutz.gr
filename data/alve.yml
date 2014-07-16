@@ -1,9 +1,16 @@
 company:
   name: 'Alve Ltd.'
   short_name: 'Alve'
+  website: 'http://www.alve.com'
 
 url:
+  base: 'alve.com'
   analytics: 'analytics.alve.com'
   api: 'api.alve.com'
   api_v2: 'apiv2.alve.com'
+  legal: 'http://www.alve.com/faq'
   website: 'http://www.alve.com'
+
+service:
+  ga: { code: 'UA-31711644-1' }
+  swiftype: { code: 'qbNiqUVxzUseXtdSCSUy' }

@@ -1,8 +1,8 @@
 <footer>
   <p>
-    &copy; 20[0-9]{2} Skroutz A.E. All Rights and Lefts reserved.
+    &copy; 20[0-9]{2} <%= data[flavor].company.name %> All Rights and Lefts reserved.
     <br />
-    <a href="#">Terms of Service</a>
+    <%= link_to 'Terms of Service', data[flavor].url.legal %>
   </p>
 
   <%= partial 'partials/swiftype' %>
