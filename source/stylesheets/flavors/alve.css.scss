@@ -1,0 +1,9 @@
+header {
+  a {
+    padding-left: 65px;
+
+    &:before {
+      background-image: image-url('alve/sprites.png');
+    }
+  }
+}

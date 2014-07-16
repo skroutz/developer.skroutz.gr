@@ -154,7 +154,8 @@ header {
       left: 0;
       width: 109px;
       height: 22px;
-      background: url(../../images/logo3.png) no-repeat 0 -59px;
+      background-repeat: no-repeat;
+      background-position: 0 -60px;
     }
   }
 }
