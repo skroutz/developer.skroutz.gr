@@ -1,0 +1,9 @@
+company:
+  name: 'Skroutz S.A.'
+  short_name: 'Skroutz'
+
+url:
+  analytics: 'analytics.skrout.gr'
+  api: 'api.skroutz.gr'
+  api_v2: 'apiv2.skroutz.gr'
+  website: 'http://www.skroutz.gr'

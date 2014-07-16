@@ -1,0 +1,9 @@
+company:
+  name: 'Alve Ltd.'
+  short_name: 'Alve'
+
+url:
+  analytics: 'analytics.alve.com'
+  api: 'api.alve.com'
+  api_v2: 'apiv2.alve.com'
+  website: 'http://www.alve.com'
