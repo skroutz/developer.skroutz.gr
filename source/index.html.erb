@@ -54,10 +54,11 @@
 
     <footer>
       <div class="content cf">
-        <%= link_to 'Terms of Service', '' %>
+        <%= link_to 'Terms of Service', data[flavor].url.legal %>
         <p>© 20[0-9]{2} <%= data[flavor].company.name %> All Rights and Lefts reserved.</p>
       </div>
     </footer>
+    <%= partial 'partials/analytics' %>
     <%= partial 'partials/swiftype' %>
   </body>
 </html>
