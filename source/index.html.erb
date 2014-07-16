@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Language" content="en-us" />
     <meta http-equiv="imagetoolbar" content="false" />
     <meta name="MSSmartTagsPreventParsing" content="true" />
-    <title>Skroutz API</title>
+    <title><%= data[flavor].company.short_name %> API</title>
     <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag('reset') %>
     <%= stylesheet_link_tag('platform') %>
@@ -28,7 +28,7 @@
         <%= link_to '', 'guides' %>
         <h3>Development Guides</h3>
         <p>
-        Ready to develop an app powered by Skroutz? Check out our quick-start guide
+        Ready to develop an app powered by <%= data[flavor].company.short_name %>? Check out our quick-start guide
         for a step by step introduction.
         </p>
       </div>
@@ -37,7 +37,7 @@
         <%= link_to '', 'api/v3' %>
         <h3>Reference Manual</h3>
         <p>
-        Browse our documentation to fully master the Skroutz API.
+        Browse our documentation to fully master the <%= data[flavor].company.short_name %> API.
         </p>
       </div>
 
@@ -55,7 +55,7 @@
     <footer>
       <div class="content cf">
         <%= link_to 'Terms of Service', '' %>
-        <p>© 20[0-9]{2} Skroutz A.E. All Rights and Lefts reserved.</p>
+        <p>© 20[0-9]{2} <%= data[flavor].company.name %> All Rights and Lefts reserved.</p>
       </div>
     </footer>
     <%= partial 'partials/swiftype' %>
