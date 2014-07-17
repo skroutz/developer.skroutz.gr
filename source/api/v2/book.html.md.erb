@@ -1,24 +1,24 @@
 ---
-title: Βιβλία | Skroutz API v2
+title: Books | API v2
 ---
 
-# API Βιβλίων
+# Books
 
 * TOC
 {:toc}
 
-## Εύρεση Sku
+## Find an SKU
 
-### Με βάση το id
+### Based on the id
 
 <pre class="terminal">
 GET /book/:book_id/
 </pre>
 
-**Παράδειγμα:**
+**Example:**
 
 <pre class="terminal">
-$ curl -F 'access_to  ken=36c57b67...' http://apiv2.skroutz.gr/xml/book/258276/
+$ curl -F 'access_to  ken=36c57b67...' http://<%= data[flavor].url.api_v2 %>/xml/book/258276/
 </pre>
 
 ~~~ xml
@@ -63,19 +63,19 @@ $ curl -F 'access_to  ken=36c57b67...' http://apiv2.skroutz.gr/xml/book/258276/
 
 ## Listing
 
-Με αυτή την κλήση api εκτός του `listing` γίνεται και **αναζήτηση στα βιβλία**.
+The `listing` API call will also perform a **search within Books**.
 
 <pre class="terminal">
 GET /books/list/
 </pre>
 
-#### Παράμετροι
+#### Parameters
 
- * `keyphrase` - Προαιρετική φράση αναζήτησης
- * `id` - Dewey id (Βιβλιοθηκονομική κατηγοριοποίηση)
- * `page` - Επιλογή σελίδας
+ * `keyphrase` - Optional keyphrase for search
+ * `id` - Dewey id (librarian categorization)
+ * `page` - Page selection
 
-#### Μορφή Απάντησης
+#### Response scheme
 
  * `Books`
  * `dewey_results`
@@ -85,10 +85,10 @@ GET /books/list/
    * `results_per_page`
    * `total_pages`
 
-**Παράδειγμα:**
+**Example:**
 
 <pre class="terminal">
-$ curl -F 'access_token=36c57b67...' -F 'id=866' http://apiv2.skroutz.gr/xml/books/list/
+$ curl -F 'access_token=36c57b67...' -F 'id=866' http://<%= data[flavor].url.api_v2 %>/xml/books/list/
 </pre>
 
 ~~~ xml
@@ -148,9 +148,9 @@ $ curl -F 'access_token=36c57b67...' -F 'id=866' http://apiv2.skroutz.gr/xml/boo
         ...
 ~~~
 
-## Index Βιβλίων
+## Books index
 
-Διάφορα widgets από την κεντρική σελίδα βιβλιών του skroutz.gr
+Various widgets from <%= data[flavor].url.api_v2 %> Books index page.
 
 <pre class="terminal">
 GET /books
@@ -164,10 +164,10 @@ GET /books
   * `Books`
 * `critics`
 
-**Παράδειγμα:**
+**Example:**
 
 <pre class="terminal">
-$ curl -F 'access_`token=36c57b67...' http://apiv2.skroutz.gr/xml/books/
+$ curl -F 'access_`token=36c57b67...' http://<%= data[flavor].url.api_v2 %>/xml/books/
 </pre>
 
 ~~~ xml
