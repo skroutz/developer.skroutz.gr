@@ -1,24 +1,25 @@
 ---
-title: OAuth 2.0 API
+title: OAuth 2.0 Endpoints
 ---
 
-# OAuth 2.0 API
+# OAuth 2.0 Endpoints
 
 * toc
 {:toc}
 
-## Διεύθυνση χρέωσης
+## Billing address
 
-Το παρακάτω HTTP GET request
+The following HTTP GET request
 
 <pre class="terminal">
-https://www.skroutz.gr/oauth2/address?oauth_token=124fFAGRNJru1FTz70BzhT3Zg...
+https://www.<%= data[flavor].url.base %>/oauth2/address?oauth_token=124fFAGRNJru1FTz70BzhT3Zg...
 </pre>
 
-Επιστρέφει τη διευθύνση χρέωσης του χρήστη σε μορφή [JSON](http://en.wikipedia.org/wiki/JSON):
+returns user's billing address in [JSON](http://en.wikipedia.org/wiki/JSON)
+format:
 
 <pre class="terminal">
-$ curl https://www.skroutz.gr/oauth2/address?oauth_token=124fFAGRNJru1FTz70BzhT3Zg...
+$ curl https://www.<%= data[flavor].url.base %>/oauth2/address?oauth_token=124fFAGRNJru1FTz70BzhT3Zg...
 </pre>
 
 ~~~ javascript
@@ -43,19 +44,19 @@ $ curl https://www.skroutz.gr/oauth2/address?oauth_token=124fFAGRNJru1FTz70BzhT3
 }
 ~~~
 
-Το address resource υποστηρίζει και [JSONP](http://en.wikipedia.org/wiki/JSONP).   
-Αφού κάνετε τα απαραίτητα βήματα του OAuth 2 σε server side, μπορείτε να μεταφέρετε το `oauth_token` σε client side και με χρήση JavaScript και [XHR](http://en.wikipedia.org/wiki/XMLHttpRequest) να πάρετε τη διεύθυνση του χρήστη και να συμπληρώσετε την αντίστοιχη φόρμα με τα στοιχεία.
+Τhe address resource supports [JSONP](http://en.wikipedia.org/wiki/JSONP). Once
+you complete the required server-side steps, you can expose the `oauth_token` at
+client side. Then, with JavaScript and [XHR](http://en.wikipedia.org/wiki/XMLHttpRequest)
+retrieve user's address and pre-fill the form.
 
-Περνώντας στην παράμετρο callback το function name που θέλετε (π.χ. `aFunction`), όπως το παρακάτω HTTP GET request:
+To get the billing address of a user in [JSONP](http://en.wikipedia.org/wiki/JSONP)
+format, you have to set the `callback` parameter with the function name (e.g. `aFunction`)
+you want to be invoked. 
+
+**Example:**
 
 <pre class="terminal">
-https://www.skroutz.gr/oauth2/address?callback=aFunction&oauth_token=124fFAGRNJru1FTz70BzhT3Zg...
-</pre>
-
-Επιστρέφει τη διευθύνση χρέωσης του χρήστη σε μορφή [JSONP](http://en.wikipedia.org/wiki/JSONP):
-
-<pre class="terminal">
-$ curl https://www.skroutz.gr/oauth2/address?callback=aFunction&oauth_token=124fFAGRNJru1FTz70BzhT3Zg...
+$ curl https://www.<%= data[flavor].url.base %>/oauth2/address?callback=aFunction&oauth_token=124fFAGRNJru1FTz70BzhT3Zg...
 </pre>
 
 ~~~ javascript
@@ -67,9 +68,10 @@ aFunction({
 })
 ~~~
 
-## Διεύθυνση αποστολής
+## Shipping address
 
-Στην περίπτωση που η διευθύνση αποστολής είναι διαφορετική απο αυτήν της χρέωσης, θα περιεχέται στο πεδίο `shipping_addess`. Για παράδειγμα:
+In case shipping address is different from billing address, it will be present at
+the entity `shipping_address`. For example:
 
 ~~~ javascript
 {
@@ -105,9 +107,11 @@ aFunction({
 }
 ~~~
 
-## Τιμολόγιο
+## Invoice
 
-Στην περίπτωση που ο χρήστης επιθυμεί τιμολόγιο, το πεδίο `invoice` θα έχει την τιμή `true` και όλα τα σχετικά πεδία (`company`, `doy`, `afm`, `profession`, `company_phone`) θα είναι συμπληρωμένα.
+If user requested invoice, then the `invoice` entity will be `true` and the
+relevant entities (`company`, `doy`, `afm`, `profession`, `company_phone`) will
+be filled with the information.
 
 ~~~ javascript
 {
@@ -131,9 +135,10 @@ aFunction({
 }
 ~~~
 
-## Νομοί
+## Regions
 
-Το πεδίο `region` θα έχει, και για τους δύο τύπους διεύθυνσης, χρέωσης και αποστολής, μια  τιμή από την παρακάτω λίστα:
+The `region` entity will be filled with a value from the following list for both,
+billing and shipping addresses:
 
     Αιτωλοακαρνανίας
     Αργολίδας
@@ -193,4 +198,5 @@ aFunction({
     Μαγνησίας (Αλόννησος) *
     Καβάλας (Θάσος) *
 
-> Για τους νομούς που είναι σημειωμένοι με αστεράκι και για τις περιοχές - νησιά των νομών που είναι σε παρένθεση ισχύει καθεστώς μειωμένου Φ.Π.Α. Οι περιοχές - νησιά των νομών αυτών διαχωρίζονται από τους υπόλοιπους νομούς για διευκόλυνση.
+> Regions and locations marked with an asterisk are subject of reduced taxation.
+  For convenience these regions are separated from the rest.
