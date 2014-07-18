@@ -53,6 +53,10 @@ set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
 
+ResponseMate.setup do |config|
+  config.output_dir = "./resources/responses/#{flavor}"
+end
+
 # Build-specific configuration
 configure :build do
 end
