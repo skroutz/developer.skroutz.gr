@@ -1,0 +1,37 @@
+---
+:request:
+  :url: http://alve.com/api/shops/298/locations
+  :headers:
+    :accept: application/vnd.alve+json; version=3
+    :authorization: Bearer ZSWUZySA9nm9FmmhOFhAK1rvIfwfEPIfn/hA2sQZw/inqe6o6ZAALHGu0UmfJOGrytnEsueHI9nR7HrA4ZNQ==
+  :params:
+    :per: 2
+    :embed: address
+  :verb: GET
+:response:
+  :status: 200
+  :headers:
+    server: nginx
+    !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
+    !binary "dmFyeQ==": Accept-Encoding
+    status: 200 OK
+    cache-control: max-age=300, private
+    x-ua-compatible: IE=Edge,chrome=1
+    x-request-id: '458971880'
+    x-runtime: '0.044112'
+    x-dns-prefetch-control: 'off'
+    x-app: as2
+    content-length: '348'
+    accept-ranges: bytes
+    date: Mon, 21 Jul 2014 10:39:35 GMT
+    x-varnish: '458971880'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: varnish2
+    x-cache: MISS
+  :body: ! '{"locations":[{"id":63,"headquarter":true,"phones":["4443662"],"pickup_point":false,"store":false,"full_address":"Street|Faz\u0131l
+    Kaftano\u011flu 15, P.\u039a. 34418, Ka\u011f\u0131thane, Seyrantepe, \u0130stanbul","lat":"41.00527","lng":"28.97696","info":"
+    Faz\u0131l Kaftano\u011flu Cad. 15, Seyrantepe / \u0130STANBUL","address":{"id":63,"street_number":"15","street":"Faz\u0131l
+    Kaftano\u011flu","postcode":"34418","city":"Ka\u011f\u0131thane, Seyrantepe","region":"\u0130stanbul","country":"T\u00fcrkiye"}}],"meta":{"pagination":{"total_results":1,"total_pages":1,"page":1,"per":2}}}'
+:created_at: 2014-07-21 13:39:35.198543426 +03:00
