@@ -27,7 +27,6 @@ helpers CodeExampleHelper
 helpers ResponseMateHelper
 
 helpers do
-
   # Returns the current environment flavor
   #
   # @example Run Middleman for Skroutz
@@ -43,6 +42,10 @@ helpers do
     @flavor ||= ENV['FLAVOR'] || 'skroutz'
   end
 
+  # @return [String] Data of the current flavor
+  def flavor_data
+    data[flavor]
+  end
 end
 
 set :markdown, layout_engine: :erb, toc_levels: '2'
