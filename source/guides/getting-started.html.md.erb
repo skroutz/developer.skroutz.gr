@@ -5,7 +5,7 @@ title: Getting Started
 # Getting Started
 
 Follow the steps below to build your first successful application using
-Skroutz API.
+<%= flavor_data.site_name.capitalize %> API.
 
 ## Authenticate
 
@@ -41,7 +41,7 @@ You may add the oauth_token parameter obtained above as access_token.
 Example Request
 
 <pre class="terminal">
-GET https:/<%= data[flavor].url.api %>/categories/40?oauth_token=your_token
+GET https://<%= flavor_data.api_domain %>/categories/40?oauth_token=your_token
 </pre>
 
 ### Via Authorization HTTP header
@@ -55,7 +55,7 @@ Authorization: Bearer your_token
 
 ### Point to the right version
 
-There are two versions of the Skroutz API:
+There are two versions of the <%= flavor_data.site_name.capitalize %> API:
 <%= link_to 'v2', '/api/v2' %> and <%= link_to 'v3', '/api/v3' %>.
 
 API <%= link_to 'v2', '/api/v2' %> is to be deprecated at 2014-01-01.
@@ -64,7 +64,7 @@ To use v3 you have to explicitly request the API v3 media type in the
 `Accept` header:
 
 <pre class="terminal">
-application/vnd.<%= flavor %>>+json;version=3
+application/vnd.<%= flavor_data.site_name %>+json;version=3
 </pre>
 
 Also you are suggested to specify the `User-Agent` header to match your

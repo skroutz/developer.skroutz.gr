@@ -9,11 +9,11 @@ title: Overview | Skroutz API
 
 ## Schema
 
-All API access is over HTTPS, and accessed from the `api.skroutz.gr`
+All API access is over HTTPS, and accessed from the `<%= flavor_data.api_domain %>`
 domain. All data is sent and received as JSON.
 
 <pre class="terminal">
-$ curl -i https://api.skroutz.gr/categories/999999999
+$ curl -i https://<%= flavor_data.api_domain %>/categories/999999999
 
 HTTP/1.1 404 NOT FOUND
 Server: nginx
@@ -122,15 +122,15 @@ default.  You can specify further pages with the `?page` parameter. You can also
 set a custom page size to 10 with the `?per` parameter.
 
 <pre class="terminal">
-$ curl https://api.skroutz.gr/categories?page=2&per=10
+$ curl https://<%= flavor_data.api_domain %>/categories?page=2&per=10
 </pre>
 
 When there are other pages the response will contain the [Link](http://tools.ietf.org/html/rfc5988) header.
 
     Link
 
-    <https://api.skroutz.gr/categories?page=508&per=4>; rel="last",
-    <https://api.skroutz.gr/categories?page=3&per=4>; rel="next"
+    <https://<%= flavor_data.api_domain %>/categories?page=508&per=4>; rel="last",
+    <https://<%= flavor_data.api_domain %>/categories?page=3&per=4>; rel="next"
 
 Note that page numbering is 1-based and that ommiting the `?page`
 parameter will return the first page.
@@ -143,7 +143,7 @@ You can check the returned HTTP headers of any API request to see your current
 rate limit status:
 
 <pre class="terminal">
-$ curl -i https://api.skroutz.gr/categories/1441
+$ curl -i https://<%= flavor_data.api_domain %>/categories/1441
 
 HTTP/1.1 200 OK
 Date: Mon, 01 Jul 2013 17:27:06 GMT
@@ -182,7 +182,7 @@ X-RateLimit-Remaining: 0
 X-RateLimit-Reset: 1377013266
 
 {
-    "message": "API rate limit exceeded. See http://developer.skroutz.gr/api/v3/#rate-limiting for details."
+  "message": "API rate limit exceeded. See http://developer.<%= flavor_data.domain %>/api/v3/#rate-limiting for details."
 }
 </pre>
 
@@ -205,7 +205,7 @@ a conditional request and receiving a 304 response does not count against your
 [Rate Limit](#rate-limiting), so we encourage you to use it whenever possible.
 
 <pre class="terminal">
-$ curl -i https://api.skroutz.gr/categories/1440
+$ curl -i https://<%= flavor_data.api_domain %>/categories/1440
 HTTP/1.1 200 OK
 Cache-Control: private, max-age=60
 ETag: "644b5b0155e6404a9cc4bd9d8b1ae730"
@@ -216,7 +216,7 @@ X-RateLimit-Limit: 5000
 X-RateLimit-Remaining: 4996
 X-RateLimit-Reset: 1372700873
 
-$ curl -i https://api.skroutz.gr/categories/1440 -H "If-Modified-Since: Thu, 05 Jul 2012 15:31:30 GMT"
+$ curl -i https://<%= flavor_data.api_domain %>/categories/1440 -H "If-Modified-Since: Thu, 05 Jul 2012 15:31:30 GMT"
 HTTP/1.1 304 Not Modified
 Cache-Control: private, max-age=60
 Last-Modified: Thu, 05 Jul 2012 15:31:30 GMT
@@ -226,7 +226,7 @@ X-RateLimit-Limit: 5000
 X-RateLimit-Remaining: 4996
 X-RateLimit-Reset: 1372700873
 
-$ curl -i https://api.skroutz.gr/categories/1440 -H 'If-None-Match: "644b5b0155e6404a9cc4bd9d8b1ae730"'
+$ curl -i https://<%= flavor_data.api_domain %>/categories/1440 -H 'If-None-Match: "644b5b0155e6404a9cc4bd9d8b1ae730"'
 HTTP/1.1 304 Not Modified
 Cache-Control: private, max-age=60
 ETag: "644b5b0155e6404a9cc4bd9d8b1ae730"
@@ -269,7 +269,7 @@ Here's a sample request sent from a browser hitting
 `http://example.com`:
 
 <pre class="terminal">
-$ curl -i https://api.skroutz.gr -H "Origin: http://example.com"
+$ curl -i https://<%= flavor_data.api_domain %> -H "Origin: http://example.com"
 HTTP/1.1 302 Found
 </pre>
 
@@ -277,7 +277,7 @@ Any domain that is registered as an application is accepted.
 Here's a sample request for a browser hitting [cheap yellow shoes](http://cheapyellowshoes.com/):
 
 <pre class="terminal">
-$ curl -i https://api.skroutz.gr -H "Origin: http://cheapyellowshoes.com"
+$ curl -i https://<%= flavor_data.api_domain %> -H "Origin: http://cheapyellowshoes.com"
 HTTP/1.1 302 Found
 Access-Control-Allow-Origin: *
 Access-Control-Expose-Headers: ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes
@@ -287,7 +287,7 @@ Access-Control-Allow-Credentials: true
 This is what the CORS preflight request looks like:
 
 <pre class="terminal">
-$ curl -i https://api.skroutz.gr -H "Origin: http://cheapyellowshoes.com" -X OPTIONS
+$ curl -i https://<%= flavor_data.api_domain %> -H "Origin: http://cheapyellowshoes.com" -X OPTIONS
 HTTP/1.1 204 No Content
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Headers: Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, X-Requested-With
@@ -304,7 +304,7 @@ wrapped in a JSON function.  The response includes the same data output as the r
 plus the relevant HTTP Header information.
 
 <pre class="terminal">
-$ curl https://api.skroutz.gr/categories/1442?callback=foo
+$ curl https://<%= flavor_data.api_domain %>/categories/1442?callback=foo
 </pre>
 
 
