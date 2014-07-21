@@ -13,7 +13,7 @@ The following steps will get you started
 * Submit pull request
 
 If you have deploy rights you may:
-* `bundle exec rake deploy` # deploy changes
+* `FLAVOR=alve bundle exec rake deploy`    # deploy changes
 
 [middleman]: http://middlemanapp.com/
 
@@ -51,17 +51,21 @@ To render a recording do:
 <%= render_recording :category %>
 ```
 
-This looks up in `output/responses/` for `categories.yml`
-
 ## Recording
 
-  Consult [response_mate](https://github.com/Zorbash/response_mate) for
+Consult [response_mate](https://github.com/Zorbash/response_mate) for
 help with each command.
 
-  We use a manifest that describes requests we need to have recorded.
-  This file is not checked in git so you have to ask for it, shoot a
+We use a manifest that describes requests we need to have recorded.
+This file is not checked in git so you have to ask for it, shoot a
 mail at [api@skroutz.gr](api@skroutz.gr) to get it.
 
 ## Deploy
 
-    $ rake deploy
+```bash
+  FLAVOR=alve rake deploy
+```
+
+## License
+
+[Creative Commons CC-BY license](http://creativecommons.org/licenses/by/3.0/us/)
