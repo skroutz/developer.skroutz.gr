@@ -2,8 +2,13 @@
 
 set -e
 
+declare -A domains
+domains[alve]=alve.com
+domains[skroutz]=skroutz.gr
+domains[scrooge]=scrooge.co.uk
+
 tmp_path=./build
-deploy_to=/var/sites/developer.skroutz.gr
+deploy_to=/var/sites/developer.${domains[$FLAVOR]}
 deploy_user=wowbagger
 deploy_server=developer.skroutz.gr
 
@@ -12,6 +17,6 @@ type rsync >/dev/null || echo "apt-get install rsync"
 
 bundle exec middleman build
 
-echo -e "\n ==> Deploying to $deploy_user@$deploy_server\n"
+echo -e "\n ==> Deploying ${FLAVOR} to $deploy_user@$deploy_server\n"
 rsync -e ssh -avz --delete $tmp_path/ $deploy_user@$deploy_server:$deploy_to
-ssh $deploy_user@$deploy_server 'rm -vrf /var/sites/developer.skroutz.gr/responses'
+ssh $deploy_user@$deploy_server 'rm -vrf /var/sites/developer.${domains[$FLAVOR]}/responses'
