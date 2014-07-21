@@ -18,6 +18,12 @@ page 'help/*', sidebar: 'partials/sidebars/help'
 page 'oauthdoc/*', sidebar: 'partials/sidebars/oauthdoc'
 
 ###########################
+# Localization
+###########################
+activate :i18n, langs: [:en]
+I18n.enforce_available_locales = false  # Silence I18n deprecation warnings
+
+###########################
 # Pretty URLs
 ###########################
 activate :directory_indexes
