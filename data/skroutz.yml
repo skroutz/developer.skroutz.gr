@@ -1,16 +1,11 @@
-company:
-  name: 'Skroutz S.A.'
-  short_name: 'Skroutz'
-  website: 'http://www.skroutz.gr'
+site_name: 'skroutz'
+domain: 'skroutz.gr'
+full_company_name: 'Skroutz S.A.'
 
-url:
-  base: 'skroutz.gr'
-  analytics: 'analytics.skrout.gr'
-  api: 'api.skroutz.gr'
-  api_v2: 'apiv2.skroutz.gr'
-  legal: 'http://www.skroutz.gr/faq'
-  website: 'http://www.skroutz.gr'
+analytics_domain: 'analytics.skroutz.gr'
+api_domain: 'api.skroutz.gr'
+apiv2_domain: 'apiv2.skroutz.gr'
 
-service:
-  ga: { code: 'UA-48017177-1' }
-  swiftype: { code: 'qbNiqUVxzUseXtdSCSUy' }
+# External Services
+google_analytics_code: 'UA-48017177-1'
+swiftype_code: 'qbNiqUVxzUseXtdSCSUy'
