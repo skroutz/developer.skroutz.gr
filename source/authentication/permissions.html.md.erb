@@ -4,8 +4,8 @@ title: Permissions
 
 # Permissions
 
-A representations of the permissions granted to your app by
-<%= data[flavor].company.short_name %> and a User.
+A representation of the permissions granted to your app via
+<%= flavor_data.site_name %> on behalf of a User.
 
 <table>
   <thead>
@@ -49,7 +49,7 @@ Having obtained the public permission you can access the following resources:
 
 ## User Resources
 These permissions require that you have explicitly requested them using
-the scope param <%= link_to 'see more', '/guides/authentication' %>
+the scope param <%= link_to 'see more', '/guides/authentication' %>.
 The user will have to consent to grant any of those permissions.
 You __must not__ share these data to 3rd parties.
 

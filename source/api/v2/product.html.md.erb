@@ -36,7 +36,7 @@ GET /sku/lookup/barcode/:barcode/
 **Returns:** Sku
 
 <pre class="terminal">
-$ curl -F 'access_token=36c57b67...'  http://<%= data[flavor].url.api_v2 %>/xml/sku/13304/
+$ curl -F 'access_token=36c57b67...'  http://<%= flavor_data.apiv2_domain %>/xml/sku/13304/
 </pre>
 
 ~~~ xml
@@ -59,7 +59,7 @@ $ curl -F 'access_token=36c57b67...'  http://<%= data[flavor].url.api_v2 %>/xml/
           <name>
             <![CDATA[NOKIA 6270  Κινητό Τηλέφωνο]]>
           </name>
-          <click_url>http://www.skroutz.gr/products/show/1234/</click_url>
+          <click_url>http://<%= flavor_data.domain %>/products/show/1234/</click_url>
           <pricevat>264.0</pricevat>
           <category>
             <children_count>0</children_count>
@@ -84,7 +84,7 @@ $ curl -F 'access_token=36c57b67...'  http://<%= data[flavor].url.api_v2 %>/xml/
             <reviewscore>3.0</reviewscore>
             <spot_cash>true</spot_cash>
             <spot_cash_cost>0.0</spot_cash_cost>
-            <image_url>http://www.skroutz.gr/...</image_url>
+            <image_url>http://<%= flavor_data.domain %>/...</image_url>
           </shop>
           </active_product>
         <active_product>
@@ -146,7 +146,7 @@ GET /subcategories/:cat_id/
 **Result:** Categories
 
 <pre class="terminal">
-$ curl -F 'access_token=36c57b67...'  http://<%= data[flavor].url.api_v2 %>/xml/subcategories/769/
+$ curl -F 'access_token=36c57b67...'  http://<%= flavor_data.apiv2_domain %>/xml/subcategories/769/
 </pre>
 
 ~~~ xml
@@ -187,7 +187,7 @@ GET /search/
    **Result:** SearchResults
 
 <pre class="terminal">
-$ curl -F 'access_token=36c57b67...' -F 'keyphrase=ipad' http://<%= data[flavor].url.api_v2 %>/xml/search/
+$ curl -F 'access_token=36c57b67...' -F 'keyphrase=ipad' http://<%= flavor_data.apiv2_domain %>/xml/search/
 </pre>
 
 ~~~ xml
@@ -231,7 +231,7 @@ $ curl -F 'access_token=36c57b67...' -F 'keyphrase=ipad' http://<%= data[flavor]
 
 <pre class="terminal">
 $ curl -F 'access_token=36c57b67...' -F 'keyphrase=Κινητά Τηλέφωνα' \
-     http://<%= data[flavor].url.api_v2 %>/xml/search/
+     http://<%= flavor_data.apiv2_domain %>/xml/search/
 </pre>
 
 ~~~ xml
@@ -260,7 +260,7 @@ $ curl -F 'access_token=36c57b67...' -F 'keyphrase=Κινητά Τηλέφωνα
    **Result:** Manufacturer
 
 <pre class="terminal">
-$ curl -F 'access_token=36c57b67...' -F 'keyphrase=sony' http://<%= data[flavor].url.api_v2 %>/xml/search/
+$ curl -F 'access_token=36c57b67...' -F 'keyphrase=sony' http://<%= flavor_data.apiv2_domain %>/xml/search/
 </pre>
 
 ~~~ xml
@@ -283,7 +283,7 @@ $ curl -F 'access_token=36c57b67...' -F 'keyphrase=sony' http://<%= data[flavor]
 
 <pre class="terminal">
 $ curl -F 'access_token=36c57b67...' -F 'keyphrase=The eye of judgment fire' \
-       http://<%= data[flavor].url.api_v2 %>/xml/search/
+       http://<%= flavor_data.apiv2_domain %>/xml/search/
 </pre>
 
 ~~~ xml
@@ -317,7 +317,7 @@ $ curl -F 'access_token=36c57b67...' -F 'keyphrase=The eye of judgment fire' \
           <imageurl>http://fi.gameexplorers.gr/6de.jpg</imageurl>
           <name>The Eye Of Judgment - Fire Crusader Theme Deck (PS3)</name>
           <pricevat>34.9</pricevat>
-          <click_url>http://www.skroutz.gr/products/show/4206001</click_url>
+          <click_url>http://<%= flavor_data.domain %>/products/show/4206001</click_url>
           <category>
             <children_count>0</children_count>
             <id>414</id>
@@ -341,7 +341,7 @@ $ curl -F 'access_token=36c57b67...' -F 'keyphrase=The eye of judgment fire' \
             <reviewscore>3.0</reviewscore>
             <spot_cash>true</spot_cash>
             <spot_cash_cost>0.0</spot_cash_cost>
-            <image_url>http://www.skroutz.gr/...</image_url>
+            <image_url>http://<%= flavor_data.domain %>/...</image_url>
           </shop>
           </active_product>
       </active_products>
@@ -358,7 +358,7 @@ $ curl -F 'access_token=36c57b67...' -F 'keyphrase=The eye of judgment fire' \
 
 <pre class="terminal">
 $ curl -F 'access_token=36c57b67...' -F 'keyphrase=μεταπολίτευση' \
-       http://<%= data[flavor].url.api_v2 %>/xml/search/
+       http://<%= flavor_data.apiv2_domain %>/xml/search/
 </pre>
 
 ~~~ xml
@@ -377,7 +377,7 @@ $ curl -F 'access_token=36c57b67...' -F 'keyphrase=μεταπολίτευση' \
 
 <pre class="terminal">
 $ curl -F 'access_token=36c57b67...' -F 'keyphrase=thinkpad x301' \
-       http://<%= data[flavor].url.api_v2 %>/xml/search/
+       http://<%= flavor_data.apiv2_domain %>/xml/search/
 </pre>
 
 ~~~ xml
@@ -405,7 +405,7 @@ $ curl -F 'access_token=36c57b67...' -F 'keyphrase=thinkpad x301' \
 
 <pre class="terminal">
 $ curl -F 'access_token=36c57b67...' -F 'keyphrase=υποβρύχια κυκλοφορία' \
-       http://<%= data[flavor].url.api_v2 %>/xml/search/
+       http://<%= flavor_data.apiv2_domain %>/xml/search/
 </pre>
 
 ~~~ xml
@@ -423,7 +423,7 @@ $ curl -F 'access_token=36c57b67...' -F 'keyphrase=υποβρύχια κυκλο
  * `invalid` - Incorrect keyphrase, e.g. keyphrase is less than 2 characters
 
 <pre class="terminal">
-$ curl -F 'access_token=36c57b67...' -F 'keyphrase=E' http://<%= data[flavor].url.api_v2 %>/xml/search/
+$ curl -F 'access_token=36c57b67...' -F 'keyphrase=E' http://<%= flavor_data.apiv2_domain %>/xml/search/
 </pre>
 
 ~~~ xml
@@ -472,10 +472,10 @@ A search might contain the `proposer` entity. This entity can **only** exist for
 
 ## View leaf categories - Listing
 
-The <%= data[flavor].company.short_name %> leaf categories have a specific form.
+The <%= flavor_data.site_name %> leaf categories have a specific form.
 They may include filters, manufacturer names, etc.
 
-For example, [Laptop](<%= data[flavor].url.website %>/c/25/laptop.html)
+For example, [Laptop](http://<%= flavor_data.domain %>/c/25/laptop.html)
 
 That API call performs **search in all leaf categories**.
 
@@ -504,7 +504,7 @@ That API call performs **search in all leaf categories**.
 **Example:**
 
 <pre class="terminal">
-$ curl -F 'access_token=36c57b67...' http://<%= data[flavor].url.api_v2 %>/xml/list/25/
+$ curl -F 'access_token=36c57b67...' http://<%= flavor_data.apiv2_domain %>/xml/list/25/
 </pre>
 
 ~~~ xml
@@ -596,7 +596,7 @@ GET /manufacturer/:manuf_id/
 
 <pre class="terminal">
 $ curl -F 'access_token=36c57b67...' \
-       http://<%= data[flavor].url.api_v2 %>/xml/manufacturer/2/  # Sony
+       http://<%= flavor_data.apiv2_domain %>/xml/manufacturer/2/  # Sony
 </pre>
 
 ~~~ xml
@@ -667,7 +667,7 @@ GET  /shop/:shop_id/
 
 <pre class="terminal">
 $ curl -F 'access_token=36c57b67...' \
-       http://<%= data[flavor].url.api_v2 %>/xml/shop/1000/ 
+       http://<%= flavor_data.apiv2_domain %>/xml/shop/1000/ 
 </pre>
 
 ~~~ xml
@@ -696,7 +696,7 @@ $ curl -F 'access_token=36c57b67...' \
       <spot_cash_cost>0.0</spot_cash_cost>
       <spot_cash_info></spot_cash_info>
       <store_picking>true</store_picking>
-      <image_url>http://www.skroutz.gr/images/shops/logos/mid/1000-mid.jpg</image_url>
+      <image_url>http://<%= flavor_data.domain %>/images/shops/logos/mid/1000-mid.jpg</image_url>
       <locations>
         <location>
           <phone nil="true"></phone>
@@ -733,7 +733,7 @@ GET /shops/?letter=b
 
 <pre class="terminal">
 $ curl -F 'access_token=36c57b67...' -F letter=b \
-       http://<%= data[flavor].url.api_v2 %>/xml/shops/
+       http://<%= flavor_data.apiv2_domain %>/xml/shops/
 </pre>
 
 ~~~ xml
@@ -746,24 +746,24 @@ $ curl -F 'access_token=36c57b67...' -F letter=b \
         <id>633</id>
         <name>Babylonlis</name>
         <phone>11111111</phone>
-        <image_url><%= data[flavor].url.website %>/...jpg</image_url>
-        <thumbshot_url><%= data[flavor].url.website %>/....jpg</thumbshot_url>
+        <image_url>http://<%= flavor_data.domain %>/...jpg</image_url>
+        <thumbshot_url>http://<%= flavor_data.domain %>/....jpg</thumbshot_url>
       </shop>
       <shop>
         <id>947</id>
           ...
 ~~~
 
-## Index <%= data[flavor].company.short_name %>
+## Index <%= flavor_data.site_name %>
 
-Various widgets from <%= data[flavor].company.short_name %> index page (/index/).
+Various widgets from <%= flavor_data.site_name %> index page (/index/).
 
 * `search_cloud`
 
 **Example:**
 
 <pre class="terminal">
-$ curl -F 'access_token=36c57b67...' http://<%= data[flavor].url.api_v2 %>/xml/index/
+$ curl -F 'access_token=36c57b67...' http://<%= flavor_data.apiv2_domain %>/xml/index/
 </pre>
 
 ~~~ xml
@@ -799,7 +799,7 @@ GET /search/sku/ # Keyphrase parameters
 
 <pre class="terminal">
 $ curl -F 'access_token=36c57b67...' -F 'keyphrase=thinkpad' \
-       http://<%= data[flavor].url.api_v2 %>/xml/search/sku/
+       http://<%= flavor_data.apiv2_domain %>/xml/search/sku/
 </pre>
 
 ~~~ xml

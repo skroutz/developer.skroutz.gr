@@ -11,47 +11,47 @@ title: Widgets | API v2
 
 Use the following code snippet to list prices for a specific product. You only
 have replace the product `id` with the one that appears at the product web address,
-e.g. <%= data[flavor].url.website %>/s/**2567463**/Apple-iPad-mini-Wifi-16GB.html
+e.g. <%= flavor_data.domain %>/s/**2567463**/Apple-iPad-mini-Wifi-16GB.html
 
 ~~~ html
 <div class="skroutz-widget">
-<script type="text/javascript" src="<%= data[flavor].url.website %>/javascripts/widget-v1.js" charset="utf-8"></script>
+<script type="text/javascript" src="<%= flavor_data.domain %>/javascripts/widget-v1.js" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8" >
   new SkroutzWidget().display_sku({id:2567463});
 </script>
-<p class="skwidget-footer">powered by <a href="<%= data[flavor].url.website %>" title="<%= data[flavor].company.short_name %>"><%= data[flavor].company.short_name %></a></p>
+<p class="skwidget-footer">powered by <a href="<%= flavor_data.domain %>" title="<%= flavor_data.site_name %>"><%= flavor_data.site_name %></a></p>
 </div>
 ~~~
 
 <div class="skroutz-widget">
-<script type="text/javascript" src="<%= data[flavor].url.website %>/javascripts/widget-v1.js" charset="utf-8"></script>
+<script type="text/javascript" src="<%= flavor_data.domain %>/javascripts/widget-v1.js" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8" >
   new SkroutzWidget().display_sku({id:2567463});
 </script>
-<p class="skwidget-footer">powered by <a href="<%= data[flavor].url.website %>" title="<%= data[flavor].company.short_name %>"><%= data[flavor].company.short_name %></a></p>
+<p class="skwidget-footer">powered by <a href="<%= flavor_data.domain %>" title="<%= flavor_data.site_name %>"><%= flavor_data.site_name %></a></p>
 </div>
 
 ## General search
 
 Replace the `keyphrase` in the following code snippet to perform a general search
-in <%= data[flavor].company.short_name %>
+in <%= flavor_data.site_name %>
 
 ~~~ html
 <div class="skroutz-widget">
-  <script type="text/javascript" src="<%= data[flavor].url.website %>/javascripts/widget-v1.js" charset="utf-8"></script>
+  <script type="text/javascript" src="<%= flavor_data.domain %>/javascripts/widget-v1.js" charset="utf-8"></script>
   <script type="text/javascript" charset="utf-8" >
     new SkroutzWidget().display_popular({keyphrase:'samsung'});
   </script>
-<p class="skwidget-footer">powered by <a href="<%= data[flavor].url.website %>" title="<%= data[flavor].company.short_name %>"><%= data[flavor].company.short_name %></a></p>
+<p class="skwidget-footer">powered by <a href="<%= flavor_data.domain %>" title="<%= flavor_data.site_name %>"><%= flavor_data.site_name %></a></p>
 </div>
 ~~~
 
 <div class="skroutz-widget">
-<script type="text/javascript" src="<%= data[flavor].url.website %>/javascripts/widget-v1.js" charset="utf-8"></script>
+<script type="text/javascript" src="<%= flavor_data.domain %>/javascripts/widget-v1.js" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8" >
   new SkroutzWidget().display_popular({keyphrase:'samsung'});
 </script>
-<p class="skwidget-footer">powered by <a href="<%= data[flavor].url.website %>" title="<%= data[flavor].company.short_name %>"><%= data[flavor].company.short_name %></a></p>
+<p class="skwidget-footer">powered by <a href="<%= flavor_data.domain %>" title="<%= flavor_data.site_name %>"><%= flavor_data.site_name %></a></p>
 </div>
 
 ## Search results for a specific Category
@@ -59,48 +59,48 @@ in <%= data[flavor].company.short_name %>
 Use the following code snippet to list results from a specific Category. You
 only have to replace the `keyphrase` and the `cat_id` with the actual `cat_id`
 as it appears at the category web address, e.g.
-<%= data[flavor].url.website %>/c/**40**/kinhta-thlefwna.html
+<%= flavor_data.domain %>/c/**40**/kinhta-thlefwna.html
 
 ~~~ html
 <div class="skroutz-widget">
-  <script type="text/javascript" src="<%= data[flavor].url.website %>/javascripts/widget-v1.js" charset="utf-8"></script>
+  <script type="text/javascript" src="<%= flavor_data.domain %>/javascripts/widget-v1.js" charset="utf-8"></script>
   <script type="text/javascript" charset="utf-8" >
     new SkroutzWidget().display_popular({cat_id:40, keyphrase:'iphone'});
   </script>
-  <p class="skwidget-footer">powered by <a href="<%= data[flavor].url.website %>" title="<%= data[flavor].company.short_name %>"><%= data[flavor].company.short_name %></a></p>
+  <p class="skwidget-footer">powered by <a href="<%= flavor_data.domain %>" title="<%= flavor_data.site_name %>"><%= flavor_data.site_name %></a></p>
 </div>
 ~~~
 
 <div class="skroutz-widget">
-  <script type="text/javascript" src="<%= data[flavor].url.website %>/javascripts/widget-v1.js" charset="utf-8"></script>
+  <script type="text/javascript" src="<%= flavor_data.domain %>/javascripts/widget-v1.js" charset="utf-8"></script>
   <script type="text/javascript" charset="utf-8" >
     new SkroutzWidget().display_popular({cat_id:40, keyphrase:'iphone'});
   </script>
-  <p class="skwidget-footer">powered by <a href="<%= data[flavor].url.website %>" title="<%= data[flavor].company.short_name %>"><%= data[flavor].company.short_name %></a></p>
+  <p class="skwidget-footer">powered by <a href="<%= flavor_data.domain %>" title="<%= flavor_data.site_name %>"><%= flavor_data.site_name %></a></p>
 </div>
 
 ### Top category products 
 
 Use the following code snippet to retrieve the top products for a Category. You
 only have to replace the `cat_id` with the actual category id as it appears at
-the category web address, e.g. <%= data[flavor].url.website %>/c/**40**/kinhta-thlefwna.html
+the category web address, e.g. <%= flavor_data.domain %>/c/**40**/kinhta-thlefwna.html
 
 ~~~ html
 <div class="skroutz-widget">
-  <script type="text/javascript" src="<%= data[flavor].url.website %>/javascripts/widget-v1.js" charset="utf-8"></script>
+  <script type="text/javascript" src="<%= flavor_data.domain %>/javascripts/widget-v1.js" charset="utf-8"></script>
   <script type="text/javascript" charset="utf-8" >
     new SkroutzWidget().display_popular({cat_id:40});
   </script>
-  <p class="skwidget-footer">powered by <a href="<%= data[flavor].url.website %>" title="<%= data[flavor].company.short_name %>"><%= data[flavor].company.short_name %></a></p>
+  <p class="skwidget-footer">powered by <a href="<%= flavor_data.domain %>" title="<%= flavor_data.site_name %>"><%= flavor_data.site_name %></a></p>
 </div>
 ~~~
 
 <div class="skroutz-widget">
-  <script type="text/javascript" src="<%= data[flavor].url.website %>/javascripts/widget-v1.js" charset="utf-8"></script>
+  <script type="text/javascript" src="<%= flavor_data.domain %>/javascripts/widget-v1.js" charset="utf-8"></script>
   <script type="text/javascript" charset="utf-8" >
     new SkroutzWidget().display_popular({cat_id:40});
   </script>
-  <p class="skwidget-footer">powered by <a href="<%= data[flavor].url.website %>" title="<%= data[flavor].company.short_name %>"><%= data[flavor].company.short_name %></a></p>
+  <p class="skwidget-footer">powered by <a href="<%= flavor_data.domain %>" title="<%= flavor_data.site_name %>"><%= flavor_data.site_name %></a></p>
 </div>
 
 ## Parameters
@@ -111,10 +111,10 @@ the category web address, e.g. <%= data[flavor].url.website %>/c/**40**/kinhta-t
 
 ~~~ html
 <div class="skroutz-widget">
-  <script type="text/javascript" src="<%= data[flavor].url.website %>/javascripts/widget-v1.js" charset="utf-8"></script>
+  <script type="text/javascript" src="<%= flavor_data.domain %>/javascripts/widget-v1.js" charset="utf-8"></script>
   <script type="text/javascript" charset="utf-8" >
     new SkroutzWidget({target:'_blank'}).display_popular({cat_id:40});
   </script>
-  <p class="skwidget-footer">powered by <a href="<%= data[flavor].url.website %>" title="<%= data[flavor].company.short_name %>"><%= data[flavor].company.short_name %></a></p>
+  <p class="skwidget-footer">powered by <a href="<%= flavor_data.domain %>" title="<%= flavor_data.site_name %>"><%= flavor_data.site_name %></a></p>
 </div>
 ~~~

@@ -18,7 +18,7 @@ GET /book/:book_id/
 **Example:**
 
 <pre class="terminal">
-$ curl -F 'access_to  ken=36c57b67...' http://<%= data[flavor].url.api_v2 %>/xml/book/258276/
+$ curl -F 'access_to  ken=36c57b67...' http://<%= flavor_data.apiv2_domain %>/xml/book/258276/
 </pre>
 
 ~~~ xml
@@ -88,7 +88,7 @@ GET /books/list/
 **Example:**
 
 <pre class="terminal">
-$ curl -F 'access_token=36c57b67...' -F 'id=866' http://<%= data[flavor].url.api_v2 %>/xml/books/list/
+$ curl -F 'access_token=36c57b67...' -F 'id=866' http://<%= flavor_data.apiv2_domain %>/xml/books/list/
 </pre>
 
 ~~~ xml
@@ -150,7 +150,7 @@ $ curl -F 'access_token=36c57b67...' -F 'id=866' http://<%= data[flavor].url.api
 
 ## Books index
 
-Various widgets from <%= data[flavor].url.api_v2 %> Books index page.
+Various widgets from <%= flavor_data.apiv2_domain %> Books index page.
 
 <pre class="terminal">
 GET /books
@@ -167,7 +167,7 @@ GET /books
 **Example:**
 
 <pre class="terminal">
-$ curl -F 'access_`token=36c57b67...' http://<%= data[flavor].url.api_v2 %>/xml/books/
+$ curl -F 'access_`token=36c57b67...' http://<%= flavor_data.apiv2_domain %>/xml/books/
 </pre>
 
 ~~~ xml

@@ -9,15 +9,15 @@ title: Overview | Skroutz API v2
 
 
 > A valid API v2 key is required in order to use the API v2. Request your API v2
-key at <api@<%= data[flavor].url.base %>>.
+key at <api@<%= flavor_data.domain %>>.
 
 ## Schema
 
-All API access is over HTTP, and accessed from the `<%= data[flavor].url.api_v2 %>`
+All API access is over HTTP, and accessed from the `<%= flavor_data.apiv2_domain %>`
 domain. All calls should be in the form
 
 <pre class="terminal">
-  http://<%= data[flavor].url.api_v2 %>/:format/
+  http://<%= flavor_data.api_v2_domain %>/:format/
 </pre>
 
 where `:format` is `json` or `xml`, depending the format of data you want to
@@ -68,22 +68,22 @@ In case of an error, the `error` element is consisted of three elements:
   </li>
 </ol>
 
-## <%= data[flavor].company.short_name %> Partner key
+## <%= flavor_data.site_name %> Partner key
 
-An *<%= data[flavor].company.short_name %> Partner key* is required to use the
-API. Request it at <api@<%= data[flavor].url.base %>>.
+An *<%= flavor_data.site_name %> Partner key* is required to use the
+API. Request it at <api@<%= flavor_data.domain %>>.
 
 ## Authentication
 
-Every call to <%= data[flavor].company.short_name %> API must have an `access_token`
+Every call to <%= flavor_data.site_name %> API must have an `access_token`
 parameter.
 
-Use the the `/authenticate` api call to get `access tokens`. 
+Use the the `/authenticate` api call to get `access tokens`.
 
 Example:
 
 <pre class="terminal">
-$ curl -F 'access_token=36c57b67...' http://<%= data[flavor].url.api_v2 %>/xml/subcats/769/
+$ curl -F 'access_token=36c57b67...' http://<%= flavor_data.apiv2_domain %>/xml/subcats/769/
 </pre>
 
 ~~~ xml
@@ -151,7 +151,7 @@ API calls related with that user. (e.g. `bookmarks`)
   /authenticate api_key=your_api-key
 
   # full token
-  /authenticate api_key=your_api-key username=<%= data[flavor].company.short_name %> password=donald
+  /authenticate api_key=your_api-key username=<%= flavor_data.site_name %> password=donald
 </pre>
 
 **Returns:**
@@ -191,8 +191,8 @@ API calls related with that user. (e.g. `bookmarks`)
 **Example:**
 
 <pre class="terminal">
-$ curl -F 'access_token=36c57b67...' -F username=<%= data[flavor].company.short_name %> -F password=donald \
-       http://<%= data[flavor].url.api_v2 %>/xml/authenticate/
+$ curl -F 'access_token=36c57b67...' -F username=<%= flavor_data.site_name %> -F password=donald \
+       http://<%= flavor_data.apiv2_domain %>/xml/authenticate/
 </pre>
 
 ~~~ xml
@@ -201,8 +201,8 @@ $ curl -F 'access_token=36c57b67...' -F username=<%= data[flavor].company.short_
   <type>authenticate</type>
   <result>
     <user>
-      <username><%= data[flavor].company.short_name %></username>
-      <avatar_url><%= data[flavor].url.website %>/avatars/<%= data[flavor].company.short_name %>.jpg</avatar_url>
+      <username><%= flavor_data.apiv2_domain %></username>
+      <avatar_url><%= flavor_data.domain %>/avatars/<%= flavor_data.site_name %>.jpg</avatar_url>
     </user>
     <access_token_expiry>2010-10-12T16:43:08+03:00</access_token_expiry>
     <access_token>54c1446bd299ee758956f42241ae18db</access_token>
