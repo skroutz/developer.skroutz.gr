@@ -12,16 +12,16 @@ Analytics is a project to measure how users interact with our partners websites.
 
 ## Add the JavaScript reporting snippet
 
-To successfully report your sales insights you have to add the JavaScript snippet and 
-declare actions, at least inside the page which informs the user 
+To successfully report your sales insights you have to add the JavaScript snippet and
+declare actions, at least inside the page which informs the user
 that the order is completed (eg. "thank you page").
 
 You may add the snippet just before closing either the `<head>` or `<body>` section.
 
-> You **have to** replace the `'SA-XXXX-Y'` property with the actual *Shop Account ID* 
+> You **have to** replace the `'SA-XXXX-Y'` property with the actual *Shop Account ID*
 you received from us.
 
-<%= render_code_from_file 'analytics/js_snippet' %>
+<%= render_code_from_file "analytics/#{flavor}/js_snippet" %>
 
 ## Register actions for the completed orders and purchased items
 
@@ -45,7 +45,7 @@ to happen:
 The source of the tracking script is hosted on [github](https://www.github.com/skroutz/analytics.js).  
 The tracking script, registers a new global function named `sa`, and then asynchronously loads the `analytics.js` library onto the page.
 
-The `sa` global function is the main way you interact with the Analytics library. 
+The `sa` global function is the main way you interact with the Analytics library.
 It accepts a sequence of parameters, that represent:
 
 <ol>

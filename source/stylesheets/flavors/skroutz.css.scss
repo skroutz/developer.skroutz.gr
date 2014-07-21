@@ -1,0 +1,9 @@
+header {
+  a {
+    padding-left: 120px;
+
+    &:before {
+      background-image: image-url('skroutz/sprites.png');
+    }
+  }
+}
