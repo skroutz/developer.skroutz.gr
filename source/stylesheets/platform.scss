@@ -125,7 +125,8 @@ header {
       left: 0;
       width: 109px;
       height: 22px;
-      background: url(../../images/logo3.png) no-repeat 0 -59px;
+      background-repeat: no-repeat;
+      background-position: 0 -60px;
     }
   }
 }
@@ -133,7 +134,7 @@ header {
 #pattern {
   padding-top: 80px;
   height: 400px;
-  background: url(../../images/pattern.jpg);
+  background: image-url('pattern.jpg');
 
   h2 {
     position: relative;
@@ -149,7 +150,7 @@ header {
       position: absolute;
       top: -25px;
       right: -580px;
-      background: url(../../images/dev.png) no-repeat;
+      background: image-url('dev.png') no-repeat;
       width: 487px;
       height: 369px;
     }
@@ -207,7 +208,7 @@ header {
       height: 147px;
       top: -170px;
       left: 85px;
-      background: url(../../images/apps.png) no-repeat;
+      background: image-url('apps.png') no-repeat;
     }
 
     &.second h3:before {
@@ -215,7 +216,7 @@ header {
       height: 146px;
       top: -170px;
       left: 85px;
-      background: url(../../images/manual.png) no-repeat;
+      background: image-url('manual.png') no-repeat;
     }
 
     &.third h3:before {
@@ -223,7 +224,7 @@ header {
       height: 178px;
       top: -215px;
       left: 142px;
-      background: url(../../images/help.png) no-repeat;
+      background: image-url('help.png') no-repeat;
     }
   }
 }

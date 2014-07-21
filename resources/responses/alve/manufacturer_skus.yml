@@ -1,0 +1,45 @@
+---
+:request:
+  :url: http://alve.com/api/manufacturers/28/skus
+  :headers:
+    :accept: application/vnd.alve+json; version=3
+    :authorization: Bearer yNE9qe8AC6yVbnVV8ofDPFiitoAREfqiq3THA6NYLQvUHbLHqlmUhHQ6kudbdrHa/0FlExa75mpN4PG/DEzSKw==
+  :params:
+    :per: 2
+  :verb: GET
+:response:
+  :status: 200
+  :headers:
+    server: nginx
+    !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
+    !binary "dmFyeQ==": Accept-Encoding
+    status: 200 OK
+    !binary "bGluaw==": <http://api.alve.com/api/manufacturers/28/skus?page=67&per=2>;
+      rel="last", <http://api.alve.com/api/manufacturers/28/skus?page=2&per=2>; rel="next"
+    x-ua-compatible: IE=Edge,chrome=1
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '458392785'
+    x-runtime: '0.058589'
+    x-dns-prefetch-control: 'off'
+    x-app: as2
+    content-length: '831'
+    accept-ranges: bytes
+    date: Fri, 18 Jul 2014 15:17:36 GMT
+    x-varnish: '458392785'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: varnish2
+    x-cache: MISS
+  :body: ! '{"skus":[{"id":347349,"ean":"","pn":"MD235D/A","name":"iPhone 4s 8GB","display_name":"Apple
+    iPhone 4s 8GB","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":1785.58,"price_min":1105.26,"reviewscore":0.0,"shop_count":24,"plain_spec_summary":"Single
+    SIM, A\u011f Ba\u011flant\u0131s\u0131: 2G / 3G, Kamera: 8 Megapiksel,  Ekran:
+    3.5\", 640 x 960 piksel, Kullan\u0131m Y\u00f6ntemi: Dokunmatik ekran (Touch screen),  Dahili
+    Haf\u0131za: 8 GB,  \u0130\u015fletim Sistemi: iOS, \u00c7\u0131k\u0131\u015f
+    Tarihi: 2011, Smart Phone","manufacturer_id":28,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://alve-b.scdn.gr/images/sku_main_images/000347/347349/medium_iphone4-900x900.jpg","alternatives":["http://alve-b.scdn.gr/images/sku_images/000407/407140/16713_12249449_3209.jpg","http://alve-c.scdn.gr/images/sku_images/000407/407141/15743_12249449-7336.jpg","http://alve-a.scdn.gr/images/sku_images/000485/485843/psd-iphone4s-large.jpg","http://alve-c.scdn.gr/images/sku_images/000643/643880/iphone-4s-black.png","http://alve-b.scdn.gr/images/sku_images/000643/643881/145011470-2-apple_iphone_4s_16_gb_black_akilli_telefon_ar_tek.jpg"]}},{"id":25285,"ean":"","pn":"MD128DN/A","name":"iPhone
+    4 8GB","display_name":"Apple iPhone 4 8GB","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":2117.51,"price_min":979.0,"reviewscore":0.0,"shop_count":8,"plain_spec_summary":"Single
+    SIM, A\u011f Ba\u011flant\u0131s\u0131: 2G / 3G, Kamera: 5 Megapiksel,  Ekran:
+    3.5\", 640 x 960 piksel, Kullan\u0131m Y\u00f6ntemi: Dokunmatik ekran (Touch screen),  Dahili
+    Haf\u0131za: 8 GB,  \u0130\u015fletim Sistemi: iOS, \u00c7\u0131k\u0131\u015f
+    Tarihi: 2010, Smart Phone","manufacturer_id":28,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://alve-d.scdn.gr/images/sku_main_images/000025/25285/medium_iphone4s.jpg","alternatives":["http://alve-a.scdn.gr/images/sku_images/000025/25851/12741107_6752.jpg","http://alve-d.scdn.gr/images/sku_images/000025/25852/12741107_5068.jpg","http://alve-a.scdn.gr/images/sku_images/000464/464699/iphone-4-240d-800.jpg","http://alve-d.scdn.gr/images/sku_images/000485/485850/iphone4.jpg","http://alve-d.scdn.gr/images/sku_images/000485/485852/12741107_8884.jpg"]}}],"meta":{"pagination":{"total_results":134,"total_pages":67,"page":1,"per":2}}}'
+:created_at: 2014-07-18 18:17:36.006027165 +03:00

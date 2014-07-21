@@ -1,0 +1,49 @@
+---
+:request:
+  :url: http://alve.com/api/search?q=apple
+  :headers:
+    :accept: application/vnd.alve+json; version=3
+    :authorization: Bearer yNE9qe8AC6yVbnVV8ofDPFiitoAREfqiq3THA6NYLQvUHbLHqlmUhHQ6kudbdrHa/0FlExa75mpN4PG/DEzSKw==
+  :verb: GET
+:response:
+  :status: 200
+  :headers:
+    server: nginx
+    !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
+    !binary "dmFyeQ==": Accept-Encoding
+    status: 200 OK
+    !binary "bGluaw==": <http://api.alve.com/api/search?page=2&q=apple>; rel="last",
+      <http://api.alve.com/api/search?page=2&q=apple>; rel="next"
+    x-ua-compatible: IE=Edge,chrome=1
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '458392793'
+    x-runtime: '0.116473'
+    x-dns-prefetch-control: 'off'
+    x-app: as2
+    content-length: '955'
+    accept-ranges: bytes
+    date: Fri, 18 Jul 2014 15:17:36 GMT
+    x-varnish: '458392793'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: varnish2
+    x-cache: MISS
+  :body: ! '{"categories":[{"id":33,"name":"Cep Telefonu","children_count":0,"image_url":"http://alve-a.scdn.gr/images/categories/large/33.jpg","parent_id":32,"fashion":false,"show_specifications":true,"manufacturer_title":"Markalar","match_count":14},{"id":19,"name":"Tablet","children_count":0,"image_url":"http://alve-c.scdn.gr/images/categories/large/19.jpg","parent_id":9,"fashion":false,"show_specifications":true,"manufacturer_title":"Markalar","match_count":37},{"id":72,"name":"Laptop","children_count":0,"image_url":"http://alve-c.scdn.gr/images/categories/large/72.jpg","parent_id":9,"fashion":false,"show_specifications":true,"manufacturer_title":"Markalar","match_count":21},{"id":593,"name":"Tablet
+    K\u0131l\u0131f\u0131","children_count":0,"image_url":"http://alve-b.scdn.gr/images/categories/large/593.jpg","parent_id":9,"fashion":false,"show_specifications":false,"manufacturer_title":"Markalar","match_count":17},{"id":34,"name":"Cep
+    Telefonu K\u0131l\u0131f\u0131","children_count":0,"image_url":"http://alve-a.scdn.gr/images/categories/large/34.jpg","parent_id":32,"fashion":false,"show_specifications":false,"manufacturer_title":"Markalar","match_count":165},{"id":11,"name":"Masa\u00fcst\u00fc
+    Bilgisayar","children_count":0,"image_url":"http://alve-d.scdn.gr/images/categories/large/11.jpg","parent_id":10,"fashion":false,"show_specifications":false,"manufacturer_title":"Markalar","match_count":17},{"id":366,"name":"MP3
+    Player","children_count":0,"image_url":"http://alve-c.scdn.gr/images/categories/large/366.jpg","parent_id":14,"fashion":false,"show_specifications":false,"manufacturer_title":"Markalar","match_count":6},{"id":406,"name":"Hoparl\u00f6r","children_count":0,"image_url":"http://alve-b.scdn.gr/images/categories/large/406.jpg","parent_id":14,"fashion":false,"show_specifications":false,"manufacturer_title":"Markalar","match_count":6},{"id":179,"name":"Mama
+    Sandalyesi - Bebek Sal\u0131nca\u011f\u0131","children_count":0,"image_url":"http://alve-d.scdn.gr/images/categories/large/179.jpg","parent_id":4,"fashion":true,"show_specifications":false,"manufacturer_title":"Markalar","match_count":2},{"id":177,"name":"Bebek
+    Arabas\u0131","children_count":0,"image_url":"http://alve-c.scdn.gr/images/categories/large/177.jpg","parent_id":4,"fashion":false,"show_specifications":true,"manufacturer_title":"Markalar","match_count":2},{"id":322,"name":"Kad\u0131n
+    \u0130\u00e7 Giyim","children_count":0,"image_url":"http://alve-a.scdn.gr/images/categories/large/322.jpg","parent_id":300,"fashion":true,"show_specifications":false,"manufacturer_title":"Markalar","match_count":1},{"id":29,"name":"RAM","children_count":0,"image_url":"http://alve-a.scdn.gr/images/categories/large/29.jpg","parent_id":20,"fashion":false,"show_specifications":false,"manufacturer_title":"Markalar","match_count":4},{"id":73,"name":"Laptop
+    \u00c7antas\u0131","children_count":0,"image_url":"http://alve-c.scdn.gr/images/categories/large/73.jpg","parent_id":9,"fashion":false,"show_specifications":false,"manufacturer_title":"Markalar","match_count":3},{"id":545,"name":"Ekran
+    Koruyucu Film","children_count":0,"image_url":"http://alve-d.scdn.gr/images/categories/large/545.jpg","parent_id":32,"fashion":false,"show_specifications":false,"manufacturer_title":"Markalar","match_count":137},{"id":244,"name":"Media
+    Player","children_count":0,"image_url":"http://alve-b.scdn.gr/images/categories/large/244.jpg","parent_id":13,"fashion":false,"show_specifications":false,"manufacturer_title":"Markalar","match_count":1},{"id":546,"name":"Cep
+    Telefonu \u015earj Aleti","children_count":0,"image_url":"http://alve-d.scdn.gr/images/categories/large/546.jpg","parent_id":32,"fashion":false,"show_specifications":false,"manufacturer_title":"Markalar","match_count":11},{"id":75,"name":"Laptop
+    - Tablet Adapt\u00f6r\u00fc & Bataryas\u0131","children_count":0,"image_url":"http://alve-c.scdn.gr/images/categories/large/75.jpg","parent_id":9,"fashion":false,"show_specifications":false,"manufacturer_title":"Markalar","match_count":11},{"id":269,"name":"Klavye","children_count":0,"image_url":"http://alve-d.scdn.gr/images/categories/large/269.jpg","parent_id":268,"fashion":false,"show_specifications":false,"manufacturer_title":"Markalar","match_count":5},{"id":74,"name":"Laptop
+    Altl\u0131\u011f\u0131 - Docking Station","children_count":0,"image_url":"http://alve-c.scdn.gr/images/categories/large/74.jpg","parent_id":9,"fashion":false,"show_specifications":false,"manufacturer_title":"Markalar","match_count":1},{"id":239,"name":"Nevresim
+    Tak\u0131m\u0131","children_count":0,"image_url":"http://alve-a.scdn.gr/images/categories/large/239.jpg","parent_id":237,"fashion":true,"show_specifications":false,"manufacturer_title":"Markalar","match_count":8},{"id":60,"name":"Elektro
+    Gitar","children_count":0,"image_url":"http://alve-d.scdn.gr/images/categories/large/60.jpg","parent_id":59,"fashion":false,"show_specifications":false,"manufacturer_title":"Markalar","match_count":7},{"id":429,"name":"\u00c7er\u00e7eve","children_count":0,"image_url":"http://alve-d.scdn.gr/images/categories/large/429.jpg","parent_id":426,"fashion":false,"show_specifications":false,"manufacturer_title":"Markalar","match_count":6},{"id":39,"name":"K\u00f6pek","children_count":0,"image_url":"http://alve-b.scdn.gr/images/categories/large/39.jpg","parent_id":37,"fashion":false,"show_specifications":false,"manufacturer_title":"Markalar","match_count":6},{"id":496,"name":"\u015eampuan","children_count":0,"image_url":"http://alve-b.scdn.gr/images/categories/large/496.jpg","parent_id":492,"fashion":false,"show_specifications":false,"manufacturer_title":"Markalar","match_count":5},{"id":428,"name":"Duvar
+    Saati","children_count":0,"image_url":"http://alve-d.scdn.gr/images/categories/large/428.jpg","parent_id":426,"fashion":false,"show_specifications":false,"manufacturer_title":"Markalar","match_count":4}],"meta":{"alternatives":[],"strong_matches":{"manufacturer":{"id":28,"name":"Apple","image_url":"http://alve-c.scdn.gr/images/manufacturer_logos/000000/28/apple-logo-silver.jpg"}},"pagination":{"total_results":46,"total_pages":2,"page":1,"per":25}}}'
+:created_at: 2014-07-18 18:17:36.422489817 +03:00

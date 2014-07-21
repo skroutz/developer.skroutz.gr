@@ -1,0 +1,59 @@
+---
+title: Permissions
+---
+
+# Permissions
+
+A representation of the permissions granted to your app via
+<%= flavor_data.site_name %> on behalf of a User.
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>public</td>
+      <td>application</td>
+      <td>All public resources*</td>
+    </tr>
+    <tr>
+      <td>favorites</td>
+      <td>user</td>
+      <td>User <%= link_to 'Favorites', '/api/v3/favorites' %></td>
+    </tr>
+    <tr>
+      <td>notifications</td>
+      <td>user</td>
+      <td>User <%= link_to 'notifications', '/api/v3/notifications' %></td>
+    </tr>
+  </tbody>
+</table>
+
+## Public Resources
+Having obtained the public permission you can access the following resources:
+
+<ul class="public-resources">
+  <li><%= link_to 'Categories', '/v3/category/' %></li>
+  <li><%= link_to 'Skus', '/v3/sku/' %></li>
+  <li><%= link_to 'Products', '/v3/product/' %></li>
+  <li><%= link_to 'Shops', '/v3/shop/' %></li>
+  <li><%= link_to 'Manufacturers', '/v3/manufacturer/' %></li>
+  <li><%= link_to 'Search', '/v3/search/' %></li>
+  <li><%= link_to 'Filter Groups', '/v3/filter_groups/' %></li>
+</ul>
+
+## User Resources
+These permissions require that you have explicitly requested them using
+the scope param <%= link_to 'see more', '/guides/authentication' %>.
+The user will have to consent to grant any of those permissions.
+You __must not__ share these data to 3rd parties.
+
+<ul class="private-resources">
+  <li><%= link_to 'Favorites', 'api/v3/favorites/' %></li>
+  <li><%= link_to 'Notifications', 'api/v3/notifications/' %></li>
+</ul>

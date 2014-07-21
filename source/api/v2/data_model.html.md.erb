@@ -1,0 +1,214 @@
+---
+title: Data Model | Skroutz API v2
+---
+
+# Data Model
+
+* TOC
+{:toc}
+
+## Category
+
+<%= flavor_data.site_name %> consists of over 800 product categories.
+Every product and SKU belongs to a leaf category, i.e. a category with no further
+sub-categories.
+
+There are two kinds of categories:
+
+1. Categories with SKUs
+2. Categories with unclassified products
+
+A Category has the below properties:
+
+* `id`
+* `name`
+* `children_count`
+* `family_id`
+* `family_name`
+* `image_url`
+
+## Product
+
+A Product refers to a specific product of a shop. The <%= flavor_data.site_name %>
+team classifies identical products within popular categories. That classification
+is called an SKU.
+
+A Product has the below properties:
+
+ * `id`
+ * `name`
+ * `imageurl`
+ * `pricevat`
+ * `click_url`
+ * `Category`
+ * `Manufacturer`
+ * `Shop`
+
+## Sku
+
+An SKU is a `generic product`, a group of identical products through different
+shops. An SKU may have reviews or specifications, e.g. CPU for a laptop, or the
+Diagonal Viewable Size for a T.V.
+
+An Sku has the below properties:
+
+ * `id`
+ * `price_min`
+ * `price_max`
+ * `ean` Barcode
+ * `pn` Part Number
+ * `reviewscore`
+ * `display_name`
+ * `plain_spec_summary`
+ * `Category`
+ * `ActiveProducts`
+ * `Reviews`
+ * `SkuSpecs`
+ * `SkuPictures`
+ * `MainPicture`
+ * `Proposals` (type Sku with fewer attrs)
+
+
+## SkuPicture
+
+An SkuPicture has the below properties:
+
+* `original_url`
+* `tiny_url`
+* `small_url`
+* `medium_url`
+
+## Reviews
+
+Review have the below properties:
+
+* `created_on`
+* `negative`
+* `positives`
+* `rating`
+* `review`
+* `User`
+* `Sku`
+
+## Specifications
+
+Specifications have the below properties:
+
+ * `name`
+ * `spec_value`
+ * `specification_name`
+ * `specification_group`
+
+## Manufacturer
+
+A Manufacturer has the below properties:
+
+ * `id`
+ * `name`
+ * `image_url`
+
+## Shop
+
+A Shop has the below properties:
+
+ * `id`
+ * `name`
+ * `reviewscore`
+ * `reviews_count`
+ * `phone`
+ * `created_on`
+ * `communication_score`
+ * `orderflow_score`
+ * `completence_score`
+ * `rma_score`
+ * `feedback_score`
+ * `image_url` - The logo of the Shop. It might not exist.
+ * `thumbshot_url`
+ * `last_reviews_hash`
+ * `total_reviews_hash`
+ * `link`
+ * `info`
+ * `credit_card`
+ * `paypal`
+ * `bank`
+ * `reviewscore`
+ * `reviews_count`
+ * `store_picking` - Collect from store
+ * `spot_cash` - Cash on delivery
+ * `spot_cash_cost` - Cost for delivery
+ * `spot_cash_info` - Delivery information
+ * `installments` - installments
+ * `free_shipping` - Shipping cost
+ * `free_from` - Minimum amount of money for free shipping
+ * `free_from_info` - Shipping information
+ * `min_shipping` - Minimum shipping costs
+ * `Locations`
+ * `ApprovedShopReviews` (type ShopReviews)
+
+## ShopReviews
+
+ShopReviews have the following properties:
+
+* `review`
+* `rating`
+* `shop_reply`
+* `created_on`
+
+## Location
+
+Location has the following properties:
+
+* `phone`
+* `full_address`
+* `latitude`
+* `longitude`
+
+## Book
+
+An SKU that belongs to Books category is a Book. It has the following
+properties:
+
+* `id`
+* `display_name`
+* `title`
+* `price_min`
+* `price_max`
+* `author_name`
+* `main_dewey_id`
+* `main_author_id`
+* `picture_url`
+* `Authors`
+* `Deweys`
+* `MainPicture`
+* `ActiveProducts`
+* `Reviews`
+
+## User
+
+ * `username`
+ * `avatar_url`
+
+## Bookmarklist
+
+ * `id`
+ * `name`
+ * `is_public`
+ * `Bookmarks`
+
+## Bookmark
+
+ * `id`
+ * `resource_type` `Product`, `Sku`, `Book`
+ * `resource_id`
+ * `bookmarklist_id`
+
+## SearchResults
+
+The results of a given search keyword.
+
+SearchResults has the following properties:
+
+* `id` - Category code
+* `name` - Category name
+* `children_count` - Total sub-categories
+* `count` - Total results in category

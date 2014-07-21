@@ -1,0 +1,202 @@
+---
+title: OAuth 2.0 Endpoints
+---
+
+# OAuth 2.0 Endpoints
+
+* toc
+{:toc}
+
+## Billing address
+
+The following HTTP GET request
+
+<pre class="terminal">
+https://www.<%= flavor_data.domain %>/oauth2/address?oauth_token=124fFAGRNJru1FTz70BzhT3Zg...
+</pre>
+
+returns user's billing address in [JSON](http://en.wikipedia.org/wiki/JSON)
+format:
+
+<pre class="terminal">
+$ curl https://www.<%= flavor_data.domain %>/oauth2/address?oauth_token=124fFAGRNJru1FTz70BzhT3Zg...
+</pre>
+
+~~~ javascript
+{
+  "first_name":"Τάσος",
+  "last_name":"Τασάκης",
+  "email":"home@example.com",
+  "mobile":"6971234567",
+  "phone":"2101234567",
+  "address":"Πάρου 34",
+  "zip":"17234",
+  "city":"Αθήνα",
+  "region":"Αττικής",
+  "street_name":"Πάρου",
+  "street_number":"34",
+  "invoice":false,
+  "company":"",
+  "doy":"",
+  "afm":"",
+  "profession":"",
+  "company_phone":""
+}
+~~~
+
+Τhe address resource supports [JSONP](http://en.wikipedia.org/wiki/JSONP). Once
+you complete the required server-side steps, you can expose the `oauth_token` at
+client side. Then, with JavaScript and [XHR](http://en.wikipedia.org/wiki/XMLHttpRequest)
+retrieve user's address and pre-fill the form.
+
+To get the billing address of a user in [JSONP](http://en.wikipedia.org/wiki/JSONP)
+format, you have to set the `callback` parameter with the function name (e.g. `aFunction`)
+you want to be invoked.
+
+**Example:**
+
+<pre class="terminal">
+$ curl https://www.<%= flavor_data.domain %>/oauth2/address?callback=aFunction&oauth_token=124fFAGRNJru1FTz70BzhT3Zg...
+</pre>
+
+~~~ javascript
+aFunction({
+  "first_name":"Τάσος",
+  "last_name":"Τασάκης",
+  "email":"home@example.com"
+    ...
+})
+~~~
+
+## Shipping address
+
+In case shipping address is different from billing address, it will be present at
+the entity `shipping_address`. For example:
+
+~~~ javascript
+{
+  "first_name":"Τάσος",
+  "last_name":"Τασάκης",
+  "email":"home@example.com",
+  "mobile":"6971234567",
+  "phone":"2101234567",
+  "address":"Πάρου 34",
+  "zip":"17234",
+  "city":"Αθήνα",
+  "region":"Αττικής",
+  "street_name":"Πάρου",
+  "street_number":"34",
+  "invoice":false,
+  "company":"",
+  "doy":"",
+  "afm":"",
+  "profession":"",
+  "company_phone":"",
+  "shipping_address":{
+    "first_name":"Τάσος",
+    "last_name":"Τασάκης",
+    "mobile":"",
+    "phone":"2101234567",
+    "address":"Σύρου 12",
+    "zip":"18151",
+    "city":"Αθήνα",
+    "region":"Αττικής"
+    "street_name":"Σύρου",
+    "street_number":"12"
+  }
+}
+~~~
+
+## Invoice
+
+If user requested invoice, then the `invoice` entity will be `true` and the
+relevant entities (`company`, `doy`, `afm`, `profession`, `company_phone`) will
+be filled with the information.
+
+~~~ javascript
+{
+  "first_name":"Τάσος",
+  "last_name":"Τασάκης",
+  "email":"home@example.com",
+  "mobile":"6971234567",
+  "phone":"2101234567",
+  "address":"Πάρου 34",
+  "zip":"17234",
+  "city":"Αθήνα",
+  "region":"Αττικής",
+  "street_name":"Πάρου",
+  "street_number":"34",
+  "invoice":true,
+  "company":"Skroutz",
+  "doy":"Α Αθηνων",
+  "afm":"123456789",
+  "profession":"Engineer",
+  "company_phone":"2101234567"
+}
+~~~
+
+## Regions
+
+The `region` entity will be filled with a value from the following list for both,
+billing and shipping addresses:
+
+    Αιτωλοακαρνανίας
+    Αργολίδας
+    Αρκαδίας
+    Άρτας
+    Αττικής
+    Αχαΐας
+    Βοιωτίας
+    Γρεβενών
+    Δράμας
+    Δωδεκανήσου *
+    Έβρου
+    Ευρυτανίας
+    Εύβοιας
+    Ζακύνθου
+    Ηλείας
+    Ημαθίας
+    Ηρακλείου
+    Θεσπρωτίας
+    Θεσσαλονίκης
+    Ιωαννίνων
+    Καβάλας
+    Καρδίτσας
+    Καστοριάς
+    Κέρκυρας
+    Κεφαλληνιάς
+    Κιλκίς
+    Κοζάνης
+    Κορινθίας
+    Κυκλάδων *
+    Λακωνίας
+    Λάρισας
+    Λασιθίου
+    Λέσβου *
+    Λευκάδας
+    Μαγνησίας
+    Μεσσηνίας
+    Ξάνθης
+    Πέλλας
+    Πιερίας
+    Πρέβεζας
+    Ρεθύμνης
+    Ροδόπης
+    Σάμου *
+    Σερρών
+    Τρικάλων
+    Φθιώτιδας
+    Φλώρινας
+    Φωκίδας
+    Χίου *
+    Χαλκιδικής
+    Χανίων
+    Εύβοιας (Σκύρος) *
+    Έβρου (Σαμοθράκη) *
+    Μαγνησίας (Σκόπελος) *
+    Μαγνησίας (Σκιάθος) *
+    Μαγνησίας (Αλόννησος) *
+    Καβάλας (Θάσος) *
+
+> Regions and locations marked with an asterisk are subject of reduced taxation.
+  For convenience these regions are separated from the rest.

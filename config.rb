@@ -26,6 +26,28 @@ activate :syntax, line_numbers: false
 helpers CodeExampleHelper
 helpers ResponseMateHelper
 
+helpers do
+  # Returns the current environment flavor
+  #
+  # @example Run Middleman for Skroutz
+  #   FLAVOR=skroutz bundle exec middleman server
+  #   flavor #=> 'skroutz'
+  #
+  # @example Build website for Alve
+  #   FLAVOR=alve bundle exec middleman build
+  #   flavor #=> 'alve'
+  #
+  # @return [String] the current flavor
+  def flavor
+    @flavor ||= ENV['FLAVOR'] || 'skroutz'
+  end
+
+  # @return [String] Data of the current flavor
+  def flavor_data
+    data[flavor]
+  end
+end
+
 set :markdown, layout_engine: :erb, toc_levels: '2'
 
 set :css_dir, 'stylesheets'
@@ -33,6 +55,10 @@ set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
+
+ResponseMate.setup do |config|
+  config.output_dir = "./resources/responses/#{flavor}"
+end
 
 # Build-specific configuration
 configure :build do

@@ -1,0 +1,226 @@
+---
+title: Overview | Skroutz API v2
+---
+
+# Overview
+
+* TOC
+{:toc}
+
+
+> A valid API v2 key is required in order to use the API v2. Request your API v2
+key at <api@<%= flavor_data.domain %>>.
+
+## Schema
+
+All API access is over HTTP, and accessed from the `<%= flavor_data.apiv2_domain %>`
+domain. All calls should be in the form
+
+<pre class="terminal">
+  http://<%= flavor_data.api_v2_domain %>/:format/
+</pre>
+
+where `:format` is `json` or `xml`, depending the format of data you want to
+receive. Henceforth, this part will be omitted since it's the same for every
+call.
+
+### Response schema
+
+An API response consists of the following three elements:
+
+* `type`
+* `result`
+* `error`
+
+Example XML
+
+~~~ xml
+<?xml version="1.0" encoding="UTF-8"?>
+<SkroutzApi>
+    <type>categories</type>
+    <error nil="true"></error>
+    <result>
+    ...
+    </result>
+</SkroutzApi>
+~~~
+
+The `result` element is the **result** of the API call. It is safe to be parsed,
+*only* if the `error` node is `null`. Every successful response includes a `type`
+element with a code name for value.
+
+## Error handling
+
+In case of an error, the `error` element is consisted of three elements:
+
+<ol>
+  <li>
+    <p class="term">code</p>
+    <p class="description">Error code</p>
+  </li>
+  <li>
+    <p class="term">number</p>
+    <p class="description">Error number</p>
+  </li>
+  <li>
+    <p class="term">text</p>
+    <p class="description">Short description of the error</p>
+  </li>
+</ol>
+
+## <%= flavor_data.site_name %> Partner key
+
+An *<%= flavor_data.site_name %> Partner key* is required to use the
+API. Request it at <api@<%= flavor_data.domain %>>.
+
+## Authentication
+
+Every call to <%= flavor_data.site_name %> API must have an `access_token`
+parameter.
+
+Use the the `/authenticate` api call to get `access tokens`.
+
+Example:
+
+<pre class="terminal">
+$ curl -F 'access_token=36c57b67...' http://<%= flavor_data.apiv2_domain %>/xml/subcats/769/
+</pre>
+
+~~~ xml
+<?xml version="1.0" encoding="UTF-8"?>
+<SkroutzApi>
+  <type>categories</type>
+  <error nil="true"></error>
+  <result>
+    <categories>
+      <category>
+        <children_count>0</children_count>
+        <id>290</id>
+        <name>
+          <![CDATA[Διάφορα Αξεσουάρ Laptop]]>
+        </name>
+      </category>
+      <category>
+        <children_count>0</children_count>
+        <id>712</id>
+        <name>Docking stations</name>
+      </category>
+      <category>
+        <children_count>0</children_count>
+        <id>713</id>
+        <name>
+          <![CDATA[Βάση Laptop]]>
+        </name>
+      </category>
+    </categories>
+  </result>
+</SkroutzApi>
+~~~
+
+## Access Tokens
+
+There are two kind of `access tokens`, the `basic` and the `full`.
+A `full` access token is related with a user and therefore it allows additional
+API calls related with that user. (e.g. `bookmarks`)
+
+## Authenticate
+
+`access_token` generation. **Only "https"**
+
+### Parameters
+
+<ul>
+  <li>
+    <p class="term">api_key</p>
+    <p class="description">Your API key</p>
+  </li>
+  <li>
+    <p class="term">username</p>
+    <p class="description">User name, in case of full access token</p>
+  </li>
+  <li>
+    <p class="term">password</p>
+    <p class="description">User password, in case of full access token</p>
+  </li>
+</ul>
+
+**Example**
+
+<pre class="terminal">
+  # basic token
+  /authenticate api_key=your_api-key
+
+  # full token
+  /authenticate api_key=your_api-key username=<%= flavor_data.site_name %> password=donald
+</pre>
+
+**Returns:**
+
+<ul>
+  <li>
+    <p class="term">access_token</p>
+    <p class="description">The access token to use for API calls</p>
+  </li>
+  <li>
+    <p class="term">access_token_expiry</p>
+    <p class="description">Expiration date of the access token</p>
+  </li>
+  <li>
+    <p class="term">access_token_type</p>
+    <p class="description">basic/full</p>
+  </li>
+  <li>
+    <p class="term">user</p>
+    <p class="description">User password, in case of full access token</p>
+  </li>
+</ul>
+
+**Errors:**
+
+<ul>
+  <li>
+    <p class="term">wrong_auth</p>
+    <p class="description">Wrong credentials</p>
+  </li>
+  <li>
+    <p class="term">access_denied</p>
+    <p class="description">Wrong API key</p>
+  </li>
+</ul>
+
+**Example:**
+
+<pre class="terminal">
+$ curl -F 'access_token=36c57b67...' -F username=<%= flavor_data.site_name %> -F password=donald \
+       http://<%= flavor_data.apiv2_domain %>/xml/authenticate/
+</pre>
+
+~~~ xml
+<?xml version="1.0" encoding="UTF-8"?>
+<SkroutzApi>
+  <type>authenticate</type>
+  <result>
+    <user>
+      <username><%= flavor_data.apiv2_domain %></username>
+      <avatar_url><%= flavor_data.domain %>/avatars/<%= flavor_data.site_name %>.jpg</avatar_url>
+    </user>
+    <access_token_expiry>2010-10-12T16:43:08+03:00</access_token_expiry>
+    <access_token>54c1446bd299ee758956f42241ae18db</access_token>
+    <access_token_type>full</access_token>
+  </result>
+  <error nil="true"></error>
+</SkroutzApi>
+~~~
+
+## Logout
+
+Logout
+
+**Returns:**
+
+<ul>
+  <li>
+    <p class="term">success</p>
+    <p class="description">true</p>
+  </li>
+</ul>
