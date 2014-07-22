@@ -1,0 +1,553 @@
+@charset "utf-8";
+
+
+//== Fonts
+//
+//## External fonts. Don't get greedy. They come at a cost.
+
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,700&subset=latin);
+
+
+//== Application Variables
+//
+//## Extend and override Bootstrap variables.
+
+@import 'variables';
+
+
+//== Bootstrap Framework
+//
+//## Load Bootstrap Framework. Heads up: Unused components are commented out.
+
+@import 'bootstrap';
+
+
+//== Icon Fonts
+//
+//## Alternative Icon Font
+
+@import 'font-awesome';   // Comment out Bootstrap glyphicons
+@import 'font-devs';
+
+
+//== Helpers & Utilities
+//
+//## General helpers and utilities
+
+* {
+  outline: 0 none;
+
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+
+  &:hover {
+    transition: all 0.2s ease-out;
+  }
+}
+
+.element-centered {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+//== Back To Top
+//
+//##
+
+#back-to-top {
+  display: none;
+  position: fixed;
+  right: 1px;
+  bottom: 1px; //$app-h-footer + (2 * $padding-base-horizontal);
+  z-index: $zindex-modal-background;
+  padding: 10px 15px;
+  color: $app-clr-greyDark;
+  border-radius: 0;
+  //@include opacity(.4);
+  //@include transition(opacity ease-out .35s);
+
+  i {
+    font-size: 18px;
+  }
+
+  &:hover {
+    color: $brand-primary;
+    border-color: $brand-primary;
+    //@include opacity(1.0);
+    @include transition(all ease-in-out .125s);
+  }
+}
+
+
+//== Buttons
+//
+//## Extend Bootstrap Buttons
+
+@mixin button-variant-inverse($color, $background, $border) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $background;
+    background-color: $color;
+    border-color: darken($border, 12%);
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: $color;
+      border-color: $border;
+    }
+  }
+
+  .badge {
+    color: $background;
+    background-color: $color;
+  }
+}
+
+.btn-primary-inverse {
+  @include button-variant-inverse($brand-primary, $btn-default-bg, $brand-primary);
+
+  &:hover {
+
+  }
+}
+
+.btn-xlg {
+  // line-height: ensure even-numbered height of button next to large input
+  @include button-size($padding-large-vertical + 5, $padding-large-horizontal + 20, $font-size-xlarge, $line-height-xlarge, $border-radius-base);
+}
+
+
+//== Containers
+//
+//## Extend Bootstrap Containers
+
+//** Cover Container
+.container-cover {
+  padding: 30px 0;
+
+  .title {
+    font-size: 2.5em;
+    line-height: 1.5em;
+
+    @media (max-width: $screen-sm-max) {
+      margin-top: 0;
+      font-size: 2.0em;
+      line-height: 1.33em;
+    }
+  }
+
+  .btn {
+    margin-top: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+
+    @media (max-width: $screen-sm-max) {
+      display: block;
+      margin:20px auto 40px;
+    }
+  }
+
+  &.cover-light {
+    color: $app-clr-greyDark;
+    background-image: image-url('pattern_light.jpg');
+  }
+
+  &.cover-dark {
+    color: $app-clr-white;
+    background-image: image-url('pattern_dark.jpg');
+  }
+}
+
+//** Featured List Container
+.container-featured {
+  margin-bottom: 20px;
+  padding: 15px 0;
+  border-top: 3px solid lighten($app-clr-grey, 21%);
+  border-bottom: 3px solid lighten($app-clr-grey, 21%);
+
+  a {
+    font-weight: 300;
+    color: $app-clr-greyDark;
+
+    i {
+      display: block;
+      padding-right: 10px;
+      color: $app-clr-grey;
+      font-size: 2.5em;
+      line-height: 1.5em;
+    }
+
+    &:hover {
+      color: $brand-primary;
+      text-decoration: none;
+
+      i {
+        color: $brand-primary;
+      }
+    }
+  }
+
+  @media (max-width: $screen-sm-max) {
+    padding: 5px 0;
+    a {
+      display: block;
+
+      i {
+        font-size: 1.5em;
+      }
+    }
+  }
+}
+
+//** Sidebar Container
+.container-sidebar {
+  padding: 10px 15px;
+}
+
+
+//== Forms
+//
+//## Extend Bootstrap Forms
+
+//** Customize input placeholders
+::-webkit-input-placeholder {
+  color: darken($app-clr-white, 15%) !important;
+  font-weight: 200;
+}
+:-ms-input-placeholder {
+  color: darken($app-clr-white, 15%) !important;
+  font-weight: 200;
+}
+::-moz-placeholder {
+  color: darken($app-clr-white, 15%) !important;
+  font-weight: 200;
+}
+:-moz-placeholder {
+  color: darken($app-clr-white, 15%) !important;
+  font-weight: 200;
+}
+
+
+//== Navbar
+//
+//## Extend Bootstrap Navbar
+
+//** Customized Theme
+// Default navbar
+.navbar-custom {
+  @extend .navbar-default;
+
+  background-color: $app-clr-greyDark;
+  border-color: $brand-primary;
+  border-bottom-width: 3px;
+
+  .navbar-brand {
+    color: $app-clr-white;
+    font-family: $font-family-monospace;
+    font-weight: 500;
+    &:hover,
+    &:focus {
+      color: $app-clr-greyLight;
+      background-color: transparent;
+    }
+  }
+
+  .navbar-text {
+    color: $app-clr-white;
+  }
+
+  .navbar-nav {
+    > li > a {
+      color: $app-clr-white;
+
+      &:hover,
+      &:focus {
+        color: $brand-primary;
+        background-color: transparent;
+      }
+    }
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: darken($brand-primary, 6%);
+        background-color: transparent;
+      }
+    }
+    > .disabled > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $navbar-default-link-disabled-color;
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.navbar {
+  &.navbar-fixed-top.navbar-custom.trans {
+    background-color: rgba($app-clr-greyDark, .95);
+    border-color: rgba($brand-primary, .95);
+    @include transition(all ease-in .25s);
+  }
+
+  .navbar-toggle {
+    background-color: $app-clr-greyDark;
+    border-color: $brand-primary;
+  }
+}
+
+//** Logo
+.navbar-header {
+  .navbar-brand {
+    height: 22px;
+    margin-top: 15px;
+    margin-left: 15px !important;
+    padding: 2px 0 0;
+    line-height: 22px;
+    background-position: 0 -60px;
+    background-repeat: no-repeat;
+
+    @media (max-width: $screen-xs-max) {
+      width: 80%;
+    }
+  }
+}
+
+//** Search
+.navbar-form {
+  position: relative;
+  margin-left: 30px;
+
+  i {
+    position: absolute;
+    top: 8px;
+    left: 26px;
+    font-size: 18px;
+    color: darken($app-clr-greyLight, 16%);
+  }
+
+  .search {
+    width: 260px;
+    text-indent: 30px;
+    background-color: lighten($navbar-default-bg, 10%);
+    border-color: $navbar-default-border;
+    border-width: 0;
+    border-radius: 16px;
+
+    &:focus {
+      background-color: $app-clr-greyLight;
+      @include transition(background-color ease-in-out .125s);
+    }
+  }
+}
+
+
+//== Overlays
+//
+//##
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: rgba($app-clr-greyDark, .5);
+  z-index: $zindex-modal + 1;
+
+  &.overlay-offcanvas {
+    z-index: 998;
+  }
+
+  .overlay-content {
+    display: inline-block;
+    min-width: $screen-xs-min;
+    margin-top: 20%;
+  }
+
+  // Loading Overlay
+  &#loading-overlay {
+    display: block;
+  }
+}
+
+
+//== Typography
+//
+//## Extend every around Texts
+
+@mixin text-center () {
+  text-align: center;
+}
+
+@mixin text-right () {
+  text-align: right;
+}
+
+@mixin text-left () {
+  text-align: left;
+}
+
+@mixin title-light () {
+  font-family: $app-font-ubuntu, $font-family-base;
+  font-weight: 300;
+}
+
+.text-right {
+  text-align: right;
+}
+.text-center-xs {
+  @media (max-width: $screen-xs-max) {
+    @include text-center();
+  }
+}
+.text-center-sm {
+  @media (max-width: $screen-sm-max) {
+    @include text-center();
+  }
+}
+.text-xxs {
+  font-size: ceil(($font-size-base * 0.70)); // ~10px
+}
+.text-xs {
+  font-size: ceil(($font-size-base * 0.75)); // ~11px
+}
+.text-sm {
+  font-size: $font-size-small;
+}
+
+h1, h2, h3 {
+  @include title-light();
+}
+
+
+////////////////////////////////
+// Theme
+////////////////////////////////
+body {
+  font-weight: 300;
+  background-color: darken($app-clr-white, 3%);
+}
+
+blockquote {
+  font-size: 1em;
+  background-color: darken($app-clr-greyLight, 6%);
+  border-left: 10px solid darken($app-clr-greyLight, 12%);
+}
+
+hr {
+  padding: 0;
+  clear: both;
+  border-color: darken($app-clr-greyLight, 10%);
+}
+
+h1 {
+  margin: 40px 0;
+}
+
+h2 {
+  margin: 25px 0;
+  padding-bottom: 5px;
+  border-bottom: 1px solid darken($app-clr-greyLight, 12%);
+}
+
+#main {
+  hr {
+    margin: 50px auto;
+  }
+}
+
+
+//== TOC
+//
+//## Table of Contents
+
+#markdown-toc {
+  list-style: none;
+  margin-bottom: 40px;
+  padding-left: 20px;
+
+  li {
+    padding: 8px 0;
+  }
+
+  a {
+    color: $app-clr-greyDark;
+    text-decoration: none;
+
+    &:before {
+      content: "\25B8";
+      padding-right: 8px;
+    }
+
+    &:hover {
+      color: $brand-primary;
+    }
+
+    @media (max-width: $screen-sm-max) {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+}
+
+
+//== Index page
+//
+//## Index specific
+
+.intro-col-features {
+  ul {
+    @extend .clearfix;
+
+    li {
+      float: left;
+      width: 45%;
+      margin: 20px 40px 10px 0;
+      padding: 0;
+
+      @media (max-width: $screen-sm-max) {
+        float: none;
+        width: auto;
+      }
+    }
+  }
+}
+
+.intro-col-oss {
+  margin-top: 40px;
+
+  .btn {
+    margin: 30px auto;
+  }
+
+  @media (max-width: $screen-sm-max) {
+    margin-top: 0;
+  }
+}

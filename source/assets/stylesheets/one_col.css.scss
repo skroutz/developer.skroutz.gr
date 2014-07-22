@@ -1,0 +1,22 @@
+@import 'variables';
+
+//
+// Single Column Layout with Navbar Fixed Top and Footer always on Bottom
+// --------------------------------------------------
+
+html,
+body {
+  height: 100%;
+}
+
+#page {
+  height: auto;
+  min-height: 100%;
+  margin-bottom: -$app-h-footer - 4 * $padding-large-vertical - 5;
+  padding-top: $app-h-navbar;
+  padding-bottom: $app-h-footer;
+}
+
+footer {
+  height: $app-h-footer;
+}

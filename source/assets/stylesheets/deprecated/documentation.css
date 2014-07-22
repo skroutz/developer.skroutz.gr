@@ -763,7 +763,7 @@ span.codeline span {
   right: 0px;
   top: 0px;
   text-indent: -9999px;
-  background-image: url(../images/qmark.png);
+  background-image: url(../../images/qmark.png);
   background-repeat: no-repeat;
   background-position: 1px 3px;
   max-width: 8px;
@@ -815,7 +815,7 @@ span.bash-output {
   position: relative;
 }
 .more-info > h4 {
-  background-image: url('../images/dropdown_sprites.jpg');
+  background-image: url('../../images/dropdown_sprites.jpg');
   background-repeat: no-repeat;
   padding: .25em 0 .25em 25px;
   cursor: pointer;

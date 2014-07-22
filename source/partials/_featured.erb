@@ -1,0 +1,47 @@
+<div class="container-fluid container-featured">
+  <div class="container">
+    <div class="row text-center">
+
+      <%# API v3 %>
+      <div class="col-xs-12 col-sm-4 col-md-2 col-md-offset-1">
+        <a href="/api/v3/">
+          <i class="fa-flash"></i>
+          <span><%= t('titles.apiv3') %></span>
+        </a>
+      </div>
+
+      <%# Analytics %>
+      <div class="col-xs-12 col-sm-4 col-md-2">
+        <a href="/analytics/">
+          <i class="fa-bar-chart-o"></i>
+          <span><%= t('titles.analytics') %></span>
+        </a>
+      </div>
+
+      <%# Authentication %>
+      <div class="col-xs-12 col-sm-4 col-md-2">
+        <a href="/authentication/">
+          <i class="fa-key"></i>
+          <span><%= t('titles.authentication') %></span>
+        </a>
+      </div>
+
+      <%# Easy %>
+      <div class="col-xs-12 col-sm-4 col-md-2">
+        <a href="/easy/">
+          <i class="icon-easy"></i>
+          <span><%= t('titles.easy', flavor: flavor_data.site_name.titleize) %></span>
+        </a>
+      </div>
+
+      <%# Widgets %>
+      <div class="col-xs-12 col-sm-4 col-md-2">
+        <a href="/widgets/">
+          <i class="fa-heart-o"></i>
+          <span><%= t('titles.widgets') %></span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
