@@ -1,13 +1,5 @@
-<script type="text/javascript">
-  var Swiftype = window.Swiftype || {};
-  (function() {
-    Swiftype.key = '<%= flavor_data.swiftype_code %>';
-
-    /** DO NOT EDIT BELOW THIS LINE **/
-    var script = document.createElement('script'); script.type =
-      'text/javascript'; script.async = true;
-    script.src = "//s.swiftypecdn.com/embed.js";
-    var entry = document.getElementsByTagName('script')[0];
-    entry.parentNode.insertBefore(script, entry);
-  }());
-</script>
+<div data-ui-scope="swiftypeNavbar">
+  <form class="navbar-form navbar-right search" data-ui-scope="swiftypeSearch">
+    <input id="st-search-input" class="form-control st-search" type="text" placeholder="Search">
+  </form>
+</div>

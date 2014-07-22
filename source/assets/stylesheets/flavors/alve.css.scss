@@ -1,9 +1,13 @@
-header {
-  a {
+.navbar-header {
+  .navbar-brand {
     padding-left: 65px;
+    background-image: image-url('alve/sprites.png');
 
-    &:before {
-      background-image: image-url('alve/sprites.png');
+    @media
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: image-url('alve/sprites_x2.png');
     }
   }
 }

@@ -1,0 +1,28 @@
+en:
+  titles:
+    index: "%{flavor} Documentation"
+    apiv2: 'API v2'
+    apiv3: 'API v3'
+    authentication: 'Authentication'
+    analytics: 'Analytics'
+    docs: 'Documentation'
+    easy: "%{flavor} Easy"
+    guides: 'Guides'
+    oauth: 'OAuth 2.0'
+    support: 'Support'
+    widgets: 'Widgets'
+
+  for_developers: 'for developers'
+
+  index:
+    what_can_you_do: 'What can you do with %{flavor}?'
+    products_and_app: "Create products and applications built on top of %{flavor}"
+    analyze_data: 'Explore market trends by analyzing data'
+    integrate_eshop: "Integrate your eshop with %{flavor}"
+    find_widgets: 'Embed widgets in your website'
+    encourage_oss: 'Many components of %{flavor} are built with Open Source Software. We %{heart} OSS and try to give back as much as we can.'
+    on_github: '%{flavor} on GitHub'
+
+  cover:
+    moto: 'Use data from 7 million products and create awesome apps'
+    get_started: 'Get Started'

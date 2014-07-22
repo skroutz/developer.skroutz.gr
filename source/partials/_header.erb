@@ -1,8 +1,36 @@
 <header>
-  <div class="content">
-    <%= link_to 'for Developers [beta]', '/', class: :logo %>
-    <form class="search">
-        <input type="text" id="st-search-input" placeholder="Search"/>
-    </form>
-  </div>
+  <nav class="navbar navbar-custom navbar-fixed-top" role="navigation" data-ui-scope="navbar">
+    <div class="container-fluid">
+      <div class="container">
+
+        <%# Nav Brand %>
+        <div class="navbar-header">
+          <%# Collapse Button %>
+          <button class="offcanvas-toggle btn btn-link visible-xs" type="button" data-ui-scope="offCanvasBtn">
+            <i class="fa-bars"></i>
+          </button>
+
+          <%# Logo %>
+          <%= link_to t('for_developers'), '/', class: 'navbar-brand logo' %>
+        </div>
+
+        <%# Nav Links %>
+        <div class="navbar-collapse collapse">
+          <%# Swiftype %>
+          <%= partial 'partials/swiftype' %>
+
+          <%# Top Navigation %>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <%= link_to t('titles.docs'), '/' %>
+            </li>
+            <li>
+              <%= link_to t('titles.support'), '/' %>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </nav>
 </header>
