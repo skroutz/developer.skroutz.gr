@@ -7,10 +7,41 @@ en:
     analytics: 'Analytics'
     docs: 'Documentation'
     easy: "%{flavor} Easy"
+    extra: 'Looking for something else?'
     guides: 'Guides'
     oauth: 'OAuth 2.0'
     support: 'Support'
     widgets: 'Widgets'
+
+  docs:
+    analytics:
+      overview: 'Overview'
+    apiv2:
+      overview: 'Overview'
+      data_model: 'Data Model'
+      product: 'Product'
+      book: 'Book'
+      user: 'User'
+      widgets: 'Widgets'
+    apiv3:
+      overview: 'Overview'
+      category: 'Category'
+      sku: 'SKU'
+      product: 'Product'
+      shop: 'Shop'
+      manufacturer: 'Manufacturer'
+      search: 'Search'
+      filter_groups: 'Filter Groups'
+      favorites: 'User Favorites'
+      notifications: 'User Notifications'
+    authentication:
+      overview: 'Overview'
+      permissions: 'Permissions'
+    oauth:
+      overview: 'Overview'
+      flows: 'Authorization Flows'
+      implementation: 'Implementation Examples'
+      endpoints: 'OAuth 2.0 Endpoints'
 
   for_developers: 'for developers'
 

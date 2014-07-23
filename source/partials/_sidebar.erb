@@ -1,87 +1,64 @@
-<div id="js-sidebar" class="sidebar-shell">
-  <nav class="js-toggle-list sidebar-module expandable">
+<div id="sidebar" class="sidebar col-sm-4 col-md-3" data-ui-scope="offCanvas">
+  <div class="container-sidebar">
 
-    <h2 class="guides">Development Guides</h2>
+    <hr/>
 
-    <ul>
-      <li class="js-topic">
-        <h3>
-          <%= link_to 'Getting Started', '/guides/getting-started' %>
-        </h3>
+    <%# Sidebar Search - check JavaScript %>
+    <div data-ui-scope="swiftypeSidebar"></div>
+
+    <hr/>
+
+    <%# Docs %>
+    <h5 class="heading">
+      <i class="fa-graduation-cap"></i>
+      <%= t('titles.docs') %>
+    </h5>
+    <ul class="nav nav-sidebar">
+    <% data.docs.each do |key, doc| %>
+
+      <li>
+        <%# without sub-menu %>
+        <% if doc.pages.nil? %>
+          <%= link_to t("titles.#{key}"), doc.base, class: 'nav-link' %>
+
+        <%# with sub-menu %>
+        <% else %>
+          <%= link_to t("titles.#{key}"), "#nav-sidebar-#{key}",
+                      class: 'collapse-btn',
+                      "data-toggle" => 'collapse',
+                      "data-parent" => '.nav-sidebar' %>
+
+          <div id="<%= "nav-sidebar-#{key}" %>" class="nav-menu-sidebar collapse">
+            <% doc.pages.each do |page| %>
+              <%= link_to t("docs.#{key}.#{page.title}"), doc.base, class: 'nav-link' %>
+            <% end %>
+          </div>
+        <% end %>
       </li>
-      <li class="js-topic">
-        <h3>
-          <%= link_to 'Authentication', '/guides/authentication' %>
-        </h3>
-      </li>
-      <li class="js-topic">
-        <h3>
-          <%= link_to 'Permissions', '/authentication/permissions' %>
-        </h3>
+
+    <% end %>
+    </ul>
+
+    <hr/>
+
+    <%# Extras %>
+    <h5 class="heading">
+      <i class="fa-question"></i>
+      <%= t('titles.extra') %>
+    </h5>
+    <ul class="nav nav-sidebar">
+      <li><%= link_to t('titles.support'), '/support/', class: 'nav-link' %></li>
+      <li><%= link_to t('index.on_github', flavor: flavor_data.site_name.titleize),
+              flavor_data.github_profile,
+              class: 'nav-link' %>
       </li>
     </ul>
 
-    <h2 class="manual">API Manual</h2>
+    <hr/>
 
-    <ul>
-      <li class="js-topic">
-        <h3>
-          <%= link_to 'Overview', '/api/v3/' %>
-        </h3>
-      </li>
-      <li class="js-topic">
-        <h3>
-          <%= link_to 'Category', '/api/v3/category' %>
-        </h3>
-      </li>
-      <li class="js-topic">
-        <h3>
-          <%= link_to 'SKU', '/api/v3/sku/' %>
-        </h3>
-      </li>
-      <li class="js-topic">
-        <h3>
-          <%= link_to 'Product', '/api/v3/product/' %>
-        </h3>
-      </li>
-      <li class="js-topic">
-        <h3>
-          <%= link_to 'Shop', '/api/v3/shop/' %>
-        </h3>
-      </li>
-      <li class="js-topic">
-        <h3>
-          <%= link_to 'Manufacturer', '/api/v3/manufacturer/' %>
-        </h3>
-      <li class="js-topic">
-        <h3>
-          <%= link_to 'Search', '/api/v3/search/' %>
-        </h3>
-      </li>
-      </li>
-      <li class="js-topic">
-        <h3>
-          <%= link_to 'Filter Group', '/api/v3/filter_groups/' %>
-        </h3>
-      </li>
-      <li class="js-topic user">
-        <h3>
-          <%= link_to 'User Favorite', '/api/v3/favorites' %>
-        </h3>
-      </li>
-      <li class="js-topic user">
-        <h3>
-          <%= link_to 'User Notification', '/api/v3/notifications' %>
-        </h3>
-      </li>
-    </ul>
+    <%# Footer %>
+    <%= partial 'partials/footer' %>
+  </div>
+</div>
 
-    <h3>
-      <%= link_to 'Help', '/help' %>
-    </h3>
-
-   </nav>
-
-  <%= partial 'partials/footer' %>
-
-</div> <!-- /sidebar-module -->
+<div class="hidden" data-ui-scope="offCanvasOverlay"></div>
