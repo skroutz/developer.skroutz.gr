@@ -44,6 +44,7 @@ en:
       endpoints: 'OAuth 2.0 Endpoints'
 
   for_developers: 'for developers'
+  deprecated: 'deprecated'
 
   index:
     what_can_you_do: 'What can you do with %{flavor}?'
