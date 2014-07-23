@@ -5,6 +5,7 @@ analytics:
 
 apiv2:
   base: '/api/v2/'
+  deprecated: true
   pages:
     - { title: 'overview', url: '/api/v2/' }
     - { title: 'data_model' }
