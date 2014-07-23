@@ -1,0 +1,42 @@
+analytics:
+  base: '/analytics/'
+  pages:
+    - { title: 'overview', url: '/analytics/' }
+
+apiv2:
+  base: '/api/v2/'
+  pages:
+    - { title: 'overview', url: '/api/v2/' }
+    - { title: 'data_model' }
+    - { title: 'product' }
+    - { title: 'book' }
+    - { title: 'user' }
+    - { title: 'widgets' }
+
+apiv3:
+  base: '/api/v3/'
+  pages:
+    - { title: 'overview', url: '/api/v3/' }
+    - { title: 'category' }
+    - { title: 'sku' }
+    - { title: 'product' }
+    - { title: 'shop' }
+    - { title: 'manufacturer' }
+    - { title: 'search' }
+    - { title: 'filter_groups' }
+    - { title: 'favorites' }
+    - { title: 'notifications' }
+
+authentication:
+  base: '/authentication/'
+  pages:
+    - { title: 'overview', url: '/authentication/' }
+    - { title: 'permissions' }
+
+oauth:
+  base: '/oauthdoc/'
+  pages:
+    - { title: 'overview', url: '/oauthdoc/' }
+    - { title: 'flows' }
+    - { title: 'implementation' }
+    - { title: 'endpoints' }

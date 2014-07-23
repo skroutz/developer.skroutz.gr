@@ -54,6 +54,10 @@
   margin-right: auto;
 }
 
+.no-overflow {
+  overflow: hidden !important;
+}
+
 //== Back To Top
 //
 //##
@@ -139,6 +143,28 @@
 }
 
 
+//== Icons
+//
+//## Extend icon helpers
+
+.fa {
+  &.fa-2x,
+  &.fa-3x,
+  &.fa-4x,
+  &.fa-5x {
+    vertical-align: middle;
+  }
+}
+
+.fa-prepend {
+  padding-right: 8px;
+}
+
+.fa-append {
+  padding-left: 8px;
+}
+
+
 //== Containers
 //
 //## Extend Bootstrap Containers
@@ -183,20 +209,21 @@
 //** Featured List Container
 .container-featured {
   margin-bottom: 20px;
-  padding: 15px 0;
   border-top: 3px solid lighten($app-clr-grey, 21%);
   border-bottom: 3px solid lighten($app-clr-grey, 21%);
 
   a {
+    display: block;
     font-weight: 300;
     color: $app-clr-greyDark;
 
     i {
-      display: block;
-      padding-right: 10px;
+      @extend .fa;
+      @extend .fa-3x;
+      @extend .fa-fw;
+      @extend .fa-prepend;
+      line-height: 2.0em;
       color: $app-clr-grey;
-      font-size: 2.5em;
-      line-height: 1.5em;
     }
 
     &:hover {
@@ -212,7 +239,6 @@
   @media (max-width: $screen-sm-max) {
     padding: 5px 0;
     a {
-      display: block;
 
       i {
         font-size: 1.5em;
@@ -333,6 +359,7 @@
 
     @media (max-width: $screen-xs-max) {
       width: 80%;
+      margin-left: 40px !important;
     }
   }
 }
@@ -518,19 +545,40 @@ h2 {
 }
 
 
+//== Sidebar
+//
+//## Load sidebar
+
+@import 'sidebar';
+
+
 //== Index page
 //
 //## Index specific
 
+.index {
+  #sidebar {
+    @media (min-width: $screen-sm-min) {
+      display: none;
+    }
+  }
+}
+
 .intro-col-features {
   ul {
     @extend .clearfix;
+    @extend .fa-ul;
 
     li {
       float: left;
       width: 45%;
       margin: 20px 40px 10px 0;
       padding: 0;
+
+      i {
+        @extend .fa;
+        @extend .fa-li;
+      }
 
       @media (max-width: $screen-sm-max) {
         float: none;

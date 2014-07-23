@@ -30,6 +30,9 @@
       <%# Header %>
       <%= partial 'partials/header' %>
 
+      <%# Sidebar %>
+      <%= partial 'partials/sidebar' %>
+
       <div id="main">
         <%# Cover %>
         <div class="container-fluid container-cover cover-light">
@@ -58,10 +61,22 @@
             <div class="intro-col-features col-xs-12 col-sm-8 col-md-9">
               <h3><%= t('index.what_can_you_do', flavor: flavor_data.site_name.titleize) %></h3>
               <ul>
-                <li><%= t('index.products_and_app', flavor: flavor_data.site_name.titleize) %></li>
-                <li><%= t('index.analyze_data') %></li>
-                <li><%= t('index.integrate_eshop', flavor: flavor_data.site_name.titleize) %></li>
-                <li><%= t('index.find_widgets') %></li>
+                <li>
+                  <i class="fa-check"></i>
+                  <%= t('index.products_and_app', flavor: flavor_data.site_name.titleize) %>
+                </li>
+                <li>
+                  <i class="fa-check"></i>
+                  <%= t('index.analyze_data') %>
+                </li>
+                <li>
+                  <i class="fa-check"></i>
+                  <%= t('index.integrate_eshop', flavor: flavor_data.site_name.titleize) %>
+                </li>
+                <li>
+                  <i class="fa-check"></i>
+                  <%= t('index.find_widgets') %>
+                </li>
               </ul>
             </div>
 
@@ -87,5 +102,8 @@
 
     <%# Back To Top %>
     <%= partial 'partials/back_to_top' %>
+
+    <%# Google Analytics %>
+    <%= partial 'partials/analytics' %>
   </body>
 </html>
