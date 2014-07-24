@@ -249,7 +249,14 @@
 
 //** Sidebar Container
 .container-sidebar {
+//  width: 85%;
+//  float: right;
   padding: 10px 15px;
+
+//  @media (max-width: $screen-sm-max) {
+//    width: 100%;
+//    float: none;
+//  }
 }
 
 
@@ -359,7 +366,7 @@
 
     @media (max-width: $screen-xs-max) {
       width: 80%;
-      margin-left: 40px !important;
+      margin-left: 60px !important;
     }
   }
 }
