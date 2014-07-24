@@ -8,6 +8,7 @@ $font-size-xlarge:         ceil(($app-font-size * 1.5)) !default; // ~18px
 
 //** Ubuntu Font
 $app-font-ubuntu: 'Ubuntu' !default;
+$app-font-ubuntu-mono: 'Ubuntu Mono' !default;
 
 $line-height-xlarge: 1.25 !default;
 
@@ -78,7 +79,7 @@ $link-hover-color:      darken($link-color, 15%) !default;
 $font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
-$font-family-monospace:   Menlo, Monaco, Consolas, "DejaVu Sans Mono", "Courier New", monospace !default;
+$font-family-monospace:   $app-font-ubuntu-mono, Menlo, Monaco, Consolas, "DejaVu Sans Mono", "Courier New", monospace !default;
 $font-family-base:        $font-family-sans-serif !default;
 
 $font-size-base:          $app-font-size !default;
