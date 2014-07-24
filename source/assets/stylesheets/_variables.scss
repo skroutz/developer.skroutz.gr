@@ -28,6 +28,8 @@ $app-h-footer: 60px;
 
 //**
 $app-zindex-sidebar: 1060 !default;
+$app-zindex-sidebar-overlay: 1000 !default;
+$app-zindex-backtotop: $app-zindex-sidebar-overlay - 1 !default;
 
 
 // When true, asset path helpers are used, otherwise regular url() is used
@@ -76,7 +78,7 @@ $link-hover-color:      darken($link-color, 15%) !default;
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-sans-serif:  $app-font-ubuntu, "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace:   $app-font-ubuntu-mono, Menlo, Monaco, Consolas, "DejaVu Sans Mono", "Courier New", monospace !default;
