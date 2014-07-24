@@ -41,6 +41,8 @@
   background-color: $app-clr-greyDark;
 
   .heading {
+    width: 90%;
+    margin: 20px auto 10px;
     color: lighten($app-clr-greyDark, 40%);
     font-size: 0.9em;
     font-weight: 500;
@@ -94,6 +96,23 @@
       height: 26px;
       font-size: 14px;
       text-indent: 24px;
+    }
+  }
+}
+
+//** Reset Sidebar :: Footer
+.sidebar {
+  footer {
+    .container {
+      width: 100%;
+    }
+
+    .row {
+      div {
+        @extend .text-center;
+        left: 0;
+        width: 100%;
+      }
     }
   }
 }
