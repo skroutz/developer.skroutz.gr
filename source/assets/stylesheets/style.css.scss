@@ -66,9 +66,9 @@
   display: none;
   position: fixed;
   right: 1px;
-  bottom: 1px; //$app-h-footer + (2 * $padding-base-horizontal);
+  bottom: 2px; //$app-h-footer + (2 * $padding-base-horizontal);
   z-index: $zindex-modal-background;
-  padding: 10px 15px;
+  padding: 10px 10px;
   color: $app-clr-greyDark;
   border-radius: 0;
   //@include opacity(.4);
@@ -83,6 +83,18 @@
     border-color: $brand-primary;
     //@include opacity(1.0);
     @include transition(all ease-in-out .125s);
+  }
+
+  @media (max-width: $screen-xs-max) {
+    width: 100%;
+    left: 0;
+    bottom: -1px;
+    text-align: center;
+    @include gradient-vertical(rgba($app-clr-white, 0.0), rgba($app-clr-white, 1.0), 0, 85%);
+
+    &:hover {
+      border-color: transparent;
+    }
   }
 }
 
@@ -174,8 +186,10 @@
   padding: 30px 0;
 
   .title {
+    font-weight: 300;
     font-size: 2.5em;
     line-height: 1.5em;
+    border: 0 none;
 
     @media (max-width: $screen-sm-max) {
       margin-top: 0;
@@ -360,6 +374,7 @@
     margin-top: 15px;
     margin-left: 15px !important;
     padding: 2px 0 0;
+    font-size: 18px;
     line-height: 22px;
     background-position: 0 -60px;
     background-repeat: no-repeat;
@@ -448,8 +463,11 @@
   text-align: left;
 }
 
+@mixin title-strong () {
+  font-weight: 700;
+}
+
 @mixin title-light () {
-  font-family: $app-font-ubuntu, $font-family-base;
   font-weight: 300;
 }
 
@@ -476,8 +494,61 @@
   font-size: $font-size-small;
 }
 
-h1, h2, h3 {
-  @include title-light();
+h1, h2, h3, h4, h5, h6 {
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 5px;
+}
+
+h1 {
+  @include title-strong();
+  margin-bottom: 20px;
+  border-bottom: 1px solid darken($app-clr-greyLight, 12%);
+}
+
+h2 {
+  margin: 45px 0 10px;
+  border-bottom: 1px solid darken($app-clr-greyLight, 12%);
+}
+
+h3 {
+  margin: 25px 0 10px;
+}
+
+h4 {
+  margin: 20px 0 5px;
+  font-weight: 300;
+}
+
+h5 {
+  @extend .text-uppercase;
+  margin: 20px 0 5px;
+  font-weight: 700;
+}
+
+//== Tables
+//
+//## Extend tables
+
+table {
+  @extend .table;
+  @extend .table-hover;
+  @extend .table-striped;
+  @extend .table-bordered;
+
+  thead {
+    background-color: darken($app-clr-greyLight, 6%);
+  }
+
+  th,
+  td {
+    //word-break: break-all;
+  }
+}
+
+//** Fix for Firefox buggy fieldsets
+@-moz-document url-prefix() {
+  fieldset { display: table-cell; }
 }
 
 
@@ -490,30 +561,30 @@ body {
 }
 
 blockquote {
+  @extend .alert;
+  @extend .alert-warning;
   font-size: 1em;
-  background-color: darken($app-clr-greyLight, 6%);
-  border-left: 10px solid darken($app-clr-greyLight, 12%);
+
+  h1, h2, h3, h4, h5, h6 {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
 }
 
 hr {
+  margin: 20px 0;
   padding: 0;
   clear: both;
   border-color: darken($app-clr-greyLight, 10%);
 }
 
-h1 {
-  margin: 40px 0;
-}
-
-h2 {
-  margin: 25px 0;
-  padding-bottom: 5px;
-  border-bottom: 1px solid darken($app-clr-greyLight, 12%);
-}
-
 #main {
-  hr {
-    margin: 50px auto;
+  padding: $app-h-navbar 40px 30px;
+
+  @media (max-width: $screen-xs-max) {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
@@ -521,35 +592,6 @@ h2 {
 //== TOC
 //
 //## Table of Contents
-
-#markdown-toc {
-  list-style: none;
-  margin-bottom: 40px;
-  padding-left: 20px;
-
-  li {
-    padding: 8px 0;
-  }
-
-  a {
-    color: $app-clr-greyDark;
-    text-decoration: none;
-
-    &:before {
-      content: "\25B8";
-      padding-right: 8px;
-    }
-
-    &:hover {
-      color: $brand-primary;
-    }
-
-    @media (max-width: $screen-sm-max) {
-      padding-top: 20px;
-      padding-bottom: 20px;
-    }
-  }
-}
 
 
 //== Sidebar
@@ -601,11 +643,17 @@ pre {
       text-align: right;
       font-weight: 700;
       border-right: 1px solid $pre-border-color;
+
+      @media (max-width: $screen-xs-max) {
+        border-bottom: 1px solid $pre-border-color;
+      }
     }
 
     .path {
       display: inline-block;
       padding: 10px;
+      word-wrap: break-word;
+      word-break: break-all;
     }
   }
 }

@@ -45,6 +45,9 @@ en:
 
   for_developers: 'for developers'
   deprecated: 'deprecated'
+  view_doc: 'View Documentation'
+  apiv2_is_deprecated: 'Here lies %{api_v2_url} documentation. Please keep in mind that it is deprecated.'
+  toc: 'Table of Contents'
 
   index:
     what_can_you_do: 'What can you do with %{flavor}?'
