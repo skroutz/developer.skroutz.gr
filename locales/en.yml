@@ -1,6 +1,7 @@
 en:
   titles:
     index: "%{flavor} Documentation"
+    api: 'API'
     apiv2: 'API v2'
     apiv3: 'API v3'
     authentication: 'Authentication'
@@ -15,8 +16,12 @@ en:
 
   docs:
     analytics:
+      short_description: 'Donec purus felis, imperdiet ut venenatis vel, elementum ac justo. Nulla non purus consequat, consequat enim id, egestas ipsum. Sed consectetur lobortis sapien a lobortis.'
       overview: 'Overview'
+    api:
+      short_description: 'Donec purus felis, imperdiet ut venenatis vel, elementum ac justo. Nulla non purus consequat, consequat enim id, egestas ipsum. Sed consectetur lobortis sapien a lobortis.'
     apiv2:
+      short_description: 'Donec purus felis, imperdiet ut venenatis vel, elementum ac justo. Nulla non purus consequat, consequat enim id, egestas ipsum. Sed consectetur lobortis sapien a lobortis.'
       overview: 'Overview'
       data_model: 'Data Model'
       product: 'Product'
@@ -24,6 +29,7 @@ en:
       user: 'User'
       widgets: 'Widgets'
     apiv3:
+      short_description: 'Donec purus felis, imperdiet ut venenatis vel, elementum ac justo. Nulla non purus consequat, consequat enim id, egestas ipsum. Sed consectetur lobortis sapien a lobortis.'
       overview: 'Overview'
       category: 'Category'
       sku: 'SKU'
@@ -36,8 +42,10 @@ en:
       notifications: 'User Notifications'
     authentication:
       overview: 'Overview'
+      short_description: 'Donec purus felis, imperdiet ut venenatis vel, elementum ac justo. Nulla non purus consequat, consequat enim id, egestas ipsum. Sed consectetur lobortis sapien a lobortis.'
       permissions: 'Permissions'
     oauth:
+      short_description: 'Donec purus felis, imperdiet ut venenatis vel, elementum ac justo. Nulla non purus consequat, consequat enim id, egestas ipsum. Sed consectetur lobortis sapien a lobortis.'
       overview: 'Overview'
       flows: 'Authorization Flows'
       implementation: 'Implementation Examples'

@@ -713,6 +713,10 @@ pre {
       display: none;
     }
   }
+
+  #main {
+    padding: 0;
+  }
 }
 
 .intro-col-features {
@@ -748,5 +752,71 @@ pre {
 
   @media (max-width: $screen-sm-max) {
     margin-top: 0;
+  }
+}
+
+//== Docs List
+//
+//## Docs specific
+
+.doc-panel-wrapper {
+  @extend .col-xs-12;
+}
+
+.doc-panel {
+  @extend .panel;
+  @extend .panel-default;
+  @include border-top-radius($border-radius-base);
+  @include border-bottom-radius($border-radius-base);
+  overflow: hidden;
+  padding: 15px;
+}
+
+.doc-panel {
+  .doc-icon {
+    @extend .pull-left;
+    width: 10%;
+    padding-top: 25px;
+    text-align: center;
+
+    i {
+      @extend .fa;
+      @extend .fa-4x;
+      color: $app-clr-grey;
+    }
+
+    @media (max-width: $screen-sm-max) {
+      float: none;
+      width: 100%;
+      padding-top: 0;
+      text-align: center;
+    }
+  }
+}
+
+.doc-panel {
+  .doc-body {
+    @extend .pull-right;
+    width: 90%;
+    padding: 5px 20px;
+    border-left: 1px solid $app-clr-greyLight;
+
+    .goto {
+      @extend .btn;
+      @extend .btn-primary-inverse;
+    }
+
+    @media (max-width: $screen-sm-max) {
+      float: none;
+      width: 100%;
+      margin-top: 15px;
+      padding: 0 5px;
+      border-top: 1px solid $app-clr-greyLight;
+      border-left: 0 none;
+
+      .goto {
+        display: block;
+      }
+    }
   }
 }
