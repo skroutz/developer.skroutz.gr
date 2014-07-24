@@ -19,18 +19,15 @@
       <li>
         <%# without sub-menu %>
         <% if doc.pages.nil? %>
-          <%= link_to t("titles.#{key}"), doc.base, class: 'nav-link' %>
+          <%= link_to t("titles.#{key}"), doc.base, class: "nav-link #{active_parent_link(doc)}" %>
 
         <%# with sub-menu %>
         <% else %>
-          <%= link_to t("titles.#{key}"), "#nav-sidebar-#{key}",
-                      class: 'collapse-btn',
-                      "data-toggle" => 'collapse',
-                      "data-parent" => '.nav-sidebar' %>
+          <%= sidebar_parent_link(key, doc) %>
 
-          <div id="<%= "nav-sidebar-#{key}" %>" class="nav-menu-sidebar collapse">
+          <div id="<%= "nav-sidebar-#{key}" %>" class="nav-menu-sidebar collapse <%= active_parent_link(doc) %>">
             <% doc.pages.each do |page| %>
-              <%= link_to t("docs.#{key}.#{page.title}"), doc.base, class: 'nav-link' %>
+              <%= sidebar_child_link(key, doc, page) %>
             <% end %>
           </div>
         <% end %>
@@ -47,9 +44,9 @@
       <%= t('titles.extra') %>
     </h5>
     <ul class="nav nav-sidebar">
-      <li><%= link_to t('titles.support'), '/support/', class: 'nav-link' %></li>
-      <li><%= link_to t('index.on_github', flavor: flavor_data.site_name.titleize),
-              flavor_data.github_profile,
+      <li><%= link_to t('titles.support'), '/support/', class: "nav-link #{active_parent_link({ base: 'support' })}" %></li>
+      <li><%= link_to t('index.on_github', flavor: settings.site_name.titleize),
+              settings.github_profile,
               class: 'nav-link' %>
       </li>
     </ul>
@@ -58,6 +55,9 @@
 
     <%# Footer %>
     <%= partial 'partials/footer' %>
+
+    <hr/>
+
   </div>
 </div>
 
