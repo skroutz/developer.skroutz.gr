@@ -56,8 +56,7 @@ Case: embed
   <code>GET /foos/42?embed=bars</code>
 </pre>
 
-<%= render_code '
-{
+<%= render_code '{
   "foo": {
     "id": 42,
     "bars": [
@@ -75,8 +74,7 @@ Case: embed_ids
   <code>GET /foos/42?embed_ids=bars</code>
 </pre>
 
-<%= render_code '
-{
+<%= render_code '{
   "foo": {
     "id": 42,
     "bars": [1,2,3,4]
@@ -91,8 +89,7 @@ Case: include
   <code>GET /foos?include=bars</code>
 </pre>
 
-<%= render_code '
-{
+<%= render_code '{
   "foos": [
     {
       "id": 42,

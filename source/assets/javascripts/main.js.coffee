@@ -1,10 +1,4 @@
 ###########################
-# Console Protection
-###########################
-window.console = { log: -> {} } if window.console is 'undefined'
-
-
-###########################
 # UI
 ###########################
 UI = {}
@@ -20,11 +14,31 @@ UI._navbarTransClass = 'trans'
 UI.Navbar =
   solid: ($domElement) ->
     $domElement.removeClass UI._navbarTransClass
+
   transparent: ($domElement) ->
     $domElement.addClass UI._navbarTransClass
+
   bindListeners: ($domElement) ->
     $(window).on 'scroll.ui.transparentizeNavbar', (e) ->
-      if $(@).scrollTop() > UI._scrollTopOffset then UI.Navbar.transparent($domElement) else UI.Navbar.solid($domElement)
+      e.preventDefault()
+
+      if $(@).scrollTop() > UI._scrollTopOffset
+        UI.Navbar.transparent($domElement)
+      else
+        UI.Navbar.solid($domElement)
+
+###
+  UI.Anchor
+###
+UI.Anchor =
+  scrollToTarget: (target) ->
+    $('html, body').animate { scrollTop: $(target).offset().top - 60 },
+      @_scrollDuration, -> window.location.hash = target
+
+  bindListeners: ($domElement) ->
+    $domElement.on 'click.ui.Anchor', (e) ->
+      e.preventDefault()
+      UI.Anchor.scrollToTarget($(@).attr('href'))
 
 ###
   UI.BackToTop
@@ -32,14 +46,26 @@ UI.Navbar =
 UI.BackToTop =
   show: ($domElement) ->
     $domElement.fadeIn(@_fadeDuration, -> $(window).trigger('shown.ui.backToTop'))
+
   hide: ($domElement) ->
     $domElement.fadeOut(@_fadeDuration, -> $(window).trigger('hidden.ui.backToTop'))
+
   scrollToTop: ->
-    $('html, body').animate { scrollTop: 0 }, @_scrollDuration
+    $('html, body').animate { scrollTop: 0 }, @_scrollDuration, ->
+      window.location.hash = ''
+
   bindListeners: ($domElement) ->
-    $domElement.on 'click.ui.backToTop', (e) -> UI.BackToTop.scrollToTop()
+    $domElement.on 'click.ui.backToTop', (e) ->
+      e.preventDefault()
+      UI.BackToTop.scrollToTop()
+
     $(window).on 'scroll.ui.backToTop', (e) ->
-      if $(@).scrollTop() > UI._scrollTopOffset then UI.BackToTop.show($domElement) else UI.BackToTop.hide($domElement)
+      e.preventDefault()
+
+      if $(@).scrollTop() > UI._scrollTopOffset
+        UI.BackToTop.show($domElement)
+      else
+        UI.BackToTop.hide($domElement)
 
 ###
   UI.OffCanvas
@@ -70,26 +96,45 @@ UI.OffCanvas =
         .fadeIn(UI._fadeDuration)
         .addClass('overlay overlay-offcanvas')
         .removeClass('hidden')
+
   bindListeners: ($domElement) ->
-    $domElement.on 'click.ui.offCanvas', (e) -> UI.OffCanvas.toggleSideBar()
-    $('[data-ui-scope="offCanvasOverlay"]').on 'click.ui.offCanvasOverlay',
-    (e) -> UI.OffCanvas.toggleSideBar()
-
-
-###########################
-# DOM Ready
-###########################
-((window, document, $)->
-
-  $(document)
-    .ready (e) ->
-      UI.Navbar.bindListeners $('[data-ui-scope="navbar"]')
-      UI.BackToTop.bindListeners $('[data-ui-scope="backToTop"]')
-      UI.OffCanvas.bindListeners $('[data-ui-scope="offCanvasBtn"]')
-    .on 'click.pseudoLink', 'a[href="#"], a.pseudo', (e) ->
+    $domElement.on 'click.ui.offCanvas', (e) ->
       e.preventDefault()
+      UI.OffCanvas.toggleSideBar()
 
-  $(window).on 'resize', (e) ->
-    #console.log '[window resize]'
+    $('[data-ui-scope="offCanvasOverlay"]').on 'click.ui.offCanvasOverlay',
+      (e) ->
+        e.preventDefault()
+        UI.OffCanvas.toggleSideBar()
+
+###
+  UI.CodeExample
+###
+UI.CodeExample =
+  toggleResponse: ($toggler) ->
+    $response = $toggler.siblings('.response')
+
+    if $toggler.is('.active')
+      $response.slideUp()
+      $toggler.removeClass('active').text('view response')
+    else
+      $response.slideDown()
+      $toggler.addClass('active').text('hide response')
+
+  bindListeners: ($domElement) ->
+    $domElement.on 'click.ui.codeExample', (e) ->
+      e.preventDefault()
+      UI.CodeExample.toggleResponse($(@))
+
+###
+# DOM Ready
+###
+((window, document, $) ->
+  $ ->
+    UI.Navbar.bindListeners $('[data-ui-scope="navbar"]')
+    UI.Anchor.bindListeners $('#main a[href^=#]')
+    UI.BackToTop.bindListeners $('[data-ui-scope="backToTop"]')
+    UI.OffCanvas.bindListeners $('[data-ui-scope="offCanvasBtn"]')
+    UI.CodeExample.bindListeners $('.example').find('.toggler')
 
 )(window, document, jQuery)
