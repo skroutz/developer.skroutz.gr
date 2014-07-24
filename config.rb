@@ -1,4 +1,5 @@
 require 'lib/code_example_helper'
+require 'lib/page_navigation_helper'
 require 'lib/response_mate_helper'
 
 ###########################
@@ -62,6 +63,7 @@ end
 ###########################
 helpers CodeExampleHelper
 helpers ResponseMateHelper
+helpers PageNavigationHelper
 
 helpers do
   # Returns the current environment flavor
