@@ -8,17 +8,6 @@ require 'lib/response_mate_helper'
 page 'index.html', layout: false
 
 ###########################
-# SideBars
-###########################
-page 'analytics/*', sidebar: 'partials/sidebars/analytics'
-page 'api/v2/*', sidebar: 'partials/sidebars/api/v2'
-page 'api/v3/*', sidebar: 'partials/sidebars/api/v3'
-page 'authentication/*', sidebar: 'partials/sidebars/authentication'
-page 'guides/*', sidebar: 'partials/sidebars/guides'
-page 'help/*', sidebar: 'partials/sidebars/help'
-page 'oauthdoc/*', sidebar: 'partials/sidebars/oauthdoc'
-
-###########################
 # Localization
 ###########################
 activate :i18n, langs: [:en]
