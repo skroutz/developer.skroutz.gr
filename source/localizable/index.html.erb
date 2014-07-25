@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title><%= settings.site_name.capitalize %> Documentation</title>
+    <title><%= site_title %></title>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,9 +19,6 @@
     <!--[if lt IE 9]>
     <%= javascript_include_tag 'http://html5shiv.googlecode.com/svn/trunk/html5.js' %>
     <![endif]-->
-
-    <%# Assets per Doc/Page %>
-    <%= yield_content :assets %>
   </head>
 
   <body class="<%= page_classes %>">

@@ -77,6 +77,36 @@ helpers do
   def settings
     data[flavor]
   end
+
+  # Returns the default Page title of the site
+  #
+  # @return [String] the default Page title
+  def site_title
+    "#{settings.site_name} #{t('titles.docs')}".titleize
+  end
+
+  # Builds the Page title of the current page
+  #
+  # Parameters can be either keys that point at the locale or literals. The
+  # translation lookup scope for keys is within [:titles, :docs].
+  #
+  # @param [Hash] page the page to build title for
+  # @return [String] the constructed Page title
+  def page_title(page)
+    return site_title if page.title.nil? || page.title.empty?
+
+    title = t("titles.#{page.title}",
+                default: ["docs.#{page.parent}.#{page.title}".to_sym,
+                          page.title.to_s.titleize])
+
+    if page.parent.nil?
+      parent_title = site_title
+    else
+      parent_title = t("titles.#{page.parent}", default: site_title)
+    end
+
+    "#{title} | #{parent_title}"
+  end
 end
 
 ###########################
