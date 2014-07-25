@@ -15,9 +15,9 @@ This flow is designed for web applications that can store `tokens` and maintain
 
 Τhe required authorization access tokens are generated in two steps.
 
-Your application should redirect user to <%= flavor_data.site_name %>
+Your application should redirect user to <%= settings.site_name %>
 to authorize access to his data. After authorization access for your application
-is granted by user, <%= flavor_data.site_name %> will send an
+is granted by user, <%= settings.site_name %> will send an
 `authorization_code` to your application. Use that `authorization_code` to
 generate the `access_token`, which will expire after one hour. Also, use that
 `authorization_code` to generate a `refresh_token` and create new tokens after
@@ -34,7 +34,7 @@ client_secret:  ABCD
 ## Generate `access_token`
 
 First, redirect your Users to
-`https://www.<%= flavor_data.domain %>/oauth2/authorizarions/new`
+`https://www.<%= settings.domain %>/oauth2/authorizarions/new`
 with the required parameters:
 
 * your application's `client_id`
@@ -44,7 +44,7 @@ with the required parameters:
 To use that flow, the `response_type=code` parameter is required. For example:
 
 <pre class="terminal">
-GET https://www.<%= flavor_data.domain %>/oauth2/authorizations/new
+GET https://www.<%= settings.domain %>/oauth2/authorizations/new
 
 Parameters
   client_id: 1234567
@@ -56,7 +56,7 @@ Parameters
 Example:
 
 <pre class="terminal">
-GET https://www.<%= flavor_data.domain %>/oauth2/authorizations/new?
+GET https://www.<%= settings.domain %>/oauth2/authorizations/new?
       client_id=1234567&
       redirect_uri=https://your.site.com/callback&
       response_type=code
@@ -85,7 +85,7 @@ Thereafter, your application should use the `authorization_code` to generate an
 call:
 
 <pre class="terminal">
-POST https://www.<%= flavor_data.domain %>/oauth2/token
+POST https://www.<%= settings.domain %>/oauth2/token
 
 Parameters
   client_id: 1234567
@@ -99,7 +99,7 @@ For example, the request could be:
 
 <pre class="terminal">
 POST /oauth2/token HTTP/1.1
-Host: www.<%= flavor_data.domain %>
+Host: www.<%= settings.domain %>
 Content-Type: application/x-www-form-urlencoded
 
 client_id=1234567&
@@ -109,7 +109,7 @@ code=aCoDE&
 grant_type=authorization_code
 </pre>
 
-<%= flavor_data.site_name %> will respond to you with the two tokens
+<%= settings.site_name %> will respond to you with the two tokens
 in JSON format and the `access_token` TTL (Time To Live) in seconds.
 
 ~~~ javascript
@@ -127,10 +127,10 @@ in JSON format and the `access_token` TTL (Time To Live) in seconds.
 Use the `access_token` to access a users' private data. For example:
 
 <pre class="terminal">
-curl https://www.<%= flavor_data.domain %>/oauth2/address?oauth_token=124fFAGRNJru1FTz70BzhT3Zg...
+curl https://www.<%= settings.domain %>/oauth2/address?oauth_token=124fFAGRNJru1FTz70BzhT3Zg...
 </pre>
 
-A list of all the <%= flavor_data.site_name %> OAuth 2.0 API endpoints
+A list of all the <%= settings.site_name %> OAuth 2.0 API endpoints
 can be found at <%= link_to 'OAuth Endpoints', '/oauthdoc/endpoints' %>
 
 ## Renew `access_token`
@@ -143,7 +143,7 @@ required. For example:
 
 <pre class="terminal">
 POST /oauth2/token HTTP/1.1
-Host: www.<%= flavor_data.domain %>
+Host: www.<%= settings.domain %>
 Content-Type: application/x-www-form-urlencoded
 
 client_id=1234567&

@@ -12,14 +12,14 @@ title: OAuth 2.0 Endpoints
 The following HTTP GET request
 
 <pre class="terminal">
-https://www.<%= flavor_data.domain %>/oauth2/address?oauth_token=124fFAGRNJru1FTz70BzhT3Zg...
+https://www.<%= settings.domain %>/oauth2/address?oauth_token=124fFAGRNJru1FTz70BzhT3Zg...
 </pre>
 
 returns user's billing address in [JSON](http://en.wikipedia.org/wiki/JSON)
 format:
 
 <pre class="terminal">
-$ curl https://www.<%= flavor_data.domain %>/oauth2/address?oauth_token=124fFAGRNJru1FTz70BzhT3Zg...
+$ curl https://www.<%= settings.domain %>/oauth2/address?oauth_token=124fFAGRNJru1FTz70BzhT3Zg...
 </pre>
 
 ~~~ javascript
@@ -56,7 +56,7 @@ you want to be invoked.
 **Example:**
 
 <pre class="terminal">
-$ curl https://www.<%= flavor_data.domain %>/oauth2/address?callback=aFunction&oauth_token=124fFAGRNJru1FTz70BzhT3Zg...
+$ curl https://www.<%= settings.domain %>/oauth2/address?callback=aFunction&oauth_token=124fFAGRNJru1FTz70BzhT3Zg...
 </pre>
 
 ~~~ javascript

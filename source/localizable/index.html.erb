@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title><%= flavor_data.site_name.capitalize %> Documentation</title>
+    <title><%= settings.site_name.capitalize %> Documentation</title>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -59,11 +59,11 @@
         <div class="container">
           <div class="row">
             <div class="intro-col-features col-xs-12 col-sm-8 col-md-9">
-              <h3><%= t('index.what_can_you_do', flavor: flavor_data.site_name.titleize) %></h3>
+              <h3><%= t('index.what_can_you_do', flavor: settings.site_name.titleize) %></h3>
               <ul>
                 <li>
                   <i class="fa-check"></i>
-                  <%= t('index.products_and_app', flavor: flavor_data.site_name.titleize) %>
+                  <%= t('index.products_and_app', flavor: settings.site_name.titleize) %>
                 </li>
                 <li>
                   <i class="fa-check"></i>
@@ -71,7 +71,7 @@
                 </li>
                 <li>
                   <i class="fa-check"></i>
-                  <%= t('index.integrate_eshop', flavor: flavor_data.site_name.titleize) %>
+                  <%= t('index.integrate_eshop', flavor: settings.site_name.titleize) %>
                 </li>
                 <li>
                   <i class="fa-check"></i>
