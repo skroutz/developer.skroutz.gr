@@ -9,7 +9,7 @@ title: Data Model | Skroutz API v2
 
 ## Category
 
-<%= flavor_data.site_name %> consists of over 800 product categories.
+<%= settings.site_name.titleize %> consists of over 800 product categories.
 Every product and SKU belongs to a leaf category, i.e. a category with no further
 sub-categories.
 
@@ -29,7 +29,7 @@ A Category has the below properties:
 
 ## Product
 
-A Product refers to a specific product of a shop. The <%= flavor_data.site_name %>
+A Product refers to a specific product of a shop. The <%= settings.site_name.titleize %>
 team classifies identical products within popular categories. That classification
 is called an SKU.
 

@@ -84,7 +84,7 @@ helpers do
   # Shorthand for data[flavor]
   #
   # @return [String] Data of the current flavor
-  def flavor_data
+  def settings
     data[flavor]
   end
 end
