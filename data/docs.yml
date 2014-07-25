@@ -3,17 +3,6 @@ analytics:
   pages:
     - { title: 'overview', url: '/analytics/' }
 
-apiv2:
-  base: '/api/v2/'
-  deprecated: true
-  pages:
-    - { title: 'overview', url: '/api/v2/' }
-    - { title: 'data_model' }
-    - { title: 'product' }
-    - { title: 'book' }
-    - { title: 'user' }
-    - { title: 'widgets' }
-
 apiv3:
   base: '/api/v3/'
   pages:
@@ -27,6 +16,17 @@ apiv3:
     - { title: 'filter_groups' }
     - { title: 'favorites' }
     - { title: 'notifications' }
+
+apiv2:
+  base: '/api/v2/'
+  deprecated: true
+  pages:
+    - { title: 'overview', url: '/api/v2/' }
+    - { title: 'data_model' }
+    - { title: 'product' }
+    - { title: 'book' }
+    - { title: 'user' }
+    - { title: 'widgets' }
 
 authentication:
   base: '/authentication/'
