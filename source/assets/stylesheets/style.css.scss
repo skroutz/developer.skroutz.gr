@@ -103,7 +103,7 @@
 //
 //## Extend Bootstrap Buttons
 
-@mixin button-variant-inverse($color, $background, $border) {
+@mixin button-variant-inverse($color, $color_hover, $background, $border) {
   color: $color;
   background-color: $background;
   border-color: $border;
@@ -113,7 +113,7 @@
   &:active,
   &.active,
   .open > &.dropdown-toggle {
-    color: $background;
+    color: $color_hover;
     background-color: $color;
     border-color: darken($border, 12%);
   }
@@ -142,11 +142,7 @@
 }
 
 .btn-primary-inverse {
-  @include button-variant-inverse($brand-primary, $btn-default-bg, $brand-primary);
-
-  &:hover {
-
-  }
+  @include button-variant-inverse($brand-primary, $app-clr-white, transparent, $brand-primary);
 }
 
 .btn-xlg {
@@ -225,19 +221,20 @@
   margin-bottom: 20px;
   border-top: 3px solid lighten($app-clr-grey, 21%);
   border-bottom: 3px solid lighten($app-clr-grey, 21%);
+  background-color: darken($app-clr-greyLight, 6%);
 
   a {
     display: block;
+    padding: 15px 0;
     font-weight: 300;
     color: $app-clr-greyDark;
 
     i {
       @extend .fa;
       @extend .fa-3x;
-      @extend .fa-fw;
-      @extend .fa-prepend;
-      line-height: 2.0em;
-      color: $app-clr-grey;
+      display: block;
+      line-height: 1.5em;
+      color: darken($app-clr-grey, 18%);
     }
 
     &:hover {
@@ -727,6 +724,7 @@ pre {
     li {
       float: left;
       width: 45%;
+      height: 2.0em;
       margin: 20px 40px 10px 0;
       padding: 0;
 

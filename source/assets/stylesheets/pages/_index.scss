@@ -9,7 +9,9 @@
   }
 
   footer {
-    margin-bottom: 30px;
+    @media (max-width: $screen-xs-max) {
+      margin-bottom: 30px;
+    }
   }
 
   #sidebar {
