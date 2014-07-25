@@ -27,7 +27,7 @@
 //## Alternative Icon Font
 
 @import 'font-awesome';   // Comment out Bootstrap glyphicons
-@import 'font-devs';
+@import 'components/font-devs';
 
 
 //== Helpers & Utilities
@@ -56,46 +56,6 @@
 
 .no-overflow {
   overflow: hidden !important;
-}
-
-//== Back To Top
-//
-//##
-
-#back-to-top {
-  display: none;
-  position: fixed;
-  right: 1px;
-  bottom: 2px; //$app-h-footer + (2 * $padding-base-horizontal);
-  z-index: $zindex-modal-background;
-  padding: 10px 10px;
-  color: $app-clr-greyDark;
-  border-radius: 0;
-  //@include opacity(.4);
-  //@include transition(opacity ease-out .35s);
-
-  i {
-    font-size: 18px;
-  }
-
-  &:hover {
-    color: $brand-primary;
-    border-color: $brand-primary;
-    //@include opacity(1.0);
-    @include transition(all ease-in-out .125s);
-  }
-
-  @media (max-width: $screen-xs-max) {
-    width: 100%;
-    left: 0;
-    bottom: -1px;
-    text-align: center;
-    @include gradient-vertical(rgba($app-clr-white, 0.0), rgba($app-clr-white, 1.0), 0, 85%);
-
-    &:hover {
-      border-color: transparent;
-    }
-  }
 }
 
 
@@ -412,38 +372,6 @@
 }
 
 
-//== Overlays
-//
-//##
-
-.overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  background-color: rgba($app-clr-greyDark, .5);
-  z-index: $zindex-modal + 1;
-
-  &.overlay-offcanvas {
-    z-index: 998;
-  }
-
-  .overlay-content {
-    display: inline-block;
-    min-width: $screen-xs-min;
-    margin-top: 20%;
-  }
-
-  // Loading Overlay
-  &#loading-overlay {
-    display: block;
-  }
-}
-
-
 //== Typography
 //
 //## Extend every around Texts
@@ -595,226 +523,48 @@ hr {
 //
 //## Load sidebar
 
-@import 'sidebar';
+@import 'components/sidebar';
 
 
-//== Syntax Highlight & Code
+//== Back To Top
 //
-//## Load syntax highlight theme
+//##
 
+@import 'components/back-to-top';
+
+
+//== Overlays
+//
+//##
+
+@import 'components/overlay';
+
+
+//== TOC
+//
+//## Table of Contents
+
+@import 'components/toc';
+
+
+//== Example Code Blocks & Syntax Highlight
+//
+//## Load example code and highlight theme
+
+@import 'components/example-code';
 @import 'syntax_highlight/default';
 
-pre {
-  code {
-    margin: 0 !important;
-  }
-}
-
-//** Code Example
-.example {
-  @extend .panel;
-  @extend .panel-default;
-  @include border-top-radius($border-radius-base);
-  @include border-bottom-radius($border-radius-base);
-  position: relative;
-  background-color: darken($pre-bg, 4%);
-
-  pre {
-    margin: 0;
-    border: 0 none;
-    border-radius: 0;
-  }
-}
-
-//** Code Example :: Request
-.example {
-  .request {
-    margin: 0;
-    font-family: $font-family-monospace;
-    border-bottom: 1px solid $pre-border-color;
-
-    .verb {
-      display: inline-block;
-      width: 55px;
-      padding: 10px;
-      text-align: right;
-      font-weight: 700;
-      border-right: 1px solid $pre-border-color;
-
-      @media (max-width: $screen-xs-max) {
-        border-bottom: 1px solid $pre-border-color;
-      }
-    }
-
-    .path {
-      display: inline-block;
-      padding: 10px;
-      word-wrap: break-word;
-      word-break: break-all;
-    }
-  }
-}
-
-//** Code Example :: Request Description
-.example {
-  .request-description {
-    @include box-shadow(0 1px 1px rgba(0,0,0,.05));
-    padding: 10px;
-    font-style: italic;
-    background-color: lighten($pre-bg, 5%);
-  }
-}
-
-//** Code Example :: Toggle Buttons
-.example {
-  .toggler {
-    @extend .btn;
-    @extend .btn-xs;
-    @extend .btn-primary;
-    position: absolute;
-    top: 0;
-    right: 0;
-    border-top-left-radius: 0;
-    border-bottom-right-radius: 0;
-    border-width: 0;
-  }
-}
-
-//** Code Example :: Response
-.example {
-  .response {
-    display: none;
-
-    .headers {
-      font-weight: 700;
-      background-color: $pre-bg;
-      border-top: 1px solid darken($pre-bg, 12%);
-      border-bottom: 1px solid darken($pre-bg, 12%);
-    }
-
-    pre {
-      max-height: 500px;
-      overflow: auto;
-    }
-  }
-}
-
-
-//== Index page
-//
-//## Index specific
-
-.index {
-  #sidebar {
-    @media (min-width: $screen-sm-min) {
-      display: none;
-    }
-  }
-
-  #main {
-    padding: 0;
-  }
-}
-
-.intro-col-features {
-  ul {
-    @extend .clearfix;
-    @extend .fa-ul;
-
-    li {
-      float: left;
-      width: 45%;
-      height: 2.0em;
-      margin: 20px 40px 10px 0;
-      padding: 0;
-
-      i {
-        @extend .fa;
-        @extend .fa-li;
-      }
-
-      @media (max-width: $screen-sm-max) {
-        float: none;
-        width: auto;
-      }
-    }
-  }
-}
-
-.intro-col-oss {
-  margin-top: 40px;
-
-  .btn {
-    margin: 30px auto;
-  }
-
-  @media (max-width: $screen-sm-max) {
-    margin-top: 0;
-  }
-}
 
 //== Docs List
 //
 //## Docs specific
 
-.doc-panel-wrapper {
-  @extend .col-xs-12;
-}
+@import 'components/panel-doc';
 
-.doc-panel {
-  @extend .panel;
-  @extend .panel-default;
-  @include border-top-radius($border-radius-base);
-  @include border-bottom-radius($border-radius-base);
-  overflow: hidden;
-  padding: 15px;
-}
 
-.doc-panel {
-  .doc-icon {
-    @extend .pull-left;
-    width: 10%;
-    padding-top: 25px;
-    text-align: center;
+//== Pages
+//
+//## Page specific styles
 
-    i {
-      @extend .fa;
-      @extend .fa-4x;
-      color: $app-clr-grey;
-    }
-
-    @media (max-width: $screen-sm-max) {
-      float: none;
-      width: 100%;
-      padding-top: 0;
-      text-align: center;
-    }
-  }
-}
-
-.doc-panel {
-  .doc-body {
-    @extend .pull-right;
-    width: 90%;
-    padding: 5px 20px;
-    border-left: 1px solid $app-clr-greyLight;
-
-    .goto {
-      @extend .btn;
-      @extend .btn-primary-inverse;
-    }
-
-    @media (max-width: $screen-sm-max) {
-      float: none;
-      width: 100%;
-      margin-top: 15px;
-      padding: 0 5px;
-      border-top: 1px solid $app-clr-greyLight;
-      border-left: 0 none;
-
-      .goto {
-        display: block;
-      }
-    }
-  }
-}
+//** Index
+@import 'pages/index';

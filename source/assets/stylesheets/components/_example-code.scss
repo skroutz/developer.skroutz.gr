@@ -1,0 +1,92 @@
+@import 'variables';
+@import 'bootstrap/mixins';
+
+
+//** Code Example
+.example {
+  @extend .panel;
+  @extend .panel-default;
+  @include border-top-radius($border-radius-base);
+  @include border-bottom-radius($border-radius-base);
+  position: relative;
+  background-color: darken($pre-bg, 4%);
+
+  pre {
+    margin: 0;
+    border: 0 none;
+    border-radius: 0;
+  }
+}
+
+//** Code Example :: Request
+.example {
+  .request {
+    margin: 0;
+    font-family: $font-family-monospace;
+    border-bottom: 1px solid $pre-border-color;
+
+    .verb {
+      display: inline-block;
+      width: 55px;
+      padding: 10px;
+      text-align: right;
+      font-weight: 700;
+      border-right: 1px solid $pre-border-color;
+
+      @media (max-width: $screen-xs-max) {
+        border-bottom: 1px solid $pre-border-color;
+      }
+    }
+
+    .path {
+      display: inline-block;
+      padding: 10px;
+      word-wrap: break-word;
+      word-break: break-all;
+    }
+  }
+}
+
+//** Code Example :: Request Description
+.example {
+  .request-description {
+    @include box-shadow(0 1px 1px rgba(0,0,0,.05));
+    padding: 10px;
+    font-style: italic;
+    background-color: lighten($pre-bg, 5%);
+  }
+}
+
+//** Code Example :: Toggle Buttons
+.example {
+  .toggler {
+    @extend .btn;
+    @extend .btn-xs;
+    @extend .btn-primary;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-width: 0;
+  }
+}
+
+//** Code Example :: Response
+.example {
+  .response {
+    display: none;
+
+    .headers {
+      font-weight: 700;
+      background-color: $pre-bg;
+      border-top: 1px solid darken($pre-bg, 12%);
+      border-bottom: 1px solid darken($pre-bg, 12%);
+    }
+
+    pre {
+      max-height: 500px;
+      overflow: auto;
+    }
+  }
+}

@@ -1,0 +1,65 @@
+@import 'variables';
+@import 'bootstrap/mixins';
+
+
+.panel-doc-wrapper {
+  @extend .col-xs-12;
+}
+
+.panel-doc {
+  @extend .panel;
+  @extend .panel-default;
+  @include border-top-radius($border-radius-base);
+  @include border-bottom-radius($border-radius-base);
+  overflow: hidden;
+  padding: 15px;
+}
+
+.panel-doc {
+  .doc-icon {
+    @extend .pull-left;
+    width: 10%;
+    padding-top: 25px;
+    text-align: center;
+
+    i {
+      @extend .fa;
+      @extend .fa-4x;
+      color: $app-clr-grey;
+    }
+
+    @media (max-width: $screen-sm-max) {
+      float: none;
+      width: 100%;
+      padding-top: 0;
+      text-align: center;
+    }
+  }
+}
+
+.panel-doc {
+  .doc-body {
+    @extend .pull-right;
+    width: 90%;
+    padding: 5px 20px;
+    border-left: 1px solid $app-clr-greyLight;
+
+    .goto {
+      @extend .btn;
+      @extend .btn-primary-inverse;
+    }
+
+    @media (max-width: $screen-sm-max) {
+      float: none;
+      width: 100%;
+      margin-top: 15px;
+      padding: 0 5px;
+      border-top: 1px solid $app-clr-greyLight;
+      border-left: 0 none;
+
+      .goto {
+        display: block;
+      }
+    }
+  }
+}

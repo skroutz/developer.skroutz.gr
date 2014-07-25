@@ -1,0 +1,34 @@
+@import 'variables';
+@import 'bootstrap/mixins';
+
+
+//** Overlay
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: rgba($app-clr-greyDark, .5);
+  z-index: $zindex-modal + 1;
+
+  .overlay-content {
+    display: inline-block;
+    min-width: $screen-xs-min;
+    margin-top: 20%;
+  }
+
+  // Loading Overlay
+  &#loading-overlay {
+    display: block;
+  }
+}
+
+//** Overlay :: Sidebar :: OffCanvas
+.overlay {
+  &.overlay-offcanvas {
+    z-index: $app-zindex-sidebar-overlay;
+  }
+}

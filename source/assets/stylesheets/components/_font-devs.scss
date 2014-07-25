@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'devs';
-  src: url('../fonts/devs.eot?52161351');
-  src: url('../fonts/devs.eot?52161351#iefix') format('embedded-opentype'),
-       url('../fonts/devs.woff?52161351') format('woff'),
-       url('../fonts/devs.ttf?52161351') format('truetype'),
-       url('../fonts/devs.svg?52161351#devs') format('svg');
+  src: font-url('devs.eot?52161351');
+  src: font-url('devs.eot?52161351#iefix') format('embedded-opentype'),
+       font-url('devs.woff?52161351') format('woff'),
+       font-url('devs.ttf?52161351') format('truetype'),
+       font-url('devs.svg?52161351#devs') format('svg');
   font-weight: normal;
   font-style: normal;
 }
