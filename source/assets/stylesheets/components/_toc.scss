@@ -6,11 +6,19 @@
 #markdown-toc {
   list-style: none;
   display: block;
+  margin-top: 0 !important;
   margin-bottom: 20px;
   padding-left: 15px;
 
   li {
     padding: 3px 0;
+
+    &:before {
+      @extend .fa;
+      content: $fa-var-angle-right !important;
+      padding-right: 10px;
+      color: $app-clr-greyDark;
+    }
 
     @media (max-width: $screen-sm-max) {
       padding: 6px 0;
@@ -20,14 +28,6 @@
   a {
     color: $app-clr-greyDark;
     text-decoration: none;
-
-    &:before {
-      @extend .fa;
-      @extend .fa-angle-right;
-      content: $fa-var-angle-right;
-      padding-right: 10px;
-      color: $app-clr-greyDark;
-    }
 
     &:hover {
       color: $brand-primary;

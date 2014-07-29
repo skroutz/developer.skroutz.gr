@@ -28,21 +28,21 @@
     .verb {
       display: inline-block;
       width: 55px;
-      padding: 10px;
+      padding: 20px 10px 10px 5px;
       text-align: right;
       font-weight: 700;
-      border-right: 1px solid $pre-border-color;
-
-      @media (max-width: $screen-xs-max) {
-        border-bottom: 1px solid $pre-border-color;
-      }
     }
 
     .path {
       display: inline-block;
-      padding: 10px;
-      word-wrap: break-word;
+      padding: 20px 10px 10px;
       word-break: break-all;
+      word-wrap: break-word;
+      border-left: 1px solid $pre-border-color;
+
+      @media (max-width: $screen-xs-max) {
+        margin-left: -1px;
+      }
     }
   }
 }
@@ -63,12 +63,29 @@
     @extend .btn;
     @extend .btn-xs;
     @extend .btn-primary;
+
     position: absolute;
-    top: 0;
-    right: 0;
+    top: -1px;
+    right: 8px;
+
+    padding: 2px 10px;
+    font-size: 12px;
     border-top-left-radius: 0;
-    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
     border-width: 0;
+
+    &:after {
+      @extend .fa;
+      display: none;
+      content: $fa-var-angle-down;
+    }
+
+    &.open {
+      &:after {
+        @extend .fa;
+        content: $fa-var-angle-up;
+      }
+    }
   }
 }
 
