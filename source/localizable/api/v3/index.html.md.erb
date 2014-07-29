@@ -5,6 +5,8 @@ title: overview
 
 # Overview
 
+##### <%= t('toc') %>
+
 * TOC
 {:toc}
 
@@ -45,13 +47,15 @@ All timestamps are returned in ISO 8601 format:
     YYYY-MM-DDTHH:MM:SSZ
 
 ## Linked Resources
+
 When you see "Linked resources: some_resource" in any of our resources
 it means you may choose to include/embed it as follows:
 
-Example:
+##### Example
+
 Resource Foo has "linked resources: bar"
 
-Case: embed
+###### Case: embed
 
 <pre class="terminal">
   <code>GET /foos/42?embed=bars</code>
@@ -69,7 +73,7 @@ Case: embed
   }
 }', 'javascript' %>
 
-Case: embed_ids
+###### Case: embed_ids
 
 <pre class="terminal">
   <code>GET /foos/42?embed_ids=bars</code>
@@ -83,7 +87,7 @@ Case: embed_ids
 }', 'javascript' %>
 
 
-Case: include
+###### Case: include
 
 
 <pre class="terminal">
@@ -125,10 +129,12 @@ $ curl https://<%= settings.api_domain %>/categories?page=2&per=10
 
 When there are other pages the response will contain the [Link](http://tools.ietf.org/html/rfc5988) header.
 
-    Link
+~~~
+Link
 
-    <https://<%= settings.api_domain %>/categories?page=508&per=4>; rel="last",
-    <https://<%= settings.api_domain %>/categories?page=3&per=4>; rel="next"
+<https://<%= settings.api_domain %>/categories?page=508&per=4>; rel="last",
+<https://<%= settings.api_domain %>/categories?page=3&per=4>; rel="next"
+~~~
 
 Note that page numbering is 1-based and that ommiting the `?page`
 parameter will return the first page.
@@ -249,7 +255,8 @@ client should repeat the requests.
 superseded by the one specified in the `Location` header field. This and all
 future requests to this resource should be directed to the new URI.
 
-302, 307
+302
+307
 : Temporary redirection. The request should be repeated verbatim to the URI
 specified in the `Location` header field but clients should continue to use the
 original URI for future requests.

@@ -5,17 +5,18 @@ title: sku
 
 # SKU
 
+A SKU (Stock Keeping Unit) is an aggregation of products.
+
+##### <%= t('toc') %>
+
 * TOC
 {:toc}
 
-## About
+## Linked Resources
 
-A SKU (Stock Keeping Unit) is an aggregation of products.  
-Linked resources:
-
-<%= link_to 'Linked Resources', '/api/v3#linked-resources' %>: 
-<%= link_to 'Product', '/api/v3/product' %>, 
-<%= link_to 'Manufacturer', '/api/v3/manufacturer' %>
+* <%= link_to 'Linked Resources', '/api/v3#linked-resources' %>
+  * <%= link_to 'Product', '/api/v3/product' %>
+  * <%= link_to 'Manufacturer', '/api/v3/manufacturer' %>
 
 ## List SKUs of specific category
 
@@ -69,30 +70,27 @@ Name           | Type    | Description
 ---------------| --------| -----------
 `include_meta` | `Array` | `Extra meta info to be included in the response`
 
-<p class="padded">
 Meta that can be included are:
 
-  <ul>
-    <li>available_filters (filters that can be applied)</li>
-    <li>applied_filters (filters currently applied)</li>
-    <li>show_in_tiles (whether the skus should be rendered in a tile view)</li>
-  </ul>
-</p>
+`available_filters`
+: Filters that can be applied
+
+`applied_filters`
+: Filters currently applied
+
+`show_in_tiles`
+: Whether the skus should be rendered in a tile view
 
 <%= render_recording :category_skus_with_available_filters %>  
 
 As you can see above the `available_filters` object contains two objects
 (filters, manufacturers) each of which has as keys the ids of the
 entities that can be applied and as values the number of skus that match
-the filter/manufacturer.    
-
-<br/>
+the filter/manufacturer.
 
 To retrieve *SKUs* matching a set of *filters* you have to 
 add `filter_ids[]=filter_id_1&filter_ids[]=filter_id_2` meaning that
 `filter_ids` is an array query parameter of filter ids.
-
-<br/>
 
 To retrieve *SKUs* matching a set of *manufacturers* you have to add
 `manufacturer_ids[]=manufacturer_id_1&manufacturer_ids[]=manufacturer_id_2`
@@ -148,9 +146,10 @@ groups. No pagination is used in this endpoint.
 
 ## Retrieve a SKU's favorite
 
-> **Note:** Requires user token with the 'favorites' permission.
-If the SKU has been 'favorited' by the currently associated user, you may fetch it
-from the following endpoint:
+> ##### Note
+> Requires user token with the 'favorites' permission.
+If the SKU has been 'favorited' by the currently associated user, you may fetch
+it from the following endpoint:
 
 <pre class="terminal">
   GET /skus/:id/favorite
