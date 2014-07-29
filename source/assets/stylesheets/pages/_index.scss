@@ -37,6 +37,11 @@
       margin: 20px 40px 10px 0;
       padding: 0;
 
+      &:before {
+        content: none !important;
+        padding-right: 0;
+      }
+
       i {
         @extend .fa;
         @extend .fa-li;
