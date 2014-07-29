@@ -5,17 +5,19 @@ title: notifications
 
 # User Notification
 
+> ##### Note
+> To access any of the <strong>User Notification</strong> endpoints a valid
+<code>access_token</code> is required.
+
+Notifications are events (price changes of favorite products, subscribed
+discussion messages, etc).
+
+##### <%= t('toc') %>
+
 * TOC
 {:toc}
 
-To access any of the following endpoints a valid user access_token is required.
-
-## About
-
-Notifications are events (price changes of favorite products,
-subscribed discussion messages etc).
-
-## List favorites 
+## List notifications 
 
 <pre class="terminal">
   /notifications
@@ -23,7 +25,7 @@ subscribed discussion messages etc).
 
 <%= render_recording :notifications_index %>
 
-## Retrieve a single favorite 
+## Retrieve a single notification 
 
 <pre class="terminal">
   /notifications/:id

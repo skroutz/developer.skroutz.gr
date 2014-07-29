@@ -5,6 +5,8 @@ title: shop
 
 # Shop
 
+##### <%= t('toc') %>
+
 * TOC
 {:toc}
 
@@ -26,8 +28,10 @@ title: shop
 
 ## List shop locations
 
-<%= link_to 'Linked Resources', '/api/v3#linked-resources' %>: 
-<%= link_to 'Address', '/api/addresses' %>
+#### Linked resources
+
+* <%= link_to 'Linked Resources', '/api/v3#linked-resources' %>
+  * <%= link_to 'Address', '/api/addresses' %>
 
 <pre class="terminal">
   GET /shops/:shop_id/locations?embed=address
@@ -37,8 +41,10 @@ title: shop
 
 ## Retrieve a single shop location
 
-<%= link_to 'Linked Resources', '/api/v3#linked-resources' %>: 
-<%= link_to 'Address', '/api/addresses' %>
+#### Linked resources
+
+* <%= link_to 'Linked Resources', '/api/v3#linked-resources' %>
+  * <%= link_to 'Address', '/api/addresses' %>
 
 <pre class="terminal">
   GET /shops/:shop_id/locations/:id

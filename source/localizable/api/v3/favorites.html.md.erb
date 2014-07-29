@@ -3,46 +3,37 @@ parent: apiv3
 title: favorites
 ---
 
-# User Favorite
+# User Favorites
 
-> **Note:** To access any of the following endpoints a valid access_token is required.
+> ##### Note
+> To access any of the <strong>User Favorites</strong> endpoints a valid
+<code>access_token</code> is required.
+
+##### <%= t('toc') %>
 
 * TOC
 {:toc}
 
 
-## About
+## Favorite Lists
 
-User may pick one or more SKUs as favorites.
-Favorites are organized in `favorite_lists`. 3 *types* of `favorite_lists` exist:
+User may pick one or more SKUs as favorites. Favorites are organized in `favorite_lists`.
 
-<ol>
-  <li>
-    <p class="term">custom lists</p>
-    <p class="description">
-      Can group SKUs from different categories. These are created by the user.
-    </p>
-  </li>
-  
-  <li>
-    <p class="term">auto lists</p>
-    <p class="description">
-      These are connected with a category and can only group favorites with SKUs
-      from this category. These are created automatically when a new favorite is
-      created without specifying a <code>favorite_list</code> (and favorite is
-      not owned. See next)
-    </p>
-  </li>
-  
-  <li>
-    <p class="term">“owned” list</p>
-    <p class="description">
-      No such list exists but favorites that user has flagged as “owned” have
-      <code>favorite_list_id => null</code> and <code>have_it => true</code>
-      attributes. In this way owned favorites can be presented as a list.
-    </p>
-  </li>
-</ol>
+3 *types* of `favorite_lists` exist:
+
+Custom lists
+: Can group SKUs from different categories. These are created by the user.
+
+Auto lists
+: These are connected with a category and can only group favorites with SKUs
+from this category. These are created automatically when a new favorite is
+created without specifying a <code>favorite_list</code> (and favorite is
+not owned. See next)
+
+&quot;Owned&quot; list
+: No such list exists but favorites that user has flagged as “owned” have
+<code>favorite_list_id => null</code> and <code>have_it => true</code>
+attributes. In this way owned favorites can be presented as a list.
 
 Endpoints for `favorites` and `favorite_lists` are listed next.
 
@@ -77,12 +68,14 @@ destroyed. status code is 404 when the resource does not exist.
 
 ## List favorites
 
-The parameter ‘owned’ can be set to ‘true’ to fetch only owned favorites.
-By default favorites are sorted by creation date descending. order_dir=asc can
+The parameter `owned` can be set to `true` to fetch only owned favorites.
+By default favorites are sorted by creation date descending. `order_dir=asc` can
 be used to fetch them with ascending order.
 
-<%= link_to 'Linked Resources', '/api/v3' %>
-<%= link_to 'SKU', '/api/v3/sku' %>
+#### Linked Resources
+
+* <%= link_to 'Linked Resources', '/api/v3' %>
+  * <%= link_to 'SKU', '/api/v3/sku' %>
 
 <pre class="terminal">
   /favorites
@@ -127,10 +120,9 @@ destroyed. status code is 404 when the resource does not exist.
 
 A favorite update might be called to do one of the following:
 
-  - Move the favorite to an other list (custom probably)
-  - Mark favorite as “owned” (through have_it: true)
-  - Add the favorite to a new custom list
-
+* Move the favorite to an other list (custom probably)
+* Mark favorite as “owned” (through have_it: true)
+* Add the favorite to a new custom list
 
 When a favorite is `have_it: true`, it does not belong to a *favorite_list*.
 
