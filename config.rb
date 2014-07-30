@@ -1,6 +1,7 @@
 require 'lib/code_example_helper'
 require 'lib/page_navigation_helper'
 require 'lib/response_mate_helper'
+require 'uglifier'
 
 ###########################
 # Layouts
@@ -46,6 +47,20 @@ set :fonts_dir, 'assets/fonts'
 # Build Configuration
 ###########################
 configure :build do
+  # Use Relative Assets
+  activate :relative_assets
+
+  # Enable Cache Buster     Cache Method #02
+  activate :asset_hash
+
+  # Minify CSS
+  activate :minify_css
+
+  # Minify JS
+  activate :minify_javascript, compressor: Uglifier.new
+
+  # GZip
+  activate :gzip
 end
 
 ###########################
