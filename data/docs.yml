@@ -2,6 +2,9 @@ analytics:
   base: '/analytics/'
   pages:
     - { title: 'overview', url: '/analytics/' }
+    - { title: 'settings' }
+    - { title: 'ecommerce' }
+    - { title: 'examples' }
 
 apiv3:
   base: '/api/v3/'
