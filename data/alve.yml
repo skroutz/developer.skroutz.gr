@@ -7,7 +7,7 @@ api_domain: 'api.alve.com'
 apiv2_domain: 'apiv2.alve.com'
 
 github_profile: 'https://github.com/skroutz'
-api_request_url: 'http://docs.google.com/forms/d/1mUk6pvAXR7yiMqtau8FWnBFamKCY320fL70El_RgN68/viewform'
+apiv3_early_access_form: 'http://docs.google.com/forms/d/1mUk6pvAXR7yiMqtau8FWnBFamKCY320fL70El_RgN68/viewform'
 
 # External Services
 google_analytics_code: 'UA-48017177-1'
