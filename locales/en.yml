@@ -17,7 +17,10 @@ en:
   docs:
     analytics:
       short_description: 'Donec purus felis, imperdiet ut venenatis vel, elementum ac justo. Nulla non purus consequat, consequat enim id, egestas ipsum. Sed consectetur lobortis sapien a lobortis.'
+      ecommerce: 'Ecommerce'
+      examples: 'Examples'
       overview: 'Overview'
+      settings: 'Settings'
     api:
       short_description: 'Donec purus felis, imperdiet ut venenatis vel, elementum ac justo. Nulla non purus consequat, consequat enim id, egestas ipsum. Sed consectetur lobortis sapien a lobortis.'
     apiv2:
