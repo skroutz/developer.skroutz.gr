@@ -5,14 +5,22 @@ title: widgets
 
 # Widgets
 
+##### <%= t('toc') %>
+
 * TOC
 {:toc}
 
 ## Prices for a specific product
 
 Use the following code snippet to list prices for a specific product. You only
-have replace the product `id` with the one that appears at the product web address,
-e.g. <%= settings.domain %>/s/**2567463**/Apple-iPad-mini-Wifi-16GB.html
+have replace the product `id` with the one that appears at the product web
+address, e.g.
+
+<pre class="terminal">
+http://<%= settings.domain %>/s/<strong>2567463</strong>/Apple-iPad-mini-Wifi-16GB.html
+</pre>
+
+##### Example
 
 ~~~ html
 <div class="skroutz-widget">
@@ -23,6 +31,8 @@ e.g. <%= settings.domain %>/s/**2567463**/Apple-iPad-mini-Wifi-16GB.html
 <p class="skwidget-footer">powered by <a href="<%= settings.domain %>" title="<%= settings.site_name.titleize %>"><%= settings.site_name.titleize %></a></p>
 </div>
 ~~~
+
+##### Result
 
 <div class="skroutz-widget">
 <script type="text/javascript" src="http://<%= settings.domain %>/javascripts/widget-v1.js" charset="utf-8"></script>
@@ -35,7 +45,9 @@ e.g. <%= settings.domain %>/s/**2567463**/Apple-iPad-mini-Wifi-16GB.html
 ## General search
 
 Replace the `keyphrase` in the following code snippet to perform a general search
-in <%= settings.site_name %>
+in <%= settings.site_name.capitalize %>.
+
+##### Example
 
 ~~~ html
 <div class="skroutz-widget">
@@ -46,6 +58,8 @@ in <%= settings.site_name %>
 <p class="skwidget-footer">powered by <a href="http://<%= settings.domain %>" title="<%= settings.site_name.titleize %>"><%= settings.site_name.titleize %></a></p>
 </div>
 ~~~
+
+##### Result
 
 <div class="skroutz-widget">
 <script type="text/javascript" src="http://<%= settings.domain %>/javascripts/widget-v1.js" charset="utf-8"></script>
@@ -60,7 +74,12 @@ in <%= settings.site_name %>
 Use the following code snippet to list results from a specific Category. You
 only have to replace the `keyphrase` and the `cat_id` with the actual `cat_id`
 as it appears at the category web address, e.g.
-http://<%= settings.domain %>/c/**40**/kinhta-thlefwna.html
+
+<pre class="terminal">
+http://<%= settings.domain %>/c/<strong>40</strong>/kinhta-thlefwna.html
+</pre>
+
+##### Example
 
 ~~~ html
 <div class="skroutz-widget">
@@ -72,6 +91,8 @@ http://<%= settings.domain %>/c/**40**/kinhta-thlefwna.html
 </div>
 ~~~
 
+##### Result
+
 <div class="skroutz-widget">
   <script type="text/javascript" src="http://<%= settings.domain %>/javascripts/widget-v1.js" charset="utf-8"></script>
   <script type="text/javascript" charset="utf-8" >
@@ -80,11 +101,17 @@ http://<%= settings.domain %>/c/**40**/kinhta-thlefwna.html
   <p class="skwidget-footer">powered by <a href="http://<%= settings.domain %>" title="<%= settings.site_name.titleize %>"><%= settings.site_name.titleize %></a></p>
 </div>
 
-### Top category products 
+## Top category products 
 
 Use the following code snippet to retrieve the top products for a Category. You
 only have to replace the `cat_id` with the actual category id as it appears at
-the category web address, e.g. http://<%= settings.domain %>/c/**40**/kinhta-thlefwna.html
+the category web address, e.g.
+
+<pre class="terminal">
+http://<%= settings.domain %>/c/<strong>40</strong>/kinhta-thlefwna.html
+</pre>
+
+##### Example
 
 ~~~ html
 <div class="skroutz-widget">
@@ -95,6 +122,8 @@ the category web address, e.g. http://<%= settings.domain %>/c/**40**/kinhta-thl
   <p class="skwidget-footer">powered by <a href="http://<%= settings.domain %>" title="<%= settings.site_name.titleize %>"><%= settings.site_name.titleize %></a></p>
 </div>
 ~~~
+
+##### Result
 
 <div class="skroutz-widget">
   <script type="text/javascript" src="http://<%= settings.domain %>/javascripts/widget-v1.js" charset="utf-8"></script>
@@ -106,9 +135,12 @@ the category web address, e.g. http://<%= settings.domain %>/c/**40**/kinhta-thl
 
 ## Parameters
 
-* `target` - Links should open:
-  * within the same window *(default)*: `'_top'`
-  * in a new window: `'_blank'`
+`target`
+: Links should open:
+<br/> - within the same window *(default)*: `'_top'`
+<br/> - in a new window: `'_blank'`
+
+##### Example
 
 ~~~ html
 <div class="skroutz-widget">

@@ -5,12 +5,22 @@ title: overview
 
 # Overview
 
-* TOC
-{:toc}
+<div class="alert alert-danger">
+  <h5>Deprecated Resource</h5>
+  <p>
+    The API v2 is deprecated. If you wish to use our API please visit the
+    <a href="/api/v3/">API v3</a>.
+  </p>
+</div>
 
-
+> ##### Note
 > A valid API v2 key is required in order to use the API v2. Request your API v2
 key at <api@<%= settings.domain %>>.
+
+##### <%= t('toc') %>
+
+* TOC
+{:toc}
 
 ## Schema
 
@@ -33,7 +43,7 @@ An API response consists of the following three elements:
 * `result`
 * `error`
 
-Example XML
+##### Example
 
 ~~~ xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -54,20 +64,14 @@ element with a code name for value.
 
 In case of an error, the `error` element is consisted of three elements:
 
-<ol>
-  <li>
-    <p class="term">code</p>
-    <p class="description">Error code</p>
-  </li>
-  <li>
-    <p class="term">number</p>
-    <p class="description">Error number</p>
-  </li>
-  <li>
-    <p class="term">text</p>
-    <p class="description">Short description of the error</p>
-  </li>
-</ol>
+`code`
+: The error code
+
+`number`
+: The error number
+
+`text`
+: A short description of the error
 
 ## <%= settings.site_name.titleize %> Partner key
 
@@ -76,16 +80,17 @@ API. Request it at <api@<%= settings.domain %>>.
 
 ## Authentication
 
-Every call to <%= settings.site_name.titleize %> API must have an `access_token`
+> ##### Note
+> Every call to <%= settings.site_name.titleize %> API must have an `access_token`
 parameter.
 
 Use the the `/authenticate` api call to get `access tokens`. 
 
-Example:
-
 <pre class="terminal">
 $ curl -F 'access_token=36c57b67...' http://<%= settings.apiv2_domain %>/xml/subcats/769/
 </pre>
+
+##### Example
 
 ~~~ xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -122,74 +127,53 @@ $ curl -F 'access_token=36c57b67...' http://<%= settings.apiv2_domain %>/xml/sub
 
 There are two kind of `access tokens`, the `basic` and the `full`.
 A `full` access token is related with a user and therefore it allows additional
-API calls related with that user. (e.g. `bookmarks`)
+API calls related with that user (e.g. `bookmarks`).
 
 ## Authenticate
 
 `access_token` generation. **Only "https"**
 
-### Parameters
+##### Parameters
 
-<ul>
-  <li>
-    <p class="term">api_key</p>
-    <p class="description">Your API key</p>
-  </li>
-  <li>
-    <p class="term">username</p>
-    <p class="description">User name, in case of full access token</p>
-  </li>
-  <li>
-    <p class="term">password</p>
-    <p class="description">User password, in case of full access token</p>
-  </li>
-</ul>
+`api_key`
+: Your API key
 
-**Example**
+`username`
+: User name, in case of full access token
+
+`password`
+: User password, in case of full access token
+
+##### Example
 
 <pre class="terminal">
-  # basic token
-  /authenticate api_key=your_api-key
+# basic token
+/authenticate api_key=your_api-key
 
-  # full token
-  /authenticate api_key=your_api-key username=<%= settings.site_name.titleize %> password=donald
+# full token
+/authenticate api_key=your_api-key username=<%= settings.site_name.titleize %> password=donald
 </pre>
 
-**Returns:**
+##### Returns
 
-<ul>
-  <li>
-    <p class="term">access_token</p>
-    <p class="description">The access token to use for API calls</p>
-  </li>
-  <li>
-    <p class="term">access_token_expiry</p>
-    <p class="description">Expiration date of the access token</p>
-  </li>
-  <li>
-    <p class="term">access_token_type</p>
-    <p class="description">basic/full</p>
-  </li>
-  <li>
-    <p class="term">user</p>
-    <p class="description">User password, in case of full access token</p>
-  </li>
-</ul>
+`access_token`
+: The access token to use for API calls
 
-**Errors:**
+`access_token_expiry`
+: Expiration date of the access token
 
-<ul>
-  <li>
-    <p class="term">wrong_auth</p>
-    <p class="description">Wrong credentials</p>
-  </li>
-  <li>
-    <p class="term">access_denied</p>
-    <p class="description">Wrong API key</p>
-  </li>
-</ul>
+`access_token_type`
+: User password, in case of full access token
 
-**Example:**
+##### Errors
+
+`wrong_auth`
+: Wrong credentials
+
+`access_denied`
+: Wrong API key
+
+##### Example
 
 <pre class="terminal">
 $ curl -F 'access_token=36c57b67...' -F username=<%= settings.site_name.titleize %> -F password=donald \
@@ -217,11 +201,7 @@ $ curl -F 'access_token=36c57b67...' -F username=<%= settings.site_name.titleize
 
 Logout
 
-**Returns:**
+##### Return
 
-<ul>
-  <li>
-    <p class="term">success</p>
-    <p class="description">true</p>
-  </li>
-</ul>
+`success`
+: `true`

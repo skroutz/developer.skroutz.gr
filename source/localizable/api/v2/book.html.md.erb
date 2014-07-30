@@ -3,7 +3,17 @@ parent: apiv2
 title: book
 ---
 
-# Books
+# Book
+
+<div class="alert alert-danger">
+  <h5>Deprecated Resource</h5>
+  <p>
+    The API v2 is deprecated. If you wish to use our API please visit the
+    <a href="/api/v3/">API v3</a>.
+  </p>
+</div>
+
+##### <%= t('toc') %>
 
 * TOC
 {:toc}
@@ -16,7 +26,7 @@ title: book
 GET /book/:book_id/
 </pre>
 
-**Example:**
+##### Example
 
 <pre class="terminal">
 $ curl -F 'access_to  ken=36c57b67...' http://<%= settings.apiv2_domain %>/xml/book/258276/
@@ -70,23 +80,28 @@ The `listing` API call will also perform a **search within Books**.
 GET /books/list/
 </pre>
 
-#### Parameters
+##### Parameters
 
- * `keyphrase` - Optional keyphrase for search
- * `id` - Dewey id (librarian categorization)
- * `page` - Page selection
+`keyphrase`
+: Optional keyphrase for search
 
-#### Response scheme
+`id`
+: Dewey id (librarian categorization)
 
- * `Books`
- * `dewey_results`
- * `Paginator`
-   * `total_results`
-   * `page`
-   * `results_per_page`
-   * `total_pages`
+`page`
+: Page selection
 
-**Example:**
+##### Response scheme
+
+* `Books`
+* `dewey_results`
+* `Paginator`
+  * `total_results`
+  * `page`
+  * `results_per_page`
+  * `total_pages`
+
+##### Example
 
 <pre class="terminal">
 $ curl -F 'access_token=36c57b67...' -F 'id=866' http://<%= settings.apiv2_domain %>/xml/books/list/
@@ -165,7 +180,7 @@ GET /books
   * `Books`
 * `critics`
 
-**Example:**
+##### Example
 
 <pre class="terminal">
 $ curl -F 'access_`token=36c57b67...' http://<%= settings.apiv2_domain %>/xml/books/
