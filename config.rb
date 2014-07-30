@@ -47,6 +47,14 @@ set :fonts_dir, 'assets/fonts'
 # Build Configuration
 ###########################
 configure :build do
+  # Ignore assets from other flavors
+  %w(skroutz alve scrooge).each do |f|
+    next if f == flavor
+
+    ignore "assets/images/#{f}/*"
+    ignore "assets/stylesheets/flavors/#{f}.*"
+  end
+
   # Use Relative Assets
   activate :relative_assets
 
