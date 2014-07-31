@@ -203,6 +203,11 @@ dl {
 //
 //## Extend Bootstrap Containers
 
+//** Header Container
+.container-header {
+  @extend .container-fluid;
+}
+
 //** Cover Container
 .container-cover {
   padding: 30px 0;
