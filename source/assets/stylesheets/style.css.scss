@@ -600,6 +600,7 @@ table {
   @extend .table-hover;
   @extend .table-striped;
   @extend .table-bordered;
+  @extend .table-condensed;
 
   thead {
     background-color: darken($app-clr-greyLight, 6%);
@@ -608,6 +609,11 @@ table {
   th,
   td {
     //word-break: break-all;
+  }
+
+  &.mono,
+  .mono {
+    font-family: $font-family-monospace;
   }
 }
 

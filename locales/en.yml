@@ -9,6 +9,7 @@ en:
     docs: 'Documentation'
     easy: "%{flavor} Easy"
     extra: 'Looking for something else?'
+    feedspec: 'XML Feed'
     guides: 'Guides'
     oauth: 'OAuth 2.0'
     support: 'Support'
@@ -49,6 +50,8 @@ en:
       short_description: 'Donec purus felis, imperdiet ut venenatis vel, elementum ac justo. Nulla non purus consequat, consequat enim id, egestas ipsum. Sed consectetur lobortis sapien a lobortis.'
       overview: 'Overview'
       permissions: 'Permissions'
+    feedspec:
+      short_description: 'Donec purus felis, imperdiet ut venenatis vel, elementum ac justo. Nulla non purus consequat, consequat enim id, egestas ipsum. Sed consectetur lobortis sapien a lobortis.'
     oauth:
       short_description: 'Donec purus felis, imperdiet ut venenatis vel, elementum ac justo. Nulla non purus consequat, consequat enim id, egestas ipsum. Sed consectetur lobortis sapien a lobortis.'
       endpoints: 'Endpoints'
@@ -65,6 +68,19 @@ en:
   legal: 'All Rights and Lefts reserved.'
   language: 'Language'
   search: 'Search'
+
+  lang:
+    el: 'Ελληνικά'
+    en: 'English'
+    tr: 'Türkçe'
+
+  feedspec_data:
+    black: 'Black'
+    in_two_days: 'In 2 days'
+    mobile_phones: 'Mobile phones'
+    !!str no: 'No'
+    no_asterisk: 'No*'
+    !!str yes: 'Yes'
 
   index:
     what_can_you_do: 'What can you do with %{flavor}?'

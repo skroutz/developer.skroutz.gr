@@ -11,7 +11,7 @@ page 'index.html', layout: false
 ###########################
 # Localization
 ###########################
-activate :i18n, langs: [:en]
+activate :i18n, langs: [:en, :el, :tr]
 I18n.enforce_available_locales = false  # Silence I18n deprecation warnings
 
 ###########################
@@ -20,7 +20,6 @@ I18n.enforce_available_locales = false  # Silence I18n deprecation warnings
 activate :directory_indexes
 
 ###########################
-# Relative URLs
 ###########################
 set :relative_links, true
 
