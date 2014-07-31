@@ -1,11 +1,3 @@
-analytics:
-  base: '/analytics/'
-  pages:
-    - { title: 'overview', url: '/analytics/' }
-    - { title: 'settings' }
-    - { title: 'ecommerce' }
-    - { title: 'examples' }
-
 apiv3:
   base: '/api/v3/'
   pages:
@@ -33,11 +25,23 @@ apiv2:
     - { title: 'user' }
     - { title: 'widgets' }
 
+feedspec:
+  base: '/feedspec/'
+
 authentication:
   base: '/authentication/'
   pages:
     - { title: 'overview', url: '/authentication/' }
     - { title: 'permissions' }
+    - { title: 'oauth' }
+
+analytics:
+  base: '/analytics/'
+  pages:
+    - { title: 'overview', url: '/analytics/' }
+    - { title: 'settings' }
+    - { title: 'ecommerce' }
+    - { title: 'examples' }
 
 oauth:
   base: '/oauthdoc/'

@@ -1,0 +1,582 @@
+---
+title: feedspec
+locale:
+  alve:
+    - 'en'
+    - 'tr'
+---
+
+# Data Feed Özelliği
+
+Bu belge, mağazalar tarafından Alve’ye iletilen XML dosyasının yapısını tanımlar.
+**Gerekli** ürün kayıtları dahil edildiği sürece bu belgede özel bir şablon
+kullanımına ihtiyaç duyulmaz ([Kayıt açıklamalarını görüntüleyin](#attributes)).
+
+
+##### <%= t('toc') %>
+
+* TOC
+{:toc}
+
+
+## Gereksinimleri
+
+Genel olarak XML dosyasının aşağıda belirtilen koşulları karşılaması beklenir:
+
+* Belgenin kodlamasını açık bir şekilde tanımlamak.
+* XML doğrulamasını standartlar doğrultusunda gerçekleştirmek (XML dosyanızın
+  geçerliliğini <a href="http://validator.w3.org/">buraya tıklayarak</a>
+  kontrol edebilirsiniz).
+* Aynı ürüne birden fazla kere yer vermemek ([Unique ID başlığını görüntüleyin](#unique-id))
+* KDV dahil fiyatları listelemek.
+
+Geçerli bir XML örneği için [buraya tıklayın](#xml-rnei) ya da XML dosyanızın XSD
+tanımlamasını [okuyun](#xsd).
+
+
+## Teknik Özellikler
+
+Bir Data Feed’in onaylanması için tüm gerekli kayıtlara aşağıda belirtilen
+standartlar uyarınca yer verilmesi gerekmektedir.
+
+
+## XML Declaration
+
+XML deklarasyonunun ilk kısmı dosyanın hem kodlamasına hem de oluşturulduğu
+tarihe yer vermelidir. Tarih, bir feed’in güncel olup olmadığını tespit etmek
+açısından önemlidir.
+
+##### Örnek
+
+~~~ xml
+<?xml version="1.0" encoding="UTF-8"?>
+<mywebstore>
+   <created_at>2010-04-08 12:32</created_at>
+   ...
+</mywebstore>
+~~~
+
+> ##### Note
+> XML header’da yer verilen kodlama, dosyanın asıl kodlamasına uyum sağlamalıdır;
+  aksi takdirde Data Feed’iniz geçerli bulunamayarak, ürünlerinize ilişkin
+  güncelleme gerçekleştirilemez. Örnek vermek gerekirse, bir *UTF-8* deklarasyonu,
+  dosyanın UTF-8’te kodlandığı anlamına gelir.
+
+> ##### Note
+> Data Feed’iniz eğer gerçek zamanlı olarak oluşturulmuyorsa, önbellekteki
+  dosyanın geçerli olduğundan ve günde en az bir kere yenilendiğinden emin
+  olmalısınız.
+
+
+## Attributes
+
+Aşağıdaki tablo Alve tarafından tanınan ürün kayıtlarını özetlemektedir:
+
+<div class="alert alert-danger">
+  <p>
+    <strong>Hiçbir</strong> ürün kaydında HTML notasyonuna yer verilemez.
+  </p>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>İsim</th>
+      <th>Tip</th>
+      <th>Maksimum Ölçü</th>
+      <th>Zorunlu</th>
+      <th>Örnek</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% settings.feedspec.each do |field| %>
+      <tr>
+        <td>
+          <a href="#<%= field[:name].downcase.gsub('/', '').gsub(/\s+/, '-') %>">
+            <%= field[:name] %>
+          </a>
+        </td>
+        <td><%= field[:type] %></td>
+        <td class="mono"><%= field[:max] %></td>
+        <td><%= t("feedspec_data.#{field[:required]}".to_sym) %></td>
+        <td>
+          <code>
+          <% if field[:i18n].present? %>
+            <%= t("feedspec_data.#{field[:example]}".to_sym) %>
+          <% else %>
+            <%= field[:example] %>
+          <% end %>
+          </code>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<small>* Moda kategorisindeki tüm ürünler için ölçü bilgisi zorunludur</small>
+
+
+#### Unique ID
+
+Veritabanınızda bulunan bir ürünün **benzersiz** tanımlayıcısını ifade eder.
+**Bu alandaki değer, ürünün yaşam döngüsü boyunca aynı kalmalı ve farklı ürünler
+için yeniden kullanılmamalıdır**.
+
+> Bir ürünün ismi **güncellemeler arasında** artık aynı ürüne karşılık gelmeyen
+  şekilde değiştirilirse (örneğin *Sony LDF700*’den *Sony LDF800*’e), söz konusu
+  ürün **devre dışı** bırakılır. Her bir Unique ID’nin yalnızca bir ve aynı
+  ürüne ait olması son dönerece önemlidir.
+
+> Bir Unique ID **birden fazla** ürün için kullanılamaz. Böyle bir durum
+  yaşandığı takdirde dosyada yalnızca sonda gösterilen ürünün bilgileri
+  kaydedilecektir.
+
+> E-ticaret uygulamanızın birden fazla dili destekliyor olması durumunda
+  tekrarları önlemek adına Data Feed’inizin yalnızca Türkçe tanımlamalara yer
+  vermesi gerekmektedir.
+
+##### Örnek
+
+~~~ xml
+<UniqueID>32</UniqueID>
+<product id="44">...</product>
+<PRODUCTID>232AD</PRODUCTID>
+~~~
+
+
+#### Name
+
+Ürün ismini ifade eder. XML’in diğer alanlarında değinilse dahi üretici firma,
+model, renk, versiyon ve parça numarası gibi tüm ürün özelliklerine ürün isminde
+de yer verilmelidir. Ürün ismi ne kadar eksiksiz olursa, sınıflandırılması da o
+kadar hızlı olacaktır.
+
+> İkinci el ya da yenilenmiş ürünlere ait isimler **ürün durumunu** açıkça
+  belirtmelidir; aksi takdirde bu ürünler içerik takımı tarafından devre dışı
+  bırakılacaktır.
+
+##### Örnek
+
+~~~ xml
+<Name>Nokia 5800 XpressMusic</Name>
+<title>Nokia 5800 XpressMusic</title>
+~~~
+
+> Ürün isminiz kargo ücreti, ürün garantisi, ödeme metodu, özel hediye paketleri
+  ya da pazarlama faaliyetlerine ilişkin bilgiler içermemelidir.
+
+
+#### Product Link
+
+Belirli bir ürünün mağaza web sitesindeki URL’ini ifade eder. Bu URL’in `http`
+ya da `https` protokolleriyle başlayan geçerli bir bağlantı olması gerekmektedir.
+
+> Ürün linkleri URL-kodlamalı **olmamalıdır**.
+
+> Bu link bir kategori ya da farklı ürünlerin yer aldığı bir derleme sayfasına
+  değil, yalnızca söz konusu ürünün sayfasına yönlendirmelidir.
+
+##### Örnek
+
+~~~ xml
+<link>http://www.mydomain.com/products/1</link>
+<url>http://www.mydomain.com/products/product.php?itemid=1</url>
+<url><![CDATA[http://www.mydomain.com/products/product.php?itemid=1&amp;somevar=3]]></url>
+<url><http://www.mydomain.com/products/product.php?itemid=1&amp;amp;somevar=3</url>
+~~~
+
+
+#### Image Link
+
+Ürünün imaj (fotoğraf) konumunu ifade eder. Bu konum, `http` ya da `https`
+protokolleriyle başlayan geçerli bir URL olmalıdır. İmajları oluşturan komutlara
+yönelik linkler, yükleme hataları ortaya çıkarabilmeleri nedeniyle
+kullanılmamalıdır. download errors.
+
+Data Feed’inizde yüksek çözünürlüklü imajlara yer vermeniz, söz konusu imajların
+<%= settings.site_name.capitalize %> tarafından indirilip, uygun thumbnail’lerin
+yaratılması açısından faydalı olacaktır.
+
+<div class="alert alert-danger">
+  <p>İmajların filigranlı olmaması gerekmektedir.</p>
+</div>
+
+> İmaj linkleri URL-kodlamalı **olmamalıdır**.
+
+> `No Image` şablonlu imajlar eklemekten kaçınmanız, ileride herhangi bir
+  değişiklik yaptığınız takdirde <%= settings.site_name.capitalize %>’nin bu
+  güncellemeyi gerçekleştirebilmesi açısından önemlidir. Eğer bir ürünün henüz
+  imajı bulunmuyorsa, boş bir imaj linki sağlayabilirsiniz. Sonradan bir
+  değişiklik yaptığınızda imaj normal olarak güncellenecektir.
+
+
+##### Örnek
+
+~~~ xml
+<image>http://www.mydomain.com/photos/1.jpg</image>
+<imageurl>http://www.mydomain.com/photos/b&amp;amp;b.jpg</imageurl>
+<url><![CDATA[http://www.mydomain.com/photos/b&amp;b.jpg]]></url>
+~~~
+
+
+#### Category Name
+
+Ürünün kategori yolunu ifade eder. Bu kaydın ürün kategorisinin tam yolunu
+içermesi oldukça önemlidir. Örneğin, eğer ürün bir `Harici Hard Disk` ise,
+kategori ismi kaydı `Bilgisayarlar > Harici Hard Diskler` şeklinde görünmelidir.
+
+> Ürünlerinizin sınıflandırma süresini yavaşlatacağından farklı ürünleri bir
+  araya getiren (örneğin; Yazıcılar &amp; Tarayıcılar) belirsiz kategorilerden
+  kaçının.
+
+##### Örnek
+
+~~~ xml
+<category>Cep Telefonları&amp;gt; Bluetooth</category>
+<category_path>Bilgisayarlar - Donanım - CPUs</category_path>
+~~~
+
+
+#### Price
+
+Ürünün **KDV dahil** mağaza fiyatını ifade eder.
+
+> Ürün fiyatı herhangi özel bir koşula bağlı kalmaksızın (örneğin; lokasyon
+  bazlı kampanyalar, indirimler vb.) herkes için aynı olmalıdır.
+
+
+#### InStock
+
+Ürünün stok durumunu ifade eder.
+
+`Y`
+: ürünün mağazanızda ya da deponuzda stoğunun bulunduğu ve derhal alınabileceği
+  anlamına gelir.
+
+`N`
+: ürün stoğunun bulunmadığı anlamına gelir.
+
+> Herhangi bir bilgi yer almadığında bu kayda ilişkin değer `N` (no stock)
+  olarak dikkate alınır.
+
+
+#### Availability
+
+Ürünün internet sitenizde yer verdiğiniz şekilde teslimata uygunluğunu ifade
+eder.
+
+<%= settings.site_name.capitalize %> Data Feed’inizde belirtilen ürün stok
+durumlarıyla bağdaşacak fiks bir açıklama şablonu kullanır.
+
+Stokta mevcut
+: ürünün mağazanızda ya da deponuzda hazır bulunduğu anlamına gelir
+
+1-3 gün
+: ürünün müşteriye 1 ila 3 gün içerisinde teslim edilebileceği anlamına gelir
+
+4-7 gün
+: ürünün müşteriye 4 ila 7 gün içerisinde teslim edilebileceği anlamına gelir
+
+7+ gün
+: ürünün müşteriye 7 ya da daha fazla gün içerisinde teslim edilebileceği
+  anlamına gelir
+
+Sipariş üzerine
+: müşteri siparişi üzerine tedariği sağlanan ürünleri gösterir
+
+Ön sipariş
+: piyasaya sürülmeden önce sipariş verilebilen ürünleri gösterir
+
+
+#### Manufacturer
+
+Ürünün üretici firmasını ifade eder.
+
+> Bu kayıt altında yer verilmiş olmasına bakılmaksızın, üretici firma bilgisine
+  ürün isminde de yer verilmelidir.
+
+> Üretici firma kaydı, yedek parçası ya da aksesuarı üretilen ürünün üreticisini
+  değil, ürünü ortaya çıkaran asıl üretici firmanın adını göstermelidir.
+
+
+#### MPN/ ISBN
+
+Üretici firma tarafından ürün için belirlenen benzersiz kodu ifade eder. Ürünü
+tanımlamak ve sınıflandırmak için kullanılır.
+
+> Bu kayıt, farklı konfigürasyonları bulunan (örneğin; disk kapasitesi, renk vb.)
+  bir ürünü tanımlamak için İmalatçı Parça Numarası’nın ihtiyaç duyulduğu
+  kategoriler için zorunludur.
+
+Eğer söz konusu ürün bir **kitap** ise, ilgili alanda bu kitabın `ISBN`
+bilgisine yer verilmelidir.
+
+> ISBN bilgisi bulunmayan kitaplar sınıflandırılmayacaktır.
+
+
+#### Size
+
+Eğer ürünün çeşitli bedenleri bulunuyorsa, tüm mevcut bedenleri bu kayıt altında
+virgüllerle ayırmak suretiyle belirtebilirsiniz.
+
+Örneğin 38, 39 ve 39,5 numaraları bulunan bir spor ayakkabı için `XML` dosyanız
+aşağıdaki kayda yer verecektir:
+
+~~~ xml
+<size>36,37,38.5</size>
+~~~
+
+Buna ek olarak yarım beden için `1/2`’yi de kullanabilirsiniz.
+
+~~~ xml
+<size>36 1/2,37,38 1/2</size>
+~~~
+
+Kıyafetler söz konusu olduğunda bedenler aşağıdaki şekilde ifade edilebilir:
+
+~~~ xml
+<size>XXS, XS, S, M, L, XL, XXL, XXXL</size>
+<size>Extra Small, Small, Medium, Large, Extra Large</size>
+<size>00, 0, 2, 4, 6, 8, 10, 12, 14, 16</size>
+~~~
+
+Eğer bir ürün belirli bir beden aralığına uyuyor ise (örneğin; çoraplar), uygun
+beden aralığını tire (-) işaretiyle *range* olarak gösterebilirsiniz. Örneğin:
+
+~~~ xml
+<size>37-39</size>
+~~~
+
+Son olarak eğer bir ürün birden fazla ölçüyle tanımlanıyorsa (örneğin;
+pantolonlar), bu ölçülere ön bölme işareti (/) kullanarak yer verebilirsiniz.
+Örneğin:
+
+~~~ xml
+<size>32/34,38/34</size>
+~~~
+
+> Ölçüleri belirtilmesi gereken ancak bu bilgilerin sağlanmadığı ürünler
+  **sınıflandırılmayacaktır**.
+
+
+#### Shipping Costs
+
+Müşterinin bulunduğu konumdan bağımsız gönderim ücretini ifade eder. Eğer ürünün
+gönderim ücreti önceden biliniyorsa söz konusu miktara bu alanda yer
+verebilirsiniz. Eğer ürün teslimatı ücretsiz olarak gerçekleştiriliyorsa, bu
+ayrıntıyı kayıt için `0` değerini girerek gösterebilirsiniz.
+
+> Burada bahsi geçen gönderim ücretleri teslimatın gerçekleştirileceği
+  lokasyondan **bağımsız** olmalıdır. Böyle bir durum söz konusu değilse, bu
+  kayıt boş bırakılmalıdır.
+
+> Gönderim ücretleri, her daim doğru oldukları sürece diğer ürün bilgileriyle
+  beraber gösterilirler. Eğer gönderim ücreti bir ürün için dahi doğru değilse,
+  bu bilgi Data Feed’inizdeki tüm ürünlerden kaldırılır.
+
+
+#### Color
+
+Ürünün rengini ifade eder.
+
+##### Örnek
+
+~~~ xml
+<color>Black</color>
+<color>siyah</color>
+~~~
+
+
+## XML örneği
+
+Aşağıdaki XML alıntısı, uygun bir XML Data Feed’ine örnek oluşturmaktadır:
+
+~~~ xml
+<?xml version="1.0" encoding="UTF-8"?>
+<mywebstore>
+   <created_at>2010-04-08 12:32</created_at>
+   <products>
+      <product>
+        <id>322233</id>
+        <name><![CDATA[MadBiker 600]]></name>
+        <link><![CDATA[http://www.mywebstore.com.tr/product/322233]]></link>
+        <image><![CDATA[http://www.mywebstore.com.tr/product/322233.jpg]]></image>
+        <category><![CDATA[Spor > Extreme Sports]]></category>
+        <price_with_vat>322.33</price_with_vat>
+        <manufacturer><![CDATA[SuperGlasses]]></manufacturer>
+        <mpn>ZHD332</mpn>
+        <instock>N</instock>
+        <availability>Ön Sipariş</availability>
+        <size>38,39</size>
+        <color>Siyah</color>
+      </product>
+      ...
+      ...
+      ...
+   </products>
+</mywebstore>
+~~~
+
+
+## XSD
+
+~~~ xml
+<?xml version="2.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- required elements -->
+  <!-- created at -->
+  <xs:element name="created_at" type="xs:dateTime" />
+
+  <!-- unique id -->
+  <xs:element name="uid">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:maxLength value="200" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <!-- name -->
+  <xs:element name="name">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:maxLength value="300" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <!-- link -->
+  <xs:element name="link">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:maxLength value="400" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <!-- image -->
+  <xs:element name="image">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:maxLength value="400" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <!-- price -->
+  <xs:element name="price" type="xs:decimal" />
+
+  <!-- category -->
+  <xs:element name="category">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:maxLength value="300" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <!-- manufacturer -->
+  <xs:element name="manufacturer">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:maxLength value="100" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <!-- manufacturer part number -->
+  <xs:element name="mpn">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:maxLength value="100" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <!-- instock -->
+  <xs:element name="instock">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="Y" />
+        <xs:enumeration value="N" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <!-- shipping -->
+  <xs:element name="shipping" type="xs:decimal" />
+
+  <!-- availability -->
+  <xs:element name="availability">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:maxLength value="100" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <!-- size -->
+  <xs:element name="size">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:maxLength value="100" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <!-- color -->
+  <xs:element name="color">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:maxLength value="50" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <!-- basic structure -->
+  <xs:element name="storedata">
+    <xs:complexType>
+      <xs:sequence>
+        <!-- created at -->
+        <xs:element ref="created_at" minOccurs="0" />
+
+        <!-- products -->
+        <xs:element name="products">
+          <xs:complexType>
+            <xs:sequence>
+              <!-- product -->
+              <xs:element name="product" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:all>
+
+                    <!-- required fields -->
+                    <xs:element ref="uid"/>
+                    <xs:element ref="name"/>
+                    <xs:element ref="link"/>
+                    <xs:element ref="image"/>
+                    <xs:element ref="price"/>
+                    <xs:element ref="category"/>
+                    <xs:element ref="manufacturer" />
+                    <xs:element ref="mpn" />
+                    <xs:element ref="availability" />
+                    <xs:element ref="instock" />
+
+                    <!-- optional fields -->
+                    <xs:element ref="size"  minOccurs="0"/>
+                    <xs:element ref="shipping"  minOccurs="0"/>
+                    <xs:element ref="color"  minOccurs="0"/>
+
+                  </xs:all>
+
+                </xs:complexType>
+              </xs:element>
+              <!-- end product -->
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      <!-- end products -->
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+~~~
