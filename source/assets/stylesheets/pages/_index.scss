@@ -4,6 +4,10 @@
 
 //** Index Page
 .index {
+  .container-header {
+    @extend .container;
+  }
+
   #main {
     padding: 0;
   }
