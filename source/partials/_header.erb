@@ -7,7 +7,7 @@
           <%# Collapse Button %>
           <a class="offcanvas-toggle btn btn-link visible-xs" type="button" data-ui-scope="offCanvasBtn">
             <i class="fa-bars"></i>
-          </button>
+          </a>
 
           <%# Logo %>
           <%= link_to t('for_developers'), '/', class: 'navbar-brand logo' %>
@@ -15,6 +15,14 @@
 
         <%# Nav Links %>
         <div class="navbar-collapse collapse">
+          <%# Available locales %>
+          <% unless current_page.data.locale.nil? %>
+            <%= bs_dropdown(locale_links(current_page),
+                                   'nav-lang',
+                                   'dropdown-primary',
+                                   '<i class="fa fa-globe"></i>') %>
+          <% end %>
+
           <%# Swiftype %>
           <%= partial 'partials/swiftype' %>
 
