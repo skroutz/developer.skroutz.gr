@@ -1,9 +1,22 @@
 <div id="sidebar" class="sidebar col-sm-4 col-md-3" data-ui-scope="offCanvas">
   <div class="container-sidebar">
 
+    <%# Available locales %>
+    <% unless current_page.data.locale.nil? %>
+      <h5 class="heading visible-xs-block">
+        <i class="fa-globe"></i>
+        <%= t('language') %>
+      </h5>
+      <%= bs_list(locale_links(current_page), 'nav-lang') %>
+    <% end %>
+
     <hr class="visible-xs-block"/>
 
     <%# Sidebar Search - check JavaScript %>
+    <h5 class="hidden heading visible-xs-hidden">
+      <i class="fa-search"></i>
+      <%=  t('search') %>
+    </h5>
     <div data-ui-scope="swiftypeSidebar"></div>
 
     <hr class="visible-xs-block"/>

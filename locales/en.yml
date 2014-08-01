@@ -63,6 +63,8 @@ en:
   toc: 'Table of Contents'
   terms: 'Terms of Service'
   legal: 'All Rights and Lefts reserved.'
+  language: 'Language'
+  search: 'Search'
 
   index:
     what_can_you_do: 'What can you do with %{flavor}?'

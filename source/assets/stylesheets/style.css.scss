@@ -324,7 +324,6 @@ dl {
   font-weight: 200;
 }
 
-
 //== Navbar
 //
 //## Extend Bootstrap Navbar
@@ -395,6 +394,7 @@ dl {
   }
 }
 
+
 //** Logo
 .navbar-header {
   .navbar-brand {
@@ -415,10 +415,46 @@ dl {
   }
 }
 
+//** Dropdown Primary
+.dropdown.dropdown-primary {
+  &.open > a,
+  &.open > a:hover,
+  &.open > a:focus {
+    color: $app-clr-white;
+    background-color: $brand-primary;
+    transition: none;
+
+    i {
+      transition: none;
+    }
+  }
+
+  .dropdown-menu {
+    @include box-shadow(0 6px 12px rgba($brand-primary,.175));
+    border-color: $brand-primary;
+    border-top-width: 3px;
+  }
+
+  // Active state
+  .dropdown-menu > .active > a {
+    color: darken($brand-primary, 6%);
+    background-color: transparent;
+  }
+
+  .dropdown-menu > li > a {
+    &:hover,
+    &:focus {
+      color: $app-clr-white;
+      background-color: $brand-primary;
+    }
+  }
+}
+
+
 //** Search
 .navbar-form {
   position: relative;
-  margin-left: 30px;
+  margin-left: 20px;
 
   i {
     position: absolute;
@@ -443,6 +479,38 @@ dl {
   }
 }
 
+
+//** Lang Links
+.navbar {
+  .nav-lang {
+    @extend .nav;
+    @extend .navbar-nav;
+    @extend .navbar-right;
+
+    max-height: 50px;
+    margin-left: 10px;
+
+    .dropdown-toggle {
+      height: 50px;
+      i {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+.nav-lang {
+
+  &.nav-lang-inline {
+    > .active {
+      display: none;
+    }
+  }
+
+  .lang-code {
+    display: none;
+  }
+}
 
 //== Typography
 //

@@ -34,7 +34,6 @@
   }
 }
 
-
 .sidebar {
   padding: 0;
   color: $app-clr-greyLight;
@@ -71,6 +70,61 @@
     text-align: center;
     background-position: center top;
     background-repeat: no-repeat;
+  }
+}
+
+//** Sidebar :: Lang Links
+.sidebar {
+  .nav-lang {
+    @extend .text-center;
+    @extend .nav;
+    @extend .visible-xs-block;
+
+    list-style: none;
+    float: none;
+
+    li {
+      display: inline-block;
+      border-width: 0;
+
+      &:first-child {
+        a {
+          border-left-width: 0;
+        }
+      }
+
+      > a {
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 0.9em;
+        text-transform: uppercase;
+        color: $app-clr-greyLight;
+        border-left: 1px solid rgba($app-clr-greyLight, 0.15);
+
+        &:hover {
+          background-color: $brand-primary;
+        }
+      }
+
+      &.active a {
+        color: darken($brand-primary, 6%);
+
+        &:hover,
+        &:focus {
+          color: $app-clr-greyLight;
+          background-color: $brand-primary;
+        }
+      }
+
+      .lang-code {
+        display: block;
+        text-transform: uppercase;
+      }
+
+      .lang-name {
+        display: none;
+      }
+    }
   }
 }
 
