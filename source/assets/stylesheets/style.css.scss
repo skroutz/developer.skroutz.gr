@@ -456,21 +456,21 @@ dl {
   position: relative;
   margin-left: 20px;
 
-  i {
+  &:before {
+    @extend .fa;
     position: absolute;
+    left: 25px;
     top: 8px;
-    left: 26px;
+
+    content: $fa-var-search !important;
+    color: $app-clr-grey;
     font-size: 18px;
-    color: darken($app-clr-greyLight, 16%);
   }
 
-  .search {
-    width: 260px;
-    text-indent: 30px;
-    background-color: lighten($navbar-default-bg, 10%);
-    border-color: $navbar-default-border;
-    border-width: 0;
-    border-radius: 16px;
+  .st-search {
+    width: 220px;
+    padding-left: 30px;
+    border-radius: 17px;
 
     &:focus {
       background-color: $app-clr-greyLight;
@@ -720,6 +720,12 @@ pre {
 
 @import 'components/panel-doc';
 
+
+//== Swiftype List
+//
+//## Swiftype specific
+
+@import 'components/swiftype';
 
 //== Pages
 //
