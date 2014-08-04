@@ -29,10 +29,15 @@
     <ul class="nav nav-sidebar">
     <% data.docs.each do |key, doc| %>
 
+      <%# Skip Doc if not supported for current flavor %>
+      <% next if doc.flavors.present? && !doc.flavors.include?(flavor) %>
+
       <li>
         <%# without sub-menu %>
         <% if doc.pages.nil? %>
-          <%= link_to t("titles.#{key}"), doc.base, class: "nav-link #{active_parent_link(doc)}" %>
+          <%= link_to t("titles.#{key}", flavor: flavor),
+                      doc.base,
+                      class: "nav-link #{active_parent_link(doc)}" %>
 
         <%# with sub-menu %>
         <% else %>
@@ -57,10 +62,16 @@
       <%= t('titles.extra') %>
     </h5>
     <ul class="nav nav-sidebar">
-      <li><%= link_to t('titles.support'), '/support/', class: "nav-link #{active_parent_link({ base: 'support' })}" %></li>
-      <li><%= link_to t('index.on_github', flavor: settings.site_name.titleize),
-              settings.github_profile,
-              class: 'nav-link' %>
+      <li>
+        <%= link_to t('titles.support'),
+                    '/support/',
+                    class: "nav-link #{active_parent_link({ base: 'support' })}" %>
+      </li>
+      <li>
+        <%= link_to t('index.on_github',
+                    flavor: settings.site_name.titleize),
+                    settings.github_profile,
+                    class: 'nav-link' %>
       </li>
     </ul>
 

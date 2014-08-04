@@ -23,6 +23,8 @@ apiv3:
 apiv2:
   base: '/api/v2/'
   deprecated: true
+  flavors:
+    - skroutz
   pages:
     - { title: 'overview', url: '/api/v2/' }
     - { title: 'data_model' }
@@ -44,3 +46,13 @@ oauth:
     - { title: 'flows' }
     - { title: 'implementation' }
     - { title: 'endpoints' }
+
+easy:
+  base: '/easy/'
+  flavors:
+    - skroutz
+  pages:
+    - { title: 'overview', url: '/easy/' }
+    - { title: 'authorization' }
+    - { title: 'endpoints' }
+    - { title: 'examples' }
