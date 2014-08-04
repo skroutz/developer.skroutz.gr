@@ -91,7 +91,7 @@ helpers do
   #
   # @return [String] the current flavor
   def flavor
-    @flavor ||= ENV['FLAVOR'] || 'skroutz'
+    ENV['FLAVOR'] || (req.present? && req.params['flavor']) || 'skroutz'
   end
 
   # Shorthand for data[flavor]
@@ -119,13 +119,16 @@ helpers do
     return site_title if page.title.nil? || page.title.empty?
 
     title = t("titles.#{page.title}",
-                default: ["docs.#{page.parent}.#{page.title}".to_sym,
-                          page.title.to_s.titleize])
+              flavor: flavor,
+              default: ["docs.#{page.parent}.#{page.title}".to_sym,
+                        page.title.to_s.titleize])
 
     if page.parent.nil?
       parent_title = site_title
     else
-      parent_title = t("titles.#{page.parent}", default: site_title)
+      parent_title = t("titles.#{page.parent}",
+                       flavor: flavor,
+                       default: site_title)
     end
 
     "#{title} | #{parent_title}"
