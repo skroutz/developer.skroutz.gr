@@ -1,0 +1,46 @@
+@import 'variables';
+@import 'bootstrap/mixins';
+
+.swiftype-widget .autocomplete {
+  margin-top: 9px !important;
+  //margin-left: 8px !important;
+}
+
+//** Swiftype Autocomplete
+.swiftype-widget .autocomplete {
+  border: 1px solid $brand-primary;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-left-radius: $border-radius-base !important;
+  border-bottom-right-radius: $border-radius-base !important;
+  box-shadow: 0 6px 12px rgba($brand-primary, 0.175) !important;
+
+  li {
+    padding: 8px 15px !important;
+    border-radius: 0 !important;
+  }
+
+  em {
+    color: $app-clr-greyDark !important;
+  }
+}
+
+.swiftype-widget .autocomplete ul li p.title {
+  color: $brand-primary;
+}
+
+.swiftype-widget .autocomplete ul li.active {
+  @include box-shadow(none);
+  @include gradient-vertical($start-color: $brand-primary, $end-color: $brand-primary, $start-percent: 0%, $end-percent: 100%);
+  background-color: $brand-primary;
+  border-color: $brand-primary;
+
+  p.title {
+    text-shadow: none !important;
+  }
+
+  .sections {
+    color: #fff !important;
+    text-shadow: none !important;
+  }
+}
