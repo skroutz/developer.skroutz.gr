@@ -11,23 +11,26 @@ title: support
 
 ## FAQ
 
-How to I obtain OAuth credentials?
-: Send <a href="mailto:api@<%= settings.domain %>">us</a> an email.
-
-How do I access X resource?
-: Read our <%= link_to 'API documentation', '/api/v3' %> thoroughly, if you
-can't find what you want it may be due to missing documentation or it may
-something we've decided not to expose.
+### General
 
 I found a typo in the documentation. What do I do?
-: This website is a
-<a href="https://github.com/skroutz/developer.skroutz.gr">public Github repository</a>. 
-Fix it and submit a pull request.
+: This website is a [public GitHub repository](<%= settings.github_profile %>).
+  Fix it and submit a pull request.
+
+### API
+
+How to I obtain OAuth credentials?
+: Send us an email at <<%= settings.api_email %>>.
+
+How do I access X resource?
+: Read our <%= link_to 'API documentation', '/api/v3' %> thoroughly.
+: If you can't find what you want it may be due to missing documentation or it may
+  be something we've decided not to expose yet.
 
 ## Contact
 
-Have a question? Create an issue at
-<a href="https://github.com/skroutz/developer.skroutz.gr/issue">Github issue tracker</a>.
+Have a question not answered here?
+: Create an issue at the [GitHub issue tracker](<%= settings.github_profile %>).
 
-Have something sensitive to report (eg security vulnerability)? Send us
-<a href="mailto:api@<%= settings.domain %>">an email</a>.
+Have something sensitive to report (e.g. security vulnerability)?
+: Send us an email at <<%= settings.api_email %>>.
