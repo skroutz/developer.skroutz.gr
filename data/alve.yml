@@ -6,6 +6,8 @@ analytics_domain: 'analytics.alve.com'
 api_domain: 'api.alve.com'
 apiv2_domain: 'apiv2.alve.com'
 
+api_email: 'api@alve.com'
+
 github_profile: 'https://github.com/skroutz'
 apiv3_early_access_form: 'http://docs.google.com/forms/d/1mUk6pvAXR7yiMqtau8FWnBFamKCY320fL70El_RgN68/viewform'
 
