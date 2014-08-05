@@ -43,6 +43,7 @@ authentication:
     - { title: 'overview', url: '/authentication/' }
     - { title: 'permissions' }
     - { title: 'oauth' }
+    - { title: 'flows' }
 
 analytics:
   base: '/analytics/'
@@ -51,14 +52,6 @@ analytics:
     - { title: 'settings' }
     - { title: 'ecommerce' }
     - { title: 'examples' }
-
-oauth:
-  base: '/oauthdoc/'
-  pages:
-    - { title: 'overview', url: '/oauthdoc/' }
-    - { title: 'flows' }
-    - { title: 'implementation' }
-    - { title: 'endpoints' }
 
 widgets:
   base: '/widgets/'
