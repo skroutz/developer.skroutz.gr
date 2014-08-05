@@ -5,7 +5,7 @@
     <% unless current_page.data.locale.nil? %>
       <h5 class="heading visible-xs-block">
         <i class="fa-globe"></i>
-        <%= t('language') %>
+        <%= t('sidebar.language') %>
       </h5>
       <%= bs_list(locale_links(current_page), 'nav-lang') %>
     <% end %>
@@ -15,7 +15,7 @@
     <%# Sidebar Search - check JavaScript %>
     <h5 class="hidden heading visible-xs-hidden">
       <i class="fa-search"></i>
-      <%=  t('search') %>
+      <%= t('sidebar.search') %>
     </h5>
     <div data-ui-scope="swiftypeSidebar"></div>
 
@@ -68,7 +68,7 @@
                     class: "nav-link #{active_parent_link({ base: 'support' })}" %>
       </li>
       <li>
-        <%= link_to t('index.on_github',
+        <%= link_to t('index.oss.github',
                     flavor: settings.site_name.titleize),
                     settings.github_profile,
                     class: 'nav-link' %>

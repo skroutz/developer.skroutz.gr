@@ -1,78 +1,60 @@
 en:
   titles:
     index: "%{flavor} Documentation"
-    api: 'API'
-    apiv2: 'API v2'
     apiv3: 'API v3'
+    apiv2: 'API v2'
+    feedspec: 'XML Feed'
+    easy: "%{flavor} Easy"
     authentication: 'Authentication'
     analytics: 'Analytics'
-    docs: 'Documentation'
-    easy: "%{flavor} Easy"
-    extra: 'Looking for something else?'
-    feedspec: 'XML Feed'
-    guides: 'Guides'
-    oauth: 'OAuth 2.0'
-    support: 'Support'
     widgets: 'Widgets'
+    docs: 'Documentation'
+    guides: 'Guides'
+    extra: 'Looking for something else?'
+    support: 'Support'
 
   docs:
-    analytics:
-      short_description: 'Donec purus felis, imperdiet ut venenatis vel, elementum ac justo. Nulla non purus consequat, consequat enim id, egestas ipsum. Sed consectetur lobortis sapien a lobortis.'
-      ecommerce: 'Ecommerce'
-      examples: 'Examples'
-      overview: 'Overview'
-      settings: 'Settings'
-    api:
-      short_description: 'Donec purus felis, imperdiet ut venenatis vel, elementum ac justo. Nulla non purus consequat, consequat enim id, egestas ipsum. Sed consectetur lobortis sapien a lobortis.'
-    apiv2:
-      short_description: 'Donec purus felis, imperdiet ut venenatis vel, elementum ac justo. Nulla non purus consequat, consequat enim id, egestas ipsum. Sed consectetur lobortis sapien a lobortis.'
-      book: 'Book'
-      data_model: 'Data Model'
-      overview: 'Overview'
-      product: 'Product'
-      user: 'User'
-      widgets: 'Widgets'
+    index:
+      view_doc: 'View Documentation'
     apiv3:
-      short_description: 'Donec purus felis, imperdiet ut venenatis vel, elementum ac justo. Nulla non purus consequat, consequat enim id, egestas ipsum. Sed consectetur lobortis sapien a lobortis.'
+      short_description: 'The official %{flavor} API. Access the huge %{flavor} database and create beautiful apps.'
+      overview: 'Overview'
       category: 'Category'
       filter: 'Filter'
+      sku: 'SKU'
+      product: 'Product'
+      shop: 'Shop'
+      manufacturer: 'Manufacturer'
+      search: 'Search'
       filter_groups: 'Filter Groups'
       favorites: 'User Favorites'
-      manufacturer: 'Manufacturer'
       notifications: 'User Notifications'
-      overview: 'Overview'
-      product: 'Product'
-      search: 'Search'
-      shop: 'Shop'
-      sku: 'SKU'
       troubleshooting: 'Troubleshooting'
+      early_access: 'Early Access Request'
+    apiv2:
+      short_description: 'Oldie but still goldie. API v2 is deprecated and should not be used for new applications.'
+      overview: 'Overview'
+      data_model: 'Data Model'
+      product: 'Product'
+      book: 'Book'
+      user: 'User'
+    feedspec:
+      short_description: 'Integrate your eshop with %{flavor} and reach millions of consumers.'
+    easy:
+      short_description: 'Easier and faster checkouts for your visitors. With a click of a button.'
     authentication:
-      short_description: 'Donec purus felis, imperdiet ut venenatis vel, elementum ac justo. Nulla non purus consequat, consequat enim id, egestas ipsum. Sed consectetur lobortis sapien a lobortis.'
+      short_description: 'Learn how to ask for authorization and access user data using OAuth 2.0.'
       overview: 'Overview'
       permissions: 'Permissions'
-    feedspec:
-      short_description: 'Donec purus felis, imperdiet ut venenatis vel, elementum ac justo. Nulla non purus consequat, consequat enim id, egestas ipsum. Sed consectetur lobortis sapien a lobortis.'
-    oauth:
-      short_description: 'Donec purus felis, imperdiet ut venenatis vel, elementum ac justo. Nulla non purus consequat, consequat enim id, egestas ipsum. Sed consectetur lobortis sapien a lobortis.'
-      endpoints: 'Endpoints'
-      flows: 'Authorization Flows'
-      implementation: 'Implementation Examples'
+    analytics:
+      short_description: 'Integrate %{flavor} analytics and find out powerful insights about your eshop.'
       overview: 'Overview'
-
-  for_developers: 'for developers'
-  deprecated: 'deprecated'
-  view_doc: 'View Documentation'
-  apiv2_is_deprecated: 'Here lies %{api_v2_url} documentation. Please keep in mind that it is deprecated.'
-  toc: 'Table of Contents'
-  terms: 'Terms of Service'
-  legal: 'All Rights and Lefts reserved.'
-  language: 'Language'
-  search: 'Search'
-
-  lang:
-    el: 'Ελληνικά'
-    en: 'English'
-    tr: 'Türkçe'
+      settings: 'Settings'
+      ecommerce: 'Ecommerce'
+      examples: 'Examples'
+    widgets:
+      short_description: 'Display live product information in your website using our widgets.'
+      overview: ''
 
   feedspec_data:
     black: 'Black'
@@ -82,15 +64,40 @@ en:
     no_asterisk: 'No*'
     !!str yes: 'Yes'
 
-  index:
-    what_can_you_do: 'What can you do with %{flavor}?'
-    products_and_app: "Create products and applications built on top of %{flavor}"
-    analyze_data: 'Explore market trends by analyzing data'
-    integrate_eshop: "Integrate your eshop with %{flavor}"
-    find_widgets: 'Embed widgets in your website'
-    encourage_oss: 'Many components of %{flavor} are built with Open Source Software. We %{heart} OSS and try to give back as much as we can.'
-    on_github: '%{flavor} on GitHub'
+  lang:
+    el: 'Ελληνικά'
+    en: 'English'
+    tr: 'Türkçe'
 
-  cover:
-    moto: 'Use data from 7 million products and create awesome apps'
-    get_started: 'Get Started'
+  common:
+    available_locales: 'This page is also available in:'
+    toc: 'Table of Contents'
+    deprecated: 'deprecated'
+
+  header:
+    for_developers: 'for developers'
+    language: 'Language'
+    search: 'Search'
+
+  footer:
+    terms: 'Terms of Service'
+    legal: 'All Rights and Lefts reserved.'
+
+  sidebar:
+    search: 'Search'
+    language: 'Language'
+    docs: 'Documentation'
+
+  index:
+    cover:
+      moto: 'Use data from 7 million products and create awesome apps'
+      get_started: 'Get Started'
+    intro:
+      what_can_you_do: 'What can you do with %{flavor}?'
+      products_and_app: "Create products and applications built on top of %{flavor}"
+      analyze_data: 'Explore market trends by analyzing data'
+      integrate_eshop: "Integrate your eshop with %{flavor}"
+      find_widgets: 'Embed widgets in your website'
+    oss:
+      encourage: 'Many components of %{flavor} are built with Open Source Software. We %{heart} OSS and try to give back as much as we can.'
+      github: '%{flavor} on GitHub'

@@ -47,7 +47,7 @@ module PageNavigationHelper
     html << "href='#nav-sidebar-#{key}'>"
     html << t("titles.#{key}",
               flavor: settings.site_name.capitalize)
-    html << "<span class='label label-default pull-right'>#{t('deprecated')}</span>" if deprecated?(doc)
+    html << "<span class='label label-default pull-right'>#{t('common.deprecated')}</span>" if deprecated?(doc)
     html << "</a>"
 
     html
