@@ -1,4 +1,5 @@
 require 'lib/code_example_helper'
+require 'lib/document_helper'
 require 'lib/page_navigation_helper'
 require 'lib/response_mate_helper'
 require 'uglifier'
@@ -76,6 +77,7 @@ end
 helpers CodeExampleHelper
 helpers ResponseMateHelper
 helpers PageNavigationHelper
+helpers DocumentHelper
 
 helpers do
   # Returns the current environment flavor
