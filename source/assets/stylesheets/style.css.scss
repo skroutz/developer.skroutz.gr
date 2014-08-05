@@ -42,10 +42,6 @@
   -webkit-text-size-adjust: none;
   -moz-text-size-adjust: none;
   -ms-text-size-adjust: none;
-
-  &:hover {
-    transition: all 0.2s ease-out;
-  }
 }
 
 .element-centered {
@@ -332,6 +328,7 @@ dl {
 // Default navbar
 .navbar-custom {
   @extend .navbar-default;
+  @include box-shadow(0 6px 12px rgba($brand-primary, .175));
 
   background-color: $app-clr-greyDark;
   border-color: $brand-primary;
@@ -631,6 +628,13 @@ body {
   background-color: darken($app-clr-white, 3%);
 }
 
+a, i {
+  &:hover {
+    transition: color 0.175s ease-out,
+                background-color 0.175s ease-out;
+  }
+}
+
 blockquote {
   @extend .alert;
   @extend .alert-warning;
@@ -664,7 +668,7 @@ pre {
 }
 
 #main {
-  padding: $app-h-navbar 40px 30px;
+  padding: ($app-h-navbar + 20) 40px 30px;
 
   @media (max-width: $screen-xs-max) {
     padding-left: 10px;
