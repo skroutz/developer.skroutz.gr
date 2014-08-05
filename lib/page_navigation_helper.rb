@@ -12,14 +12,6 @@ module PageNavigationHelper
     end
   end
 
-  # Checks if a given Doc is deprecated
-  #
-  # @param [Hash] doc the Doc to check
-  # @return [Boolean] true for deprecated Doc, otherwise false
-  def deprecated?(doc)
-    doc.deprecated == true
-  end
-
   # Returns proper CSS classes if given Doc is the currently visited
   #
   # @param [String] doc the Doc to check if is active
