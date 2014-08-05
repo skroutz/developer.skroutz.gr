@@ -1,6 +1,6 @@
 ---
 parent: guides
-title: authentication
+title: authorization
 ---
 
 <%= image_tag 'oauth.png' %>
@@ -17,7 +17,7 @@ In the following POST request examples it is silently assumed that
 
 ## Application Token
 With an application token you can only access resources not associated
-to a user. Have a look at related <%= link_to 'permissions', '/authentication/permissions' %>.
+to a user. Have a look at related <%= link_to 'permissions', '/authorization/permissions' %>.
 
 <a href='http://tools.ietf.org/html/rfc6749#section-4.4' class="emph-link external" target="_blank">More info about client-credentials</a>
 
@@ -66,7 +66,7 @@ http://redirect_uri?code=a_valid_authorization_code
   <li>notifications</li>
 </ul>
 
-<%= link_to 'More info about permissions', '/authentication/permissions' %>
+<%= link_to 'More info about permissions', '/authorization/permissions' %>
 
 ### Get an oauth_token
 

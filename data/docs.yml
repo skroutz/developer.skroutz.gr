@@ -44,12 +44,12 @@ easy:
     - { title: 'endpoints' }
     - { title: 'examples' }
 
-authentication:
-  base: '/authentication/'
+authorization:
+  base: '/authorization/'
   featured: true
   icon: 'fa-lock'
   pages:
-    - { title: 'overview', url: '/authentication/' }
+    - { title: 'overview', url: '/authorization/' }
     - { title: 'permissions' }
     - { title: 'oauth' }
     - { title: 'flows' }
