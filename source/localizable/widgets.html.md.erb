@@ -12,7 +12,7 @@ title: widgets
 ## Prices for a specific product
 
 Use the following code snippet to list prices for a specific product. You only
-have replace the product `id` with the one that appears at the product web
+have to replace the product `id` with the one that appears at the product web
 address, e.g.
 
 <pre class="terminal">
@@ -23,22 +23,24 @@ http://<%= settings.domain %>/s/<strong>2567463</strong>/Apple-iPad-mini-Wifi-16
 
 ~~~ html
 <div class="skroutz-widget">
-<script type="text/javascript" src="http://<%= settings.domain %>/javascripts/widget-v1.js" charset="utf-8"></script>
-<script type="text/javascript" charset="utf-8" >
-  new SkroutzWidget().display_sku({id:2567463});
-</script>
-<p class="skwidget-footer">powered by <a href="<%= settings.domain %>" title="<%= settings.site_name.titleize %>"><%= settings.site_name.titleize %></a></p>
+  <script type="text/javascript" src="http://<%= settings.domain %>/javascripts/widget-v1.js" charset="utf-8"></script>
+  <script type="text/javascript" charset="utf-8" >
+    new SkroutzWidget().display_sku({id:2567463});
+  </script>
+  <p class="skwidget-footer">powered by <a href="http://<%= settings.domain %>" title="<%= settings.site_name.titleize %>"><%= settings.site_name.titleize %></a></p>
 </div>
 ~~~
 
 ##### Result
 
 <div class="skroutz-widget">
-<script type="text/javascript" src="http://<%= settings.domain %>/javascripts/widget-v1.js" charset="utf-8"></script>
-<script type="text/javascript" charset="utf-8" >
-  new SkroutzWidget().display_sku({id:2567463});
-</script>
-<p class="skwidget-footer">powered by <a href="<%= settings.domain %>" title="<%= settings.site_name.titleize %>"><%= settings.site_name.titleize %></a></p>
+  <script type="text/javascript" src="http://<%= settings.domain %>/javascripts/widget-v1.js" charset="utf-8"></script>
+  <script type="text/javascript" charset="utf-8" >
+    new SkroutzWidget().display_sku({id:2567463});
+  </script>
+  <p class="skwidget-footer">powered by
+    <a href="http://<%= settings.domain %>" title="<%= settings.site_name.titleize %>"><%= settings.site_name.titleize %></a>
+  </p>
 </div>
 
 ## General search
@@ -54,18 +56,18 @@ in <%= settings.site_name.capitalize %>.
   <script type="text/javascript" charset="utf-8" >
     new SkroutzWidget().display_popular({keyphrase:'samsung'});
   </script>
-<p class="skwidget-footer">powered by <a href="http://<%= settings.domain %>" title="<%= settings.site_name.titleize %>"><%= settings.site_name.titleize %></a></p>
+  <p class="skwidget-footer">powered by <a href="http://<%= settings.domain %>" title="<%= settings.site_name.titleize %>"><%= settings.site_name.titleize %></a></p>
 </div>
 ~~~
 
 ##### Result
 
 <div class="skroutz-widget">
-<script type="text/javascript" src="http://<%= settings.domain %>/javascripts/widget-v1.js" charset="utf-8"></script>
-<script type="text/javascript" charset="utf-8" >
-  new SkroutzWidget().display_popular({keyphrase:'samsung'});
-</script>
-<p class="skwidget-footer">powered by <a href="http://<%= settings.domain %>" title="<%= settings.site_name.titleize %>"><%= settings.site_name.titleize %></a></p>
+  <script type="text/javascript" src="http://<%= settings.domain %>/javascripts/widget-v1.js" charset="utf-8"></script>
+  <script type="text/javascript" charset="utf-8" >
+    new SkroutzWidget().display_popular({keyphrase:'samsung'});
+  </script>
+  <p class="skwidget-footer">powered by <a href="http://<%= settings.domain %>" title="<%= settings.site_name.titleize %>"><%= settings.site_name.titleize %></a></p>
 </div>
 
 ## Search results for a specific Category
