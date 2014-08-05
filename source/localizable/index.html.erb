@@ -37,8 +37,8 @@
             <div class="row">
 
               <div class="col-xs-12 col-sm-6">
-                <h1 class="title text-center-sm"><%= t('cover.moto') %></h1>
-                <%= link_to t('cover.get_started'), '/docs/', class: 'btn btn-primary btn-xlg element-centered' %>
+                <h1 class="title text-center-sm"><%= t('index.cover.moto') %></h1>
+                <%= link_to t('index.cover.get_started'), '/docs/', class: 'btn btn-primary btn-xlg element-centered' %>
               </div>
 
               <div class="col-xs-12 col-sm-6 text-center">
@@ -56,33 +56,33 @@
         <div class="container">
           <div class="row">
             <div class="intro-col-features col-xs-12 col-sm-8 col-md-9">
-              <h3><%= t('index.what_can_you_do', flavor: settings.site_name.titleize) %></h3>
+              <h3><%= t('index.intro.what_can_you_do', flavor: settings.site_name.titleize) %></h3>
               <ul>
                 <li>
                   <i class="fa-check"></i>
-                  <%= t('index.products_and_app', flavor: settings.site_name.titleize) %>
+                  <%= t('index.intro.products_and_app', flavor: settings.site_name.titleize) %>
                 </li>
                 <li>
                   <i class="fa-check"></i>
-                  <%= t('index.analyze_data') %>
+                  <%= t('index.intro.analyze_data') %>
                 </li>
                 <li>
                   <i class="fa-check"></i>
-                  <%= t('index.integrate_eshop', flavor: settings.site_name.titleize) %>
+                  <%= t('index.intro.integrate_eshop', flavor: settings.site_name.titleize) %>
                 </li>
                 <li>
                   <i class="fa-check"></i>
-                  <%= t('index.find_widgets') %>
+                  <%= t('index.intro.find_widgets') %>
                 </li>
               </ul>
             </div>
 
             <div class="intro-col-oss col-xs-12 col-sm-4 col-md-3">
               <hr class="visible-xs"/>
-              <p><%= t('index.encourage_oss', flavor: settings.site_name.titleize, heart: '<i class="fa fa-heart-o"></i>') %></p>
+              <p><%= t('index.oss.encourage', flavor: settings.site_name.titleize, heart: '<i class="fa fa-heart-o"></i>') %></p>
               <a class="btn btn-primary-inverse btn-block" href="<%= settings.github_profile %>">
                 <i class="fa fa-prepend fa-2x fa-github"></i>
-                <span><%= t('index.on_github', flavor: settings.site_name.titleize) %></span>
+                <span><%= t('index.oss.github', flavor: settings.site_name.titleize) %></span>
               </a>
             </div>
           </div>
