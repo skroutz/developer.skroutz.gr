@@ -5,83 +5,24 @@ title: docs
 <h1><%= t('titles.docs') %></h1>
 
 <div class="row">
+  <% data.docs.each do |key, doc| %>
+    <%# Skip Doc if not supported for current flavor %>
+    <% next unless flavored?(doc) %>
 
-  <%# Feedspec %>
-  <div class="panel-doc-wrapper">
-    <div class="panel-doc">
-      <div class="doc-icon"><i class="fa-file-code-o"></i></div>
-      <div class="doc-body">
-        <h3 class="heading"><%= t('titles.feedspec') %></h3>
-        <p class="description"><%= t('docs.feedspec.short_description') %></p>
-        <%= link_to t('view_doc'), '/feedspec/', class: 'goto' %>
-      </div>
-    </div>
-  </div>
-
-  <%# Analytics %>
-  <div class="panel-doc-wrapper">
-    <div class="panel-doc">
-      <div class="doc-icon"><i class="fa-bar-chart-o"></i></div>
-      <div class="doc-body">
-        <h3 class="heading"><%= t('titles.analytics') %></h3>
-        <p class="description"><%= t('docs.analytics.short_description') %></p>
-        <%= link_to t('view_doc'), '/analytics/', class: 'goto' %>
-      </div>
-    </div>
-  </div>
-
-  <%# API %>
-  <div class="panel-doc-wrapper">
-    <div class="panel-doc">
-      <div class="doc-icon"><i class="fa-code"></i></div>
-      <div class="doc-body">
-        <h3 class="heading"><%= t('titles.api') %></h3>
-        <p class="description"><%= t('docs.api.short_description') %></p>
-        <%= link_to t('view_doc'), '/analytics/', class: 'goto' %>
-
-        <br/><br/>
-        <div class="alert alert-warning" role="alert">
-          <%= t('apiv2_is_deprecated',
-                api_v2_url: link_to( t('titles.apiv2'), '/api/v2')) %>
+    <div class="panel-doc-wrapper">
+      <div class="panel-doc">
+        <div class="doc-icon"><i class="<%= doc.icon %>"></i></div>
+        <div class="doc-body">
+          <h3 class="heading">
+            <%= t("titles.#{key}", flavor: settings.site_name.titleize) %>
+            <% if doc.deprecated %>
+              <span class="label label-warning"><%= t('common.deprecated') %></span>
+            <% end %>
+          </h3>
+         <p class="description"><%= t("docs.#{key}.short_description", flavor: settings.site_name.titleize) %></p>
+         <%= link_to t('docs.index.view_doc'), doc.base, class: 'goto' %>
         </div>
       </div>
     </div>
-  </div>
-
-  <%# Authentication %>
-  <div class="panel-doc-wrapper">
-    <div class="panel-doc">
-      <div class="doc-icon"><i class="fa-key"></i></div>
-      <div class="doc-body">
-        <h3 class="heading"><%= t('titles.authentication') %></h3>
-        <p class="description"><%= t('docs.authentication.short_description') %></p>
-        <%= link_to t('view_doc'), '/analytics/', class: 'goto' %>
-      </div>
-    </div>
-  </div>
-
-  <%# OAuth 2.0 %>
-  <div class="panel-doc-wrapper">
-    <div class="panel-doc">
-      <div class="doc-icon"><i class="fa-lock"></i></div>
-      <div class="doc-body">
-        <h3 class="heading"><%= t('titles.oauth') %></h3>
-        <p class="description"><%= t('docs.oauth.short_description') %></p>
-        <%= link_to t('view_doc'), '/analytics/', class: 'goto' %>
-      </div>
-    </div>
-  </div>
-
-  <%# Widgets %>
-  <div class="panel-doc-wrapper">
-    <div class="panel-doc">
-      <div class="doc-icon"><i class="fa-cubes"></i></div>
-      <div class="doc-body">
-        <h3 class="heading"><%= t('titles.widgets') %></h3>
-        <p class="description"><%= t('docs.api.short_description') %></p>
-        <%= link_to t('view_doc'), '/analytics/', class: 'goto' %>
-      </div>
-    </div>
-  </div>
-
+  <% end %>
 </div>
