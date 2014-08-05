@@ -23,7 +23,6 @@ apiv2:
     - { title: 'product' }
     - { title: 'book' }
     - { title: 'user' }
-    - { title: 'widgets' }
 
 feedspec:
   base: '/feedspec/'
@@ -60,3 +59,8 @@ easy:
     - { title: 'authorization' }
     - { title: 'endpoints' }
     - { title: 'examples' }
+
+widgets:
+  base: '/widgets/'
+  flavors:
+    - skroutz
