@@ -27,6 +27,16 @@ apiv2:
 feedspec:
   base: '/feedspec/'
 
+easy:
+  base: '/easy/'
+  flavors:
+    - skroutz
+  pages:
+    - { title: 'overview', url: '/easy/' }
+    - { title: 'authorization' }
+    - { title: 'endpoints' }
+    - { title: 'examples' }
+
 authentication:
   base: '/authentication/'
   pages:
@@ -49,16 +59,6 @@ oauth:
     - { title: 'flows' }
     - { title: 'implementation' }
     - { title: 'endpoints' }
-
-easy:
-  base: '/easy/'
-  flavors:
-    - skroutz
-  pages:
-    - { title: 'overview', url: '/easy/' }
-    - { title: 'authorization' }
-    - { title: 'endpoints' }
-    - { title: 'examples' }
 
 widgets:
   base: '/widgets/'
