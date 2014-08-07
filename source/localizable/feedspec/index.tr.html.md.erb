@@ -6,6 +6,13 @@ locale:
     - 'tr'
 ---
 
+<div class="alert alert-info">
+  <p>
+    <span>Sayfa şu dilde de mevcut:</span>
+    <%= bs_text(locale_links(current_page), 'nav-lang nav-lang-inline') %>
+  </p>
+</div>
+
 # Data Feed Özelliği
 
 Bu belge, mağazalar tarafından Alve’ye iletilen XML dosyasının yapısını tanımlar.
