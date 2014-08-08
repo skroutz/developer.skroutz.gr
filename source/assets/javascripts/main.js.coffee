@@ -7,6 +7,7 @@ UI._scrollDuration = 350
 UI._scrollTopOffset = 100
 UI._navbarTrans = true
 UI._navbarTransClass = 'trans'
+UI._tableResponsiveWrapper = '<div class="table-responsive"></div>'
 
 ###
   UI.Navbar
@@ -127,6 +128,13 @@ UI.CodeExample =
       UI.CodeExample.toggleResponse($(@))
 
 ###
+  UI.Table
+###
+UI.Table =
+  addResponsiveWrapper: ->
+    $('#main table').wrap(UI._tableResponsiveWrapper)
+
+###
 # DOM Ready
 ###
 ((window, document, $) ->
@@ -136,5 +144,6 @@ UI.CodeExample =
     UI.BackToTop.bindListeners $('[data-ui-scope="backToTop"]')
     UI.OffCanvas.bindListeners $('[data-ui-scope="offCanvasBtn"]')
     UI.CodeExample.bindListeners $('.example').find('.toggler')
+    UI.Table.addResponsiveWrapper()
 
 )(window, document, jQuery)
