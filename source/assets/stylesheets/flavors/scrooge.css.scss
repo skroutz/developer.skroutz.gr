@@ -1,0 +1,18 @@
+.navbar-header {
+  .navbar-brand {
+    height: 24px;
+    margin-top: 18px;
+    padding-left: 120px;
+    line-height: 14px;
+    background-image: image-url('scrooge/sprites.png');
+    background-position: 0 -58px;
+    background-size: 110px 81px;
+
+    @media
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: image-url('scrooge/sprites_x2.png');
+    }
+  }
+}
