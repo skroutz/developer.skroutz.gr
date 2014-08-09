@@ -30,21 +30,24 @@ title: shop
 
 #### Linked resources
 
-* <%= link_to 'Linked Resources', '/api/v3#linked-resources' %>
-  * <%= link_to 'Address', '/api/addresses' %>
+<pre class="terminal">
+  GET /shops/:shop_id/locations
+</pre>
+
+<%= render_recording :shop_locations_index %>
+
+Addresses can be included / embedded using the `address` value. Addresses are
+expanded versions of the `full_address` field.
 
 <pre class="terminal">
   GET /shops/:shop_id/locations?embed=address
 </pre>
 
-<%= render_recording :shop_locations_index %>
+<%#= render_recording :shop_locations_index_embed_address %>
 
 ## Retrieve a single shop location
 
 #### Linked resources
-
-* <%= link_to 'Linked Resources', '/api/v3#linked-resources' %>
-  * <%= link_to 'Address', '/api/addresses' %>
 
 <pre class="terminal">
   GET /shops/:shop_id/locations/:id
@@ -52,14 +55,23 @@ title: shop
 
 <%= render_recording :shop_locations_show %>
 
+Addresses can be included / embedded using the `address` value. Addresses are
+expanded versions of the `full_address` field.
+
+<pre class="terminal">
+  GET /shops/:shop_id/locations/:id?embed=address
+</pre>
+
+<%#= render_recording :shop_locations_show_embed_address %>
+
 ## Search for shops
 
 <pre class="terminal">
-  GET /shops/search
+  GET /shops/search?q=value
 </pre>
 
-Name | Type | Description
------| -----| -----------
-`q` | `String` | `(required) Search with the value of this parameter`
+Name | Type   | Description
+---- | ------ | -----------
+`q`  | String | Search with the value of this parameter
 
 <%= render_recording :shop_search %>

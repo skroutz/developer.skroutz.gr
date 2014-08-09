@@ -42,18 +42,18 @@ X-Cache: MISS
 
 Blank fields are included as `null` instead of being omitted.
 
-All timestamps are returned in ISO 8601 format:
+All timestamps are returned in [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) format:
 
     YYYY-MM-DDTHH:MM:SSZ
 
 ## Linked Resources
 
-When you see "Linked resources: some_resource" in any of our resources
+When you see <mark>Linked resources: some_resource</mark> in any of our resources
 it means you may choose to include/embed it as follows:
 
 ##### Example
 
-Resource Foo has "linked resources: bar"
+Resource Foo has "Linked resources: bar"
 
 ###### Case: embed
 
@@ -89,7 +89,6 @@ Resource Foo has "linked resources: bar"
 
 ###### Case: include
 
-
 <pre class="terminal">
   <code>GET /foos?include=bars</code>
 </pre>
@@ -120,8 +119,8 @@ Resource Foo has "linked resources: bar"
 ## Pagination
 
 Requests that return multiple items will be paginated to 25 items by
-default.  You can specify further pages with the `?page` parameter. You can also 
-set a custom page size to 10 with the `?per` parameter.
+default.  You can specify further pages with the `page` parameter. You can also 
+set a custom page size to 10 with the `per` parameter.
 
 <pre class="terminal">
 $ curl https://<%= settings.api_domain %>/categories?page=2&per=10
@@ -136,18 +135,18 @@ Link
 <https://<%= settings.api_domain %>/categories?page=3&per=4>; rel="next"
 ~~~
 
-Note that page numbering is 1-based and that ommiting the `?page`
+Note that page numbering is 1-based and that ommiting the `page`
 parameter will return the first page.
 
 ## Rate Limiting
 
-You can make up to a certain amount of requests for each oauth token associated with your application.
+You can make up to a certain amount of requests for each OAuth token associated with your application.
 
 You can check the returned HTTP headers of any API request to see your current
 rate limit status:
 
 <pre class="terminal">
-$ curl -i https://<%= settings.api_domain %>/categories/1441
+$ curl -i https://<%= settings.api_domain %>/categories/1440
 
 HTTP/1.1 200 OK
 Date: Mon, 01 Jul 2013 17:27:06 GMT
@@ -178,6 +177,8 @@ new Date(1372700873 * 1000)
 Once you go over the rate limit you will receive an error response:
 
 <pre class="terminal">
+$ curl -i https://<%= settings.api_domain %>/categories/1440
+
 HTTP/1.1 403 Forbidden
 Date: Tue, 20 Aug 2013 14:50:41 GMT
 Status: 403 Forbidden
@@ -197,19 +198,24 @@ If you are exceeding your rate limit, you can likely fix the issue by caching AP
 and using [conditional requests](#conditional-requests).
 
 If you're using conditional requests and still exceeding your rate
-limit, please <%= link_to 'contact us', '/help' %> to request a higher rate limit for your application.
+limit, please <%= link_to 'contact us', '/support' %> to request a higher rate limit for your application.
 
-## Conditional requests
+## Conditional Requests
 
 Most responses return `Last-Modified` and `ETag` headers. You can use the values
 of these headers to make subsequent requests to those resources using the
 `If-Modified-Since` and `If-None-Match` headers, respectively. If the resource
-has not changed, the server will return a `304 Not Modified`. Also note: making
-a conditional request and receiving a 304 response does not count against your
-[Rate Limit](#rate-limiting), so we encourage you to use it whenever possible.
+has not changed, the server will return a `304 Not Modified`.
+
+> ##### Note
+> Making a conditional request and receiving a `304` HTTP response **does not count** against your
+  [Rate Limit](#rate-limiting).
+
+###### Case: Request without `If-Modified-Since` nor `If-None-Match` headers
 
 <pre class="terminal">
 $ curl -i https://<%= settings.api_domain %>/categories/1440
+
 HTTP/1.1 200 OK
 Cache-Control: private, max-age=60
 ETag: "644b5b0155e6404a9cc4bd9d8b1ae730"
@@ -219,8 +225,13 @@ Vary: Accept, Authorization, Cookie
 X-RateLimit-Limit: 5000
 X-RateLimit-Remaining: 4996
 X-RateLimit-Reset: 1372700873
+</pre>
 
+###### Case: Request with `If-Modified-Since` header
+
+<pre class="terminal">
 $ curl -i https://<%= settings.api_domain %>/categories/1440 -H "If-Modified-Since: Thu, 05 Jul 2012 15:31:30 GMT"
+
 HTTP/1.1 304 Not Modified
 Cache-Control: private, max-age=60
 Last-Modified: Thu, 05 Jul 2012 15:31:30 GMT
@@ -229,8 +240,13 @@ Vary: Accept, Authorization, Cookie
 X-RateLimit-Limit: 5000
 X-RateLimit-Remaining: 4996
 X-RateLimit-Reset: 1372700873
+</pre>
 
+###### Case: Request with `If-None-Match` header
+
+<pre class="terminal">
 $ curl -i https://<%= settings.api_domain %>/categories/1440 -H 'If-None-Match: "644b5b0155e6404a9cc4bd9d8b1ae730"'
+
 HTTP/1.1 304 Not Modified
 Cache-Control: private, max-age=60
 ETag: "644b5b0155e6404a9cc4bd9d8b1ae730"
@@ -245,36 +261,36 @@ X-RateLimit-Reset: 1372700873
 ## HTTP Redirects
 
 API v3 uses HTTP redirection where appropriate. Clients should assume that any
-request may result in a redirection. Receiving an HTTP redirection is *not* an
-error and clients should follow that redirect. Redirect responses will have a
+request may result in a redirection. Receiving an HTTP redirection is **not an
+error** and clients should follow that redirect. Redirect responses will have a
 `Location` header field which contains the URI of the resource to which the
-client should repeat the requests.
+client should repeat the request.
 
 301
 : Permanent redirection. The URI you used to make the request has been
 superseded by the one specified in the `Location` header field. This and all
 future requests to this resource should be directed to the new URI.
 
-302
-307
+302, 307
 : Temporary redirection. The request should be repeated verbatim to the URI
 specified in the `Location` header field but clients should continue to use the
 original URI for future requests.
 
-Other redirection status codes may be used in accordance with the HTTP 1.1 spec.
+Other redirection status codes may be used in accordance with the
+[HTTP 1.1 spec](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3).
 
 ## Cross Origin Resource Sharing
 
-The API supports Cross Origin Resource Sharing (CORS) for AJAX requests.
-you can read the [CORS W3C working draft](http://www.w3.org/TR/cors), or
-[this intro](http://code.google.com/p/html5security/wiki/CrossOriginRequestSecurity) from the
-HTML 5 Security Guide.
+The API supports [Cross Origin Resource Sharing (CORS)](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
+for AJAX requests. If you want you can read a [short tutorial on CORS](http://www.html5rocks.com/en/tutorials/cors/)
+or even the [CORS W3C working draft](http://www.w3.org/TR/cors).
 
 Here's a sample request sent from a browser hitting
 `http://example.com`:
 
 <pre class="terminal">
 $ curl -i https://<%= settings.api_domain %> -H "Origin: http://example.com"
+
 HTTP/1.1 302 Found
 </pre>
 
@@ -283,6 +299,7 @@ Here's a sample request for a browser hitting [cheap yellow shoes](http://cheapy
 
 <pre class="terminal">
 $ curl -i https://<%= settings.api_domain %> -H "Origin: http://cheapyellowshoes.com"
+
 HTTP/1.1 302 Found
 Access-Control-Allow-Origin: *
 Access-Control-Expose-Headers: ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes
@@ -293,6 +310,7 @@ This is what the CORS preflight request looks like:
 
 <pre class="terminal">
 $ curl -i https://<%= settings.api_domain %> -H "Origin: http://cheapyellowshoes.com" -X OPTIONS
+
 HTTP/1.1 204 No Content
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Headers: Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, X-Requested-With
@@ -304,23 +322,25 @@ Access-Control-Allow-Credentials: true
 
 ## JSON-P Callbacks
 
-You can send a `?callback` parameter to any GET call to have the results
-wrapped in a JSON function.  The response includes the same data output as the regular API,
-plus the relevant HTTP Header information.
+Another alternative to bypass the [Same-Origin-Policy](http://en.wikipedia.org/wiki/Same-origin_policy)
+browser restrictions is to send a `callback` parameter to any GET request to have the
+results wrapped in a JavaScript function. The [JSON-P](http://en.wikipedia.org/wiki/JSONP)
+response includes the same data output as the regular API, plus the relevant
+HTTP Header information.
 
 <pre class="terminal">
-$ curl https://<%= settings.api_domain %>/categories/1442?callback=foo
+$ curl https://<%= settings.api_domain %>/categories/1440?callback=aFunction
 </pre>
 
-
 ~~~ javascript
-foo({
+aFunction({
   "meta": {
     "status": 200
   },
   "data": {
     "category": {
-      "children_count": 0, "family_id": 11,
+      "children_count": 0,
+      "family_id": 11,
       "id": 1442,
       "name": "Ξαπλώστρες Κήπου &amp; Βεράντας",
       "image_url": "http://b.scdn.gr/images/categories/large/1442.jpg"

@@ -28,34 +28,34 @@ title: manufacturer
 
 ## Retrieve a manufacturer's categories
 
-### Order
-
-Valid Parameters to perform ordering
-
-Name        | Type     | Description
-------------|----------| -----------
-`order_by`  | `String` | `popularity (default) | name`
-`order_dir` | `String` | `asc (default) | desc`
-
 <pre class="terminal">
   GET /manufacturers/:id/categories
 </pre>
 
 <%= render_recording :manufacturer_categories %>
 
+### Ordering
+
+Valid parameters to perform ordering
+
+Name        | Type   | Value                                                    | Description
+----------- | ------ | -------------------------------------------------------- | ------------
+`order_by`  | String | `name`, `popularity` <small class="mark">default</small> | Order by name or popularity
+`order_dir` | String | `asc`, `desc` <small class="mark">default</small>        | Order ascending or descending
+
 ## Retrieve a manufacturer's SKUs
-
-### Order
-
-Valid Parameters to perform ordering
-
-Name        | Type     | Description
-------------|----------| -----------
-`order_by`  | `String` | `popularity (default) | name`
-`order_dir` | `String` | `asc (default) | desc`
 
 <pre class="terminal">
   GET /manufacturers/:id/skus
 </pre>
 
 <%= render_recording :manufacturer_skus %>
+
+### Ordering
+
+Valid parameters to perform ordering
+
+Name        | Type   | Value                                                     | Description
+----------- | ------ | --------------------------------------------------------- | ------------
+`order_by`  | String | `price`, `popularity` <small class="mark">default</small> | Order by price or popularity
+`order_dir` | String | `asc`, `desc` <small class="mark">default</small>         | Order ascending or descending
