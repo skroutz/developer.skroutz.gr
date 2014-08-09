@@ -40,9 +40,8 @@ easy:
     - skroutz
   pages:
     - { title: 'overview', url: '/easy/' }
-    - { title: 'authorization' }
     - { title: 'endpoints' }
-    - { title: 'examples' }
+    - { title: 'implementations' }
 
 authorization:
   base: '/authorization/'
@@ -51,7 +50,6 @@ authorization:
   pages:
     - { title: 'overview', url: '/authorization/' }
     - { title: 'permissions' }
-    - { title: 'oauth' }
     - { title: 'flows' }
 
 analytics:

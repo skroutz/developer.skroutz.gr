@@ -42,10 +42,14 @@ en:
       short_description: 'Integrate your eshop with %{flavor} and reach millions of consumers.'
     easy:
       short_description: 'Easier and faster checkouts for your visitors. With a click of a button.'
+      overview: 'Overview'
+      endpoints: 'Endpoints'
+      implementations: 'Implementations'
     authorization:
       short_description: 'Learn how to ask for authorization and access user data using OAuth 2.0.'
       overview: 'Overview'
       permissions: 'Permissions'
+      flows: 'Flows'
     analytics:
       short_description: 'Integrate %{flavor} analytics and find out powerful insights about your eshop.'
       overview: 'Overview'
