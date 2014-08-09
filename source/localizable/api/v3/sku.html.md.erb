@@ -26,49 +26,48 @@ A SKU (Stock Keeping Unit) is an aggregation of products.
 
 <%= render_recording :category_skus %>
 
-## Ordering
+### Ordering
 
-Name      | Type   | Description
-----------|--------|------------
-order_by  | String | pricevat or popularity
-order_dir | String | asc or desc
+Name        | Type   | Value                                                        | Description
+----------- | ------ | ------------------------------------------------------------ | ------------
+`order_by`  | String | `pricevat` <small class="mark">default</small>, `popularity` | Order by price or popularity
+`order_dir` | String | `asc` <small class="mark">default</small>, `desc`            | Order ascending or descending
 
-## Filtering
+### Filtering
 
-You have to specify a category in order to perform filtering.  
 You may supply the optional parameter `include_meta[]=available_filters`
 to get meta information about the filters that can be applied.
 
-### By search keyword 
+#### By search keyword
 
-Name | Type | Description
------| -----| -----------
-`q` | `String` | The keyword to search by 
+Name | Type   | Description
+---- | ------ | -----------
+`q`  | String | The keyword to search by 
 
 <%= render_recording :category_skus_search %>
 
-### By manufacturers
+#### By manufacturers
 
-Name | Type | Description
------| -----| -----------
-`manufacturer_ids` | `Array` | The ids of the manufacturers of the SKUs
+Name               | Type  | Description
+------------------ | ----- | -----------
+`manufacturer_ids` | Array | The ids of the manufacturers of the SKUs
 
 <%= render_recording :category_skus_manufacturers %>
 
-### By filters
+#### By filters
 
-Name | Type | Description
------| -----| -----------
-`filter_ids` | `Array` | The ids of the filters to be applied on the SKUs
+Name         | Type  | Description
+------------ | ----- | -----------
+`filter_ids` | Array | The ids of the filters to be applied on the SKUs
 
 <%= render_recording :category_skus_filters %>
 
 ### Meta
 You may choose to include extra meta information using the following parameters:
 
-Name           | Type    | Description
----------------| --------| -----------
-`include_meta` | `Array` | `Extra meta info to be included in the response`
+Name           | Type  | Description
+-------------- | ----- | -----------
+`include_meta` | Array | Extra meta info to be included in the response
 
 Meta that can be included are:
 
@@ -83,18 +82,18 @@ Meta that can be included are:
 
 <%= render_recording :category_skus_with_available_filters %>  
 
-As you can see above the `available_filters` object contains two objects
-(filters, manufacturers) each of which has as keys the ids of the
-entities that can be applied and as values the number of skus that match
-the filter/manufacturer.
+As you can see in the response above the `available_filters` object
+contains two objects (<mark>filters</mark> and <mark>manufacturers</mark>)
+each of which has as keys the ids of the filters that can be applied
+and as values the number of SKUs that match the filter.
 
-To retrieve *SKUs* matching a set of *filters* you have to 
-add `filter_ids[]=filter_id_1&filter_ids[]=filter_id_2` meaning that
-`filter_ids` is an array query parameter of filter ids.
+To retrieve SKUs matching a set of <mark>filters</mark> you have to 
+add the `filter_ids` parameter which is an array parameter of filter ids, e.g.
+`filter_ids[]=1&filter_ids[]=2`.
 
-To retrieve *SKUs* matching a set of *manufacturers* you have to add
-`manufacturer_ids[]=manufacturer_id_1&manufacturer_ids[]=manufacturer_id_2`
-meaning that `manufacturer_ids` is an array query parameter of manufacturer ids.  
+To retrieve SKUs matching a set of <mark>manufacturers</mark> you have to
+add the `manufacturer_ids` parameter which is an array parameter of manufacturer ids, e.g.
+`manufacturer_ids[]=1&manufacturer_ids[]=2`.
 
 <%= render_recording :category_skus_with_applied_filters %>
 
@@ -114,7 +113,7 @@ meaning that `manufacturer_ids` is an array query parameter of manufacturer ids.
 
 <%= render_recording :skus_similar %>
 
-## Retrieve a SKU's products
+## Retrieve an SKU's products
 
 <pre class="terminal">
   GET /skus/:id/products
@@ -122,7 +121,7 @@ meaning that `manufacturer_ids` is an array query parameter of manufacturer ids.
 
 <%= render_recording :skus_products %>
 
-## Retrieve a SKU's reviews
+## Retrieve an SKU's reviews
 
 <pre class="terminal">
   GET /skus/:id/reviews
@@ -130,26 +129,34 @@ meaning that `manufacturer_ids` is an array query parameter of manufacturer ids.
 
 <%= render_recording :sku_reviews %>
 
-## Retrieve a SKU's specifications
+## Retrieve an SKU's specifications
 
-Sku specifications can be retrieved with the following request. "values"
-attribute specifies the values this SKU has for the specification
-(more than one if applicable). Group can be included/embedded and represents
-a logical grouping of specifications. It can be used to show specifications in
-groups. No pagination is used in this endpoint.
+SKU specifications can be retrieved with the following request.
+
+> ##### Note
+> Pagination is not available for this endpoint.
+
+<pre class="terminal">
+  GET /skus/:id/specifications
+</pre>
+
+<%= render_recording :sku_specifications %>
+
+Specification groups can be included / embedded using the `group` value.
+Groups represent a logical grouping of specifications.
 
 <pre class="terminal">
   GET /skus/:id/specifications?include=group
 </pre>
 
-<%= render_recording :sku_specifications %>
+<%#= render_recording :sku_specifications_include_groups %>
 
-## Retrieve a SKU's favorite
+## Retrieve an SKU's favorite
 
 > ##### Note
 > Requires user token with the 'favorites' permission.
-If the SKU has been 'favorited' by the currently associated user, you may fetch
-it from the following endpoint:
+
+If the SKU has been _favorited_ by the currently associated user, you can fetch it.
 
 <pre class="terminal">
   GET /skus/:id/favorite

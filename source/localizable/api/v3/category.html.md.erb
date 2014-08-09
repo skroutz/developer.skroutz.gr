@@ -6,8 +6,10 @@ title: category
 # Category
 
 Categories are organized in a tree-like structure.  
-A *product/sku* belongs to a leaf category. Leaves have `children_count = 0` and
-only leaves have *SKUs*.
+
+An [SKU](/api/v3/sku/) always belongs to a leaf (ending) category.
+
+Leaf categories have `children_count` equal to <mark>0</mark>.
 
 ##### <%= t('common.toc') %>
 
@@ -57,14 +59,15 @@ only leaves have *SKUs*.
 
 ## List a category's manufacturers
 
-Name | Type | Description
------| -----| -----------
-`order_by` | `String` | `(optional) order by 'name' or 'popularity'(default)`
-`order_dir` | `String` | `(optional) order direction 'asc'(default) or 'desc'`
-
-
 <pre class="terminal">
-  GET /categories/:id/manufacturers?order_by=popularity&order_dir=desc
+  GET /categories/:id/manufacturers
 </pre>
 
 <%= render_recording :category_manufacturers %>
+
+### Ordering
+
+Name        | Type   | Value                                                    | Description
+----------- | ------ | -------------------------------------------------------- | ------------
+`order_by`  | String | `name`, `popularity` <small class="mark">default</small> | Order by name or popularity
+`order_dir` | String | `asc`, `desc` <small class="mark">default</small>        | Order ascending or descending

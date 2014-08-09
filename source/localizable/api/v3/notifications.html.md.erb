@@ -6,8 +6,9 @@ title: notifications
 # User Notification
 
 > ##### Note
-> To access any of the <strong>User Notification</strong> endpoints a valid
-<code>access_token</code> is required.
+> To access any of the <strong>User Notification</strong> endpoints, an <code>access_token</code>
+containing the `notifications` <%= link_to 'permission', '/authorization/permissions/' %> is required.
+
 
 Notifications are events (price changes of favorite products, subscribed
 discussion messages, etc).
@@ -20,7 +21,7 @@ discussion messages, etc).
 ## List notifications 
 
 <pre class="terminal">
-  /notifications
+  GET /notifications
 </pre>
 
 <%= render_recording :notifications_index %>
@@ -28,7 +29,7 @@ discussion messages, etc).
 ## Retrieve a single notification 
 
 <pre class="terminal">
-  /notifications/:id
+  GET /notifications/:id
 </pre>
 
 <%= render_recording :notifications_show %>

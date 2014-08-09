@@ -6,8 +6,8 @@ title: favorites
 # User Favorites
 
 > ##### Note
-> To access any of the <strong>User Favorites</strong> endpoints a valid
-<code>access_token</code> is required.
+> To access any of the <strong>User Favorites</strong> endpoints, an <code>access_token</code>
+containing the `favorites` <%= link_to 'permission', '/authorization/permissions/' %> is required.
 
 ##### <%= t('common.toc') %>
 
@@ -15,33 +15,29 @@ title: favorites
 {:toc}
 
 
-## Favorite Lists
+## Types of Favorite Lists
 
 User may pick one or more SKUs as favorites. Favorites are organized in `favorite_lists`.
 
 3 *types* of `favorite_lists` exist:
 
 Custom lists
-: Can group SKUs from different categories. These are created by the user.
+: Can contain SKUs from different categories. These are created by the user.
 
 Auto lists
-: These are connected with a category and can only group favorites with SKUs
+: These are connected with a category and can only contain favorite SKUs
 from this category. These are created automatically when a new favorite is
-created without specifying a <code>favorite_list</code> (and favorite is
-not owned. See next)
+created without specifying a <code>favorite_list</code>.
 
 &quot;Owned&quot; list
-: No such list exists but favorites that user has flagged as “owned” have
-<code>favorite_list_id => null</code> and <code>have_it => true</code>
-attributes. In this way owned favorites can be presented as a list.
-
-Endpoints for `favorites` and `favorite_lists` are listed next.
-
+: This is a special list that includes favorites that the user has
+flagged as &quot;owned&quot;. Items in the list have `favorite_list_id: null`
+and `have_it: true` attributes. This way owned favorites can be presented as a list.
 
 ## List favorite lists
 
 <pre class="terminal">
-  /favorite_lists
+  GET /favorite_lists
 </pre>
 
 <%= render_recording :favorite_lists_index %>
@@ -60,7 +56,7 @@ list you will be presented with an error message.
 ## Destroy a favorite_list
 
 The response status is 204 and with an empty response body when resource is
-destroyed. status code is 404 when the resource does not exist.
+destroyed. Status code is 404 when the resource does not exist.
 
 <pre class="terminal">
   DELETE /favorite_lists/:id
@@ -78,7 +74,7 @@ be used to fetch them with ascending order.
   * <%= link_to 'SKU', '/api/v3/sku' %>
 
 <pre class="terminal">
-  /favorites
+  GET /favorites
 </pre>
 
 <%= render_recording :favorites_index %>
@@ -88,13 +84,13 @@ be used to fetch them with ascending order.
 The response contains only favorites belonging to the specified favorite list.
 
 <pre class="terminal">
-  /favorite_lists/:id/favorites
+  GET /favorite_lists/:id/favorites
 </pre>
 
 ## Retrieve a single favorite
 
 <pre class="terminal">
-  /favorites/:id
+  GET /favorites/:id
 </pre>
 
 <%= render_recording :favorites_show %>
@@ -110,7 +106,7 @@ The response contains only favorites belonging to the specified favorite list.
 ## Destroy a favorite
 
 The response status is 204 and with an empty response body when resource is
-destroyed. status code is 404 when the resource does not exist.
+destroyed. Status code is 404 when the resource does not exist.
 
 <pre class="terminal">
   DELETE /favorites/:id
@@ -121,7 +117,7 @@ destroyed. status code is 404 when the resource does not exist.
 A favorite update might be called to do one of the following:
 
 * Move the favorite to an other list (custom probably)
-* Mark favorite as “owned” (through have_it: true)
+* Mark favorite as &quot;owned&quot; (through have_it: true)
 * Add the favorite to a new custom list
 
 When a favorite is `have_it: true`, it does not belong to a *favorite_list*.
