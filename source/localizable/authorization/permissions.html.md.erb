@@ -5,8 +5,20 @@ title: permissions
 
 # Permissions
 
-A representations of the permissions granted to your app by
+A representation of the permissions granted to your app by
 <%= settings.site_name.titleize %> and a User.
+
+##### <%= t('common.toc') %>
+
+* TOC
+{:toc}
+
+## Obtainable Permissions
+
+Each application is assigned the minimum set of permissions required
+to operate based on its given description.  
+To expand your application's set of
+acquirable permissions shoot a mail at <<%= settings.api_email %>>.
 
 <table>
   <thead>
@@ -30,10 +42,31 @@ A representations of the permissions granted to your app by
     <tr>
       <td>notifications</td>
       <td>user</td>
-      <td>User <%= link_to 'notifications', '/api/v3/notifications' %></td>
+      <td>User <%= link_to 'Notifications', '/api/v3/notifications' %></td>
     </tr>
+    <% if flavor == 'skroutz' %>
+    <tr>
+      <td>easy</td>
+      <td>user</td>
+      <td>
+        <%= link_to t('titles.easy', flavor: settings.site_name.titleize), '/easy' %>
+      </td>
+    </tr>
+    <% end %>
   </tbody>
 </table>
+
+<div class="alert alert-warning" role="alert">
+  <i class="fa fa-exclamation-triangle"></i>
+  Having not set a specific permission to be obtained the default is set to 
+  <span class="label label-default">easy</span>, but as this may change in the future, 
+  you are suggested to always specify your desired permissions.
+</div>
+
+<div class="alert alert-info" role="alert">
+  <i class="fa fa-info-circle"></i> You may specify desired permissions using the 
+  <span class="label label-default">scope</span> parameter in authorization requests.
+</div>
 
 ## Public Resources
 Having obtained the public permission you can access the following resources:
@@ -50,8 +83,9 @@ Having obtained the public permission you can access the following resources:
 
 ## User Resources
 These permissions require that you have explicitly requested them using
-the scope param <%= link_to 'see more', '/guides/authorization' %>
-The user will have to consent to grant any of those permissions.
+the scope param.
+
+User will have to consent to grant any of those permissions.
 You __must not__ share these data to 3rd parties.
 
 <ul class="private-resources">
