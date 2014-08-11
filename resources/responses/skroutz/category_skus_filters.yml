@@ -1,64 +1,64 @@
 ---
 :request:
-  :url: http://skroutz.gr/api/categories/40/skus?filter_ids[]=355559&filter_ids[]=6282
+  :url: http://api.skroutz.gr/api/categories/40/skus?filter_ids[]=355559&filter_ids[]=6282
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer fYxk5iZjO44DwXwkwP5SW7cHwaqFMbc5riQ4JQFgeVNe1epmAHlDtGjvAPhVAIH1aPLiQt67RSrVasw9o7EEQ==
+    :authorization: Bearer W5lqBPwCzzX3VoJpnC4NZdimjEiABofdu5aAUG1SjiKO2fUgStTVloVzStT/kO/w6T7lCSmhZE64NWwUxc//rw==
   :params:
     :per: 4
   :verb: GET
 :response:
   :status: 200
   :headers:
-    server: nginx
-    content-type: application/json; charset=utf-8
+    !binary "c2VydmVy": nginx
+    !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
     !binary "dmFyeQ==": Accept-Encoding
-    status: 200 OK
-    x-ua-compatible: IE=Edge,chrome=1
-    cache-control: max-age=0, private, must-revalidate
-    x-request-id: '2406164356'
-    x-runtime: '0.103494'
-    x-dns-prefetch-control: 'off'
-    x-app: lunkwill
-    content-length: '1146'
-    accept-ranges: bytes
-    date: Mon, 14 Jul 2014 12:06:32 GMT
-    x-varnish: '2406164356'
-    age: '0'
-    via: 1.1 varnish
-    connection: close
-    x-origin: varnish2
-    x-cache: MISS
-  :body: ! '{"skus":[{"id":4315335,"ean":"","pn":"AP6572","name":"Apollon AP6572","display_name":"OEM
-    Apollon AP6572","category_id":40,"first_product_shop_info":"619|Kalemisbros|kalemisbros","click_url":null,"price_max":119.0,"price_min":119.0,"reviewscore":0.0,"shop_count":1,"plain_spec_summary":"Dual
+    !binary "c3RhdHVz": 200 OK
+    !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
+    !binary "Y2FjaGUtY29udHJvbA==": max-age=0, private, must-revalidate
+    !binary "eC1yZXF1ZXN0LWlk": '2573771303'
+    !binary "eC1ydW50aW1l": '0.095504'
+    !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
+    !binary "eC1hcHA=": lunkwill
+    !binary "Y29udGVudC1sZW5ndGg=": '1172'
+    !binary "YWNjZXB0LXJhbmdlcw==": bytes
+    !binary "ZGF0ZQ==": Mon, 11 Aug 2014 14:19:30 GMT
+    !binary "eC12YXJuaXNo": '2573771303'
+    !binary "YWdl": '0'
+    !binary "dmlh": 1.1 varnish
+    !binary "Y29ubmVjdGlvbg==": close
+    !binary "eC1vcmlnaW4=": varnish2
+    !binary "eC1jYWNoZQ==": MISS
+  :body: ! '{"skus":[{"id":5173978,"ean":"","pn":"A529","name":"A529","display_name":"Lenovo
+    A529","category_id":40,"first_product_shop_info":"499|E-smartbuy|esmartbuy","click_url":null,"price_max":119.0,"price_min":119.0,"reviewscore":0.0,"shop_count":1,"plain_spec_summary":"Dual
+    SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
+    3G, \u039a\u03ac\u03bc\u03b5\u03c1\u03b1: 2.0 MP,  \u039f\u03b8\u03cc\u03bd\u03b7:
+    5.0\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7: 800 x 480 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2:
+    \u039f\u03b8\u03cc\u03bd\u03b7 \u03b1\u03c6\u03ae\u03c2 (Touch screen),  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
+    \u039c\u03bd\u03ae\u03bc\u03b7: 500 MB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
+    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: Android, SmartPhone","manufacturer_id":288,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://c.scdn.gr/images/sku_main_images/005173/5173978/medium_Lenovo_A529_Andr_53c92eb02d123.jpg","alternatives":["http://d.scdn.gr/images/sku_images/013275/13275385/Lenovo_A529_Andr_53c690bf4710f.jpg","http://c.scdn.gr/images/sku_images/013275/13275386/lenovo-a529-gold-03-600x600.jpg","http://d.scdn.gr/images/sku_images/013275/13275387/a529.jpg"]}},{"id":3803538,"ean":"","pn":"G525","name":"Ascend
+    G525","display_name":"Huawei Ascend G525","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":169.0,"price_min":135.9,"reviewscore":4.0,"shop_count":4,"plain_spec_summary":"Dual
     SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
     2G / 3G, \u039a\u03ac\u03bc\u03b5\u03c1\u03b1: 5 MP,  \u039f\u03b8\u03cc\u03bd\u03b7:
+    4.5\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7: 960 x 540 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2:
+    \u039f\u03b8\u03cc\u03bd\u03b7 \u03b1\u03c6\u03ae\u03c2 (Touch screen),  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
+    \u039c\u03bd\u03ae\u03bc\u03b7: 4.0 GB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
+    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: Android, SmartPhone","manufacturer_id":2159,"future":false,"reviews_count":1,"virtual":false,"images":{"main":"http://c.scdn.gr/images/sku_main_images/003803/3803538/medium_Huawei-Ascend-G525-skew-2.jpg","alternatives":["http://b.scdn.gr/images/sku_images/011242/11242387/132306-huawei-ascend-g525-1375107408-0-0.jpg","http://b.scdn.gr/images/sku_images/011242/11242451/sku41782_3.jpg","http://b.scdn.gr/images/sku_images/011242/11242454/Huawei-Ascend-G525.jpg"]}},{"id":4498536,"ean":"","pn":"PAP5400DUO
+    PAP5400DUOWHITE","name":"MultiPhone 5400 DUO","display_name":"Prestigio MultiPhone
+    5400 DUO","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":153.0,"price_min":139.0,"reviewscore":0.0,"shop_count":3,"plain_spec_summary":"Dual
+    SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
+    2G / 3G, \u039a\u03ac\u03bc\u03b5\u03c1\u03b1: 8 MP,  \u039f\u03b8\u03cc\u03bd\u03b7:
+    4.0\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7: 800 x 480 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2:
+    \u039f\u03b8\u03cc\u03bd\u03b7 \u03b1\u03c6\u03ae\u03c2 (Touch screen),  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
+    \u039c\u03bd\u03ae\u03bc\u03b7: 4.0 GB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
+    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: Android, SmartPhone","manufacturer_id":2087,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://c.scdn.gr/images/sku_main_images/004498/4498536/medium_131218110014936251.jpg","alternatives":["http://c.scdn.gr/images/sku_images/012269/12269987/140122130018553542.jpg","http://c.scdn.gr/images/sku_images/012269/12269991/140122130018585569.jpg","http://d.scdn.gr/images/sku_images/012269/12269992/131218110015025860.jpg","http://b.scdn.gr/images/sku_images/012269/12269993/131218110015112430.jpg","http://a.scdn.gr/images/sku_images/012269/12269994/140122130018640564.jpg"]}},{"id":4681843,"ean":"","pn":"","name":"Desire
+    310 (4GB)","display_name":"HTC Desire 310 (4GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":168.9,"price_min":139.0,"reviewscore":2.66667,"shop_count":9,"plain_spec_summary":"Single
+    SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
+    2G / 3.5G / 3G, \u039a\u03ac\u03bc\u03b5\u03c1\u03b1: 5 MP,  \u039f\u03b8\u03cc\u03bd\u03b7:
     4.5\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7: 854 x 480 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2:
     \u039f\u03b8\u03cc\u03bd\u03b7 \u03b1\u03c6\u03ae\u03c2 (Touch screen),  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
     \u039c\u03bd\u03ae\u03bc\u03b7: 4.0 GB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
-    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: Android, SmartPhone","manufacturer_id":254,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://c.scdn.gr/images/sku_main_images/004315/4315335/medium_730180107_914.jpg","alternatives":[]}},{"id":5124242,"ean":"0690590526556","pn":"","name":"50
-    Neon (4GB)","display_name":"Archos 50 Neon (4GB)","category_id":40,"first_product_shop_info":"1389|Media
-    Markt|mediamarkt","click_url":null,"price_max":129.0,"price_min":129.0,"reviewscore":5.0,"shop_count":1,"plain_spec_summary":"Dual
-    SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
-    3.5G, \u039a\u03ac\u03bc\u03b5\u03c1\u03b1: 5.0 MP,  \u039f\u03b8\u03cc\u03bd\u03b7:
-    5.0\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7: 854 x 480 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2:
-    \u039f\u03b8\u03cc\u03bd\u03b7 \u03b1\u03c6\u03ae\u03c2 (Touch screen),  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
-    \u039c\u03bd\u03ae\u03bc\u03b7: 4.0 GB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
-    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: Android, SmartPhone","manufacturer_id":454,"future":false,"reviews_count":1,"virtual":false,"images":{"main":"http://c.scdn.gr/images/sku_main_images/005124/5124242/medium_archos_50neon-slide_01.jpg","alternatives":["http://d.scdn.gr/images/sku_images/013211/13211554/archos_50neon-slide_02.jpg","http://c.scdn.gr/images/sku_images/013211/13211555/archos_50neon-slide_03.jpg","http://b.scdn.gr/images/sku_images/013211/13211556/archos_50neon-slide_04.jpg","http://a.scdn.gr/images/sku_images/013211/13211557/archos_50neon-slide_05.jpg","http://d.scdn.gr/images/sku_images/013211/13211558/archos_50neon-slide_06.jpg","http://c.scdn.gr/images/sku_images/013211/13211559/archos_50neon-slide_07.jpg"]}},{"id":4068680,"ean":"","pn":"","name":"G420
-    (4GB)","display_name":"Turbo-X G420 (4GB)","category_id":40,"first_product_shop_info":"11|\u03a0\u03bb\u03b1\u03af\u03c3\u03b9\u03bf|plaisio","click_url":null,"price_max":139.0,"price_min":139.0,"reviewscore":4.0,"shop_count":1,"plain_spec_summary":"Dual
-    SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
-    3G, \u039a\u03ac\u03bc\u03b5\u03c1\u03b1: 8.0 MP,  \u039f\u03b8\u03cc\u03bd\u03b7:
-    4.5\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7: 960 x 540 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2:
-    \u039f\u03b8\u03cc\u03bd\u03b7 \u03b1\u03c6\u03ae\u03c2 (Touch screen),  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
-    \u039c\u03bd\u03ae\u03bc\u03b7: 4.0 GB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
-    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: Android, SmartPhone","manufacturer_id":227,"future":false,"reviews_count":1,"virtual":false,"images":{"main":"http://d.scdn.gr/images/sku_main_images/004068/4068680/medium_2084988_1.JPG","alternatives":["http://d.scdn.gr/images/sku_images/011582/11582052/2084961_1.JPG","http://c.scdn.gr/images/sku_images/011582/11582053/2084988_2.JPG","http://b.scdn.gr/images/sku_images/011582/11582054/2084961_2.JPG","http://a.scdn.gr/images/sku_images/011582/11582055/2084988_3.JPG","http://b.scdn.gr/images/sku_images/011582/11582056/2084988_4.JPG","http://a.scdn.gr/images/sku_images/011582/11582057/2084961_3.JPG"]}},{"id":4150061,"ean":"","pn":"","name":"45
-    Platinum","display_name":"Archos 45 Platinum","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":165.0,"price_min":143.0,"reviewscore":4.0,"shop_count":9,"plain_spec_summary":"Dual
-    SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
-    2G / 3.5G / 3G, \u039a\u03ac\u03bc\u03b5\u03c1\u03b1: 5 MP,  \u039f\u03b8\u03cc\u03bd\u03b7:
-    4.5\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7: 960 x 540 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2:
-    \u039f\u03b8\u03cc\u03bd\u03b7 \u03b1\u03c6\u03ae\u03c2 (Touch screen),  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
-    \u039c\u03bd\u03ae\u03bc\u03b7: 4 GB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
-    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: Android, SmartPhone","manufacturer_id":454,"future":false,"reviews_count":5,"virtual":false,"images":{"main":"http://a.scdn.gr/images/sku_main_images/004150/4150061/medium_archos_45platinum_Face_slide_2.jpg","alternatives":["http://a.scdn.gr/images/sku_images/011704/11704844/archos_45platinum_Pers_slide_1.jpg","http://d.scdn.gr/images/sku_images/011704/11704845/archos_45platinum_Down_slide_3.jpg","http://b.scdn.gr/images/sku_images/011704/11704846/archos_45platinum_Land_slide_4.jpg","http://d.scdn.gr/images/sku_images/011704/11704847/archos_45platinum_Triple_slide_5.jpg","http://c.scdn.gr/images/sku_images/011704/11704848/archos_45platinum_Back_slide_7.jpg"]}}],"meta":{"pagination":{"total_results":150,"total_pages":38,"page":1,"per":4}}}'
-:created_at: 2014-07-14 15:06:32.089266382 +03:00
+    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: Android, SmartPhone","manufacturer_id":205,"future":false,"reviews_count":3,"virtual":false,"images":{"main":"http://a.scdn.gr/images/sku_main_images/004681/4681843/medium_htc-desire-310-en-slide-01.png","alternatives":["http://c.scdn.gr/images/sku_images/012532/12532541/htc-desire-310-en-slide-03-zoom.jpg","http://a.scdn.gr/images/sku_images/012532/12532542/htc-desire-310-en-slide-02-zoom.jpg","http://a.scdn.gr/images/sku_images/012532/12532543/white.png"]}}],"meta":{"pagination":{"total_results":145,"total_pages":37,"page":1,"per":4}}}'
+:created_at: 2014-08-11 17:19:30.020944739 +03:00
 :meta:
   :description: Lists skus filtered given filters.

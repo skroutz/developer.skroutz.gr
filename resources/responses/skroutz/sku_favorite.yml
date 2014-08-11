@@ -1,31 +1,31 @@
 ---
 :request:
-  :url: http://skroutz.gr/api/skus/345333/favorite
+  :url: http://api.skroutz.gr/api/skus/345333/favorite
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer fYxk5iZjO44DwXwkwP5SW7cHwaqFMbc5riQ4JQFgeVNe1epmAHlDtGjvAPhVAIH1aPLiQt67RSrVasw9o7EEQ==
+    :authorization: Bearer W5lqBPwCzzX3VoJpnC4NZdimjEiABofdu5aAUG1SjiKO2fUgStTVloVzStT/kO/w6T7lCSmhZE64NWwUxc//rw==
   :verb: GET
 :response:
   :status: 200
   :headers:
-    server: nginx
-    content-type: application/json; charset=utf-8
+    !binary "c2VydmVy": nginx
+    !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
     !binary "dmFyeQ==": Accept-Encoding
-    status: 200 OK
-    x-ua-compatible: IE=Edge,chrome=1
-    cache-control: max-age=0, private, must-revalidate
-    x-request-id: '2406164181'
-    x-runtime: '0.049031'
-    x-dns-prefetch-control: 'off'
-    x-app: lunkwill
-    content-length: '150'
-    accept-ranges: bytes
-    date: Mon, 14 Jul 2014 12:06:30 GMT
-    x-varnish: '2406164181'
-    age: '0'
-    via: 1.1 varnish
-    connection: close
-    x-origin: varnish2
-    x-cache: MISS
+    !binary "c3RhdHVz": 200 OK
+    !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
+    !binary "Y2FjaGUtY29udHJvbA==": max-age=0, private, must-revalidate
+    !binary "eC1yZXF1ZXN0LWlk": '2573771206'
+    !binary "eC1ydW50aW1l": '0.056977'
+    !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
+    !binary "eC1hcHA=": lunkwill
+    !binary "Y29udGVudC1sZW5ndGg=": '150'
+    !binary "YWNjZXB0LXJhbmdlcw==": bytes
+    !binary "ZGF0ZQ==": Mon, 11 Aug 2014 14:19:29 GMT
+    !binary "eC12YXJuaXNo": '2573771206'
+    !binary "YWdl": '0'
+    !binary "dmlh": 1.1 varnish
+    !binary "Y29ubmVjdGlvbg==": close
+    !binary "eC1vcmlnaW4=": varnish2
+    !binary "eC1jYWNoZQ==": MISS
   :body: ! '{"favorites":[{"id":254728,"have_it":true,"user_id":132950,"user_notes":null,"sku_id":345333,"created_at":"2013-04-12T00:57:44+03:00","updated_at":"2013-07-16T23:11:00+03:00"}]}'
-:created_at: 2014-07-14 15:06:30.819833032 +03:00
+:created_at: 2014-08-11 17:19:29.044528330 +03:00

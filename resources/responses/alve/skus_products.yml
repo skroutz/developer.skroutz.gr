@@ -1,60 +1,61 @@
 ---
 :request:
-  :url: http://alve.com/api/skus/146414/products
+  :url: http://api.alve.com/skus/146414/products
   :headers:
     :accept: application/vnd.alve+json; version=3
-    :authorization: Bearer yNE9qe8AC6yVbnVV8ofDPFiitoAREfqiq3THA6NYLQvUHbLHqlmUhHQ6kudbdrHa/0FlExa75mpN4PG/DEzSKw==
+    :authorization: Bearer jRc1LQwgl9wVf6QJT1hTfSL32I7V97Yta5fjEpDUHIDoPox/jRhUTe0K19DamN4NArCAy7tTrUyI8yXRxOVWg==
   :verb: GET
 :response:
   :status: 200
   :headers:
-    server: nginx
+    !binary "c2VydmVy": nginx
     !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
     !binary "dmFyeQ==": Accept-Encoding
-    status: 200 OK
-    !binary "bGluaw==": <http://api.alve.com/api/skus/146414/products?page=4>; rel="last",
-      <http://api.alve.com/api/skus/146414/products?page=2>; rel="next"
-    cache-control: max-age=300, private
-    x-ua-compatible: IE=Edge,chrome=1
-    x-request-id: '980449282'
-    x-runtime: '0.142595'
-    x-dns-prefetch-control: 'off'
-    x-app: as2
-    content-length: '1107'
-    accept-ranges: bytes
-    date: Fri, 18 Jul 2014 15:17:37 GMT
-    x-varnish: '980449282'
-    age: '0'
-    via: 1.1 varnish
-    connection: close
-    x-origin: varnish1
-    x-cache: MISS
+    !binary "c3RhdHVz": 200 OK
+    !binary "bGluaw==": <http://api.alve.com/skus/146414/products?page=4>; rel="last",
+      <http://api.alve.com/skus/146414/products?page=2>; rel="next"
+    !binary "Y2FjaGUtY29udHJvbA==": max-age=300, private
+    !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
+    !binary "eC1yZXF1ZXN0LWlk": '463125327'
+    !binary "eC1ydW50aW1l": '0.133352'
+    !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
+    !binary "eC1hcHA=": as2
+    !binary "Y29udGVudC1sZW5ndGg=": '1107'
+    !binary "YWNjZXB0LXJhbmdlcw==": bytes
+    !binary "ZGF0ZQ==": Tue, 12 Aug 2014 09:16:24 GMT
+    !binary "eC12YXJuaXNo": '463125327'
+    !binary "YWdl": '0'
+    !binary "dmlh": 1.1 varnish
+    !binary "Y29ubmVjdGlvbg==": close
+    !binary "eC1vcmlnaW4=": varnish2
+    !binary "eC1jYWNoZQ==": MISS
   :body: ! '{"products":[{"id":1135844,"name":"Samsung Galaxy S4 / i9500 16 Gb Siyah
-    Cep Telefonu","sku_id":146414,"shop_id":77,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/1135844?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1206.0},{"id":497847,"name":"Samsung
-    i9500 Galaxy S4 16 GB Siyah Cep Telefonu GALAXY S4 \u01309500 S\u0130YAH","sku_id":146414,"shop_id":42,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/497847?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1246.15},{"id":4743757,"name":"Samsung
-    i9500 Galaxy S4 16 GB Lafleur Cep Telefonu GALAXY S4 \u01309500 LAFLEUR","sku_id":146414,"shop_id":42,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/4743757?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1246.15},{"id":497851,"name":"Samsung
-    i9500 Galaxy S4 16 GB Beyaz Cep Telefonu GALAXY S4 \u01309500 BEYAZ","sku_id":146414,"shop_id":42,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/497851?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1265.95},{"id":661152,"name":"Samsung
-    i9500 Galaxy S4 16 GB Mavi Cep Telefonu GALAXY S4 \u01309500 MAV\u0130","sku_id":146414,"shop_id":42,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/661152?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1265.95},{"id":959188,"name":"Samsung
-    i9500 Galaxy S4 16 GB Kahverengi Cep Telefonu S4 \u01309500 KAHVERENG\u0130","sku_id":146414,"shop_id":42,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/959188?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1265.95},{"id":1001654,"name":"Samsung
-    i9500 Galaxy S4 16 GB Mor Cep Telefonu GALAXY S4 \u01309500 MOR","sku_id":146414,"shop_id":42,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/1001654?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1265.95},{"id":1728994,"name":"Samsung
-    i9500 Galaxy S4 16 GB Alt\u0131n Kahverengi Cep Telefonu S4 \u01309500 ALTIN KAHVE","sku_id":146414,"shop_id":42,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/1728994?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1265.95},{"id":3912760,"name":"Samsung
-    i9500 Galaxy S4 16 GB Black Edition Cep Telefonu GALAXY S4 \u01309500 BLACK ED","sku_id":146414,"shop_id":42,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/3912760?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1265.95},{"id":4884606,"name":"Samsung
-    i9500 Galaxy S4 16 GB Lafleur K\u0131rm\u0131z\u0131 Cep Telefonu GALAXY S4 \u01309500
-    LAF KIR","sku_id":146414,"shop_id":42,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/4884606?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1265.95},{"id":2892857,"name":"Samsung
+    Cep Telefonu","sku_id":146414,"shop_id":77,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/1135844?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1206.0},{"id":1137251,"name":"Samsung
+    Galaxy S4 / i9500 16 Gb Beyaz Cep Telefonu","sku_id":146414,"shop_id":77,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/1137251?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1206.0},{"id":5024163,"name":"SAMSUNG
+    \u01309500 GALAXY S4 16 GB CEP TELEFONU","sku_id":146414,"shop_id":107,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/5024163?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1237.0},{"id":1923053,"name":"SAMSUNG
+    13MP KAMERA BLUETOOTH WIFI 4G GPS GALAXY S4 16GB PARALEL","sku_id":146414,"shop_id":170,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/1923053?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1257.88},{"id":1742892,"name":"Samsung
+    GT-I9500 Galaxy S4 16GB Ak\u0131ll\u0131 Cep Telefonu Beyaz (\u0130thalat\u00e7\u0131
+    Firma Garantili)","sku_id":146414,"shop_id":156,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/1742892?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1259.5},{"id":3713825,"name":"SAMSUNG
+    i9500 Galaxy S4 16GB Cep Telefonu \u0130thalat\u00e7\u0131 Firma Garantili","sku_id":146414,"shop_id":150,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/3713825?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1273.01},{"id":2892857,"name":"Samsung
     i9500 Galaxy S4 16GB (Resmi \u0130thalat Garantili)","sku_id":146414,"shop_id":82,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/2892857?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1278.79},{"id":4299412,"name":"Samsung
-    I9500 Galaxy S4 16 GB Beyaz Ak\u0131ll\u0131 Telefon","sku_id":146414,"shop_id":207,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/4299412?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1299.0},{"id":4409527,"name":"Samsung
-    I9500 Galaxy S4 16 GB Black Edition Ak\u0131ll\u0131 Telefon","sku_id":146414,"shop_id":207,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/4409527?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1299.0},{"id":4528134,"name":"Samsung
-    I9500 Galaxy S4 16 GB Siyah Ak\u0131ll\u0131 Telefon","sku_id":146414,"shop_id":207,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/4528134?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1299.0},{"id":3713825,"name":"SAMSUNG
-    i9500 Galaxy S4 16GB Cep Telefonu \u0130thalat\u00e7\u0131 Firma Garantili","sku_id":146414,"shop_id":150,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/3713825?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1327.55},{"id":4113939,"name":"Samsung
-    i9500 Galaxy S4 16GB Beyaz","sku_id":146414,"shop_id":296,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/4113939?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1364.9},{"id":4113940,"name":"Samsung
-    i9500 Galaxy S4 16GB Black","sku_id":146414,"shop_id":296,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/4113940?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1364.9},{"id":4116063,"name":"Samsung
-    i9500 Galaxy S4 16GB Pembe","sku_id":146414,"shop_id":296,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/4116063?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1364.9},{"id":527754,"name":"I9500-WHITE
-    13MP KAMERA BLUETOOTH WIFI 4G GPS GALAXY S4 16GB","sku_id":146414,"shop_id":36,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/527754?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1371.9},{"id":527755,"name":"I9500-BLACK
-    13MP KAMERA BLUETOOTH WIFI 4G GPS GALAXY S4 16GB","sku_id":146414,"shop_id":36,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/527755?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1371.9},{"id":4850467,"name":"I9500-PINK
-    13MP KAMERA BLUETOOTH WIFI 4G GPS GALAXY S4 16GB PEMBE","sku_id":146414,"shop_id":36,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/4850467?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1371.9},{"id":1008578,"name":"Samsung
-    i9500 Galaxy S4 16GB Black Edition (Distrib\u00fct\u00f6r Garantili)","sku_id":146414,"shop_id":70,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/1008578?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1375.11},{"id":706033,"name":"Samsung
-    i9500 Galaxy S4 16 GB Siyah Cep Telefonu (32 GB Haf\u0131za Kart\u0131 Hediyeli+K\u0131l\u0131f
-    + Ekran Koruyucu + Telefon Sigortas\u0131 Hediye) GALAXY S4 S\u0130YAH HED\u0130YEL\u0130","sku_id":146414,"shop_id":42,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/706033?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1377.4},{"id":4867672,"name":"Samsung
-    I9500 Galaxy S4 16GB Cep Telefonu (Siyah)","sku_id":146414,"shop_id":111,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/4867672?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1383.61},{"id":482527,"name":"Samsung
-    i9500 Galaxy S4 beyaz","sku_id":146414,"shop_id":38,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/482527?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1385.7}],"meta":{"pagination":{"total_results":96,"total_pages":4,"page":1,"per":25}}}'
-:created_at: 2014-07-18 18:17:37.344413013 +03:00
+    I9500 Galaxy S4 16 GB Beyaz Ak\u0131ll\u0131 Telefon","sku_id":146414,"shop_id":207,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/4299412?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1279.0},{"id":4409527,"name":"Samsung
+    I9500 Galaxy S4 16 GB Black Edition Ak\u0131ll\u0131 Telefon","sku_id":146414,"shop_id":207,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/4409527?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1279.0},{"id":4056893,"name":"SAMSUNG
+    I9500-WHITE-1 13MP KAMERA BLUETOOTH WIFI 4G GPS GALAXY S4 16GB PARALEL","sku_id":146414,"shop_id":95,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/4056893?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1286.37},{"id":5003481,"name":"Samsung
+    Galaxy S4 I9500 WHITE-1","sku_id":146414,"shop_id":296,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/5003481?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1296.65},{"id":3713896,"name":"SAMSUNG
+    13MP KAMERA BLUETOOTH WIFI 4G GPS GALAXY S4 16GB PARALEL I9500-WHITE-1","sku_id":146414,"shop_id":118,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/3713896?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1329.89},{"id":818090,"name":"SAMSUNG
+    13MP KAMERA BLUETOOTH WIFI 4G GPS GALAXY S4 16GB","sku_id":146414,"shop_id":62,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/818090?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1355.21},{"id":4224980,"name":"Samsung
+    i9500 S4 16Gb Bar Mavi 13Mp Bluetooth G\u00f6r\u00fcnt\u00fcl\u00fc 3G Wi-Fi 5
+    Dokunmatik Android Distrib\u00fct\u00f6r","sku_id":146414,"shop_id":97,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/4224980?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1380.6},{"id":5052404,"name":"Samsung
+    i9500 S4 16Gb Bar Gold 13Mp Bluetooth G\u00f6r\u00fcnt\u00fcl\u00fc 3G Wi-Fi 5
+    Dokunmatik Android Distrib\u00fct\u00f6r","sku_id":146414,"shop_id":97,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/5052404?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1380.6},{"id":482527,"name":"Samsung
+    i9500 Galaxy S4 beyaz","sku_id":146414,"shop_id":38,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/482527?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1385.7},{"id":4000469,"name":"Samsung
+    Galaxy S4 i9500 16GB Cep Telefonu","sku_id":146414,"shop_id":106,"category_id":33,"availability":"Stokta
+    mevcut","click_url":"https://www.alve.com/products/show/4000469?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1389.0},{"id":1820238,"name":"SAMSUNG
+    GALAXY S4 I9500 16GB BEYAZ","sku_id":146414,"shop_id":168,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/1820238?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1391.22},{"id":1135739,"name":"Samsung
+    Galaxy S4 i9500 16 Gb Siyah Cep Telefonu","sku_id":146414,"shop_id":77,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/1135739?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1395.0},{"id":1159358,"name":"SAMSUNG
+    I9500 Galaxy S4 16 GB","sku_id":146414,"shop_id":81,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/1159358?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1399.0},{"id":1159713,"name":"Beyaz","sku_id":146414,"shop_id":81,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/1159713?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1399.0},{"id":5024167,"name":"SAMSUNG
+    \u01309500 GALAXY S4 16GB CEP TELEFONU-D\u0130ST","sku_id":146414,"shop_id":107,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/5024167?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1399.0},{"id":4928813,"name":"SAMSUNG
+    I9500 GALAXY S4 16 GB BEYAZ AKILLI TELEFON","sku_id":146414,"shop_id":65,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/4928813?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1399.0},{"id":4928857,"name":"SAMSUNG
+    I9500 GALAXY S4 16 GB SIYAH AKILLI TELEFON","sku_id":146414,"shop_id":65,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/4928857?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1399.0},{"id":4928869,"name":"SAMSUNG
+    I9500 GALAXY S4 16 GB KIRMIZI AKILLI TELEFON","sku_id":146414,"shop_id":65,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/4928869?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1399.0}],"meta":{"pagination":{"total_results":88,"total_pages":4,"page":1,"per":25}}}'
+:created_at: 2014-08-12 12:16:24.022573711 +03:00

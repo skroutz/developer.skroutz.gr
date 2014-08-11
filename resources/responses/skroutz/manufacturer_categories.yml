@@ -1,36 +1,36 @@
 ---
 :request:
-  :url: http://skroutz.gr/api/manufacturers/356/categories
+  :url: http://api.skroutz.gr/api/manufacturers/356/categories
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer fYxk5iZjO44DwXwkwP5SW7cHwaqFMbc5riQ4JQFgeVNe1epmAHlDtGjvAPhVAIH1aPLiQt67RSrVasw9o7EEQ==
+    :authorization: Bearer W5lqBPwCzzX3VoJpnC4NZdimjEiABofdu5aAUG1SjiKO2fUgStTVloVzStT/kO/w6T7lCSmhZE64NWwUxc//rw==
   :params:
     :per: 2
   :verb: GET
 :response:
   :status: 200
   :headers:
-    server: nginx
-    content-type: application/json; charset=utf-8
+    !binary "c2VydmVy": nginx
+    !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
     !binary "dmFyeQ==": Accept-Encoding
-    status: 200 OK
-    !binary "bGluaw==": <http://api.skroutz.gr/api/manufacturers/356/categories?page=28&per=2>;
+    !binary "c3RhdHVz": 200 OK
+    !binary "bGluaw==": <http://api.skroutz.gr/api/manufacturers/356/categories?page=27&per=2>;
       rel="last", <http://api.skroutz.gr/api/manufacturers/356/categories?page=2&per=2>;
       rel="next"
-    x-ua-compatible: IE=Edge,chrome=1
-    cache-control: max-age=0, private, must-revalidate
-    x-request-id: '2406163911'
-    x-runtime: '0.043087'
-    x-dns-prefetch-control: 'off'
-    x-app: lunkwill
-    content-length: '300'
-    accept-ranges: bytes
-    date: Mon, 14 Jul 2014 12:06:28 GMT
-    x-varnish: '2406163911'
-    age: '0'
-    via: 1.1 varnish
-    connection: close
-    x-origin: varnish2
-    x-cache: MISS
-  :body: ! '{"categories":[{"id":40,"name":"\u039a\u03b9\u03bd\u03b7\u03c4\u03ac \u03a4\u03b7\u03bb\u03ad\u03c6\u03c9\u03bd\u03b1","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/40.jpg","parent_id":86,"fashion":false,"show_specifications":true,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"},{"id":1105,"name":"Tablets","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/1105.jpg","parent_id":1612,"fashion":false,"show_specifications":true,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"}],"meta":{"pagination":{"total_results":55,"total_pages":28,"page":1,"per":2}}}'
-:created_at: 2014-07-14 15:06:28.729909679 +03:00
+    !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
+    !binary "Y2FjaGUtY29udHJvbA==": max-age=0, private, must-revalidate
+    !binary "eC1yZXF1ZXN0LWlk": '2573771052'
+    !binary "eC1ydW50aW1l": '0.064439'
+    !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
+    !binary "eC1hcHA=": lunkwill
+    !binary "Y29udGVudC1sZW5ndGg=": '300'
+    !binary "YWNjZXB0LXJhbmdlcw==": bytes
+    !binary "ZGF0ZQ==": Mon, 11 Aug 2014 14:19:27 GMT
+    !binary "eC12YXJuaXNo": '2573771052'
+    !binary "YWdl": '0'
+    !binary "dmlh": 1.1 varnish
+    !binary "Y29ubmVjdGlvbg==": close
+    !binary "eC1vcmlnaW4=": varnish2
+    !binary "eC1jYWNoZQ==": MISS
+  :body: ! '{"categories":[{"id":40,"name":"\u039a\u03b9\u03bd\u03b7\u03c4\u03ac \u03a4\u03b7\u03bb\u03ad\u03c6\u03c9\u03bd\u03b1","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/40.jpg","parent_id":86,"fashion":false,"show_specifications":true,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"},{"id":1105,"name":"Tablets","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/1105.jpg","parent_id":1612,"fashion":false,"show_specifications":true,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"}],"meta":{"pagination":{"total_results":54,"total_pages":27,"page":1,"per":2}}}'
+:created_at: 2014-08-11 17:19:27.226212145 +03:00
