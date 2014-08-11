@@ -9,12 +9,7 @@ locale:
     - 'el'
 ---
 
-<div class="alert alert-info">
-  <p>
-    <span>This page is also available in:</span>
-    <%= bs_text(locale_links(current_page), 'nav-lang nav-lang-inline') %>
-  </p>
-</div>
+<%= partial 'partials/page_locales' %>
 
 # Data Feed Specification
 

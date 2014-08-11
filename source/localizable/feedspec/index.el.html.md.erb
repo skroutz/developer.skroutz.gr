@@ -6,12 +6,7 @@ locale:
     - 'el'
 ---
 
-<div class="alert alert-info">
-  <p>
-    <span>Η σελίδα είναι επίσης διαθέσιμη σε:</span>
-    <%= bs_text(locale_links(current_page), 'nav-lang nav-lang-inline') %>
-  </p>
-</div>
+<%= partial 'partials/page_locales' %>
 
 # Προδιαγραφές XML
 
