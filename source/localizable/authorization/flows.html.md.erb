@@ -3,152 +3,166 @@ parent: oauth
 title: flows
 ---
 
-# Supported Authorization Flows
+# Authorization Flows
 
-* toc
+##### <%= t('common.toc') %>
+
+* TOC
 {:toc}
 
-## Server-side web applications
-
-This flow is designed for web applications that can store `tokens` and maintain
-`state`. For a detailed description read the
-[specification](http://tools.ietf.org/html/draft-ietf-oauth-v2-16#section-4.1).
-
-Τhe required authorization access tokens are generated in two steps.
-
-Your application should redirect user to <%= settings.site_name %>
-to authorize access to his data. After authorization access for your application
-is granted by user, <%= settings.site_name %> will send an
-`authorization_code` to your application. Use that `authorization_code` to
-generate the `access_token`, which will expire after one hour. Also, use that
-`authorization_code` to generate a `refresh_token` and create new tokens after
-the expiration of the existing.
-
-The examples of this document will use the following `client_id` and
-`client_secret` pair of keys:
-
-~~~ yaml
-client_id:      1234567
-client_secret:  ABCD
-~~~
 
 ## Generate `access_token`
+The first thing you need to do before any request which requires authorization is to
+grab a valid access_token. Depending on your application's needs you either need an
+`application token` or a `user token`.
 
-First, redirect your Users to
-`https://www.<%= settings.domain %>/oauth2/authorizarions/new`
-with the required parameters:
+> Keep in mind that a user token can also be used for accessing public resources as well,
+taken that it was generated containing the `public` permission in the `scope` parameter.
 
-* your application's `client_id`
-* the `redirect_uri` to receive the response. This **must** be the same with the
-  one you declared at your application registration.
+### Application Token
 
-To use that flow, the `response_type=code` parameter is required. For example:
+An implementation of <a href='http://tools.ietf.org/html/rfc6749#section-4.4' class="emph-link external" target="_blank">client-credentials</a>,
+allowing you to access **only** public resources.
+
+Expires `a month` upon creation.
+
+The request signature of an application token request (client_credentials) is the
+following:
+
+<pre class="terminal">
+POST https://<%= settings.domain %>/oauth2/token
+</pre>
+
+Name            | Type     | Required | Description
+----------------| ---------|----------| -----------
+`client_id`     | String   | yes      | The client_id supplied by <%= settings.site_name.capitalize %> for the application
+`client_secret` | String   | yes      | The client_secret supplied by <%= settings.site_name.capitalize %> for the application
+`redirect_uri`  | String   | yes      | The redirect_uri set for the application
+`grant_type`    | String   | yes      | client_credentials
+`scope`         | String   | no       | The space separated set of permissions your application wishes
+
+### User Token
+
+It grants access to user resources and is generated in two steps.
+
+Expires `a day` upon creation.
+
+#### Step 1 - Get an <a href="http://tools.ietf.org/html/rfc6749#section-4.1">authorization code</a>
+
+The request signature of an authorization code request is the following:
 
 <pre class="terminal">
 GET https://www.<%= settings.domain %>/oauth2/authorizations/new
-
-Parameters
-  client_id: 1234567
-  redirect_uri: https://your.site.com/callback
-  response_type: code
 </pre>
 
+Name            | Type     | Required  | Description
+----------------| ---------|-----------| -----------
+`client_id`     | String   | yes       | The client_id supplied by <%= settings.site_name.capitalize %> for the application
+`redirect_uri`  | String   | yes       | The redirect_uri set for the application
+`response_type` | String   | yes       | The value should be "code"
+`scope`         | String   | yes       | The space separated set of permissions your application wishes
 
-Example:
+If you perform the above request the user will get to see a screen prompting to
+authorize your application to access the resources you specified in the 
+<span class="label label-default">scope</span> parameter.
+
+Given that the user granted your application the requested permissions, you are then redirected to:
 
 <pre class="terminal">
-GET https://www.<%= settings.domain %>/oauth2/authorizations/new?
-      client_id=1234567&
-      redirect_uri=https://your.site.com/callback&
-      response_type=code
+http://your_redirect_uri?code=a_valid_authorization_code
 </pre>
 
-Then, the user will authenticate and authorize access, or not, to his data for
-your application.
-If the user grant access, we will redirect him at:
+Otherwise you will get redirected to:
 
 <pre class="terminal">
-https://your.site.com/callback?code=aCoDE
+https://your_redirect_uri?error=access_denied
 </pre>
 
-Otherwise, we will redirect him at:
+#### Step 2 - Exchange the authorization code for an oauth_token and a refresh token
 
-<pre class="terminal">
-https://your.site.com/callback?error=access_denied
-</pre>
-
-If the user authorize access, then you will receive the `authorization_code`, as
-`code`, to access his data. In case of access denial, it is recommended to
-redirect user to your registration form or proceed to checkout.
-
-Thereafter, your application should use the `authorization_code` to generate an
-`access_token` and a `refresh_token`. This, can be done with the following API
-call:
+The request signature of an access token request is the following:
 
 <pre class="terminal">
 POST https://www.<%= settings.domain %>/oauth2/token
-
-Parameters
-  client_id: 1234567
-  client_secret: ABCD
-  redirect_uri: https://your.site.com/callback
-  code: aCoDE
-  grant_type: authorization_code
 </pre>
 
-For example, the request could be:
+Name            | Type   | Required | Description
+----------------| -------|----------| -----------
+`client_id`     | String | yes      | The client_id supplied by <%= settings.site_name.capitalize %> for the application
+`client_secret` | String | yes      | The client_secret supplied by <%= settings.site_name.capitalize %> for the application
+`redirect_uri`  | String | yes      | The redirect_uri registered for the application
+`response_type` | String | yes      | The value should be "code"
+`grant_type`    | String | yes      | The value should be "authorization_code"
+`code`          | String | yes      | The authorization code obtained
 
-<pre class="terminal">
-POST /oauth2/token HTTP/1.1
-Host: www.<%= settings.domain %>
-Content-Type: application/x-www-form-urlencoded
+If the request was successful, the response contains JSON in the following form:
 
-client_id=1234567&
-client_secret=ABCD&
-redirect_uri=https://your.site.com/callback&
-code=aCoDE&
-grant_type=authorization_code
-</pre>
-
-<%= settings.site_name %> will respond to you with the two tokens
-in JSON format and the `access_token` TTL (Time To Live) in seconds.
-
-~~~ javascript
+~~~javascript
 {
-  "access_token": "124fFAGRNJru1FTz70BzhT3Zg...",
-  "refresh_token": "1236BMfW9j53gdGImsixUH6kU5...",
-  "expires_in": 3600
+    "access_token": "your_access_token",
+    "refresh_token": "your_refresh_token",
+    "token_type": "bearer",
+    "expires_in": 3599
 }
 ~~~
 
-> By default, `access_token` expires in **1 hour** (3600 seconds).
+<div class="alert alert-warning" role="alert">
+  <i class="fa fa-exclamation-triangle"></i>
+  expires_in field is counted in seconds.
+</div>
+
+--------------------------------------
 
 ## Consume `access_token`
 
-Use the `access_token` to access a users' private data. For example:
+There are 2 ways to specify your access_token in a request.
 
-<pre class="terminal">
-curl https://www.<%= settings.domain %>/oauth2/address?oauth_token=124fFAGRNJru1FTz70BzhT3Zg...
-</pre>
+###### 1. As a parameter
 
-A list of all the <%= settings.site_name %> OAuth 2.0 API endpoints
-can be found at <%= link_to 'OAuth Endpoints', '/oauthdoc/endpoints' %>
+<%= render_code_from_file "authentication/#{flavor}/example_search_request_parameter" %>
+
+###### 2. As a header
+
+<%= render_code_from_file "authentication/#{flavor}/example_search_request_header" %>
+
+> Mind not to use both at the same time.
 
 ## Renew `access_token`
 
 Any API call with an expired `access_token` receives an HTTP `401 Unauthorized`
 response.
 
-To create a new `access_token` a POST request with the `refresh_token` is
-required. For example:  
+### Application Token
+If your application token you're using gets expired you have to get a
+new one in the exact way you got the last one.
 
 <pre class="terminal">
-POST /oauth2/token HTTP/1.1
-Host: www.<%= settings.domain %>
-Content-Type: application/x-www-form-urlencoded
-
-client_id=1234567&
-client_secret=ABCD&
-refresh_token=1236BMfW9j53gdGImsixUH6kU5...&
-grant_type=refresh_token
+POST https://www.<%= settings.domain %>/oauth2/token
 </pre>
+
+Name            | Type     | Required | Description
+----------------| ---------|----------| -----------
+`client_id`     | String   | yes      | The client_id supplied by <%= settings.site_name.capitalize %> for the application
+`client_secret` | String   | yes      | The client_secret supplied by <%= settings.site_name.capitalize %> for the application
+`redirect_uri`  | String   | yes      | The redirect_uri set for the application
+`grant_type`    | String   | yes      | client_credentials
+`scope`         | String   | no       | The space separated set of permissions your application wishes
+
+The above request will respond with an existing or a new application token. Notice that
+in this case you don't need to exchange a refresh token for an application token.
+
+### User Token
+When a user token gets expired you need to exchange the refresh token
+you've been given for a new valid token.
+
+<pre class="terminal">
+POST https://www.<%= settings.domain %>/oauth2/token
+</pre>
+
+Name            | Type     | Required | Description
+----------------| ---------|----------| -----------
+`client_id`     | String   | yes      | The client_id supplied by <%= settings.site_name.capitalize %> for the application
+`client_secret` | String   | yes      | The client_secret supplied by <%= settings.site_name.capitalize %> for the application
+`refresh_token` | String   | yes      | the refresh_token obtained in an earlier step
+`grant_type`    | String   | yes      | refresh_token
+
