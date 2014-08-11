@@ -1,31 +1,31 @@
 ---
 :request:
-  :url: http://alve.com/api/skus/146414/favorite
+  :url: http://api.alve.com/skus/146414/favorite
   :headers:
     :accept: application/vnd.alve+json; version=3
-    :authorization: Bearer yNE9qe8AC6yVbnVV8ofDPFiitoAREfqiq3THA6NYLQvUHbLHqlmUhHQ6kudbdrHa/0FlExa75mpN4PG/DEzSKw==
+    :authorization: Bearer jRc1LQwgl9wVf6QJT1hTfSL32I7V97Yta5fjEpDUHIDoPox/jRhUTe0K19DamN4NArCAy7tTrUyI8yXRxOVWg==
   :verb: GET
 :response:
   :status: 200
   :headers:
-    server: nginx
+    !binary "c2VydmVy": nginx
     !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
     !binary "dmFyeQ==": Accept-Encoding
-    status: 200 OK
-    x-ua-compatible: IE=Edge,chrome=1
-    cache-control: max-age=0, private, must-revalidate
-    x-request-id: '980449287'
-    x-runtime: '0.045771'
-    x-dns-prefetch-control: 'off'
-    x-app: as2
-    content-length: '139'
-    accept-ranges: bytes
-    date: Fri, 18 Jul 2014 15:17:37 GMT
-    x-varnish: '980449287'
-    age: '0'
-    via: 1.1 varnish
-    connection: close
-    x-origin: varnish1
-    x-cache: MISS
-  :body: ! '{"favorites":[{"id":1028,"have_it":false,"user_id":725,"user_notes":null,"sku_id":146414,"created_at":"2014-07-18T18:10:33+03:00","updated_at":"2014-07-18T18:10:33+03:00"}]}'
-:created_at: 2014-07-18 18:17:37.553213321 +03:00
+    !binary "c3RhdHVz": 200 OK
+    !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
+    !binary "Y2FjaGUtY29udHJvbA==": max-age=0, private, must-revalidate
+    !binary "eC1yZXF1ZXN0LWlk": '463125328'
+    !binary "eC1ydW50aW1l": '0.027181'
+    !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
+    !binary "eC1hcHA=": as2
+    !binary "Y29udGVudC1sZW5ndGg=": '146'
+    !binary "YWNjZXB0LXJhbmdlcw==": bytes
+    !binary "ZGF0ZQ==": Tue, 12 Aug 2014 09:16:24 GMT
+    !binary "eC12YXJuaXNo": '463125328'
+    !binary "YWdl": '0'
+    !binary "dmlh": 1.1 varnish
+    !binary "Y29ubmVjdGlvbg==": close
+    !binary "eC1vcmlnaW4=": varnish2
+    !binary "eC1jYWNoZQ==": MISS
+  :body: ! '{"favorites":[{"id":1028,"have_it":true,"user_id":725,"user_notes":null,"sku_id":146414,"created_at":"2014-07-18T18:10:33+03:00","updated_at":"2014-08-12T11:17:00+03:00"}]}'
+:created_at: 2014-08-12 12:16:24.157914613 +03:00

@@ -1,38 +1,41 @@
 ---
 :request:
-  :url: http://skroutz.gr/api/categories?page=1&per=5
+  :url: http://api.skroutz.gr/api/categories
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer fYxk5iZjO44DwXwkwP5SW7cHwaqFMbc5riQ4JQFgeVNe1epmAHlDtGjvAPhVAIH1aPLiQt67RSrVasw9o7EEQ==
+    :authorization: Bearer W5lqBPwCzzX3VoJpnC4NZdimjEiABofdu5aAUG1SjiKO2fUgStTVloVzStT/kO/w6T7lCSmhZE64NWwUxc//rw==
+  :params:
+    :page: 1
+    :per: 5
   :verb: GET
 :response:
   :status: 200
   :headers:
-    server: nginx
-    content-type: application/json; charset=utf-8
+    !binary "c2VydmVy": nginx
+    !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
     !binary "dmFyeQ==": Accept-Encoding
-    status: 200 OK
-    cache-control: max-age=300, private
-    x-ua-compatible: IE=Edge,chrome=1
-    x-request-id: '2406163737'
-    x-runtime: '0.038719'
-    x-dns-prefetch-control: 'off'
-    x-app: lunkwill
-    content-length: '442'
-    accept-ranges: bytes
-    date: Mon, 14 Jul 2014 12:06:27 GMT
-    x-varnish: '2406163737'
-    age: '0'
-    via: 1.1 varnish
-    connection: close
-    x-origin: varnish2
-    x-cache: MISS
-  :body: ! '{"categories":[{"id":1269,"name":"\u03a4\u03b5\u03c7\u03bd\u03bf\u03bb\u03bf\u03b3\u03af\u03b1","children_count":8,"image_url":"http://b.scdn.gr/images/categories/large/1269.jpg","parent_id":76,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"},{"id":274,"name":"\u039c\u03cc\u03b4\u03b1
-    - \u039f\u03bc\u03bf\u03c1\u03c6\u03b9\u03ac","children_count":12,"image_url":"http://d.scdn.gr/images/categories/large/274.jpg","parent_id":76,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"},{"id":417,"name":"\u03a0\u03b1\u03b9\u03b4\u03b9\u03ba\u03ac
-    - \u0392\u03c1\u03b5\u03c6\u03b9\u03ba\u03ac","children_count":14,"image_url":"http://a.scdn.gr/images/categories/large/417.jpg","parent_id":76,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"},{"id":255,"name":"Hobby
-    - \u0391\u03b8\u03bb\u03b7\u03c4\u03b9\u03c3\u03bc\u03cc\u03c2","children_count":10,"image_url":"http://a.scdn.gr/images/categories/large/255.jpg","parent_id":76,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"},{"id":11,"name":"\u03a3\u03c0\u03af\u03c4\u03b9
-    - \u039a\u03ae\u03c0\u03bf\u03c2","children_count":12,"image_url":"http://d.scdn.gr/images/categories/large/11.jpg","parent_id":76,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"},{"id":33,"name":"Auto
-    - Moto","children_count":4,"image_url":"http://a.scdn.gr/images/categories/large/33.jpg","parent_id":76,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"}],"meta":{"pagination":{"total_results":6,"total_pages":1,"page":1,"per":25}}}'
-:created_at: 2014-07-14 15:06:27.274508920 +03:00
+    !binary "c3RhdHVz": 200 OK
+    !binary "bGluaw==": <http://api.skroutz.gr/api/categories?page=277&per=5>; rel="last",
+      <http://api.skroutz.gr/api/categories?page=2&per=5>; rel="next"
+    !binary "Y2FjaGUtY29udHJvbA==": max-age=300, private
+    !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
+    !binary "eC1yZXF1ZXN0LWlk": '2573770932'
+    !binary "eC1ydW50aW1l": '0.050353'
+    !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
+    !binary "eC1hcHA=": lunkwill
+    !binary "Y29udGVudC1sZW5ndGg=": '418'
+    !binary "YWNjZXB0LXJhbmdlcw==": bytes
+    !binary "ZGF0ZQ==": Mon, 11 Aug 2014 14:19:26 GMT
+    !binary "eC12YXJuaXNo": '2573770932'
+    !binary "YWdl": '0'
+    !binary "dmlh": 1.1 varnish
+    !binary "Y29ubmVjdGlvbg==": close
+    !binary "eC1vcmlnaW4=": varnish2
+    !binary "eC1jYWNoZQ==": MISS
+  :body: ! '{"categories":[{"id":1,"name":"\u03a3\u03c4\u03b1\u03b8\u03b5\u03c1\u03ae
+    \u03a4\u03b7\u03bb\u03b5\u03c6\u03c9\u03bd\u03af\u03b1","children_count":5,"image_url":"http://a.scdn.gr/images/categories/large/1.jpg","parent_id":2,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"},{"id":2,"name":"\u03a4\u03b7\u03bb\u03b5\u03c6\u03c9\u03bd\u03af\u03b1","children_count":3,"image_url":"http://a.scdn.gr/images/categories/large/2.jpg","parent_id":1269,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"},{"id":5,"name":"\u03a6\u03c9\u03c4\u03bf\u03b3\u03c1\u03b1\u03c6\u03af\u03b1
+    & Video","children_count":3,"image_url":"http://a.scdn.gr/images/categories/large/5.jpg","parent_id":1269,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"},{"id":6,"name":"\u0391\u03be\u03b5\u03c3\u03bf\u03c5\u03ac\u03c1  \u0389\u03c7\u03bf\u03c5
+    & \u0395\u03b9\u03ba\u03cc\u03bd\u03b1\u03c2","children_count":3,"image_url":"http://a.scdn.gr/images/categories/large/6.jpg","parent_id":309,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"},{"id":10,"name":"Projectors","children_count":0,"image_url":"http://d.scdn.gr/images/categories/large/10.jpg","parent_id":79,"fashion":false,"show_specifications":true,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"}],"meta":{"pagination":{"total_results":1384,"total_pages":277,"page":1,"per":5}}}'
+:created_at: 2014-08-11 17:19:26.044172981 +03:00
 :meta:
   :description: Lists all categories

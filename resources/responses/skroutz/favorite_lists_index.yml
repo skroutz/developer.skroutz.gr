@@ -1,32 +1,32 @@
 ---
 :request:
-  :url: http://skroutz.gr/api/favorite_lists
+  :url: http://api.skroutz.gr/api/favorite_lists
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer fYxk5iZjO44DwXwkwP5SW7cHwaqFMbc5riQ4JQFgeVNe1epmAHlDtGjvAPhVAIH1aPLiQt67RSrVasw9o7EEQ==
+    :authorization: Bearer W5lqBPwCzzX3VoJpnC4NZdimjEiABofdu5aAUG1SjiKO2fUgStTVloVzStT/kO/w6T7lCSmhZE64NWwUxc//rw==
   :verb: GET
 :response:
   :status: 200
   :headers:
-    server: nginx
-    content-type: application/json; charset=utf-8
+    !binary "c2VydmVy": nginx
+    !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
     !binary "dmFyeQ==": Accept-Encoding
-    status: 200 OK
-    x-ua-compatible: IE=Edge,chrome=1
-    cache-control: max-age=0, private, must-revalidate
-    x-request-id: '225152090'
-    x-runtime: '0.044060'
-    x-dns-prefetch-control: 'off'
-    x-app: lunkwill
-    content-length: '569'
-    accept-ranges: bytes
-    date: Mon, 14 Jul 2014 12:06:31 GMT
-    x-varnish: '225152090'
-    age: '0'
-    via: 1.1 varnish
-    connection: close
-    x-origin: varnish1
-    x-cache: MISS
+    !binary "c3RhdHVz": 200 OK
+    !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
+    !binary "Y2FjaGUtY29udHJvbA==": max-age=0, private, must-revalidate
+    !binary "eC1yZXF1ZXN0LWlk": '464666423'
+    !binary "eC1ydW50aW1l": '0.048493'
+    !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
+    !binary "eC1hcHA=": lunkwill
+    !binary "Y29udGVudC1sZW5ndGg=": '591'
+    !binary "YWNjZXB0LXJhbmdlcw==": bytes
+    !binary "ZGF0ZQ==": Mon, 11 Aug 2014 14:19:29 GMT
+    !binary "eC12YXJuaXNo": '464666423'
+    !binary "YWdl": '0'
+    !binary "dmlh": 1.1 varnish
+    !binary "Y29ubmVjdGlvbg==": close
+    !binary "eC1vcmlnaW4=": varnish1
+    !binary "eC1jYWNoZQ==": MISS
   :body: ! '{"favorite_lists":[{"id":115268,"category_id":299,"name":"\u03a0\u03bf\u03b4\u03ae\u03bb\u03b1\u03c4\u03b1"},{"id":115269,"category_id":376,"name":"\u0391\u03be\u03b5\u03c3\u03bf\u03c5\u03ac\u03c1
     \u03a0\u03bf\u03b4\u03b7\u03bb\u03ac\u03c4\u03c9\u03bd"},{"id":118563,"category_id":404,"name":"\u03a8\u03c5\u03b3\u03b5\u03af\u03b1"},{"id":168373,"category_id":null,"name":"awesome"},{"id":174805,"category_id":345,"name":"\u039c\u03af\u03ba\u03c4\u03b5\u03c2
     & \u039a\u03bf\u03bd\u03c3\u03cc\u03bb\u03b5\u03c2"},{"id":181437,"category_id":239,"name":"\u0395\u03bd\u03b9\u03c3\u03c7\u03c5\u03c4\u03ad\u03c2
@@ -37,5 +37,6 @@
     Components"},{"id":227903,"category_id":453,"name":"\u0391\u03ba\u03bf\u03c5\u03c3\u03c4\u03b9\u03ba\u03ad\u03c2
     \u039a\u03b9\u03b8\u03ac\u03c1\u03b5\u03c2"},{"id":228818,"category_id":40,"name":"\u039a\u03b9\u03bd\u03b7\u03c4\u03ac
     \u03a4\u03b7\u03bb\u03ad\u03c6\u03c9\u03bd\u03b1"},{"id":228821,"category_id":null,"name":"bloom"},{"id":234055,"category_id":821,"name":"\u0393\u03c5\u03bd\u03b1\u03b9\u03ba\u03b5\u03af\u03b5\u03c2
-    \u03a4\u03c3\u03ac\u03bd\u03c4\u03b5\u03c2"}],"meta":{"pagination":{"total_results":18,"total_pages":1,"page":1,"per":25}}}'
-:created_at: 2014-07-14 15:06:31.498087665 +03:00
+    \u03a4\u03c3\u03ac\u03bd\u03c4\u03b5\u03c2"},{"id":261807,"category_id":790,"name":"\u0393\u03c5\u03b1\u03bb\u03b9\u03ac
+    \u0397\u03bb\u03af\u03bf\u03c5"}],"meta":{"pagination":{"total_results":19,"total_pages":1,"page":1,"per":25}}}'
+:created_at: 2014-08-11 17:19:29.503340306 +03:00

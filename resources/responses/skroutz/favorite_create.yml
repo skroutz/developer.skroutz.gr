@@ -1,40 +1,33 @@
 ---
 :request:
   :verb: POST
-  :url: http://skroutz.gr/api/favorites
+  :url: http://api.skroutz.gr/api/favorites
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer fYxk5iZjO44DwXwkwP5SW7cHwaqFMbc5riQ4JQFgeVNe1epmAHlDtGjvAPhVAIH1aPLiQt67RSrVasw9o7EEQ==
+    :authorization: Bearer W5lqBPwCzzX3VoJpnC4NZdimjEiABofdu5aAUG1SjiKO2fUgStTVloVzStT/kO/w6T7lCSmhZE64NWwUxc//rw==
   :params:
     :favorite[sku_id]: 89645
 :response:
-  :status: 200
+  :status: 201
   :headers:
-    server: nginx
-    content-type: application/json; charset=utf-8
-    !binary "dmFyeQ==": Accept-Encoding
-    status: 200 OK
-    !binary "bGluaw==": <http://api.skroutz.gr/api/favorites?favorite%5Bsku_id%5D=89645&page=2>;
-      rel="last", <http://api.skroutz.gr/api/favorites?favorite%5Bsku_id%5D=89645&page=2>;
-      rel="next"
-    x-ua-compatible: IE=Edge,chrome=1
-    cache-control: max-age=0, private, must-revalidate
-    x-request-id: '225152041'
-    x-runtime: '0.071382'
-    x-dns-prefetch-control: 'off'
-    x-app: lunkwill
-    content-length: '912'
-    accept-ranges: bytes
-    date: Mon, 14 Jul 2014 12:06:31 GMT
-    x-varnish: '225152041'
-    age: '0'
-    via: 1.1 varnish
-    connection: close
-    x-origin: varnish1
-    x-cache: MISS
-  :body: ! '{"favorites":[{"id":252116,"have_it":true,"user_id":132950,"user_notes":"\u039a\u03cc\u03b2\u03b5\u03b9
-    \u03c4\u03bf \u03b6\u03b1\u03bc\u03c0\u03cc\u03bd \u03c3\u03b1\u03bd \u03bd\u03b1
-    \u03ae\u03c4\u03b1\u03bd \u03b2\u03bf\u03cd\u03c4\u03b7\u03c1\u03bf. \u0395\u03af\u03bd\u03b1\u03b9
-    \u03c0\u03c1\u03b1\u03b3\u03bc\u03b1\u03c4\u03b9\u03ba\u03cc \u03ad\u03c1\u03b3\u03bf
-    \u03c4\u03ad\u03c7\u03bd\u03b7\u03c2.","sku_id":1137426,"created_at":"2013-04-09T16:16:25+03:00","updated_at":"2013-04-09T16:17:02+03:00"},{"id":254728,"have_it":true,"user_id":132950,"user_notes":null,"sku_id":345333,"created_at":"2013-04-12T00:57:44+03:00","updated_at":"2013-07-16T23:11:00+03:00"},{"id":333818,"have_it":false,"user_id":132950,"user_notes":null,"sku_id":2641088,"created_at":"2013-08-19T10:49:35+03:00","updated_at":"2014-07-03T15:06:23+03:00"},{"id":333819,"have_it":false,"user_id":132950,"user_notes":null,"sku_id":2478753,"created_at":"2013-08-19T10:49:51+03:00","updated_at":"2014-04-16T12:05:18+03:00"},{"id":333820,"have_it":false,"user_id":132950,"user_notes":null,"sku_id":1741555,"created_at":"2013-08-19T10:50:42+03:00","updated_at":"2014-06-06T08:40:55+03:00"},{"id":333822,"have_it":false,"user_id":132950,"user_notes":null,"sku_id":3313148,"created_at":"2013-08-19T10:51:11+03:00","updated_at":"2013-08-19T10:51:11+03:00"},{"id":333824,"have_it":false,"user_id":132950,"user_notes":null,"sku_id":2836539,"created_at":"2013-08-19T10:51:15+03:00","updated_at":"2013-08-19T10:51:15+03:00"},{"id":333826,"have_it":false,"user_id":132950,"user_notes":null,"sku_id":2836542,"created_at":"2013-08-19T10:51:18+03:00","updated_at":"2013-08-19T10:51:18+03:00"},{"id":333827,"have_it":false,"user_id":132950,"user_notes":null,"sku_id":2836541,"created_at":"2013-08-19T10:51:19+03:00","updated_at":"2013-08-19T10:51:19+03:00"},{"id":340676,"have_it":true,"user_id":132950,"user_notes":null,"sku_id":299755,"created_at":"2013-08-29T13:02:24+03:00","updated_at":"2013-08-29T13:02:59+03:00"},{"id":340715,"have_it":true,"user_id":132950,"user_notes":null,"sku_id":423163,"created_at":"2013-08-29T14:10:18+03:00","updated_at":"2013-08-29T14:10:20+03:00"},{"id":340716,"have_it":true,"user_id":132950,"user_notes":null,"sku_id":341338,"created_at":"2013-08-29T14:10:42+03:00","updated_at":"2013-08-29T14:10:43+03:00"},{"id":344652,"have_it":false,"user_id":132950,"user_notes":null,"sku_id":2626765,"created_at":"2013-09-02T23:40:46+03:00","updated_at":"2014-07-10T20:30:20+03:00"},{"id":355380,"have_it":false,"user_id":132950,"user_notes":null,"sku_id":325404,"created_at":"2013-09-14T16:26:54+03:00","updated_at":"2013-09-14T16:26:54+03:00"},{"id":355671,"have_it":false,"user_id":132950,"user_notes":null,"sku_id":446748,"created_at":"2013-09-14T22:30:26+03:00","updated_at":"2014-06-30T09:28:16+03:00"},{"id":419491,"have_it":true,"user_id":132950,"user_notes":null,"sku_id":3000146,"created_at":"2013-11-20T23:12:07+02:00","updated_at":"2013-11-20T23:12:08+02:00"},{"id":419518,"have_it":true,"user_id":132950,"user_notes":null,"sku_id":274693,"created_at":"2013-11-20T23:30:58+02:00","updated_at":"2013-11-20T23:30:59+02:00"},{"id":420880,"have_it":true,"user_id":132950,"user_notes":null,"sku_id":1621240,"created_at":"2013-11-22T14:19:46+02:00","updated_at":"2013-11-22T14:19:48+02:00"},{"id":450507,"have_it":true,"user_id":132950,"user_notes":null,"sku_id":312259,"created_at":"2013-12-18T20:29:27+02:00","updated_at":"2013-12-18T20:29:29+02:00"},{"id":475566,"have_it":true,"user_id":132950,"user_notes":null,"sku_id":2287737,"created_at":"2013-12-29T21:45:44+02:00","updated_at":"2013-12-30T20:21:10+02:00"},{"id":490503,"have_it":false,"user_id":132950,"user_notes":null,"sku_id":420982,"created_at":"2014-01-08T22:55:38+02:00","updated_at":"2014-06-30T14:09:39+03:00"},{"id":495190,"have_it":true,"user_id":132950,"user_notes":null,"sku_id":334630,"created_at":"2014-01-12T22:23:13+02:00","updated_at":"2014-01-12T22:23:15+02:00"},{"id":507137,"have_it":true,"user_id":132950,"user_notes":null,"sku_id":256466,"created_at":"2014-01-22T20:24:37+02:00","updated_at":"2014-03-31T13:45:32+03:00"},{"id":510161,"have_it":false,"user_id":132950,"user_notes":null,"sku_id":402716,"created_at":"2014-01-25T21:37:47+02:00","updated_at":"2014-06-02T00:39:39+03:00"},{"id":520707,"have_it":false,"user_id":132950,"user_notes":null,"sku_id":259499,"created_at":"2014-02-03T14:38:41+02:00","updated_at":"2014-03-17T18:39:49+02:00"}],"meta":{"pagination":{"total_results":49,"total_pages":2,"page":1,"per":25}}}'
-:created_at: 2014-07-14 15:06:31.274663057 +03:00
+    !binary "c2VydmVy": nginx
+    !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
+    !binary "c3RhdHVz": 201 Created
+    !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
+    etag: ! '"0f1d2267c52a2c3625abbcdf859eca3a"'
+    !binary "Y2FjaGUtY29udHJvbA==": max-age=0, private, must-revalidate
+    !binary "eC1yZXF1ZXN0LWlk": '464666394'
+    !binary "eC1ydW50aW1l": '0.086359'
+    !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
+    !binary "eC1hcHA=": lunkwill
+    !binary "Y29udGVudC1sZW5ndGg=": '174'
+    !binary "YWNjZXB0LXJhbmdlcw==": bytes
+    !binary "ZGF0ZQ==": Mon, 11 Aug 2014 14:19:29 GMT
+    !binary "eC12YXJuaXNo": '464666394'
+    !binary "YWdl": '0'
+    !binary "dmlh": 1.1 varnish
+    !binary "Y29ubmVjdGlvbg==": close
+    !binary "eC1vcmlnaW4=": varnish1
+    !binary "eC1jYWNoZQ==": MISS
+  :body: ! '{"favorite":{"id":772719,"have_it":false,"user_id":132950,"user_notes":null,"sku_id":89645,"created_at":"2014-08-11T17:19:29+03:00","updated_at":"2014-08-11T17:19:29+03:00"}}'
+:created_at: 2014-08-11 17:19:29.358457028 +03:00

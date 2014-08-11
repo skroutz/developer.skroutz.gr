@@ -1,6 +1,6 @@
 ---
 :request:
-  :url: http://api.skroutz.gr/api/shops/11/locations/2
+  :url: http://api.skroutz.gr/api/shops/11/locations/2?embed=address
   :headers:
     :accept: application/vnd.skroutz+json; version=3
     :authorization: Bearer W5lqBPwCzzX3VoJpnC4NZdimjEiABofdu5aAUG1SjiKO2fUgStTVloVzStT/kO/w6T7lCSmhZE64NWwUxc//rw==
@@ -14,20 +14,21 @@
     !binary "c3RhdHVz": 200 OK
     !binary "Y2FjaGUtY29udHJvbA==": max-age=300, private
     !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
-    !binary "eC1yZXF1ZXN0LWlk": '464666029'
-    !binary "eC1ydW50aW1l": '0.083047'
+    !binary "eC1yZXF1ZXN0LWlk": '2573771023'
+    !binary "eC1ydW50aW1l": '0.087254'
     !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
     !binary "eC1hcHA=": lunkwill
-    !binary "Y29udGVudC1sZW5ndGg=": '209'
+    !binary "Y29udGVudC1sZW5ndGg=": '282'
     !binary "YWNjZXB0LXJhbmdlcw==": bytes
     !binary "ZGF0ZQ==": Mon, 11 Aug 2014 14:19:26 GMT
-    !binary "eC12YXJuaXNo": '464666029'
+    !binary "eC12YXJuaXNo": '2573771023'
     !binary "YWdl": '0'
     !binary "dmlh": 1.1 varnish
     !binary "Y29ubmVjdGlvbg==": close
-    !binary "eC1vcmlnaW4=": varnish1
+    !binary "eC1vcmlnaW4=": varnish2
     !binary "eC1jYWNoZQ==": MISS
   :body: ! '{"location":{"id":2,"headquarter":true,"phones":["2105587700"],"pickup_point":true,"store":true,"full_address":"\u0398\u0395\u03a3\u0397
     \u03a3\u039a\u039b\u0397\u03a1\u0399 1, \u03a4.\u039a. 19600, \u039c\u0391\u0393\u039f\u03a5\u039b\u0391,
-    \u0391\u03c4\u03c4\u03b9\u03ba\u03ae\u03c2","lat":"38.083786","lng":"23.526396","info":""}}'
-:created_at: 2014-08-11 17:19:26.875397857 +03:00
+    \u0391\u03c4\u03c4\u03b9\u03ba\u03ae\u03c2","lat":"38.083786","lng":"23.526396","info":"","address":{"id":2,"street_number":"1","street":"\u0398\u0395\u03a3\u0397
+    \u03a3\u039a\u039b\u0397\u03a1\u0399","postcode":"19600","city":"\u039c\u0391\u0393\u039f\u03a5\u039b\u0391","region":"\u0391\u03c4\u03c4\u03b9\u03ba\u03ae\u03c2","country":"\u0395\u03bb\u03bb\u03ac\u03b4\u03b1"}}}'
+:created_at: 2014-08-11 17:19:26.977973231 +03:00

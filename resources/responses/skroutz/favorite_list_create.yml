@@ -1,43 +1,34 @@
 ---
 :request:
   :verb: POST
-  :url: http://skroutz.gr/api/favorite_lists
+  :url: http://api.skroutz.gr/api/favorite_lists
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer fYxk5iZjO44DwXwkwP5SW7cHwaqFMbc5riQ4JQFgeVNe1epmAHlDtGjvAPhVAIH1aPLiQt67RSrVasw9o7EEQ==
+    :authorization: Bearer W5lqBPwCzzX3VoJpnC4NZdimjEiABofdu5aAUG1SjiKO2fUgStTVloVzStT/kO/w6T7lCSmhZE64NWwUxc//rw==
   :params:
     :favorite_list[name]: a new list name
 :response:
   :status: 200
   :headers:
-    server: nginx
-    content-type: application/json; charset=utf-8
+    !binary "c2VydmVy": nginx
+    !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
     !binary "dmFyeQ==": Accept-Encoding
-    status: 200 OK
-    x-ua-compatible: IE=Edge,chrome=1
-    cache-control: max-age=0, private, must-revalidate
-    x-request-id: '2406164297'
-    x-runtime: '0.039559'
-    x-dns-prefetch-control: 'off'
-    x-app: lunkwill
-    content-length: '569'
-    accept-ranges: bytes
-    date: Mon, 14 Jul 2014 12:06:31 GMT
-    x-varnish: '2406164297'
-    age: '0'
-    via: 1.1 varnish
-    connection: close
-    x-origin: varnish2
-    x-cache: MISS
-  :body: ! '{"favorite_lists":[{"id":115268,"category_id":299,"name":"\u03a0\u03bf\u03b4\u03ae\u03bb\u03b1\u03c4\u03b1"},{"id":115269,"category_id":376,"name":"\u0391\u03be\u03b5\u03c3\u03bf\u03c5\u03ac\u03c1
-    \u03a0\u03bf\u03b4\u03b7\u03bb\u03ac\u03c4\u03c9\u03bd"},{"id":118563,"category_id":404,"name":"\u03a8\u03c5\u03b3\u03b5\u03af\u03b1"},{"id":168373,"category_id":null,"name":"awesome"},{"id":174805,"category_id":345,"name":"\u039c\u03af\u03ba\u03c4\u03b5\u03c2
-    & \u039a\u03bf\u03bd\u03c3\u03cc\u03bb\u03b5\u03c2"},{"id":181437,"category_id":239,"name":"\u0395\u03bd\u03b9\u03c3\u03c7\u03c5\u03c4\u03ad\u03c2
-    Hi-Fi"},{"id":184808,"category_id":61,"name":"USB Flash"},{"id":191818,"category_id":405,"name":"\u03a0\u03bb\u03c5\u03bd\u03c4\u03ae\u03c1\u03b9\u03b1
-    \u03a1\u03bf\u03cd\u03c7\u03c9\u03bd"},{"id":191822,"category_id":1443,"name":"\u03a6\u03bf\u03c5\u03c1\u03bd\u03ac\u03ba\u03b9\u03b1"},{"id":191974,"category_id":null,"name":"weird"},{"id":192498,"category_id":429,"name":"\u0395\u03c3\u03c4\u03af\u03b5\u03c2
-    \u039a\u03bf\u03c5\u03b6\u03af\u03bd\u03b1\u03c2"},{"id":194917,"category_id":92,"name":"\u03a4\u03c3\u03ac\u03bd\u03c4\u03b5\u03c2
-    Laptop"},{"id":198396,"category_id":571,"name":"\u0397\u03c7\u03b5\u03af\u03b1"},{"id":206639,"category_id":247,"name":"Hi-Fi
-    Components"},{"id":227903,"category_id":453,"name":"\u0391\u03ba\u03bf\u03c5\u03c3\u03c4\u03b9\u03ba\u03ad\u03c2
-    \u039a\u03b9\u03b8\u03ac\u03c1\u03b5\u03c2"},{"id":228818,"category_id":40,"name":"\u039a\u03b9\u03bd\u03b7\u03c4\u03ac
-    \u03a4\u03b7\u03bb\u03ad\u03c6\u03c9\u03bd\u03b1"},{"id":228821,"category_id":null,"name":"bloom"},{"id":234055,"category_id":821,"name":"\u0393\u03c5\u03bd\u03b1\u03b9\u03ba\u03b5\u03af\u03b5\u03c2
-    \u03a4\u03c3\u03ac\u03bd\u03c4\u03b5\u03c2"}],"meta":{"pagination":{"total_results":18,"total_pages":1,"page":1,"per":25}}}'
-:created_at: 2014-07-14 15:06:31.600334951 +03:00
+    !binary "c3RhdHVz": 200 OK
+    !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
+    etag: ! '"f56379e3b07f8a7e734a48966a109c14"'
+    !binary "Y2FjaGUtY29udHJvbA==": max-age=0, private, must-revalidate
+    !binary "eC1yZXF1ZXN0LWlk": '2573771265'
+    !binary "eC1ydW50aW1l": '0.050069'
+    !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
+    !binary "eC1hcHA=": lunkwill
+    !binary "Y29udGVudC1sZW5ndGg=": '75'
+    !binary "YWNjZXB0LXJhbmdlcw==": bytes
+    !binary "ZGF0ZQ==": Mon, 11 Aug 2014 14:19:29 GMT
+    !binary "eC12YXJuaXNo": '2573771265'
+    !binary "YWdl": '0'
+    !binary "dmlh": 1.1 varnish
+    !binary "Y29ubmVjdGlvbg==": close
+    !binary "eC1vcmlnaW4=": varnish2
+    !binary "eC1jYWNoZQ==": MISS
+  :body: ! '{"favorite_list":{"id":261808,"category_id":null,"name":"a new list name"}}'
+:created_at: 2014-08-11 17:19:29.566115706 +03:00
