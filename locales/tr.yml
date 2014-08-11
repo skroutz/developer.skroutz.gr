@@ -1,0 +1,106 @@
+tr:
+  titles:
+    index: "%{flavor} Documentation"
+    apiv3: 'API v3'
+    apiv2: 'API v2'
+    feedspec: 'XML Feed'
+    easy: "%{flavor} Easy"
+    authorization: 'Authorization'
+    analytics: 'Analytics'
+    widgets: 'Widgets'
+    docs: 'Documentation'
+    guides: 'Guides'
+    extra: 'Looking for something else?'
+    support: 'Support'
+
+  docs:
+    index:
+      view_doc: 'View Documentation'
+    apiv3:
+      short_description: 'The official %{flavor} API. Access the huge %{flavor} database and create beautiful apps.'
+      overview: 'Overview'
+      category: 'Category'
+      sku: 'SKU'
+      product: 'Product'
+      shop: 'Shop'
+      manufacturer: 'Manufacturer'
+      search: 'Search'
+      filter_groups: 'Filter Groups'
+      favorites: 'User Favorites'
+      notifications: 'User Notifications'
+      troubleshooting: 'Troubleshooting'
+      early_access: 'Early Access Request'
+    apiv2:
+      short_description: 'Oldie but still goldie. API v2 is deprecated and should not be used for new applications.'
+      overview: 'Overview'
+      data_model: 'Data Model'
+      product: 'Product'
+      book: 'Book'
+      user: 'User'
+    feedspec:
+      short_description: 'Integrate your eshop with %{flavor} and reach millions of consumers.'
+    easy:
+      short_description: 'Easier and faster checkouts for your visitors. With a click of a button.'
+      overview: 'Overview'
+      endpoints: 'Endpoints'
+      implementations: 'Implementations'
+    authorization:
+      short_description: 'Learn how to ask for authorization and access user data using OAuth 2.0.'
+      overview: 'Overview'
+      permissions: 'Permissions'
+      flows: 'Flows'
+    analytics:
+      short_description: 'Integrate %{flavor} analytics and find out powerful insights about your eshop.'
+      overview: 'Overview'
+      settings: 'Settings'
+      ecommerce: 'Ecommerce'
+      examples: 'Examples'
+    widgets:
+      short_description: 'Display live product information in your website using our widgets.'
+      overview: ''
+
+  feedspec_data:
+    black: 'Siyah'
+    in_two_days: '2 gün içerisinde'
+    mobile_phones: 'Cep Telefonları'
+    !!str no: 'Hayır'
+    no_asterisk: 'Hayır*'
+    !!str yes: 'Evet'
+
+  lang:
+    el: 'Ελληνικά'
+    en: 'English'
+    tr: 'Türkçe'
+
+  common:
+    available_locales: 'Sayfa şu dilde de mevcut:'
+    toc: 'Konu başlıkları'
+    deprecated: 'deprecated'
+
+  header:
+    for_developers: 'for developers'
+    language: 'Language'
+    search: 'Search'
+
+  footer:
+    terms: 'Terms of Service'
+    legal: 'All Rights and Lefts reserved.'
+
+  sidebar:
+    search: 'Search'
+    language: 'Language'
+    docs: 'Documentation'
+
+  index:
+    cover:
+      moto: 'Use data from 7 million products and create awesome apps'
+      get_started: 'Get Started'
+    intro:
+      what_can_you_do: 'What can you do with %{flavor}?'
+      products_and_app: "Create products and applications built on top of %{flavor}"
+      analyze_data: 'Explore market trends by analyzing data'
+      integrate_eshop: "Integrate your eshop with %{flavor}"
+      find_widgets: 'Embed widgets in your website'
+    oss:
+      encourage: 'Many components of %{flavor} are built with Open Source Software. We %{heart} OSS and try to give back as much as we can.'
+      github: '%{flavor} on GitHub'
