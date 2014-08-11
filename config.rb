@@ -33,7 +33,7 @@ activate :syntax, line_numbers: false
 # MarkDown
 ###########################
 set :markdown_engine, :kramdown
-set :markdown, layout_engine: :erb, toc_levels: '2'
+set :markdown, layout_engine: :erb, toc_levels: '2,3'
 
 ###########################
 # Assets
