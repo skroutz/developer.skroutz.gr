@@ -16,7 +16,7 @@
         <%# Nav Links %>
         <div class="navbar-collapse collapse">
           <%# Available locales %>
-          <% unless current_page.data.locale.nil? %>
+          <% if localized?(current_page) %>
             <%= bs_dropdown(locale_links(current_page),
                                    'nav-lang',
                                    'dropdown-primary',

@@ -135,7 +135,7 @@ module PageNavigationHelper
   # @param [Hash] page the page to build the array for
   # @return [Array] the array list
   def locale_links(page)
-    return [] if page.data.locale.nil?
+    return [] unless localized?(page)
 
     list_items = Array.new
 
