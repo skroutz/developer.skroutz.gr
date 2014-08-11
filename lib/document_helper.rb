@@ -27,4 +27,8 @@ module DocumentHelper
 
     "col-sm-offset-#{sm} col-md-offset-#{md}"
   end
+
+  def localized?(page)
+    !page.data.locale.nil? && !page.data.locale[flavor].nil?
+  end
 end
