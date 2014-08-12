@@ -561,6 +561,15 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
   width: 100%;
   padding-bottom: 5px;
+
+  .label {
+    @extend .text-sm;
+
+    display: inline-block;
+    position: relative;
+    top: -5px;
+    margin-left: 10px;
+  }
 }
 
 h1 {
