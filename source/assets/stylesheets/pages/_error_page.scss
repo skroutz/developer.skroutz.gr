@@ -4,8 +4,15 @@
 
 //** Error Pages
 .error-page {
-  @extend .text-center;
+  .container-header {
+    @extend .container;
+  }
+}
 
+.container-error {
+  @extend .text-center;
+  padding: 0 15px;
+  
   .error-brand {
     width: 160px;
     height: 160px;
