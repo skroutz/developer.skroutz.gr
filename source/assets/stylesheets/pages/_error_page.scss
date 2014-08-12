@@ -1,0 +1,29 @@
+@import 'variables';
+@import 'bootstrap/mixins';
+
+
+//** Error Pages
+.error-page {
+  @extend .text-center;
+
+  .error-brand {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
+    background: image-url('logo.png') center center no-repeat;
+  }
+
+  .error-code {
+    @include title-light;
+
+    width: auto;
+    margin-bottom: 30px;
+    padding: 0 5px;
+    font-size: 4.0em;
+    border-bottom: 4px solid $brand-primary;
+  }
+
+  .error-message {
+    margin-bottom: 40px;
+  }
+}

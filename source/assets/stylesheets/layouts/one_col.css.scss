@@ -17,6 +17,24 @@ body {
   padding-bottom: $app-h-footer;
 }
 
+#main {
+  padding: 0;
+}
+
 footer {
   height: $app-h-footer;
+
+  @media (max-width: $screen-xs-max) {
+    margin-bottom: 30px;
+  }
+}
+
+#sidebar {
+  footer {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $screen-sm-min) {
+    display: none;
+  }
 }
