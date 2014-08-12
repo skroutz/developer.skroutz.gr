@@ -7,26 +7,6 @@
   .container-header {
     @extend .container;
   }
-
-  #main {
-    padding: 0;
-  }
-
-  footer {
-    @media (max-width: $screen-xs-max) {
-      margin-bottom: 30px;
-    }
-  }
-
-  #sidebar {
-    footer {
-      margin-bottom: 0;
-    }
-
-    @media (min-width: $screen-sm-min) {
-      display: none;
-    }
-  }
 }
 
 .intro-col-features {

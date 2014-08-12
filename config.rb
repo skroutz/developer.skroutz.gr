@@ -8,6 +8,7 @@ require 'uglifier'
 # Layouts
 ###########################
 page 'index.html', layout: false
+page '404.html', layout: false
 
 ###########################
 # Localization
