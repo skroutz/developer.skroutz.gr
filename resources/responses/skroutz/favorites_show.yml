@@ -1,35 +1,35 @@
 ---
 :request:
-  :url: http://skroutz.gr/api/favorites/252116
+  :url: http://api.skroutz.gr/api/favorites/252116
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer fYxk5iZjO44DwXwkwP5SW7cHwaqFMbc5riQ4JQFgeVNe1epmAHlDtGjvAPhVAIH1aPLiQt67RSrVasw9o7EEQ==
+    :authorization: Bearer W5lqBPwCzzX3VoJpnC4NZdimjEiABofdu5aAUG1SjiKO2fUgStTVloVzStT/kO/w6T7lCSmhZE64NWwUxc//rw==
   :verb: GET
 :response:
   :status: 200
   :headers:
-    server: nginx
-    content-type: application/json; charset=utf-8
+    !binary "c2VydmVy": nginx
+    !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
     !binary "dmFyeQ==": Accept-Encoding
-    status: 200 OK
-    x-ua-compatible: IE=Edge,chrome=1
-    cache-control: max-age=0, private, must-revalidate
-    x-request-id: '2406164233'
-    x-runtime: '0.032947'
-    x-dns-prefetch-control: 'off'
-    x-app: lunkwill
-    content-length: '243'
-    accept-ranges: bytes
-    date: Mon, 14 Jul 2014 12:06:31 GMT
-    x-varnish: '2406164233'
-    age: '0'
-    via: 1.1 varnish
-    connection: close
-    x-origin: varnish2
-    x-cache: MISS
+    !binary "c3RhdHVz": 200 OK
+    !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
+    !binary "Y2FjaGUtY29udHJvbA==": max-age=0, private, must-revalidate
+    !binary "eC1yZXF1ZXN0LWlk": '2573771235'
+    !binary "eC1ydW50aW1l": '0.041658'
+    !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
+    !binary "eC1hcHA=": lunkwill
+    !binary "Y29udGVudC1sZW5ndGg=": '243'
+    !binary "YWNjZXB0LXJhbmdlcw==": bytes
+    !binary "ZGF0ZQ==": Mon, 11 Aug 2014 14:19:29 GMT
+    !binary "eC12YXJuaXNo": '2573771235'
+    !binary "YWdl": '0'
+    !binary "dmlh": 1.1 varnish
+    !binary "Y29ubmVjdGlvbg==": close
+    !binary "eC1vcmlnaW4=": varnish2
+    !binary "eC1jYWNoZQ==": MISS
   :body: ! '{"favorite":{"id":252116,"have_it":true,"user_id":132950,"user_notes":"\u039a\u03cc\u03b2\u03b5\u03b9
     \u03c4\u03bf \u03b6\u03b1\u03bc\u03c0\u03cc\u03bd \u03c3\u03b1\u03bd \u03bd\u03b1
     \u03ae\u03c4\u03b1\u03bd \u03b2\u03bf\u03cd\u03c4\u03b7\u03c1\u03bf. \u0395\u03af\u03bd\u03b1\u03b9
     \u03c0\u03c1\u03b1\u03b3\u03bc\u03b1\u03c4\u03b9\u03ba\u03cc \u03ad\u03c1\u03b3\u03bf
     \u03c4\u03ad\u03c7\u03bd\u03b7\u03c2.","sku_id":1137426,"created_at":"2013-04-09T16:16:25+03:00","updated_at":"2013-04-09T16:17:02+03:00"}}'
-:created_at: 2014-07-14 15:06:31.132501626 +03:00
+:created_at: 2014-08-11 17:19:29.247522818 +03:00

@@ -1,0 +1,16 @@
+<footer>
+  <div class="container text-sm">
+    <div class="row">
+
+      <div class="col-xs-12 col-sm-6 col-sm-push-6 text-right text-center-xs">
+        <span>&copy; 20[0-9]{2} <%= settings.full_company_name %>.</span>
+        <span><%= t('footer.legal') %></span>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-sm-pull-6 text-center-xs">
+        <%= link_to t('footer.terms'), "http://#{settings.domain}/faq" %>
+      </div>
+
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,32 @@
+---
+parent: apiv3
+title: notifications
+---
+
+# User Notification
+
+> ##### Note
+> To access any of the <strong>User Notification</strong> endpoints, an <code>access_token</code>
+containing the `notifications` <%= link_to 'permission', '/authorization/permissions/' %> is required.
+
+
+Notifications are events (price changes of favorite products, subscribed
+discussion messages, etc).
+
+<%= partial 'partials/toc' %>
+
+## List notifications 
+
+<pre class="terminal">
+  GET /notifications
+</pre>
+
+<%= render_recording :notifications_index %>
+
+## Retrieve a single notification 
+
+<pre class="terminal">
+  GET /notifications/:id
+</pre>
+
+<%= render_recording :notifications_show %>

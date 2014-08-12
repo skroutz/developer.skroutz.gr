@@ -1,0 +1,42 @@
+<header>
+  <nav class="navbar navbar-custom navbar-fixed-top" role="navigation" data-ui-scope="navbar">
+    <div class="container-header">
+
+        <%# Nav Brand %>
+        <div class="navbar-header">
+          <%# Collapse Button %>
+          <a class="offcanvas-toggle btn btn-link visible-xs" type="button" data-ui-scope="offCanvasBtn">
+            <i class="fa-bars"></i>
+          </a>
+
+          <%# Logo %>
+          <%= link_to t('header.for_developers'), '/', class: 'navbar-brand logo' %>
+        </div>
+
+        <%# Nav Links %>
+        <div class="navbar-collapse collapse">
+          <%# Available locales %>
+          <% if localized?(current_page) %>
+            <%= bs_dropdown(locale_links(current_page),
+                                   'nav-lang',
+                                   'dropdown-primary',
+                                   '<i class="fa fa-globe"></i>') %>
+          <% end %>
+
+          <%# Swiftype %>
+          <%= partial 'partials/swiftype' %>
+
+          <%# Top Navigation %>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <%= link_to t('titles.docs'), '/docs/' %>
+            </li>
+            <li>
+              <%= link_to t('titles.support'), '/support/' %>
+            </li>
+          </ul>
+        </div>
+
+    </div>
+  </nav>
+</header>

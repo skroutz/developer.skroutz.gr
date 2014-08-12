@@ -1,4 +1,3 @@
-#base_url: '{{domain}}/api'
 default_headers: &default_headers
   accept: 'application/vnd.skroutz+json; version=3'
   authorization: "Bearer {{oauth_token}}"
@@ -9,9 +8,12 @@ requests:
   -
     key: categories_index
     request:
-      url: '{{base_url}}/categories?page=1&per=5'
+      url: '{{base_url}}/categories'
       headers:
         <<: *default_headers
+      params:
+        page: 1
+        per: 5
     meta:
       description: 'Lists all categories'
   -
@@ -73,11 +75,24 @@ requests:
         <<: *default_headers
       params:
         per:  2
-        embed: address
+  -
+    key: shop_locations_index_embed_address
+    request:
+      url: '{{base_url}}/shops/11/locations?embed=address'
+      headers:
+        <<: *default_headers
+      params:
+        per:  2
   -
     key: shop_locations_show
     request:
       url: '{{base_url}}/shops/11/locations/2'
+      headers:
+        <<: *default_headers
+  -
+    key: shop_locations_show_embed_address
+    request:
+      url: '{{base_url}}/shops/11/locations/2?embed=address'
       headers:
         <<: *default_headers
   -
@@ -137,6 +152,9 @@ requests:
       url: '{{base_url}}/search?q=apple'
       headers:
         <<: *default_headers
+      params:
+        page: 1
+        per: 5
   -
     key: search_latin_mapping
     request:
@@ -158,37 +176,30 @@ requests:
   -
     key: search_drop
     request:
-      url: '{{base_url}}/search'
+      url: '{{base_url}}/search?q=wrong+iphone'
       headers:
         <<: *default_headers
-      params:
-        q: 'wrong iphone'
   -
     key: search_no_results
     request:
-      url: '{{base_url}}/search'
+      url: '{{base_url}}/search?q=asdf'
       headers:
         <<: *default_headers
-      params:
-        q: 'asdasdsagjgjgjweigrweji'
   -
     key: search_category_facade
     request:
-      url: '{{base_url}}/search'
+      url: '{{base_url}}/search?q=iphone'
       headers:
         <<: *default_headers
       params:
-        q: iphone
         page: 1
         per: 2
   -
     key: search_sku_match
     request:
-      url: '{{base_url}}/search'
+      url: '{{base_url}}/search?nikon+1+j2'
       headers:
         <<: *default_headers
-      params:
-        q: 'nikon%201%20j2'
   -
     key: search_skus_match
     request:
@@ -286,11 +297,10 @@ requests:
   -
     key: category_skus_search
     request:
-      url: '{{base_url}}/categories/40/skus'
+      url: '{{base_url}}/categories/40/skus?q=iphone'
       headers:
         <<: *default_headers
       params:
-        q: 'iphone'
         per: 2
   -
     key: category_skus_manufacturers
@@ -323,7 +333,7 @@ requests:
   -
     key: category_skus_with_applied_filters
     request:
-      url: '{{base_url}}/categories/40/skus?include_meta=applied_filters&filter_ids[]=6282&manufacturer_ids=28'
+      url: '{{base_url}}/categories/40/skus?include_meta=applied_filters&filter_ids[]=6282&manufacturer_ids[]=28'
       headers:
         <<: *default_headers
       params:
@@ -354,8 +364,12 @@ requests:
       url: '{{base_url}}/skus/2588170/specifications'
       headers:
         <<: *default_headers
-      params:
-        include: group
+  -
+    key: sku_specifications_include_groups
+    request:
+      url: '{{base_url}}/skus/2588170/specifications?include=group'
+      headers:
+        <<: *default_headers
   -
     key: shop_reviews
     request:
@@ -367,8 +381,6 @@ requests:
   -
     key: shop_search
     request:
-      url: '{{base_url}}/shops/search'
+      url: '{{base_url}}/shops/search?q=plaisio'
       headers:
         <<: *default_headers
-      params:
-        q: 'plaisio'

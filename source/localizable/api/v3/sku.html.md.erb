@@ -1,0 +1,162 @@
+---
+parent: apiv3
+title: sku
+---
+
+# SKU
+
+A SKU (Stock Keeping Unit) is an aggregation of products.
+
+<%= partial 'partials/toc' %>
+
+## Linked Resources
+
+* <%= link_to 'Linked Resources', '/api/v3#linked-resources' %>
+  * <%= link_to 'Product', '/api/v3/product' %>
+  * <%= link_to 'Manufacturer', '/api/v3/manufacturer' %>
+
+## List SKUs of specific category
+
+<pre class="terminal">
+  GET /categories/:category_id/skus
+</pre>
+
+<%= render_recording :category_skus %>
+
+### Ordering
+
+Name        | Type   | Value                                                        | Description
+----------- | ------ | ------------------------------------------------------------ | ------------
+`order_by`  | String | `pricevat` <small class="mark">default</small>, `popularity` | Order by price or popularity
+`order_dir` | String | `asc` <small class="mark">default</small>, `desc`            | Order ascending or descending
+
+### Filtering
+
+You may supply the optional parameter `include_meta[]=available_filters`
+to get meta information about the filters that can be applied.
+
+#### By search keyword
+
+Name | Type   | Description
+---- | ------ | -----------
+`q`  | String | The keyword to search by 
+
+<%= render_recording :category_skus_search %>
+
+#### By manufacturers
+
+Name               | Type  | Description
+------------------ | ----- | -----------
+`manufacturer_ids` | Array | The ids of the manufacturers of the SKUs
+
+<%= render_recording :category_skus_manufacturers %>
+
+#### By filters
+
+Name         | Type  | Description
+------------ | ----- | -----------
+`filter_ids` | Array | The ids of the filters to be applied on the SKUs
+
+<%= render_recording :category_skus_filters %>
+
+### Meta
+You may choose to include extra meta information using the following parameters:
+
+Name           | Type  | Description
+-------------- | ----- | -----------
+`include_meta` | Array | Extra meta info to be included in the response
+
+Meta that can be included are:
+
+`available_filters`
+: Filters that can be applied
+
+`applied_filters`
+: Filters currently applied
+
+`show_in_tiles`
+: Whether the skus should be rendered in a tile view
+
+<%= render_recording :category_skus_with_available_filters %>  
+
+As you can see in the response above the `available_filters` object
+contains two objects (<mark>filters</mark> and <mark>manufacturers</mark>)
+each of which has as keys the ids of the filters that can be applied
+and as values the number of SKUs that match the filter.
+
+To retrieve SKUs matching a set of <mark>filters</mark> you have to 
+add the `filter_ids` parameter which is an array parameter of filter ids, e.g.
+`filter_ids[]=1&filter_ids[]=2`.
+
+To retrieve SKUs matching a set of <mark>manufacturers</mark> you have to
+add the `manufacturer_ids` parameter which is an array parameter of manufacturer ids, e.g.
+`manufacturer_ids[]=1&manufacturer_ids[]=2`.
+
+<%= render_recording :category_skus_with_applied_filters %>
+
+## Retrieve a single SKU
+
+<pre class="terminal">
+  GET /skus/:id
+</pre>
+
+<%= render_recording :skus_show %>
+
+## Retrieve similar SKUs
+
+<pre class="terminal">
+  GET /skus/:id/similar
+</pre>
+
+<%= render_recording :skus_similar %>
+
+## Retrieve an SKU's products
+
+<pre class="terminal">
+  GET /skus/:id/products
+</pre>
+
+<%= render_recording :skus_products %>
+
+## Retrieve an SKU's reviews
+
+<pre class="terminal">
+  GET /skus/:id/reviews
+</pre>
+
+<%= render_recording :sku_reviews %>
+
+## Retrieve an SKU's specifications
+
+SKU specifications can be retrieved with the following request.
+
+> ##### Note
+> Pagination is not available for this endpoint.
+
+<pre class="terminal">
+  GET /skus/:id/specifications
+</pre>
+
+<%= render_recording :sku_specifications %>
+
+Specification groups can be included / embedded using the `group` value.
+Groups represent a logical grouping of specifications.
+
+<pre class="terminal">
+  GET /skus/:id/specifications?include=group
+</pre>
+
+<%#= render_recording :sku_specifications_include_groups %>
+
+## Retrieve an SKU's favorite
+
+> ##### Note
+> Requires user token with the 'favorites' permission.
+
+If the SKU has been _favorited_ by the currently associated user, you can fetch it.
+
+<pre class="terminal">
+  GET /skus/:id/favorite
+</pre>
+
+<%= render_recording :sku_favorite %>

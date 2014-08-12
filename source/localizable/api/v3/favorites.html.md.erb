@@ -1,0 +1,135 @@
+---
+parent: apiv3
+title: favorites
+---
+
+# User Favorites
+
+> ##### Note
+> To access any of the <strong>User Favorites</strong> endpoints, an <code>access_token</code>
+containing the `favorites` <%= link_to 'permission', '/authorization/permissions/' %> is required.
+
+<%= partial 'partials/toc' %>
+
+## Types of Favorite Lists
+
+User may pick one or more SKUs as favorites. Favorites are organized in `favorite_lists`.
+
+3 *types* of `favorite_lists` exist:
+
+Custom lists
+: Can contain SKUs from different categories. These are created by the user.
+
+Auto lists
+: These are connected with a category and can only contain favorite SKUs
+from this category. These are created automatically when a new favorite is
+created without specifying a <code>favorite_list</code>.
+
+&quot;Owned&quot; list
+: This is a special list that includes favorites that the user has
+flagged as &quot;owned&quot;. Items in the list have `favorite_list_id: null`
+and `have_it: true` attributes. This way owned favorites can be presented as a list.
+
+## List favorite lists
+
+<pre class="terminal">
+  GET /favorite_lists
+</pre>
+
+<%= render_recording :favorite_lists_index %>
+
+## Create a favorite_list
+
+It trying to create a custom list with the same name as an existing custom
+list you will be presented with an error message.
+
+<pre class="terminal">
+  POST /favorite_lists?favorite_list[name]=a+new+list+name
+</pre>
+
+<%= render_recording :favorite_list_create %>
+
+## Destroy a favorite_list
+
+The response status is 204 and with an empty response body when resource is
+destroyed. Status code is 404 when the resource does not exist.
+
+<pre class="terminal">
+  DELETE /favorite_lists/:id
+</pre>
+
+## List favorites
+
+The parameter `owned` can be set to `true` to fetch only owned favorites.
+By default favorites are sorted by creation date descending. `order_dir=asc` can
+be used to fetch them with ascending order.
+
+#### Linked Resources
+
+* <%= link_to 'Linked Resources', '/api/v3' %>
+  * <%= link_to 'SKU', '/api/v3/sku' %>
+
+<pre class="terminal">
+  GET /favorites
+</pre>
+
+<%= render_recording :favorites_index %>
+
+## List favorites belonging to list
+
+The response contains only favorites belonging to the specified favorite list.
+
+<pre class="terminal">
+  GET /favorite_lists/:id/favorites
+</pre>
+
+## Retrieve a single favorite
+
+<pre class="terminal">
+  GET /favorites/:id
+</pre>
+
+<%= render_recording :favorites_show %>
+
+## Create a new favorite
+
+<pre class="terminal">
+  POST /favorites?sku_id=89645
+</pre>
+
+<%= render_recording :favorite_create %>
+
+## Destroy a favorite
+
+The response status is 204 and with an empty response body when resource is
+destroyed. Status code is 404 when the resource does not exist.
+
+<pre class="terminal">
+  DELETE /favorites/:id
+</pre>
+
+## Update a favorite
+
+A favorite update might be called to do one of the following:
+
+* Move the favorite to an other list (custom probably)
+* Mark favorite as &quot;owned&quot; (through have_it: true)
+* Add the favorite to a new custom list
+
+When a favorite is `have_it: true`, it does not belong to a *favorite_list*.
+
+If you put a *favorite_list_id* and `have_it: true`, then only *have_it* will be
+respected (*favorite_list_id* will be ignored).
+
+You may choose to create a new custom list when creating or updating a favorite,
+by specifying the parameter `new_list_name`. A new custom list will be created
+(if it does not exist) with the given name and the favorite will be assigned
+to it, `have_it` attribute will be set to `null`.
+In case of an error, status 400 will be returned with errors in response body.
+
+<pre class="terminal">
+  PUT /favorites/:id?have_it=true
+</pre>
+
+<%= render_recording :favorite_update %>
+

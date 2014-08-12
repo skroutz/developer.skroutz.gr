@@ -1,0 +1,575 @@
+---
+title: feedspec
+locale:
+  alve:
+    - 'en'
+    - 'tr'
+  skroutz:
+    - 'en'
+    - 'el'
+---
+
+<%= partial 'partials/page_locales' %>
+
+# Data Feed Specification
+
+This document describes the structure of the XML file provided by merchants to
+<%= settings.site_name.capitalize %>. We de not require a specific document
+template as long as the **required** product attributes are included
+(<a href="#attributes">see attributes description</a>).
+
+<%= partial 'partials/toc' %>
+
+## Requirements
+
+In general, the XML file must meet the following requirements:
+
+* Clearly defines the document's encoding
+* XML validates according to standards (you can check your XML's validity
+  <a href="http://validator.w3.org/">here</a>)
+* Doesn't repeat the same products more than once (<a href="#unique-id">see Unique ID</a>)
+* Includes V.A.T. in prices
+
+<a href="#xml-example">Follow this link</a> for a valid XML example or
+<a href="#xsd">read</a> the XSD definition of the XML.
+
+## Technical Specifications
+
+For a Data Feed to be accepted all required attributes must be included
+according to the standards described below.
+
+
+## XML Declaration
+
+The XML declaration head **must** include the encoding of the file
+as well as the date it was created. The latter is used to determine if a feed is
+outdated or not.
+
+##### Example
+
+~~~ xml
+<?xml version="1.0" encoding="UTF-8"?>
+<mywebstore>
+   <created_at>2010-04-08 12:32</created_at>
+   ...
+</mywebstore>
+~~~
+
+> ##### Note
+> The encoding included in the XML header must correspond to the actual encoding
+of the file otherwise your data feed may not be valid and your products will not
+be updated. For example, a *UTF-8* declaration means that the file is encoded in
+UTF-8.
+
+> ##### Note
+> If your data feed is not created on demand then you should take care that the
+cached file is invalided and regenerated at least once a day.
+
+
+## Attributes
+
+The table below summarizes the product attributes recognized by
+<%= settings.site_name.capitalize %>:
+
+<div class="alert alert-danger">
+  <p>
+    You cannot include HTML notation in <strong>any</strong> of the product's
+    attributes.
+  </p>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Required</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% settings.feedspec.each do |field| %>
+      <tr>
+        <td>
+          <a href="#<%= field[:name].downcase.gsub('/', '').gsub(/\s+/, '-') %>">
+            <%= field[:name] %>
+          </a>
+        </td>
+        <td><%= field[:type] %></td>
+        <td class="mono"><%= field[:max] %></td>
+        <td><%= t("feedspec_data.#{field[:required]}".to_sym) %></td>
+        <td>
+          <code>
+          <% if field[:i18n].present? %>
+            <%= t("feedspec_data.#{field[:example]}".to_sym) %>
+          <% else %>
+            <%= field[:example] %>
+          <% end %>
+          </code>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<small>* Required by all fashion items with sizes</small>
+
+
+#### Unique ID
+
+This attribute represents the **unique** identifier of a product in your
+database. **The value of this field must remain the same throught a product's
+lifecycle and cannot be reused in other products**.
+
+> If the title of a product **changes between updates** so that it
+no longer refers to the same product (e.g. from *Sony LDF700* to *Sony LDF800*)
+then the product will be **disabled**. It is important to note that
+Unique IDs must always refer to the same product.
+
+> A Unique ID cannot refer to **more than** one product. In such a
+case the product will be updated only the first time it's encountered in the
+data feed.
+
+> In case your e-commerce application supports more than one languages your
+data feed should only include definitions in the English language to avoid
+duplication.
+
+##### Example
+
+~~~ xml
+<UniqueID>32</UniqueID>
+<product id="44">...</product>
+<PRODUCTID>232AD</PRODUCTID>
+~~~
+
+
+#### Name
+
+The title of the product. It is essential for the title to include all
+necessary attributes of the product even though some of those attributes maybe
+included in other parts of the XML as well (i.e. manufacturer, model, color,
+version, part number, etc). The more accurate the title, the quicker the product
+will be classified.
+
+> The title of products that are second hand or refurbished must clearly state
+their **condition** otherwise they will be disabled from the content team.
+
+##### Example
+
+~~~ xml
+<Name>Nokia 5800 XpressMusic</Name>
+<title>Nokia 5800 XpressMusic</title>
+~~~
+
+> Your product title should not include information about the product guarantee,
+shipping costs, payment methods, special bundles or marketing actions.
+
+
+#### Product Link
+
+The URL that links to your shop's page for the specified product. It must be a
+valid URL starting with `http` or `https`.
+
+> Product links **should not** be URL-encoded.
+
+> This link must only point to a product page and not a category page or a
+collection of products page.
+
+##### Example
+
+~~~ xml
+<link>http://www.mydomain.com/products/1</link>
+<url>http://www.mydomain.com/products/product.php?itemid=1</url>
+<url><![CDATA[http://www.mydomain.com/products/product.php?itemid=1&amp;somevar=3]]></url>
+<url><http://www.mydomain.com/products/product.php?itemid=1&amp;amp;somevar=3</url>
+~~~
+
+
+#### Image Link
+
+The product's image location. It must be a valid URL starting with `http` or
+`https`. Links to scripts that generate images should be avoided as it may cause
+download errors.
+
+It's better to include high resolution images in your data feed. Images are
+downloaded by <%= settings.site_name.capitalize %> and proper thumbnails are
+created.
+
+<div class="alert alert-danger">
+  <p>Images must not be watermarked.</p>
+</div>
+
+> Image links **should not** be URL-encoded.
+
+> Avoid adding <code>No Image</code> template images because if you later change
+it <%= settings.site_name.capitalize %> might not update it. If a product doesn't
+have an image yet, you can just send an empty image link. If you later change it
+the image will be updated normally.
+
+##### Example
+
+~~~ xml
+<image>http://www.mydomain.com/photos/1.jpg</image>
+<imageurl>http://www.mydomain.com/photos/b&amp;amp;b.jpg</imageurl>
+<url><![CDATA[http://www.mydomain.com/photos/b&amp;b.jpg]]></url>
+~~~
+
+
+#### Category Name
+
+The product's category path. It is essential that this attribute includes the
+full path of the product's category. For example, if the product is an `External
+Hard Drive` then the category name attribute should look like 
+`Computers > External Hard Drives`
+
+> Avoid ambigious categories containing different products (e.g. Printers and
+Scanners) as it will slow down the classification process of your products.
+
+##### Example
+
+~~~ xml
+<category>Mobile Phones&amp;gt; Bluetooth</category>
+<category_path>Computers - Hardware - CPUs</category_path>
+~~~
+
+
+#### Price
+
+It's the products retail price **including V.A.T**.
+
+> The price of the product must apply to everyone without any special conditions
+(e.g. offers, discounts pending on location etc).
+
+
+#### InStock
+
+Stock status of the product
+
+`Y`
+: means that the product is in stock at your outlet or your warehouse and can be
+picked up immediately.
+
+`N`
+: means that the product is not available in stock.
+
+> When no information is provided the value of this attributed is considered as
+`N` (no stock).
+
+
+#### Availability
+
+This product's shipping availability as used throughout your shop.
+
+<%= settings.site_name.capitalize %> uses a fixed set of availability
+descriptions that will be crosslinked to the ones provided in your feed.
+
+Available
+: refers to products that are available for pick up at your outlet
+
+1 to 3 days
+: refers to products that can be delivered to your customer within 1 to 3 days
+
+4 to 7 days
+: refers to products that can be delivered to your customer within 4 to 7 days
+
+7+ days
+: refers to products that will be delivered in 7 days or more
+
+Upon order
+: refers to products that are ordered upon customer request
+
+Pre-order
+: refers to products that can be ordered before the actual release
+
+
+#### Manufacturer
+
+The manufacturer of the product
+
+> The manufacturer name must be also include in the title regardless if it is
+included in this attribute.
+
+> The manufacturer attribute must point to the actual manufacturer of the product
+and not the manufacturer this product is used for in cases of spare parts or
+accessories.
+
+
+#### MPN/ ISBN
+
+The unique manufacturer identifier of the product. It is used to identify a
+product and classify it.
+
+> This attribute is required for categories where the Manufacturer Product Number
+is required to identify a product with different configurations (e.g. storage,
+color, etc)
+
+If the product is a **Book** then this field must include the `ISBN` of the book.
+
+> Books without their ISBN information will not be classified
+
+
+#### Size
+
+If the product comes in sizes you can include all available sizes in this
+attribute seperated by commas.
+
+For example, a sport shoe available in 5.5, 6, and 6.5 your `XML` will include
+the following attribute
+
+~~~ xml
+<size>5.5,6,6.5</size>
+~~~
+
+You can also use `1/2` as a half size indicator
+
+~~~ xml
+<size>5 1/2,6,6 1/2</size>
+~~~
+
+In case of clothes, sizes can be in one of the following formats:
+
+~~~ xml
+<size>XXS, XS, S, M, L, XL, XXL, XXXL</size>
+<size>Extra Small, Small, Medium, Large, Extra Large</size>
+<size>00, 0, 2, 4, 6, 8, 10, 12, 14, 16</size>
+~~~
+
+If a product fits a size range (e.g. socks) then you can declare the size as a
+*range* using the dash (-). e.g.
+
+~~~ xml
+<size>5.5-6.5</size>
+~~~
+
+Finally, if a product is identified by two sizes you can include them using the
+forward slash. (/) e.g.
+
+~~~ xml
+<size>5.5/42,5.5/45</size>
+~~~
+
+> Products that are identified by sizes and the size information is not provided
+will **not** be classified.
+
+
+#### Shipping Costs
+
+The product's shipping cost regardless of the customer's location. If the
+product shipping cost is known beforehand you can include the shipping cost here.
+If this product is eligible for free shipping, you can indicate it by providing
+`0` as a value for this attribute.
+
+> Shipping costs included here should be **independent** of the shipping
+location. If this is not the case , then this attribute should be blank.
+
+> Shipping costs will be displayed along with your other product information as
+long as they are accurate every time. If, even for one product, shipping costs
+are not accurate then they will be removed from all products in your data feed.
+
+
+#### Color
+
+The color of the product
+
+##### Example
+
+~~~ xml
+<color>Black</color>
+<color>green</color>
+~~~
+
+
+## XML Example
+
+The XML excerpt below is an example of a compatible XML data feed.
+
+~~~ xml
+<?xml version="1.0" encoding="UTF-8"?>
+<mywebstore>
+   <created_at>2010-04-08 12:32</created_at>
+   <products>
+      <product>
+        <id>322233</id>
+        <name><![CDATA[MadBiker 600]]></name>
+        <link><![CDATA[http://www.mywebstore.co.uk/product/322233]]></link>
+        <image><![CDATA[http://www.mywebstore.co.uk/product/322233.jpg]]></image>
+        <category><![CDATA[Outdor > Extreme Sports]]></category>
+        <price_with_vat>322.33</price_with_vat>
+        <manufacturer><![CDATA[SuperGlasses]]></manufacturer>
+        <mpn>ZHD332</mpn>
+        <instock>N</instock>
+        <availability>Pre Order</availability>
+        <size>5.5,6</size>
+        <color>Black</color>
+      </product>
+      ...
+      ...
+      ...
+   </products>
+</mywebstore>
+~~~
+
+
+## XSD
+
+~~~ xml
+<?xml version="2.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- required elements -->
+  <!-- created at -->
+  <xs:element name="created_at" type="xs:dateTime" />
+
+  <!-- unique id -->
+  <xs:element name="uid">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:maxLength value="200" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <!-- name -->
+  <xs:element name="name">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:maxLength value="300" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <!-- link -->
+  <xs:element name="link">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:maxLength value="400" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <!-- image -->
+  <xs:element name="image">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:maxLength value="400" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <!-- price -->
+  <xs:element name="price" type="xs:decimal" />
+
+  <!-- category -->
+  <xs:element name="category">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:maxLength value="300" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <!-- manufacturer -->
+  <xs:element name="manufacturer">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:maxLength value="100" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <!-- manufacturer part number -->
+  <xs:element name="mpn">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:maxLength value="100" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <!-- instock -->
+  <xs:element name="instock">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="Y" />
+        <xs:enumeration value="N" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <!-- shipping -->
+  <xs:element name="shipping" type="xs:decimal" />
+
+  <!-- availability -->
+  <xs:element name="availability">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:maxLength value="100" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <!-- size -->
+  <xs:element name="size">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:maxLength value="100" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <!-- color -->
+  <xs:element name="color">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:maxLength value="50" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <!-- basic structure -->
+  <xs:element name="storedata">
+    <xs:complexType>
+      <xs:sequence>
+        <!-- created at -->
+        <xs:element ref="created_at" minOccurs="0" />
+
+        <!-- products -->
+        <xs:element name="products">
+          <xs:complexType>
+            <xs:sequence>
+              <!-- product -->
+              <xs:element name="product" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:all>
+
+                    <!-- required fields -->
+                    <xs:element ref="uid"/>
+                    <xs:element ref="name"/>
+                    <xs:element ref="link"/>
+                    <xs:element ref="image"/>
+                    <xs:element ref="price"/>
+                    <xs:element ref="category"/>
+                    <xs:element ref="manufacturer" />
+                    <xs:element ref="mpn" />
+                    <xs:element ref="availability" />
+                    <xs:element ref="instock" />
+
+                    <!-- optional fields -->
+                    <xs:element ref="size"  minOccurs="0"/>
+                    <xs:element ref="shipping"  minOccurs="0"/>
+                    <xs:element ref="color"  minOccurs="0"/>
+
+                  </xs:all>
+
+                </xs:complexType>
+              </xs:element>
+              <!-- end product -->
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      <!-- end products -->
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+~~~

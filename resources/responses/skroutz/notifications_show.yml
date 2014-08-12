@@ -1,34 +1,34 @@
 ---
 :request:
-  :url: http://skroutz.gr/api/notifications/3642082
+  :url: http://api.skroutz.gr/api/notifications/3642082
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer fYxk5iZjO44DwXwkwP5SW7cHwaqFMbc5riQ4JQFgeVNe1epmAHlDtGjvAPhVAIH1aPLiQt67RSrVasw9o7EEQ==
+    :authorization: Bearer W5lqBPwCzzX3VoJpnC4NZdimjEiABofdu5aAUG1SjiKO2fUgStTVloVzStT/kO/w6T7lCSmhZE64NWwUxc//rw==
   :verb: GET
 :response:
   :status: 200
   :headers:
-    server: nginx
-    content-type: application/json; charset=utf-8
+    !binary "c2VydmVy": nginx
+    !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
     !binary "dmFyeQ==": Accept-Encoding
-    status: 200 OK
-    x-ua-compatible: IE=Edge,chrome=1
-    cache-control: max-age=0, private, must-revalidate
-    x-request-id: '225152251'
-    x-runtime: '0.039669'
-    x-dns-prefetch-control: 'off'
-    x-app: lunkwill
-    content-length: '343'
-    accept-ranges: bytes
-    date: Mon, 14 Jul 2014 12:06:32 GMT
-    x-varnish: '225152251'
-    age: '0'
-    via: 1.1 varnish
-    connection: close
-    x-origin: varnish1
-    x-cache: MISS
+    !binary "c3RhdHVz": 200 OK
+    !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
+    !binary "Y2FjaGUtY29udHJvbA==": max-age=0, private, must-revalidate
+    !binary "eC1yZXF1ZXN0LWlk": '464666561'
+    !binary "eC1ydW50aW1l": '0.054442'
+    !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
+    !binary "eC1hcHA=": lunkwill
+    !binary "Y29udGVudC1sZW5ndGg=": '343'
+    !binary "YWNjZXB0LXJhbmdlcw==": bytes
+    !binary "ZGF0ZQ==": Mon, 11 Aug 2014 14:19:30 GMT
+    !binary "eC12YXJuaXNo": '464666561'
+    !binary "YWdl": '0'
+    !binary "dmlh": 1.1 varnish
+    !binary "Y29ubmVjdGlvbg==": close
+    !binary "eC1vcmlnaW4=": varnish1
+    !binary "eC1jYWNoZQ==": MISS
   :body: ! '{"notification":{"aggregated":false,"confirmed":true,"created_at":"2013-04-26T01:00:09+03:00","etype":"generic","eventable_id":37,"eventable_type":"UserSkuAd","id":3642082,"is_viewed":true,"mail_event":false,"snapshot":{"event_text":"\u0397
     \u03b1\u03b3\u03b3\u03b5\u03bb\u03af\u03b1 \u03c3\u03b1\u03c2 \"Logitech M185\"
     \u03bc\u03b5 \u03c4\u03b9\u03bc\u03ae 8,99 \u20ac \u03ad\u03bb\u03b7\u03be\u03b5
     \u03c3\u03c4\u03b9\u03c2 26/04/2013 00:44","eventable_path":"/account/inactive_ads"},"subscription_id":null,"updated_at":"2013-04-30T10:35:46+03:00","user_id":132950,"user_notified":false}}'
-:created_at: 2014-07-14 15:06:32.632542403 +03:00
+:created_at: 2014-08-11 17:19:30.481407074 +03:00

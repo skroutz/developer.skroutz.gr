@@ -1,0 +1,58 @@
+---
+parent: authentication
+title: overview
+---
+
+# Authorization
+
+To access privileged resources for our API 
+<% if flavor == 'skroutz' %>
+  or <%= link_to t('titles.easy', flavor: settings.site_name.titleize), '/easy' %>
+<% end %>
+you have to undergo the authorization procedure throughout the [OAuth2.0](http://oauth.net/2/)
+protocol.
+
+<%= partial 'partials/toc' %>
+
+## Quick Start
+
+Before you begin the authorization process make sure you have obtained a valid 
+set of `client_id`, `client_secret`.
+
+To get one <a href="mailto:api@<%= settings.domain %>">contact us</a>.
+
+Now let's try something that requires authorization.
+
+### Search using our API
+
+Search does not require any resources to be granted by a user, so you have to
+obtain an application token (see <%= link_to 'permissions', '/authorization/permissions' %>)
+
+<%= render_code_from_file "authentication/#{flavor}/application_token" %>
+
+Using the code above you'll get something like:
+
+~~~ javascript
+{
+  "access_token": "a valid access token",
+  "token_type":   "bearer",
+  "expires_in":   2678399
+}
+~~~
+
+You may then proceed performing the request using the following snippet:
+
+<%= render_code_from_file "authentication/#{flavor}/example_search_request_header" %>
+
+You will get the following response:
+
+<%= render_recording :search_manufacturer_match %>
+
+## About OAuth2.0
+
+We leverage the [OAuth2.0](http://oauth.net/2/) protocol to enable selected external
+applications get authorization for a User's private information from
+<%= settings.site_name.titleize %> account without requesting their <%= settings.site_name.titleize %> credentials.
+
+The benefit of using OAuth2.0 is that our users can feel secure as their credentials won't
+have to be exposed to third parties in order to grant access to privileged user owned resources.

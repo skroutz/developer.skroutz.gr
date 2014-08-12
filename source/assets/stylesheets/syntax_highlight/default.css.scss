@@ -1,0 +1,133 @@
+@import 'variables';
+
+$sh_white:      $app-clr-white;
+$sh_grey:       #808080;
+$sh_black:      #424242;
+$sh_red:        #D14;
+$sh_green:      #006600;
+$sh_blue:       #317ECC;
+$sh_blue_light: #0086B3;
+$sh_blue_dark:  darken($sh_blue, 12%);
+$sh_magenta:    #990099;
+$sh_yellow:     $app-clr-orange;
+
+pre {
+  font-size: 14px;
+  font-weight: 300;
+  background-color: $sh_white;
+
+  &.terminal {
+    color: $app-clr-greyLight;
+    background-color: $app-clr-greyDark;
+  }
+}
+
+.highlight {
+  .hll { background-color: transparent }
+
+  .c,
+  .gu,
+  .cm,
+  .c1,
+  .cs {
+    font-style: italic;
+    color: $sh_grey;
+  }
+
+  .err {
+    color: $sh_red;
+    background-color: lighten($sh_red, 35%);
+  }
+
+  .k,
+  .kc,
+  .kd,
+  .kn,
+  .kp,
+  .kr,
+  .kt,
+  .no {
+    font-weight: 700;
+    color: $sh_blue_dark;
+  }
+
+  .nv {
+    color: $sh_blue !important;
+  }
+
+  .cp,
+  .l,
+  .m,
+  .mf,
+  .mh,
+  .mi,
+  .mo,
+  .se,
+  .il {
+    color: $sh_magenta;
+  }
+
+  .s,
+  .ld,
+  .sb,
+  .sc,
+  .s2,
+  .sh,
+  .si,
+  .sx,
+  .sr,
+  .s1,
+  .ss {
+    color: $sh_red;
+  }
+
+  .sd {
+    color: $sh_grey;
+  }
+
+  .na,
+  .nc,
+  .nd,
+  .ne,
+  .nf,
+  .nx,
+  .gi,
+  .gp{
+    color: $sh_green;
+  }
+
+  .gd,
+  .o,
+  .ow {
+    color: $sh_red;
+  }
+
+  .n,
+  .p,
+  .ni,
+  .nl,
+  .nn,
+  .py,
+  .nv,
+  .w,
+  .bp,
+  .vc,
+  .vg,
+  .vi {
+    color: $sh_black;
+  }
+
+  .nt {
+    color: $sh_blue;
+  }
+
+  .nb {
+    color: $sh_blue_light;
+  }
+
+  .ge { font-style: italic } /* Generic.Emph */
+  .gs { font-weight: bold } /* Generic.Strong */
+
+  .gh { } /* Generic Heading & Diff Header */
+  /* Generic.Subheading & Diff Unified/Comment? */
+}

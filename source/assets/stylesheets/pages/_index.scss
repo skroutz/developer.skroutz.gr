@@ -1,0 +1,72 @@
+@import 'variables';
+@import 'bootstrap/mixins';
+
+
+//** Index Page
+.index {
+  .container-header {
+    @extend .container;
+  }
+
+  #main {
+    padding: 0;
+  }
+
+  footer {
+    @media (max-width: $screen-xs-max) {
+      margin-bottom: 30px;
+    }
+  }
+
+  #sidebar {
+    footer {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-sm-min) {
+      display: none;
+    }
+  }
+}
+
+.intro-col-features {
+  ul {
+    @extend .clearfix;
+    @extend .fa-ul;
+
+    li {
+      float: left;
+      width: 45%;
+      height: 2.0em;
+      margin: 20px 40px 10px 0;
+      padding: 0;
+
+      &:before {
+        content: none !important;
+        padding-right: 0;
+      }
+
+      i {
+        @extend .fa;
+        @extend .fa-li;
+      }
+
+      @media (max-width: $screen-sm-max) {
+        float: none;
+        width: auto;
+      }
+    }
+  }
+}
+
+.intro-col-oss {
+  margin-top: 40px;
+
+  .btn {
+    margin: 30px auto;
+  }
+
+  @media (max-width: $screen-sm-max) {
+    margin-top: 0;
+  }
+}

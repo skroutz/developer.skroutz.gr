@@ -1,9 +1,9 @@
 ---
 :request:
-  :url: http://skroutz.gr/api/search?q=ipone
+  :url: http://api.skroutz.gr/api/search?q=ipone
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer fYxk5iZjO44DwXwkwP5SW7cHwaqFMbc5riQ4JQFgeVNe1epmAHlDtGjvAPhVAIH1aPLiQt67RSrVasw9o7EEQ==
+    :authorization: Bearer W5lqBPwCzzX3VoJpnC4NZdimjEiABofdu5aAUG1SjiKO2fUgStTVloVzStT/kO/w6T7lCSmhZE64NWwUxc//rw==
   :params:
     :page: 1
     :per: 2
@@ -11,28 +11,28 @@
 :response:
   :status: 200
   :headers:
-    server: nginx
-    content-type: application/json; charset=utf-8
+    !binary "c2VydmVy": nginx
+    !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
     !binary "dmFyeQ==": Accept-Encoding
-    status: 200 OK
+    !binary "c3RhdHVz": 200 OK
     !binary "bGluaw==": <http://api.skroutz.gr/api/search?page=2&per=2&q=ipone>; rel="last",
       <http://api.skroutz.gr/api/search?page=2&per=2&q=ipone>; rel="next"
-    x-ua-compatible: IE=Edge,chrome=1
-    cache-control: max-age=0, private, must-revalidate
-    x-request-id: '2406164032'
-    x-runtime: '0.059520'
-    x-dns-prefetch-control: 'off'
-    x-app: lunkwill
-    content-length: '389'
-    accept-ranges: bytes
-    date: Mon, 14 Jul 2014 12:06:29 GMT
-    x-varnish: '2406164032'
-    age: '0'
-    via: 1.1 varnish
-    connection: close
-    x-origin: varnish2
-    x-cache: MISS
+    !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
+    !binary "Y2FjaGUtY29udHJvbA==": max-age=0, private, must-revalidate
+    !binary "eC1yZXF1ZXN0LWlk": '2573771113'
+    !binary "eC1ydW50aW1l": '0.074572'
+    !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
+    !binary "eC1hcHA=": lunkwill
+    !binary "Y29udGVudC1sZW5ndGg=": '389'
+    !binary "YWNjZXB0LXJhbmdlcw==": bytes
+    !binary "ZGF0ZQ==": Mon, 11 Aug 2014 14:19:27 GMT
+    !binary "eC12YXJuaXNo": '2573771113'
+    !binary "YWdl": '0'
+    !binary "dmlh": 1.1 varnish
+    !binary "Y29ubmVjdGlvbg==": close
+    !binary "eC1vcmlnaW4=": varnish2
+    !binary "eC1jYWNoZQ==": MISS
   :body: ! '{"categories":[{"id":1229,"name":"\u039b\u03b9\u03c0\u03b1\u03bd\u03c4\u03b9\u03ba\u03ac
     Moto","children_count":0,"image_url":"http://d.scdn.gr/images/categories/large/1229.jpg","parent_id":1227,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":3},{"id":1257,"name":"\u039a\u03b1\u03b8\u03b1\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2
     & \u03a0\u03b5\u03c1\u03b9\u03c0\u03bf\u03af\u03b7\u03c3\u03b7 \u039c\u03bf\u03c4\u03bf\u03c3\u03c5\u03ba\u03bb\u03ad\u03c4\u03b1\u03c2","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/1257.jpg","parent_id":577,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":11}],"meta":{"alternatives":[{"term":"iphone","important":false}],"strong_matches":{},"pagination":{"total_results":3,"total_pages":2,"page":1,"per":2}}}'
-:created_at: 2014-07-14 15:06:29.570897320 +03:00
+:created_at: 2014-08-11 17:19:27.971724841 +03:00

@@ -1,0 +1,70 @@
+apiv3:
+  base: '/api/v3/'
+  featured: true
+  icon: 'fa-code'
+  pages:
+    - { title: 'overview', url: '/api/v3/' }
+    - { title: 'category' }
+    - { title: 'sku' }
+    - { title: 'product' }
+    - { title: 'shop' }
+    - { title: 'manufacturer' }
+    - { title: 'search' }
+    - { title: 'filter_groups' }
+    - { title: 'favorites' }
+    - { title: 'notifications' }
+
+apiv2:
+  base: '/api/v2/'
+  deprecated: true
+  icon: 'fa-archive'
+  flavors:
+    - skroutz
+  pages:
+    - { title: 'overview', url: '/api/v2/' }
+    - { title: 'data_model' }
+    - { title: 'product' }
+    - { title: 'book' }
+    - { title: 'user' }
+
+feedspec:
+  base: '/feedspec/'
+  featured: true
+  icon: 'fa-file-text-o'
+
+easy:
+  base: '/easy/'
+  featured: true
+  icon: 'icon-easy'
+  flavors:
+    - skroutz
+  pages:
+    - { title: 'overview', url: '/easy/' }
+    - { title: 'endpoints' }
+    - { title: 'implementations' }
+
+authorization:
+  base: '/authorization/'
+  featured: true
+  icon: 'fa-lock'
+  pages:
+    - { title: 'overview', url: '/authorization/' }
+    - { title: 'permissions' }
+    - { title: 'flows' }
+
+analytics:
+  base: '/analytics/'
+  featured: true
+  icon: 'fa-bar-chart-o'
+  pages:
+    - { title: 'overview', url: '/analytics/' }
+    - { title: 'settings' }
+    - { title: 'ecommerce' }
+    - { title: 'examples' }
+
+widgets:
+  base: '/widgets/'
+  featured: true
+  icon: 'fa-cubes'
+  flavors:
+    - skroutz
