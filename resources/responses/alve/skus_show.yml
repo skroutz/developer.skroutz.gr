@@ -1,36 +1,36 @@
 ---
 :request:
-  :url: http://alve.com/api/skus/146414
+  :url: http://api.alve.com/skus/146414
   :headers:
     :accept: application/vnd.alve+json; version=3
-    :authorization: Bearer ZSWUZySA9nm9FmmhOFhAK1rvIfwfEPIfn/hA2sQZw/inqe6o6ZAALHGu0UmfJOGrytnEsueHI9nR7HrA4ZNQ==
+    :authorization: Bearer jRc1LQwgl9wVf6QJT1hTfSL32I7V97Yta5fjEpDUHIDoPox/jRhUTe0K19DamN4NArCAy7tTrUyI8yXRxOVWg==
   :verb: GET
 :response:
   :status: 200
   :headers:
-    server: nginx
+    !binary "c2VydmVy": nginx
     !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
     !binary "dmFyeQ==": Accept-Encoding
-    status: 200 OK
-    cache-control: max-age=300, private
-    x-ua-compatible: IE=Edge,chrome=1
-    x-request-id: '458970238'
-    x-runtime: '0.024965'
-    x-dns-prefetch-control: 'off'
-    x-app: as2
-    content-length: '626'
-    accept-ranges: bytes
-    date: Mon, 21 Jul 2014 10:30:00 GMT
-    x-varnish: '458970238'
-    age: '0'
-    via: 1.1 varnish
-    connection: close
-    x-origin: varnish2
-    x-cache: MISS
+    !binary "c3RhdHVz": 200 OK
+    !binary "Y2FjaGUtY29udHJvbA==": max-age=300, private
+    !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
+    !binary "eC1yZXF1ZXN0LWlk": '984168100'
+    !binary "eC1ydW50aW1l": '0.031228'
+    !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
+    !binary "eC1hcHA=": as2
+    !binary "Y29udGVudC1sZW5ndGg=": '626'
+    !binary "YWNjZXB0LXJhbmdlcw==": bytes
+    !binary "ZGF0ZQ==": Tue, 12 Aug 2014 09:16:23 GMT
+    !binary "eC12YXJuaXNo": '984168100'
+    !binary "YWdl": '0'
+    !binary "dmlh": 1.1 varnish
+    !binary "Y29ubmVjdGlvbg==": close
+    !binary "eC1vcmlnaW4=": varnish1
+    !binary "eC1jYWNoZQ==": MISS
   :body: ! '{"sku":{"id":146414,"ean":"","pn":"","name":"Galaxy S4 i9500 16GB","display_name":"Samsung
-    Galaxy S4 i9500 16GB","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":1838.74,"price_min":1206.0,"reviewscore":0.0,"shop_count":39,"plain_spec_summary":"Single
+    Galaxy S4 i9500 16GB","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":1966.65,"price_min":1206.0,"reviewscore":0.0,"shop_count":36,"plain_spec_summary":"Single
     SIM, A\u011f Ba\u011flant\u0131s\u0131: 2G / 3G / 4G - LTE, Kamera: 13 Megapiksel,  Ekran:
     5\", 1920 x 1080 piksel, Kullan\u0131m Y\u00f6ntemi: Dokunmatik ekran (Touch screen),  Dahili
     Haf\u0131za: 16 GB,  \u0130\u015fletim Sistemi: Android, \u00c7\u0131k\u0131\u015f
     Tarihi: 2013, Smart Phone","manufacturer_id":36,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://alve-d.scdn.gr/images/sku_main_images/000146/146414/medium_img_relationship_01_phone.png","alternatives":["http://alve-a.scdn.gr/images/sku_images/000146/146255/img_lifecare_02_phone.png","http://alve-c.scdn.gr/images/sku_images/000485/485868/Samsung-Galaxy-S4.jpg","http://alve-d.scdn.gr/images/sku_images/000485/485869/samsung-galaxy-s4-red-blue.jpg","http://alve-c.scdn.gr/images/sku_images/000485/485870/Samsung-Galaxy-S4-Artic-Blu.jpg","http://alve-a.scdn.gr/images/sku_images/000485/485871/Galaxy-S4-black-and-white.jpg"]}}}'
-:created_at: 2014-07-21 13:30:00.252564971 +03:00
+:created_at: 2014-08-12 12:16:23.840345356 +03:00

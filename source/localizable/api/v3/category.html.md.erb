@@ -1,0 +1,69 @@
+---
+parent: apiv3
+title: category
+---
+
+# Category
+
+Categories are organized in a tree-like structure.  
+
+An [SKU](/api/v3/sku/) always belongs to a leaf (ending) category.
+
+Leaf categories have `children_count` equal to <mark>0</mark>.
+
+<%= partial 'partials/toc' %>
+
+## List all categories
+
+<pre class="terminal">
+  GET /categories
+</pre>
+
+<%= render_recording :categories_index %>
+
+## Retrieve a single category
+
+<pre class="terminal">
+  GET /categories/:id
+</pre>
+
+<%= render_recording :categories_show %>
+
+## Retrieve the parent of a category
+
+<pre class="terminal">
+  GET /categories/:id/parent
+</pre>
+
+<%= render_recording :category_parent %>
+
+## Retrieve the root category
+
+<pre class="terminal">
+  GET /categories/root
+</pre>
+
+<%= render_recording :categories_root %>
+
+## List the children categories of a category
+
+<pre class="terminal">
+  GET /categories/:id/children
+</pre>
+
+<%= render_recording :children_api_category %>
+
+## List a category's manufacturers
+
+<pre class="terminal">
+  GET /categories/:id/manufacturers
+</pre>
+
+<%= render_recording :category_manufacturers %>
+
+### Ordering
+
+Name        | Type   | Value                                                    | Description
+----------- | ------ | -------------------------------------------------------- | ------------
+`order_by`  | String | `name`, `popularity` <small class="mark">default</small> | Order by name or popularity
+`order_dir` | String | `asc`, `desc` <small class="mark">default</small>        | Order ascending or descending

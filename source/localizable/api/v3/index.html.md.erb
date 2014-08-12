@@ -1,0 +1,347 @@
+---
+parent: apiv3
+title: overview
+---
+
+# Overview
+
+<%= partial 'partials/toc' %>
+
+## Schema
+
+All API access is over HTTPS, and accessed from the `<%= settings.api_domain %>`
+domain. All data is sent and received as JSON.
+
+<pre class="terminal">
+$ curl -i https://<%= settings.api_domain %>/categories/999999999
+
+HTTP/1.1 404 NOT FOUND
+Server: nginx
+Content-Type: application/json; charset=utf-8
+Vary: Accept-Encoding
+Status: 200 OK
+X-UA-Compatible: IE=Edge,chrome=1
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 1475076950
+X-Runtime: 0.011315
+X-DNS-Prefetch-Control: off
+X-App: benjy
+Transfer-Encoding: chunked
+Date: Tue, 24 Sep 2013 10:49:50 GMT
+X-Varnish: 1475076950
+Age: 0
+Via: 1.1 varnish
+X-Origin: varnish2
+X-Cache: MISS
+
+[]
+</pre>
+
+Blank fields are included as `null` instead of being omitted.
+
+All timestamps are returned in [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) format:
+
+    YYYY-MM-DDTHH:MM:SSZ
+
+## Linked Resources
+
+When you see <mark>Linked resources: some_resource</mark> in any of our resources
+it means you may choose to include/embed it as follows:
+
+##### Example
+
+Resource Foo has "Linked resources: bar"
+
+###### Case: embed
+
+<pre class="terminal">
+  <code>GET /foos/42?embed=bars</code>
+</pre>
+
+<%= render_code '{
+  "foo": {
+    "id": 42,
+    "bars": [
+      {
+        "id": 1,
+        "baz": 42
+      }
+    ]
+  }
+}', 'javascript' %>
+
+###### Case: embed_ids
+
+<pre class="terminal">
+  <code>GET /foos/42?embed_ids=bars</code>
+</pre>
+
+<%= render_code '{
+  "foo": {
+    "id": 42,
+    "bars": [1,2,3,4]
+  }
+}', 'javascript' %>
+
+
+###### Case: include
+
+<pre class="terminal">
+  <code>GET /foos?include=bars</code>
+</pre>
+
+<%= render_code '{
+  "foos": [
+    {
+      "id": 42,
+      "bars": [1,4]
+    },
+    {
+      "id": 43,
+      "bars": [3,4]
+    }
+  ],
+  "bars": [
+    {
+      "id": 1,
+      "baz": 42
+    },
+    {
+      "id": 3,
+      "baz": 42
+    }
+  ]
+}', 'javascript' %>
+
+## Pagination
+
+Requests that return multiple items will be paginated to 25 items by
+default.  You can specify further pages with the `page` parameter. You can also 
+set a custom page size to 10 with the `per` parameter.
+
+<pre class="terminal">
+$ curl https://<%= settings.api_domain %>/categories?page=2&per=10
+</pre>
+
+When there are other pages the response will contain the [Link](http://tools.ietf.org/html/rfc5988) header.
+
+~~~
+Link
+
+<https://<%= settings.api_domain %>/categories?page=508&per=4>; rel="last",
+<https://<%= settings.api_domain %>/categories?page=3&per=4>; rel="next"
+~~~
+
+Note that page numbering is 1-based and that ommiting the `page`
+parameter will return the first page.
+
+## Rate Limiting
+
+You can make up to a certain amount of requests for each OAuth token associated with your application.
+
+You can check the returned HTTP headers of any API request to see your current
+rate limit status:
+
+<pre class="terminal">
+$ curl -i https://<%= settings.api_domain %>/categories/1440
+
+HTTP/1.1 200 OK
+Date: Mon, 01 Jul 2013 17:27:06 GMT
+Status: 200 OK
+X-RateLimit-Limit: 60
+X-RateLimit-Remaining: 56
+X-RateLimit-Reset: 1372700873
+</pre>
+
+The headers tell you everything you need to know about your current rate limit status:
+
+`X-RateLimit-Limit`
+: The maximum number of requests that the consumer is permitted to make per hour.
+
+`X-RateLimit-Remaining`
+: The number of requests remaining in the current rate limit window.
+
+`X-RateLimit-Reset`
+: The time at which the current rate limit window resets in [UTC epoch seconds](http://en.wikipedia.org/wiki/Unix_time).
+
+If you need the time in a different format, any modern programming language can get the job done. For example, if you open up the console on your web browser, you can easily get the reset time as a JavaScript Date object.
+
+~~~ javascript
+new Date(1372700873 * 1000)
+// => Mon Jul 01 2013 13:47:53 GMT-0400 (EDT)
+~~~
+
+Once you go over the rate limit you will receive an error response:
+
+<pre class="terminal">
+$ curl -i https://<%= settings.api_domain %>/categories/1440
+
+HTTP/1.1 403 Forbidden
+Date: Tue, 20 Aug 2013 14:50:41 GMT
+Status: 403 Forbidden
+X-RateLimit-Limit: 60
+X-RateLimit-Remaining: 0
+X-RateLimit-Reset: 1377013266
+
+{
+  "message": "API rate limit exceeded. See http://developer.<%= settings.domain %>/api/v3/#rate-limiting for details."
+}
+</pre>
+
+
+### Staying within the rate limit
+
+If you are exceeding your rate limit, you can likely fix the issue by caching API responses
+and using [conditional requests](#conditional-requests).
+
+If you're using conditional requests and still exceeding your rate
+limit, please <%= link_to 'contact us', '/support' %> to request a higher rate limit for your application.
+
+## Conditional Requests
+
+Most responses return `Last-Modified` and `ETag` headers. You can use the values
+of these headers to make subsequent requests to those resources using the
+`If-Modified-Since` and `If-None-Match` headers, respectively. If the resource
+has not changed, the server will return a `304 Not Modified`.
+
+> ##### Note
+> Making a conditional request and receiving a `304` HTTP response **does not count** against your
+  [Rate Limit](#rate-limiting).
+
+###### Case: Request without `If-Modified-Since` nor `If-None-Match` headers
+
+<pre class="terminal">
+$ curl -i https://<%= settings.api_domain %>/categories/1440
+
+HTTP/1.1 200 OK
+Cache-Control: private, max-age=60
+ETag: "644b5b0155e6404a9cc4bd9d8b1ae730"
+Last-Modified: Thu, 05 Jul 2012 15:31:30 GMT
+Status: 200 OK
+Vary: Accept, Authorization, Cookie
+X-RateLimit-Limit: 5000
+X-RateLimit-Remaining: 4996
+X-RateLimit-Reset: 1372700873
+</pre>
+
+###### Case: Request with `If-Modified-Since` header
+
+<pre class="terminal">
+$ curl -i https://<%= settings.api_domain %>/categories/1440 -H "If-Modified-Since: Thu, 05 Jul 2012 15:31:30 GMT"
+
+HTTP/1.1 304 Not Modified
+Cache-Control: private, max-age=60
+Last-Modified: Thu, 05 Jul 2012 15:31:30 GMT
+Status: 304 Not Modified
+Vary: Accept, Authorization, Cookie
+X-RateLimit-Limit: 5000
+X-RateLimit-Remaining: 4996
+X-RateLimit-Reset: 1372700873
+</pre>
+
+###### Case: Request with `If-None-Match` header
+
+<pre class="terminal">
+$ curl -i https://<%= settings.api_domain %>/categories/1440 -H 'If-None-Match: "644b5b0155e6404a9cc4bd9d8b1ae730"'
+
+HTTP/1.1 304 Not Modified
+Cache-Control: private, max-age=60
+ETag: "644b5b0155e6404a9cc4bd9d8b1ae730"
+Last-Modified: Thu, 05 Jul 2012 15:31:30 GMT
+Status: 304 Not Modified
+Vary: Accept, Authorization, Cookie
+X-RateLimit-Limit: 5000
+X-RateLimit-Remaining: 4996
+X-RateLimit-Reset: 1372700873
+</pre>
+
+## HTTP Redirects
+
+API v3 uses HTTP redirection where appropriate. Clients should assume that any
+request may result in a redirection. Receiving an HTTP redirection is **not an
+error** and clients should follow that redirect. Redirect responses will have a
+`Location` header field which contains the URI of the resource to which the
+client should repeat the request.
+
+301
+: Permanent redirection. The URI you used to make the request has been
+superseded by the one specified in the `Location` header field. This and all
+future requests to this resource should be directed to the new URI.
+
+302, 307
+: Temporary redirection. The request should be repeated verbatim to the URI
+specified in the `Location` header field but clients should continue to use the
+original URI for future requests.
+
+Other redirection status codes may be used in accordance with the
+[HTTP 1.1 spec](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3).
+
+## Cross Origin Resource Sharing
+
+The API supports [Cross Origin Resource Sharing (CORS)](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
+for AJAX requests. If you want you can read a [short tutorial on CORS](http://www.html5rocks.com/en/tutorials/cors/)
+or even the [CORS W3C working draft](http://www.w3.org/TR/cors).
+
+Here's a sample request sent from a browser hitting
+`http://example.com`:
+
+<pre class="terminal">
+$ curl -i https://<%= settings.api_domain %> -H "Origin: http://example.com"
+
+HTTP/1.1 302 Found
+</pre>
+
+Any domain that is registered as an application is accepted.
+Here's a sample request for a browser hitting [cheap yellow shoes](http://cheapyellowshoes.com/):
+
+<pre class="terminal">
+$ curl -i https://<%= settings.api_domain %> -H "Origin: http://cheapyellowshoes.com"
+
+HTTP/1.1 302 Found
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes
+Access-Control-Allow-Credentials: true
+</pre>
+
+This is what the CORS preflight request looks like:
+
+<pre class="terminal">
+$ curl -i https://<%= settings.api_domain %> -H "Origin: http://cheapyellowshoes.com" -X OPTIONS
+
+HTTP/1.1 204 No Content
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, X-Requested-With
+Access-Control-Allow-Methods: GET, POST, PATCH, PUT, DELETE
+Access-Control-Expose-Headers: ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes
+Access-Control-Max-Age: 86400
+Access-Control-Allow-Credentials: true
+</pre>
+
+## JSON-P Callbacks
+
+Another alternative to bypass the [Same-Origin-Policy](http://en.wikipedia.org/wiki/Same-origin_policy)
+browser restrictions is to send a `callback` parameter to any GET request to have the
+results wrapped in a JavaScript function. The [JSON-P](http://en.wikipedia.org/wiki/JSONP)
+response includes the same data output as the regular API, plus the relevant
+HTTP Header information.
+
+<pre class="terminal">
+$ curl https://<%= settings.api_domain %>/categories/1440?callback=aFunction
+</pre>
+
+~~~ javascript
+aFunction({
+  "meta": {
+    "status": 200
+  },
+  "data": {
+    "category": {
+      "children_count": 0,
+      "family_id": 11,
+      "id": 1442,
+      "name": "Ξαπλώστρες Κήπου &amp; Βεράντας",
+      "image_url": "http://b.scdn.gr/images/categories/large/1442.jpg"
+    }
+  }
+})
+~~~

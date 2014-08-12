@@ -1,0 +1,28 @@
+---
+title: docs
+---
+
+<h1><%= t('titles.docs') %></h1>
+
+<div class="row">
+  <% data.docs.each do |key, doc| %>
+    <%# Skip Doc if not supported for current flavor %>
+    <% next unless flavored?(doc) %>
+
+    <div class="panel-doc-wrapper">
+      <div class="panel-doc">
+        <div class="doc-icon"><i class="<%= doc.icon %>"></i></div>
+        <div class="doc-body">
+          <h3 class="heading">
+            <%= t("titles.#{key}", flavor: settings.site_name.titleize) %>
+            <% if doc.deprecated %>
+              <span class="label label-warning"><%= t('common.deprecated') %></span>
+            <% end %>
+          </h3>
+         <p class="description"><%= t("docs.#{key}.short_description", flavor: settings.site_name.titleize) %></p>
+         <%= link_to t('docs.index.view_doc'), doc.base, class: 'goto' %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

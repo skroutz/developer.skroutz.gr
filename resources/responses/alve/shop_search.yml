@@ -1,33 +1,33 @@
 ---
 :request:
-  :url: http://alve.com/api/shops/search
+  :url: http://api.alve.com/shops/search?q=mediamarkt
   :headers:
     :accept: application/vnd.alve+json; version=3
-    :authorization: Bearer yNE9qe8AC6yVbnVV8ofDPFiitoAREfqiq3THA6NYLQvUHbLHqlmUhHQ6kudbdrHa/0FlExa75mpN4PG/DEzSKw==
+    :authorization: Bearer jRc1LQwgl9wVf6QJT1hTfSL32I7V97Yta5fjEpDUHIDoPox/jRhUTe0K19DamN4NArCAy7tTrUyI8yXRxOVWg==
   :params:
     :q: mediamarkt
   :verb: GET
 :response:
   :status: 200
   :headers:
-    server: nginx
+    !binary "c2VydmVy": nginx
     !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
     !binary "dmFyeQ==": Accept-Encoding
-    status: 200 OK
-    cache-control: max-age=300, private
-    x-ua-compatible: IE=Edge,chrome=1
-    x-request-id: '458392844'
-    x-runtime: '0.038131'
-    x-dns-prefetch-control: 'off'
-    x-app: as2
-    content-length: '345'
-    accept-ranges: bytes
-    date: Fri, 18 Jul 2014 15:17:39 GMT
-    x-varnish: '458392844'
-    age: '0'
-    via: 1.1 varnish
-    connection: close
-    x-origin: varnish2
-    x-cache: MISS
+    !binary "c3RhdHVz": 200 OK
+    !binary "Y2FjaGUtY29udHJvbA==": max-age=300, private
+    !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
+    !binary "eC1yZXF1ZXN0LWlk": '984168115'
+    !binary "eC1ydW50aW1l": '0.028265'
+    !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
+    !binary "eC1hcHA=": as2
+    !binary "Y29udGVudC1sZW5ndGg=": '345'
+    !binary "YWNjZXB0LXJhbmdlcw==": bytes
+    !binary "ZGF0ZQ==": Tue, 12 Aug 2014 09:16:25 GMT
+    !binary "eC12YXJuaXNo": '984168115'
+    !binary "YWdl": '0'
+    !binary "dmlh": 1.1 varnish
+    !binary "Y29ubmVjdGlvbg==": close
+    !binary "eC1vcmlnaW4=": varnish1
+    !binary "eC1jYWNoZQ==": MISS
   :body: ! '{"shops":[{"id":138,"name":"Media Markt","link":"http://www.mediamarkt.com.tr","phone":"08502221500","image_url":"http://alve-c.scdn.gr/images/shops/logos/0001/mid_2b82b627-658e-43c5-86c1-ff6cea40dced.jpg","thumbshot_url":"http://alve-d.scdn.gr/images/shops/screens/f0f6510b-decc-4b19-beb1-77c6e72cbd3f.png","reviews_count":0,"review_score":0.0,"payment_methods":{"credit_card":true,"paypal":true,"bank":false,"spot_cash":false,"installments":""}}],"meta":{"pagination":{"total_results":1,"total_pages":1,"page":1,"per":25}}}'
-:created_at: 2014-07-18 18:17:39.361745548 +03:00
+:created_at: 2014-08-12 12:16:25.534128220 +03:00

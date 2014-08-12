@@ -1,0 +1,121 @@
+---
+parent: analytics
+title: ecommerce
+---
+
+# Ecommerce
+
+Ecommerce tracking allows you to measure the transactions and revenue generated
+from your e-shop.
+
+You can track two types of ecommerce data:
+
+Order
+: A completed order - transaction
+
+Item
+: An item of a completed order - transaction
+
+<%= partial 'partials/toc' %>
+
+## addOrder
+The `addOrder` command creates an Ecommerce order object.
+
+##### Data Parameters
+
+<table>
+  <thead>
+    <th>Value</th>
+    <th>Type</th>
+    <th>Required</th>
+    <th>Description</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>order_id</td>
+      <td>String</td>
+      <td><strong>Yes</strong></td>
+      <td>The Order ID that produced and stored at your e-shop to identify the transaction. This id is what links items to the orders to which they belong. (e.g. 123456)</td>
+    </tr>
+    <tr>
+      <td>revenue</td>
+      <td>String</td>
+      <td>No</td>
+      <td>The total revenue or grand total of the order (e.g. 120.99). This value may include shipping, tax costs, or other adjustments to total revenue that you want to include as part of your revenue calculations.</td>
+    </tr>
+    <tr>
+      <td>shipping</td>
+      <td>String</td>
+      <td>No</td>
+      <td>The total shipping cost of the order. (e.g. 5.45)</td>
+    </tr>
+    <tr>
+      <td>tax</td>
+      <td>String</td>
+      <td>No</td>
+      <td>The total tax of the order. (e.g. 10.50)</td>
+    </tr>
+  </tbody>
+</table>
+
+##### Example
+
+~~~ javascript
+sa('ecommerce', 'addOrder', JSON.stringify({
+  order_id: '123456',  // Order ID. Required.
+  revenue:  '120.99',  // Grand Total.
+  shipping: '5.45',    // Total Shipping Cost.
+  tax:      '10.50'    // Total Tax.
+}));
+~~~
+
+## addItem
+The `addItem` command adds a new Ecommerce item object.
+
+##### Data Parameters
+
+<table>
+  <thead>
+    <th>Value</th>
+    <th>Type</th>
+    <th>Required</th>
+    <th>Description</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>order_id</td>
+      <td>String</td>
+      <td><strong>Yes</strong></td>
+      <td>The Order ID that produced and stored at your e-shop to identify the transaction. This id is what links items to the orders to which they belong. (e.g. 123456)</td>
+    </tr>
+    <tr>
+      <td>product_id</td>
+      <td>String</td>
+      <td><strong>Yes</strong></td>
+      <td>The id of the product as stored at your e-shop. (e.g. 987)</td>
+    </tr>
+    <tr>
+      <td>price</td>
+      <td>String</td>
+      <td><strong>Yes</strong></td>
+      <td>The individual, unit, final price for each item. (e.g. 10.50)</td>
+    </tr>
+    <tr>
+      <td>quantity</td>
+      <td>String</td>
+      <td><strong>Yes</strong></td>
+      <td>The number of units purchased in the order. (e.g. 4)</td>
+    </tr>
+  </tbody>
+</table>
+
+##### Example
+
+~~~ javascript
+sa('ecommerce', 'addItem', JSON.strigify({
+    order_id:   '123456',  // Order ID. Required.
+    product_id: '987',     // Product ID. Required.
+    price:      '10.50',   // Price per Unit. Required.
+    quantity:   '4'        // Quantity of Items. Required.
+}));
+~~~

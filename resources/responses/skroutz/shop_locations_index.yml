@@ -1,41 +1,38 @@
 ---
 :request:
-  :url: http://skroutz.gr/api/shops/11/locations
+  :url: http://api.skroutz.gr/api/shops/11/locations
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer fYxk5iZjO44DwXwkwP5SW7cHwaqFMbc5riQ4JQFgeVNe1epmAHlDtGjvAPhVAIH1aPLiQt67RSrVasw9o7EEQ==
+    :authorization: Bearer W5lqBPwCzzX3VoJpnC4NZdimjEiABofdu5aAUG1SjiKO2fUgStTVloVzStT/kO/w6T7lCSmhZE64NWwUxc//rw==
   :params:
     :per: 2
-    :embed: address
   :verb: GET
 :response:
   :status: 200
   :headers:
-    server: nginx
-    content-type: application/json; charset=utf-8
+    !binary "c2VydmVy": nginx
+    !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
     !binary "dmFyeQ==": Accept-Encoding
-    status: 200 OK
-    !binary "bGluaw==": <http://api.skroutz.gr/api/shops/11/locations?embed=address&page=11&per=2>;
-      rel="last", <http://api.skroutz.gr/api/shops/11/locations?embed=address&page=2&per=2>;
-      rel="next"
-    cache-control: max-age=300, private
-    x-ua-compatible: IE=Edge,chrome=1
-    x-request-id: '225151580'
-    x-runtime: '0.103530'
-    x-dns-prefetch-control: 'off'
-    x-app: lunkwill
-    content-length: '416'
-    accept-ranges: bytes
-    date: Mon, 14 Jul 2014 12:06:28 GMT
-    x-varnish: '225151580'
-    age: '0'
-    via: 1.1 varnish
-    connection: close
-    x-origin: varnish1
-    x-cache: MISS
+    !binary "c3RhdHVz": 200 OK
+    !binary "bGluaw==": <http://api.skroutz.gr/api/shops/11/locations?page=11&per=2>;
+      rel="last", <http://api.skroutz.gr/api/shops/11/locations?page=2&per=2>; rel="next"
+    !binary "Y2FjaGUtY29udHJvbA==": max-age=300, private
+    !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
+    !binary "eC1yZXF1ZXN0LWlk": '464666003'
+    !binary "eC1ydW50aW1l": '0.116700'
+    !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
+    !binary "eC1hcHA=": lunkwill
+    !binary "Y29udGVudC1sZW5ndGg=": '320'
+    !binary "YWNjZXB0LXJhbmdlcw==": bytes
+    !binary "ZGF0ZQ==": Mon, 11 Aug 2014 14:19:26 GMT
+    !binary "eC12YXJuaXNo": '464666003'
+    !binary "YWdl": '0'
+    !binary "dmlh": 1.1 varnish
+    !binary "Y29ubmVjdGlvbg==": close
+    !binary "eC1vcmlnaW4=": varnish1
+    !binary "eC1jYWNoZQ==": MISS
   :body: ! '{"locations":[{"id":2,"headquarter":true,"phones":["2105587700"],"pickup_point":true,"store":true,"full_address":"\u0398\u0395\u03a3\u0397
     \u03a3\u039a\u039b\u0397\u03a1\u0399 1, \u03a4.\u039a. 19600, \u039c\u0391\u0393\u039f\u03a5\u039b\u0391,
-    \u0391\u03c4\u03c4\u03b9\u03ba\u03ae\u03c2","lat":"38.083786","lng":"23.526396","info":"","address":{"id":2,"street_number":"1","street":"\u0398\u0395\u03a3\u0397
-    \u03a3\u039a\u039b\u0397\u03a1\u0399","postcode":"19600","city":"\u039c\u0391\u0393\u039f\u03a5\u039b\u0391","region":"\u0391\u03c4\u03c4\u03b9\u03ba\u03ae\u03c2","country":"\u0395\u03bb\u03bb\u03ac\u03b4\u03b1"}},{"id":1912,"headquarter":false,"phones":["8001112345"],"pickup_point":false,"store":true,"full_address":"\u0392\u039f\u03a5\u039b\u0397\u03a3
-    3, \u03a4.\u039a. 10562, \u0391\u0398\u0397\u039d\u0391, \u0391\u03c4\u03c4\u03b9\u03ba\u03ae\u03c2","lat":"37.977154","lng":"23.732843","info":"","address":{"id":1912,"street_number":"3","street":"\u0392\u039f\u03a5\u039b\u0397\u03a3","postcode":"10562","city":"\u0391\u0398\u0397\u039d\u0391","region":"\u0391\u03c4\u03c4\u03b9\u03ba\u03ae\u03c2","country":"\u0395\u03bb\u03bb\u03ac\u03b4\u03b1"}}],"meta":{"pagination":{"total_results":21,"total_pages":11,"page":1,"per":2}}}'
-:created_at: 2014-07-14 15:06:28.315321241 +03:00
+    \u0391\u03c4\u03c4\u03b9\u03ba\u03ae\u03c2","lat":"38.083786","lng":"23.526396","info":""},{"id":1912,"headquarter":false,"phones":["8001112345"],"pickup_point":false,"store":true,"full_address":"\u0392\u039f\u03a5\u039b\u0397\u03a3
+    3, \u03a4.\u039a. 10562, \u0391\u0398\u0397\u039d\u0391, \u0391\u03c4\u03c4\u03b9\u03ba\u03ae\u03c2","lat":"37.977154","lng":"23.732843","info":""}],"meta":{"pagination":{"total_results":21,"total_pages":11,"page":1,"per":2}}}'
+:created_at: 2014-08-11 17:19:26.681251820 +03:00

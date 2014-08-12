@@ -1,51 +1,51 @@
 ---
 :request:
-  :url: http://alve.com/api/skus/146414/similar
+  :url: http://api.alve.com/skus/146414/similar
   :headers:
     :accept: application/vnd.alve+json; version=3
-    :authorization: Bearer yNE9qe8AC6yVbnVV8ofDPFiitoAREfqiq3THA6NYLQvUHbLHqlmUhHQ6kudbdrHa/0FlExa75mpN4PG/DEzSKw==
+    :authorization: Bearer jRc1LQwgl9wVf6QJT1hTfSL32I7V97Yta5fjEpDUHIDoPox/jRhUTe0K19DamN4NArCAy7tTrUyI8yXRxOVWg==
   :verb: GET
 :response:
   :status: 200
   :headers:
-    server: nginx
+    !binary "c2VydmVy": nginx
     !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
     !binary "dmFyeQ==": Accept-Encoding
-    status: 200 OK
-    cache-control: max-age=300, private
-    x-ua-compatible: IE=Edge,chrome=1
-    x-request-id: '458392813'
-    x-runtime: '0.048085'
-    x-dns-prefetch-control: 'off'
-    x-app: as2
-    content-length: '1256'
-    accept-ranges: bytes
-    date: Fri, 18 Jul 2014 15:17:37 GMT
-    x-varnish: '458392813'
-    age: '0'
-    via: 1.1 varnish
-    connection: close
-    x-origin: varnish2
-    x-cache: MISS
-  :body: ! '{"skus":[{"id":58324,"ean":"","pn":"","name":"Galaxy S III i9300 16GB","display_name":"Samsung
-    Galaxy S III i9300 16GB","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":1721.48,"price_min":889.82,"reviewscore":0.0,"shop_count":39,"plain_spec_summary":"Single
+    !binary "c3RhdHVz": 200 OK
+    !binary "Y2FjaGUtY29udHJvbA==": max-age=300, private
+    !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
+    !binary "eC1yZXF1ZXN0LWlk": '984168101'
+    !binary "eC1ydW50aW1l": '0.049890'
+    !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
+    !binary "eC1hcHA=": as2
+    !binary "Y29udGVudC1sZW5ndGg=": '1166'
+    !binary "YWNjZXB0LXJhbmdlcw==": bytes
+    !binary "ZGF0ZQ==": Tue, 12 Aug 2014 09:16:24 GMT
+    !binary "eC12YXJuaXNo": '984168101'
+    !binary "YWdl": '0'
+    !binary "dmlh": 1.1 varnish
+    !binary "Y29ubmVjdGlvbg==": close
+    !binary "eC1vcmlnaW4=": varnish1
+    !binary "eC1jYWNoZQ==": MISS
+  :body: ! '{"skus":[{"id":644369,"ean":"","pn":"","name":"Galaxy S5 16GB","display_name":"Samsung
+    Galaxy S5 16GB","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":2568.41,"price_min":1681.42,"reviewscore":0.0,"shop_count":29,"plain_spec_summary":"Single
+    SIM, A\u011f Ba\u011flant\u0131s\u0131: 2G / 3G / 4G - LTE, Kamera: 16 Megapiksel,  Ekran:
+    5.1\", 1920 x 1080 piksel, Kullan\u0131m Y\u00f6ntemi: Dokunmatik ekran (Touch
+    screen),  Dahili Haf\u0131za: 16 GB,  \u0130\u015fletim Sistemi: Android, \u00c7\u0131k\u0131\u015f
+    Tarihi: 2014, Smart Phone","manufacturer_id":36,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://alve-a.scdn.gr/images/sku_main_images/000644/644369/medium_Samsung-Galaxy-S5-630x538.jpg","alternatives":["http://alve-d.scdn.gr/images/sku_images/000753/753772/samsung-galaxy-s5-blue-730x743.jpg","http://alve-c.scdn.gr/images/sku_images/000753/753773/Samsung-Galaxy-S5-Gold-630x641.jpg","http://alve-a.scdn.gr/images/sku_images/000753/753774/Samsung-Galaxy-S5-White-630x641.jpg","http://alve-b.scdn.gr/images/sku_images/000753/753775/samsung-galaxy-s5-g900f-2.jpg"]}},{"id":58324,"ean":"","pn":"","name":"Galaxy
+    S III i9300 16GB","display_name":"Samsung Galaxy S III i9300 16GB","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":1721.48,"price_min":885.0,"reviewscore":0.0,"shop_count":37,"plain_spec_summary":"Single
     SIM, A\u011f Ba\u011flant\u0131s\u0131: 2G / 3G, Kamera: 8 Megapiksel,  Ekran:
     4.8\", 1280 x 720 piksel, Kullan\u0131m Y\u00f6ntemi: Dokunmatik ekran (Touch
     screen),  Dahili Haf\u0131za: 16 GB,  \u0130\u015fletim Sistemi: Android, \u00c7\u0131k\u0131\u015f
-    Tarihi: 2012, Smart Phone","manufacturer_id":36,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://alve-a.scdn.gr/images/sku_main_images/000058/58324/medium_Samsung_Galaxy_SIII_S3_White_M.jpg","alternatives":["http://alve-d.scdn.gr/images/sku_images/000485/485892/Samsung-GT-i9300-Galaxy-S-III-BEYAZ__58791637_0.jpg","http://alve-b.scdn.gr/images/sku_images/000485/485893/samsung-galaxy-s3-format-nasil-atilir-1.jpg","http://alve-a.scdn.gr/images/sku_images/000485/485894/1375551359_46123samsung-galaxy.jpg","http://alve-c.scdn.gr/images/sku_images/000485/485895/Samsung-Galaxy-S3.jpg","http://alve-d.scdn.gr/images/sku_images/000485/485896/GalaxyS3-newcolours-580-100.jpg","http://alve-b.scdn.gr/images/sku_images/000485/485897/xl_Samsung_Galaxy_S3_LTE_4G.jpg"]}},{"id":357624,"ean":"8808992086833","pn":"LGD802A.ACZEBK","name":"G2
-    32GB","display_name":"LG G2 32GB","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":1799.0,"price_min":917.73,"reviewscore":0.0,"shop_count":17,"plain_spec_summary":"Single
+    Tarihi: 2012, Smart Phone","manufacturer_id":36,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://alve-a.scdn.gr/images/sku_main_images/000058/58324/medium_Samsung_Galaxy_SIII_S3_White_M.jpg","alternatives":["http://alve-d.scdn.gr/images/sku_images/000485/485892/Samsung-GT-i9300-Galaxy-S-III-BEYAZ__58791637_0.jpg","http://alve-b.scdn.gr/images/sku_images/000485/485893/samsung-galaxy-s3-format-nasil-atilir-1.jpg","http://alve-a.scdn.gr/images/sku_images/000485/485894/1375551359_46123samsung-galaxy.jpg","http://alve-c.scdn.gr/images/sku_images/000485/485895/Samsung-Galaxy-S3.jpg","http://alve-d.scdn.gr/images/sku_images/000485/485896/GalaxyS3-newcolours-580-100.jpg","http://alve-b.scdn.gr/images/sku_images/000485/485897/xl_Samsung_Galaxy_S3_LTE_4G.jpg"]}},{"id":245877,"ean":"","pn":"","name":"Galaxy
+    S4 i9500 32GB","display_name":"Samsung Galaxy S4 i9500 32GB","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":1649.0,"price_min":1299.0,"reviewscore":0.0,"shop_count":4,"plain_spec_summary":"Single
     SIM, A\u011f Ba\u011flant\u0131s\u0131: 2G / 3G / 4G - LTE, Kamera: 13 Megapiksel,  Ekran:
-    5.2\", 1920 x 1080 piksel, Kullan\u0131m Y\u00f6ntemi: Dokunmatik ekran (Touch
-    screen),  Dahili Haf\u0131za: 32 GB,  \u0130\u015fletim Sistemi: Android, \u00c7\u0131k\u0131\u015f
-    Tarihi: 2013, Smart Phone","manufacturer_id":53,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://alve-d.scdn.gr/images/sku_main_images/000357/357624/medium_LG-G2-1.jpeg","alternatives":["http://alve-c.scdn.gr/images/sku_images/000421/421776/19666700_3530.jpg","http://alve-c.scdn.gr/images/sku_images/000421/421777/19666700_9653.jpg","http://alve-b.scdn.gr/images/sku_images/000421/421778/19666700_2718.jpg","http://alve-b.scdn.gr/images/sku_images/000421/421779/19666700_9168.jpg","http://alve-a.scdn.gr/images/sku_images/000421/421780/19666700_6302.jpg"]}},{"id":647107,"ean":"","pn":"SM-N7500","name":"Galaxy
-    Note 3 Neo","display_name":"Samsung Galaxy Note 3 Neo","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":1757.02,"price_min":1362.1,"reviewscore":0.0,"shop_count":26,"plain_spec_summary":"Single
-    SIM, A\u011f Ba\u011flant\u0131s\u0131: 2G / 3G / 4G - LTE, Kamera: 8 Megapiksel,  Ekran:
-    5.5\", 1280 x 720 piksel, Kullan\u0131m Y\u00f6ntemi: Dokunmatik ekran (Touch
-    screen),  Dahili Haf\u0131za: 16 GB,  \u0130\u015fletim Sistemi: Android, \u00c7\u0131k\u0131\u015f
-    Tarihi: 2014, Smart Phone","manufacturer_id":36,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://alve-d.scdn.gr/images/sku_main_images/000647/647107/medium_2806208-orig.jpg","alternatives":["http://alve-d.scdn.gr/images/sku_images/000757/757984/-samsung-galaxy-note-3-neo-1.jpg","http://alve-b.scdn.gr/images/sku_images/000757/757985/-samsung-galaxy-note-3-neo-2.jpg"]}},{"id":347343,"ean":"","pn":"C6903GINAI1WHT","name":"Xperia
-    Z1","display_name":"Sony Xperia Z1","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":2494.0,"price_min":1364.0,"reviewscore":0.0,"shop_count":27,"plain_spec_summary":"Single
-    SIM, A\u011f Ba\u011flant\u0131s\u0131: 2G / 3G / 4G - LTE, Kamera: 20.7 Megapiksel,  Ekran:
     5\", 1920 x 1080 piksel, Kullan\u0131m Y\u00f6ntemi: Dokunmatik ekran (Touch screen),  Dahili
-    Haf\u0131za: 16 GB,  \u0130\u015fletim Sistemi: Android, \u00c7\u0131k\u0131\u015f
-    Tarihi: 2013, Smart Phone","manufacturer_id":30,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://alve-d.scdn.gr/images/sku_main_images/000347/347343/medium_19693752-Sony-C6903GINAI1WHT-220243.jpg","alternatives":["http://alve-a.scdn.gr/images/sku_images/000407/407125/19693752-Sony-C6903GINAI1WHT-7321.jpg","http://alve-b.scdn.gr/images/sku_images/000485/485858/19693752-Sony.jpg","http://alve-a.scdn.gr/images/sku_images/000485/485859/sony-xperia-z1.jpg","http://alve-b.scdn.gr/images/sku_images/000485/485860/sony_xperia_z1_press_tech2.jpg","http://alve-d.scdn.gr/images/sku_images/000485/485861/SONYZ1MOR-39151.jpg","http://alve-c.scdn.gr/images/sku_images/000485/485862/Sony-Xperia-Z1-Back-View---Black_-White-_-Purple.JPG"]}}],"meta":{"pagination":{"total_results":4,"total_pages":1,"page":1,"per":25}}}'
-:created_at: 2014-07-18 18:17:37.452318604 +03:00
+    Haf\u0131za: 32 GB,  \u0130\u015fletim Sistemi: Android, \u00c7\u0131k\u0131\u015f
+    Tarihi: 2013, Smart Phone","manufacturer_id":36,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://alve-d.scdn.gr/images/sku_main_images/000245/245877/medium_samsung-galaxy-s4-colors-white-black.jpg","alternatives":["http://alve-d.scdn.gr/images/sku_images/000485/485872/Galaxy-S4-black-and-white.jpg","http://alve-d.scdn.gr/images/sku_images/000485/485873/Samsung-Galaxy-S-4-white-three-up-front-profile-back.jpg","http://alve-c.scdn.gr/images/sku_images/000485/485874/s4-130315-3.png","http://alve-a.scdn.gr/images/sku_images/000485/485876/samsung-galaxy-s-4-i9500-black-mist.jpg"]}},{"id":275975,"ean":"","pn":"","name":"Galaxy
+    Note 3 N9000 32GB","display_name":"Samsung Galaxy Note 3 N9000 32GB","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":2546.09,"price_min":1711.71,"reviewscore":0.0,"shop_count":34,"plain_spec_summary":"Single
+    SIM, A\u011f Ba\u011flant\u0131s\u0131: 2G / 3G / 4G - LTE, Kamera: 13 Megapiksel,  Ekran:
+    5.7\", 1920 x 1080 piksel, Kullan\u0131m Y\u00f6ntemi: Dokunmatik ekran (Touch
+    screen),  Dahili Haf\u0131za: 32 GB,  \u0130\u015fletim Sistemi: Android, \u00c7\u0131k\u0131\u015f
+    Tarihi: 2013, Smart Phone","manufacturer_id":36,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://alve-a.scdn.gr/images/sku_main_images/000275/275975/medium_samsung-galaxy-note-3.jpg","alternatives":["http://alve-b.scdn.gr/images/sku_images/000303/303687/note3.silikonvadisitv.5.jpg","http://alve-a.scdn.gr/images/sku_images/000485/485864/samsung-galaxy-note-3-1.jpg","http://alve-b.scdn.gr/images/sku_images/000485/485865/maxresdefault.jpg","http://alve-d.scdn.gr/images/sku_images/000485/485866/Samsung-Galaxy-Note-3-wallpapers.jpg"]}}],"meta":{"pagination":{"total_results":4,"total_pages":1,"page":1,"per":25}}}'
+:created_at: 2014-08-12 12:16:24.105582226 +03:00

@@ -1,0 +1,13 @@
+window.Swiftype = window.Swiftype or {}
+
+(->
+  window.Swiftype.key = '<%= settings.swiftype_code %>'
+
+  # DO NOT EDIT BELOW THIS LINE *
+  script = document.createElement("script")
+  script.type = "text/javascript"
+  script.async = true
+  script.src = "//s.swiftypecdn.com/embed.js"
+  entry = document.getElementsByTagName("script")[0]
+  entry.parentNode.insertBefore script, entry
+)()

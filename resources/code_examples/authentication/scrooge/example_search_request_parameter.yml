@@ -1,0 +1,6 @@
+:language: bash
+:code: |
+  curl -XGET http://api.scrooge.co.uk/api/search\?\
+    q\=apple\&\
+    oauth_token=your_access_token_here \
+    -H 'Accept: application/vnd.scrooge+json; version=3'

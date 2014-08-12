@@ -6,6 +6,27 @@ analytics_domain: 'analytics.alve.com'
 api_domain: 'api.alve.com'
 apiv2_domain: 'apiv2.alve.com'
 
+api_email: 'api@alve.com'
+
+github_profile: 'https://github.com/skroutz'
+apiv3_early_access_form: 'http://docs.google.com/forms/d/1mUk6pvAXR7yiMqtau8FWnBFamKCY320fL70El_RgN68/viewform'
+
 # External Services
-google_analytics_code: 'UA-48017177-1'
-swiftype_code: 'qbNiqUVxzUseXtdSCSUy'
+google_analytics_code: 'UA-31711644-1'
+swiftype_code: 'MP6vxaRxs1Q_z47PsdPA'
+
+# Feedspec Data
+feedspec:
+  - { name: 'Unique ID',       code: 'uid',          type: 'String',  max: 200,   required: 'yes',  example: '322' }
+  - { name: 'Name',            code: 'name',         type: 'String',  max: 300,   required: 'yes',  example: 'Samsung Galaxy S4 16GB' }
+  - { name: 'Product Link',    code: 'link',         type: 'String',  max: 1000,  required: 'yes',  example: 'http://www.someurl.com/products/322.html' }
+  - { name: 'Image Link',      code: 'image',        type: 'String',  max: 400,   required: 'yes',  example: 'http://www.someurl.com/images/322.jpg' }
+  - { name: 'Category Name',   code: 'category',     type: 'String',  max: 250,   required: 'yes',  example: 'mobile_phones', i18n: true}
+  - { name: 'Price',           code: 'price',        type: 'Decimal', max: '-',   required: 'yes',  example: '22.32'}
+  - { name: 'InStock',         code: 'instock',      type: 'List',    max: '-',   required: 'yes',  example: 'Y'}
+  - { name: 'Availability',    code: 'availability', type: 'String',  max: 60,    required: 'yes',  example: 'in_two_days', i18n: true }
+  - { name: 'Manufacturer',    code: 'manufacturer', type: 'String',  max: 100,   required: 'yes',  example: 'Samsung' }
+  - { name: 'MPN / ISBN',      code: 'mpn',          type: 'String',  max: 80,    required: 'yes',  example: 'GF322234'}
+  - { name: 'Size',            code: 'size',         type: 'String',  max: 500,   required: 'no_asterisk',  example: '36,37,38 1/2,40,44' }
+  - { name: 'Shipping Costs',  code: 'shipping',     type: 'Decimal', max: '-',   required: 'no',   example: '3.22' }
+  - { name: 'Color',           code: 'color',        type: 'String',  max: 100,   required: 'no',   example: 'black', i18n: true }

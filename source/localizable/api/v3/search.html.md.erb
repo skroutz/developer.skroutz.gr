@@ -1,0 +1,91 @@
+---
+parent: apiv3
+title: search
+---
+
+# Search
+
+<%= partial 'partials/toc' %>
+
+## Search
+
+<pre class="terminal">
+  GET /search
+</pre>
+
+Name | Type   | Description
+---- | ------ | -----------
+`q`  | String | Search with the value of this parameter
+
+The main response type is a collection of <%= link_to 'Categories', '/api/v3/category' %>.
+
+There may be alternate suggestion queries provided in the `alternatives` key of the `meta` object.
+
+Any of those alternatives with the flag `important` set to `true`, are a hint
+for the client to perform a search with the alternative query instead.
+
+There may also exist matches of different resources under the key `strong_matches`.
+
+Currently there may be up-to one of each of the following resources in `strong_matches`:
+
+<ul>
+  <li><%= link_to 'Category', '/api/v3/category' %></li>
+  <li><%= link_to 'SKU', '/api/v3/sku' %></li>
+  <li><%= link_to 'Manufacturer', '/api/v3/manufacturer' %></li>
+  <li><%= link_to 'Shop', '/api/v3/shop' %></li>
+</ul>
+
+### Query with less than 2 characters
+
+<%= render_recording :search_invalid %>
+
+### Query that doesn't match anything
+
+<%= render_recording :search_no_results %>
+
+### Query with more results when written in another language
+
+<%= render_recording :search_latin_mapping %>
+
+### Probably misspelled query
+
+<%= render_recording :search_spelling %>
+
+### Query matching many categories
+
+<%= render_recording :search_category_facade %>
+
+### Query with strong hints for a specific category match
+
+<%= render_recording :search_category_match %>
+
+### Query with strong hints for a specific manufacturer match
+
+<%= render_recording :search_manufacturer_match %>
+
+### Query with strong hints for a specific SKU match
+
+<%= render_recording :search_sku_match %>
+
+### Query that matches SKUS from a single category
+
+<%= render_recording :search_skus_match %> 
+
+### Query with results when parts of the query are omitted
+
+<%= render_recording :search_drop %>
+
+## Autocomplete
+
+<pre class="terminal">
+  GET /autocomplete
+</pre>
+
+Name | Type   | Description
+---- | ------ | -----------
+`q`  | String | The term to be autocompleted
+
+<%= render_recording :autocomplete %>
+
+> Note that the results of the autocomplete are to be treated as search suggestions.
+When the user selects any of them you should perform a search with the selected keyphrase.
