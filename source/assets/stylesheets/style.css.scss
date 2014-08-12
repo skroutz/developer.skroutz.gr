@@ -395,15 +395,16 @@ dl {
 //** Logo
 .navbar-header {
   .navbar-brand {
-    height: 22px;
-    margin-top: 15px;
+    width: 280px;
+    height: 32px;
+    margin-top: 13px;
     margin-left: 15px !important;
-    padding: 2px 0 0;
+    padding: 0;
     font-size: 18px;
-    line-height: 22px;
-    background-position: 0 -60px;
+    line-height: 32px;
+    background-position: -530px -60px;
     background-repeat: no-repeat;
-    background-size: 110px 81px;
+    background-size: 679px 110px;
 
     @media (max-width: $screen-xs-max) {
       width: 80%;
