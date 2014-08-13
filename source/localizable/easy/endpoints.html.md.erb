@@ -46,14 +46,14 @@ $ curl https://www.<%= settings.domain %>/oauth2/address?oauth_token=124fFAGRNJr
 
 Τhe `Address` resource supports [JSONP](http://en.wikipedia.org/wiki/JSONP).
 
-Once you complete the required server-side OAuth steps, you can expose the `oauth_token` at
-the client (browser) side.  
+Once you complete the required server-side OAuth steps, you can expose the
+`oauth_token` at the client (browser) side.  
 Then, by using JavaScript and an [XHR](http://en.wikipedia.org/wiki/XMLHttpRequest)
 you can retrieve the user address and pre-fill the form.
 
 To get the billing address of a user in [JSONP](http://en.wikipedia.org/wiki/JSONP)
-format, you have to set the `callback` parameter with the function name (e.g. `aFunction`)
-you want to be invoked.
+format, you have to set the `callback` parameter with the function name
+(e.g. `aFunction`) you want to be invoked.
 
 <pre class="terminal">
 $ curl https://www.<%= settings.domain %>/oauth2/address?callback=aFunction&oauth_token=124fFAGRNJru1FTz70BzhT3Zg...
@@ -70,8 +70,9 @@ aFunction({
 
 ## Shipping address
 
-In case the shipping address is different from the billing address, the `shipping_address`
-field will be present along with all shipping information. For example:
+In case the shipping address is different from the billing address, the
+`shipping_address` field will be present along with all shipping information.
+For example:
 
 ~~~ javascript
 {
