@@ -6,16 +6,15 @@ title: permissions
 # Permissions <%= edit_link %>
 
 A representation of the permissions granted to your app by
-<%= settings.site_name.titleize %> and a User.
+<%= settings.site_name.capitalize %> and a User.
 
 <%= partial 'partials/toc' %>
 
 ## Obtainable Permissions
 
-Each application is assigned the minimum set of permissions required
-to operate based on its given description.  
-To expand your application's set of
-acquirable permissions shoot a mail at <<%= settings.api_email %>>.
+Each application is assigned the minimum set of permissions required to operate
+based on its given description. To expand your application's set of acquirable
+permissions shoot a mail at <<%= settings.api_email %>>.
 
 <table>
   <thead>
@@ -27,26 +26,26 @@ acquirable permissions shoot a mail at <<%= settings.api_email %>>.
   </thead>
   <tbody>
     <tr>
-      <td>public</td>
-      <td>application</td>
+      <td><code>public</code></td>
+      <td>Application</td>
       <td>All public resources*</td>
     </tr>
     <tr>
-      <td>favorites</td>
-      <td>user</td>
-      <td>User <%= link_to 'Favorites', '/api/v3/favorites' %></td>
+      <td><code>favorites</code></td>
+      <td>User</td>
+      <td><%= link_to t('docs.apiv3.favorites'), '/api/v3/favorites' %></td>
     </tr>
     <tr>
-      <td>notifications</td>
-      <td>user</td>
-      <td>User <%= link_to 'Notifications', '/api/v3/notifications' %></td>
+      <td><code>notifications</code></td>
+      <td>User</td>
+      <td><%= link_to t('docs.apiv3.notifications'), '/api/v3/notifications' %></td>
     </tr>
     <% if flavor == 'skroutz' %>
     <tr>
-      <td>easy</td>
-      <td>user</td>
+      <td><code>easy</code> <small class="mark">default</small></td>
+      <td>User</td>
       <td>
-        <%= link_to t('titles.easy', flavor: settings.site_name.titleize), '/easy' %>
+        <%= link_to t('titles.easy', flavor: settings.site_name.capitalize), '/easy' %>
       </td>
     </tr>
     <% end %>
@@ -55,37 +54,36 @@ acquirable permissions shoot a mail at <<%= settings.api_email %>>.
 
 <div class="alert alert-warning" role="alert">
   <i class="fa fa-exclamation-triangle"></i>
-  Having not set a specific permission to be obtained the default is set to 
-  <span class="label label-default">easy</span>, but as this may change in the future, 
-  you are suggested to always specify your desired permissions.
+  You always have to specify your desired permissions.
 </div>
 
 <div class="alert alert-info" role="alert">
-  <i class="fa fa-info-circle"></i> You may specify desired permissions using the 
-  <span class="label label-default">scope</span> parameter in authorization requests.
+  <i class="fa fa-info-circle"></i> You may specify desired permissions using the
+  <a href="/authorization/flows#application-token">
+    <span class="label label-default">scope</span>
+  </a> 
+  parameter in authorization requests.
 </div>
 
 ## Public Resources
+
 Having obtained the public permission you can access the following resources:
 
-<ul class="public-resources">
-  <li><%= link_to 'Categories', '/api/v3/category/' %></li>
-  <li><%= link_to 'Skus', '/api/v3/sku/' %></li>
-  <li><%= link_to 'Products', '/api/v3/product/' %></li>
-  <li><%= link_to 'Shops', '/api/v3/shop/' %></li>
-  <li><%= link_to 'Manufacturers', '/api/v3/manufacturer/' %></li>
-  <li><%= link_to 'Search', '/api/v3/search/' %></li>
-  <li><%= link_to 'Filter Groups', '/api/v3/filter_groups/' %></li>
-</ul>
+* <%= link_to t('docs.apiv3.category'), '/api/v3/category/' %>
+* <%= link_to t('docs.apiv3.sku'), '/api/v3/sku/' %>
+* <%= link_to t('docs.apiv3.product'), '/api/v3/product/' %>
+* <%= link_to t('docs.apiv3.shop'), '/api/v3/shop/' %>
+* <%= link_to t('docs.apiv3.manufacturer'), '/api/v3/manufacturer/' %>
+* <%= link_to t('docs.apiv3.search'), '/api/v3/search/' %>
+* <%= link_to t('docs.apiv3.filter_groups'), '/api/v3/filter_groups/' %>
 
 ## User Resources
+
 These permissions require that you have explicitly requested them using
 the scope param.
 
 User will have to consent to grant any of those permissions.
-You __must not__ share these data to 3rd parties.
+You **must not** share these data to 3rd parties.
 
-<ul class="private-resources">
-  <li><%= link_to 'Favorites', '/api/v3/favorites/' %></li>
-  <li><%= link_to 'Notifications', '/api/v3/notifications/' %></li>
-</ul>
+* <%= link_to t('docs.apiv3.favorites'), '/api/v3/favorites/' %>
+* <%= link_to t('docs.apiv3.notifications'), '/api/v3/notifications/' %>
