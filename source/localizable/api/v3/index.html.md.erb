@@ -12,6 +12,9 @@ title: overview
 All API access is over HTTPS, and accessed from the `<%= settings.api_domain %>`
 domain. All data is sent and received as JSON.
 
+A list of all the example requests in this documentation as a [Postman](http://www.getpostman.com/) 
+collection can be found <%= link_to 'here', "/assets/misc/#{flavor}_postman_collection.json" %>.
+
 <pre class="terminal">
 $ curl -i https://<%= settings.api_domain %>/categories/999999999
 

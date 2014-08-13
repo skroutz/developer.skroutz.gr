@@ -1,0 +1,928 @@
+{
+  "id": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+  "name": "apiv3",
+  "description": "",
+  "requests": [
+    {
+      "id": "614723f1-89d6-4ada-85fe-e45e3947b332",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "categories_index",
+      "url": "{{base_url}}/categories",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "be1bd9c3-2932-4529-bd39-8b31676cb635",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "categories_root",
+      "url": "{{base_url}}/categories/root",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "511d6b75-d182-4021-a489-8634bc014f7b",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "categories_show",
+      "url": "{{base_url}}/categories/1442",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "4933bc88-e011-4ea4-b847-02013354a23a",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "children_api_category",
+      "url": "{{base_url}}/categories/73/children",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "ad950099-8beb-4b91-8749-8fdc5f3ca633",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "category_manufacturers",
+      "url": "{{base_url}}/categories/25/manufacturers",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "72e7fe0d-513f-4475-b0c4-9b2265ddbd36",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "category_skus",
+      "url": "{{base_url}}/categories/40/skus",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "6ac20722-832b-41aa-b17a-d0261703c971",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "category_parent",
+      "url": "{{base_url}}/categories/1442/parent",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "11f349af-8727-4fb0-84b4-f7e5256896d9",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "shops_show",
+      "url": "{{base_url}}/shops/11",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "87c2d73c-f935-42f2-9394-9b1220f0e133",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "shop_locations_index",
+      "url": "{{base_url}}/shops/11/locations",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "1abdbdaa-cbb7-4063-a57f-313db1f59ae4",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "shop_locations_index_embed_address",
+      "url": "{{base_url}}/shops/11/locations?embed=address",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "e5b2f6a4-1cbb-470a-83ef-172dfb876944",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "shop_locations_show",
+      "url": "{{base_url}}/shops/11/locations/2",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "3244de2d-86ab-4041-943e-76810764aab0",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "shop_locations_show_embed_address",
+      "url": "{{base_url}}/shops/11/locations/2?embed=address",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "45d0c2d2-e1e0-4da9-8d3a-8f910dac0389",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "manufacturers_show",
+      "url": "{{base_url}}/manufacturers/12907",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "99189057-00e6-4e28-ad3c-45b4c0d2995f",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "manufacturers_index",
+      "url": "{{base_url}}/manufacturers",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "1174651c-59fb-428d-8580-05e01b3ff86c",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "manufacturer_categories",
+      "url": "{{base_url}}/manufacturers/356/categories",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "9635c575-e807-4879-9d02-f64bffb2ca5c",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "manufacturer_skus",
+      "url": "{{base_url}}/manufacturers/356/skus",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "931ee4bc-d14c-4ece-a768-6cdba4da7185",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "autocomplete",
+      "url": "{{base_url}}/autocomplete?q=iph",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "88f260a1-a97a-4727-9a44-a1c9d96d1055",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "search_invalid",
+      "url": "{{base_url}}/search?q=a",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "34cfa403-9116-4d48-a17b-0ede621e0d8e",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "search_category_match",
+      "url": "{{base_url}}/search?q=Tablets",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "a43fceb0-1501-4fb6-bd34-3ed0c07f75b4",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "search_manufacturer_match",
+      "url": "{{base_url}}/search?q=apple",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "d9581cf0-7fa8-4bf9-99c3-e49d6db66d87",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "search_latin_mapping",
+      "url": "{{base_url}}/search?q=ιπηονε",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "0148e164-5d66-433c-875a-71be10442d68",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "search_spelling",
+      "url": "{{base_url}}/search?q=ipone",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "163092f9-d825-46cb-bfdc-a5c993d85bfd",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "search_drop",
+      "url": "{{base_url}}/search?q=wrong+iphone",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "7c9e28bb-58b7-4e57-a3d6-9507402aa026",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "search_no_results",
+      "url": "{{base_url}}/search?q=asdf",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "9ad629c9-cbff-4965-a13d-3f22e292b63a",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "search_category_facade",
+      "url": "{{base_url}}/search?q=iphone",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "29364a75-7721-4828-98ca-8df1ac27e468",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "search_sku_match",
+      "url": "{{base_url}}/search?nikon+1+j2",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "70baa6a3-5eaa-43f2-bc6e-5c7b355b974b",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "search_skus_match",
+      "url": "{{base_url}}/search",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "dba2677e-d358-4a1b-be80-5c67c0c76563",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "skus_show",
+      "url": "{{base_url}}/skus/3690169",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "46f5ba70-0b28-4f40-b763-40b8f153ed70",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "skus_products",
+      "url": "{{base_url}}/skus/3783654/products",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "268ee79d-26c2-4e1e-ad38-36f1556daf7c",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "skus_similar",
+      "url": "{{base_url}}/skus/3034682/similar",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "35a58a8a-1710-4c12-9d49-2b156d08cc8f",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "sku_favorite",
+      "url": "{{base_url}}/skus/345333/favorite",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "164f2177-1f24-4054-9b8d-c8d0db6b2f29",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "products_show",
+      "url": "{{base_url}}/products/12176638",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "874990e7-3c5b-4e80-92cc-f7a8ee5d59c1",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "favorites_index",
+      "url": "{{base_url}}/favorites",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "213e5525-d010-4e62-9d05-be22c3a9e636",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "favorites_show",
+      "url": "{{base_url}}/favorites/252116",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "11c50fb8-beaa-4503-9d48-97086875314f",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "POST",
+      "name": "favorite_create",
+      "url": "{{base_url}}/favorites",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "255ed2da-1517-45ba-abe5-2c739e63bc72",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "PUT",
+      "name": "favorite_update",
+      "url": "{{base_url}}/favorites/340676",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "7d19588d-af2f-4d8e-90a8-39889169fa1b",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "favorite_lists_index",
+      "url": "{{base_url}}/favorite_lists",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "f3295a2d-d54e-4660-9134-47c94309a228",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "POST",
+      "name": "favorite_list_create",
+      "url": "{{base_url}}/favorite_lists",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "f2172a67-467f-425d-973d-2dca4b0fa5e6",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "filter_groups_index",
+      "url": "{{base_url}}/categories/40/filter_groups",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "e27e874f-745d-4482-9660-3f6b3c68924e",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "category_skus_search",
+      "url": "{{base_url}}/categories/40/skus?q=iphone",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "a98c9a06-a9d4-458f-833b-80d3514b27e1",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "category_skus_manufacturers",
+      "url": "{{base_url}}/categories/40/skus?manufacturer_ids[]=28&manufacturer_ids[]=2",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "d7d4ae66-f927-49ab-8483-e5706ae0c1e3",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "category_skus_filters",
+      "url": "{{base_url}}/categories/40/skus?filter_ids[]=355559&filter_ids[]=6282",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "a84904f1-66b4-413a-8715-377f78a74b7a",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "category_skus_with_available_filters",
+      "url": "{{base_url}}/categories/279/skus?include_meta=available_filters",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "cc8344fb-c186-4e00-967c-2fe5daa10ab5",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "category_skus_with_applied_filters",
+      "url": "{{base_url}}/categories/40/skus?include_meta=applied_filters&filter_ids[]=6282&manufacturer_ids[]=28",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "674345cc-4253-4a39-b4f3-d19750564855",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "notifications_index",
+      "url": "{{base_url}}/notifications",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "f596aa60-e7bb-4857-a1fd-38994cee8e5b",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "notifications_show",
+      "url": "{{base_url}}/notifications/3642082",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "4d208083-7528-4910-acb0-de977fa60c05",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "sku_reviews",
+      "url": "{{base_url}}/skus/355766/reviews",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "5f6703a5-6efd-4a53-8e9e-a7517c8f3395",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "sku_specifications",
+      "url": "{{base_url}}/skus/2588170/specifications",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "5642f23f-f9c9-403c-9283-91ce55ec2f60",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "sku_specifications_include_groups",
+      "url": "{{base_url}}/skus/2588170/specifications?include=group",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "44188e73-f9ac-4f48-a85e-d91ed5fcb25d",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "shop_reviews",
+      "url": "{{base_url}}/shops/3/reviews",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "5c48dad4-45ab-4b5b-b4f4-11bf57f32132",
+      "collectionId": "890cf728-ef93-44c4-919d-42e1c003fcfc",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "GET",
+      "name": "shop_search",
+      "url": "{{base_url}}/shops/search?q=plaisio",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3\nauthorization: Bearer {{oauth_token}}"
+    }
+  ],
+  "order": [
+    "614723f1-89d6-4ada-85fe-e45e3947b332",
+    "be1bd9c3-2932-4529-bd39-8b31676cb635",
+    "511d6b75-d182-4021-a489-8634bc014f7b",
+    "4933bc88-e011-4ea4-b847-02013354a23a",
+    "ad950099-8beb-4b91-8749-8fdc5f3ca633",
+    "72e7fe0d-513f-4475-b0c4-9b2265ddbd36",
+    "6ac20722-832b-41aa-b17a-d0261703c971",
+    "11f349af-8727-4fb0-84b4-f7e5256896d9",
+    "87c2d73c-f935-42f2-9394-9b1220f0e133",
+    "1abdbdaa-cbb7-4063-a57f-313db1f59ae4",
+    "e5b2f6a4-1cbb-470a-83ef-172dfb876944",
+    "3244de2d-86ab-4041-943e-76810764aab0",
+    "45d0c2d2-e1e0-4da9-8d3a-8f910dac0389",
+    "99189057-00e6-4e28-ad3c-45b4c0d2995f",
+    "1174651c-59fb-428d-8580-05e01b3ff86c",
+    "9635c575-e807-4879-9d02-f64bffb2ca5c",
+    "931ee4bc-d14c-4ece-a768-6cdba4da7185",
+    "88f260a1-a97a-4727-9a44-a1c9d96d1055",
+    "34cfa403-9116-4d48-a17b-0ede621e0d8e",
+    "a43fceb0-1501-4fb6-bd34-3ed0c07f75b4",
+    "d9581cf0-7fa8-4bf9-99c3-e49d6db66d87",
+    "0148e164-5d66-433c-875a-71be10442d68",
+    "163092f9-d825-46cb-bfdc-a5c993d85bfd",
+    "7c9e28bb-58b7-4e57-a3d6-9507402aa026",
+    "9ad629c9-cbff-4965-a13d-3f22e292b63a",
+    "29364a75-7721-4828-98ca-8df1ac27e468",
+    "70baa6a3-5eaa-43f2-bc6e-5c7b355b974b",
+    "dba2677e-d358-4a1b-be80-5c67c0c76563",
+    "46f5ba70-0b28-4f40-b763-40b8f153ed70",
+    "268ee79d-26c2-4e1e-ad38-36f1556daf7c",
+    "35a58a8a-1710-4c12-9d49-2b156d08cc8f",
+    "164f2177-1f24-4054-9b8d-c8d0db6b2f29",
+    "874990e7-3c5b-4e80-92cc-f7a8ee5d59c1",
+    "213e5525-d010-4e62-9d05-be22c3a9e636",
+    "11c50fb8-beaa-4503-9d48-97086875314f",
+    "255ed2da-1517-45ba-abe5-2c739e63bc72",
+    "7d19588d-af2f-4d8e-90a8-39889169fa1b",
+    "f3295a2d-d54e-4660-9134-47c94309a228",
+    "f2172a67-467f-425d-973d-2dca4b0fa5e6",
+    "e27e874f-745d-4482-9660-3f6b3c68924e",
+    "a98c9a06-a9d4-458f-833b-80d3514b27e1",
+    "d7d4ae66-f927-49ab-8483-e5706ae0c1e3",
+    "a84904f1-66b4-413a-8715-377f78a74b7a",
+    "cc8344fb-c186-4e00-967c-2fe5daa10ab5",
+    "674345cc-4253-4a39-b4f3-d19750564855",
+    "f596aa60-e7bb-4857-a1fd-38994cee8e5b",
+    "4d208083-7528-4910-acb0-de977fa60c05",
+    "5f6703a5-6efd-4a53-8e9e-a7517c8f3395",
+    "5642f23f-f9c9-403c-9283-91ce55ec2f60",
+    "44188e73-f9ac-4f48-a85e-d91ed5fcb25d",
+    "5c48dad4-45ab-4b5b-b4f4-11bf57f32132"
+  ],
+  "timestamp": 1407916946
+}
