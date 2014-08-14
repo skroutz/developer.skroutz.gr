@@ -1,0 +1,7 @@
+:language: markdown
+:code: |
+  ~~~ javascript
+  function getRandomInt() {
+    return 42;
+  }
+  ~~~

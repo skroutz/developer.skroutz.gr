@@ -5,6 +5,7 @@ full_company_name: 'Alve Ltd.'
 analytics_domain: 'analytics.alve.com'
 api_domain: 'api.alve.com'
 apiv2_domain: 'apiv2.alve.com'
+developer_domain: 'developer.alve.com'
 
 api_email: 'api@alve.com'
 

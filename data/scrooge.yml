@@ -5,6 +5,7 @@ full_company_name: 'Scrooge S.A.'
 analytics_domain: 'analytics.scrooge.co.uk'
 api_domain: 'api.scrooge.co.uk'
 apiv2_domain: 'apiv2.scrooge.co.uk'
+developer_domain: 'developer.scrooge.co.uk'
 
 api_email: 'api@scrooge.co.uk'
 

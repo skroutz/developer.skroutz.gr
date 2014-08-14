@@ -10,6 +10,7 @@ en:
     widgets: 'Widgets'
     docs: 'Documentation'
     guides: 'Guides'
+    contribute: 'Contributing'
     extra: 'Looking for something else?'
     support: 'Support'
 
@@ -59,6 +60,11 @@ en:
     widgets:
       short_description: 'Display live product information in your website using our widgets.'
       overview: ''
+
+  contribute:
+    getting_started: 'Getting Started'
+    new: 'Add Documentation'
+    style: 'Code Style Guidelines'
 
   lang:
     el: 'Ελληνικά'

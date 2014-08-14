@@ -68,6 +68,25 @@
                     class: "nav-link #{active_parent_link({ base: 'support' })}" %>
       </li>
       <li>
+        <%= link_to t('titles.contribute'),
+                    '#nav-sidebar-contribution',
+                    class: "collapse-btn #{active_parent_link({ base: 'contribution' })}",
+                    'data-toggle' => 'collapse',
+                    'data-parent' => '.nav-sidebar' %>
+
+        <div id="nav-sidebar-contribution" class="nav-menu-sidebar collapse <%= active_parent_link({ base: 'contribution' }) %>">
+          <%= link_to t('contribute.getting_started'),
+                      '/contribution/',
+                      class: "navbar-link #{active_child_link('/contribution/')}" %>
+          <%= link_to t('contribute.new'),
+                      '/contribution/new',
+                      class: "navbar-link #{active_child_link('/contribution/new/')}" %>
+          <%= link_to t('contribute.style'),
+                      '/contribution/style',
+                      class: "navbar-link #{active_child_link('/contribution/style/')}" %>
+        </div>
+      </li>
+      <li>
         <%= link_to t('index.oss.github',
                     flavor: settings.site_name.titleize),
                     settings.github_profile,
