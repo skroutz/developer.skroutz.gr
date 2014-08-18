@@ -77,6 +77,7 @@ en:
     available_locales: 'This page is also available in:'
     toc: 'Table of Contents'
     deprecated: 'deprecated'
+    edit_on_github: 'Edit the file on GitHub'
 
   header:
     for_developers: 'for developers'

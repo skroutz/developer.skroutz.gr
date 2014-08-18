@@ -106,6 +106,24 @@
   @include button-size($padding-large-vertical + 5, $padding-large-horizontal + 20, $font-size-xlarge, $line-height-xlarge, $border-radius-base);
 }
 
+.btn-edit-github {
+  @extend .btn-link;
+  @extend .pull-right;
+
+  color: $app-clr-grey;
+
+  span {
+    font-size: $font-size-small;
+    display: none;
+  }
+
+  &:before {
+    @extend .fa;
+    content: $fa-var-edit;
+    font-size: 24px;
+  }
+}
+
 
 //== Icons
 //
