@@ -63,6 +63,17 @@ module PageNavigationHelper
     html
   end
 
+  # Returns a link to edit source on GitHub repo
+  #
+  # @return [String] the html anchor element
+  def edit_link
+    url = current_page.source_file.sub(/^(.*)\/source/,
+      "#{settings.github_profile}/developer.skroutz.gr/edit/master/source")
+
+    link_to "<span>#{t('common.edit_on_github')}</span>", url,
+      title: t('common.edit_on_github'), class: 'btn-edit-github'
+  end
+
   # Builds a set of <span> elements for a given list of items.
   #
   # @param [Array] items the array of items
