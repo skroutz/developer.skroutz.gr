@@ -4,49 +4,36 @@ require 'lib/page_navigation_helper'
 require 'lib/response_mate_helper'
 require 'uglifier'
 
-###########################
 # Layouts
-###########################
 page 'index.html', layout: false
 page '404.html', layout: false
 
-###########################
+
 # Localization
-###########################
 activate :i18n, langs: [:en, :el, :tr]
 I18n.enforce_available_locales = false  # Silence I18n deprecation warnings
 
-###########################
 # Pretty URLs
-###########################
 activate :directory_indexes
 
-###########################
-###########################
+# Relative URLs
 set :relative_links, true
 
-###########################
 # Syntax Highlight
-###########################
 activate :syntax, line_numbers: false
 
-###########################
+
 # MarkDown
-###########################
 set :markdown_engine, :kramdown
 set :markdown, layout_engine: :erb, toc_levels: '2,3'
 
-###########################
 # Assets
-###########################
 set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'
 set :images_dir, 'assets/images'
 set :fonts_dir, 'assets/fonts'
 
-###########################
 # Build Configuration
-###########################
 configure :build do
   # Ignore assets from other flavors
   %w(skroutz alve scrooge).each do |f|
@@ -72,9 +59,7 @@ configure :build do
   activate :gzip
 end
 
-###########################
 # Helpers
-###########################
 helpers CodeExampleHelper
 helpers ResponseMateHelper
 helpers PageNavigationHelper
@@ -121,7 +106,7 @@ helpers do
     return site_title if page.title.nil? || page.title.empty?
 
     title = t("titles.#{page.title}",
-              flavor: flavor,
+              flavor: settings.site_name.capitalize,
               default: ["docs.#{page.parent}.#{page.title}".to_sym,
                         page.title.to_s.titleize])
 
@@ -129,7 +114,7 @@ helpers do
       parent_title = site_title
     else
       parent_title = t("titles.#{page.parent}",
-                       flavor: flavor,
+                       flavor: settings.site_name.capitalize,
                        default: site_title)
     end
 
@@ -137,9 +122,7 @@ helpers do
   end
 end
 
-###########################
 # Initializers
-###########################
 
 # Set API responses output directory per flavor
 ResponseMate.setup do |config|

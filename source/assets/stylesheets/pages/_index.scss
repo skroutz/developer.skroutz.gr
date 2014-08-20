@@ -1,14 +1,14 @@
-@import 'variables';
-@import 'bootstrap/mixins';
+// Index Page
+// --------------------------------------------------
 
 
-//** Index Page
 .index {
   .container-header {
     @extend .container;
   }
 }
 
+// Features - Advantages list
 .intro-col-features {
   ul {
     @extend .clearfix;
@@ -39,6 +39,7 @@
   }
 }
 
+// Open Source Software teaser
 .intro-col-oss {
   margin-top: 40px;
 

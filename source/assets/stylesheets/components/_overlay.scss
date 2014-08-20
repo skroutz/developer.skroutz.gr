@@ -1,8 +1,7 @@
-@import 'variables';
-@import 'bootstrap/mixins';
+// Overlays
+// --------------------------------------------------
 
 
-//** Overlay
 .overlay {
   display: none;
   position: fixed;
@@ -26,7 +25,7 @@
   }
 }
 
-//** Overlay :: Sidebar :: OffCanvas
+// Overlay :: Sidebar :: OffCanvas
 .overlay {
   &.overlay-offcanvas {
     z-index: $app-zindex-sidebar-overlay;

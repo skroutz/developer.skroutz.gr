@@ -1,0 +1,70 @@
+// Lists
+// --------------------------------------------------
+
+// Lists
+//
+// Customize only <ul/> within #main block. We do not
+// want to break lists within header, sidebar, etc.
+#main {
+  ol, ul {
+    margin: 20px auto;
+    padding-left: 20px;
+    list-style: none;
+
+    li {
+      &:before {
+        @extend .fa;
+        content: $fa-var-caret-right;
+        padding-right: 10px;
+        color: $app-clr-grey;
+      }
+    }
+  }
+
+  ol ol,
+  ol ul,
+  ul ol,
+  ul ul {
+    margin: 5px auto;
+
+    li {
+      &:before {
+        @extend .fa;
+        content: $fa-var-minus;
+        position: relative;
+        top: -2px;
+        font-size: 10px;
+        color: $app-clr-grey;
+      }
+    }
+  }
+}
+
+
+// Definition Lists
+dl {
+  margin: 20px auto;
+  padding-left: 20px;
+
+  dt {
+
+    code {
+      font-weight: 500;
+    }
+
+    &:before {
+      @extend .fa;
+      content: $fa-var-caret-right;
+      position: relative;
+      top: -1px;
+      padding-right: 10px;
+      font-size: 14px;
+      color: $app-clr-grey;
+    }
+  }
+
+  dd {
+    margin-bottom: 15px;
+    padding-left: 15px;
+  }
+}

@@ -1,6 +1,6 @@
-###########################
-# UI
-###########################
+###
+  UI
+###
 UI = {}
 UI._fadeDuration = 250
 UI._scrollDuration = 350
@@ -135,7 +135,7 @@ UI.Table =
     $('#main table').wrap(UI._tableResponsiveWrapper)
 
 ###
-# DOM Ready
+  DOM Ready
 ###
 ((window, document, $) ->
   $ ->

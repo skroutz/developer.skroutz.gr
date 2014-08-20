@@ -1,16 +1,25 @@
+// This is the 'bootstrap/variables' file.
+// It is extended - customized with application specific variables.
+//
+// Main customizations:
+//  - Default font-size set to 16px
+//  - Sans-serif font set to 'Ubuntu'
+//  - Monospace font set to 'Ubuntu Mono'
+//  - Brand primary color set to orange color
+
 //
 // Application Variables
 // --------------------------------------------------
 
 //** Font
-$app-font-size: 16px !default;
-$font-size-xlarge:         ceil(($app-font-size * 1.5)) !default; // ~18px
+$app-font-size:         16px !default;
+$font-size-xlarge:      ceil(($app-font-size * 1.5)) !default; // ~18px
 
 //** Ubuntu Font
-$app-font-ubuntu: 'Ubuntu' !default;
-$app-font-ubuntu-mono: 'Ubuntu Mono' !default;
+$app-font-ubuntu:       'Ubuntu' !default;
+$app-font-ubuntu-mono:  'Ubuntu Mono' !default;
 
-$line-height-xlarge: 1.25 !default;
+$line-height-xlarge:    1.25 !default;
 
 //** Colors
 $app-clr-white:     #ffffff;
@@ -27,9 +36,9 @@ $app-h-navbar: 50px;                // Same as Bootstrap default $navbar-height.
 $app-h-footer: 60px;
 
 //**
-$app-zindex-sidebar: 1060 !default;
-$app-zindex-sidebar-overlay: 1000 !default;
-$app-zindex-backtotop: $app-zindex-sidebar-overlay - 1 !default;
+$app-zindex-sidebar:          1060 !default;
+$app-zindex-sidebar-overlay:  1000 !default;
+$app-zindex-backtotop:        $app-zindex-sidebar-overlay - 1 !default;
 
 
 // When true, asset path helpers are used, otherwise regular url() is used

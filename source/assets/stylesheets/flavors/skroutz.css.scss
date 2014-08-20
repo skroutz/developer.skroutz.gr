@@ -1,13 +1,19 @@
-.navbar-header {
-  .navbar-brand {
-    padding-left: 140px;
-    background-image: image-url('skroutz/sprites.png');
+// Skroutz flavor CSS
+// --------------------------------------------------
 
-    @media
-    (-webkit-min-device-pixel-ratio: 1.25),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-      background-image: image-url('skroutz/sprites_x2.png');
+// Navbar :: Brand - Logo
+.navbar {
+  .navbar-header {
+    .navbar-brand {
+      padding-left: 140px;
+      background-image: image-url('skroutz/sprites.png');
+
+      @media
+      (-webkit-min-device-pixel-ratio: 1.25),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image: image-url('skroutz/sprites_x2.png');
+      }
     }
   }
 }

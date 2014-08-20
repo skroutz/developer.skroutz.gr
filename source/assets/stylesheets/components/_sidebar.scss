@@ -1,5 +1,5 @@
-@import 'variables';
-@import 'bootstrap/mixins';
+// Sidebar
+// --------------------------------------------------
 
 
 @mixin offcanvas-in() {
@@ -14,7 +14,7 @@
   @include transition(all ease-in-out .125s);
 }
 
-//** Sidebar :: Layout
+// Sidebar :: Layout
 #sidebar {
   position: fixed;
   top: $app-h-navbar + 3;
@@ -34,6 +34,7 @@
   }
 }
 
+// Sidebar :: Theme
 .sidebar {
   padding: 0 0 50px;
   color: $app-clr-greyLight;
@@ -58,6 +59,7 @@
   }
 }
 
+// Sidebar :: Brand - Logo
 .sidebar {
   .navbar-brand {
     float: none;
@@ -73,7 +75,7 @@
   }
 }
 
-//** Sidebar :: Lang Links
+// Sidebar :: Locale Menu
 .sidebar {
   .nav-lang {
     @extend .text-center;
@@ -128,8 +130,7 @@
   }
 }
 
-//** Sidebar :: Search
-
+// Sidebar :: Forms :: Search
 .sidebar {
   .navbar-form.navbar-right {
     float: none !important;
@@ -153,28 +154,7 @@
   }
 }
 
-//** Sidebar :: Footer
-.sidebar {
-  footer {
-    .container {
-      width: 100%;
-    }
-
-    .row {
-      div {
-        @extend .text-center;
-        left: 0;
-        width: 100%;
-      }
-    }
-
-    span {
-      display: block;
-    }
-  }
-}
-
-//** Sidebar :: Main
+// Sidebar :: Main
 .nav-sidebar {
   @include box-shadow(2px 2px 2px rgba(0,0,0,.25));
   background-color: darken($app-clr-greyDark, 2%);
@@ -222,7 +202,7 @@
   }
 }
 
-//** Sidebar :: Sub-Menu
+// Sidebar :: Sub-Menu
 .nav-menu-sidebar {
   @include box-shadow(inset 0 3px 2px rgba(0,0,0,.2));
   background-color: lighten($app-clr-greyDark, 6%);
@@ -241,7 +221,30 @@
   }
 }
 
-//** Off-Canvas Button
+// Sidebar :: Footer
+.sidebar {
+  footer {
+    .container {
+      width: 100%;
+    }
+
+    .row {
+      div {
+        @extend .text-center;
+        left: 0;
+        width: 100%;
+      }
+    }
+
+    span {
+      display: block;
+    }
+  }
+}
+
+// Sidebar :: Off-Canvas Button
+//
+// Actually this one exists within Header.
 .offcanvas-toggle {
   position: fixed;
   top: 1px;
@@ -267,7 +270,7 @@
   }
 }
 
-//** Animate Show/Hide
+// Sidebar :: Animate Show/Hide
 #sidebar {
   &.in {
     @include offcanvas-in();
