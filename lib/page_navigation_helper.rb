@@ -68,7 +68,7 @@ module PageNavigationHelper
   # @return [String] the html anchor element
   def edit_link
     url = current_page.source_file.sub(/^(.*)\/source/,
-      "#{settings.github_profile}/developer.skroutz.gr/edit/master/source")
+      "#{settings.github_profile}/developer.skroutz.gr/blob/master/source")
 
     link_to "<span>#{t('common.edit_on_github')}</span>", url,
       title: t('common.edit_on_github'), class: 'btn-edit-github'
