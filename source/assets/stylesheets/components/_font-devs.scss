@@ -1,3 +1,6 @@
+// Devs Font
+// --------------------------------------------------
+
 @font-face {
   font-family: 'devs';
   src: font-url('devs.eot?52161351');
@@ -50,8 +53,8 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
  
-.icon-easy:before { content: '\e800'; } /* '' */
-.icon-cog:before { content: '\e801'; } /* '' */
-.icon-key:before { content: '\e803'; } /* '' */
-.icon-desktop:before { content: '\e804'; } /* '' */
-.icon-chart-line:before { content: '\e805'; } /* '' */
+.icon-easy:before { content: '\e800'; }
+.icon-cog:before { content: '\e801'; }
+.icon-key:before { content: '\e803'; }
+.icon-desktop:before { content: '\e804'; }
+.icon-chart-line:before { content: '\e805'; }

@@ -1,13 +1,10 @@
-@import 'variables';
-@import 'bootstrap/mixins';
+// Swiftype Theme
+// --------------------------------------------------
 
+
+// Swiftype :: Autocomplete
 .swiftype-widget .autocomplete {
   margin-top: 9px !important;
-  //margin-left: 8px !important;
-}
-
-//** Swiftype Autocomplete
-.swiftype-widget .autocomplete {
   border: 1px solid $brand-primary;
   border-top-left-radius: 0 !important;
   border-top-right-radius: 0 !important;
@@ -25,10 +22,12 @@
   }
 }
 
+// Swiftype :: Autocomplete :: Items
 .swiftype-widget .autocomplete ul li p.title {
   color: $brand-primary;
 }
 
+// Swiftype :: Autocomplete :: Active Item (Hovered)
 .swiftype-widget .autocomplete ul li.active {
   @include box-shadow(none);
   @include gradient-vertical($start-color: $brand-primary, $end-color: $brand-primary, $start-percent: 0%, $end-percent: 100%);

@@ -1,8 +1,8 @@
-@import 'variables';
-@import 'bootstrap/mixins';
+// Code Example blocks
+// --------------------------------------------------
 
 
-//** Code Example
+// Code Example
 .example {
   @extend .panel;
   @extend .panel-default;
@@ -18,7 +18,7 @@
   }
 }
 
-//** Code Example :: Request
+// Code Example :: Request
 .example {
   .request {
     margin: 0;
@@ -47,7 +47,7 @@
   }
 }
 
-//** Code Example :: Request Description
+// Code Example :: Request Description
 .example {
   .request-description {
     @include box-shadow(0 1px 1px rgba(0,0,0,.05));
@@ -57,7 +57,7 @@
   }
 }
 
-//** Code Example :: Toggle Buttons
+// Code Example :: Toggle Buttons
 .example {
   .toggler {
     @extend .btn;
@@ -89,7 +89,7 @@
   }
 }
 
-//** Code Example :: Response
+// Code Example :: Response
 .example {
   .response {
     display: none;

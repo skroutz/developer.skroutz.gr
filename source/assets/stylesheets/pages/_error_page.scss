@@ -1,14 +1,14 @@
-@import 'variables';
-@import 'bootstrap/mixins';
+// Error Pages
+// --------------------------------------------------
 
 
-//** Error Pages
 .error-page {
   .container-header {
     @extend .container;
   }
 }
 
+// TODO: Move this to components/containers
 .container-error {
   @extend .text-center;
   padding: 0 15px;

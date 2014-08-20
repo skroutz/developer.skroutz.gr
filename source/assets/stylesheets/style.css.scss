@@ -1,48 +1,70 @@
 @charset "utf-8";
 
-
-//== Fonts
+// Fonts
 //
-//## External fonts. Don't get greedy. They come at a cost.
-
+// Don't get greedy. They come at a cost.
 @import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,700&subset=latin);
 @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700&subset=latin);
 
-//== Application Variables
+// Application Variables
 //
-//## Extend and override Bootstrap variables.
-
+// Extend and override Bootstrap variables.
 @import 'variables';
 
-
-//== Bootstrap Framework
+// Bootstrap Framework
 //
-//## Load Bootstrap Framework. Heads up: Unused components are commented out.
-
+// Load Bootstrap Framework. Unused components are disabled.
 @import 'bootstrap';
 
+// Typography
+@import 'components/typography';
 
-//== Icon Fonts
-//
-//## Alternative Icon Font
-
-@import 'font-awesome';   // Comment out Bootstrap glyphicons
+// Iconic Fonts
+@import 'font-awesome';
 @import 'components/font-devs';
 
+// Buttons
+@import 'components/buttons';
 
-//== Helpers & Utilities
+// Lists
+@import 'components/lists';
+
+// Containers
 //
-//## General helpers and utilities
+// Containers for Header, Sidebar, Cover - Teaser,
+// Featured items, etc.
+@import 'components/containers';
 
-* {
-  outline: 0 none;
+// Navbar
+@import 'components/navbar';
 
-  text-rendering: geometricPrecision;
-  -webkit-font-smoothing: subpixel-antialiased;
-  -webkit-text-size-adjust: none;
-  -moz-text-size-adjust: none;
-  -ms-text-size-adjust: none;
-}
+// Sidebar
+@import 'components/sidebar';
+
+// Back To Top
+@import 'components/back-to-top';
+
+// Overlays
+@import 'components/overlay';
+
+// TOC
+@import 'components/toc';
+
+// Example Code Blocks & Syntax Highlight
+@import 'components/example-code';
+@import 'syntax_highlight/default';
+
+// Swiftype Search
+@import 'components/swiftype';
+
+// Single Pages Styles
+@import 'pages/index';
+@import 'pages/docs';
+@import 'pages/error_page';
+
+
+// General Helpers & Utilities
+// --------------------------------------------------
 
 .element-centered {
   display: table;
@@ -55,79 +77,8 @@
 }
 
 
-//== Buttons
-//
-//## Extend Bootstrap Buttons
-
-@mixin button-variant-inverse($color, $color_hover, $background, $border) {
-  color: $color;
-  background-color: $background;
-  border-color: $border;
-
-  &:hover,
-  &:focus,
-  &:active,
-  &.active,
-  .open > &.dropdown-toggle {
-    color: $color_hover;
-    background-color: $color;
-    border-color: darken($border, 12%);
-  }
-  &:active,
-  &.active,
-  .open > &.dropdown-toggle {
-    background-image: none;
-  }
-  &.disabled,
-  &[disabled],
-  fieldset[disabled] & {
-    &,
-    &:hover,
-    &:focus,
-    &:active,
-    &.active {
-      background-color: $color;
-      border-color: $border;
-    }
-  }
-
-  .badge {
-    color: $background;
-    background-color: $color;
-  }
-}
-
-.btn-primary-inverse {
-  @include button-variant-inverse($brand-primary, $app-clr-white, transparent, $brand-primary);
-}
-
-.btn-xlg {
-  // line-height: ensure even-numbered height of button next to large input
-  @include button-size($padding-large-vertical + 5, $padding-large-horizontal + 20, $font-size-xlarge, $line-height-xlarge, $border-radius-base);
-}
-
-.btn-edit-github {
-  @extend .btn-link;
-  @extend .pull-right;
-
-  color: $app-clr-grey;
-
-  span {
-    font-size: $font-size-small;
-    display: none;
-  }
-
-  &:before {
-    @extend .fa;
-    content: $fa-var-edit;
-    font-size: 24px;
-  }
-}
-
-
-//== Icons
-//
-//## Extend icon helpers
+// Iconography
+// --------------------------------------------------
 
 .fa {
   &.fa-2x,
@@ -147,180 +98,37 @@
 }
 
 
-//== Lists
-//
-//## Style all types of lists
+// Tables
+// --------------------------------------------------
 
-//** Unordered Lists
-#main {
-  ul {
-    margin: 20px auto;
-    padding-left: 20px;
-    list-style: none;
+table {
+  @extend .table;
+  @extend .table-hover;
+  @extend .table-striped;
+  @extend .table-bordered;
+  @extend .table-condensed;
 
-    li {
-      &:before {
-        @extend .fa;
-        content: $fa-var-caret-right;
-        padding-right: 10px;
-        color: $app-clr-grey;
-      }
-    }
+  thead {
+    background-color: darken($app-clr-greyLight, 6%);
   }
 
-  ul ul {
-    margin: 5px auto;
-
-    li {
-      &:before {
-        @extend .fa;
-        content: $fa-var-minus;
-        position: relative;
-        top: -2px;
-        font-size: 10px;
-        color: $app-clr-grey;
-      }
-    }
+  &.mono,
+  .mono {
+    font-family: $font-family-monospace;
   }
 }
 
-//** Definition Lists
-dl {
-  margin: 20px auto;
-  padding-left: 20px;
-
-  dt {
-
-    code {
-      font-weight: 500;
-    }
-
-    &:before {
-      @extend .fa;
-      content: $fa-var-caret-right;
-      position: relative;
-      top: -1px;
-      padding-right: 10px;
-      font-size: 14px;
-      color: $app-clr-grey;
-    }
-  }
-
-  dd {
-    margin-bottom: 15px;
-    padding-left: 15px;
-  }
+// Fix for Firefox buggy fieldsets
+// @see http://getbootstrap.com/css/#tables-responsive
+@-moz-document url-prefix() {
+  fieldset { display: table-cell; }
 }
 
 
-//== Containers
-//
-//## Extend Bootstrap Containers
+// Forms
+// --------------------------------------------------
 
-//** Header Container
-.container-header {
-  @extend .container-fluid;
-}
-
-//** Cover Container
-.container-cover {
-  padding: 30px 0;
-
-  .title {
-    font-weight: 300;
-    font-size: 2.5em;
-    line-height: 1.5em;
-    border: 0 none;
-
-    @media (max-width: $screen-sm-max) {
-      margin-top: 0;
-      font-size: 2.0em;
-      line-height: 1.33em;
-    }
-  }
-
-  .btn {
-    margin-top: 20px;
-    padding-left: 60px;
-    padding-right: 60px;
-
-    @media (max-width: $screen-sm-max) {
-      display: block;
-      margin:20px auto 40px;
-    }
-  }
-
-  &.cover-light {
-    color: $app-clr-greyDark;
-    background-image: image-url('pattern_light.jpg');
-  }
-
-  &.cover-dark {
-    color: $app-clr-white;
-    background-image: image-url('pattern_dark.jpg');
-  }
-}
-
-//** Featured List Container
-.container-featured {
-  margin-bottom: 20px;
-  border-top: 3px solid lighten($app-clr-grey, 21%);
-  border-bottom: 3px solid lighten($app-clr-grey, 21%);
-  background-color: darken($app-clr-greyLight, 6%);
-
-  a {
-    display: block;
-    padding: 15px 0;
-    font-weight: 300;
-    color: $app-clr-greyDark;
-
-    i {
-      @extend .fa;
-      @extend .fa-3x;
-      display: block;
-      line-height: 1.5em;
-      color: darken($app-clr-grey, 18%);
-    }
-
-    &:hover {
-      color: $brand-primary;
-      text-decoration: none;
-
-      i {
-        color: $brand-primary;
-      }
-    }
-  }
-
-  @media (max-width: $screen-sm-max) {
-    padding: 5px 0;
-    a {
-
-      i {
-        font-size: 1.5em;
-      }
-    }
-  }
-}
-
-//** Sidebar Container
-.container-sidebar {
-//  width: 85%;
-//  float: right;
-  padding: 10px 15px;
-
-//  @media (max-width: $screen-sm-max) {
-//    width: 100%;
-//    float: none;
-//  }
-}
-
-
-//== Forms
-//
-//## Extend Bootstrap Forms
-
-//** Customize input placeholders
+// Customize input placeholders
 ::-webkit-input-placeholder {
   color: darken($app-clr-white, 15%) !important;
   font-weight: 200;
@@ -338,100 +146,11 @@ dl {
   font-weight: 200;
 }
 
-//== Navbar
-//
-//## Extend Bootstrap Navbar
 
-//** Customized Theme
-// Default navbar
-.navbar-custom {
-  @extend .navbar-default;
-  @include box-shadow(0 6px 12px rgba($brand-primary, .175));
+// Dropdowns
+// --------------------------------------------------
 
-  background-color: $app-clr-greyDark;
-  border-color: $brand-primary;
-  border-bottom-width: 3px;
-
-  .navbar-brand {
-    color: $app-clr-white;
-    font-family: $font-family-monospace;
-    font-weight: 500;
-    &:hover,
-    &:focus {
-      color: $app-clr-greyLight;
-      background-color: transparent;
-    }
-  }
-
-  .navbar-text {
-    color: $app-clr-white;
-  }
-
-  .navbar-nav {
-    > li > a {
-      color: $app-clr-white;
-
-      &:hover,
-      &:focus {
-        color: $brand-primary;
-        background-color: transparent;
-      }
-    }
-    > .active > a {
-      &,
-      &:hover,
-      &:focus {
-        color: darken($brand-primary, 6%);
-        background-color: transparent;
-      }
-    }
-    > .disabled > a {
-      &,
-      &:hover,
-      &:focus {
-        color: $navbar-default-link-disabled-color;
-        background-color: transparent;
-      }
-    }
-  }
-}
-
-.navbar {
-  &.navbar-fixed-top.navbar-custom.trans {
-    background-color: rgba($app-clr-greyDark, .95);
-    border-color: rgba($brand-primary, .95);
-    @include transition(all ease-in .25s);
-  }
-
-  .navbar-toggle {
-    background-color: $app-clr-greyDark;
-    border-color: $brand-primary;
-  }
-}
-
-
-//** Logo
-.navbar-header {
-  .navbar-brand {
-    width: 280px;
-    height: 32px;
-    margin-top: 13px;
-    margin-left: 15px !important;
-    padding: 0;
-    font-size: 18px;
-    line-height: 32px;
-    background-position: -530px -60px;
-    background-repeat: no-repeat;
-    background-size: 679px 110px;
-
-    @media (max-width: $screen-xs-max) {
-      width: 80%;
-      margin-left: 60px !important;
-    }
-  }
-}
-
-//** Dropdown Primary
+// Primary Dropdown
 .dropdown.dropdown-primary {
   &.open > a,
   &.open > a:hover,
@@ -467,190 +186,15 @@ dl {
 }
 
 
-//** Search
-.navbar-form {
-  position: relative;
-  margin-left: 20px;
-
-  &:before {
-    @extend .fa;
-    position: absolute;
-    left: 25px;
-    top: 8px;
-
-    content: $fa-var-search !important;
-    color: $app-clr-grey;
-    font-size: 18px;
-  }
-
-  .st-search {
-    width: 220px;
-    padding-left: 30px;
-    border-radius: 17px;
-
-    &:focus {
-      background-color: $app-clr-greyLight;
-      @include transition(background-color ease-in-out .125s);
-    }
-  }
+* {
+  outline: 0 none;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
 }
 
-
-//** Lang Links
-.navbar {
-  .nav-lang {
-    @extend .nav;
-    @extend .navbar-nav;
-    @extend .navbar-right;
-
-    max-height: 50px;
-    margin-left: 10px;
-
-    .dropdown-toggle {
-      height: 50px;
-      i {
-        font-size: 24px;
-      }
-    }
-  }
-}
-
-.nav-lang {
-
-  &.nav-lang-inline {
-    > .active {
-      display: none;
-    }
-  }
-
-  .lang-code {
-    display: none;
-  }
-}
-
-//== Typography
-//
-//## Extend every around Texts
-
-@mixin text-center () {
-  text-align: center;
-}
-
-@mixin text-right () {
-  text-align: right;
-}
-
-@mixin text-left () {
-  text-align: left;
-}
-
-@mixin title-strong () {
-  font-weight: 700;
-}
-
-@mixin title-light () {
-  font-weight: 300;
-}
-
-.text-right {
-  text-align: right;
-}
-.text-center-xs {
-  @media (max-width: $screen-xs-max) {
-    @include text-center();
-  }
-}
-.text-center-sm {
-  @media (max-width: $screen-sm-max) {
-    @include text-center();
-  }
-}
-.text-xxs {
-  font-size: ceil(($font-size-base * 0.70)); // ~10px
-}
-.text-xs {
-  font-size: ceil(($font-size-base * 0.75)); // ~11px
-}
-.text-sm {
-  font-size: $font-size-small;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  display: inline-block;
-  width: 100%;
-  padding-bottom: 5px;
-
-  .label {
-    @extend .text-sm;
-
-    display: inline-block;
-    position: relative;
-    top: -5px;
-    margin-left: 10px;
-  }
-}
-
-h1 {
-  @include title-strong();
-  margin-bottom: 20px;
-  border-bottom: 1px solid darken($app-clr-greyLight, 12%);
-}
-
-h2 {
-  margin: 45px 0 10px;
-  border-bottom: 1px solid darken($app-clr-greyLight, 12%);
-}
-
-h3 {
-  margin: 25px 0 10px;
-}
-
-h4 {
-  margin: 20px 0 5px;
-  font-weight: 300;
-}
-
-h5 {
-  @extend .text-uppercase;
-  margin: 20px 0 5px;
-  font-weight: 700;
-}
-
-//== Tables
-//
-//## Extend tables
-
-table {
-  @extend .table;
-  @extend .table-hover;
-  @extend .table-striped;
-  @extend .table-bordered;
-  @extend .table-condensed;
-
-  thead {
-    background-color: darken($app-clr-greyLight, 6%);
-  }
-
-  th,
-  td {
-    //word-break: break-all;
-  }
-
-  &.mono,
-  .mono {
-    font-family: $font-family-monospace;
-  }
-}
-
-//** Fix for Firefox buggy fieldsets
-@-moz-document url-prefix() {
-  fieldset { display: table-cell; }
-}
-
-
-////////////////////////////////
-// Theme
-////////////////////////////////
 body {
   font-weight: 300;
   background-color: darken($app-clr-white, 3%);
@@ -687,13 +231,9 @@ pre {
   overflow: auto;
 }
 
-.alert {
-  h1, h2, h3, h4, h5, h6 {
-    display: block;
-    margin-top: 0;
-    margin-bottom: 10px;
-  }
-}
+
+// Main Section
+// --------------------------------------------------
 
 #main {
   padding: ($app-h-navbar + 20) 40px 30px;
@@ -705,66 +245,29 @@ pre {
 }
 
 
-//== TOC
-//
-//## Table of Contents
+// Alerts
+// --------------------------------------------------
+
+.alert {
+  h1, h2, h3, h4, h5, h6 {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+}
 
 
-//== Sidebar
-//
-//## Load sidebar
+// Locale Menu
+// --------------------------------------------------
 
-@import 'components/sidebar';
+.nav-lang {
+  &.nav-lang-inline {
+    > .active {
+      display: none;
+    }
+  }
 
-
-//== Back To Top
-//
-//##
-
-@import 'components/back-to-top';
-
-
-//== Overlays
-//
-//##
-
-@import 'components/overlay';
-
-
-//== TOC
-//
-//## Table of Contents
-
-@import 'components/toc';
-
-
-//== Example Code Blocks & Syntax Highlight
-//
-//## Load example code and highlight theme
-
-@import 'components/example-code';
-@import 'syntax_highlight/default';
-
-
-//== Docs List
-//
-//## Docs specific
-
-@import 'components/panel-doc';
-
-
-//== Swiftype List
-//
-//## Swiftype specific
-
-@import 'components/swiftype';
-
-//== Pages
-//
-//## Page specific styles
-
-//** Index
-@import 'pages/index';
-
-//** Index
-@import 'pages/error_page';
+  .lang-code {
+    display: none;
+  }
+}

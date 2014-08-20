@@ -1,0 +1,87 @@
+// Typography
+// --------------------------------------------------
+
+
+@mixin text-center () {
+  text-align: center;
+}
+
+@mixin text-right () {
+  text-align: right;
+}
+
+@mixin text-left () {
+  text-align: left;
+}
+
+@mixin title-strong () {
+  font-weight: 700;
+}
+
+@mixin title-light () {
+  font-weight: 300;
+}
+
+.text-right {
+  text-align: right;
+}
+.text-center-xs {
+  @media (max-width: $screen-xs-max) {
+    @include text-center();
+  }
+}
+.text-center-sm {
+  @media (max-width: $screen-sm-max) {
+    @include text-center();
+  }
+}
+.text-xxs {
+  font-size: ceil(($font-size-base * 0.70)); // ~10px
+}
+.text-xs {
+  font-size: ceil(($font-size-base * 0.75)); // ~11px
+}
+.text-sm {
+  font-size: $font-size-small;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 5px;
+
+  .label {
+    @extend .text-sm;
+
+    display: inline-block;
+    position: relative;
+    top: -5px;
+    margin-left: 10px;
+  }
+}
+
+h1 {
+  @include title-strong();
+  margin-bottom: 20px;
+  border-bottom: 1px solid darken($app-clr-greyLight, 12%);
+}
+
+h2 {
+  margin: 45px 0 10px;
+  border-bottom: 1px solid darken($app-clr-greyLight, 12%);
+}
+
+h3 {
+  margin: 25px 0 10px;
+}
+
+h4 {
+  margin: 20px 0 5px;
+  font-weight: 300;
+}
+
+h5 {
+  @extend .text-uppercase;
+  margin: 20px 0 5px;
+  font-weight: 700;
+}

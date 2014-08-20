@@ -1,0 +1,72 @@
+// Buttons
+// --------------------------------------------------
+
+// Button :: Inverse
+//
+// Invert colors on hover
+@mixin button-variant-inverse($color, $color_hover, $background, $border) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $color_hover;
+    background-color: $color;
+    border-color: darken($border, 12%);
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: $color;
+      border-color: $border;
+    }
+  }
+
+  .badge {
+    color: $background;
+    background-color: $color;
+  }
+}
+
+// Button :: Primary :: Inverse
+.btn-primary-inverse {
+  @include button-variant-inverse($brand-primary, $app-clr-white, transparent, $brand-primary);
+}
+
+// Button :: Size :: Extra Large
+.btn-xlg {
+  @include button-size($padding-large-vertical + 5, $padding-large-horizontal + 20, $font-size-xlarge, $line-height-xlarge, $border-radius-base);
+}
+
+// Edit on GitHub Button
+.btn-edit-github {
+  @extend .btn-link;
+  @extend .pull-right;
+
+  color: $app-clr-grey;
+
+  span {
+    font-size: $font-size-small;
+    display: none;
+  }
+
+  &:before {
+    @extend .fa;
+    content: $fa-var-edit;
+    font-size: 24px;
+  }
+}

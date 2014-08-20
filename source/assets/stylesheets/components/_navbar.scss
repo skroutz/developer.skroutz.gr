@@ -1,0 +1,141 @@
+// Navbars
+// --------------------------------------------------
+
+
+// Navbar :: Custom
+.navbar-custom {
+  @extend .navbar-default;
+  @include box-shadow(0 6px 12px rgba($brand-primary, .175));
+
+  background-color: $app-clr-greyDark;
+  border-color: $brand-primary;
+  border-bottom-width: 3px;
+
+  .navbar-brand {
+    color: $app-clr-white;
+    font-family: $font-family-monospace;
+    font-weight: 500;
+    &:hover,
+    &:focus {
+      color: $app-clr-greyLight;
+      background-color: transparent;
+    }
+  }
+
+  .navbar-text {
+    color: $app-clr-white;
+  }
+
+  .navbar-nav {
+    > li > a {
+      color: $app-clr-white;
+
+      &:hover,
+      &:focus {
+        color: $brand-primary;
+        background-color: transparent;
+      }
+    }
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: darken($brand-primary, 6%);
+        background-color: transparent;
+      }
+    }
+    > .disabled > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $navbar-default-link-disabled-color;
+        background-color: transparent;
+      }
+    }
+  }
+
+  // Transparent navbar
+  &.navbar-fixed-top.trans {
+    background-color: rgba($app-clr-greyDark, .95);
+    border-color: rgba($brand-primary, .95);
+    @include transition(all ease-in .25s);
+  }
+}
+
+// Navbar :: Toggle Button
+.navbar {
+  .navbar-toggle {
+    background-color: $app-clr-greyDark;
+    border-color: $brand-primary;
+  }
+}
+
+// Navbar :: Brand - Logo
+.navbar {
+  .navbar-header {
+    .navbar-brand {
+      width: 280px;
+      height: 32px;
+      margin-top: 13px;
+      margin-left: 15px !important;
+      padding: 0;
+      font-size: 18px;
+      line-height: 32px;
+      background-position: -530px -60px;
+      background-repeat: no-repeat;
+      background-size: 679px 110px;
+
+      @media (max-width: $screen-xs-max) {
+        width: 80%;
+        margin-left: 60px !important;
+      }
+    }
+  }
+}
+
+// Navbar :: Form :: Search
+.navbar-form {
+  position: relative;
+  margin-left: 20px;
+
+  &:before {
+    @extend .fa;
+    position: absolute;
+    left: 25px;
+    top: 8px;
+
+    content: $fa-var-search !important;
+    color: $app-clr-grey;
+    font-size: 18px;
+  }
+
+  .st-search {
+    width: 220px;
+    padding-left: 30px;
+    border-radius: 17px;
+
+    &:focus {
+      background-color: $app-clr-greyLight;
+      @include transition(background-color ease-in-out .125s);
+    }
+  }
+}
+
+// Navbar :: Lang Links
+.navbar {
+  .nav-lang {
+    @extend .nav;
+    @extend .navbar-nav;
+    @extend .navbar-right;
+
+    max-height: 50px;
+    margin-left: 10px;
+
+    .dropdown-toggle {
+      height: 50px;
+      i {
+        font-size: 24px;
+      }
+    }
+  }
+}
