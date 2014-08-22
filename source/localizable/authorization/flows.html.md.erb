@@ -78,6 +78,9 @@ Otherwise you will get redirected to:
 https://your_redirect_uri?error=access_denied
 </pre>
 
+> Keep in mind that the code will be url-encoded. Please url-decode it before supplying it
+to the library performing HTTP requests, as the library may url-encode it again, rendering it invalid.
+
 #### Step 2 - Exchange the authorization code for an `oauth_token` and a refresh token
 
 The request signature of an access token request is the following:
