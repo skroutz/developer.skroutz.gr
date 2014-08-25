@@ -10,6 +10,9 @@ gem 'middleman-syntax', '~> 2.0.0'
 # API Helpers
 gem 'response_mate', '~> 0.3.1'
 
+# Deployments
+gem 'capistrano', '~> 3.2.1', require: false
+
 # Debug Tools
 gem 'awesome_print'
 gem 'colored'
