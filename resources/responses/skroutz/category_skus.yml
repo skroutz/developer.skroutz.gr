@@ -1,9 +1,9 @@
 ---
 :request:
-  :url: http://api.skroutz.gr/api/categories/40/skus
+  :url: https://api.skroutz.gr/categories/40/skus
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer W5lqBPwCzzX3VoJpnC4NZdimjEiABofdu5aAUG1SjiKO2fUgStTVloVzStT/kO/w6T7lCSmhZE64NWwUxc//rw==
+    :authorization: Bearer Qgq1ofejerxdYPnpOYaT1GRhwRPczj2AnkZFtNi1jrVgchHJib5xL4QkQPJYNWElNoPiOp5VBqsmoq6HgMiEA==
   :params:
     :page: 1
     :per: 3
@@ -17,41 +17,41 @@
     !binary "c3RhdHVz": 200 OK
     !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
     !binary "Y2FjaGUtY29udHJvbA==": max-age=0, private, must-revalidate
-    !binary "eC1yZXF1ZXN0LWlk": '2573770968'
-    !binary "eC1ydW50aW1l": '0.085496'
+    !binary "eC1yZXF1ZXN0LWlk": '578822165'
+    !binary "eC1ydW50aW1l": '0.109060'
     !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "eC1hcHA=": lunkwill
-    !binary "Y29udGVudC1sZW5ndGg=": '966'
+    !binary "eC1hcHA=": lunkwill_ssl
+    !binary "Y29udGVudC1sZW5ndGg=": '961'
     !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Mon, 11 Aug 2014 14:19:26 GMT
-    !binary "eC12YXJuaXNo": '2573770968'
+    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:44:33 GMT
+    !binary "eC12YXJuaXNo": '578822165'
     !binary "YWdl": '0'
     !binary "dmlh": 1.1 varnish
     !binary "Y29ubmVjdGlvbg==": close
-    !binary "eC1vcmlnaW4=": varnish2
+    !binary "eC1vcmlnaW4=": varnish1
     !binary "eC1jYWNoZQ==": MISS
-  :body: ! '{"skus":[{"id":2119391,"ean":"","pn":"GT-E1200","name":"E1200","display_name":"Samsung
-    E1200","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":24.0,"price_min":13.82,"reviewscore":4.0,"shop_count":16,"plain_spec_summary":"Single
+  :body: ! '{"skus":[{"id":5066489,"ean":"","pn":"S519","name":"S519","display_name":"ZTE
+    S519","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":15.9,"price_min":12.9,"reviewscore":0.0,"shop_count":2,"plain_spec_summary":"Single
+    SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
+    2G,   \u039f\u03b8\u03cc\u03bd\u03b7: 1.44\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7:
+    128 x 128 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2: \u03a6\u03c5\u03c3\u03b9\u03ba\u03cc
+    \u03a0\u03bb\u03b7\u03ba\u03c4\u03c1\u03bf\u03bb\u03cc\u03b3\u03b9\u03bf,  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
+    \u039c\u03bd\u03ae\u03bc\u03b7: 32 MB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
+    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: N/A, Feature Phone","manufacturer_id":4834,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://c.scdn.gr/images/sku_main_images/005066/5066489/medium_Feature-phone-S519.png","alternatives":["http://b.scdn.gr/images/sku_images/013121/13121756/s519.jpg"]}},{"id":2119391,"ean":"","pn":"GT-E1200","name":"E1200","display_name":"Samsung
+    E1200","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":32.2,"price_min":13.82,"reviewscore":4.0,"shop_count":15,"plain_spec_summary":"Single
     SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
     2G,   \u039f\u03b8\u03cc\u03bd\u03b7: 1.52\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7:
     128 x 128 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2: \u03a6\u03c5\u03c3\u03b9\u03ba\u03cc
     \u03a0\u03bb\u03b7\u03ba\u03c4\u03c1\u03bf\u03bb\u03cc\u03b3\u03b9\u03bf,  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
     \u039c\u03bd\u03ae\u03bc\u03b7: 100 MB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
     \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: N/A, Feature Phone","manufacturer_id":28,"future":false,"reviews_count":8,"virtual":false,"images":{"main":"http://d.scdn.gr/images/sku_main_images/002119/2119391/medium_gr_GT-E1200ZWMVGR_301_Front","alternatives":["http://a.scdn.gr/images/sku_images/012918/12918567/gr_GT-E1200ZWMVGR_309_Dynamic","http://b.scdn.gr/images/sku_images/012918/12918568/gr_GT-E1200ZWMVGR_304_Left","http://c.scdn.gr/images/sku_images/012918/12918569/gr_GT-E1200ZWMVGR_302_Back","http://d.scdn.gr/images/sku_images/012918/12918571/gr_GT-E1200ZWMVGR_321_Front","http://c.scdn.gr/images/sku_images/012918/12918572/gr_GT-E1200ZWMVGR_329_Dynamic","http://a.scdn.gr/images/sku_images/012918/12918573/gr_GT-E1200ZWMVGR_323_Right","http://c.scdn.gr/images/sku_images/012918/12918574/gr_GT-E1200ZWMVGR_322_Back"]}},{"id":3599366,"ean":"","pn":"OT-1010D","name":"One
-    Touch 1010D (OT-1010D)","display_name":"Alcatel One Touch 1010D (OT-1010D)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":20.29,"price_min":14.48,"reviewscore":1.66667,"shop_count":11,"plain_spec_summary":"Dual
+    Touch 1010D (OT-1010D)","display_name":"Alcatel One Touch 1010D (OT-1010D)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":20.29,"price_min":14.47,"reviewscore":1.66667,"shop_count":13,"plain_spec_summary":"Dual
     SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
     2G,   \u039f\u03b8\u03cc\u03bd\u03b7: 1.45\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7:
     128 x 128 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2: \u03a6\u03c5\u03c3\u03b9\u03ba\u03cc
     \u03a0\u03bb\u03b7\u03ba\u03c4\u03c1\u03bf\u03bb\u03cc\u03b3\u03b9\u03bf,  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
     \u039c\u03bd\u03ae\u03bc\u03b7: 0 GB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
-    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: N/A, Feature Phone","manufacturer_id":417,"future":false,"reviews_count":3,"virtual":false,"images":{"main":"http://b.scdn.gr/images/sku_main_images/003599/3599366/medium_ALCATEL_20OT-1010-500x500.jpg","alternatives":["http://a.scdn.gr/images/sku_images/010958/10958742/1010-black-copy-20130523114837.png"]}},{"id":4706899,"ean":"","pn":"OT-1010","name":"One
-    Touch 1010 (OT-1010)","display_name":"Alcatel One Touch 1010 (OT-1010)","category_id":40,"first_product_shop_info":"733|Somon|somon","click_url":null,"price_max":14.9,"price_min":14.9,"reviewscore":3.0,"shop_count":1,"plain_spec_summary":"Single
-    SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
-    2G,   \u039f\u03b8\u03cc\u03bd\u03b7: 1.45\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7:
-    128 x 128 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2: \u03a6\u03c5\u03c3\u03b9\u03ba\u03cc
-    \u03a0\u03bb\u03b7\u03ba\u03c4\u03c1\u03bf\u03bb\u03cc\u03b3\u03b9\u03bf,  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
-    \u039c\u03bd\u03ae\u03bc\u03b7: 30 MB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
-    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: N/A, Feature Phone","manufacturer_id":417,"future":false,"reviews_count":1,"virtual":false,"images":{"main":"http://c.scdn.gr/images/sku_main_images/004706/4706899/medium_ALCATEL_20OT-1010-500x500.jpg","alternatives":["http://d.scdn.gr/images/sku_images/012569/12569884/1010-black-copy-20130523114837.png","http://c.scdn.gr/images/sku_images/012569/12569885/1010-deep-red-20130523114848.png"]}}],"meta":{"pagination":{"total_results":578,"total_pages":193,"page":1,"per":3}}}'
-:created_at: 2014-08-11 17:19:26.414669991 +03:00
+    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: N/A, Feature Phone","manufacturer_id":417,"future":false,"reviews_count":3,"virtual":false,"images":{"main":"http://b.scdn.gr/images/sku_main_images/003599/3599366/medium_ALCATEL_20OT-1010-500x500.jpg","alternatives":["http://a.scdn.gr/images/sku_images/010958/10958742/1010-black-copy-20130523114837.png"]}}],"meta":{"pagination":{"total_results":591,"total_pages":197,"page":1,"per":3}}}'
+:created_at: 2014-08-25 17:44:33.274572836 +03:00
 :meta:
   :description: Lists only skus belonging to category specified in path

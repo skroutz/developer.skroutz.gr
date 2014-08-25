@@ -1,9 +1,9 @@
 ---
 :request:
-  :url: http://api.skroutz.gr/api/categories/40/skus?q=iphone
+  :url: https://api.skroutz.gr/categories/40/skus?q=iphone
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer W5lqBPwCzzX3VoJpnC4NZdimjEiABofdu5aAUG1SjiKO2fUgStTVloVzStT/kO/w6T7lCSmhZE64NWwUxc//rw==
+    :authorization: Bearer Qgq1ofejerxdYPnpOYaT1GRhwRPczj2AnkZFtNi1jrVgchHJib5xL4QkQPJYNWElNoPiOp5VBqsmoq6HgMiEA==
   :params:
     :per: 2
   :verb: GET
@@ -16,33 +16,33 @@
     !binary "c3RhdHVz": 200 OK
     !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
     !binary "Y2FjaGUtY29udHJvbA==": max-age=0, private, must-revalidate
-    !binary "eC1yZXF1ZXN0LWlk": '2573771275'
-    !binary "eC1ydW50aW1l": '0.059972'
+    !binary "eC1yZXF1ZXN0LWlk": '578822925'
+    !binary "eC1ydW50aW1l": '0.083892'
     !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "eC1hcHA=": lunkwill
-    !binary "Y29udGVudC1sZW5ndGg=": '779'
+    !binary "eC1hcHA=": lunkwill_ssl
+    !binary "Y29udGVudC1sZW5ndGg=": '773'
     !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Mon, 11 Aug 2014 14:19:29 GMT
-    !binary "eC12YXJuaXNo": '2573771275'
+    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:44:37 GMT
+    !binary "eC12YXJuaXNo": '578822925'
     !binary "YWdl": '0'
     !binary "dmlh": 1.1 varnish
     !binary "Y29ubmVjdGlvbg==": close
-    !binary "eC1vcmlnaW4=": varnish2
+    !binary "eC1vcmlnaW4=": varnish1
     !binary "eC1jYWNoZQ==": MISS
   :body: ! '{"skus":[{"id":3902581,"ean":"","pn":"","name":"iPhone 4S (8GB)","display_name":"Apple
-    iPhone 4S (8GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":379.92,"price_min":283.9,"reviewscore":4.85714,"shop_count":39,"plain_spec_summary":"Single
+    iPhone 4S (8GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":399.0,"price_min":282.0,"reviewscore":4.66667,"shop_count":37,"plain_spec_summary":"Single
     SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
     3G, \u039a\u03ac\u03bc\u03b5\u03c1\u03b1: 8 MP,  \u039f\u03b8\u03cc\u03bd\u03b7:
     3.5\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7: 640 x 960 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2:
     \u039f\u03b8\u03cc\u03bd\u03b7 \u03b1\u03c6\u03ae\u03c2 (Touch screen),  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
     \u039c\u03bd\u03ae\u03bc\u03b7: 8.0 GB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
-    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: iOS, SmartPhone","manufacturer_id":356,"future":false,"reviews_count":14,"virtual":false,"images":{"main":"http://d.scdn.gr/images/sku_main_images/003902/3902581/medium_color_white.jpg","alternatives":["http://c.scdn.gr/images/sku_images/011350/11350754/color_black.jpg"]}},{"id":392180,"ean":"","pn":"iPhone
+    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: iOS, SmartPhone","manufacturer_id":356,"future":false,"reviews_count":15,"virtual":false,"images":{"main":"http://d.scdn.gr/images/sku_main_images/003902/3902581/medium_color_white.jpg","alternatives":["http://c.scdn.gr/images/sku_images/011350/11350754/color_black.jpg"]}},{"id":392180,"ean":"","pn":"iPhone
     4 8GB","name":"iPhone 4 8GB","display_name":"Apple iPhone 4 8GB","category_id":40,"first_product_shop_info":"246|VNP
-    Shop|vnp","click_url":null,"price_max":296.0,"price_min":296.0,"reviewscore":4.1,"shop_count":1,"plain_spec_summary":"Single
+    Shop|vnp","click_url":null,"price_max":295.0,"price_min":295.0,"reviewscore":4.0,"shop_count":1,"plain_spec_summary":"Single
     SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
     3G, \u039a\u03ac\u03bc\u03b5\u03c1\u03b1: 5 MP,  \u039f\u03b8\u03cc\u03bd\u03b7:
     3.5\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7: 640 x 960 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2:
     \u039f\u03b8\u03cc\u03bd\u03b7 \u03b1\u03c6\u03ae\u03c2 (Touch screen),  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
     \u039c\u03bd\u03ae\u03bc\u03b7: 8.0 GB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
-    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: iOS, SmartPhone","manufacturer_id":356,"future":false,"reviews_count":20,"virtual":false,"images":{"main":"http://a.scdn.gr/images/sku_main_images/000392/392180/medium_skillnadiphone4iphone4s.jpg","alternatives":["http://b.scdn.gr/images/sku_images/012935/12935488/apple-iphone-4-bl.jpg","http://b.scdn.gr/images/sku_images/012935/12935527/iphone-4s-sprint.jpg","http://d.scdn.gr/images/sku_images/012935/12935539/apple-iphone-4-ofic-3.jpg","http://d.scdn.gr/images/sku_images/012935/12935550/iphone4-white.jpg"]}}],"meta":{"pagination":{"total_results":12,"total_pages":6,"page":1,"per":2}}}'
-:created_at: 2014-08-11 17:19:29.713543613 +03:00
+    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: iOS, SmartPhone","manufacturer_id":356,"future":false,"reviews_count":21,"virtual":false,"images":{"main":"http://a.scdn.gr/images/sku_main_images/000392/392180/medium_skillnadiphone4iphone4s.jpg","alternatives":["http://b.scdn.gr/images/sku_images/012935/12935488/apple-iphone-4-bl.jpg","http://b.scdn.gr/images/sku_images/012935/12935527/iphone-4s-sprint.jpg","http://d.scdn.gr/images/sku_images/012935/12935539/apple-iphone-4-ofic-3.jpg","http://d.scdn.gr/images/sku_images/012935/12935550/iphone4-white.jpg"]}}],"meta":{"pagination":{"total_results":12,"total_pages":6,"page":1,"per":2}}}'
+:created_at: 2014-08-25 17:44:37.898244037 +03:00

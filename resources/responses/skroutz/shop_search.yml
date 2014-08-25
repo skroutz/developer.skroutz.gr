@@ -1,9 +1,9 @@
 ---
 :request:
-  :url: http://api.skroutz.gr/api/shops/search?q=plaisio
+  :url: https://api.skroutz.gr/shops/search?q=plaisio
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer W5lqBPwCzzX3VoJpnC4NZdimjEiABofdu5aAUG1SjiKO2fUgStTVloVzStT/kO/w6T7lCSmhZE64NWwUxc//rw==
+    :authorization: Bearer Qgq1ofejerxdYPnpOYaT1GRhwRPczj2AnkZFtNi1jrVgchHJib5xL4QkQPJYNWElNoPiOp5VBqsmoq6HgMiEA==
   :verb: GET
 :response:
   :status: 200
@@ -14,20 +14,20 @@
     !binary "c3RhdHVz": 200 OK
     !binary "Y2FjaGUtY29udHJvbA==": max-age=300, private
     !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
-    !binary "eC1yZXF1ZXN0LWlk": '2573771402'
-    !binary "eC1ydW50aW1l": '0.060554'
+    !binary "eC1yZXF1ZXN0LWlk": '578823151'
+    !binary "eC1ydW50aW1l": '0.056590'
     !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "eC1hcHA=": lunkwill
-    !binary "Y29udGVudC1sZW5ndGg=": '405'
+    !binary "eC1hcHA=": lunkwill_ssl
+    !binary "Y29udGVudC1sZW5ndGg=": '404'
     !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Mon, 11 Aug 2014 14:19:30 GMT
-    !binary "eC12YXJuaXNo": '2573771402'
+    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:44:39 GMT
+    !binary "eC12YXJuaXNo": '578823151'
     !binary "YWdl": '0'
     !binary "dmlh": 1.1 varnish
     !binary "Y29ubmVjdGlvbg==": close
-    !binary "eC1vcmlnaW4=": varnish2
+    !binary "eC1vcmlnaW4=": varnish1
     !binary "eC1jYWNoZQ==": MISS
-  :body: ! '{"shops":[{"id":11,"name":"\u03a0\u03bb\u03b1\u03af\u03c3\u03b9\u03bf","link":"http://www.plaisio.gr/","phone":"8001112345","image_url":"http://b.scdn.gr/images/shops/logos/0000/mid_f44045fa-e4cf-4723-9702-ae163b5c4036.jpg","thumbshot_url":"http://a.scdn.gr/images/shops/screens/59435b64-2d63-4f4e-a038-ce051280da2b.png","reviews_count":264,"review_score":2.66,"payment_methods":{"credit_card":true,"paypal":false,"bank":true,"spot_cash":true,"installments":"\u03ad\u03c9\u03c2
+  :body: ! '{"shops":[{"id":11,"name":"\u03a0\u03bb\u03b1\u03af\u03c3\u03b9\u03bf","link":"http://www.plaisio.gr/","phone":"8001112345","image_url":"http://b.scdn.gr/images/shops/logos/0000/mid_f44045fa-e4cf-4723-9702-ae163b5c4036.jpg","thumbshot_url":"http://a.scdn.gr/images/shops/screens/59435b64-2d63-4f4e-a038-ce051280da2b.png","reviews_count":266,"review_score":2.74,"payment_methods":{"credit_card":true,"paypal":false,"bank":true,"spot_cash":true,"installments":"\u03ad\u03c9\u03c2
     48  \u03b4\u03cc\u03c3\u03b5\u03b9\u03c2 \u03bc\u03b5 \u03c0\u03b9\u03c3\u03c4\u03c9\u03c4\u03b9\u03ba\u03ae
     \u03ba\u03ac\u03c1\u03c4\u03b1 "}}],"meta":{"pagination":{"total_results":1,"total_pages":1,"page":1,"per":25}}}'
-:created_at: 2014-08-11 17:19:30.861792258 +03:00
+:created_at: 2014-08-25 17:44:39.291359391 +03:00

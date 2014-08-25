@@ -1,9 +1,9 @@
 ---
 :request:
-  :url: http://api.skroutz.gr/api/search?q=wrong+iphone
+  :url: https://api.skroutz.gr/search?q=wrong+iphone
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer W5lqBPwCzzX3VoJpnC4NZdimjEiABofdu5aAUG1SjiKO2fUgStTVloVzStT/kO/w6T7lCSmhZE64NWwUxc//rw==
+    :authorization: Bearer Qgq1ofejerxdYPnpOYaT1GRhwRPczj2AnkZFtNi1jrVgchHJib5xL4QkQPJYNWElNoPiOp5VBqsmoq6HgMiEA==
   :verb: GET
 :response:
   :status: 200
@@ -14,18 +14,18 @@
     !binary "c3RhdHVz": 200 OK
     !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
     !binary "Y2FjaGUtY29udHJvbA==": max-age=0, private, must-revalidate
-    !binary "eC1yZXF1ZXN0LWlk": '2573771121'
-    !binary "eC1ydW50aW1l": '0.167925'
+    !binary "eC1yZXF1ZXN0LWlk": '578822534'
+    !binary "eC1ydW50aW1l": '0.240687'
     !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "eC1hcHA=": lunkwill
+    !binary "eC1hcHA=": lunkwill_ssl
     !binary "Y29udGVudC1sZW5ndGg=": '166'
     !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Mon, 11 Aug 2014 14:19:28 GMT
-    !binary "eC12YXJuaXNo": '2573771121'
+    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:44:35 GMT
+    !binary "eC12YXJuaXNo": '578822534'
     !binary "YWdl": '0'
     !binary "dmlh": 1.1 varnish
     !binary "Y29ubmVjdGlvbg==": close
-    !binary "eC1vcmlnaW4=": varnish2
+    !binary "eC1vcmlnaW4=": varnish1
     !binary "eC1jYWNoZQ==": MISS
-  :body: ! '{"categories":[],"meta":{"alternatives":[{"term":"wrong","count":21,"drop":[{"token":"wrong","dropped":false},{"token":"iphone","dropped":true}],"important":false},{"term":"iphone","count":12417,"drop":[{"token":"wrong","dropped":true},{"token":"iphone","dropped":false}],"important":false}],"strong_matches":{}}}'
-:created_at: 2014-08-11 17:19:28.156501265 +03:00
+  :body: ! '{"categories":[],"meta":{"alternatives":[{"term":"wrong","count":18,"drop":[{"token":"wrong","dropped":false},{"token":"iphone","dropped":true}],"important":false},{"term":"iphone","count":17057,"drop":[{"token":"wrong","dropped":true},{"token":"iphone","dropped":false}],"important":false}],"strong_matches":{}}}'
+:created_at: 2014-08-25 17:44:35.619147837 +03:00

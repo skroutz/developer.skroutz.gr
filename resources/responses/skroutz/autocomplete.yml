@@ -1,9 +1,9 @@
 ---
 :request:
-  :url: http://api.skroutz.gr/api/autocomplete?q=iph
+  :url: https://api.skroutz.gr/autocomplete?q=iph
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer W5lqBPwCzzX3VoJpnC4NZdimjEiABofdu5aAUG1SjiKO2fUgStTVloVzStT/kO/w6T7lCSmhZE64NWwUxc//rw==
+    :authorization: Bearer Qgq1ofejerxdYPnpOYaT1GRhwRPczj2AnkZFtNi1jrVgchHJib5xL4QkQPJYNWElNoPiOp5VBqsmoq6HgMiEA==
   :verb: GET
 :response:
   :status: 200
@@ -14,21 +14,21 @@
     !binary "c3RhdHVz": 200 OK
     !binary "Y2FjaGUtY29udHJvbA==": max-age=3600, private
     !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
-    !binary "eC1yZXF1ZXN0LWlk": '2573771067'
-    !binary "eC1ydW50aW1l": '0.054812'
+    !binary "eC1yZXF1ZXN0LWlk": '578822381'
+    !binary "eC1ydW50aW1l": '0.038834'
     !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "eC1hcHA=": lunkwill
+    !binary "eC1hcHA=": lunkwill_ssl
     !binary "Y29udGVudC1sZW5ndGg=": '146'
     !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Mon, 11 Aug 2014 14:19:27 GMT
-    !binary "eC12YXJuaXNo": '2573771067'
+    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:44:34 GMT
+    !binary "eC12YXJuaXNo": '578822381'
     !binary "YWdl": '0'
     !binary "dmlh": 1.1 varnish
     !binary "Y29ubmVjdGlvbg==": close
-    !binary "eC1vcmlnaW4=": varnish2
+    !binary "eC1vcmlnaW4=": varnish1
     !binary "eC1jYWNoZQ==": MISS
   :body: ! '{"autocomplete":[{"k":"iphone 5s"},{"k":"iphone 5s","d":{"n":"\u039a\u03b9\u03bd\u03b7\u03c4\u03ac
     \u03a4\u03b7\u03bb\u03ad\u03c6\u03c9\u03bd\u03b1","id":40}},{"k":"iphone 4s"},{"k":"iphone
     5"},{"k":"iphone"},{"k":"iphone 4"},{"k":"iphone 5c"},{"k":"iphone 6"},{"k":"iphone
     3"},{"k":"iphone 3gs"},{"k":"iphone 4s 8gb"}]}'
-:created_at: 2014-08-11 17:19:27.374922559 +03:00
+:created_at: 2014-08-25 17:44:34.488703733 +03:00

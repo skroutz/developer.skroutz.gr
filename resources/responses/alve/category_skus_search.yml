@@ -1,9 +1,9 @@
 ---
 :request:
-  :url: http://api.alve.com/categories/33/skus
+  :url: https://api.alve.com/categories/33/skus
   :headers:
     :accept: application/vnd.alve+json; version=3
-    :authorization: Bearer jRc1LQwgl9wVf6QJT1hTfSL32I7V97Yta5fjEpDUHIDoPox/jRhUTe0K19DamN4NArCAy7tTrUyI8yXRxOVWg==
+    :authorization: Bearer ro3L8/U7wnqmbcjEGfzjTJCJ9J75lq9LbSMcZwuNey8kBoSKpOVPfuRZFYOFUy0rLS//s02U7ZEIigv0mm0oA==
   :params:
     :q: iphone
     :per: 2
@@ -17,28 +17,28 @@
     !binary "c3RhdHVz": 200 OK
     !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
     !binary "Y2FjaGUtY29udHJvbA==": max-age=0, private, must-revalidate
-    !binary "eC1yZXF1ZXN0LWlk": '984168106'
-    !binary "eC1ydW50aW1l": '0.060800'
+    !binary "eC1yZXF1ZXN0LWlk": '986354962'
+    !binary "eC1ydW50aW1l": '0.081155'
     !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "eC1hcHA=": as2
-    !binary "Y29udGVudC1sZW5ndGg=": '821'
+    !binary "eC1hcHA=": as2_ssl
+    !binary "Y29udGVudC1sZW5ndGg=": '826'
     !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Tue, 12 Aug 2014 09:16:24 GMT
-    !binary "eC12YXJuaXNo": '984168106'
+    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:48:44 GMT
+    !binary "eC12YXJuaXNo": '986354962'
     !binary "YWdl": '0'
     !binary "dmlh": 1.1 varnish
     !binary "Y29ubmVjdGlvbg==": close
     !binary "eC1vcmlnaW4=": varnish1
     !binary "eC1jYWNoZQ==": MISS
   :body: ! '{"skus":[{"id":347349,"ean":"","pn":"MD235D/A","name":"iPhone 4s 8GB","display_name":"Apple
-    iPhone 4s 8GB","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":1785.58,"price_min":1117.0,"reviewscore":0.0,"shop_count":22,"plain_spec_summary":"Single
+    iPhone 4s 8GB","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":1785.58,"price_min":1087.49,"reviewscore":0.0,"shop_count":24,"plain_spec_summary":"Single
     SIM, A\u011f Ba\u011flant\u0131s\u0131: 2G / 3G, Kamera: 8 Megapiksel,  Ekran:
     3.5\", 640 x 960 piksel, Kullan\u0131m Y\u00f6ntemi: Dokunmatik ekran (Touch screen),  Dahili
     Haf\u0131za: 8 GB,  \u0130\u015fletim Sistemi: iOS, \u00c7\u0131k\u0131\u015f
     Tarihi: 2011, Smart Phone","manufacturer_id":28,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://alve-b.scdn.gr/images/sku_main_images/000347/347349/medium_iphone4-900x900.jpg","alternatives":["http://alve-b.scdn.gr/images/sku_images/000407/407140/16713_12249449_3209.jpg","http://alve-c.scdn.gr/images/sku_images/000407/407141/15743_12249449-7336.jpg","http://alve-a.scdn.gr/images/sku_images/000485/485843/psd-iphone4s-large.jpg","http://alve-b.scdn.gr/images/sku_images/000643/643881/145011470-2-apple_iphone_4s_16_gb_black_akilli_telefon_ar_tek.jpg","http://alve-c.scdn.gr/images/sku_images/000643/643880/iphone-4s-black.png"]}},{"id":25285,"ean":"","pn":"MD128DN/A","name":"iPhone
-    4 8GB","display_name":"Apple iPhone 4 8GB","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":2117.51,"price_min":979.0,"reviewscore":0.0,"shop_count":8,"plain_spec_summary":"Single
+    4 8GB","display_name":"Apple iPhone 4 8GB","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":1270.77,"price_min":969.0,"reviewscore":0.0,"shop_count":7,"plain_spec_summary":"Single
     SIM, A\u011f Ba\u011flant\u0131s\u0131: 2G / 3G, Kamera: 5 Megapiksel,  Ekran:
     3.5\", 640 x 960 piksel, Kullan\u0131m Y\u00f6ntemi: Dokunmatik ekran (Touch screen),  Dahili
     Haf\u0131za: 8 GB,  \u0130\u015fletim Sistemi: iOS, \u00c7\u0131k\u0131\u015f
     Tarihi: 2010, Smart Phone","manufacturer_id":28,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://alve-d.scdn.gr/images/sku_main_images/000025/25285/medium_iphone4s.jpg","alternatives":["http://alve-a.scdn.gr/images/sku_images/000025/25851/12741107_6752.jpg","http://alve-d.scdn.gr/images/sku_images/000025/25852/12741107_5068.jpg","http://alve-a.scdn.gr/images/sku_images/000464/464699/iphone-4-240d-800.jpg","http://alve-d.scdn.gr/images/sku_images/000485/485850/iphone4.jpg","http://alve-d.scdn.gr/images/sku_images/000485/485852/12741107_8884.jpg"]}}],"meta":{"pagination":{"total_results":14,"total_pages":7,"page":1,"per":2}}}'
-:created_at: 2014-08-12 12:16:24.845954268 +03:00
+:created_at: 2014-08-25 17:48:44.448355611 +03:00

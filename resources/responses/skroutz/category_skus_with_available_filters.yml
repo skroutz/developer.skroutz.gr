@@ -1,9 +1,9 @@
 ---
 :request:
-  :url: http://api.skroutz.gr/api/categories/279/skus?include_meta=available_filters
+  :url: https://api.skroutz.gr/categories/279/skus?include_meta=available_filters
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer W5lqBPwCzzX3VoJpnC4NZdimjEiABofdu5aAUG1SjiKO2fUgStTVloVzStT/kO/w6T7lCSmhZE64NWwUxc//rw==
+    :authorization: Bearer Qgq1ofejerxdYPnpOYaT1GRhwRPczj2AnkZFtNi1jrVgchHJib5xL4QkQPJYNWElNoPiOp5VBqsmoq6HgMiEA==
   :params:
     :per: 1
   :verb: GET
@@ -16,22 +16,22 @@
     !binary "c3RhdHVz": 200 OK
     !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
     !binary "Y2FjaGUtY29udHJvbA==": max-age=0, private, must-revalidate
-    !binary "eC1yZXF1ZXN0LWlk": '2573771311'
-    !binary "eC1ydW50aW1l": '0.099770'
+    !binary "eC1yZXF1ZXN0LWlk": '578823007'
+    !binary "eC1ydW50aW1l": '0.076396'
     !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "eC1hcHA=": lunkwill
-    !binary "Y29udGVudC1sZW5ndGg=": '632'
+    !binary "eC1hcHA=": lunkwill_ssl
+    !binary "Y29udGVudC1sZW5ndGg=": '629'
     !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Mon, 11 Aug 2014 14:19:30 GMT
-    !binary "eC12YXJuaXNo": '2573771311'
+    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:44:38 GMT
+    !binary "eC12YXJuaXNo": '578823007'
     !binary "YWdl": '0'
     !binary "dmlh": 1.1 varnish
     !binary "Y29ubmVjdGlvbg==": close
-    !binary "eC1vcmlnaW4=": varnish2
+    !binary "eC1vcmlnaW4=": varnish1
     !binary "eC1jYWNoZQ==": MISS
   :body: ! '{"skus":[{"id":4112828,"ean":"","pn":"","name":"\u03a0\u03bf\u03c5\u03b3\u03ba\u03af
     \u0392\u03bf\u03c5\u03ac\u03bb \u0391\u03c3\u03cd\u03bc\u03bc\u03b5\u03c4\u03c1\u03bf
     014S13","display_name":"\u03a0\u03bf\u03c5\u03b3\u03ba\u03af \u0392\u03bf\u03c5\u03ac\u03bb
     \u0391\u03c3\u03cd\u03bc\u03bc\u03b5\u03c4\u03c1\u03bf 014S13","category_id":279,"first_product_shop_info":"2225|E-mpomponiera|empomponiera","click_url":"http://www.skroutz.gr/products/show/14033233","price_max":0.32,"price_min":0.32,"reviewscore":0.0,"shop_count":1,"plain_spec_summary":"\u0395\u03af\u03b4\u03bf\u03c2:
-    \u039c\u03c0\u03bf\u03bc\u03c0\u03bf\u03bd\u03b9\u03ad\u03c1\u03b5\u03c2","manufacturer_id":null,"future":false,"reviews_count":0,"virtual":true,"images":{"main":"http://b.scdn.gr/images/sku_main_images/004112/4112828/medium_14033233-orig.jpg","alternatives":[]}}],"meta":{"available_filters":{"filters":{"342830":923,"342829":918,"342834":322,"342833":137,"342827":116,"342831":68,"483953":52,"342832":1,"494224":1136,"494225":756,"494223":518,"494226":352},"manufacturers":{"10179":176,"254":108,"1649":67,"10645":38,"10181":31,"10654":22,"7998":20,"10646":16,"1318":16,"10180":10,"10647":9,"11867":5,"14823":4,"11866":2,"7564":2,"13461":1,"7558":1}},"pagination":{"total_results":2720,"total_pages":2720,"page":1,"per":1}}}'
-:created_at: 2014-08-11 17:19:30.136800651 +03:00
+    \u039c\u03c0\u03bf\u03bc\u03c0\u03bf\u03bd\u03b9\u03ad\u03c1\u03b5\u03c2","manufacturer_id":null,"future":false,"reviews_count":0,"virtual":true,"images":{"main":"http://b.scdn.gr/images/sku_main_images/004112/4112828/medium_14033233-orig.jpg","alternatives":[]}}],"meta":{"available_filters":{"filters":{"342830":987,"342829":644,"342834":371,"342833":145,"342827":120,"342832":85,"342831":76,"483953":52,"494224":1277,"494225":689,"494223":592,"494226":234},"manufacturers":{"10179":133,"254":107,"1649":51,"10645":27,"10181":24,"7998":20,"10654":19,"10647":8,"10180":7,"10646":6,"11867":5,"14823":4,"1318":4,"11866":2,"7564":2,"7558":1}},"pagination":{"total_results":2752,"total_pages":2752,"page":1,"per":1}}}'
+:created_at: 2014-08-25 17:44:38.442703296 +03:00

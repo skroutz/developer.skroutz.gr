@@ -1,33 +1,33 @@
 ---
 :request:
   :verb: POST
-  :url: http://api.skroutz.gr/api/favorites
+  :url: https://api.skroutz.gr/favorites
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer W5lqBPwCzzX3VoJpnC4NZdimjEiABofdu5aAUG1SjiKO2fUgStTVloVzStT/kO/w6T7lCSmhZE64NWwUxc//rw==
+    :authorization: Bearer Qgq1ofejerxdYPnpOYaT1GRhwRPczj2AnkZFtNi1jrVgchHJib5xL4QkQPJYNWElNoPiOp5VBqsmoq6HgMiEA==
   :params:
     :favorite[sku_id]: 89645
 :response:
-  :status: 201
+  :status: 400
   :headers:
     !binary "c2VydmVy": nginx
     !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
-    !binary "c3RhdHVz": 201 Created
+    !binary "c3RhdHVz": 400 Bad Request
     !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
-    etag: ! '"0f1d2267c52a2c3625abbcdf859eca3a"'
-    !binary "Y2FjaGUtY29udHJvbA==": max-age=0, private, must-revalidate
-    !binary "eC1yZXF1ZXN0LWlk": '464666394'
-    !binary "eC1ydW50aW1l": '0.086359'
-    !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "eC1hcHA=": lunkwill
-    !binary "Y29udGVudC1sZW5ndGg=": '174'
+    !binary "Y2FjaGUtY29udHJvbA==": no-cache
+    !binary "eC1yZXF1ZXN0LWlk": '2651981523'
+    !binary "eC1ydW50aW1l": '0.055823'
+    !binary "eC1hcHA=": lunkwill_ssl
+    !binary "Y29udGVudC1sZW5ndGg=": '192'
     !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Mon, 11 Aug 2014 14:19:29 GMT
-    !binary "eC12YXJuaXNo": '464666394'
+    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:44:36 GMT
+    !binary "eC12YXJuaXNo": '2651981523'
     !binary "YWdl": '0'
     !binary "dmlh": 1.1 varnish
     !binary "Y29ubmVjdGlvbg==": close
-    !binary "eC1vcmlnaW4=": varnish1
+    !binary "eC1vcmlnaW4=": varnish2
     !binary "eC1jYWNoZQ==": MISS
-  :body: ! '{"favorite":{"id":772719,"have_it":false,"user_id":132950,"user_notes":null,"sku_id":89645,"created_at":"2014-08-11T17:19:29+03:00","updated_at":"2014-08-11T17:19:29+03:00"}}'
-:created_at: 2014-08-11 17:19:29.358457028 +03:00
+  :body: ! '{"errors":{"sku_id":["\u0392\u03c1\u03af\u03c3\u03ba\u03b5\u03c4\u03b1\u03b9
+    \u03ae\u03b4\u03b7 \u03c3\u03c4\u03b1 \u03b1\u03b3\u03b1\u03c0\u03b7\u03bc\u03ad\u03bd\u03b1
+    \u03c3\u03bf\u03c5"]}}'
+:created_at: 2014-08-25 17:44:36.934528482 +03:00

@@ -1,9 +1,9 @@
 ---
 :request:
-  :url: http://api.skroutz.gr/api/shops/11/locations?embed=address
+  :url: https://api.skroutz.gr/shops/11/locations?embed=address
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer W5lqBPwCzzX3VoJpnC4NZdimjEiABofdu5aAUG1SjiKO2fUgStTVloVzStT/kO/w6T7lCSmhZE64NWwUxc//rw==
+    :authorization: Bearer Qgq1ofejerxdYPnpOYaT1GRhwRPczj2AnkZFtNi1jrVgchHJib5xL4QkQPJYNWElNoPiOp5VBqsmoq6HgMiEA==
   :params:
     :per: 2
   :verb: GET
@@ -14,27 +14,27 @@
     !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
     !binary "dmFyeQ==": Accept-Encoding
     !binary "c3RhdHVz": 200 OK
-    !binary "bGluaw==": <http://api.skroutz.gr/api/shops/11/locations?embed=address&page=11&per=2>;
-      rel="last", <http://api.skroutz.gr/api/shops/11/locations?embed=address&page=2&per=2>;
+    !binary "bGluaw==": <https://api.skroutz.gr/shops/11/locations?embed=address&page=11&per=2>;
+      rel="last", <https://api.skroutz.gr/shops/11/locations?embed=address&page=2&per=2>;
       rel="next"
     !binary "Y2FjaGUtY29udHJvbA==": max-age=300, private
     !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
-    !binary "eC1yZXF1ZXN0LWlk": '464666017'
-    !binary "eC1ydW50aW1l": '0.078237'
+    !binary "eC1yZXF1ZXN0LWlk": '2651981203'
+    !binary "eC1ydW50aW1l": '0.091326'
     !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "eC1hcHA=": lunkwill
+    !binary "eC1hcHA=": lunkwill_ssl
     !binary "Y29udGVudC1sZW5ndGg=": '416'
     !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Mon, 11 Aug 2014 14:19:26 GMT
-    !binary "eC12YXJuaXNo": '464666017'
+    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:44:33 GMT
+    !binary "eC12YXJuaXNo": '2651981203'
     !binary "YWdl": '0'
     !binary "dmlh": 1.1 varnish
     !binary "Y29ubmVjdGlvbg==": close
-    !binary "eC1vcmlnaW4=": varnish1
+    !binary "eC1vcmlnaW4=": varnish2
     !binary "eC1jYWNoZQ==": MISS
   :body: ! '{"locations":[{"id":2,"headquarter":true,"phones":["2105587700"],"pickup_point":true,"store":true,"full_address":"\u0398\u0395\u03a3\u0397
     \u03a3\u039a\u039b\u0397\u03a1\u0399 1, \u03a4.\u039a. 19600, \u039c\u0391\u0393\u039f\u03a5\u039b\u0391,
     \u0391\u03c4\u03c4\u03b9\u03ba\u03ae\u03c2","lat":"38.083786","lng":"23.526396","info":"","address":{"id":2,"street_number":"1","street":"\u0398\u0395\u03a3\u0397
     \u03a3\u039a\u039b\u0397\u03a1\u0399","postcode":"19600","city":"\u039c\u0391\u0393\u039f\u03a5\u039b\u0391","region":"\u0391\u03c4\u03c4\u03b9\u03ba\u03ae\u03c2","country":"\u0395\u03bb\u03bb\u03ac\u03b4\u03b1"}},{"id":1912,"headquarter":false,"phones":["8001112345"],"pickup_point":false,"store":true,"full_address":"\u0392\u039f\u03a5\u039b\u0397\u03a3
     3, \u03a4.\u039a. 10562, \u0391\u0398\u0397\u039d\u0391, \u0391\u03c4\u03c4\u03b9\u03ba\u03ae\u03c2","lat":"37.977154","lng":"23.732843","info":"","address":{"id":1912,"street_number":"3","street":"\u0392\u039f\u03a5\u039b\u0397\u03a3","postcode":"10562","city":"\u0391\u0398\u0397\u039d\u0391","region":"\u0391\u03c4\u03c4\u03b9\u03ba\u03ae\u03c2","country":"\u0395\u03bb\u03bb\u03ac\u03b4\u03b1"}}],"meta":{"pagination":{"total_results":21,"total_pages":11,"page":1,"per":2}}}'
-:created_at: 2014-08-11 17:19:26.773254796 +03:00
+:created_at: 2014-08-25 17:44:33.749941842 +03:00

@@ -1,9 +1,9 @@
 ---
 :request:
-  :url: http://api.alve.com/skus/146414/similar
+  :url: https://api.alve.com/skus/146414/similar
   :headers:
     :accept: application/vnd.alve+json; version=3
-    :authorization: Bearer jRc1LQwgl9wVf6QJT1hTfSL32I7V97Yta5fjEpDUHIDoPox/jRhUTe0K19DamN4NArCAy7tTrUyI8yXRxOVWg==
+    :authorization: Bearer ro3L8/U7wnqmbcjEGfzjTJCJ9J75lq9LbSMcZwuNey8kBoSKpOVPfuRZFYOFUy0rLS//s02U7ZEIigv0mm0oA==
   :verb: GET
 :response:
   :status: 200
@@ -14,38 +14,37 @@
     !binary "c3RhdHVz": 200 OK
     !binary "Y2FjaGUtY29udHJvbA==": max-age=300, private
     !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
-    !binary "eC1yZXF1ZXN0LWlk": '984168101'
-    !binary "eC1ydW50aW1l": '0.049890'
+    !binary "eC1yZXF1ZXN0LWlk": '986354956'
+    !binary "eC1ydW50aW1l": '0.051905'
     !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "eC1hcHA=": as2
-    !binary "Y29udGVudC1sZW5ndGg=": '1166'
+    !binary "eC1hcHA=": as2_ssl
+    !binary "Y29udGVudC1sZW5ndGg=": '1178'
     !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Tue, 12 Aug 2014 09:16:24 GMT
-    !binary "eC12YXJuaXNo": '984168101'
+    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:48:43 GMT
+    !binary "eC12YXJuaXNo": '986354956'
     !binary "YWdl": '0'
     !binary "dmlh": 1.1 varnish
     !binary "Y29ubmVjdGlvbg==": close
     !binary "eC1vcmlnaW4=": varnish1
     !binary "eC1jYWNoZQ==": MISS
   :body: ! '{"skus":[{"id":644369,"ean":"","pn":"","name":"Galaxy S5 16GB","display_name":"Samsung
-    Galaxy S5 16GB","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":2568.41,"price_min":1681.42,"reviewscore":0.0,"shop_count":29,"plain_spec_summary":"Single
+    Galaxy S5 16GB","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":2352.12,"price_min":1639.0,"reviewscore":0.0,"shop_count":32,"plain_spec_summary":"Single
     SIM, A\u011f Ba\u011flant\u0131s\u0131: 2G / 3G / 4G - LTE, Kamera: 16 Megapiksel,  Ekran:
     5.1\", 1920 x 1080 piksel, Kullan\u0131m Y\u00f6ntemi: Dokunmatik ekran (Touch
-    screen),  Dahili Haf\u0131za: 16 GB,  \u0130\u015fletim Sistemi: Android, \u00c7\u0131k\u0131\u015f
-    Tarihi: 2014, Smart Phone","manufacturer_id":36,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://alve-a.scdn.gr/images/sku_main_images/000644/644369/medium_Samsung-Galaxy-S5-630x538.jpg","alternatives":["http://alve-d.scdn.gr/images/sku_images/000753/753772/samsung-galaxy-s5-blue-730x743.jpg","http://alve-c.scdn.gr/images/sku_images/000753/753773/Samsung-Galaxy-S5-Gold-630x641.jpg","http://alve-a.scdn.gr/images/sku_images/000753/753774/Samsung-Galaxy-S5-White-630x641.jpg","http://alve-b.scdn.gr/images/sku_images/000753/753775/samsung-galaxy-s5-g900f-2.jpg"]}},{"id":58324,"ean":"","pn":"","name":"Galaxy
-    S III i9300 16GB","display_name":"Samsung Galaxy S III i9300 16GB","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":1721.48,"price_min":885.0,"reviewscore":0.0,"shop_count":37,"plain_spec_summary":"Single
-    SIM, A\u011f Ba\u011flant\u0131s\u0131: 2G / 3G, Kamera: 8 Megapiksel,  Ekran:
-    4.8\", 1280 x 720 piksel, Kullan\u0131m Y\u00f6ntemi: Dokunmatik ekran (Touch
-    screen),  Dahili Haf\u0131za: 16 GB,  \u0130\u015fletim Sistemi: Android, \u00c7\u0131k\u0131\u015f
-    Tarihi: 2012, Smart Phone","manufacturer_id":36,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://alve-a.scdn.gr/images/sku_main_images/000058/58324/medium_Samsung_Galaxy_SIII_S3_White_M.jpg","alternatives":["http://alve-d.scdn.gr/images/sku_images/000485/485892/Samsung-GT-i9300-Galaxy-S-III-BEYAZ__58791637_0.jpg","http://alve-b.scdn.gr/images/sku_images/000485/485893/samsung-galaxy-s3-format-nasil-atilir-1.jpg","http://alve-a.scdn.gr/images/sku_images/000485/485894/1375551359_46123samsung-galaxy.jpg","http://alve-c.scdn.gr/images/sku_images/000485/485895/Samsung-Galaxy-S3.jpg","http://alve-d.scdn.gr/images/sku_images/000485/485896/GalaxyS3-newcolours-580-100.jpg","http://alve-b.scdn.gr/images/sku_images/000485/485897/xl_Samsung_Galaxy_S3_LTE_4G.jpg"]}},{"id":245877,"ean":"","pn":"","name":"Galaxy
-    S4 i9500 32GB","display_name":"Samsung Galaxy S4 i9500 32GB","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":1649.0,"price_min":1299.0,"reviewscore":0.0,"shop_count":4,"plain_spec_summary":"Single
-    SIM, A\u011f Ba\u011flant\u0131s\u0131: 2G / 3G / 4G - LTE, Kamera: 13 Megapiksel,  Ekran:
-    5\", 1920 x 1080 piksel, Kullan\u0131m Y\u00f6ntemi: Dokunmatik ekran (Touch screen),  Dahili
+    screen) / Dokunmatik Ekran (Touchscreen),  Dahili Haf\u0131za: 16 GB,  \u0130\u015fletim
+    Sistemi: Android, \u00c7\u0131k\u0131\u015f Tarihi: 2014, SmartPhone","manufacturer_id":36,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://alve-a.scdn.gr/images/sku_main_images/000644/644369/medium_Samsung-Galaxy-S5-630x538.jpg","alternatives":["http://alve-d.scdn.gr/images/sku_images/000753/753772/samsung-galaxy-s5-blue-730x743.jpg","http://alve-c.scdn.gr/images/sku_images/000753/753773/Samsung-Galaxy-S5-Gold-630x641.jpg","http://alve-a.scdn.gr/images/sku_images/000753/753774/Samsung-Galaxy-S5-White-630x641.jpg","http://alve-b.scdn.gr/images/sku_images/000753/753775/samsung-galaxy-s5-g900f-2.jpg"]}},{"id":705848,"ean":"","pn":"","name":"Discovery
+    Elite 32GB","display_name":"General Mobile Discovery Elite 32GB","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":1401.83,"price_min":1149.79,"reviewscore":3.0,"shop_count":27,"plain_spec_summary":"A\u011f
+    Ba\u011flant\u0131s\u0131: 2G / 3G, Kamera: 16 Megapiksel,  Ekran: 5.5\", 1920
+    x 1080 piksel, Kullan\u0131m Y\u00f6ntemi: Dokunmatik ekran (Touch screen),  Dahili
     Haf\u0131za: 32 GB,  \u0130\u015fletim Sistemi: Android, \u00c7\u0131k\u0131\u015f
-    Tarihi: 2013, Smart Phone","manufacturer_id":36,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://alve-d.scdn.gr/images/sku_main_images/000245/245877/medium_samsung-galaxy-s4-colors-white-black.jpg","alternatives":["http://alve-d.scdn.gr/images/sku_images/000485/485872/Galaxy-S4-black-and-white.jpg","http://alve-d.scdn.gr/images/sku_images/000485/485873/Samsung-Galaxy-S-4-white-three-up-front-profile-back.jpg","http://alve-c.scdn.gr/images/sku_images/000485/485874/s4-130315-3.png","http://alve-a.scdn.gr/images/sku_images/000485/485876/samsung-galaxy-s-4-i9500-black-mist.jpg"]}},{"id":275975,"ean":"","pn":"","name":"Galaxy
-    Note 3 N9000 32GB","display_name":"Samsung Galaxy Note 3 N9000 32GB","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":2546.09,"price_min":1711.71,"reviewscore":0.0,"shop_count":34,"plain_spec_summary":"Single
+    Tarihi: 2014, Smart Phone","manufacturer_id":91,"future":false,"reviews_count":1,"virtual":false,"images":{"main":"http://alve-d.scdn.gr/images/sku_main_images/000705/705848/medium_discoveryElite_size.png","alternatives":["http://alve-a.scdn.gr/images/sku_images/000815/815720/discoveryElite_Detail_right.png","http://alve-c.scdn.gr/images/sku_images/000815/815721/discoveryElite_Detail_01.png","http://alve-c.scdn.gr/images/sku_images/000815/815722/discoveryElite_Detail_02.png","http://alve-c.scdn.gr/images/sku_images/000815/815723/discoveryElite_Detail_03.png","http://alve-c.scdn.gr/images/sku_images/000815/815724/discoveryElite_Detail_04.png"]}},{"id":275975,"ean":"","pn":"","name":"Galaxy
+    Note 3 N9000 32GB","display_name":"Samsung Galaxy Note 3 N9000 32GB","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":2232.27,"price_min":1649.0,"reviewscore":0.0,"shop_count":38,"plain_spec_summary":"Single
     SIM, A\u011f Ba\u011flant\u0131s\u0131: 2G / 3G / 4G - LTE, Kamera: 13 Megapiksel,  Ekran:
     5.7\", 1920 x 1080 piksel, Kullan\u0131m Y\u00f6ntemi: Dokunmatik ekran (Touch
     screen),  Dahili Haf\u0131za: 32 GB,  \u0130\u015fletim Sistemi: Android, \u00c7\u0131k\u0131\u015f
-    Tarihi: 2013, Smart Phone","manufacturer_id":36,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://alve-a.scdn.gr/images/sku_main_images/000275/275975/medium_samsung-galaxy-note-3.jpg","alternatives":["http://alve-b.scdn.gr/images/sku_images/000303/303687/note3.silikonvadisitv.5.jpg","http://alve-a.scdn.gr/images/sku_images/000485/485864/samsung-galaxy-note-3-1.jpg","http://alve-b.scdn.gr/images/sku_images/000485/485865/maxresdefault.jpg","http://alve-d.scdn.gr/images/sku_images/000485/485866/Samsung-Galaxy-Note-3-wallpapers.jpg"]}}],"meta":{"pagination":{"total_results":4,"total_pages":1,"page":1,"per":25}}}'
-:created_at: 2014-08-12 12:16:24.105582226 +03:00
+    Tarihi: 2013, Smart Phone","manufacturer_id":36,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://alve-a.scdn.gr/images/sku_main_images/000275/275975/medium_samsung-galaxy-note-3.jpg","alternatives":["http://alve-b.scdn.gr/images/sku_images/000303/303687/note3.silikonvadisitv.5.jpg","http://alve-a.scdn.gr/images/sku_images/000485/485864/samsung-galaxy-note-3-1.jpg","http://alve-b.scdn.gr/images/sku_images/000485/485865/maxresdefault.jpg","http://alve-d.scdn.gr/images/sku_images/000485/485866/Samsung-Galaxy-Note-3-wallpapers.jpg"]}},{"id":353170,"ean":"","pn":"","name":"Discovery
+    16GB","display_name":"General Mobile Discovery 16GB","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":995.99,"price_min":657.02,"reviewscore":5.0,"shop_count":36,"plain_spec_summary":"Dual
+    SIM, Kamera: 8 Megapiksel,  Ekran: 4.7\", 1280 x 720 piksel, Kullan\u0131m Y\u00f6ntemi:
+    Dokunmatik ekran (Touch screen),  Dahili Haf\u0131za: 16 GB,  \u0130\u015fletim
+    Sistemi: Android, Smart Phone","manufacturer_id":91,"future":false,"reviews_count":1,"virtual":false,"images":{"main":"http://alve-d.scdn.gr/images/sku_main_images/000353/353170/medium_28210488420485972387.jpg","alternatives":["http://alve-b.scdn.gr/images/sku_images/000413/413773/general-mobile-discovery-hd-ekran.jpg","http://alve-c.scdn.gr/images/sku_images/000485/485949/20131119103300748_generalmobilediscovery16gbsiyah3.jpg","http://alve-c.scdn.gr/images/sku_images/000485/485950/generalmobile-berkayyilmaz.jpg","http://alve-d.scdn.gr/images/sku_images/000485/485951/makethumb.aspx"]}}],"meta":{"pagination":{"total_results":4,"total_pages":1,"page":1,"per":25}}}'
+:created_at: 2014-08-25 17:48:43.659621620 +03:00

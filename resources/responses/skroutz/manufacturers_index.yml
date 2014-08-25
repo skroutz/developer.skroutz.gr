@@ -1,9 +1,9 @@
 ---
 :request:
-  :url: http://api.skroutz.gr/api/manufacturers
+  :url: https://api.skroutz.gr/manufacturers
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer W5lqBPwCzzX3VoJpnC4NZdimjEiABofdu5aAUG1SjiKO2fUgStTVloVzStT/kO/w6T7lCSmhZE64NWwUxc//rw==
+    :authorization: Bearer Qgq1ofejerxdYPnpOYaT1GRhwRPczj2AnkZFtNi1jrVgchHJib5xL4QkQPJYNWElNoPiOp5VBqsmoq6HgMiEA==
   :params:
     :per: 2
   :verb: GET
@@ -14,22 +14,22 @@
     !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
     !binary "dmFyeQ==": Accept-Encoding
     !binary "c3RhdHVz": 200 OK
-    !binary "bGluaw==": <http://api.skroutz.gr/api/manufacturers?page=8119&per=2>;
-      rel="last", <http://api.skroutz.gr/api/manufacturers?page=2&per=2>; rel="next"
+    !binary "bGluaw==": <https://api.skroutz.gr/manufacturers?page=8140&per=2>; rel="last",
+      <https://api.skroutz.gr/manufacturers?page=2&per=2>; rel="next"
     !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
     !binary "Y2FjaGUtY29udHJvbA==": max-age=0, private, must-revalidate
-    !binary "eC1yZXF1ZXN0LWlk": '2573771041'
-    !binary "eC1ydW50aW1l": '0.081295'
+    !binary "eC1yZXF1ZXN0LWlk": '578822318'
+    !binary "eC1ydW50aW1l": '0.079392'
     !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "eC1hcHA=": lunkwill
+    !binary "eC1hcHA=": lunkwill_ssl
     !binary "Y29udGVudC1sZW5ndGg=": '246'
     !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Mon, 11 Aug 2014 14:19:27 GMT
-    !binary "eC12YXJuaXNo": '2573771041'
+    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:44:34 GMT
+    !binary "eC12YXJuaXNo": '578822318'
     !binary "YWdl": '0'
     !binary "dmlh": 1.1 varnish
     !binary "Y29ubmVjdGlvbg==": close
-    !binary "eC1vcmlnaW4=": varnish2
+    !binary "eC1vcmlnaW4=": varnish1
     !binary "eC1jYWNoZQ==": MISS
-  :body: ! '{"manufacturers":[{"id":1,"name":"EA - Electronic Arts","image_url":"http://a.scdn.gr/images/manufacturer_logos/000000/1/e2e019eea82bfe6b82b47ab77f6b4497.png"},{"id":2,"name":"Sony","image_url":"http://a.scdn.gr/images/manufacturer_logos/000000/2/502f0698a44df30f4fd55fd9e0893369.jpg"}],"meta":{"pagination":{"total_results":16237,"total_pages":8119,"page":1,"per":2}}}'
-:created_at: 2014-08-11 17:19:27.148661009 +03:00
+  :body: ! '{"manufacturers":[{"id":1,"name":"EA - Electronic Arts","image_url":"http://a.scdn.gr/images/manufacturer_logos/000000/1/e2e019eea82bfe6b82b47ab77f6b4497.png"},{"id":2,"name":"Sony","image_url":"http://a.scdn.gr/images/manufacturer_logos/000000/2/502f0698a44df30f4fd55fd9e0893369.jpg"}],"meta":{"pagination":{"total_results":16280,"total_pages":8140,"page":1,"per":2}}}'
+:created_at: 2014-08-25 17:44:34.188034528 +03:00

@@ -1,9 +1,9 @@
 ---
 :request:
-  :url: http://api.skroutz.gr/api/manufacturers/12907
+  :url: https://api.skroutz.gr/manufacturers/12907
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer W5lqBPwCzzX3VoJpnC4NZdimjEiABofdu5aAUG1SjiKO2fUgStTVloVzStT/kO/w6T7lCSmhZE64NWwUxc//rw==
+    :authorization: Bearer Qgq1ofejerxdYPnpOYaT1GRhwRPczj2AnkZFtNi1jrVgchHJib5xL4QkQPJYNWElNoPiOp5VBqsmoq6HgMiEA==
   :verb: GET
 :response:
   :status: 200
@@ -14,18 +14,18 @@
     !binary "c3RhdHVz": 200 OK
     !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
     !binary "Y2FjaGUtY29udHJvbA==": max-age=0, private, must-revalidate
-    !binary "eC1yZXF1ZXN0LWlk": '464666063'
-    !binary "eC1ydW50aW1l": '0.058334'
+    !binary "eC1yZXF1ZXN0LWlk": '2651981229'
+    !binary "eC1ydW50aW1l": '0.058732'
     !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "eC1hcHA=": lunkwill
+    !binary "eC1hcHA=": lunkwill_ssl
     !binary "Y29udGVudC1sZW5ndGg=": '82'
     !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Mon, 11 Aug 2014 14:19:27 GMT
-    !binary "eC12YXJuaXNo": '464666063'
+    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:44:34 GMT
+    !binary "eC12YXJuaXNo": '2651981229'
     !binary "YWdl": '0'
     !binary "dmlh": 1.1 varnish
     !binary "Y29ubmVjdGlvbg==": close
-    !binary "eC1vcmlnaW4=": varnish1
+    !binary "eC1vcmlnaW4=": varnish2
     !binary "eC1jYWNoZQ==": MISS
   :body: ! '{"manufacturer":{"id":12907,"name":"Rapala","image_url":null}}'
-:created_at: 2014-08-11 17:19:27.052008057 +03:00
+:created_at: 2014-08-25 17:44:34.064593481 +03:00

@@ -1,9 +1,9 @@
 ---
 :request:
-  :url: http://api.alve.com/categories/33/skus
+  :url: https://api.alve.com/categories/33/skus
   :headers:
     :accept: application/vnd.alve+json; version=3
-    :authorization: Bearer jRc1LQwgl9wVf6QJT1hTfSL32I7V97Yta5fjEpDUHIDoPox/jRhUTe0K19DamN4NArCAy7tTrUyI8yXRxOVWg==
+    :authorization: Bearer ro3L8/U7wnqmbcjEGfzjTJCJ9J75lq9LbSMcZwuNey8kBoSKpOVPfuRZFYOFUy0rLS//s02U7ZEIigv0mm0oA==
   :params:
     :page: 1
     :per: 3
@@ -17,35 +17,35 @@
     !binary "c3RhdHVz": 200 OK
     !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
     !binary "Y2FjaGUtY29udHJvbA==": max-age=0, private, must-revalidate
-    !binary "eC1yZXF1ZXN0LWlk": '984168082'
-    !binary "eC1ydW50aW1l": '0.073091'
+    !binary "eC1yZXF1ZXN0LWlk": '986354930'
+    !binary "eC1ydW50aW1l": '0.082780'
     !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "eC1hcHA=": as2
-    !binary "Y29udGVudC1sZW5ndGg=": '1088'
+    !binary "eC1hcHA=": as2_ssl
+    !binary "Y29udGVudC1sZW5ndGg=": '1018'
     !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Tue, 12 Aug 2014 09:16:22 GMT
-    !binary "eC12YXJuaXNo": '984168082'
+    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:48:41 GMT
+    !binary "eC12YXJuaXNo": '986354930'
     !binary "YWdl": '0'
     !binary "dmlh": 1.1 varnish
     !binary "Y29ubmVjdGlvbg==": close
     !binary "eC1vcmlnaW4=": varnish1
     !binary "eC1jYWNoZQ==": MISS
   :body: ! '{"skus":[{"id":705848,"ean":"","pn":"","name":"Discovery Elite 32GB","display_name":"General
-    Mobile Discovery Elite 32GB","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":1456.01,"price_min":1177.79,"reviewscore":3.0,"shop_count":23,"plain_spec_summary":"A\u011f
+    Mobile Discovery Elite 32GB","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":1401.83,"price_min":1149.79,"reviewscore":3.0,"shop_count":27,"plain_spec_summary":"A\u011f
     Ba\u011flant\u0131s\u0131: 2G / 3G, Kamera: 16 Megapiksel,  Ekran: 5.5\", 1920
     x 1080 piksel, Kullan\u0131m Y\u00f6ntemi: Dokunmatik ekran (Touch screen),  Dahili
     Haf\u0131za: 32 GB,  \u0130\u015fletim Sistemi: Android, \u00c7\u0131k\u0131\u015f
-    Tarihi: 2014, Smart Phone","manufacturer_id":91,"future":false,"reviews_count":1,"virtual":false,"images":{"main":"http://alve-d.scdn.gr/images/sku_main_images/000705/705848/medium_discoveryElite_size.png","alternatives":["http://alve-a.scdn.gr/images/sku_images/000815/815720/discoveryElite_Detail_right.png","http://alve-c.scdn.gr/images/sku_images/000815/815721/discoveryElite_Detail_01.png","http://alve-c.scdn.gr/images/sku_images/000815/815722/discoveryElite_Detail_02.png","http://alve-c.scdn.gr/images/sku_images/000815/815723/discoveryElite_Detail_03.png","http://alve-c.scdn.gr/images/sku_images/000815/815724/discoveryElite_Detail_04.png"]}},{"id":146414,"ean":"","pn":"","name":"Galaxy
-    S4 i9500 16GB","display_name":"Samsung Galaxy S4 i9500 16GB","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":1966.65,"price_min":1206.0,"reviewscore":0.0,"shop_count":36,"plain_spec_summary":"Single
-    SIM, A\u011f Ba\u011flant\u0131s\u0131: 2G / 3G / 4G - LTE, Kamera: 13 Megapiksel,  Ekran:
-    5\", 1920 x 1080 piksel, Kullan\u0131m Y\u00f6ntemi: Dokunmatik ekran (Touch screen),  Dahili
-    Haf\u0131za: 16 GB,  \u0130\u015fletim Sistemi: Android, \u00c7\u0131k\u0131\u015f
-    Tarihi: 2013, Smart Phone","manufacturer_id":36,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://alve-d.scdn.gr/images/sku_main_images/000146/146414/medium_img_relationship_01_phone.png","alternatives":["http://alve-a.scdn.gr/images/sku_images/000146/146255/img_lifecare_02_phone.png","http://alve-c.scdn.gr/images/sku_images/000485/485868/Samsung-Galaxy-S4.jpg","http://alve-d.scdn.gr/images/sku_images/000485/485869/samsung-galaxy-s4-red-blue.jpg","http://alve-c.scdn.gr/images/sku_images/000485/485870/Samsung-Galaxy-S4-Artic-Blu.jpg","http://alve-a.scdn.gr/images/sku_images/000485/485871/Galaxy-S4-black-and-white.jpg"]}},{"id":347349,"ean":"","pn":"MD235D/A","name":"iPhone
-    4s 8GB","display_name":"Apple iPhone 4s 8GB","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":1785.58,"price_min":1117.0,"reviewscore":0.0,"shop_count":22,"plain_spec_summary":"Single
+    Tarihi: 2014, Smart Phone","manufacturer_id":91,"future":false,"reviews_count":1,"virtual":false,"images":{"main":"http://alve-d.scdn.gr/images/sku_main_images/000705/705848/medium_discoveryElite_size.png","alternatives":["http://alve-a.scdn.gr/images/sku_images/000815/815720/discoveryElite_Detail_right.png","http://alve-c.scdn.gr/images/sku_images/000815/815721/discoveryElite_Detail_01.png","http://alve-c.scdn.gr/images/sku_images/000815/815722/discoveryElite_Detail_02.png","http://alve-c.scdn.gr/images/sku_images/000815/815723/discoveryElite_Detail_03.png","http://alve-c.scdn.gr/images/sku_images/000815/815724/discoveryElite_Detail_04.png"]}},{"id":347349,"ean":"","pn":"MD235D/A","name":"iPhone
+    4s 8GB","display_name":"Apple iPhone 4s 8GB","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":1785.58,"price_min":1087.49,"reviewscore":0.0,"shop_count":24,"plain_spec_summary":"Single
     SIM, A\u011f Ba\u011flant\u0131s\u0131: 2G / 3G, Kamera: 8 Megapiksel,  Ekran:
     3.5\", 640 x 960 piksel, Kullan\u0131m Y\u00f6ntemi: Dokunmatik ekran (Touch screen),  Dahili
     Haf\u0131za: 8 GB,  \u0130\u015fletim Sistemi: iOS, \u00c7\u0131k\u0131\u015f
-    Tarihi: 2011, Smart Phone","manufacturer_id":28,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://alve-b.scdn.gr/images/sku_main_images/000347/347349/medium_iphone4-900x900.jpg","alternatives":["http://alve-b.scdn.gr/images/sku_images/000407/407140/16713_12249449_3209.jpg","http://alve-c.scdn.gr/images/sku_images/000407/407141/15743_12249449-7336.jpg","http://alve-a.scdn.gr/images/sku_images/000485/485843/psd-iphone4s-large.jpg","http://alve-b.scdn.gr/images/sku_images/000643/643881/145011470-2-apple_iphone_4s_16_gb_black_akilli_telefon_ar_tek.jpg","http://alve-c.scdn.gr/images/sku_images/000643/643880/iphone-4s-black.png"]}}],"meta":{"pagination":{"total_results":268,"total_pages":90,"page":1,"per":3}}}'
-:created_at: 2014-08-12 12:16:22.549121222 +03:00
+    Tarihi: 2011, Smart Phone","manufacturer_id":28,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://alve-b.scdn.gr/images/sku_main_images/000347/347349/medium_iphone4-900x900.jpg","alternatives":["http://alve-b.scdn.gr/images/sku_images/000407/407140/16713_12249449_3209.jpg","http://alve-c.scdn.gr/images/sku_images/000407/407141/15743_12249449-7336.jpg","http://alve-a.scdn.gr/images/sku_images/000485/485843/psd-iphone4s-large.jpg","http://alve-b.scdn.gr/images/sku_images/000643/643881/145011470-2-apple_iphone_4s_16_gb_black_akilli_telefon_ar_tek.jpg","http://alve-c.scdn.gr/images/sku_images/000643/643880/iphone-4s-black.png"]}},{"id":25285,"ean":"","pn":"MD128DN/A","name":"iPhone
+    4 8GB","display_name":"Apple iPhone 4 8GB","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":1270.77,"price_min":969.0,"reviewscore":0.0,"shop_count":7,"plain_spec_summary":"Single
+    SIM, A\u011f Ba\u011flant\u0131s\u0131: 2G / 3G, Kamera: 5 Megapiksel,  Ekran:
+    3.5\", 640 x 960 piksel, Kullan\u0131m Y\u00f6ntemi: Dokunmatik ekran (Touch screen),  Dahili
+    Haf\u0131za: 8 GB,  \u0130\u015fletim Sistemi: iOS, \u00c7\u0131k\u0131\u015f
+    Tarihi: 2010, Smart Phone","manufacturer_id":28,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://alve-d.scdn.gr/images/sku_main_images/000025/25285/medium_iphone4s.jpg","alternatives":["http://alve-a.scdn.gr/images/sku_images/000025/25851/12741107_6752.jpg","http://alve-d.scdn.gr/images/sku_images/000025/25852/12741107_5068.jpg","http://alve-a.scdn.gr/images/sku_images/000464/464699/iphone-4-240d-800.jpg","http://alve-d.scdn.gr/images/sku_images/000485/485850/iphone4.jpg","http://alve-d.scdn.gr/images/sku_images/000485/485852/12741107_8884.jpg"]}}],"meta":{"pagination":{"total_results":266,"total_pages":89,"page":1,"per":3}}}'
+:created_at: 2014-08-25 17:48:41.799794700 +03:00
 :meta:
   :description: Lists only skus belonging to category specified in path

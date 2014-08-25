@@ -1,9 +1,9 @@
 ---
 :request:
-  :url: http://api.skroutz.gr/api/categories/40/skus?include_meta=applied_filters&filter_ids[]=6282&manufacturer_ids[]=28
+  :url: https://api.skroutz.gr/categories/40/skus?include_meta=applied_filters&filter_ids[]=6282&manufacturer_ids[]=28
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer W5lqBPwCzzX3VoJpnC4NZdimjEiABofdu5aAUG1SjiKO2fUgStTVloVzStT/kO/w6T7lCSmhZE64NWwUxc//rw==
+    :authorization: Bearer Qgq1ofejerxdYPnpOYaT1GRhwRPczj2AnkZFtNi1jrVgchHJib5xL4QkQPJYNWElNoPiOp5VBqsmoq6HgMiEA==
   :params:
     :per: 1
   :verb: GET
@@ -16,25 +16,25 @@
     !binary "c3RhdHVz": 200 OK
     !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
     !binary "Y2FjaGUtY29udHJvbA==": max-age=0, private, must-revalidate
-    !binary "eC1yZXF1ZXN0LWlk": '2573771322'
-    !binary "eC1ydW50aW1l": '0.114859'
+    !binary "eC1yZXF1ZXN0LWlk": '578823028'
+    !binary "eC1ydW50aW1l": '0.102269'
     !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "eC1hcHA=": lunkwill
-    !binary "Y29udGVudC1sZW5ndGg=": '788'
+    !binary "eC1hcHA=": lunkwill_ssl
+    !binary "Y29udGVudC1sZW5ndGg=": '686'
     !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Mon, 11 Aug 2014 14:19:30 GMT
-    !binary "eC12YXJuaXNo": '2573771322'
+    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:44:38 GMT
+    !binary "eC12YXJuaXNo": '578823028'
     !binary "YWdl": '0'
     !binary "dmlh": 1.1 varnish
     !binary "Y29ubmVjdGlvbg==": close
-    !binary "eC1vcmlnaW4=": varnish2
+    !binary "eC1vcmlnaW4=": varnish1
     !binary "eC1jYWNoZQ==": MISS
-  :body: ! '{"skus":[{"id":3508132,"ean":"","pn":"","name":"Galaxy Pocket Neo S5310","display_name":"Samsung
-    Galaxy Pocket Neo S5310","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":99.9,"price_min":50.99,"reviewscore":3.3,"shop_count":14,"plain_spec_summary":"Single
+  :body: ! '{"skus":[{"id":3595964,"ean":"","pn":"GT-S5280","name":"Galaxy Star S5280","display_name":"Samsung
+    Galaxy Star S5280","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":76.4,"price_min":52.95,"reviewscore":3.83333,"shop_count":11,"plain_spec_summary":"Single
     SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
-    2G / 3G, \u039a\u03ac\u03bc\u03b5\u03c1\u03b1: 2 MP,  \u039f\u03b8\u03cc\u03bd\u03b7:
+    2G, \u039a\u03ac\u03bc\u03b5\u03c1\u03b1: 2.0 MP,  \u039f\u03b8\u03cc\u03bd\u03b7:
     3.0\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7: 320 x 240 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2:
     \u039f\u03b8\u03cc\u03bd\u03b7 \u03b1\u03c6\u03ae\u03c2 (Touch screen),  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
     \u039c\u03bd\u03ae\u03bc\u03b7: 4.0 GB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
-    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: Android, SmartPhone","manufacturer_id":28,"future":false,"reviews_count":10,"virtual":false,"images":{"main":"http://b.scdn.gr/images/sku_main_images/003508/3508132/medium_gr_GT-S5310RWACYO_000186410_Front_blue","alternatives":["http://d.scdn.gr/images/sku_images/012917/12917536/gr_GT-S5310RWACYO_000186482_R-Perspective_blue","http://a.scdn.gr/images/sku_images/012917/12917538/gr_GT-S5310RWACYO_000186512_Dynamic_blue","http://d.scdn.gr/images/sku_images/012917/12917539/gr_GT-S5310RWACYO_000186428_Right_blue","http://b.scdn.gr/images/sku_images/012917/12917540/gr_GT-S5310RWACYO_000186419_Back_blue","http://a.scdn.gr/images/sku_images/012917/12917564/gr_GT-S5310RWACYO_001_Front_silver","http://a.scdn.gr/images/sku_images/012917/12917565/gr_GT-S5310RWACYO_005_Dynamic_silver","http://c.scdn.gr/images/sku_images/012917/12917566/gr_GT-S5310RWACYO_002_Back_silver","http://a.scdn.gr/images/sku_images/012917/12917567/gr_GT-S5310RWACYO_000186446_Front_white","http://d.scdn.gr/images/sku_images/012917/12917568/gr_GT-S5310RWACYO_000186532_R-Perspective_white","http://d.scdn.gr/images/sku_images/012917/12917569/gr_GT-S5310RWACYO_000186455_Back_white"]}}],"meta":{"applied_filters":{"filters":[6282],"manufacturers":[28]},"pagination":{"total_results":71,"total_pages":71,"page":1,"per":1}}}'
-:created_at: 2014-08-11 17:19:30.273233853 +03:00
+    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: Android, SmartPhone","manufacturer_id":28,"future":false,"reviews_count":6,"virtual":false,"images":{"main":"http://b.scdn.gr/images/sku_main_images/003595/3595964/medium_samsung-galaxy-star-s5280-3.jpg","alternatives":["http://b.scdn.gr/images/sku_images/010955/10955511/Samsung-Galaxy-Star-S5280_7.jpg","http://a.scdn.gr/images/sku_images/010955/10955523/samsung-galaxy-star-s5280-1.jpg","http://c.scdn.gr/images/sku_images/010955/10955535/Samsung-Galaxy-Star-S5280-500x500.png"]}}],"meta":{"applied_filters":{"filters":[6282],"manufacturers":[28]},"pagination":{"total_results":71,"total_pages":71,"page":1,"per":1}}}'
+:created_at: 2014-08-25 17:44:38.589720575 +03:00

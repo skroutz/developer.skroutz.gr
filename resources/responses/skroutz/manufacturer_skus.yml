@@ -1,9 +1,9 @@
 ---
 :request:
-  :url: http://api.skroutz.gr/api/manufacturers/356/skus
+  :url: https://api.skroutz.gr/manufacturers/356/skus
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer W5lqBPwCzzX3VoJpnC4NZdimjEiABofdu5aAUG1SjiKO2fUgStTVloVzStT/kO/w6T7lCSmhZE64NWwUxc//rw==
+    :authorization: Bearer Qgq1ofejerxdYPnpOYaT1GRhwRPczj2AnkZFtNi1jrVgchHJib5xL4QkQPJYNWElNoPiOp5VBqsmoq6HgMiEA==
   :params:
     :per: 2
   :verb: GET
@@ -14,37 +14,36 @@
     !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
     !binary "dmFyeQ==": Accept-Encoding
     !binary "c3RhdHVz": 200 OK
-    !binary "bGluaw==": <http://api.skroutz.gr/api/manufacturers/356/skus?page=248&per=2>;
-      rel="last", <http://api.skroutz.gr/api/manufacturers/356/skus?page=2&per=2>;
-      rel="next"
+    !binary "bGluaw==": <https://api.skroutz.gr/manufacturers/356/skus?page=309&per=2>;
+      rel="last", <https://api.skroutz.gr/manufacturers/356/skus?page=2&per=2>; rel="next"
     !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
     !binary "Y2FjaGUtY29udHJvbA==": max-age=0, private, must-revalidate
-    !binary "eC1yZXF1ZXN0LWlk": '2573771057'
-    !binary "eC1ydW50aW1l": '0.067543'
+    !binary "eC1yZXF1ZXN0LWlk": '578822356'
+    !binary "eC1ydW50aW1l": '0.079533'
     !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "eC1hcHA=": lunkwill
-    !binary "Y29udGVudC1sZW5ndGg=": '811'
+    !binary "eC1hcHA=": lunkwill_ssl
+    !binary "Y29udGVudC1sZW5ndGg=": '808'
     !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Mon, 11 Aug 2014 14:19:27 GMT
-    !binary "eC12YXJuaXNo": '2573771057'
+    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:44:34 GMT
+    !binary "eC12YXJuaXNo": '578822356'
     !binary "YWdl": '0'
     !binary "dmlh": 1.1 varnish
     !binary "Y29ubmVjdGlvbg==": close
-    !binary "eC1vcmlnaW4=": varnish2
+    !binary "eC1vcmlnaW4=": varnish1
     !binary "eC1jYWNoZQ==": MISS
   :body: ! '{"skus":[{"id":3783654,"ean":"","pn":"","name":"iPhone 5S (16GB)","display_name":"Apple
-    iPhone 5S (16GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":785.62,"price_min":527.97,"reviewscore":4.08219,"shop_count":40,"plain_spec_summary":"Single
+    iPhone 5S (16GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":756.52,"price_min":543.9,"reviewscore":4.06667,"shop_count":40,"plain_spec_summary":"Single
     SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
     4G - LTE / 3G, \u039a\u03ac\u03bc\u03b5\u03c1\u03b1: 8.0 MP,  \u039f\u03b8\u03cc\u03bd\u03b7:
     4.0\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7: 1136 x 640 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2:
     \u039f\u03b8\u03cc\u03bd\u03b7 \u03b1\u03c6\u03ae\u03c2 (Touch screen),  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
     \u039c\u03bd\u03ae\u03bc\u03b7: 16.0 GB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
-    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: iOS, SmartPhone","manufacturer_id":356,"future":false,"reviews_count":73,"virtual":false,"images":{"main":"http://d.scdn.gr/images/sku_main_images/003783/3783654/medium_iphone5s-gallery1-2013.jpg","alternatives":["http://b.scdn.gr/images/sku_images/012176/12176629/iphone5s-gallery2-2013","http://d.scdn.gr/images/sku_images/012176/12176643/iphone5s-gallery3-2013","http://d.scdn.gr/images/sku_images/012176/12176654/iphone5s-gallery5-2013","http://b.scdn.gr/images/sku_images/012176/12176660/iphone5s-gallery6-2013","http://c.scdn.gr/images/sku_images/012176/12176664/iphone5s-gallery8-2013","http://a.scdn.gr/images/sku_images/012279/12279003/iphone5s-gallery4-2013","http://b.scdn.gr/images/sku_images/012279/12279027/iphone5s-gallery1-2013"]}},{"id":3902581,"ean":"","pn":"","name":"iPhone
-    4S (8GB)","display_name":"Apple iPhone 4S (8GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":379.92,"price_min":283.9,"reviewscore":4.85714,"shop_count":39,"plain_spec_summary":"Single
+    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: iOS, SmartPhone","manufacturer_id":356,"future":false,"reviews_count":75,"virtual":false,"images":{"main":"http://d.scdn.gr/images/sku_main_images/003783/3783654/medium_iphone5s-gallery1-2013.jpg","alternatives":["http://b.scdn.gr/images/sku_images/012176/12176629/iphone5s-gallery2-2013","http://d.scdn.gr/images/sku_images/012176/12176643/iphone5s-gallery3-2013","http://d.scdn.gr/images/sku_images/012176/12176654/iphone5s-gallery5-2013","http://b.scdn.gr/images/sku_images/012176/12176660/iphone5s-gallery6-2013","http://c.scdn.gr/images/sku_images/012176/12176664/iphone5s-gallery8-2013","http://a.scdn.gr/images/sku_images/012279/12279003/iphone5s-gallery4-2013","http://b.scdn.gr/images/sku_images/012279/12279027/iphone5s-gallery1-2013"]}},{"id":3902581,"ean":"","pn":"","name":"iPhone
+    4S (8GB)","display_name":"Apple iPhone 4S (8GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":399.0,"price_min":282.0,"reviewscore":4.66667,"shop_count":37,"plain_spec_summary":"Single
     SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
     3G, \u039a\u03ac\u03bc\u03b5\u03c1\u03b1: 8 MP,  \u039f\u03b8\u03cc\u03bd\u03b7:
     3.5\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7: 640 x 960 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2:
     \u039f\u03b8\u03cc\u03bd\u03b7 \u03b1\u03c6\u03ae\u03c2 (Touch screen),  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
     \u039c\u03bd\u03ae\u03bc\u03b7: 8.0 GB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
-    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: iOS, SmartPhone","manufacturer_id":356,"future":false,"reviews_count":14,"virtual":false,"images":{"main":"http://d.scdn.gr/images/sku_main_images/003902/3902581/medium_color_white.jpg","alternatives":["http://c.scdn.gr/images/sku_images/011350/11350754/color_black.jpg"]}}],"meta":{"pagination":{"total_results":495,"total_pages":248,"page":1,"per":2}}}'
-:created_at: 2014-08-11 17:19:27.307000691 +03:00
+    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: iOS, SmartPhone","manufacturer_id":356,"future":false,"reviews_count":15,"virtual":false,"images":{"main":"http://d.scdn.gr/images/sku_main_images/003902/3902581/medium_color_white.jpg","alternatives":["http://c.scdn.gr/images/sku_images/011350/11350754/color_black.jpg"]}}],"meta":{"pagination":{"total_results":617,"total_pages":309,"page":1,"per":2}}}'
+:created_at: 2014-08-25 17:44:34.399310823 +03:00

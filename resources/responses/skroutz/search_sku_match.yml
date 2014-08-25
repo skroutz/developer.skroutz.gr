@@ -1,9 +1,9 @@
 ---
 :request:
-  :url: http://api.skroutz.gr/api/search?nikon+1+j2
+  :url: https://api.skroutz.gr/search?nikon+1+j2
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer W5lqBPwCzzX3VoJpnC4NZdimjEiABofdu5aAUG1SjiKO2fUgStTVloVzStT/kO/w6T7lCSmhZE64NWwUxc//rw==
+    :authorization: Bearer Qgq1ofejerxdYPnpOYaT1GRhwRPczj2AnkZFtNi1jrVgchHJib5xL4QkQPJYNWElNoPiOp5VBqsmoq6HgMiEA==
   :verb: GET
 :response:
   :status: 400
@@ -13,17 +13,17 @@
     !binary "c3RhdHVz": 400 Bad Request
     !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
     !binary "Y2FjaGUtY29udHJvbA==": no-cache
-    !binary "eC1yZXF1ZXN0LWlk": '2573771156'
-    !binary "eC1ydW50aW1l": '0.049645'
-    !binary "eC1hcHA=": lunkwill
-    !binary "Y29udGVudC1sZW5ndGg=": '30'
+    !binary "eC1yZXF1ZXN0LWlk": '578822619'
+    !binary "eC1ydW50aW1l": '0.042718'
+    !binary "eC1hcHA=": lunkwill_ssl
+    !binary "Y29udGVudC1sZW5ndGg=": '55'
     !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Mon, 11 Aug 2014 14:19:28 GMT
-    !binary "eC12YXJuaXNo": '2573771156'
+    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:44:35 GMT
+    !binary "eC12YXJuaXNo": '578822619'
     !binary "YWdl": '0'
     !binary "dmlh": 1.1 varnish
     !binary "Y29ubmVjdGlvbg==": close
-    !binary "eC1vcmlnaW4=": varnish2
+    !binary "eC1vcmlnaW4=": varnish1
     !binary "eC1jYWNoZQ==": MISS
-  :body: ! '{"message":"key not found: q"}'
-:created_at: 2014-08-11 17:19:28.453455416 +03:00
+  :body: ! '{"message":"param is missing or the value is empty: q"}'
+:created_at: 2014-08-25 17:44:35.973341367 +03:00

@@ -1,9 +1,9 @@
 ---
 :request:
-  :url: http://api.alve.com/search?q=a
+  :url: https://api.alve.com/search?q=a
   :headers:
     :accept: application/vnd.alve+json; version=3
-    :authorization: Bearer jRc1LQwgl9wVf6QJT1hTfSL32I7V97Yta5fjEpDUHIDoPox/jRhUTe0K19DamN4NArCAy7tTrUyI8yXRxOVWg==
+    :authorization: Bearer ro3L8/U7wnqmbcjEGfzjTJCJ9J75lq9LbSMcZwuNey8kBoSKpOVPfuRZFYOFUy0rLS//s02U7ZEIigv0mm0oA==
   :verb: GET
 :response:
   :status: 400
@@ -13,17 +13,17 @@
     !binary "c3RhdHVz": 400 Bad Request
     !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
     !binary "Y2FjaGUtY29udHJvbA==": no-cache
-    !binary "eC1yZXF1ZXN0LWlk": '984168090'
-    !binary "eC1ydW50aW1l": '0.020434'
-    !binary "eC1hcHA=": as2
+    !binary "eC1yZXF1ZXN0LWlk": '986354943'
+    !binary "eC1ydW50aW1l": '0.013022'
+    !binary "eC1hcHA=": as2_ssl
     !binary "Y29udGVudC1sZW5ndGg=": '1'
     !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Tue, 12 Aug 2014 09:16:23 GMT
-    !binary "eC12YXJuaXNo": '984168090'
+    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:48:42 GMT
+    !binary "eC12YXJuaXNo": '986354943'
     !binary "YWdl": '0'
     !binary "dmlh": 1.1 varnish
     !binary "Y29ubmVjdGlvbg==": close
     !binary "eC1vcmlnaW4=": varnish1
     !binary "eC1jYWNoZQ==": MISS
   :body: ! ' '
-:created_at: 2014-08-12 12:16:23.175622977 +03:00
+:created_at: 2014-08-25 17:48:42.527814825 +03:00

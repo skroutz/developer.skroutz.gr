@@ -1,9 +1,9 @@
 ---
 :request:
-  :url: http://api.alve.com/categories/33/skus?include_meta=available_filters
+  :url: https://api.alve.com/categories/33/skus?include_meta=available_filters
   :headers:
     :accept: application/vnd.alve+json; version=3
-    :authorization: Bearer jRc1LQwgl9wVf6QJT1hTfSL32I7V97Yta5fjEpDUHIDoPox/jRhUTe0K19DamN4NArCAy7tTrUyI8yXRxOVWg==
+    :authorization: Bearer ro3L8/U7wnqmbcjEGfzjTJCJ9J75lq9LbSMcZwuNey8kBoSKpOVPfuRZFYOFUy0rLS//s02U7ZEIigv0mm0oA==
   :params:
     :per: 1
   :verb: GET
@@ -16,23 +16,23 @@
     !binary "c3RhdHVz": 200 OK
     !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
     !binary "Y2FjaGUtY29udHJvbA==": max-age=0, private, must-revalidate
-    !binary "eC1yZXF1ZXN0LWlk": '984168109'
-    !binary "eC1ydW50aW1l": '0.053596'
+    !binary "eC1yZXF1ZXN0LWlk": '986354965'
+    !binary "eC1ydW50aW1l": '0.046497'
     !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "eC1hcHA=": as2
-    !binary "Y29udGVudC1sZW5ndGg=": '856'
+    !binary "eC1hcHA=": as2_ssl
+    !binary "Y29udGVudC1sZW5ndGg=": '864'
     !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Tue, 12 Aug 2014 09:16:25 GMT
-    !binary "eC12YXJuaXNo": '984168109'
+    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:48:44 GMT
+    !binary "eC12YXJuaXNo": '986354965'
     !binary "YWdl": '0'
     !binary "dmlh": 1.1 varnish
     !binary "Y29ubmVjdGlvbg==": close
     !binary "eC1vcmlnaW4=": varnish1
     !binary "eC1jYWNoZQ==": MISS
   :body: ! '{"skus":[{"id":705848,"ean":"","pn":"","name":"Discovery Elite 32GB","display_name":"General
-    Mobile Discovery Elite 32GB","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":1456.01,"price_min":1177.79,"reviewscore":3.0,"shop_count":23,"plain_spec_summary":"A\u011f
+    Mobile Discovery Elite 32GB","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":1401.83,"price_min":1149.79,"reviewscore":3.0,"shop_count":27,"plain_spec_summary":"A\u011f
     Ba\u011flant\u0131s\u0131: 2G / 3G, Kamera: 16 Megapiksel,  Ekran: 5.5\", 1920
     x 1080 piksel, Kullan\u0131m Y\u00f6ntemi: Dokunmatik ekran (Touch screen),  Dahili
     Haf\u0131za: 32 GB,  \u0130\u015fletim Sistemi: Android, \u00c7\u0131k\u0131\u015f
-    Tarihi: 2014, Smart Phone","manufacturer_id":91,"future":false,"reviews_count":1,"virtual":false,"images":{"main":"http://alve-d.scdn.gr/images/sku_main_images/000705/705848/medium_discoveryElite_size.png","alternatives":["http://alve-a.scdn.gr/images/sku_images/000815/815720/discoveryElite_Detail_right.png","http://alve-c.scdn.gr/images/sku_images/000815/815721/discoveryElite_Detail_01.png","http://alve-c.scdn.gr/images/sku_images/000815/815722/discoveryElite_Detail_02.png","http://alve-c.scdn.gr/images/sku_images/000815/815723/discoveryElite_Detail_03.png","http://alve-c.scdn.gr/images/sku_images/000815/815724/discoveryElite_Detail_04.png"]}}],"meta":{"available_filters":{"filters":{"7994":217,"7995":57,"4837":157,"7997":67,"7991":51,"4836":7,"4806":106,"4808":53,"4809":20,"4801":156,"4805":16,"4802":14,"4828":181,"4829":103,"4830":36,"4833":68,"4832":64,"37655":74,"37656":35,"37653":121,"37654":73,"8012":38,"8013":26,"43149":84,"43148":78,"43150":62,"43151":44},"manufacturers":{"179":63,"36":62,"178":26,"53":23,"30":20,"28":14,"103":12,"1139":9,"91":5,"2244":4,"601":4,"183":4,"39":4,"92":3,"1029":2,"95":2,"44":2,"16":2,"2239":1,"1566":1,"1417":1,"1310":1,"299":1,"153":1,"3":1}},"pagination":{"total_results":268,"total_pages":268,"page":1,"per":1}}}'
-:created_at: 2014-08-12 12:16:25.101822644 +03:00
+    Tarihi: 2014, Smart Phone","manufacturer_id":91,"future":false,"reviews_count":1,"virtual":false,"images":{"main":"http://alve-d.scdn.gr/images/sku_main_images/000705/705848/medium_discoveryElite_size.png","alternatives":["http://alve-a.scdn.gr/images/sku_images/000815/815720/discoveryElite_Detail_right.png","http://alve-c.scdn.gr/images/sku_images/000815/815721/discoveryElite_Detail_01.png","http://alve-c.scdn.gr/images/sku_images/000815/815722/discoveryElite_Detail_02.png","http://alve-c.scdn.gr/images/sku_images/000815/815723/discoveryElite_Detail_03.png","http://alve-c.scdn.gr/images/sku_images/000815/815724/discoveryElite_Detail_04.png"]}}],"meta":{"available_filters":{"filters":{"7994":223,"7995":60,"4837":159,"7997":60,"7991":48,"4836":8,"4806":105,"4808":55,"4809":22,"4801":162,"4805":16,"4802":14,"4828":186,"4829":106,"4830":37,"4833":73,"4832":69,"37655":81,"37656":43,"37653":124,"37654":76,"8012":42,"8013":27,"43149":82,"43148":80,"43150":67,"43151":37},"manufacturers":{"36":61,"179":59,"178":25,"53":23,"30":22,"28":14,"103":11,"1139":9,"91":6,"2244":4,"601":4,"183":4,"39":4,"92":3,"3":3,"1029":2,"95":2,"44":2,"16":2,"2239":1,"1566":1,"1417":1,"1310":1,"299":1,"153":1}},"pagination":{"total_results":266,"total_pages":266,"page":1,"per":1}}}'
+:created_at: 2014-08-25 17:48:44.712102790 +03:00

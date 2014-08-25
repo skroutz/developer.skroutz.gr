@@ -1,9 +1,9 @@
 ---
 :request:
-  :url: http://api.alve.com/favorite_lists
+  :url: https://api.alve.com/favorite_lists
   :headers:
     :accept: application/vnd.alve+json; version=3
-    :authorization: Bearer jRc1LQwgl9wVf6QJT1hTfSL32I7V97Yta5fjEpDUHIDoPox/jRhUTe0K19DamN4NArCAy7tTrUyI8yXRxOVWg==
+    :authorization: Bearer ro3L8/U7wnqmbcjEGfzjTJCJ9J75lq9LbSMcZwuNey8kBoSKpOVPfuRZFYOFUy0rLS//s02U7ZEIigv0mm0oA==
   :verb: GET
 :response:
   :status: 200
@@ -14,14 +14,14 @@
     !binary "c3RhdHVz": 200 OK
     !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
     !binary "Y2FjaGUtY29udHJvbA==": max-age=0, private, must-revalidate
-    !binary "eC1yZXF1ZXN0LWlk": '463125332'
-    !binary "eC1ydW50aW1l": '0.026583'
+    !binary "eC1yZXF1ZXN0LWlk": '465819197'
+    !binary "eC1ydW50aW1l": '0.029462'
     !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "eC1hcHA=": as2
+    !binary "eC1hcHA=": as2_ssl
     !binary "Y29udGVudC1sZW5ndGg=": '158'
     !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Tue, 12 Aug 2014 09:16:24 GMT
-    !binary "eC12YXJuaXNo": '463125332'
+    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:48:44 GMT
+    !binary "eC12YXJuaXNo": '465819197'
     !binary "YWdl": '0'
     !binary "dmlh": 1.1 varnish
     !binary "Y29ubmVjdGlvbg==": close
@@ -29,4 +29,4 @@
     !binary "eC1jYWNoZQ==": MISS
   :body: ! '{"favorite_lists":[{"id":516,"category_id":33,"name":"Cep Telefonu"},{"id":559,"category_id":null,"name":"a
     new list name"}],"meta":{"pagination":{"total_results":2,"total_pages":1,"page":1,"per":25}}}'
-:created_at: 2014-08-12 12:16:24.610979971 +03:00
+:created_at: 2014-08-25 17:48:44.155118802 +03:00

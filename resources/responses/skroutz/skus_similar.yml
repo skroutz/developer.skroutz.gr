@@ -1,9 +1,9 @@
 ---
 :request:
-  :url: http://api.skroutz.gr/api/skus/3034682/similar
+  :url: https://api.skroutz.gr/skus/3034682/similar
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer W5lqBPwCzzX3VoJpnC4NZdimjEiABofdu5aAUG1SjiKO2fUgStTVloVzStT/kO/w6T7lCSmhZE64NWwUxc//rw==
+    :authorization: Bearer Qgq1ofejerxdYPnpOYaT1GRhwRPczj2AnkZFtNi1jrVgchHJib5xL4QkQPJYNWElNoPiOp5VBqsmoq6HgMiEA==
   :verb: GET
 :response:
   :status: 200
@@ -14,47 +14,47 @@
     !binary "c3RhdHVz": 200 OK
     !binary "Y2FjaGUtY29udHJvbA==": max-age=300, private
     !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
-    !binary "eC1yZXF1ZXN0LWlk": '2573771194'
-    !binary "eC1ydW50aW1l": '0.107168'
+    !binary "eC1yZXF1ZXN0LWlk": '578822706'
+    !binary "eC1ydW50aW1l": '0.079332'
     !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "eC1hcHA=": lunkwill
-    !binary "Y29udGVudC1sZW5ndGg=": '1491'
+    !binary "eC1hcHA=": lunkwill_ssl
+    !binary "Y29udGVudC1sZW5ndGg=": '1502'
     !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Mon, 11 Aug 2014 14:19:28 GMT
-    !binary "eC12YXJuaXNo": '2573771194'
+    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:44:36 GMT
+    !binary "eC12YXJuaXNo": '578822706'
     !binary "YWdl": '0'
     !binary "dmlh": 1.1 varnish
     !binary "Y29ubmVjdGlvbg==": close
-    !binary "eC1vcmlnaW4=": varnish2
+    !binary "eC1vcmlnaW4=": varnish1
     !binary "eC1jYWNoZQ==": MISS
-  :body: ! '{"skus":[{"id":4503613,"ean":"","pn":"","name":"Galaxy S5 (16GB)","display_name":"Samsung
-    Galaxy S5 (16GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":759.0,"price_min":451.7,"reviewscore":3.89091,"shop_count":50,"plain_spec_summary":"Single
+  :body: ! '{"skus":[{"id":4503613,"ean":"","pn":"G900F","name":"Galaxy S5 (16GB)","display_name":"Samsung
+    Galaxy S5 (16GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":759.0,"price_min":451.0,"reviewscore":3.92982,"shop_count":41,"plain_spec_summary":"Single
     SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
     4G - LTE / 3G, \u039a\u03ac\u03bc\u03b5\u03c1\u03b1: 16 MP,  \u039f\u03b8\u03cc\u03bd\u03b7:
     5.1\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7: 1920 x 1080 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2:
     \u039f\u03b8\u03cc\u03bd\u03b7 \u03b1\u03c6\u03ae\u03c2 (Touch screen),  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
     \u039c\u03bd\u03ae\u03bc\u03b7: 16 GB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
-    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: Android, SmartPhone","manufacturer_id":28,"future":false,"reviews_count":55,"virtual":false,"images":{"main":"http://d.scdn.gr/images/sku_main_images/004503/4503613/medium_1978590_676086919123071_850436902_o.jpg","alternatives":["http://c.scdn.gr/images/sku_images/012275/12275390/1909147_676086882456408_1612656443_o.jpg","http://b.scdn.gr/images/sku_images/012275/12275391/1890569_676086962456400_1440904672_o.jpg","http://b.scdn.gr/images/sku_images/012275/12275392/1602080_676086979123065_1627135353_o.jpg","http://b.scdn.gr/images/sku_images/012275/12275393/1973543_676087052456391_1928826321_o.jpg","http://b.scdn.gr/images/sku_images/012275/12275394/1493371_676087075789722_953348465_o.jpg","http://d.scdn.gr/images/sku_images/012275/12275396/1941344_676087145789715_1041600059_o.jpg","http://b.scdn.gr/images/sku_images/012275/12275397/1601995_676087295789700_1201107293_o.jpg","http://c.scdn.gr/images/sku_images/012275/12275401/1941601_676087385789691_49768826_o.jpg","http://b.scdn.gr/images/sku_images/012275/12275402/1965633_676087505789679_1789703906_o.jpg","http://d.scdn.gr/images/sku_images/012275/12275403/1957850_676087535789676_1111881594_o.jpg","http://a.scdn.gr/images/sku_images/012275/12275406/1655505_676087569123006_588120090_o.jpg","http://c.scdn.gr/images/sku_images/012275/12275407/1801194_676087752456321_1892287034_o.jpg"]}},{"id":1828505,"ean":"","pn":"I9300
+    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: Android, SmartPhone","manufacturer_id":28,"future":false,"reviews_count":57,"virtual":false,"images":{"main":"http://d.scdn.gr/images/sku_main_images/004503/4503613/medium_1978590_676086919123071_850436902_o.jpg","alternatives":["http://c.scdn.gr/images/sku_images/012275/12275390/1909147_676086882456408_1612656443_o.jpg","http://b.scdn.gr/images/sku_images/012275/12275391/1890569_676086962456400_1440904672_o.jpg","http://b.scdn.gr/images/sku_images/012275/12275392/1602080_676086979123065_1627135353_o.jpg","http://b.scdn.gr/images/sku_images/012275/12275393/1973543_676087052456391_1928826321_o.jpg","http://b.scdn.gr/images/sku_images/012275/12275394/1493371_676087075789722_953348465_o.jpg","http://d.scdn.gr/images/sku_images/012275/12275396/1941344_676087145789715_1041600059_o.jpg","http://b.scdn.gr/images/sku_images/012275/12275397/1601995_676087295789700_1201107293_o.jpg","http://c.scdn.gr/images/sku_images/012275/12275401/1941601_676087385789691_49768826_o.jpg","http://b.scdn.gr/images/sku_images/012275/12275402/1965633_676087505789679_1789703906_o.jpg","http://d.scdn.gr/images/sku_images/012275/12275403/1957850_676087535789676_1111881594_o.jpg","http://a.scdn.gr/images/sku_images/012275/12275406/1655505_676087569123006_588120090_o.jpg","http://c.scdn.gr/images/sku_images/012275/12275407/1801194_676087752456321_1892287034_o.jpg"]}},{"id":1828505,"ean":"","pn":"I9300
     16GB","name":"Galaxy S III i9300 16GB","display_name":"Samsung Galaxy S III i9300
-    16GB","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":321.0,"price_min":225.0,"reviewscore":4.4,"shop_count":37,"plain_spec_summary":"Single
+    16GB","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":369.0,"price_min":233.99,"reviewscore":4.36628,"shop_count":37,"plain_spec_summary":"Single
     SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
     3G, \u039a\u03ac\u03bc\u03b5\u03c1\u03b1: 8 MP,  \u039f\u03b8\u03cc\u03bd\u03b7:
     4.8\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7: 1280 x 720 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2:
     \u039f\u03b8\u03cc\u03bd\u03b7 \u03b1\u03c6\u03ae\u03c2 (Touch screen),  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
     \u039c\u03bd\u03ae\u03bc\u03b7: 16.0 GB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
-    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: Android, SmartPhone","manufacturer_id":28,"future":false,"reviews_count":170,"virtual":false,"images":{"main":"http://d.scdn.gr/images/sku_main_images/001828/1828505/medium_samsung-i9300-galaxy-s-iii-1.jpg","alternatives":["http://c.scdn.gr/images/sku_images/000893/893169/samsung-i9300-galaxy-s-iii-glossy-white.jpg","http://c.scdn.gr/images/sku_images/001310/1310690/samsung-i9300-galaxy-s-iii-ofic.jpg","http://a.scdn.gr/images/sku_images/006421/6421796/samsung-galaxy-s3-red1.jpg","http://a.scdn.gr/images/sku_images/006421/6421840/Samsung-Galaxy-S3-in-Sapphire-black.jpg","http://d.scdn.gr/images/sku_images/006422/6422140/samsung-i9300-galaxy-s-iii-amber-brown-garnet-red-sapphire-black-titanium-grey.jpg"]}},{"id":3385582,"ean":"","pn":"GT-i9195","name":"Galaxy
-    S4 mini i9195 LTE (8GB)","display_name":"Samsung Galaxy S4 mini i9195 LTE (8GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":410.0,"price_min":223.5,"reviewscore":4.40541,"shop_count":48,"plain_spec_summary":"Single
+    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: Android, SmartPhone","manufacturer_id":28,"future":false,"reviews_count":172,"virtual":false,"images":{"main":"http://d.scdn.gr/images/sku_main_images/001828/1828505/medium_samsung-i9300-galaxy-s-iii-1.jpg","alternatives":["http://c.scdn.gr/images/sku_images/000893/893169/samsung-i9300-galaxy-s-iii-glossy-white.jpg","http://c.scdn.gr/images/sku_images/001310/1310690/samsung-i9300-galaxy-s-iii-ofic.jpg","http://a.scdn.gr/images/sku_images/006421/6421796/samsung-galaxy-s3-red1.jpg","http://a.scdn.gr/images/sku_images/006421/6421840/Samsung-Galaxy-S3-in-Sapphire-black.jpg","http://d.scdn.gr/images/sku_images/006422/6422140/samsung-i9300-galaxy-s-iii-amber-brown-garnet-red-sapphire-black-titanium-grey.jpg"]}},{"id":3385582,"ean":"","pn":"GT-i9195","name":"Galaxy
+    S4 mini i9195 LTE (8GB)","display_name":"Samsung Galaxy S4 mini i9195 LTE (8GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":410.0,"price_min":233.0,"reviewscore":4.35526,"shop_count":49,"plain_spec_summary":"Single
     SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
     4G - LTE / 3G, \u039a\u03ac\u03bc\u03b5\u03c1\u03b1: 8 MP,  \u039f\u03b8\u03cc\u03bd\u03b7:
     4.3\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7: 960 x 540 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2:
     \u039f\u03b8\u03cc\u03bd\u03b7 \u03b1\u03c6\u03ae\u03c2 (Touch screen),  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
     \u039c\u03bd\u03ae\u03bc\u03b7: 8.0 GB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
-    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: Android, SmartPhone","manufacturer_id":28,"future":false,"reviews_count":74,"virtual":false,"images":{"main":"http://b.scdn.gr/images/sku_main_images/003385/3385582/medium_samsung-galaxy-s4-mini-I9190-1.jpg","alternatives":["http://b.scdn.gr/images/sku_images/009800/9800358/samsung-galaxy-s4-mini-I9190-2.jpg","http://a.scdn.gr/images/sku_images/009800/9800359/samsung-galaxy-s4-mini-I9190-3.jpg"]}},{"id":4771538,"ean":"","pn":"GT-I9506","name":"Galaxy
-    S4 I9506 (16GB)","display_name":"Samsung Galaxy S4 I9506 (16GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":373.9,"price_min":369.0,"reviewscore":4.9375,"shop_count":6,"plain_spec_summary":"Single
+    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: Android, SmartPhone","manufacturer_id":28,"future":false,"reviews_count":76,"virtual":false,"images":{"main":"http://b.scdn.gr/images/sku_main_images/003385/3385582/medium_samsung-galaxy-s4-mini-I9190-1.jpg","alternatives":["http://b.scdn.gr/images/sku_images/009800/9800358/samsung-galaxy-s4-mini-I9190-2.jpg","http://a.scdn.gr/images/sku_images/009800/9800359/samsung-galaxy-s4-mini-I9190-3.jpg"]}},{"id":4771538,"ean":"","pn":"GT-I9506","name":"Galaxy
+    S4 I9506 (16GB)","display_name":"Samsung Galaxy S4 I9506 (16GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":461.9,"price_min":363.99,"reviewscore":4.9375,"shop_count":4,"plain_spec_summary":"Single
     SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
     4G - LTE / 3G, \u039a\u03ac\u03bc\u03b5\u03c1\u03b1: 13.0 MP,  \u039f\u03b8\u03cc\u03bd\u03b7:
     5.0\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7: 1920 x 1080 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2:
     \u039f\u03b8\u03cc\u03bd\u03b7 \u03b1\u03c6\u03ae\u03c2 (Touch screen),  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
     \u039c\u03bd\u03ae\u03bc\u03b7: 16.0 GB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
     \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: Android, SmartPhone","manufacturer_id":28,"future":false,"reviews_count":16,"virtual":false,"images":{"main":"http://d.scdn.gr/images/sku_main_images/004771/4771538/medium_41vUWWt4yaL.jpg","alternatives":["http://d.scdn.gr/images/sku_images/012665/12665468/sg_GT-I9506ZWAXSP_004_3000x2000_black_10039304073444","http://b.scdn.gr/images/sku_images/012665/12665469/sg_GT-I9506ZWAXSP_005_3000x2000_black","http://d.scdn.gr/images/sku_images/012665/12665470/41SarYgCveL.jpg","http://b.scdn.gr/images/sku_images/012665/12665471/41lrOZa6QVL.jpg","http://d.scdn.gr/images/sku_images/012665/12665472/51hHep39pOL.jpg"]}}],"meta":{"pagination":{"total_results":4,"total_pages":1,"page":1,"per":25}}}'
-:created_at: 2014-08-11 17:19:28.962315986 +03:00
+:created_at: 2014-08-25 17:44:36.484382472 +03:00

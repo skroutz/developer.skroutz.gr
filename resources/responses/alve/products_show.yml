@@ -1,9 +1,9 @@
 ---
 :request:
-  :url: http://api.alve.com/products/1135844
+  :url: https://api.alve.com/products/1135844
   :headers:
     :accept: application/vnd.alve+json; version=3
-    :authorization: Bearer jRc1LQwgl9wVf6QJT1hTfSL32I7V97Yta5fjEpDUHIDoPox/jRhUTe0K19DamN4NArCAy7tTrUyI8yXRxOVWg==
+    :authorization: Bearer ro3L8/U7wnqmbcjEGfzjTJCJ9J75lq9LbSMcZwuNey8kBoSKpOVPfuRZFYOFUy0rLS//s02U7ZEIigv0mm0oA==
   :verb: GET
 :response:
   :status: 200
@@ -14,19 +14,19 @@
     !binary "c3RhdHVz": 200 OK
     !binary "Y2FjaGUtY29udHJvbA==": max-age=300, private
     !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
-    !binary "eC1yZXF1ZXN0LWlk": '984168102'
-    !binary "eC1ydW50aW1l": '0.032219'
+    !binary "eC1yZXF1ZXN0LWlk": '986354957'
+    !binary "eC1ydW50aW1l": '0.023173'
     !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "eC1hcHA=": as2
+    !binary "eC1hcHA=": as2_ssl
     !binary "Y29udGVudC1sZW5ndGg=": '243'
     !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Tue, 12 Aug 2014 09:16:24 GMT
-    !binary "eC12YXJuaXNo": '984168102'
+    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:48:43 GMT
+    !binary "eC12YXJuaXNo": '986354957'
     !binary "YWdl": '0'
     !binary "dmlh": 1.1 varnish
     !binary "Y29ubmVjdGlvbg==": close
     !binary "eC1vcmlnaW4=": varnish1
     !binary "eC1jYWNoZQ==": MISS
   :body: ! '{"product":{"id":1135844,"name":"Samsung Galaxy S4 / i9500 16 Gb Siyah
-    Cep Telefonu","sku_id":146414,"shop_id":77,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/1135844?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1206.0}}'
-:created_at: 2014-08-12 12:16:24.216509958 +03:00
+    Cep Telefonu","sku_id":146414,"shop_id":77,"category_id":33,"availability":null,"click_url":"https://www.alve.com/products/show/1135844?client_id=Bn9IVZbjL27QolcUwH1gA%3D%3D&from=api","price":1152.0}}'
+:created_at: 2014-08-25 17:48:43.790881128 +03:00

@@ -1,9 +1,9 @@
 ---
 :request:
-  :url: http://api.skroutz.gr/api/categories/1442
+  :url: https://api.skroutz.gr/categories/1442
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer W5lqBPwCzzX3VoJpnC4NZdimjEiABofdu5aAUG1SjiKO2fUgStTVloVzStT/kO/w6T7lCSmhZE64NWwUxc//rw==
+    :authorization: Bearer Qgq1ofejerxdYPnpOYaT1GRhwRPczj2AnkZFtNi1jrVgchHJib5xL4QkQPJYNWElNoPiOp5VBqsmoq6HgMiEA==
   :verb: GET
 :response:
   :status: 200
@@ -14,19 +14,19 @@
     !binary "c3RhdHVz": 200 OK
     !binary "Y2FjaGUtY29udHJvbA==": max-age=300, private
     !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
-    !binary "eC1yZXF1ZXN0LWlk": '464665934'
-    !binary "eC1ydW50aW1l": '0.044999'
+    !binary "eC1yZXF1ZXN0LWlk": '2651981107'
+    !binary "eC1ydW50aW1l": '0.054708'
     !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "eC1hcHA=": lunkwill
+    !binary "eC1hcHA=": lunkwill_ssl
     !binary "Y29udGVudC1sZW5ndGg=": '244'
     !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Mon, 11 Aug 2014 14:19:26 GMT
-    !binary "eC12YXJuaXNo": '464665934'
+    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:44:32 GMT
+    !binary "eC12YXJuaXNo": '2651981107'
     !binary "YWdl": '0'
     !binary "dmlh": 1.1 varnish
     !binary "Y29ubmVjdGlvbg==": close
-    !binary "eC1vcmlnaW4=": varnish1
+    !binary "eC1vcmlnaW4=": varnish2
     !binary "eC1jYWNoZQ==": MISS
   :body: ! '{"category":{"id":1442,"name":"\u039e\u03b1\u03c0\u03bb\u03ce\u03c3\u03c4\u03c1\u03b5\u03c2
     \u039a\u03ae\u03c0\u03bf\u03c5 & \u0392\u03b5\u03c1\u03ac\u03bd\u03c4\u03b1\u03c2","children_count":0,"image_url":"http://b.scdn.gr/images/categories/large/1442.jpg","parent_id":1434,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"}}'
-:created_at: 2014-08-11 17:19:26.170883322 +03:00
+:created_at: 2014-08-25 17:44:32.887075423 +03:00

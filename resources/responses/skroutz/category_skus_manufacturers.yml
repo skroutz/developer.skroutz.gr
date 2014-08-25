@@ -1,9 +1,9 @@
 ---
 :request:
-  :url: http://api.skroutz.gr/api/categories/40/skus?manufacturer_ids[]=28&manufacturer_ids[]=2
+  :url: https://api.skroutz.gr/categories/40/skus?manufacturer_ids[]=28&manufacturer_ids[]=2
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer W5lqBPwCzzX3VoJpnC4NZdimjEiABofdu5aAUG1SjiKO2fUgStTVloVzStT/kO/w6T7lCSmhZE64NWwUxc//rw==
+    :authorization: Bearer Qgq1ofejerxdYPnpOYaT1GRhwRPczj2AnkZFtNi1jrVgchHJib5xL4QkQPJYNWElNoPiOp5VBqsmoq6HgMiEA==
   :params:
     :per: 4
   :verb: GET
@@ -16,21 +16,21 @@
     !binary "c3RhdHVz": 200 OK
     !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
     !binary "Y2FjaGUtY29udHJvbA==": max-age=0, private, must-revalidate
-    !binary "eC1yZXF1ZXN0LWlk": '2573771291'
-    !binary "eC1ydW50aW1l": '0.082600'
+    !binary "eC1yZXF1ZXN0LWlk": '578822954'
+    !binary "eC1ydW50aW1l": '0.130782'
     !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "eC1hcHA=": lunkwill
-    !binary "Y29udGVudC1sZW5ndGg=": '964'
+    !binary "eC1hcHA=": lunkwill_ssl
+    !binary "Y29udGVudC1sZW5ndGg=": '1137'
     !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Mon, 11 Aug 2014 14:19:29 GMT
-    !binary "eC12YXJuaXNo": '2573771291'
+    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:44:38 GMT
+    !binary "eC12YXJuaXNo": '578822954'
     !binary "YWdl": '0'
     !binary "dmlh": 1.1 varnish
     !binary "Y29ubmVjdGlvbg==": close
-    !binary "eC1vcmlnaW4=": varnish2
+    !binary "eC1vcmlnaW4=": varnish1
     !binary "eC1jYWNoZQ==": MISS
   :body: ! '{"skus":[{"id":2119391,"ean":"","pn":"GT-E1200","name":"E1200","display_name":"Samsung
-    E1200","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":24.0,"price_min":13.82,"reviewscore":4.0,"shop_count":16,"plain_spec_summary":"Single
+    E1200","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":32.2,"price_min":13.82,"reviewscore":4.0,"shop_count":15,"plain_spec_summary":"Single
     SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
     2G,   \u039f\u03b8\u03cc\u03bd\u03b7: 1.52\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7:
     128 x 128 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2: \u03a6\u03c5\u03c3\u03b9\u03ba\u03cc
@@ -42,20 +42,21 @@
     2G,   \u039f\u03b8\u03cc\u03bd\u03b7: 1.52\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7:
     128 x 128 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2: \u03a6\u03c5\u03c3\u03b9\u03ba\u03cc
     \u03a0\u03bb\u03b7\u03ba\u03c4\u03c1\u03bf\u03bb\u03cc\u03b3\u03b9\u03bf,  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
+    \u039c\u03bd\u03ae\u03bc\u03b7: 16 GB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
+    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: N/A, Feature Phone","manufacturer_id":28,"future":false,"reviews_count":3,"virtual":false,"images":{"main":"http://a.scdn.gr/images/sku_main_images/000274/274886/medium_Samsung-E1170-Unlocked-_-www.1stMobile.co_.uk-2C.jpg","alternatives":["http://b.scdn.gr/images/sku_images/013437/13437048/39773.samsung-e1170.jpg"]}},{"id":328970,"ean":"","pn":"E1050","name":"E1050","display_name":"Samsung
+    E1050","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":33.4,"price_min":19.9,"reviewscore":3.22222,"shop_count":5,"plain_spec_summary":"Single
+    SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
+    2G,   \u039f\u03b8\u03cc\u03bd\u03b7: 1.43\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7:
+    128 x 128 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2: \u03a6\u03c5\u03c3\u03b9\u03ba\u03cc
+    \u03a0\u03bb\u03b7\u03ba\u03c4\u03c1\u03bf\u03bb\u03cc\u03b3\u03b9\u03bf,    \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
+    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: N/A, Feature Phone","manufacturer_id":28,"future":false,"reviews_count":9,"virtual":false,"images":{"main":"http://a.scdn.gr/images/sku_main_images/000328/328970/medium_sku_picture_5c590d.jpg.jpg","alternatives":["http://d.scdn.gr/images/sku_images/000027/27521/sku_picture_7f327b.jpg.jpg","http://c.scdn.gr/images/sku_images/000027/27523/sku_picture_1607d7.jpg.jpg"]}},{"id":3967621,"ean":"","pn":"GT-E1270","name":"E1270","display_name":"Samsung
+    E1270","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":41.82,"price_min":22.83,"reviewscore":5.0,"shop_count":21,"plain_spec_summary":"Single
+    SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
+    2G,   \u039f\u03b8\u03cc\u03bd\u03b7: 1.77\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7:
+    160 x 128 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2: \u03a6\u03c5\u03c3\u03b9\u03ba\u03cc
+    \u03a0\u03bb\u03b7\u03ba\u03c4\u03c1\u03bf\u03bb\u03cc\u03b3\u03b9\u03bf,  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
     \u039c\u03bd\u03ae\u03bc\u03b7: 0 GB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
-    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: N/A, Feature Phone","manufacturer_id":28,"future":false,"reviews_count":3,"virtual":false,"images":{"main":"http://a.scdn.gr/images/sku_main_images/000274/274886/medium_36ce55233947918ef8fd6e73ce198340.jpg.jpg","alternatives":[]}},{"id":328970,"ean":"","pn":"E1050","name":"E1050","display_name":"Samsung
-    E1050","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":25.2,"price_min":19.9,"reviewscore":3.22222,"shop_count":4,"plain_spec_summary":"Single
-    SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
-    2G,   \u039f\u03b8\u03cc\u03bd\u03b7: 1.43\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7:
-    128 x 128 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2: \u03a6\u03c5\u03c3\u03b9\u03ba\u03cc
-    \u03a0\u03bb\u03b7\u03ba\u03c4\u03c1\u03bf\u03bb\u03cc\u03b3\u03b9\u03bf,    \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
-    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: N/A, Feature Phone","manufacturer_id":28,"future":false,"reviews_count":9,"virtual":false,"images":{"main":"http://a.scdn.gr/images/sku_main_images/000328/328970/medium_sku_picture_5c590d.jpg.jpg","alternatives":["http://d.scdn.gr/images/sku_images/000027/27521/sku_picture_7f327b.jpg.jpg","http://c.scdn.gr/images/sku_images/000027/27523/sku_picture_1607d7.jpg.jpg"]}},{"id":350551,"ean":"","pn":"E1190","name":"E1190","display_name":"Samsung
-    E1190","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":34.9,"price_min":23.37,"reviewscore":4.33333,"shop_count":5,"plain_spec_summary":"Single
-    SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
-    2G,   \u039f\u03b8\u03cc\u03bd\u03b7: 1.43\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7:
-    128 x 128 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2: \u03a6\u03c5\u03c3\u03b9\u03ba\u03cc
-    \u03a0\u03bb\u03b7\u03ba\u03c4\u03c1\u03bf\u03bb\u03cc\u03b3\u03b9\u03bf,    \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
-    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: N/A, Feature Phone","manufacturer_id":28,"future":false,"reviews_count":3,"virtual":false,"images":{"main":"http://b.scdn.gr/images/sku_main_images/000350/350551/medium_sku_picture_30dc2e.jpg.jpg","alternatives":[]}}],"meta":{"pagination":{"total_results":122,"total_pages":31,"page":1,"per":4}}}'
-:created_at: 2014-08-11 17:19:29.858990590 +03:00
+    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: N/A, Feature Phone","manufacturer_id":28,"future":false,"reviews_count":1,"virtual":false,"images":{"main":"http://a.scdn.gr/images/sku_main_images/003967/3967621/medium_e1270-black-4391e26073eb2f1d10ac82ff02a6a49b.jpg","alternatives":["http://c.scdn.gr/images/sku_images/011439/11439215/samsunggt-e1270rd1.jpg","http://b.scdn.gr/images/sku_images/011439/11439216/samsunggt-e1270bk1.jpg","http://d.scdn.gr/images/sku_images/011439/11439218/de_GT-E1270GRADBT_000195046_Front-Open_white","http://b.scdn.gr/images/sku_images/011439/11439219/IS199334.jpg","http://b.scdn.gr/images/sku_images/011610/11610016/de_GT-E1270GRADBT_001_Front_white"]}}],"meta":{"pagination":{"total_results":121,"total_pages":31,"page":1,"per":4}}}'
+:created_at: 2014-08-25 17:44:38.124483309 +03:00
 :meta:
   :description: Lists skus filtered by manufacturers.

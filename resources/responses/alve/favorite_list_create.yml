@@ -1,10 +1,10 @@
 ---
 :request:
   :verb: POST
-  :url: http://api.alve.com/favorite_lists
+  :url: https://api.alve.com/favorite_lists
   :headers:
     :accept: application/vnd.alve+json; version=3
-    :authorization: Bearer jRc1LQwgl9wVf6QJT1hTfSL32I7V97Yta5fjEpDUHIDoPox/jRhUTe0K19DamN4NArCAy7tTrUyI8yXRxOVWg==
+    :authorization: Bearer ro3L8/U7wnqmbcjEGfzjTJCJ9J75lq9LbSMcZwuNey8kBoSKpOVPfuRZFYOFUy0rLS//s02U7ZEIigv0mm0oA==
   :params:
     :favorite_list[name]: a new list name
 :response:
@@ -17,18 +17,18 @@
     !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
     etag: ! '"0d634a4b9b17f1d7a8e87f19436af534"'
     !binary "Y2FjaGUtY29udHJvbA==": max-age=0, private, must-revalidate
-    !binary "eC1yZXF1ZXN0LWlk": '984168105'
-    !binary "eC1ydW50aW1l": '0.036136'
+    !binary "eC1yZXF1ZXN0LWlk": '986354960'
+    !binary "eC1ydW50aW1l": '0.037561'
     !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "eC1hcHA=": as2
+    !binary "eC1hcHA=": as2_ssl
     !binary "Y29udGVudC1sZW5ndGg=": '70'
     !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Tue, 12 Aug 2014 09:16:24 GMT
-    !binary "eC12YXJuaXNo": '984168105'
+    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:48:44 GMT
+    !binary "eC12YXJuaXNo": '986354960'
     !binary "YWdl": '0'
     !binary "dmlh": 1.1 varnish
     !binary "Y29ubmVjdGlvbg==": close
     !binary "eC1vcmlnaW4=": varnish1
     !binary "eC1jYWNoZQ==": MISS
   :body: ! '{"errors":{"name":["Bu isim ile zaten bir liste bulunmaktad\u0131r"]}}'
-:created_at: 2014-08-12 12:16:24.689671920 +03:00
+:created_at: 2014-08-25 17:48:44.228786576 +03:00
