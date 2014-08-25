@@ -14,6 +14,17 @@ protocol.
 
 <%= partial 'partials/toc' %>
 
+## About OAuth2.0
+
+We leverage the [OAuth2.0](http://oauth.net/2/) protocol to enable selected
+external applications get authorization for a User's private information from
+<%= settings.site_name.capitalize %> account without requesting their
+<%= settings.site_name.capitalize %> credentials.
+
+The benefit of using OAuth2.0 is that our users can feel secure as their
+credentials won't have to be exposed to third parties in order to grant access
+to privileged user owned resources.
+
 ## Quick Start
 
 Before you begin the authorization process make sure you have obtained a valid 
@@ -48,14 +59,3 @@ You may then proceed performing the request using the following snippet:
 You will get the following response:
 
 <%= render_recording :search_manufacturer_match %>
-
-## About OAuth2.0
-
-We leverage the [OAuth2.0](http://oauth.net/2/) protocol to enable selected
-external applications get authorization for a User's private information from
-<%= settings.site_name.capitalize %> account without requesting their
-<%= settings.site_name.capitalize %> credentials.
-
-The benefit of using OAuth2.0 is that our users can feel secure as their
-credentials won't have to be exposed to third parties in order to grant access
-to privileged user owned resources.
