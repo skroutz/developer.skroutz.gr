@@ -78,40 +78,22 @@ To παρόν έχει σαν σκοπό να περιγράψει την δομ
   </p>
 </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Όνομα</th>
-      <th>Τύπος</th>
-      <th>Μέγιστο Μήκος</th>
-      <th>Υποχρεωτικό</th>
-      <th>Παράδειγμα</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% settings.feedspec.each do |field| %>
-      <tr>
-        <td>
-          <a href="#<%= field[:name].downcase.gsub('/', '').gsub(/\s+/, '-') %>">
-            <%= field[:name] %>
-          </a>
-        </td>
-        <td><%= field[:type] %></td>
-        <td class="mono"><%= field[:max] %></td>
-        <td><%= t("feedspec_data.#{field[:required]}".to_sym) %></td>
-        <td>
-          <code>
-          <% if field[:i18n].present? %>
-            <%= t("feedspec_data.#{field[:example]}".to_sym) %>
-          <% else %>
-            <%= field[:example] %>
-          <% end %>
-          </code>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+Όνομα                            | Τύπος   | Μέγιστο Μήκος                  | Υποχρεωτικό | Παράδειγμα
+-------------------------------- | ------- | ------------------------------ | ----------- | ------------------------------------------
+[Unique ID](#unique-id)          | String  | <span class="mono">200</span>  | Ναι         | `322`
+[Name](#name)                    | String  | <span class="mono">300</span>  | Ναι         | `Samsung Galaxy S4 16GB`
+[Product Link](#product-link)    | String  | <span class="mono">1000</span> | Ναι         | `http://www.someurl.com/products/322.html`
+[Image Link](#image-link)        | String  | <span class="mono">400</span>  | Ναι         | `http://www.someurl.com/images/322.jpg`
+[Category Name](#category-name)  | String  | <span class="mono">250</span>  | Ναι         | `Κινητά τηλέφωνα`
+[Price](#price)                  | Decimal | <span class="mono">-</span>    | Ναι         | `23.22`
+[InStock](#instock)              | List    | <span class="mono">-</span>    | Ναι         | `Y`
+[Availability](#availability)    | String  | <span class="mono">60</span>   | Ναι         | `Σε 2 μέρες`
+[Manufacturer](#manufacturer)    | String  | <span class="mono">100</span>  | Ναι         | `Samsung`
+[MPN / ISBN](#mpn-isbn)          | String  | <span class="mono">80</span>   | Ναι         | `GF322234`
+[Size](#size)                    | String  | <span class="mono">500</span>  | Όχι*        | `36,37,38 1/2,40,44`
+[Shipping Costs](#shipping-costs)| Decimal | <span class="mono">-</span>    | Όχι         | `3.22`
+[Color](#color)                  | String  | <span class="mono">100</span>  | Όχι         | `Μαύρο`
+
 <small>* Υποχρεωτικό για τις κατηγορίες μόδας όπου υπάρχουν νούμερα</small>
 
 

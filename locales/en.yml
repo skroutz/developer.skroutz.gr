@@ -60,14 +60,6 @@ en:
       short_description: 'Display live product information in your website using our widgets.'
       overview: ''
 
-  feedspec_data:
-    black: 'Black'
-    in_two_days: 'In 2 days'
-    mobile_phones: 'Mobile phones'
-    !!str no: 'No'
-    no_asterisk: 'No*'
-    !!str yes: 'Yes'
-
   lang:
     el: 'Ελληνικά'
     en: 'English'
