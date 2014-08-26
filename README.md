@@ -13,7 +13,8 @@ The following steps will get you started
 * Submit pull request
 
 If you have deploy rights you may:
-* `FLAVOR=alve bundle exec rake deploy`    # deploy changes
+* `bundle exec cap "flavor" deploy`    # deploy changes
+where "flavor" is one of skroutz, alve, scrooge
 
 [middleman]: http://middlemanapp.com/
 
@@ -63,7 +64,8 @@ mail at [api@skroutz.gr](api@skroutz.gr) to get it.
 ## Deploy
 
 ```bash
-  FLAVOR=alve rake deploy
+bundle exec cap "flavor" deploy
+# "flavor" is one of skroutz, alve, scrooge
 ```
 
 ## License
