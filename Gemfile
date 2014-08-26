@@ -12,6 +12,7 @@ gem 'response_mate', '~> 0.3.1'
 
 # Deployments
 gem 'capistrano', '~> 3.2.1', require: false
+gem 'therubyracer', '~> 0.12.1'
 
 # Debug Tools
 gem 'awesome_print'
