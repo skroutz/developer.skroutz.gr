@@ -24,7 +24,7 @@ The `addOrder` command creates an Ecommerce order object.
 
 ##### Data Parameters
 
-Value      | Type   | Required | Description
+Name       | Type   | Required | Description
 ---------- | ------ | -------- | -----------
 `order_id` | String | Yes      | The Order ID that produced and stored at your e-shop to identify the transaction. This id is what links items to the orders to which they belong. (e.g. 123456)
 `revenue`  | String | No       | The total revenue or grand total of the order (e.g. 120.99). This value must include shipping and tax costs.
@@ -48,7 +48,7 @@ The `addItem` command adds a new Ecommerce item object.
 
 ##### Data Parameters
 
-Value         | Type   | Required | Description
+Name          | Type   | Required | Description
 ------------- | ------ | -------- | -----------
 `order_id`    | String | Yes      | The Order ID that produced and stored at your e-shop to identify the transaction. This id is what links items to the orders to which they belong. (e.g. 123456)
 `product_id`  | String | Yes      | The id of the product as stored at your e-shop. (e.g. 987)
