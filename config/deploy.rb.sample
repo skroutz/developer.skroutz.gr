@@ -1,0 +1,31 @@
+lock '3.2.1'
+
+set :user, 'example_user'
+set :deploy_to, '/var/www/sites/developer.skroutz.gr'
+set :deploy_server, 'example.com'
+set :build_dir, 'build'
+set :flavor, 'skroutz'
+
+set :use_sudo, false
+set :ssh_options, forward_agent: false
+set :log_level, :debug
+
+desc 'Build and deploy project'
+task :deploy do
+  invoke 'build'
+  invoke 'copy'
+end
+
+desc 'Build static html'
+task :build do
+  run_locally do
+    execute %(bash -c 'FLAVOR=#{fetch(:flavor)} bundle exec middleman build')
+  end
+end
+
+desc 'Copy static html'
+task :copy do
+  run_locally do
+    execute "scp -r #{fetch(:build_dir)}/* #{fetch(:user)}@#{fetch(:deploy_server)}:#{fetch(:deploy_to)}"
+  end
+end
