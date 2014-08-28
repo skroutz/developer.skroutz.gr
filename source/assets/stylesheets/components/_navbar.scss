@@ -76,7 +76,7 @@
     .navbar-brand {
       width: 280px;
       height: 32px;
-      margin-top: 13px;
+      margin-top: 10px;
       margin-left: 15px !important;
       padding: 0;
       font-size: 18px;
@@ -86,8 +86,9 @@
       background-size: 679px 110px;
 
       @media (max-width: $screen-xs-max) {
-        width: 80%;
-        margin-left: 60px !important;
+        width: 85%;
+        margin-left: 52px !important;
+        font-size: 1em;
       }
     }
   }

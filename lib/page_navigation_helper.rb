@@ -83,9 +83,9 @@ module PageNavigationHelper
     html = "<span class='#{classes}'>"
 
     items.each do |item|
-      html << '<span'
-      html << ' class="active"' if item[:active]
-      html << '>'
+      html << '<span class="item'
+      html << ' active' if item[:active]
+      html << '">'
       html << item[:html]
       html << '</span>'
     end

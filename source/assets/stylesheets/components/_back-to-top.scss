@@ -3,16 +3,17 @@
 
 
 #back-to-top {
+  @include gradient-vertical(rgba($app-clr-white, 0.0), rgba($app-clr-white, 1.0), 0, 85%);
   display: none;
   position: fixed;
-  right: 1px;
-  bottom: 2px; //$app-h-footer + (2 * $padding-base-horizontal);
+  right: 0;
+  bottom: -1px;
   z-index: $app-zindex-backtotop;
-  padding: 10px 9px;
+  width: 75%;
+  padding: 10px 0 5px;
+  text-align: center;
   color: $app-clr-greyDark;
   border-radius: 0;
-  //@include opacity(.4);
-  //@include transition(opacity ease-out .35s);
 
   i {
     font-size: 18px;
@@ -20,20 +21,10 @@
 
   &:hover {
     color: $brand-primary;
-    border-color: $brand-primary;
-    //@include opacity(1.0);
     @include transition(all ease-in-out .125s);
   }
 
   @media (max-width: $screen-xs-max) {
     width: 100%;
-    left: 0;
-    bottom: -1px;
-    text-align: center;
-    @include gradient-vertical(rgba($app-clr-white, 0.0), rgba($app-clr-white, 1.0), 0, 85%);
-
-    &:hover {
-      border-color: transparent;
-    }
   }
 }

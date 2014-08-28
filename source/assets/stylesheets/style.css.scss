@@ -261,6 +261,17 @@ pre {
 
 .nav-lang {
   &.nav-lang-inline {
+
+    .item {
+      &:after {
+        content: ', ';
+      }
+
+      &:last-child:after {
+        content: '';
+      }
+    }
+
     > .active {
       display: none;
     }
