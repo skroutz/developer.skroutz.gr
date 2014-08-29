@@ -24,7 +24,9 @@ future proof. Keep in mind that it will be part of the URL path to access the
 documentation.
 
 ##### Guidelines
+{:.collapsible .collapsed data-toggle="collapse" data-target="#documentation-directory-guidelines" /}
 
+<div id="documentation-directory-guidelines" class="collapse" markdown="1">
 Avoid flavored names
 : Do not use flavored names (i.e. *alve*, *scrooge*, *skroutz*, etc.) for the
   documentation directory, even if your project is only available for a single
@@ -43,6 +45,7 @@ Some bad documentation directory names are:
 - api_v3            # Consider grouping, `api/v3`.
 - elasticsearch-skroutz-greekstemmer    # Too long and flavored. Consider `elasticsearch/stemmer`.
 ~~~
+</div>
 
 ##### Example
 
@@ -119,7 +122,9 @@ The `data/docs.yml` file holds the documentation structure. Each root element
 defines a different documentation.
 
 ##### Schema
+{:.collapsible .collapsed data-toggle="collapse" data-target="#data-docs-schema" /}
 
+<div id="data-docs-schema" class="collapse" markdown="1">
 The schema of a `data/docs.yml` root element is the following:
 
 ~~~ yaml
@@ -146,8 +151,12 @@ Name          | Type    | Required  | Description
 `icon`        | String  | No        | A [FontAwesome](http://fortawesome.github.io/Font-Awesome/icons/) icon to accompany the documentation. This is required in case of a featured documentation.
 `pages`       | Array   | No        | Define the pages to show in the documentation.
 
-##### Guidelines
+</div>
 
+##### Guidelines
+{:.collapsible .collapsed data-toggle="collapse" data-target="#data-docs-guidelines" /}
+
+<div id="data-docs-guidelines" class="collapse" markdown="1">
 Root keys are unique
 : Obviously you should not use the same root key for different documents.
   If the one you have selected is already taken, stop whining and pick another
@@ -179,6 +188,7 @@ Pages
 : If you need to link to an external page resource, set it with the `url` key:
   <br/>
   `- { title: 'settings', url: 'http://www.example.com/' }`
+</div>
 
 ##### Example
 
@@ -228,10 +238,14 @@ the `locale` property at the page [frontmatter](http://middlemanapp.com/basics/f
 section to make it available in multiple languages for a given flavor.
 
 ##### Guidelines
+{:.collapsible .collapsed data-toggle="collapse" data-target="#localization-guidelines" /}
+
+<div id="localization-guidelines" class="collapse" markdown="1">
 
 Locale
 : You should define the proper `locale` rules for each of the translated pages,
   otherwise you may end up with inconsistent page links.
+</div>
 
 ##### Example
 

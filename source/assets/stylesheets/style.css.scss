@@ -76,6 +76,23 @@
   overflow: hidden !important;
 }
 
+.collapsible {
+  cursor: pointer;
+
+  &:after {
+    @extend .fa;
+    @extend .fa-append;
+    content: $fa-var-minus-square-o;
+    color: $gray-light;
+  }
+
+  &.collapsed {
+    &:after {
+      content: $fa-var-plus-square-o;
+    }
+  }
+}
+
 
 // Iconography
 // --------------------------------------------------
