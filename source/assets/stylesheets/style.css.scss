@@ -284,7 +284,8 @@ pre {
         content: ', ';
       }
 
-      &:last-child:after {
+      &:last-child:after,
+      &:only-child:after {
         content: '';
       }
     }
