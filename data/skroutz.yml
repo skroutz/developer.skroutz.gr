@@ -5,6 +5,7 @@ full_company_name: 'Skroutz S.A.'
 analytics_domain: 'analytics.skroutz.gr'
 api_domain: 'api.skroutz.gr'
 apiv2_domain: 'apiv2.skroutz.gr'
+developer_domain: 'developer.skroutz.gr'
 
 api_email: 'api@skroutz.gr'
 
