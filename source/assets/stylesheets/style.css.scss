@@ -3,7 +3,8 @@
 // Fonts
 //
 // Don't get greedy. They come at a cost.
-@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,700&subset=latin);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400&subset=latin,greek);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:300&subset=latin);
 @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700&subset=latin);
 
 // Application Variables
@@ -218,8 +219,7 @@ body {
 
 a, i {
   &:hover {
-    transition: color 0.175s ease-out,
-                background-color 0.175s ease-out;
+    transition: all, .175s, ease;
   }
 }
 
