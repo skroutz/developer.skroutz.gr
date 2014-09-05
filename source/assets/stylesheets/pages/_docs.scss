@@ -44,11 +44,6 @@
     padding: 5px 20px;
     border-left: 1px solid $app-clr-greyLight;
 
-    .goto {
-      @extend .btn;
-      @extend .btn-primary-inverse;
-    }
-
     @media (max-width: $screen-sm-max) {
       float: none;
       width: 100%;

@@ -38,11 +38,11 @@
 .sidebar {
   padding: 0 0 50px;
   color: $app-clr-greyLight;
-  background-color: $app-clr-greyDark;
+  background-color: darken($app-clr-greyDark, 8%);
 
   .heading {
     width: 90%;
-    margin: 20px 0 0;
+    margin: 20px 0 5px;
     padding: 0 0 10px 10px;
     color: lighten($app-clr-greyDark, 40%);
     font-size: 0.8em;
@@ -52,10 +52,6 @@
       @extend .fa;
       @extend .fa-prepend;
     }
-  }
-
-  hr {
-    opacity: .15;
   }
 }
 
@@ -68,7 +64,7 @@
     height: auto;
     padding: 40px 20px 0;
     color: $app-clr-greyLight;
-    font-size: 0.9em;
+    font-size: .9em;
     text-align: center;
     background-position: center top;
     background-repeat: no-repeat;
@@ -84,6 +80,7 @@
 
     list-style: none;
     float: none;
+    margin-bottom: 20px;
 
     li {
       display: inline-block;
@@ -98,7 +95,7 @@
       > a {
         padding-left: 20px;
         padding-right: 20px;
-        font-size: 0.9em;
+        font-size: .9em;
         text-transform: uppercase;
         color: $app-clr-greyLight;
         border-left: 1px solid rgba($app-clr-greyLight, 0.15);
@@ -157,10 +154,12 @@
 // Sidebar :: Main
 .nav-sidebar {
   @include box-shadow(2px 2px 2px rgba(0,0,0,.25));
+  margin-bottom: 25px;
   background-color: darken($app-clr-greyDark, 2%);
   border-top: 1px solid lighten($app-clr-greyDark, 2%);
   border-left: 1px solid lighten($app-clr-greyDark, 2%);
   border-radius: $border-radius-base;
+  color: $app-clr-white;
 
   li {
     border-bottom: 1px solid lighten($app-clr-greyDark, 1%);
@@ -178,7 +177,7 @@
     }
 
     a {
-      font-size: 0.9em;
+      font-size: .9em;
       color: $app-clr-greyLight;
 
       &:hover {
@@ -204,13 +203,13 @@
 
 // Sidebar :: Sub-Menu
 .nav-menu-sidebar {
-  @include box-shadow(inset 0 3px 2px rgba(0,0,0,.2));
+  @include box-shadow(inset 0 3px 2px rgba(0,0,0,.35));
   background-color: lighten($app-clr-greyDark, 6%);
 
   a {
     display: block;
     padding: 8px 8px 8px 40px;
-    font-size: 0.9em;
+    font-size: .9em;
     color: $app-clr-greyLight;
     text-decoration: none;
     border-radius: 0;
@@ -223,7 +222,21 @@
 
 // Sidebar :: Footer
 .sidebar {
+
   footer {
+    margin-top: 40px;
+    position: relative;
+    padding: 20px 0;
+    font-family: $app-font-open;
+    text-align: left;
+    color: lighten($app-clr-greyDark, 40%);
+    border-top: 1px solid $app-clr-greyDark;
+    border-bottom: 1px solid $app-clr-greyDark;
+
+    span {
+      display: block;
+    }
+
     .container {
       width: 100%;
     }
@@ -233,11 +246,8 @@
         @extend .text-center;
         left: 0;
         width: 100%;
+        margin-top: 3px;
       }
-    }
-
-    span {
-      display: block;
     }
   }
 }

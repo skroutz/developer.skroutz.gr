@@ -21,6 +21,7 @@
     font-size: 2.5em;
     line-height: 1.5em;
     border: 0 none;
+    font-family: $app-font-ubuntu;
 
     @media (max-width: $screen-sm-max) {
       margin-top: 0;
@@ -33,6 +34,9 @@
     margin-top: 20px;
     padding-left: 60px;
     padding-right: 60px;
+    font-weight: 300;
+    border: none;
+    border-bottom: 2px solid darken($app-clr-orange, 8%);
 
     @media (max-width: $screen-sm-max) {
       display: block;
@@ -101,5 +105,5 @@
 //
 // Wrapper class for Sidebar.
 .container-sidebar {
-  padding: 10px 15px;
+  padding: 25px 15px;
 }
