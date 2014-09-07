@@ -1,29 +1,25 @@
 ---
 :request:
-  :url: https://api.skroutz.gr/search?nikon+1+j2
+  :url: https://api.skroutz.gr/search?q=nikon%201%20j2
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer Qgq1ofejerxdYPnpOYaT1GRhwRPczj2AnkZFtNi1jrVgchHJib5xL4QkQPJYNWElNoPiOp5VBqsmoq6HgMiEA==
+    :authorization: Bearer 5Ov7hJYb87TKTD7Iktij4fJvxvROklei5FhD/SjWasdKuQ7s/mtnDPFyc2EPNzNTdqR5u1GqzH37gJ50vib4OA==
   :verb: GET
 :response:
-  :status: 400
+  :status: 200
   :headers:
-    !binary "c2VydmVy": nginx
     !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
-    !binary "c3RhdHVz": 400 Bad Request
+    !binary "dmFyeQ==": Accept-Encoding
+    !binary "c3RhdHVz": 200 OK
     !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
-    !binary "Y2FjaGUtY29udHJvbA==": no-cache
-    !binary "eC1yZXF1ZXN0LWlk": '578822619'
-    !binary "eC1ydW50aW1l": '0.042718'
-    !binary "eC1hcHA=": lunkwill_ssl
-    !binary "Y29udGVudC1sZW5ndGg=": '55'
+    !binary "Y2FjaGUtY29udHJvbA==": max-age=0, private, must-revalidate
+    !binary "eC1yZXF1ZXN0LWlk": '716757997'
+    !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
+    !binary "Y29udGVudC1sZW5ndGg=": '281'
     !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:44:35 GMT
-    !binary "eC12YXJuaXNo": '578822619'
+    !binary "ZGF0ZQ==": Sun, 07 Sep 2014 20:57:14 GMT
     !binary "YWdl": '0'
-    !binary "dmlh": 1.1 varnish
     !binary "Y29ubmVjdGlvbg==": close
-    !binary "eC1vcmlnaW4=": varnish1
     !binary "eC1jYWNoZQ==": MISS
-  :body: ! '{"message":"param is missing or the value is empty: q"}'
-:created_at: 2014-08-25 17:44:35.973341367 +03:00
+  :body: ! '{"categories":[{"id":434,"name":"DSLR & Mirrorless","children_count":0,"image_url":"http://d.scdn.gr/images/categories/large/434.jpg","parent_id":1670,"fashion":false,"show_specifications":true,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"}],"meta":{"alternatives":[],"strong_matches":{},"pagination":{"total_results":1,"total_pages":1,"page":1,"per":25}}}'
+:created_at: 2014-09-07 23:57:14.810211283 +03:00

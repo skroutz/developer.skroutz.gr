@@ -197,7 +197,7 @@ requests:
   -
     key: search_sku_match
     request:
-      url: '{{base_url}}/search?nikon+1+j2'
+      url: '{{base_url}}/search?q=nikon 1 j2'
       headers:
         <<: *default_headers
   -
