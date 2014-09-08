@@ -1,9 +1,9 @@
 ---
 :request:
-  :url: https://api.alve.com/shops/298/locations
+  :url: https://api.alve.com/shops/298/locations?embed=address
   :headers:
     :accept: application/vnd.alve+json; version=3
-    :authorization: Bearer ro3L8/U7wnqmbcjEGfzjTJCJ9J75lq9LbSMcZwuNey8kBoSKpOVPfuRZFYOFUy0rLS//s02U7ZEIigv0mm0oA==
+    :authorization: Bearer oCUzvVBqNuvUHLeOPGUCDOfzjyJItUDGxxjVdK/qTyYFJND6gmvys0I6HsK6cnw6O5lPp8BLPdJNRtnoZQ==
   :params:
     :per: 2
   :verb: GET
@@ -16,14 +16,14 @@
     !binary "c3RhdHVz": 200 OK
     !binary "Y2FjaGUtY29udHJvbA==": max-age=300, private
     !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
-    !binary "eC1yZXF1ZXN0LWlk": '986354933'
-    !binary "eC1ydW50aW1l": '0.062361'
+    !binary "eC1yZXF1ZXN0LWlk": '988686143'
+    !binary "eC1ydW50aW1l": '0.337956'
     !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "eC1hcHA=": as2_ssl
+    !binary "eC1hcHA=": as1_ssl
     !binary "Y29udGVudC1sZW5ndGg=": '343'
     !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:48:42 GMT
-    !binary "eC12YXJuaXNo": '986354933'
+    !binary "ZGF0ZQ==": Mon, 08 Sep 2014 13:04:07 GMT
+    !binary "eC12YXJuaXNo": '988686143'
     !binary "YWdl": '0'
     !binary "dmlh": 1.1 varnish
     !binary "Y29ubmVjdGlvbg==": close
@@ -31,5 +31,6 @@
     !binary "eC1jYWNoZQ==": MISS
   :body: ! '{"locations":[{"id":63,"headquarter":true,"phones":["4443662"],"pickup_point":false,"store":false,"full_address":"Faz\u0131l
     Kaftano\u011flu 15, P.\u039a. 34418, Ka\u011f\u0131thane, Seyrantepe, \u0130stanbul","lat":"41.099321","lng":"29.005014","info":"
-    Faz\u0131l Kaftano\u011flu Cad. 15, Seyrantepe / \u0130STANBUL"}],"meta":{"pagination":{"total_results":1,"total_pages":1,"page":1,"per":2}}}'
-:created_at: 2014-09-08 16:11:42.073424000 +03:00
+    Faz\u0131l Kaftano\u011flu Cad. 15, Seyrantepe / \u0130STANBUL","address":{"id":63,"street_number":"15","street":"Faz\u0131l
+    Kaftano\u011flu","postcode":"34418","city":"Ka\u011f\u0131thane, Seyrantepe","region":"\u0130stanbul","country":"T\u00fcrkiye"}}],"meta":{"pagination":{"total_results":1,"total_pages":1,"page":1,"per":2}}}'
+:created_at: 2014-09-08 16:04:07.977193000 +03:00

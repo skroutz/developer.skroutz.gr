@@ -75,11 +75,24 @@ requests:
         <<: *default_headers
       params:
         per:  2
-        embed: address
+  -
+    key: shop_locations_index_embed_address
+    request:
+      url: '{{base_url}}/shops/298/locations?embed=address'
+      headers:
+        <<: *default_headers
+      params:
+        per:  2
   -
     key: shop_locations_show
     request:
       url: '{{base_url}}/shops/298/locations/63'
+      headers:
+        <<: *default_headers
+  -
+    key: shop_locations_show_embed_address
+    request:
+      url: '{{base_url}}/shops/298/locations/63?embed=address'
       headers:
         <<: *default_headers
   -
