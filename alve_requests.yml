@@ -1,5 +1,5 @@
 default_headers: &default_headers
-  accept: 'application/vnd.{{site_name}}+json; version=3'
+  accept: 'application/vnd.alve+json; version=3'
   authorization: "Bearer {{oauth_token}}"
 
 name: apiv3
