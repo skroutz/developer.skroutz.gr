@@ -260,6 +260,33 @@ pre {
   }
 }
 
+// Headings :: Permalinks
+#main {
+  h2, h3, h4 {
+    &:hover {
+      a.permalink {
+        color: rgba($app-clr-grey, 1);
+        @include transition(all ease-in-out .25s);
+      }
+    }
+  }
+
+  a.permalink {
+    font-size: 18px;
+    color: rgba($app-clr-grey, 0);
+    vertical-align: middle;
+    cursor: pointer;
+    @include transition(all ease-in-out .125s);
+
+    &:before {
+      @extend .fa;
+      @extend .fa-append;
+
+      content: $fa-var-link;
+    }
+  }
+}
+
 
 // Alerts
 // --------------------------------------------------

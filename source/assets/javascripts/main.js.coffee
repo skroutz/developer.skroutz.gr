@@ -42,6 +42,15 @@ UI.Anchor =
       UI.Anchor.scrollToTarget($(@).attr('href'))
 
 ###
+  UI.Permalink
+###
+UI.Permalink =
+  bindListeners: ($domElement) ->
+    $domElement.one 'mouseover.ui.Permalink', (e) ->
+      if $(@).find('a.permalink').length is 0
+        $(@).append('<a href="#' + $(@).attr('id') + '" class="permalink"></a>')
+
+###
   UI.BackToTop
 ###
 UI.BackToTop =
@@ -141,6 +150,7 @@ UI.Table =
   $ ->
     UI.Navbar.bindListeners $('[data-ui-scope="navbar"]')
     UI.Anchor.bindListeners $('#main a[href^=#]')
+    UI.Permalink.bindListeners $('#main').find('h2, h3, h4')
     UI.BackToTop.bindListeners $('[data-ui-scope="backToTop"]')
     UI.OffCanvas.bindListeners $('[data-ui-scope="offCanvasBtn"]')
     UI.CodeExample.bindListeners $('.example').find('.toggler')
