@@ -139,14 +139,14 @@ SKU specifications can be retrieved with the following request.
 
 <%= render_recording :sku_specifications %>
 
-Specification groups can be included / embedded using the `group` value.
+The specification group can be included / embedded using the `group` value.
 Groups represent a logical grouping of specifications.
 
 <pre class="terminal">
   GET /skus/:id/specifications?include=group
 </pre>
 
-<%#= render_recording :sku_specifications_include_groups %>
+<%= render_recording :sku_specifications_include_group %>
 
 ## Retrieve an SKU's favorite
 

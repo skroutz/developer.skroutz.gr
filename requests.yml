@@ -365,7 +365,7 @@ requests:
       headers:
         <<: *default_headers
   -
-    key: sku_specifications_include_groups
+    key: sku_specifications_include_group
     request:
       url: '{{base_url}}/skus/2588170/specifications?include=group'
       headers:

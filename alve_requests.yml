@@ -348,8 +348,12 @@ requests:
       url: '{{base_url}}/skus/146414/specifications'
       headers:
         <<: *default_headers
-      params:
-        include: group
+  -
+    key: sku_specifications_include_group
+    request:
+      url: '{{base_url}}/skus/146414/specifications?include=group'
+      headers:
+        <<: *default_headers
   -
     key: shop_reviews
     request:

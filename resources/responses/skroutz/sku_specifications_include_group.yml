@@ -3,7 +3,7 @@
   :url: https://api.skroutz.gr/skus/2588170/specifications?include=group
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer Qgq1ofejerxdYPnpOYaT1GRhwRPczj2AnkZFtNi1jrVgchHJib5xL4QkQPJYNWElNoPiOp5VBqsmoq6HgMiEA==
+    :authorization: Bearer IvriY9deJCTrAnJbD2eKILHJxQL4aOV8674B65CLAZRjOiAeqAB8hNUHlSd9CYY/gaNdXLO5l0xn7DAVv3CNg==
   :verb: GET
 :response:
   :status: 200
@@ -14,18 +14,18 @@
     !binary "c3RhdHVz": 200 OK
     !binary "Y2FjaGUtY29udHJvbA==": max-age=300, private
     !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
-    !binary "eC1yZXF1ZXN0LWlk": '2651981737'
-    !binary "eC1ydW50aW1l": '0.053109'
+    !binary "eC1yZXF1ZXN0LWlk": '2752136654'
+    !binary "eC1ydW50aW1l": '0.096605'
     !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "eC1hcHA=": lunkwill_ssl
+    !binary "eC1hcHA=": frankie_ssl
     !binary "Y29udGVudC1sZW5ndGg=": '222'
     !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:44:39 GMT
-    !binary "eC12YXJuaXNo": '2651981737'
+    !binary "ZGF0ZQ==": Mon, 08 Sep 2014 11:51:11 GMT
+    !binary "eC12YXJuaXNo": '2752136654'
     !binary "YWdl": '0'
     !binary "dmlh": 1.1 varnish
     !binary "Y29ubmVjdGlvbg==": close
     !binary "eC1vcmlnaW4=": varnish2
     !binary "eC1jYWNoZQ==": MISS
   :body: ! '{"groups":[{"id":234,"name":"\u03a7\u03b1\u03c1\u03b1\u03ba\u03c4\u03b7\u03c1\u03b9\u03c3\u03c4\u03b9\u03ba\u03ac","order":5}],"specifications":[{"id":867,"name":"\u03a6\u03cd\u03bb\u03bf","unit":"","values":["\u0391\u03bd\u03b4\u03c1\u03b9\u03ba\u03ac"],"group_id":234},{"id":868,"name":"\u03a5\u03bb\u03b9\u03ba\u03cc","unit":"","values":["\u039a\u03b1\u03bf\u03c5\u03c4\u03c3\u03bf\u03cd\u03ba/\u03a0\u03bb\u03b1\u03c3\u03c4\u03b9\u03ba\u03cc"],"group_id":234},{"id":869,"name":"\u03a4\u03cd\u03c0\u03bf\u03c2","unit":"","values":["\u0391\u03bd\u03b1\u03bb\u03bf\u03b3\u03b9\u03ba\u03cc"],"group_id":234}]}'
-:created_at: 2014-08-25 17:44:39.094844338 +03:00
+:created_at: 2014-09-08 14:51:11.392064000 +03:00
