@@ -47,7 +47,7 @@ UI.Anchor =
 UI.Permalink =
   bindListeners: ($domElement) ->
     $domElement.one 'mouseover.ui.Permalink', (e) ->
-      if $(@).find('a.permalink').length is 0
+      if $(@).find('a.permalink').length is 0 and $(@).attr('id')
         $(@).append('<a href="#' + $(@).attr('id') + '" class="permalink"></a>')
 
 ###
