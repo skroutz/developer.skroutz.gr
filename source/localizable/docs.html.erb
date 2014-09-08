@@ -13,7 +13,7 @@ title: docs
       <div class="panel-doc">
         <div class="doc-icon"><i class="<%= doc.icon %>"></i></div>
         <div class="doc-body">
-          <h3 class="heading">
+          <h3 class="heading" id="<%= key.dasherize %>">
             <%= t("titles.#{key}", flavor: settings.site_name.titleize) %>
             <% if doc.deprecated %>
               <span class="label label-warning"><%= t('common.deprecated') %></span>
