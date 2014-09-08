@@ -1,6 +1,6 @@
 ---
 :request:
-  :url: https://api.skroutz.gr/search?q=nikon%201%20j2
+  :url: https://api.skroutz.gr/search?q=nikon+1+j2
   :headers:
     :accept: application/vnd.skroutz+json; version=3
     :authorization: Bearer 5Ov7hJYb87TKTD7Iktij4fJvxvROklei5FhD/SjWasdKuQ7s/mtnDPFyc2EPNzNTdqR5u1GqzH37gJ50vib4OA==

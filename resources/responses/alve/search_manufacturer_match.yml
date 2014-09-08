@@ -4,6 +4,9 @@
   :headers:
     :accept: application/vnd.alve+json; version=3
     :authorization: Bearer ro3L8/U7wnqmbcjEGfzjTJCJ9J75lq9LbSMcZwuNey8kBoSKpOVPfuRZFYOFUy0rLS//s02U7ZEIigv0mm0oA==
+  :params:
+    :page: 1
+    :per: 5
   :verb: GET
 :response:
   :status: 200
@@ -12,37 +15,24 @@
     !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
     !binary "dmFyeQ==": Accept-Encoding
     !binary "c3RhdHVz": 200 OK
-    !binary "bGluaw==": <https://api.alve.com/search?page=3&q=apple>; rel="last",
-      <https://api.alve.com/search?page=2&q=apple>; rel="next"
+    !binary "bGluaw==": <https://api.alve.com/search?page=11&per=5&q=apple>; rel="last",
+      <https://api.alve.com/search?page=2&per=5&q=apple>; rel="next"
     !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
     !binary "Y2FjaGUtY29udHJvbA==": max-age=0, private, must-revalidate
-    !binary "eC1yZXF1ZXN0LWlk": '986354945'
-    !binary "eC1ydW50aW1l": '0.070621'
+    !binary "eC1yZXF1ZXN0LWlk": '988688000'
+    !binary "eC1ydW50aW1l": '0.150399'
     !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "eC1hcHA=": as2_ssl
-    !binary "Y29udGVudC1sZW5ndGg=": '957'
+    !binary "eC1hcHA=": as1_ssl
+    !binary "Y29udGVudC1sZW5ndGg=": '429'
     !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:48:42 GMT
-    !binary "eC12YXJuaXNo": '986354945'
+    !binary "ZGF0ZQ==": Mon, 08 Sep 2014 13:13:08 GMT
+    !binary "eC12YXJuaXNo": '988688000'
     !binary "YWdl": '0'
     !binary "dmlh": 1.1 varnish
     !binary "Y29ubmVjdGlvbg==": close
     !binary "eC1vcmlnaW4=": varnish1
     !binary "eC1jYWNoZQ==": MISS
-  :body: ! '{"categories":[{"id":33,"name":"Cep Telefonu","children_count":0,"image_url":"http://alve-a.scdn.gr/images/categories/large/33.jpg","parent_id":32,"fashion":false,"show_specifications":true,"manufacturer_title":"Markalar","match_count":14},{"id":72,"name":"Laptop","children_count":0,"image_url":"http://alve-c.scdn.gr/images/categories/large/72.jpg","parent_id":9,"fashion":false,"show_specifications":true,"manufacturer_title":"Markalar","match_count":30},{"id":19,"name":"Tablet","children_count":0,"image_url":"http://alve-c.scdn.gr/images/categories/large/19.jpg","parent_id":9,"fashion":false,"show_specifications":true,"manufacturer_title":"Markalar","match_count":36},{"id":11,"name":"Masa\u00fcst\u00fc
-    Bilgisayar","children_count":0,"image_url":"http://alve-d.scdn.gr/images/categories/large/11.jpg","parent_id":10,"fashion":false,"show_specifications":false,"manufacturer_title":"Markalar","match_count":18},{"id":73,"name":"Laptop
-    \u00c7antas\u0131","children_count":0,"image_url":"http://alve-c.scdn.gr/images/categories/large/73.jpg","parent_id":9,"fashion":false,"show_specifications":false,"manufacturer_title":"Markalar","match_count":5},{"id":593,"name":"Tablet
-    K\u0131l\u0131f\u0131","children_count":0,"image_url":"http://alve-b.scdn.gr/images/categories/large/593.jpg","parent_id":9,"fashion":false,"show_specifications":false,"manufacturer_title":"Markalar","match_count":19},{"id":366,"name":"MP3
-    Player","children_count":0,"image_url":"http://alve-c.scdn.gr/images/categories/large/366.jpg","parent_id":14,"fashion":false,"show_specifications":false,"manufacturer_title":"Markalar","match_count":8},{"id":545,"name":"Ekran
-    Koruyucu Film","children_count":0,"image_url":"http://alve-d.scdn.gr/images/categories/large/545.jpg","parent_id":32,"fashion":false,"show_specifications":false,"manufacturer_title":"Markalar","match_count":137},{"id":29,"name":"RAM","children_count":0,"image_url":"http://alve-a.scdn.gr/images/categories/large/29.jpg","parent_id":20,"fashion":false,"show_specifications":true,"manufacturer_title":"Markalar","match_count":7},{"id":177,"name":"Bebek
-    Arabas\u0131","children_count":0,"image_url":"http://alve-c.scdn.gr/images/categories/large/177.jpg","parent_id":4,"fashion":false,"show_specifications":true,"manufacturer_title":"Markalar","match_count":1},{"id":34,"name":"Cep
-    Telefonu K\u0131l\u0131f\u0131","children_count":0,"image_url":"http://alve-a.scdn.gr/images/categories/large/34.jpg","parent_id":32,"fashion":false,"show_specifications":false,"manufacturer_title":"Markalar","match_count":34},{"id":269,"name":"Klavye","children_count":0,"image_url":"http://alve-d.scdn.gr/images/categories/large/269.jpg","parent_id":268,"fashion":false,"show_specifications":true,"manufacturer_title":"Markalar","match_count":5},{"id":244,"name":"Media
-    Player","children_count":0,"image_url":"http://alve-b.scdn.gr/images/categories/large/244.jpg","parent_id":13,"fashion":false,"show_specifications":false,"manufacturer_title":"Markalar","match_count":1},{"id":406,"name":"Hoparl\u00f6r","children_count":0,"image_url":"http://alve-b.scdn.gr/images/categories/large/406.jpg","parent_id":14,"fashion":false,"show_specifications":false,"manufacturer_title":"Markalar","match_count":6},{"id":546,"name":"Cep
-    Telefonu \u015earj Aleti","children_count":0,"image_url":"http://alve-d.scdn.gr/images/categories/large/546.jpg","parent_id":32,"fashion":false,"show_specifications":false,"manufacturer_title":"Markalar","match_count":13},{"id":322,"name":"Kad\u0131n
-    \u0130\u00e7 Giyim","children_count":0,"image_url":"http://alve-a.scdn.gr/images/categories/large/322.jpg","parent_id":300,"fashion":true,"show_specifications":false,"manufacturer_title":"Markalar","match_count":1},{"id":75,"name":"Laptop
-    - Tablet Adapt\u00f6r\u00fc & Bataryas\u0131","children_count":0,"image_url":"http://alve-c.scdn.gr/images/categories/large/75.jpg","parent_id":9,"fashion":false,"show_specifications":false,"manufacturer_title":"Markalar","match_count":10},{"id":239,"name":"Nevresim
-    Tak\u0131m\u0131","children_count":0,"image_url":"http://alve-a.scdn.gr/images/categories/large/239.jpg","parent_id":237,"fashion":true,"show_specifications":false,"manufacturer_title":"Markalar","match_count":8},{"id":60,"name":"Elektro
-    Gitar","children_count":0,"image_url":"http://alve-d.scdn.gr/images/categories/large/60.jpg","parent_id":59,"fashion":false,"show_specifications":false,"manufacturer_title":"Markalar","match_count":7},{"id":429,"name":"\u00c7er\u00e7eve","children_count":0,"image_url":"http://alve-d.scdn.gr/images/categories/large/429.jpg","parent_id":426,"fashion":false,"show_specifications":false,"manufacturer_title":"Markalar","match_count":6},{"id":496,"name":"\u015eampuan","children_count":0,"image_url":"http://alve-b.scdn.gr/images/categories/large/496.jpg","parent_id":492,"fashion":false,"show_specifications":false,"manufacturer_title":"Markalar","match_count":5},{"id":428,"name":"Duvar
-    Saati","children_count":0,"image_url":"http://alve-d.scdn.gr/images/categories/large/428.jpg","parent_id":426,"fashion":false,"show_specifications":false,"manufacturer_title":"Markalar","match_count":5},{"id":420,"name":"Kulakl\u0131k","children_count":0,"image_url":"http://alve-c.scdn.gr/images/categories/large/420.jpg","parent_id":14,"fashion":false,"show_specifications":false,"manufacturer_title":"Markalar","match_count":4},{"id":397,"name":"DSL
-    Modem - Router - Access Point","children_count":0,"image_url":"http://alve-d.scdn.gr/images/categories/large/397.jpg","parent_id":391,"fashion":false,"show_specifications":false,"manufacturer_title":"Markalar","match_count":4},{"id":270,"name":"Mouse","children_count":0,"image_url":"http://alve-d.scdn.gr/images/categories/large/270.jpg","parent_id":268,"fashion":false,"show_specifications":true,"manufacturer_title":"Markalar","match_count":4}],"meta":{"alternatives":[],"strong_matches":{"manufacturer":{"id":28,"name":"Apple","image_url":"http://alve-c.scdn.gr/images/manufacturer_logos/000000/28/apple-logo-silver.jpg"}},"pagination":{"total_results":53,"total_pages":3,"page":1,"per":25}}}'
-:created_at: 2014-08-25 17:48:42.708749293 +03:00
+  :body: ! '{"categories":[{"id":33,"name":"Cep Telefonu","children_count":0,"image_url":"http://alve-a.scdn.gr/images/categories/large/33.jpg","parent_id":32,"fashion":false,"show_specifications":true,"manufacturer_title":"Markalar","match_count":12},{"id":19,"name":"Tablet","children_count":0,"image_url":"http://alve-c.scdn.gr/images/categories/large/19.jpg","parent_id":9,"fashion":false,"show_specifications":true,"manufacturer_title":"Markalar","match_count":36},{"id":72,"name":"Laptop","children_count":0,"image_url":"http://alve-c.scdn.gr/images/categories/large/72.jpg","parent_id":9,"fashion":false,"show_specifications":true,"manufacturer_title":"Markalar","match_count":27},{"id":11,"name":"Masa\u00fcst\u00fc
+    Bilgisayar","children_count":0,"image_url":"http://alve-d.scdn.gr/images/categories/large/11.jpg","parent_id":10,"fashion":false,"show_specifications":false,"manufacturer_title":"Markalar","match_count":18},{"id":366,"name":"MP3
+    Player","children_count":0,"image_url":"http://alve-c.scdn.gr/images/categories/large/366.jpg","parent_id":14,"fashion":false,"show_specifications":false,"manufacturer_title":"Markalar","match_count":8}],"meta":{"alternatives":[],"strong_matches":{"manufacturer":{"id":28,"name":"Apple","image_url":"http://alve-c.scdn.gr/images/manufacturer_logos/000000/28/apple-logo-silver.jpg"}},"pagination":{"total_results":52,"total_pages":11,"page":1,"per":5}}}'
+:created_at: 2014-09-08 16:13:08.429722000 +03:00

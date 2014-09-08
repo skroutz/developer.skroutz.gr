@@ -152,6 +152,9 @@ requests:
       url: '{{base_url}}/search?q=apple'
       headers:
         <<: *default_headers
+      params:
+        page: 1
+        per: 5
   -
     key: search_latin_mapping
     request:
@@ -173,13 +176,13 @@ requests:
   -
     key: search_drop
     request:
-      url: '{{base_url}}/search?q=wrong iphone'
+      url: '{{base_url}}/search?q=wrong+iphone'
       headers:
         <<: *default_headers
   -
     key: search_no_results
     request:
-      url: '{{base_url}}/search?q=asdfnope'
+      url: '{{base_url}}/search?q=asdf'
       headers:
         <<: *default_headers
   -
@@ -194,13 +197,13 @@ requests:
   -
     key: search_sku_match
     request:
-      url: '{{base_url}}/search?q=nikon 1 j2'
+      url: '{{base_url}}/search?q=nikon+1+j2'
       headers:
         <<: *default_headers
   -
     key: search_skus_match
     request:
-      url: '{{base_url}}/search?q=Cubieboard2'
+      url: '{{base_url}}/search?q=samsung+galaxy+s5+16GB'
       headers:
         <<: *default_headers
       params:
@@ -293,11 +296,10 @@ requests:
   -
     key: category_skus_search
     request:
-      url: '{{base_url}}/categories/33/skus'
+      url: '{{base_url}}/categories/33/skus?q=iphone'
       headers:
         <<: *default_headers
       params:
-        q: 'iphone'
         per: 2
   -
     key: category_skus_manufacturers
@@ -381,5 +383,3 @@ requests:
       url: '{{base_url}}/shops/search?q=mediamarkt'
       headers:
         <<: *default_headers
-      params:
-        q: 'mediamarkt'

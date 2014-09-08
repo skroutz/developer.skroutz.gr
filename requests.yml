@@ -197,17 +197,16 @@ requests:
   -
     key: search_sku_match
     request:
-      url: '{{base_url}}/search?q=nikon 1 j2'
+      url: '{{base_url}}/search?q=nikon+1+j2'
       headers:
         <<: *default_headers
   -
     key: search_skus_match
     request:
-      url: '{{base_url}}/search'
+      url: '{{base_url}}/search?q=samsung+galaxy+s5+16GB'
       headers:
         <<: *default_headers
       params:
-        q: 'Cubieboard2'
         page: 1
         per: 2
   -
@@ -285,7 +284,6 @@ requests:
         <<: *default_headers
       params:
         favorite_list[name]: a new list name
-
   -
     key: filter_groups_index
     request:
