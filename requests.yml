@@ -248,7 +248,7 @@ requests:
   -
     key: favorites_show
     request:
-      url: '{{base_url}}/favorites/252116'
+      url: '{{base_url}}/favorites/825561'
       headers:
         <<: *default_headers
   -

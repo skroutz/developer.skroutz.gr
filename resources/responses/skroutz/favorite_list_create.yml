@@ -4,33 +4,34 @@
   :url: https://api.skroutz.gr/favorite_lists
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer Qgq1ofejerxdYPnpOYaT1GRhwRPczj2AnkZFtNi1jrVgchHJib5xL4QkQPJYNWElNoPiOp5VBqsmoq6HgMiEA==
+    :authorization: Bearer IvriY9deJCTrAnJbD2eKILHJxQL4aOV8674B65CLAZRjOiAeqAB8hNUHlSd9CYY/gaNdXLO5l0xn7DAVv3CNg==
   :params:
     :favorite_list[name]: a new list name
 :response:
   :status: 200
   :headers:
-    !binary "c2VydmVy": nginx
-    !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
-    !binary "dmFyeQ==": Accept-Encoding
-    !binary "c3RhdHVz": 200 OK
-    !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
-    etag: ! '"f33118a619948830d16b5b425e8c91a1"'
-    !binary "Y2FjaGUtY29udHJvbA==": max-age=0, private, must-revalidate
-    !binary "eC1yZXF1ZXN0LWlk": '578822846'
-    !binary "eC1ydW50aW1l": '0.076848'
-    !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "eC1hcHA=": lunkwill_ssl
-    !binary "Y29udGVudC1sZW5ndGg=": '205'
-    !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:44:37 GMT
-    !binary "eC12YXJuaXNo": '578822846'
-    !binary "YWdl": '0'
-    !binary "dmlh": 1.1 varnish
-    !binary "Y29ubmVjdGlvbg==": close
-    !binary "eC1vcmlnaW4=": varnish1
-    !binary "eC1jYWNoZQ==": MISS
-  :body: ! '{"errors":{"name":["\u0388\u03c7\u03b5\u03b9\u03c2 \u03ae\u03b4\u03b7
-    \u03bc\u03b9\u03b1 \u03bb\u03af\u03c3\u03c4\u03b1 \u03bc\u03b5 \u03b1\u03c5\u03c4\u03cc
-    \u03c4\u03bf \u03cc\u03bd\u03bf\u03bc\u03b1"]}}'
-:created_at: 2014-08-25 17:44:37.312313704 +03:00
+    server: nginx
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '99'
+    x-ratelimit-reset: '1410183540'
+    status: 200 OK
+    x-ua-compatible: IE=Edge,chrome=1
+    etag: ! '"9bc99238936aaa7000324a8ee472cff5"'
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '723375734'
+    x-runtime: '0.079276'
+    x-dns-prefetch-control: 'off'
+    x-app: frankie_ssl
+    content-length: '75'
+    accept-ranges: bytes
+    date: Mon, 08 Sep 2014 13:38:01 GMT
+    x-varnish: '723375734'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: varnish1
+    x-cache: MISS
+  :body: ! '{"favorite_list":{"id":278181,"category_id":null,"name":"a new list name"}}'
+:created_at: 2014-09-08 16:38:01.440916000 +03:00

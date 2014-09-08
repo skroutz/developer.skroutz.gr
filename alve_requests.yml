@@ -259,7 +259,7 @@ requests:
       headers:
         <<: *default_headers
       params:
-        favorite[sku_id]: 146414
+        favorite[sku_id]: 387159
   -
     key: favorite_update
     request:

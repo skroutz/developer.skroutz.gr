@@ -4,30 +4,33 @@
   :url: https://api.skroutz.gr/favorites
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer Qgq1ofejerxdYPnpOYaT1GRhwRPczj2AnkZFtNi1jrVgchHJib5xL4QkQPJYNWElNoPiOp5VBqsmoq6HgMiEA==
+    :authorization: Bearer IvriY9deJCTrAnJbD2eKILHJxQL4aOV8674B65CLAZRjOiAeqAB8hNUHlSd9CYY/gaNdXLO5l0xn7DAVv3CNg==
   :params:
     :favorite[sku_id]: 89645
 :response:
-  :status: 400
+  :status: 201
   :headers:
-    !binary "c2VydmVy": nginx
-    !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
-    !binary "c3RhdHVz": 400 Bad Request
-    !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
-    !binary "Y2FjaGUtY29udHJvbA==": no-cache
-    !binary "eC1yZXF1ZXN0LWlk": '2651981523'
-    !binary "eC1ydW50aW1l": '0.055823'
-    !binary "eC1hcHA=": lunkwill_ssl
-    !binary "Y29udGVudC1sZW5ndGg=": '192'
-    !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:44:36 GMT
-    !binary "eC12YXJuaXNo": '2651981523'
-    !binary "YWdl": '0'
-    !binary "dmlh": 1.1 varnish
-    !binary "Y29ubmVjdGlvbg==": close
-    !binary "eC1vcmlnaW4=": varnish2
-    !binary "eC1jYWNoZQ==": MISS
-  :body: ! '{"errors":{"sku_id":["\u0392\u03c1\u03af\u03c3\u03ba\u03b5\u03c4\u03b1\u03b9
-    \u03ae\u03b4\u03b7 \u03c3\u03c4\u03b1 \u03b1\u03b3\u03b1\u03c0\u03b7\u03bc\u03ad\u03bd\u03b1
-    \u03c3\u03bf\u03c5"]}}'
-:created_at: 2014-08-25 17:44:36.934528482 +03:00
+    server: nginx
+    content-type: application/json; charset=utf-8
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '99'
+    x-ratelimit-reset: '1410185460'
+    status: 201 Created
+    x-ua-compatible: IE=Edge,chrome=1
+    etag: ! '"52defd02a66c7fbe1cbd1e464a4133bf"'
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '2753272625'
+    x-runtime: '0.131396'
+    x-dns-prefetch-control: 'off'
+    x-app: frankie_ssl
+    content-length: '173'
+    accept-ranges: bytes
+    date: Mon, 08 Sep 2014 14:10:53 GMT
+    x-varnish: '2753272625'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: varnish2
+    x-cache: MISS
+  :body: ! '{"favorite":{"id":828442,"have_it":false,"user_id":56036,"user_notes":null,"sku_id":89645,"created_at":"2014-09-08T17:10:53+03:00","updated_at":"2014-09-08T17:10:53+03:00"}}'
+:created_at: 2014-09-08 17:10:53.240238000 +03:00
