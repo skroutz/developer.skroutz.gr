@@ -46,9 +46,18 @@ UI.Anchor =
 ###
 UI.Permalink =
   bindListeners: ($domElement) ->
-    $domElement.one 'mouseover.ui.Permalink', (e) ->
-      if $(@).find('a.permalink').length is 0
-        $(@).append('<a href="#' + $(@).attr('id') + '" class="permalink"></a>')
+    $domElement
+      .one 'mouseover.ui.Permalink', (e) =>
+        $target  = $(e.currentTarget)
+        fragment = $target.attr('id')
+
+        if $target.find('a.permalink').length is 0 and fragment
+          $target.append($(@_link_template(fragment)))
+      .on 'click.ui.Permalink', '.permalink', (e) ->
+         e.preventDefault()
+         UI.Anchor.scrollToTarget @hash
+
+  _link_template: (id) -> '<a href="#' + id + '" class="permalink"></a>'
 
 ###
   UI.BackToTop
