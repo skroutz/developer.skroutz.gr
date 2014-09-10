@@ -29,21 +29,16 @@
       <% next if doc.flavors.present? && !doc.flavors.include?(flavor) %>
 
       <li>
-        <%# without sub-menu %>
         <% if doc.pages.nil? %>
           <%= link_to t("titles.#{key}", flavor: flavor),
                       doc.base,
-                      class: "nav-link #{active_parent_classes(doc[:base])}" %>
-
-        <%# with sub-menu %>
-        <% else %>
-          <%= sidebar_parent_link(key, doc) %>
-
-          <div id="<%= "nav-sidebar-#{key}" %>" class="nav-menu-sidebar collapse <%= active_parent_classes(doc[:base]) %>">
-            <% doc.pages.each do |page| %>
-              <%= sidebar_child_link(key, doc, page) %>
-            <% end %>
-          </div>
+                      class: "nav-link #{active_parent_classes(doc.base)}" %>
+        <%
+           else
+             doc[:title] = "titles.#{key}"
+             doc[:titles] = "docs.#{key}"
+        %>
+          <%= render_sidebar_menu(doc) %>
         <% end %>
       </li>
 
@@ -62,23 +57,17 @@
                     class: "nav-link #{active_parent_classes('support')}" %>
       </li>
       <li>
-        <%= link_to t('titles.contribute'),
-                    '#nav-sidebar-contribution',
-                    class: "collapse-btn #{active_parent_classes('contribution')}",
-                    'data-toggle' => 'collapse',
-                    'data-parent' => '.nav-sidebar' %>
-
-        <div id="nav-sidebar-contribution" class="nav-menu-sidebar collapse <%= active_parent_classes('contribution') %>">
-          <%= link_to t('contribute.getting_started'),
-                      '/contribution/',
-                      class: "navbar-link #{active_child_classes('/contribution/')}" %>
-          <%= link_to t('contribute.new'),
-                      '/contribution/new',
-                      class: "navbar-link #{active_child_classes('/contribution/new/')}" %>
-          <%= link_to t('contribute.style'),
-                      '/contribution/style',
-                      class: "navbar-link #{active_child_classes('/contribution/style/')}" %>
-        </div>
+        <%
+          contribution = {}
+          contribution[:base] = '/contribution/'
+          contribution[:title] = 'titles.contribute'
+          contribution[:titles] = 'contribute'
+          contribution[:pages] = []
+          contribution[:pages] << { title: 'getting_started', url: contribution[:base] }
+          contribution[:pages] << { title: 'new' }
+          contribution[:pages] << { title: 'style' }
+        %>
+        <%= render_sidebar_menu(contribution) %>
       </li>
       <li>
         <%= link_to t('index.oss.github',

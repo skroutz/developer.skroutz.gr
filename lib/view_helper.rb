@@ -28,38 +28,42 @@ module ViewHelper
     'active' if url == current_page.url
   end
 
-  # Builds a Doc parent link for Sidebar
+  # Builds a collapsible menu for the sidebar
   #
-  # @param [String] key the docs key in data/docs.yml
-  # @param [Hash] doc the doc data
-  # @return [String] the html anchor element
-  def sidebar_parent_link(key, doc)
-    html = "<a class='collapse-btn #{active_parent_classes(doc[:base])}' "
-    html << "data-toggle='collapse' data-parent='.nav-sidebar' "
-    html << "href='#nav-sidebar-#{key}'>"
-    html << t("titles.#{key}",
-              flavor: settings.site_name.capitalize)
-    html << "<span class='label label-default pull-right'>#{t('common.deprecated')}</span>" if deprecated?(doc)
-    html << "</a>"
+  # @param [Hash] page the page section to build menu for
+  # @return [String] the constructed menu
+  def render_sidebar_menu(page)
+    html = ''
 
-    html
-  end
+    title = t(page[:title], flavor: settings.site_name.capitalize)
 
-  # Builds a Doc child page link for Sidebar
-  #
-  # @param [String] doc_key the docs key in data/docs.yml
-  # @param [Hash] doc the doc data
-  # @param [Hash] page the doc page data
-  # @return [String] the html anchor element
-  def sidebar_child_link(doc_key, doc, page)
-    page_url = url_to_doc_page(doc.base, page)
+    # Parent
+    html << "<a class='collapse-btn #{active_parent_classes(page[:base])}'"
+    html << ' data-toggle="collapse" data-parent=".nav-sidebar"'
+    html << " href='#nav-menu-#{title.downcase.gsub(' ', '-')}'>"
+    html << title
 
-    html = "<a class='navbar-link #{active_child_classes(page_url)}' "
-    html << "href='#{page_url}'>"
-    html << t("docs.#{doc_key}.#{page.title}",
-              flavor: settings.site_name.capitalize)
-    html << "</a>"
+    if deprecated?(page)
+      html << '<span class="label label-default pull-right">'
+      html << "#{t('common.deprecated')}</span>"
+    end
 
+    html << '</a>'
+
+    # Submenu wrapper
+    html << "<div id='nav-menu-#{title.downcase.gsub(' ', '-')}'"
+    html << " class='collapse nav-menu-sidebar #{active_parent_classes(page[:base])}'>"
+
+    # Submenu
+    Array(page[:pages]).each do |p|
+      url = p[:url] || "#{page[:base] }#{p[:title]}/"
+      html << "<a class='navbar-link #{active_child_classes(url)}'"
+      html << " href='#{url}'>"
+      html << t("#{page[:titles]}.#{ p[:title]}")
+      html << '</a>'
+    end
+
+    html << '</div>'
     html
   end
 
