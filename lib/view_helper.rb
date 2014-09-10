@@ -120,14 +120,14 @@ module ViewHelper
     html
   end
 
-  # Builds a Bootstrap Dropdown component for a given list of items.
+  # Builds a Dropdown component for a given list of items.
   #
   # @param [Array] list_items the array of items
   # @param [String] list_classes the CSS classes to style the list
   # @param [String] dropdown_classes the CSS classes to style the dropdown
   # @param [String] toggle the dropdown toggle content
   # @return [String] the constructed <ul/> element
-  def bs_dropdown(list_items, list_classes, dropdown_classes, toggle)
+  def render_dropdown(list_items, list_classes, dropdown_classes, toggle)
     html = "<ul class='nav navbar-nav #{list_classes}'>"
     html << "<li class='dropdown #{dropdown_classes}'>"
     html << '<a class="dropdown-toggle" data-toggle="dropdown" href="#">'
@@ -135,7 +135,7 @@ module ViewHelper
     html << '</a>'
     html << '<ul class="dropdown-menu" role="menu">'
 
-    list_items.each do |list_item|
+    Array(list_items).each do |list_item|
       html << '<li'
       html << ' class="active"' if list_item[:active]
       html << '>'
