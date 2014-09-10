@@ -100,15 +100,15 @@ module ViewHelper
     html
   end
 
-  # Builds a Bootstrap List component for a given list of items.
+  # Builds a List component for a given list of items.
   #
   # @param [Array] list_items the array of items
-  # @param [String] list_classes the CSS classes to style the list
+  # @param [String] classes the CSS classes to style the list
   # @return [String] the constructed <ul/> element
-  def bs_list(list_items, list_classes)
-    html = "<ul class='#{list_classes}'>"
+  def render_list(list_items, classes)
+    html = "<ul class='#{classes}'>"
 
-    list_items.each do |list_item|
+    Array(list_items).each do |list_item|
       html << '<li'
       html << ' class="active"' if list_item[:active]
       html << '>'
