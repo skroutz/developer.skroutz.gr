@@ -4,19 +4,19 @@ module DocumentHelper
   # @param [Hash] doc the Doc to check
   # @return [Boolean] true for deprecated Doc, otherwise false
   def deprecated?(doc)
-    doc.deprecated == true
+    doc[:deprecated] == true
   end
 
   def featured?(doc)
-    doc.featured == true
+    doc[:featured] == true
   end
 
   def flavored?(doc)
-    doc.flavors.blank? || (doc.flavors.present? && doc.flavors.include?(flavor))
+    doc[:flavors].blank? || (doc[:flavors].present? && doc[:flavors].include?(flavor))
   end
 
   def featured
-    data.docs.select do |_, doc|
+    data[:docs].select do |_, doc|
       featured?(doc) && !deprecated?(doc) && flavored?(doc)
     end
   end
