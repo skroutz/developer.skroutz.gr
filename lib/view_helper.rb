@@ -12,12 +12,12 @@ module ViewHelper
     end
   end
 
-  # Returns proper CSS classes if given Doc is the currently visited
+  # Returns proper CSS classes if given parent page URL is the currently visited
   #
-  # @param [String] doc the Doc to check if is active
+  # @param [String] url the URL to check if is active
   # @return [String] the active CSS classes
-  def active_parent_link(doc)
-    'active in' if current_page.url =~ /#{Regexp.quote(doc[:base])}/
+  def active_parent_classes(url)
+    'active in' if current_page.url =~ /#{Regexp.quote(url)}/
   end
 
   # Returns proper CSS classes if given Page Doc is the currently visited
@@ -34,7 +34,7 @@ module ViewHelper
   # @param [Hash] doc the doc data
   # @return [String] the html anchor element
   def sidebar_parent_link(key, doc)
-    html = "<a class='collapse-btn #{active_parent_link(doc)}' "
+    html = "<a class='collapse-btn #{active_parent_classes(doc[:base])}' "
     html << "data-toggle='collapse' data-parent='.nav-sidebar' "
     html << "href='#nav-sidebar-#{key}'>"
     html << t("titles.#{key}",
