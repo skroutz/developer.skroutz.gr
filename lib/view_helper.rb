@@ -149,10 +149,10 @@ module ViewHelper
   #
   # @param [Hash] page the page to build the array for
   # @return [Array] the array list
-  def locale_links(page)
+  def available_locales(page = current_page)
     return [] unless localized?(page)
 
-    list_items = Array.new
+    locales = []
 
     page.data.locale[flavor].each do |lang|
       active = (lang == I18n.locale.to_s)
@@ -176,9 +176,9 @@ module ViewHelper
       html << "<span class='lang-name'>#{t('lang.'+lang)}</span>"
       html << '</a>'
 
-      list_items << { html: html, active: active }
+      locales << { lang: lang, url: url, active: active, skip: active, html: html }
     end
 
-    list_items
+    locales
   end
 end

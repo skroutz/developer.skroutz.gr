@@ -14,7 +14,7 @@
         <i class="fa-globe"></i>
         <%= t('sidebar.language') %>
       </h5>
-      <%= bs_list(locale_links(current_page), 'nav-lang') %>
+      <%= bs_list(available_locales, 'nav-lang') %>
     <% end %>
 
     <%# Docs %>
