@@ -67,26 +67,17 @@ module ViewHelper
     html
   end
 
-  # Returns a link to edit source on GitHub repo
-  #
-  # @return [String] the html anchor element
-  def edit_link
-    url = current_page.source_file.sub(/^(.*)\/source/,
-      "#{settings.github_profile}/developer.skroutz.gr/blob/master/source")
-
-    link_to "<span>#{t('common.edit_on_github')}</span>", url,
-      title: t('common.edit_on_github'), class: 'btn-edit-github'
-  end
-
   # Builds a set of <span> elements for a given list of items.
   #
   # @param [Array] items the array of items
   # @param [String] classes the CSS classes to style the list
   # @return [String] the constructed <span> elements
-  def bs_text(items, classes)
+  def render_inline(items, classes)
     html = "<span class='#{classes}'>"
 
-    items.each do |item|
+    Array(items).each do |item|
+      next if !item[:skip].nil? && item[:skip]
+
       html << '<span class="item'
       html << ' active' if item[:active]
       html << '">'
@@ -96,6 +87,17 @@ module ViewHelper
 
     html << '</span>'
     html
+  end
+
+  # Returns a link to edit source on GitHub repo
+  #
+  # @return [String] the html anchor element
+  def edit_link
+    url = current_page.source_file.sub(/^(.*)\/source/,
+      "#{settings.github_profile}/developer.skroutz.gr/blob/master/source")
+
+    link_to "<span>#{t('common.edit_on_github')}</span>", url,
+      title: t('common.edit_on_github'), class: 'btn-edit-github'
   end
 
   # Builds a Bootstrap List component for a given list of items.
