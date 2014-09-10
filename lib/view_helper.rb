@@ -20,12 +20,12 @@ module ViewHelper
     'active in' if current_page.url =~ /#{Regexp.quote(url)}/
   end
 
-  # Returns proper CSS classes if given Page Doc is the currently visited
+  # Returns proper CSS classes if given child page URL is the currently visited
   #
-  # @param [String] doc_page_url the Doc page url to check if is active
+  # @param [String] url the URL to check if is active
   # @return [String] the active CSS classes
-  def active_child_link(doc_page_url)
-    'active' if doc_page_url == current_page.url
+  def active_child_classes(url)
+    'active' if url == current_page.url
   end
 
   # Builds a Doc parent link for Sidebar
@@ -54,7 +54,7 @@ module ViewHelper
   def sidebar_child_link(doc_key, doc, page)
     page_url = url_to_doc_page(doc.base, page)
 
-    html = "<a class='navbar-link #{active_child_link(page_url)}' "
+    html = "<a class='navbar-link #{active_child_classes(page_url)}' "
     html << "href='#{page_url}'>"
     html << t("docs.#{doc_key}.#{page.title}",
               flavor: settings.site_name.capitalize)
