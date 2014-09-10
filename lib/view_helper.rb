@@ -1,4 +1,4 @@
-module PageNavigationHelper
+module ViewHelper
   # Constructs the relative url of a given inner Doc page
   #
   # @param [String] doc_base_url the base url of the Doc
