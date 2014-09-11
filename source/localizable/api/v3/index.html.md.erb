@@ -7,6 +7,9 @@ title: overview
 
 <%= partial 'partials/toc' %>
 
+## Authorization
+To access any API v3 resource an access_token is necessary. Get one using <%= link_to 'OAuth 2.0 Authorization', '/authorization' %>.
+
 ## Schema
 
 All API access is over HTTPS, and accessed from the `<%= settings.api_domain %>`
@@ -16,7 +19,9 @@ A list of all the example requests in this documentation as a [Postman](http://w
 collection can be found <%= link_to 'here', "/assets/misc/#{flavor}_postman_collection.json" %>.
 
 <pre class="terminal">
-$ curl -i https://<%= settings.api_domain %>/categories/999999999
+curl -XGET http://<%= settings.api_domain %>/categories/999999999 \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3' \
+  -H 'Authorization: Bearer your_access_token_here'
 
 HTTP/1.1 404 NOT FOUND
 Server: nginx
@@ -123,7 +128,9 @@ default.  You can specify further pages with the `page` parameter. You can also
 set a custom page size to 10 with the `per` parameter.
 
 <pre class="terminal">
-$ curl https://<%= settings.api_domain %>/categories?page=2&per=10
+$ curl https://<%= settings.api_domain %>/categories?page=2&per=10 \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3' \
+  -H 'Authorization: Bearer your_access_token_here'
 </pre>
 
 When there are other pages the response will contain the [Link](http://tools.ietf.org/html/rfc5988) header.
@@ -146,7 +153,9 @@ You can check the returned HTTP headers of any API request to see your current
 rate limit status:
 
 <pre class="terminal">
-$ curl -i https://<%= settings.api_domain %>/categories/1440
+$ curl -i https://<%= settings.api_domain %>/categories/1440 \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3' \
+  -H 'Authorization: Bearer your_access_token_here'
 
 HTTP/1.1 200 OK
 Date: Mon, 01 Jul 2013 17:27:06 GMT
@@ -177,7 +186,9 @@ new Date(1372700873 * 1000)
 Once you go over the rate limit you will receive an error response:
 
 <pre class="terminal">
-$ curl -i https://<%= settings.api_domain %>/categories/1440
+$ curl -i https://<%= settings.api_domain %>/categories/1440 \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3' \
+  -H 'Authorization: Bearer your_access_token_here'
 
 HTTP/1.1 403 Forbidden
 Date: Tue, 20 Aug 2013 14:50:41 GMT
@@ -214,7 +225,9 @@ has not changed, the server will return a `304 Not Modified`.
 ###### Case: Request without `If-Modified-Since` nor `If-None-Match` headers
 
 <pre class="terminal">
-$ curl -i https://<%= settings.api_domain %>/categories/1440
+$ curl -i https://<%= settings.api_domain %>/categories/1440 \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3' \
+  -H 'Authorization: Bearer your_access_token_here'
 
 HTTP/1.1 200 OK
 Cache-Control: private, max-age=60
@@ -230,7 +243,10 @@ X-RateLimit-Reset: 1372700873
 ###### Case: Request with `If-Modified-Since` header
 
 <pre class="terminal">
-$ curl -i https://<%= settings.api_domain %>/categories/1440 -H "If-Modified-Since: Thu, 05 Jul 2012 15:31:30 GMT"
+$ curl -i https://<%= settings.api_domain %>/categories/1440  \
+  -H "If-Modified-Since: Thu, 05 Jul 2012 15:31:30 GMT" \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3' \
+  -H 'Authorization: Bearer your_access_token_here'
 
 HTTP/1.1 304 Not Modified
 Cache-Control: private, max-age=60
@@ -245,7 +261,10 @@ X-RateLimit-Reset: 1372700873
 ###### Case: Request with `If-None-Match` header
 
 <pre class="terminal">
-$ curl -i https://<%= settings.api_domain %>/categories/1440 -H 'If-None-Match: "644b5b0155e6404a9cc4bd9d8b1ae730"'
+$ curl -i https://<%= settings.api_domain %>/categories/1440 \
+  -H 'If-None-Match: "644b5b0155e6404a9cc4bd9d8b1ae730"' \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3' \
+  -H 'Authorization: Bearer your_access_token_here'
 
 HTTP/1.1 304 Not Modified
 Cache-Control: private, max-age=60
