@@ -14,3 +14,15 @@ title: product
 </pre>
 
 <%= render_recording :products_show %>
+
+## Search for products
+
+<pre class="terminal">
+  GET /shops/:shop_id/products/search?shop_uid=value
+</pre>
+
+Name        | Type    | Description
+----------- | ------- | -----------
+`shop_uid`  | Integer | Search with the product identifier as assigned by the shop
+
+<%= render_recording :products_search %>
