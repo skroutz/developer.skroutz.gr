@@ -30,6 +30,7 @@ en:
       filter_groups: 'Filter Groups'
       favorites: 'User Favorites'
       notifications: 'User Notifications'
+      changelog: 'Changelog'
       troubleshooting: 'Troubleshooting'
       early_access: 'Early Access Request'
     apiv2:

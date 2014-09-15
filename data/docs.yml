@@ -13,6 +13,7 @@ apiv3:
     - { title: 'filter_groups' }
     - { title: 'favorites' }
     - { title: 'notifications' }
+    - { title: 'changelog' }
 
 apiv2:
   base: '/api/v2/'
