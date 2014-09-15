@@ -1,0 +1,16 @@
+---
+parent: apiv3
+title: changelog
+---
+
+# Changelog <%= edit_link %>
+
+## 2014-09-15
+
+New endpoint, `GET` `/shops/:shop_id/products/search{?shop_uid}`, 
+: Search is now provided for products of a specified shop by shop_uid,
+<%= link_to 'Read more', '/api/v3/product#search-for-products' %>.
+
+New attribute for <%= link_to 'Product', '/api/v3/product' %>
+: Product representation now contains `shop_uid` attribute, which stands for the 
+product identifier as the associated shop specifies it the <%= link_to 'xml feed', '/feedspec#unique-id' %>.
