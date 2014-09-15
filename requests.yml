@@ -240,6 +240,12 @@ requests:
       headers:
         <<: *default_headers
   -
+    key: products_search
+    request:
+      url: '{{base_url}}/shops/11/products/search?shop_uid=2209985'
+      headers:
+        <<: *default_headers
+  -
     key: favorites_index
     request:
       url: '{{base_url}}/favorites'

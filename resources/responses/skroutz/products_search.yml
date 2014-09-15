@@ -1,0 +1,36 @@
+---
+:request:
+  :url: https://api.skroutz.gr/shops/11/products/search?shop_uid=2209985
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3
+    :authorization: Bearer EnKxQk5QYAdVVMFdmBerPRjyvQNyDhdOdeEFH20C1rhjzbhCjPYj/Q8uAUr8DwwBDlxHLGbOrZnbyRkZwwjA==
+  :verb: GET
+:response:
+  :status: 200
+  :headers:
+    !binary "c2VydmVy": nginx
+    !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
+    !binary "dmFyeQ==": Accept-Encoding
+    !binary "eC1yYXRlbGltaXQtbGltaXQ=": '100'
+    !binary "eC1yYXRlbGltaXQtcmVtYWluaW5n": '99'
+    !binary "eC1yYXRlbGltaXQtcmVzZXQ=": '1410775320'
+    !binary "c3RhdHVz": 200 OK
+    !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
+    !binary "Y2FjaGUtY29udHJvbA==": max-age=0, private, must-revalidate
+    !binary "eC1yZXF1ZXN0LWlk": '794167260'
+    !binary "eC1ydW50aW1l": '0.081089'
+    !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
+    !binary "eC1hcHA=": lunkwill_ssl
+    !binary "Y29udGVudC1sZW5ndGg=": '323'
+    !binary "YWNjZXB0LXJhbmdlcw==": bytes
+    !binary "ZGF0ZQ==": Mon, 15 Sep 2014 10:01:45 GMT
+    !binary "eC12YXJuaXNo": '794167260'
+    !binary "YWdl": '0'
+    !binary "dmlh": 1.1 varnish
+    !binary "Y29ubmVjdGlvbg==": close
+    !binary "eC1vcmlnaW4=": varnish1
+    !binary "eC1jYWNoZQ==": MISS
+  :body: ! '{"products":[{"id":16514043,"name":"Apple - NB MacBook Pro Retina MGXA2GR/A
+    15''''","sku_id":5265267,"shop_id":11,"category_id":25,"availability":"1 \u03ad\u03c9\u03c2
+    3 \u03b7\u03bc\u03ad\u03c1\u03b5\u03c2","click_url":"https://www.skroutz.gr/products/show/16514043?client_id=RO6HMDnulVMcaQwxts3xw%3D%3D&from=api","shop_uid":"2209985","price":2169.0}],"meta":{"pagination":{"total_results":1,"total_pages":1,"page":1,"per":25}}}'
+:created_at: 2014-09-15 13:01:45.745129952 +03:00
