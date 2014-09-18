@@ -4,6 +4,7 @@ apiv3:
   icon: 'fa-code'
   pages:
     - { title: 'overview', url: '/api/v3/' }
+    - { title: 'changelog' }
     - { title: 'category' }
     - { title: 'sku' }
     - { title: 'product' }
@@ -13,7 +14,6 @@ apiv3:
     - { title: 'filter_groups' }
     - { title: 'favorites' }
     - { title: 'notifications' }
-    - { title: 'changelog' }
 
 apiv2:
   base: '/api/v2/'

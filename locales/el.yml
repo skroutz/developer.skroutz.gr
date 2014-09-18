@@ -19,6 +19,7 @@ el:
     apiv3:
       short_description: 'The official %{flavor} API. Access the huge %{flavor} database and create beautiful apps.'
       overview: 'Overview'
+      changelog: 'Changelog'
       category: 'Category'
       sku: 'SKU'
       product: 'Product'
@@ -28,7 +29,6 @@ el:
       filter_groups: 'Filter Groups'
       favorites: 'User Favorites'
       notifications: 'User Notifications'
-      changelog: 'Changelog'
       troubleshooting: 'Troubleshooting'
       early_access: 'Early Access Request'
     apiv2:
