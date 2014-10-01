@@ -67,7 +67,7 @@ be used to fetch them with ascending order.
 #### Linked Resources
 
 * <%= link_to 'Linked Resources', '/api/v3' %>
-  * <%= link_to 'SKU', '/api/v3/sku' %>
+* <%= link_to 'SKU', '/api/v3/sku' %>
 
 <pre class="terminal">
   GET /favorites
@@ -94,7 +94,7 @@ The response contains only favorites belonging to the specified favorite list.
 ## Create a new favorite
 
 <pre class="terminal">
-  POST /favorites?sku_id=89645
+  POST /favorites?favorite[sku_id]=89645
 </pre>
 
 <%= render_recording :favorite_create %>
