@@ -6,5 +6,5 @@
       f.src=d;g=b.getElementsByTagName(c)[0];g.parentNode.insertBefore(f,g);
     })(window,document,'script','https://analytics.alve.com/analytics.min.js','sa');
 
-    sa('settings', 'setAccount', 'SA-XXX-YY');  // Configure your Account.
+    sa('session', 'connect', 'SA-XXXX-YYYY');  // Connect your Account.
   </script>
