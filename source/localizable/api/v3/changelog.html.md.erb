@@ -5,9 +5,14 @@ title: changelog
 
 # Changelog <%= edit_link %>
 
-## 2014-09-15
+## 2014-10-08 - v3.0.2
 
-New endpoint, `GET` `/shops/:shop_id/products/search{?shop_uid}`, 
+Review sorting is changed in <%= link_to 'SKU reviews', '/api/v3/sku#retrieve-an-skus-reviews' %>, `GET /api/sku/:sku_id/reviews`
+: Most recent non-demoted reviews are now returned first.
+
+## 2014-09-15 - v3.0.1
+
+New endpoint, `GET` `/shops/:shop_id/products/search{?shop_uid}`
 : Search is now provided for products of a specified shop by shop_uid,
 <%= link_to 'Read more', '/api/v3/product#search-for-products' %>.
 
