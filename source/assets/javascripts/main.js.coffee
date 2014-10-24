@@ -135,15 +135,41 @@ UI.CodeExample =
 
     if $toggler.is('.active')
       $response.slideUp()
-      $toggler.removeClass('active').text('view response')
+      $toggler.removeClass('active').text('View Response')
     else
       $response.slideDown()
-      $toggler.addClass('active').text('hide response')
+      $toggler.addClass('active').text('Hide Response')
 
   bindListeners: ($domElement) ->
     $domElement.on 'click.ui.codeExample', (e) ->
       e.preventDefault()
       UI.CodeExample.toggleResponse($(@))
+
+###
+  UI.ResponseHeaders
+###
+class UI.ResponseHeaders
+  ACTIVE_CLASS = 'active'
+  HIDDEN_CLASS = 'hidden'
+
+  constructor: (el) ->
+    @$el = $(el)
+    @bindListeners()
+
+  bindListeners: ->
+    @$el.on 'click.ui.ResponseHeaders', @toggleHeader
+
+  toggleHeader: (e) ->
+    $el = $(e.currentTarget)
+    $headers = $($el.data('target'))
+
+    if $headers.hasClass(HIDDEN_CLASS)
+      $el.text($el.data('hideText'))
+    else
+      $el.text($el.data('showText'))
+
+    $el.toggleClass(ACTIVE_CLASS)
+    $headers.toggleClass(HIDDEN_CLASS)
 
 ###
   UI.Table
@@ -163,6 +189,7 @@ UI.Table =
     UI.BackToTop.bindListeners $('[data-ui-scope="backToTop"]')
     UI.OffCanvas.bindListeners $('[data-ui-scope="offCanvasBtn"]')
     UI.CodeExample.bindListeners $('.example').find('.toggler')
+    new UI.ResponseHeaders('.http-headers-toggler')
     UI.Table.addResponsiveWrapper()
 
 )(window, document, jQuery)

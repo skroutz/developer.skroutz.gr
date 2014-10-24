@@ -61,7 +61,6 @@
 .example {
   .toggler {
     @extend .btn;
-    @extend .btn-xs;
     @extend .btn-primary;
 
     position: absolute;
@@ -73,18 +72,21 @@
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     border-width: 0;
+  }
 
-    &:after {
-      @extend .fa;
-      display: none;
-      content: $fa-var-angle-down;
-    }
+  .http-headers-toggler {
+    @extend .toggler;
 
-    &.open {
-      &:after {
-        @extend .fa;
-        content: $fa-var-angle-up;
-      }
+    top: 10px;
+    position: absolute;
+    float: right;
+    background-color: $app-clr-grey;
+    color: $app-clr-white;
+    border-top-left-radius: $border-radius-base;
+    border-top-right-radius: $border-radius-base;
+
+    &.active, &:hover {
+      background-color: $app-clr-greyDark;
     }
   }
 }
@@ -93,12 +95,16 @@
 .example {
   .response {
     display: none;
+    position: relative;
 
     .headers {
       font-weight: 700;
-      background-color: $pre-bg;
+      background-color: inherit;
       border-top: 1px solid darken($pre-bg, 12%);
-      border-bottom: 1px solid darken($pre-bg, 12%);
+    }
+
+    .http-headers {
+      background-color: $app-clr-greyLight;
     }
 
     pre {
