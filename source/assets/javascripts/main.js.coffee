@@ -161,7 +161,7 @@ class UI.ResponseHeaders
 
   toggleHeader: (e) ->
     $el = $(e.currentTarget)
-    $headers = $($el.data('target'))
+    $headers = $el.siblings($el.data('target'))
 
     if $headers.hasClass(HIDDEN_CLASS)
       $el.text($el.data('hideText'))
