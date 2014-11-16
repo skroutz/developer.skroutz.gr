@@ -5,6 +5,11 @@ title: changelog
 
 # Changelog <%= edit_link %>
 
+## 2014-10-08 - v3.0.3
+
+Cache <%= link_to 'Filter Groups', '/api/v3/filter_groups#list-filtergroups' %>, `GET /api/categories/:category_id/filter_groups`
+: Default cache now is 5 minutes via `cache-control: max-age=300, private`.
+
 ## 2014-10-08 - v3.0.2
 
 Review sorting is changed in <%= link_to 'SKU reviews', '/api/v3/sku#retrieve-an-skus-reviews' %>, `GET /api/sku/:sku_id/reviews`
