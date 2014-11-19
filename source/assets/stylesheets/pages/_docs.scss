@@ -12,7 +12,7 @@
   @include border-top-radius($border-radius-base);
   @include border-bottom-radius($border-radius-base);
   overflow: hidden;
-  padding: 15px;
+  padding: 20px 15px;
 }
 
 .panel-doc {
@@ -26,6 +26,7 @@
       @extend .fa;
       @extend .fa-4x;
       color: $app-clr-grey;
+      font-size: 56px;
     }
 
     @media (max-width: $screen-sm-max) {
@@ -44,6 +45,19 @@
     padding: 5px 20px;
     border-left: 1px solid $app-clr-greyLight;
 
+    h3 {
+      margin-top: 0;
+      font-weight: 400;
+      font-size: 24px;
+      color: $app-clr-greyDark;
+    }
+
+    .label-warning {
+      background: $app-clr-grey;
+      font-size: 12px;
+      padding-top: 4px;
+    }
+
     @media (max-width: $screen-sm-max) {
       float: none;
       width: 100%;
@@ -51,10 +65,11 @@
       padding: 0 5px;
       border-top: 1px solid $app-clr-greyLight;
       border-left: 0 none;
+    }
 
-      .goto {
-        display: block;
-      }
+    a.goto {
+      display: block;
+      font-size: 14px;
     }
   }
 }

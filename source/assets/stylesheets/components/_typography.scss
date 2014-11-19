@@ -62,17 +62,25 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   @include title-strong();
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   border-bottom: 1px solid darken($app-clr-greyLight, 12%);
+  font-family: $app-font-ubuntu;
+  font-weight: 300;
+  font-size: 34px;
+  padding-bottom: 10px;
 }
 
 h2 {
   margin: 45px 0 10px;
   border-bottom: 1px solid darken($app-clr-greyLight, 12%);
+  font-size: 28px;
+  font-weight: 300;
+  margin-bottom: 25px;
 }
 
 h3 {
   margin: 25px 0 10px;
+  font-size: 24px;
 }
 
 h4 {
@@ -84,4 +92,10 @@ h5 {
   @extend .text-uppercase;
   margin: 20px 0 5px;
   font-weight: 700;
+}
+
+p,
+ul,
+dl {
+  font-size: 15px;
 }

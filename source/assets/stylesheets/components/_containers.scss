@@ -17,11 +17,10 @@
   padding: 30px 0;
 
   .title {
-    font-weight: 300;
     font-size: 2.5em;
     line-height: 1.5em;
     border: 0 none;
-    font-family: $app-font-ubuntu;
+    font-weight: 300;
 
     @media (max-width: $screen-sm-max) {
       margin-top: 0;
@@ -60,10 +59,10 @@
 //
 // The featured items block.
 .container-featured {
-  margin-bottom: 20px;
+  margin-bottom: 60px;
   border-top: 3px solid lighten($app-clr-grey, 21%);
   border-bottom: 3px solid lighten($app-clr-grey, 21%);
-  background-color: darken($app-clr-greyLight, 6%);
+  background-color: darken($app-clr-white, 2%);
 
   a {
     display: block;

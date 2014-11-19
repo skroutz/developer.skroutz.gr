@@ -83,6 +83,7 @@
       background-position: -530px -60px;
       background-repeat: no-repeat;
       background-size: 679px 110px;
+      font-family: $app-font-ubuntu;
 
       @media (max-width: $screen-xs-max) {
         width: 85%;
@@ -102,17 +103,18 @@
     @extend .fa;
     position: absolute;
     left: 25px;
-    top: 10px;
+    top: 12px;
+    font-size: 12px;
 
     content: $fa-var-search !important;
-    color: $app-clr-grey;
+    color: lighten($app-clr-grey, 15%);
   }
 
   .st-search {
     width: 220px;
-    padding: 2px 0 2px 35px;
+    padding: 2px 0 2px 30px;
     border-radius: $border-radius-small;
-    font-size: .9em;
+    font-size: .8em;
     height: 30px;
     margin-top: 3px;
 

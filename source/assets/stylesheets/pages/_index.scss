@@ -3,13 +3,28 @@
 
 
 .index {
+  font-weight: 300;
+  
   .container-header {
     @extend .container;
+  }
+
+  h1 {
+    font-family: $app-font-open;
+    font-size: 34px;
+    padding-bottom: 0;
   }
 }
 
 // Features - Advantages list
 .intro-col-features {
+
+  h3 {
+    font-size: 24px;
+    font-weight: 400;
+    margin: 10px 0 0;
+  }
+
   ul {
     @extend .clearfix;
     @extend .fa-ul;
@@ -19,7 +34,7 @@
       width: 40%;
       height: 2.0em;
       margin: 20px 7% 40px 0;
-      padding: 0;
+      padding: 0 0 0 5px;
       line-height: 1.6;
 
       &:before {
@@ -31,7 +46,8 @@
         @extend .fa;
         @extend .fa-li;
 
-        margin-top: 3px;
+        margin-top: 7px;
+        font-size: 8px;
       }
 
       @media (max-width: $screen-sm-max) {
@@ -44,11 +60,13 @@
 
 // Open Source Software teaser
 .intro-col-oss {
-  margin-top: 55px;
+  margin-top: 45px;
 
   p {
-    font-size: .95em;
-    line-height: 1.7;
+    font-size: .85em;
+    line-height: 1.6;
+    font-weight: 400;
+    color: lighten($app-clr-greyDark, 15%);
   }
 
   .btn {

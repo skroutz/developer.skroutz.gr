@@ -28,6 +28,8 @@ body {
 
 footer {
   height: $app-h-footer;
+  font-weight: 400;
+  color: $app-clr-greyDark;
 
   @media (max-width: $screen-xs-max) {
     margin-bottom: 30px;
