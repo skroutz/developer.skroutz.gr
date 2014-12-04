@@ -5,6 +5,11 @@ title: changelog
 
 # Changelog <%= edit_link %>
 
+## 2014-12-04 - v3.0.4
+
+Add `q` metadata to <%= link_to 'Search', '/api/v3/search' %>, `GET /api/search`
+: The applied search query is reflected in the `q` key of the metadata.
+
 ## 2014-10-08 - v3.0.3
 
 Cache <%= link_to 'Filter Groups', '/api/v3/filter_groups#list-filtergroups' %>, `GET /api/categories/:category_id/filter_groups`
@@ -22,5 +27,5 @@ New endpoint, `GET` `/shops/:shop_id/products/search{?shop_uid}`
 <%= link_to 'Read more', '/api/v3/product#search-for-products' %>.
 
 New attribute for <%= link_to 'Product', '/api/v3/product' %>
-: Product representation now contains `shop_uid` attribute, which stands for the 
+: Product representation now contains `shop_uid` attribute, which stands for the
 product identifier as the associated shop specifies it the <%= link_to 'xml feed', '/feedspec#unique-id' %>.
