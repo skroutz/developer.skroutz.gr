@@ -3,7 +3,7 @@
   :url: https://api.skroutz.gr/search?q=ipone
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer Qgq1ofejerxdYPnpOYaT1GRhwRPczj2AnkZFtNi1jrVgchHJib5xL4QkQPJYNWElNoPiOp5VBqsmoq6HgMiEA==
+    :authorization: Bearer UN9JvnNINxxoVM79dRYtcBxYeYrz31DPi2JS1QdAiNJryBJNj7Q8eadkpwZ5wfqG5vZVYXC0A2pnE0doYv2GA==
   :params:
     :page: 1
     :per: 2
@@ -11,28 +11,31 @@
 :response:
   :status: 200
   :headers:
-    !binary "c2VydmVy": nginx
-    !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
-    !binary "dmFyeQ==": Accept-Encoding
-    !binary "c3RhdHVz": 200 OK
-    !binary "bGluaw==": <https://api.skroutz.gr/search?page=2&per=2&q=ipone>; rel="last",
-      <https://api.skroutz.gr/search?page=2&per=2&q=ipone>; rel="next"
-    !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
-    !binary "Y2FjaGUtY29udHJvbA==": max-age=0, private, must-revalidate
-    !binary "eC1yZXF1ZXN0LWlk": '578822512'
-    !binary "eC1ydW50aW1l": '0.080183'
-    !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "eC1hcHA=": lunkwill_ssl
-    !binary "Y29udGVudC1sZW5ndGg=": '389'
-    !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:44:35 GMT
-    !binary "eC12YXJuaXNo": '578822512'
-    !binary "YWdl": '0'
-    !binary "dmlh": 1.1 varnish
-    !binary "Y29ubmVjdGlvbg==": close
-    !binary "eC1vcmlnaW4=": varnish1
-    !binary "eC1jYWNoZQ==": MISS
-  :body: ! '{"categories":[{"id":1229,"name":"\u039b\u03b9\u03c0\u03b1\u03bd\u03c4\u03b9\u03ba\u03ac
+    server: nginx
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '78'
+    x-ratelimit-reset: '1417707300'
+    status: 200 OK
+    x-ua-compatible: IE=Edge,chrome=1
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '1630392805'
+    x-runtime: '0.255746'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: lunkwill_ssl
+    content-length: '392'
+    accept-ranges: bytes
+    date: Thu, 04 Dec 2014 15:34:11 GMT
+    x-varnish: '1630392805'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: lb1
+    x-cache: MISS
+  :body: '{"categories":[{"id":1229,"name":"\u039b\u03b9\u03c0\u03b1\u03bd\u03c4\u03b9\u03ba\u03ac
     Moto","children_count":0,"image_url":"http://d.scdn.gr/images/categories/large/1229.jpg","parent_id":1227,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":3},{"id":1257,"name":"\u039a\u03b1\u03b8\u03b1\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2
-    & \u03a0\u03b5\u03c1\u03b9\u03c0\u03bf\u03af\u03b7\u03c3\u03b7 \u039c\u03bf\u03c4\u03bf\u03c3\u03c5\u03ba\u03bb\u03ad\u03c4\u03b1\u03c2","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/1257.jpg","parent_id":577,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":11}],"meta":{"alternatives":[{"term":"iphone","important":false}],"strong_matches":{},"pagination":{"total_results":3,"total_pages":2,"page":1,"per":2}}}'
-:created_at: 2014-08-25 17:44:35.320441234 +03:00
+    & \u03a0\u03b5\u03c1\u03b9\u03c0\u03bf\u03af\u03b7\u03c3\u03b7 \u039c\u03bf\u03c4\u03bf\u03c3\u03c5\u03ba\u03bb\u03ad\u03c4\u03b1\u03c2","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/1257.jpg","parent_id":577,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":11}],"meta":{"q":"ipone","alternatives":[{"term":"iphone","important":false}],"strong_matches":{},"pagination":{"total_results":2,"total_pages":1,"page":1,"per":2}}}'
+:created_at: 2014-12-04 17:33:14.084742458 +02:00

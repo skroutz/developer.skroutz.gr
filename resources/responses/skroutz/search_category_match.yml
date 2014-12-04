@@ -3,7 +3,7 @@
   :url: https://api.skroutz.gr/search?q=Tablets
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer Qgq1ofejerxdYPnpOYaT1GRhwRPczj2AnkZFtNi1jrVgchHJib5xL4QkQPJYNWElNoPiOp5VBqsmoq6HgMiEA==
+    :authorization: Bearer UN9JvnNINxxoVM79dRYtcBxYeYrz31DPi2JS1QdAiNJryBJNj7Q8eadkpwZ5wfqG5vZVYXC0A2pnE0doYv2GA==
   :params:
     :page: 1
     :per: 2
@@ -11,27 +11,32 @@
 :response:
   :status: 200
   :headers:
-    !binary "c2VydmVy": nginx
-    !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
-    !binary "dmFyeQ==": Accept-Encoding
-    !binary "c3RhdHVz": 200 OK
-    !binary "bGluaw==": <https://api.skroutz.gr/search?page=39&per=2&q=Tablets>; rel="last",
-      <https://api.skroutz.gr/search?page=2&per=2&q=Tablets>; rel="next"
-    !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
-    !binary "Y2FjaGUtY29udHJvbA==": max-age=0, private, must-revalidate
-    !binary "eC1yZXF1ZXN0LWlk": '578822415'
-    !binary "eC1ydW50aW1l": '0.118028'
-    !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "eC1hcHA=": lunkwill_ssl
-    !binary "Y29udGVudC1sZW5ndGg=": '331'
-    !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:44:34 GMT
-    !binary "eC12YXJuaXNo": '578822415'
-    !binary "YWdl": '0'
-    !binary "dmlh": 1.1 varnish
-    !binary "Y29ubmVjdGlvbg==": close
-    !binary "eC1vcmlnaW4=": varnish1
-    !binary "eC1jYWNoZQ==": MISS
-  :body: ! '{"categories":[{"id":1105,"name":"Tablets","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/1105.jpg","parent_id":1612,"fashion":false,"show_specifications":true,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":833},{"id":1608,"name":"\u0398\u03ae\u03ba\u03b5\u03c2
-    Tablet","children_count":0,"image_url":"http://d.scdn.gr/images/categories/large/1608.jpg","parent_id":1612,"fashion":false,"show_specifications":true,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":2164}],"meta":{"alternatives":[],"strong_matches":{"category":{"id":1105,"name":"Tablets","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/1105.jpg","parent_id":1612,"fashion":false,"show_specifications":true,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"}},"pagination":{"total_results":78,"total_pages":39,"page":1,"per":2}}}'
-:created_at: 2014-08-25 17:44:34.710886315 +03:00
+    server: nginx
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '81'
+    x-ratelimit-reset: '1417707300'
+    status: 200 OK
+    link: <https://api.skroutz.gr/search?page=43&per=2&q=Tablets>; rel="last", <https://api.skroutz.gr/search?page=2&per=2&q=Tablets>;
+      rel="next"
+    x-ua-compatible: IE=Edge,chrome=1
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '1630392606'
+    x-runtime: '0.295710'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: lunkwill_ssl
+    content-length: '334'
+    accept-ranges: bytes
+    date: Thu, 04 Dec 2014 15:34:10 GMT
+    x-varnish: '1630392606'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: lb1
+    x-cache: MISS
+  :body: '{"categories":[{"id":1105,"name":"Tablets","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/1105.jpg","parent_id":1612,"fashion":false,"show_specifications":true,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":935},{"id":1608,"name":"\u0398\u03ae\u03ba\u03b5\u03c2
+    Tablet","children_count":0,"image_url":"http://d.scdn.gr/images/categories/large/1608.jpg","parent_id":1612,"fashion":false,"show_specifications":true,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":2992}],"meta":{"q":"Tablets","alternatives":[],"strong_matches":{"category":{"id":1105,"name":"Tablets","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/1105.jpg","parent_id":1612,"fashion":false,"show_specifications":true,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"}},"pagination":{"total_results":85,"total_pages":43,"page":1,"per":2}}}'
+:created_at: 2014-12-04 17:33:13.044890220 +02:00

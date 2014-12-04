@@ -3,7 +3,7 @@
   :url: https://api.skroutz.gr/search?q=iphone
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer Qgq1ofejerxdYPnpOYaT1GRhwRPczj2AnkZFtNi1jrVgchHJib5xL4QkQPJYNWElNoPiOp5VBqsmoq6HgMiEA==
+    :authorization: Bearer UN9JvnNINxxoVM79dRYtcBxYeYrz31DPi2JS1QdAiNJryBJNj7Q8eadkpwZ5wfqG5vZVYXC0A2pnE0doYv2GA==
   :params:
     :page: 1
     :per: 2
@@ -11,27 +11,32 @@
 :response:
   :status: 200
   :headers:
-    !binary "c2VydmVy": nginx
-    !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
-    !binary "dmFyeQ==": Accept-Encoding
-    !binary "c3RhdHVz": 200 OK
-    !binary "bGluaw==": <https://api.skroutz.gr/search?page=58&per=2&q=iphone>; rel="last",
-      <https://api.skroutz.gr/search?page=2&per=2&q=iphone>; rel="next"
-    !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
-    !binary "Y2FjaGUtY29udHJvbA==": max-age=0, private, must-revalidate
-    !binary "eC1yZXF1ZXN0LWlk": '578822593'
-    !binary "eC1ydW50aW1l": '0.119539'
-    !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "eC1hcHA=": lunkwill_ssl
-    !binary "Y29udGVudC1sZW5ndGg=": '350'
-    !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:44:35 GMT
-    !binary "eC12YXJuaXNo": '578822593'
-    !binary "YWdl": '0'
-    !binary "dmlh": 1.1 varnish
-    !binary "Y29ubmVjdGlvbg==": close
-    !binary "eC1vcmlnaW4=": varnish1
-    !binary "eC1jYWNoZQ==": MISS
-  :body: ! '{"categories":[{"id":40,"name":"\u039a\u03b9\u03bd\u03b7\u03c4\u03ac \u03a4\u03b7\u03bb\u03ad\u03c6\u03c9\u03bd\u03b1","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/40.jpg","parent_id":86,"fashion":false,"show_specifications":true,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":12},{"id":579,"name":"\u0398\u03ae\u03ba\u03b5\u03c2
-    \u039a\u03b9\u03bd\u03b7\u03c4\u03ce\u03bd \u03a4\u03b7\u03bb\u03b5\u03c6\u03ce\u03bd\u03c9\u03bd","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/579.jpg","parent_id":86,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":8628}],"meta":{"alternatives":[],"strong_matches":{},"pagination":{"total_results":116,"total_pages":58,"page":1,"per":2}}}'
-:created_at: 2014-08-25 17:44:35.884915851 +03:00
+    server: nginx
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '75'
+    x-ratelimit-reset: '1417707300'
+    status: 200 OK
+    link: <https://api.skroutz.gr/search?page=64&per=2&q=iphone>; rel="last", <https://api.skroutz.gr/search?page=2&per=2&q=iphone>;
+      rel="next"
+    x-ua-compatible: IE=Edge,chrome=1
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '1630392962'
+    x-runtime: '0.293329'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: lunkwill_ssl
+    content-length: '359'
+    accept-ranges: bytes
+    date: Thu, 04 Dec 2014 15:34:12 GMT
+    x-varnish: '1630392962'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: lb1
+    x-cache: MISS
+  :body: '{"categories":[{"id":40,"name":"\u039a\u03b9\u03bd\u03b7\u03c4\u03ac \u03a4\u03b7\u03bb\u03ad\u03c6\u03c9\u03bd\u03b1","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/40.jpg","parent_id":86,"fashion":false,"show_specifications":true,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":19},{"id":579,"name":"\u0398\u03ae\u03ba\u03b5\u03c2
+    \u039a\u03b9\u03bd\u03b7\u03c4\u03ce\u03bd \u03a4\u03b7\u03bb\u03b5\u03c6\u03ce\u03bd\u03c9\u03bd","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/579.jpg","parent_id":86,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":7848}],"meta":{"q":"iphone","alternatives":[],"strong_matches":{},"pagination":{"total_results":127,"total_pages":64,"page":1,"per":2}}}'
+:created_at: 2014-12-04 17:33:15.043887990 +02:00

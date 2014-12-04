@@ -3,27 +3,30 @@
   :url: https://api.skroutz.gr/search?q=a
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer Qgq1ofejerxdYPnpOYaT1GRhwRPczj2AnkZFtNi1jrVgchHJib5xL4QkQPJYNWElNoPiOp5VBqsmoq6HgMiEA==
+    :authorization: Bearer UN9JvnNINxxoVM79dRYtcBxYeYrz31DPi2JS1QdAiNJryBJNj7Q8eadkpwZ5wfqG5vZVYXC0A2pnE0doYv2GA==
   :verb: GET
 :response:
   :status: 400
   :headers:
-    !binary "c2VydmVy": nginx
-    !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
-    !binary "c3RhdHVz": 400 Bad Request
-    !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
-    !binary "Y2FjaGUtY29udHJvbA==": no-cache
-    !binary "eC1yZXF1ZXN0LWlk": '578822405'
-    !binary "eC1ydW50aW1l": '0.040049'
-    !binary "eC1hcHA=": lunkwill_ssl
-    !binary "Y29udGVudC1sZW5ndGg=": '1'
-    !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:44:34 GMT
-    !binary "eC12YXJuaXNo": '578822405'
-    !binary "YWdl": '0'
-    !binary "dmlh": 1.1 varnish
-    !binary "Y29ubmVjdGlvbg==": close
-    !binary "eC1vcmlnaW4=": varnish1
-    !binary "eC1jYWNoZQ==": MISS
-  :body: ! ' '
-:created_at: 2014-08-25 17:44:34.559574024 +03:00
+    server: nginx
+    content-type: application/json; charset=utf-8
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '82'
+    x-ratelimit-reset: '1417707300'
+    status: 400 Bad Request
+    x-ua-compatible: IE=Edge,chrome=1
+    cache-control: no-cache
+    x-request-id: '1630392572'
+    x-runtime: '0.182098'
+    x-app: lunkwill_ssl
+    content-length: '1'
+    accept-ranges: bytes
+    date: Thu, 04 Dec 2014 15:34:10 GMT
+    x-varnish: '1630392572'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: lb1
+    x-cache: MISS
+  :body: " "
+:created_at: 2014-12-04 17:33:12.722387307 +02:00
