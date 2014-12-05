@@ -32,9 +32,9 @@ UI.Navbar =
   UI.Anchor
 ###
 UI.Anchor =
-  scrollToTarget: (target) ->
+  scrollToTarget: (target, scrollDuration = @_scrollDuration) ->
     $('html, body').animate { scrollTop: $(target).offset().top - 60 },
-      @_scrollDuration, -> window.location.hash = target
+      scrollDuration, -> window.location.hash = target
 
   bindListeners: ($domElement) ->
     $domElement.on 'click.ui.Anchor', (e) ->
