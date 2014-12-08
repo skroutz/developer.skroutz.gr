@@ -17,20 +17,20 @@ Add `q` metadata to <%= link_to 'Search', '/api/v3/search' %>, `GET /api/search`
 
 ## 2014-10-08 - v3.0.3
 
-Cache <%= link_to 'Filter Groups', '/api/v3/filter_groups#list-filtergroups' %>, `GET /api/categories/:category_id/filter_groups`
+Cache <%= link_to 'Filter Groups', '/api/v3/filter_groups', anchor: 'list-filtergroups' %>, `GET /api/categories/:category_id/filter_groups`
 : Default cache now is 5 minutes via `cache-control: max-age=300, private`.
 
 ## 2014-10-08 - v3.0.2
 
-Review sorting is changed in <%= link_to 'SKU reviews', '/api/v3/sku#retrieve-an-skus-reviews' %>, `GET /api/sku/:sku_id/reviews`
+Review sorting is changed in <%= link_to 'SKU reviews', '/api/v3/sku', anchor: 'retrieve-an-skus-reviews' %>, `GET /api/sku/:sku_id/reviews`
 : Most recent non-demoted reviews are now returned first.
 
 ## 2014-09-15 - v3.0.1
 
 New endpoint, `GET` `/shops/:shop_id/products/search{?shop_uid}`
 : Search is now provided for products of a specified shop by shop_uid,
-<%= link_to 'Read more', '/api/v3/product#search-for-products' %>.
+<%= link_to 'Read more', '/api/v3/product', anchor: 'search-for-products' %>.
 
 New attribute for <%= link_to 'Product', '/api/v3/product' %>
 : Product representation now contains `shop_uid` attribute, which stands for the
-product identifier as the associated shop specifies it the <%= link_to 'xml feed', '/feedspec#unique-id' %>.
+product identifier as the associated shop specifies it the <%= link_to 'xml feed', '/feedspec', anchor: 'unique-id' %>.
