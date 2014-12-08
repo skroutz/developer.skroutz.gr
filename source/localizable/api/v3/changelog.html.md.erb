@@ -5,6 +5,11 @@ title: changelog
 
 # Changelog <%= edit_link %>
 
+## 2014-12-08 - v3.0.5
+
+Hide products of future SKUs <%= link_to 'Products', '/api/v3/products' %>, `GET /api/products`
+: SKUs marked as "future" now respond with an empty list of Products.
+
 ## 2014-12-04 - v3.0.4
 
 Add `q` metadata to <%= link_to 'Search', '/api/v3/search' %>, `GET /api/search`
