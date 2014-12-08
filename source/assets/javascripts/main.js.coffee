@@ -191,5 +191,6 @@ UI.Table =
     UI.CodeExample.bindListeners $('.example').find('.toggler')
     new UI.ResponseHeaders('.http-headers-toggler')
     UI.Table.addResponsiveWrapper()
+    UI.Anchor.scrollToTarget(location.hash, 0) if location.hash isnt '#'
 
 )(window, document, jQuery)
