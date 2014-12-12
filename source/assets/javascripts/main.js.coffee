@@ -33,6 +33,7 @@ UI.Navbar =
 ###
 UI.Anchor =
   scrollToTarget: (target, scrollDuration = @_scrollDuration) ->
+    return if !$(target).length
     $('html, body').animate { scrollTop: $(target).offset().top - 60 },
       scrollDuration, -> window.location.hash = target
 
@@ -191,6 +192,6 @@ UI.Table =
     UI.CodeExample.bindListeners $('.example').find('.toggler')
     new UI.ResponseHeaders('.http-headers-toggler')
     UI.Table.addResponsiveWrapper()
-    UI.Anchor.scrollToTarget(location.hash, 0) if location.hash isnt '#'
+    UI.Anchor.scrollToTarget(location.hash, 0) if location.hash not in ['#', '']
 
 )(window, document, jQuery)
