@@ -33,6 +33,7 @@ UI.Navbar =
 ###
 UI.Anchor =
   scrollToTarget: (target, scrollDuration = @_scrollDuration) ->
+    return if !$(target).length
     $('html, body').animate { scrollTop: $(target).offset().top - 60 },
       scrollDuration, -> window.location.hash = target
 
