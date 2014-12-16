@@ -5,6 +5,14 @@ title: changelog
 
 # Changelog <%= edit_link %>
 
+## 2014-12-16 - v3.0.6
+
+Remove attribute filter_type from <%= link_to 'Filter', '/api/v3/filters' %>
+: Filter type information can now be accessed from the parent <%= link_to 'Filter Group', '/api/v3/filter_groups' %>.
+
+Expose attribute filter_type in <%= link_to 'Filter Groups', '/api/v3/filter_groups', anchor: 'list-filtergroups' %>
+: The filter type attribute is now present in the representation of filter groups.
+
 ## 2014-12-08 - v3.0.5
 
 Hide products of future <%= link_to 'SKUs', '/api/v3/sku/', anchor: 'retrieve-an-skus-products' %>, `GET /api/sku/:sku_id/products`
