@@ -7,7 +7,7 @@
 
     // Print each Analytics Ecommerce AddItem action
     foreach ($items as &$item) {
-      echo addItemAction($order['id'], $item);
+      echo addItemAction($order, $item);
     }
   ?>
   </script>
