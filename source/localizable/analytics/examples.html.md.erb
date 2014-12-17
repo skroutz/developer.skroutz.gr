@@ -18,9 +18,9 @@ your sales. Typically, an implementation consists of the following steps:
 
 The first step is to prepare the Ecommerce data of a completed order.
 
-Analytics reports data from the user's browser. Thus, since orders are completed
-on the server for a typical e-shop, a server-side logic is required to
-dynamically provide the ecommerce data to Analytics.
+Analytics reports data using the user's browser. Thus, some server-side logic
+is required to dynamically provide the ecommerce data to the browser for
+the Analytics client to report them.
 
 ##### Server-side Ecommerce data structure
 
@@ -56,4 +56,4 @@ following snippet, for the declaration of Analytics actions to happen:
 <%= render_code_from_file 'analytics/order_rendering' %>
 
 > ##### Note
-> Be sure to report any data after the Analytics.js load declaration.
+> Be sure to report any data **after** the Analytics.js declaration.

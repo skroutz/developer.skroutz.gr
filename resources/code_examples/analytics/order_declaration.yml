@@ -14,12 +14,12 @@
   $items = array();
   $items[0] = array(
     'id'        => 43667,
-    'price'     => '100.50',
+    'price'     => '97.00',
     'quantity'  => 1
   );
   $items[1] = array(
     'id'        => 25668,
-    'price'     => '200.00',
+    'price'     => '100.00',
     'quantity'  => 2
   );
 

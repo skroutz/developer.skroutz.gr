@@ -5,16 +5,10 @@
    * Builds an Analytics Ecommerce addOrder action.
    *
    * @param array $order The completed order to report.
-   * @return string The JavaScript representation of an Analytics Ecommerce
-   *  addOrder action.
+   * @return string The JavaScript representation of an Analytics Ecommerce addOrder action.
    */
   function addOrderAction(&$order) {
-    $order_data = json_encode(array(
-      'id'        => $order['id'],
-      'revenue'   => $order['revenue'],
-      'shipping'  => $order['shipping'],
-      'tax'       => $order['tax']
-    ));
+    $order_data = json_encode($order);
 
     return "sa('ecommerce', 'addOrder', {$order_data});";
   }
@@ -22,14 +16,13 @@
   /**
    * Builds an Analytics Ecommerce addItem action.
    *
-   * @param int $orderID The ID of the order
-   * @param array $item The purchesed item to report
-   * @return string The JavaScript representation of an Analytics Ecommerce
-   *  addItem action.
+   * @param array $order The completed order to report.
+   * @param array $item The purchesed product to report, part of this order.
+   * @return string The JavaScript representation of an Analytics Ecommerce addItem action.
    */
-  function addItemAction($orderID, &$item) {
+  function addItemAction(&$order, &$item) {
     $item_data = json_encode(array(
-      'order_id'    => $orderID,
+      'order_id'    => $order['id'],
       'product_id'  => $item['id'],
       'price'       => $item['price'],
       'quantity'    => $item['quantity']
