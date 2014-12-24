@@ -3,7 +3,7 @@
   :url: https://api.skroutz.gr/search?q=apple
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer UN9JvnNINxxoVM79dRYtcBxYeYrz31DPi2JS1QdAiNJryBJNj7Q8eadkpwZ5wfqG5vZVYXC0A2pnE0doYv2GA==
+    :authorization: Bearer mcmXAHRa6BqCOc3TQas5KEFIIB4VaHj1wEwrvUG6BljiO5UJO7XVfBmZ8cRyXNw2EJK2ijoos2brBwBOQ==
   :params:
     :page: 1
     :per: 5
@@ -16,28 +16,28 @@
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
     x-ratelimit-remaining: '80'
-    x-ratelimit-reset: '1417707300'
+    x-ratelimit-reset: '1419426840'
     status: 200 OK
-    link: <https://api.skroutz.gr/search?page=44&per=5&q=apple>; rel="last", <https://api.skroutz.gr/search?page=2&per=5&q=apple>;
+    link: <https://api.skroutz.gr/search?page=43&per=5&q=apple>; rel="last", <https://api.skroutz.gr/search?page=2&per=5&q=apple>;
       rel="next"
     x-ua-compatible: IE=Edge,chrome=1
     cache-control: max-age=0, private, must-revalidate
-    x-request-id: '1630392660'
-    x-runtime: '0.308747'
+    x-request-id: '1880267263'
+    x-runtime: '0.366738'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
     x-app: lunkwill_ssl
-    content-length: '511'
+    content-length: '547'
     accept-ranges: bytes
-    date: Thu, 04 Dec 2014 15:34:10 GMT
-    x-varnish: '1630392660'
+    date: Wed, 24 Dec 2014 13:13:43 GMT
+    x-varnish: '1880267263'
     age: '0'
     via: 1.1 varnish
     connection: close
     x-origin: lb1
     x-cache: MISS
-  :body: '{"categories":[{"id":40,"name":"\u039a\u03b9\u03bd\u03b7\u03c4\u03ac \u03a4\u03b7\u03bb\u03ad\u03c6\u03c9\u03bd\u03b1","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/40.jpg","parent_id":86,"fashion":false,"show_specifications":true,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":19},{"id":1105,"name":"Tablets","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/1105.jpg","parent_id":1612,"fashion":false,"show_specifications":true,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":45},{"id":579,"name":"\u0398\u03ae\u03ba\u03b5\u03c2
-    \u039a\u03b9\u03bd\u03b7\u03c4\u03ce\u03bd \u03a4\u03b7\u03bb\u03b5\u03c6\u03ce\u03bd\u03c9\u03bd","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/579.jpg","parent_id":86,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":4848},{"id":25,"name":"Laptops","children_count":0,"image_url":"http://b.scdn.gr/images/categories/large/25.jpg","parent_id":769,"fashion":false,"show_specifications":true,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":24},{"id":583,"name":"\u0391\u03bd\u03c4\u03b1\u03bb\u03bb\u03b1\u03ba\u03c4\u03b9\u03ba\u03ac
-    \u039a\u03b9\u03bd\u03b7\u03c4\u03ce\u03bd \u03c4\u03b7\u03bb\u03b5\u03c6\u03ce\u03bd\u03c9\u03bd","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/583.jpg","parent_id":86,"fashion":false,"show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":4762}],"meta":{"q":"apple","alternatives":[],"strong_matches":{"manufacturer":{"id":356,"name":"Apple","image_url":"http://b.scdn.gr/images/manufacturer_logos/000000/356/003730241e8ed691aa6b4e5f264a0e2d.jpg"}},"pagination":{"total_results":217,"total_pages":44,"page":1,"per":5}}}'
-:created_at: 2014-12-04 17:33:13.391497043 +02:00
+  :body: '{"categories":[{"id":40,"name":"\u039a\u03b9\u03bd\u03b7\u03c4\u03ac \u03a4\u03b7\u03bb\u03ad\u03c6\u03c9\u03bd\u03b1","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/40.jpg","parent_id":86,"fashion":false,"path":"76,1269,2,86,40","show_specifications":true,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":19},{"id":1105,"name":"Tablets","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/1105.jpg","parent_id":1612,"fashion":false,"path":"76,1269,22,1612,1105","show_specifications":true,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":46},{"id":579,"name":"\u0398\u03ae\u03ba\u03b5\u03c2
+    \u039a\u03b9\u03bd\u03b7\u03c4\u03ce\u03bd \u03a4\u03b7\u03bb\u03b5\u03c6\u03ce\u03bd\u03c9\u03bd","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/579.jpg","parent_id":86,"fashion":false,"path":"76,1269,2,86,579","show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":5390},{"id":25,"name":"Laptops","children_count":0,"image_url":"http://b.scdn.gr/images/categories/large/25.jpg","parent_id":769,"fashion":false,"path":"76,1269,22,769,25","show_specifications":true,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":23},{"id":583,"name":"\u0391\u03bd\u03c4\u03b1\u03bb\u03bb\u03b1\u03ba\u03c4\u03b9\u03ba\u03ac
+    \u039a\u03b9\u03bd\u03b7\u03c4\u03ce\u03bd \u03c4\u03b7\u03bb\u03b5\u03c6\u03ce\u03bd\u03c9\u03bd","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/583.jpg","parent_id":86,"fashion":false,"path":"76,1269,2,86,583","show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":4666}],"meta":{"q":"apple","alternatives":[],"strong_matches":{"manufacturer":{"id":356,"name":"Apple","image_url":"http://b.scdn.gr/images/manufacturer_logos/000000/356/003730241e8ed691aa6b4e5f264a0e2d.jpg"}},"pagination":{"total_results":214,"total_pages":43,"page":1,"per":5}}}'
+:created_at: 2014-12-24 15:12:09.385681604 +02:00

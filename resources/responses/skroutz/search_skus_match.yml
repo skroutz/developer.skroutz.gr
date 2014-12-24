@@ -3,7 +3,7 @@
   :url: https://api.skroutz.gr/search?q=samsung+galaxy+s5+16GB
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer UN9JvnNINxxoVM79dRYtcBxYeYrz31DPi2JS1QdAiNJryBJNj7Q8eadkpwZ5wfqG5vZVYXC0A2pnE0doYv2GA==
+    :authorization: Bearer mcmXAHRa6BqCOc3TQas5KEFIIB4VaHj1wEwrvUG6BljiO5UJO7XVfBmZ8cRyXNw2EJK2ijoos2brBwBOQ==
   :params:
     :page: 1
     :per: 2
@@ -16,25 +16,25 @@
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
     x-ratelimit-remaining: '73'
-    x-ratelimit-reset: '1417707300'
+    x-ratelimit-reset: '1419426840'
     status: 200 OK
     x-ua-compatible: IE=Edge,chrome=1
     cache-control: max-age=0, private, must-revalidate
-    x-request-id: '1630393099'
-    x-runtime: '0.586617'
+    x-request-id: '1880267813'
+    x-runtime: '0.609253'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
     x-app: lunkwill_ssl
-    content-length: '311'
+    content-length: '327'
     accept-ranges: bytes
-    date: Thu, 04 Dec 2014 15:34:13 GMT
-    x-varnish: '1630393099'
+    date: Wed, 24 Dec 2014 13:13:46 GMT
+    x-varnish: '1880267813'
     age: '0'
     via: 1.1 varnish
     connection: close
     x-origin: lb1
     x-cache: MISS
-  :body: '{"categories":[{"id":40,"name":"\u039a\u03b9\u03bd\u03b7\u03c4\u03ac \u03a4\u03b7\u03bb\u03ad\u03c6\u03c9\u03bd\u03b1","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/40.jpg","parent_id":86,"fashion":false,"show_specifications":true,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"}],"meta":{"q":"samsung
+  :body: '{"categories":[{"id":40,"name":"\u039a\u03b9\u03bd\u03b7\u03c4\u03ac \u03a4\u03b7\u03bb\u03ad\u03c6\u03c9\u03bd\u03b1","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/40.jpg","parent_id":86,"fashion":false,"path":"76,1269,2,86,40","show_specifications":true,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"}],"meta":{"q":"samsung
     galaxy s5 16GB","alternatives":[],"strong_matches":{},"pagination":{"total_results":1,"total_pages":1,"page":1,"per":2}}}'
-:created_at: 2014-12-04 17:33:16.163744872 +02:00
+:created_at: 2014-12-24 15:12:12.614989970 +02:00
