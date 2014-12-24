@@ -3,7 +3,7 @@
   :url: https://api.alve.com/search?q=ipone
   :headers:
     :accept: application/vnd.alve+json; version=3
-    :authorization: Bearer /nWNZ7z18NTvvX1VoEBPbw8330QRQ6vIYXWJshC/zZlQ9UktjjsLdask1zx2qGNxBlsi4LEWZdX6T0m78Rg==
+    :authorization: Bearer gnGGY6izXGLUTHatIL3d3dZh1/awP3835gjl20kgucxsbhOCeFN/IYiivVQFDpWjQePaPgvhBDGQLqwXrafdw==
   :params:
     :page: 1
     :per: 2
@@ -15,25 +15,25 @@
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '95'
-    x-ratelimit-reset: '1417708020'
+    x-ratelimit-remaining: '78'
+    x-ratelimit-reset: '1419427800'
     status: 200 OK
     x-ua-compatible: IE=Edge,chrome=1
     cache-control: max-age=0, private, must-revalidate
-    x-request-id: '1362440489'
-    x-runtime: '0.077857'
+    x-request-id: '1367905278'
+    x-runtime: '0.076663'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
     x-app: as1_ssl
-    content-length: '280'
+    content-length: '294'
     accept-ranges: bytes
-    date: Thu, 04 Dec 2014 15:46:54 GMT
-    x-varnish: '1362440489'
+    date: Wed, 24 Dec 2014 13:29:46 GMT
+    x-varnish: '1367905278'
     age: '0'
     via: 1.1 varnish
     connection: close
     x-origin: lb1
     x-cache: MISS
-  :body: '{"categories":[{"id":34,"name":"Cep Telefonu K\u0131l\u0131f\u0131","children_count":0,"image_url":"http://alve-a.scdn.gr/images/categories/large/34.jpg","parent_id":32,"fashion":false,"show_specifications":false,"manufacturer_title":"Markalar"}],"meta":{"q":"ipone","alternatives":[{"term":"iphone","important":false}],"strong_matches":{},"pagination":{"total_results":1,"total_pages":1,"page":1,"per":2}}}'
-:created_at: 2014-12-04 17:45:57.344519900 +02:00
+  :body: '{"categories":[{"id":34,"name":"Cep Telefonu K\u0131l\u0131f\u0131","children_count":0,"image_url":"http://alve-a.scdn.gr/images/categories/large/34.jpg","parent_id":32,"fashion":false,"path":"1,2,12,32,34","show_specifications":false,"manufacturer_title":"Markalar"}],"meta":{"q":"ipone","alternatives":[{"term":"iphone","important":false}],"strong_matches":{},"pagination":{"total_results":1,"total_pages":1,"page":1,"per":2}}}'
+:created_at: 2014-12-24 15:28:11.928748645 +02:00
