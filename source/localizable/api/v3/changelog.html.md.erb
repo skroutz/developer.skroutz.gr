@@ -5,6 +5,13 @@ title: changelog
 
 # Changelog <%= edit_link %>
 
+## 2014-12-24 - v3.0.7
+
+Expose attribute path in <%= link_to 'Category', '/api/v3/category', anchor: 'list-all-categories' %>
+: The category path attribute is now present in the representation of categories.  
+The path is a comma separated string of category IDs, from the root up to the
+category id which resembles a category path in the categories tree structure.
+
 ## 2014-12-16 - v3.0.6
 
 Remove attribute filter_type from <%= link_to 'Filter', '/api/v3/filters' %>
