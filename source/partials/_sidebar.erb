@@ -86,6 +86,14 @@
                     settings.github_profile,
                     class: 'nav-link' %>
       </li>
+      <% if settings.engineering_blog_domain %>
+        <li>
+          <%= link_to t('index.oss.engineering_blog',
+                      flavor: settings.site_name.titleize),
+                      "http://#{settings.engineering_blog_domain}",
+                      class: 'nav-link' %>
+        </li>
+      <% end %>
     </ul>
 
     <%# Footer %>
