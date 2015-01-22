@@ -58,44 +58,16 @@ Use the <%= link_to 'ecommerce:addItem', 'ecommerce/#additem' %> command to trac
 <% tracking_script = YAML.load_file(File.expand_path(File.join('./resources',
                                                                'code_examples',
                                                                "analytics/#{flavor}/js_snippet.yml"))) %>
+<% complete_example = YAML.load_file(File.expand_path(File.join('./resources',
+                                                               'code_examples',
+                                                               "analytics/complete_example.yml"))) %>
+
 
 ~~~ html
 <!-- Add the Tracking Script and Connect to your Account -->
 <%= tracking_script[:code] -%>
 
-<!-- Send the Order data -->
-<script>
-  sa('ecommerce', 'addOrder', JSON.stringify({
-    order_id: '123456',  // Order ID. Required.
-    revenue:  '87.45',   // Grand Total. Includes Tax and Shipping.
-    shipping: '5.45',    // Total Shipping Cost.
-    tax:      '10.50'    // Total Tax.
-  }));
-</script>
-
-<!-- Send the Item data for each item in the shopping cart -->
-<script>
-  sa('ecommerce', 'addItem', JSON.stringify({
-    order_id:   '123456',  // Order ID. Required.
-    product_id: '111222',  // Product ID. Required.
-    price:      '5.50',    // Price per Unit. Required.
-    quantity:   '4'        // Quantity of Items. Required.
-  }));
-
-  sa('ecommerce', 'addItem', JSON.stringify({
-    order_id:   '123456',
-    product_id: '303404',
-    price:      '60.00',
-    quantity:   '1'
-  }));
-
-  sa('ecommerce', 'addItem', JSON.stringify({
-    order_id:   '123456',
-    product_id: '121234',
-    price:      '16.77',
-    quantity:   '2'
-  }));
-</script>
+<%= complete_example[:code] -%>
 ~~~
 
 Visit the <%= link_to 'examples', 'examples' %> to view complete implementation examples
