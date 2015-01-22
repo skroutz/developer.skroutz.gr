@@ -51,16 +51,7 @@ Use the <%= link_to 'ecommerce:addOrder', 'ecommerce/#addorder' %> command to tr
 
 Use the <%= link_to 'ecommerce:addItem', 'ecommerce/#additem' %> command to track the items of the order.
 
-~~~ html
-<script>
-  sa('ecommerce', 'addItem', JSON.stringify({
-    order_id:   '123456',  // Order ID. Required.
-    product_id: '111222',  // Product ID. Required.
-    price:      '5.50',    // Price per Unit. Required.
-    quantity:   '4'        // Quantity of Items. Required.
-  }));
-</script>
-~~~
+<%= render_code_from_file 'analytics/item_beacon' %>
 
 #### Complete Example
 
