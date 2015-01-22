@@ -45,16 +45,7 @@ Usually this is the *"Thank You"* or *"Receipt"* page.
 
 Use the <%= link_to 'ecommerce:addOrder', 'ecommerce/#addorder' %> command to track the order.
 
-~~~ html
-<script>
-  sa('ecommerce', 'addOrder', JSON.stringify({
-    order_id: '123456',  // Order ID. Required.
-    revenue:  '120.99',  // Grand Total. Includes Tax and Shipping.
-    shipping: '5.45',    // Total Shipping Cost.
-    tax:      '10.50'    // Total Tax.
-  }));
-</script>
-~~~
+<%= render_code_from_file 'analytics/order_beacon' %>
 
 #### Tracking Items
 

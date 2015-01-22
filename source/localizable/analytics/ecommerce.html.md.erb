@@ -35,14 +35,7 @@ Name       | Type   | Required | Description
 
 ##### Example
 
-~~~ javascript
-sa('ecommerce', 'addOrder', JSON.stringify({
-  order_id: '123456',  // Order ID. Required.
-  revenue:  '120.99',  // Grand Total. Includes Tax and Shipping.
-  shipping: '5.45',    // Total Shipping Cost.
-  tax:      '10.50'    // Total Tax.
-}));
-~~~
+<%= render_code_from_file 'analytics/order_beacon' %>
 
 ### addItem
 The `addItem` command adds a new Ecommerce item object.
