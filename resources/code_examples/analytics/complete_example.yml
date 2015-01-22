@@ -1,0 +1,35 @@
+:language: html
+:code: |
+  <!-- Send the Order data -->
+  <script>
+    sa('ecommerce', 'addOrder', JSON.stringify({
+      order_id: '123456',  // Order ID. Required.
+      revenue:  '87.45',   // Grand Total. Includes Tax and Shipping.
+      shipping: '5.45',    // Total Shipping Cost.
+      tax:      '10.50'    // Total Tax.
+    }));
+  </script>
+  
+  <!-- Send the Item data for each item in the shopping cart -->
+  <script>
+    sa('ecommerce', 'addItem', JSON.stringify({
+      order_id:   '123456',  // Order ID. Required.
+      product_id: '111222',  // Product ID. Required.
+      price:      '5.50',    // Price per Unit. Required.
+      quantity:   '4'        // Quantity of Items. Required.
+    }));
+  
+    sa('ecommerce', 'addItem', JSON.stringify({
+      order_id:   '123456',
+      product_id: '303404',
+      price:      '60.00',
+      quantity:   '1'
+    }));
+  
+    sa('ecommerce', 'addItem', JSON.stringify({
+      order_id:   '123456',
+      product_id: '121234',
+      price:      '16.77',
+      quantity:   '2'
+    }));
+  </script>

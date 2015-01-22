@@ -35,14 +35,7 @@ Name       | Type   | Required | Description
 
 ##### Example
 
-~~~ javascript
-sa('ecommerce', 'addOrder', JSON.stringify({
-  order_id: '123456',  // Order ID. Required.
-  revenue:  '120.99',  // Grand Total.
-  shipping: '5.45',    // Total Shipping Cost.
-  tax:      '10.50'    // Total Tax.
-}));
-~~~
+<%= render_code_from_file 'analytics/order_beacon' %>
 
 ### addItem
 The `addItem` command adds a new Ecommerce item object.
@@ -63,11 +56,4 @@ Name          | Type   | Required | Description
 
 ##### Example
 
-~~~ javascript
-sa('ecommerce', 'addItem', JSON.stringify({
-    order_id:   '123456',  // Order ID. Required.
-    product_id: '987',     // Product ID. Required.
-    price:      '10.50',   // Price per Unit. Required.
-    quantity:   '4'        // Quantity of Items. Required.
-}));
-~~~
+<%= render_code_from_file 'analytics/item_beacon' %>

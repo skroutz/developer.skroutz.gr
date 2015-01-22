@@ -11,14 +11,20 @@ Analytics is a project to measure how users interact with partners websites.
 
 ## Quick Start
 
-To successfully report your sales insights you have to add the following
-JavaScript snippet and declare actions, at least inside the page which informs
-the user that the order is completed (eg. "Thank You" page).
+To successfully report your sales insights you have to:
 
-You may add the snippet just before closing either the `<head>` or `<body>`
-section.
+1. Integrate the Analytics Tracking Script into your website
+2. Declare <%= link_to 'Ecommerce', 'ecommerce' %> actions to report your data
 
-###### Tracking Code JS Snippet
+### Step 1: Integrate the Analytics Tracking Script
+
+Add the following snippet just before closing either the `<head>` or `<body>` section in all of your website template
+pages.
+
+Use the <%= link_to 'session:connect', 'settings/#connect' %> command to initialize the tracker object for
+your Account.
+
+#### Tracking Code JS Snippet
 
 <%= render_code_from_file "analytics/#{flavor}/js_snippet" %>
 
@@ -26,56 +32,50 @@ section.
 > You **have to** replace the `'SA-XXXX-YYYY'` property with the actual
 *Shop Account ID* you received from us.
 
-## How it works
+### Step 2: Declare Ecommerce Data
 
-> The source of the tracking script is hosted on
-[GitHub](https://www.github.com/skroutz/analytics.js).
-
-The tracking script, registers a new global function named `sa`, and then
-asynchronously loads the `analytics.js` library onto the page.
-
-The `sa` global function is the main way you interact with the Analytics library.
-It accepts a sequence of parameters, that represent:
-
-Category
-: The API category
-
-Command
-: The Command of the API category you want to be executed
-
-Data
-: The Data to be reported by the Command
+Send your *Order* and *Item* data with the <%= link_to 'ecommerce', 'ecommerce/' %> commands. Ecommerce
+commands **must be** added at the final step of your checkout process after a user has successfully completed a purchase.
+Usually this is the *"Thank You"* or *"Receipt"* page.
 
 > ##### Note
-> *Categories* and *Commands* are **case-sensitive**.
+> You **must** first add the Tracking Code JS snippet, connect to your Account and then add the ecommerce commands.
 
-## Next Steps
+#### Tracking an Order
+
+Use the <%= link_to 'ecommerce:addOrder', 'ecommerce/#addorder' %> command to track the order.
+
+<%= render_code_from_file 'analytics/order_beacon' %>
+
+#### Tracking Items
+
+Use the <%= link_to 'ecommerce:addItem', 'ecommerce/#additem' %> command to track the items of the order.
+
+<%= render_code_from_file 'analytics/item_beacon' %>
+
+#### Complete Example
+
+<% tracking_script = YAML.load_file(File.expand_path(File.join('./resources',
+                                                               'code_examples',
+                                                               "analytics/#{flavor}/js_snippet.yml"))) %>
+<% complete_example = YAML.load_file(File.expand_path(File.join('./resources',
+                                                               'code_examples',
+                                                               "analytics/complete_example.yml"))) %>
+
+
+~~~ html
+<!-- Add the Tracking Script and Connect to your Account -->
+<%= tracking_script[:code] -%>
+
+<%= complete_example[:code] -%>
+~~~
+
+Visit the <%= link_to 'examples', 'examples' %> to view complete implementation examples
+for different programming languages.
+
+## Related Resources
 
 * Configuration
-  * <%= link_to 'Analytics Settings', '/analytics/settings' %>
-  * <%= link_to 'Ecommerce metrics', '/analytics/ecommerce' %>
-* <%= link_to t('docs.analytics.examples'), '/analytics/examples' %>
-
-## FAQ
-
-Will adding this script affect the performance of my website?
-: No, we've put a lot of effort, and used some of the most cutting edge
-techniques to make sure that our script runs sandboxed without affecting the
-experience of your users.
-
-What kind of info is emitted from this script?
-: We take user privacy seriously. The data retained by our service remains
-anonymous, and are neither exposed or sold to 3rd parties. The script reports
-actions that you explicitly define with commands in your website.
-
-Where can I view the source of this script?
-: The script is open sourced on [GitHub](https://www.github.com/skroutz/analytics.js).
-Feel free to create issues there, or even contribute.
-
-What about browser support?
-: The script is tested to work on all modern browsers: Internet Explorer > 6, Chrome, Firefox, Opera, Safari.
-
-How can I confirm that the script is sending data properly?
-: Currently there is no way to check whether the script is reporting properly. Please, after you add the script,
-contact us and we will check if the script is installed correcly. In the meantime we are working hard to bring
-you information about the intregration status and reports.
+  * <%= link_to 'Analytics Settings', 'settings' %>
+  * <%= link_to 'Ecommerce metrics', 'ecommerce' %>
+* <%= link_to 'Examples', 'examples' %>
