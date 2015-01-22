@@ -59,6 +59,7 @@ analytics:
   icon: 'fa-bar-chart-o'
   pages:
     - { title: 'overview', url: '/analytics/' }
+    - { title: 'how_it_works' }
     - { title: 'settings' }
     - { title: 'ecommerce' }
     - { title: 'examples' }

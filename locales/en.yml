@@ -55,6 +55,7 @@ en:
     analytics:
       short_description: 'Integrate %{flavor} analytics and find out powerful insights about your eshop.'
       overview: 'Overview'
+      how_it_works: 'How It Works'
       settings: 'Settings'
       ecommerce: 'Ecommerce'
       examples: 'Examples'
