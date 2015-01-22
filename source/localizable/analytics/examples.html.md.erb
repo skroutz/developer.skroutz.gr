@@ -27,14 +27,14 @@ the Analytics client to report them.
 Typically, the Ecommerce data on the server-side could have the following
 structure:
 
-<%= render_code_from_file 'analytics/order_declaration' %>
+<%= render_code_from_file 'analytics/examples/php/order_declaration' %>
 
 ##### JavaScript representation of Ecommerce data
 
 Example server-side snippets to transform Ecommerce data on the server for into
 JavaScript strings for Analytics could look like:
 
-<%= render_code_from_file 'analytics/order_preprocessing' %>
+<%= render_code_from_file 'analytics/examples/php/order_preprocessing' %>
 
 ## Load Analytics.js
 
@@ -53,7 +53,7 @@ Finally, additional server-side logic is required to dynamically output the
 transformed Ecommerce data. Before the closing tag of the `</body>` add the
 following snippet, for the declaration of Analytics actions to happen:
 
-<%= render_code_from_file 'analytics/order_rendering' %>
+<%= render_code_from_file 'analytics/examples/php/order_rendering' %>
 
 > ##### Note
 > Be sure to report any data **after** the Analytics.js declaration.
