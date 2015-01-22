@@ -63,6 +63,7 @@ analytics:
     - { title: 'settings' }
     - { title: 'ecommerce' }
     - { title: 'examples' }
+    - { title: 'faq' }
 
 widgets:
   base: '/widgets/'

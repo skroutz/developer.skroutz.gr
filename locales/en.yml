@@ -59,6 +59,7 @@ en:
       settings: 'Settings'
       ecommerce: 'Ecommerce'
       examples: 'Examples'
+      faq: 'FAQ'
     widgets:
       short_description: 'Display live product information in your website using our widgets.'
       overview: ''
