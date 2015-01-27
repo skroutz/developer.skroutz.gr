@@ -8,7 +8,7 @@ el:
     authorization: 'Authorization'
     analytics: 'Analytics'
     widgets: 'Widgets'
-    docs: 'Documentation'
+    docs: 'Developer Documentation'
     guides: 'Guides'
     extra: 'Looking for something else?'
     support: 'Support'
