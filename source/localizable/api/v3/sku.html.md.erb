@@ -25,10 +25,13 @@ A SKU (Stock Keeping Unit) is an aggregation of products.
 
 ### Ordering
 
-Name        | Type   | Value                                                        | Description
------------ | ------ | ------------------------------------------------------------ | ------------
-`order_by`  | String | `pricevat` <small class="mark">default</small>, `popularity` | Order by price or popularity
-`order_dir` | String | `asc` <small class="mark">default</small>, `desc`            | Order ascending or descending
+Name        | Type   | Value                                                                  | Description
+----------- | ------ | ---------------------------------------------------------------------- | ------------
+`order_by`  | String | `pricevat` <small class="mark">default</small>, `popularity`, `rating` | Order by price or popularity
+`order_dir` | String | `asc` <small class="mark">default</small>, `desc`                      | Order ascending or descending
+
+> ##### Note
+> The default `order_by` value may differ across categories but in most cases it's `pricevat`.
 
 ### Filtering
 
