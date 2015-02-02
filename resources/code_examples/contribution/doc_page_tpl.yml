@@ -5,7 +5,7 @@
   title: documentation_page_title
   ---
 
-  # [H1] Page Title <%= edit_link %>
+  # [H1] Page Title <%= render_edit_link %>
 
   It would be nice to write a short description of the current page.
 

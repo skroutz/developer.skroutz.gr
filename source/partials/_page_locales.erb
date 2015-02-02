@@ -2,7 +2,7 @@
   <div class="alert alert-info">
     <p>
       <span><%= t('common.available_locales') %></span>
-      <%= bs_text(locale_links(current_page), 'nav-lang nav-lang-inline') %>
+      <%= render_inline(available_locales, 'nav-lang nav-lang-inline') %>
     </p>
   </div>
 <% end %>

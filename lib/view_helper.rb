@@ -1,4 +1,4 @@
-module PageNavigationHelper
+module ViewHelper
   # Constructs the relative url of a given inner Doc page
   #
   # @param [String] doc_base_url the base url of the Doc
@@ -12,61 +12,65 @@ module PageNavigationHelper
     end
   end
 
-  # Returns proper CSS classes if given Doc is the currently visited
+  # Returns proper CSS classes if given parent page URL is the currently visited
   #
-  # @param [String] doc the Doc to check if is active
+  # @param [String] url the URL to check if is active
   # @return [String] the active CSS classes
-  def active_parent_link(doc)
-    'active in' if current_page.url =~ /#{Regexp.quote(doc[:base])}/
+  def active_parent_classes(url)
+    'active in' if current_page.url =~ /#{Regexp.quote(url)}/
   end
 
-  # Returns proper CSS classes if given Page Doc is the currently visited
+  # Returns proper CSS classes if given child page URL is the currently visited
   #
-  # @param [String] doc_page_url the Doc page url to check if is active
+  # @param [String] url the URL to check if is active
   # @return [String] the active CSS classes
-  def active_child_link(doc_page_url)
-    'active' if doc_page_url == current_page.url
+  def active_child_classes(url)
+    'active' if url == current_page.url
   end
 
-  # Builds a Doc parent link for Sidebar
+  # Builds a collapsible menu for the sidebar
   #
-  # @param [String] key the docs key in data/docs.yml
-  # @param [Hash] doc the doc data
-  # @return [String] the html anchor element
-  def sidebar_parent_link(key, doc)
-    html = "<a class='collapse-btn #{active_parent_link(doc)}' "
-    html << "data-toggle='collapse' data-parent='.nav-sidebar' "
-    html << "href='#nav-sidebar-#{key}'>"
-    html << t("titles.#{key}",
-              flavor: settings.site_name.capitalize)
-    html << "<span class='label label-default pull-right'>#{t('common.deprecated')}</span>" if deprecated?(doc)
-    html << "</a>"
+  # @param [Hash] page the page section to build menu for
+  # @return [String] the constructed menu
+  def render_sidebar_menu(page)
+    html = ''
 
-    html
-  end
+    title = t(page[:title], flavor: settings.site_name.capitalize)
 
-  # Builds a Doc child page link for Sidebar
-  #
-  # @param [String] doc_key the docs key in data/docs.yml
-  # @param [Hash] doc the doc data
-  # @param [Hash] page the doc page data
-  # @return [String] the html anchor element
-  def sidebar_child_link(doc_key, doc, page)
-    page_url = url_to_doc_page(doc.base, page)
+    # Parent
+    html << "<a class='collapse-btn #{active_parent_classes(page[:base])}'"
+    html << ' data-toggle="collapse" data-parent=".nav-sidebar"'
+    html << " href='#nav-menu-#{title.downcase.gsub(' ', '-')}'>"
+    html << title
 
-    html = "<a class='navbar-link #{active_child_link(page_url)}' "
-    html << "href='#{page_url}'>"
-    html << t("docs.#{doc_key}.#{page.title}",
-              flavor: settings.site_name.capitalize)
-    html << "</a>"
+    if deprecated?(page)
+      html << '<span class="label label-default pull-right">'
+      html << "#{t('common.deprecated')}</span>"
+    end
 
+    html << '</a>'
+
+    # Submenu wrapper
+    html << "<div id='nav-menu-#{title.downcase.gsub(' ', '-')}'"
+    html << " class='collapse nav-menu-sidebar #{active_parent_classes(page[:base])}'>"
+
+    # Submenu
+    Array(page[:pages]).each do |p|
+      url = p[:url] || "#{page[:base] }#{p[:title]}/"
+      html << "<a class='navbar-link #{active_child_classes(url)}'"
+      html << " href='#{url}'>"
+      html << t("#{page[:titles]}.#{ p[:title]}")
+      html << '</a>'
+    end
+
+    html << '</div>'
     html
   end
 
   # Returns a link to edit source on GitHub repo
   #
   # @return [String] the html anchor element
-  def edit_link
+  def render_edit_link
     url = current_page.source_file.sub(/^(.*)\/source/,
       "#{settings.github_profile}/developer.skroutz.gr/blob/master/source")
 
@@ -79,10 +83,12 @@ module PageNavigationHelper
   # @param [Array] items the array of items
   # @param [String] classes the CSS classes to style the list
   # @return [String] the constructed <span> elements
-  def bs_text(items, classes)
+  def render_inline(items, classes)
     html = "<span class='#{classes}'>"
 
-    items.each do |item|
+    Array(items).each do |item|
+      next if !item[:skip].nil? && item[:skip]
+
       html << '<span class="item'
       html << ' active' if item[:active]
       html << '">'
@@ -94,15 +100,15 @@ module PageNavigationHelper
     html
   end
 
-  # Builds a Bootstrap List component for a given list of items.
+  # Builds a List component for a given list of items.
   #
   # @param [Array] list_items the array of items
-  # @param [String] list_classes the CSS classes to style the list
+  # @param [String] classes the CSS classes to style the list
   # @return [String] the constructed <ul/> element
-  def bs_list(list_items, list_classes)
-    html = "<ul class='#{list_classes}'>"
+  def render_list(list_items, classes)
+    html = "<ul class='#{classes}'>"
 
-    list_items.each do |list_item|
+    Array(list_items).each do |list_item|
       html << '<li'
       html << ' class="active"' if list_item[:active]
       html << '>'
@@ -114,14 +120,14 @@ module PageNavigationHelper
     html
   end
 
-  # Builds a Bootstrap Dropdown component for a given list of items.
+  # Builds a Dropdown component for a given list of items.
   #
   # @param [Array] list_items the array of items
   # @param [String] list_classes the CSS classes to style the list
   # @param [String] dropdown_classes the CSS classes to style the dropdown
   # @param [String] toggle the dropdown toggle content
   # @return [String] the constructed <ul/> element
-  def bs_dropdown(list_items, list_classes, dropdown_classes, toggle)
+  def render_dropdown(list_items, list_classes, dropdown_classes, toggle)
     html = "<ul class='nav navbar-nav #{list_classes}'>"
     html << "<li class='dropdown #{dropdown_classes}'>"
     html << '<a class="dropdown-toggle" data-toggle="dropdown" href="#">'
@@ -129,7 +135,7 @@ module PageNavigationHelper
     html << '</a>'
     html << '<ul class="dropdown-menu" role="menu">'
 
-    list_items.each do |list_item|
+    Array(list_items).each do |list_item|
       html << '<li'
       html << ' class="active"' if list_item[:active]
       html << '>'
@@ -145,10 +151,10 @@ module PageNavigationHelper
   #
   # @param [Hash] page the page to build the array for
   # @return [Array] the array list
-  def locale_links(page)
+  def available_locales(page = current_page)
     return [] unless localized?(page)
 
-    list_items = Array.new
+    locales = []
 
     page.data.locale[flavor].each do |lang|
       active = (lang == I18n.locale.to_s)
@@ -172,9 +178,9 @@ module PageNavigationHelper
       html << "<span class='lang-name'>#{t('lang.'+lang)}</span>"
       html << '</a>'
 
-      list_items << { html: html, active: active }
+      locales << { lang: lang, url: url, active: active, skip: active, html: html }
     end
 
-    list_items
+    locales
   end
 end

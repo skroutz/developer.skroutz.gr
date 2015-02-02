@@ -17,7 +17,7 @@
         <div class="navbar-collapse collapse">
           <%# Available locales %>
           <% if localized?(current_page) %>
-            <%= bs_dropdown(locale_links(current_page),
+            <%= render_dropdown(available_locales,
                                    'nav-lang',
                                    'dropdown-primary',
                                    '<i class="fa fa-globe"></i>') %>

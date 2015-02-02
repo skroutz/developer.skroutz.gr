@@ -1,6 +1,6 @@
 require 'lib/code_example_helper'
 require 'lib/document_helper'
-require 'lib/page_navigation_helper'
+require 'lib/view_helper'
 require 'lib/response_mate_helper'
 require 'uglifier'
 
@@ -62,7 +62,7 @@ end
 # Helpers
 helpers CodeExampleHelper
 helpers ResponseMateHelper
-helpers PageNavigationHelper
+helpers ViewHelper
 helpers DocumentHelper
 
 helpers do
