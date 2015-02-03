@@ -74,26 +74,6 @@ module PageNavigationHelper
       title: t('common.edit_on_github'), class: 'btn-edit-github'
   end
 
-  # Builds a set of <span> elements for a given list of items.
-  #
-  # @param [Array] items the array of items
-  # @param [String] classes the CSS classes to style the list
-  # @return [String] the constructed <span> elements
-  def bs_text(items, classes)
-    html = "<span class='#{classes}'>"
-
-    items.each do |item|
-      html << '<span class="item'
-      html << ' active' if item[:active]
-      html << '">'
-      html << item[:html]
-      html << '</span>'
-    end
-
-    html << '</span>'
-    html
-  end
-
   # Builds a Bootstrap List component for a given list of items.
   #
   # @param [Array] list_items the array of items
