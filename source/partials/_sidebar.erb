@@ -86,7 +86,7 @@
                     settings.github_profile,
                     class: 'nav-link' %>
       </li>
-      <% if settings.engineering_blog_domain %>
+      <% if settings.engineering_blog_domain.present? %>
         <li>
           <%= link_to t('index.oss.engineering_blog',
                       flavor: settings.site_name.titleize),
