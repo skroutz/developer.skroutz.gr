@@ -2,7 +2,11 @@
   <div class="alert alert-info">
     <p>
       <span><%= t('common.available_locales') %></span>
-      <%= bs_text(locale_links(current_page), 'nav-lang nav-lang-inline') %>
+      <span class="nav-lang nav-lang-inline">
+        <% locale_links(current_page).reject! { |page| page[:active] }.each do |page| %>
+          <span class="item"><%= page[:html] %></span>
+        <% end %>
+      </span>
     </p>
   </div>
 <% end %>

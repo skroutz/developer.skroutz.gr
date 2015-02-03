@@ -303,24 +303,6 @@ pre {
 // --------------------------------------------------
 
 .nav-lang {
-  &.nav-lang-inline {
-
-    .item {
-      &:after {
-        content: ', ';
-      }
-
-      &:last-child:after,
-      &:only-child:after {
-        content: '';
-      }
-    }
-
-    > .active {
-      display: none;
-    }
-  }
-
   .lang-code {
     display: none;
   }
