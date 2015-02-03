@@ -8,6 +8,13 @@ locale:
 
 <%= partial 'partials/page_locales' %>
 
+<% if settings.feed_validator_domain.present? %>
+> ##### Ενημέρωση
+> Μπορείτε να χρησιμοποιήσετε τον <%= link_to "Data Feed Validator", "http://#{settings.feed_validator_domain}" %> για να ελέγξετε την εγκυρότητα του XML Feed με βάση τις
+προδιαγραφές του <%= settings.site_name.capitalize %>.
+{: .alert-success }
+<% end %>
+
 # Προδιαγραφές XML <%= edit_link %>
 
 To παρόν έχει σαν σκοπό να περιγράψει την δομή και την λειτουργικότητα που
@@ -33,6 +40,11 @@ To παρόν έχει σαν σκοπό να περιγράψει την δομ
 [Εδώ](#xml-1) μπορείτε να δείτε παράδειγμα ενός XML και [εδώ](#xsd) μπορείτε
 να βρείτε το XSD για λόγους validation του παραγόμενου XML.
 
+<% if settings.feed_validator_domain.present? %>
+Εναλλακτικά, <%= link_to "μπορείτε να ελέγξετε το XML σας",
+"http://#{settings.feed_validator_domain}" %> με βάση
+τις προδιαγραφές του <%= settings.site_name.capitalize %>.
+<% end %>
 
 ## Τεχνικά Χαρακτηριστικά
 
@@ -389,6 +401,34 @@ To χρώμα του προϊόντος
 <color>Black</color>
 <color>μαύρο</color>
 ~~~
+
+
+<% if settings.feed_validator_domain.present? %>
+## Data Feed Validator
+
+<div class="row">
+  <div class="col-sm-12 col-md-8 text-justify">
+    <p>
+      Μπορείτε να χρησιμοποιήσετε τον
+      <%= link_to "Data Feed Validator", "http://#{settings.feed_validator_domain}" %>
+      για να ελέγξετε το XML Feed σας ως προς
+      τη συμβατότητά του με τις προδιαγραφές του <%= settings.site_name.capitalize %>.
+    </p>
+    <p>
+      Mπορείτε να ανεβάσετε το XML σας και ο validator θα επιβεβαιώσει ότι είναι καλά ορισμένο,
+      σύμφωνα με το πρωτόκολλο XML, θα προσπαθήσει να εντοπίσει το στοιχείο του XML που αντιστοιχεί
+      σε κάθε ένα από τα προϊόντα σας και στη συνέχεια θα σαρώσει τα πεδία των προϊόντων για
+      να εξακριβώσει ότι τηρούν τις προδιαγραφές του <%= settings.site_name.capitalize %>.
+    </p>
+  </div>
+  <div class="col-sm-12 col-md-4 text-center">
+  <% link_to "http://#{settings.feed_validator_domain}", class: 'btn btn-primary btn-lg btn-cta' do %>
+    Ελέγξτε το XML σας
+    <i class="fa fa-append fa-angle-double-right"></i>
+  <% end %>
+  </div>
+</div>
+<% end %>
 
 
 ## Παράδειγμα XML

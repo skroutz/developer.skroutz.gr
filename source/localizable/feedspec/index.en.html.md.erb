@@ -11,6 +11,14 @@ locale:
 
 <%= partial 'partials/page_locales' %>
 
+<% if settings.feed_validator_domain.present? %>
+> ##### Update
+> You can use the <%= link_to "Data Feed Validator",
+"http://#{settings.feed_validator_domain}" %> to validate your XML feed
+according to <%= settings.site_name.capitalize %> standards.
+{: .alert-success }
+<% end %>
+
 # Data Feed Specification <%= edit_link %>
 
 This document describes the structure of the XML file provided by merchants to
@@ -32,6 +40,12 @@ In general, the XML file must meet the following requirements:
 
 <a href="#xml-example">Follow this link</a> for a valid XML example or
 <a href="#xsd">read</a> the XSD definition of the XML.
+
+<% if settings.feed_validator_domain.present? %>
+Alternatively, <%= link_to "validate your XML feed",
+"http://#{settings.feed_validator_domain}" %> against
+<%= settings.site_name.capitalize %> standards.
+<% end %>
 
 ## Technical Specifications
 
@@ -359,6 +373,32 @@ The color of the product
 <color>Black</color>
 <color>green</color>
 ~~~
+
+
+<% if settings.feed_validator_domain.present? %>
+## Data Feed Validator
+<div class="row">
+  <div class="col-sm-12 col-md-8 text-justify">
+    <p>
+      You can use the <%= link_to "Data Feed Validator",
+      "http://#{settings.feed_validator_domain}" %> to check your XML feed for
+      compatibility with <%= settings.site_name.capitalize %> standards.
+    </p>
+    <p>
+      You can upload your XML file and the validator checks to confirm that it is
+      well-formed, according to the XML specification, tries to identify the XML
+      element corresponding to each one of your products and then scans the products'
+      attributes to ensure that <%= settings.site_name.capitalize %> requirements are met.
+    </p>
+  </div>
+  <div class="col-sm-12 col-md-4 text-center">
+  <% link_to "http://#{settings.feed_validator_domain}", class: 'btn btn-primary btn-lg btn-cta' do %>
+    Validate your XML
+    <i class="fa fa-append fa-angle-double-right"></i>
+  <% end %>
+  </div>
+</div>
+<% end %>
 
 
 ## XML Example
