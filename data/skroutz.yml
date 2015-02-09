@@ -7,6 +7,7 @@ api_domain: 'api.skroutz.gr'
 apiv2_domain: 'apiv2.skroutz.gr'
 developer_domain: 'developer.skroutz.gr'
 engineering_blog_domain: 'engineering.skroutz.gr'
+feed_validator_domain: 'validator.skroutz.gr'
 
 api_email: 'api@skroutz.gr'
 

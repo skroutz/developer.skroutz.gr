@@ -80,6 +80,14 @@
                       class: "navbar-link #{active_child_link('/contribution/style/')}" %>
         </div>
       </li>
+      <% if settings.feed_validator_domain.present? %>
+      <li>
+        <%= link_to t('index.oss.feed_validator',
+                    flavor: settings.site_name.titleize),
+                    "http://#{settings.feed_validator_domain}",
+                    class: 'nav-link' %>
+      </li>
+      <% end %>
       <li>
         <%= link_to t('index.oss.github',
                     flavor: settings.site_name.titleize),

@@ -108,3 +108,4 @@ en:
       encourage: 'Many components of %{flavor} are built with Open Source Software. We %{heart} OSS and try to give back as much as we can.'
       github: '%{flavor} on GitHub'
       engineering_blog: 'Engineering Blog'
+      feed_validator: 'XML Feed Validator'

@@ -7,6 +7,7 @@ api_domain: 'api.scrooge.co.uk'
 apiv2_domain: 'apiv2.scrooge.co.uk'
 developer_domain: 'developer.scrooge.co.uk'
 engineering_blog_domain: ''
+feed_validator_domain: ''
 
 api_email: 'api@scrooge.co.uk'
 
