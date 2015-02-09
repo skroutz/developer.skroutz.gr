@@ -93,6 +93,8 @@ en:
     search: 'Search'
     language: 'Language'
     docs: 'Documentation'
+    engineering_blog: 'Engineering Blog'
+    feed_validator: 'XML Feed Validator'
 
   index:
     cover:
@@ -107,5 +109,3 @@ en:
     oss:
       encourage: 'Many components of %{flavor} are built with Open Source Software. We %{heart} OSS and try to give back as much as we can.'
       github: '%{flavor} on GitHub'
-      engineering_blog: 'Engineering Blog'
-      feed_validator: 'XML Feed Validator'

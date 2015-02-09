@@ -82,7 +82,7 @@
       </li>
       <% if settings.feed_validator_domain.present? %>
       <li>
-        <%= link_to t('index.oss.feed_validator',
+        <%= link_to t('sidebar.feed_validator',
                     flavor: settings.site_name.titleize),
                     "http://#{settings.feed_validator_domain}",
                     class: 'nav-link' %>
@@ -96,7 +96,7 @@
       </li>
       <% if settings.engineering_blog_domain.present? %>
         <li>
-          <%= link_to t('index.oss.engineering_blog',
+          <%= link_to t('sidebar.engineering_blog',
                       flavor: settings.site_name.titleize),
                       "http://#{settings.engineering_blog_domain}",
                       class: 'nav-link' %>
