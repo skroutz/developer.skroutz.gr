@@ -90,9 +90,10 @@ en:
     legal: 'All Rights and Lefts reserved.'
 
   sidebar:
+    docs: 'Documentation'
+    support: 'Support'
     search: 'Search'
     language: 'Language'
-    docs: 'Documentation'
     engineering_blog: 'Engineering Blog'
     feed_validator: 'XML Feed Validator'
 
