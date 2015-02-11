@@ -5,6 +5,22 @@ title: changelog
 
 # Changelog <%= edit_link %>
 
+## 2014-02-11 - v3.0.9
+Change the representation of <%= link_to 'Notification', '/api/v3/notifications/' %>
+: The changes in fields are the following:
+
+### Added
+\+ eventable_name  
+\+ eventable_url  
+\+ event_text  
+
+### Removed
+
+\- user_notified  
+\- user_id  
+\- subscription_id  
+\- mail_event  
+
 ## 2014-01-28 - v3.0.8
 Allow ordering by 'rating' of <%= link_to 'SKUs', '/api/v3/sku/', anchor: 'list-skus-of-specific-category' %>
 : The new ordering option enables ordering of SKUs based on User provided reviews.
