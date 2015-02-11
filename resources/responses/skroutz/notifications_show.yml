@@ -3,32 +3,39 @@
   :url: https://api.skroutz.gr/notifications/3642082
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer Qgq1ofejerxdYPnpOYaT1GRhwRPczj2AnkZFtNi1jrVgchHJib5xL4QkQPJYNWElNoPiOp5VBqsmoq6HgMiEA==
+    :authorization: Bearer wMhTHaBmxiju/WzM3XR6j7m9Z1Wmu8Qb2kM9DQ0R2gshoObCr3YsJZRu9PYZrdHCsKLLTK8H9rdaGkw4mWjpQ==
   :verb: GET
 :response:
   :status: 200
   :headers:
-    !binary "c2VydmVy": nginx
-    !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
-    !binary "dmFyeQ==": Accept-Encoding
-    !binary "c3RhdHVz": 200 OK
-    !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
-    !binary "Y2FjaGUtY29udHJvbA==": max-age=0, private, must-revalidate
-    !binary "eC1yZXF1ZXN0LWlk": '2651981713'
-    !binary "eC1ydW50aW1l": '0.063229'
-    !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "eC1hcHA=": lunkwill_ssl
-    !binary "Y29udGVudC1sZW5ndGg=": '343'
-    !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:44:38 GMT
-    !binary "eC12YXJuaXNo": '2651981713'
-    !binary "YWdl": '0'
-    !binary "dmlh": 1.1 varnish
-    !binary "Y29ubmVjdGlvbg==": close
-    !binary "eC1vcmlnaW4=": varnish2
-    !binary "eC1jYWNoZQ==": MISS
-  :body: ! '{"notification":{"aggregated":false,"confirmed":true,"created_at":"2013-04-26T01:00:09+03:00","etype":"generic","eventable_id":37,"eventable_type":"UserSkuAd","id":3642082,"is_viewed":true,"mail_event":false,"snapshot":{"event_text":"\u0397
+    server: nginx
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '99'
+    x-ratelimit-reset: '1423668300'
+    status: 200 OK
+    x-ua-compatible: IE=Edge,chrome=1
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '2371025718'
+    x-runtime: '0.050121'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: frankie_ssl
+    content-length: '350'
+    accept-ranges: bytes
+    date: Wed, 11 Feb 2015 15:24:23 GMT
+    x-varnish: '2371025718'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: lb2
+    x-cache: MISS
+  :body: '{"notification":{"id":3642082,"etype":"generic","eventable_id":37,"eventable_type":"UserSkuAd","eventable_name":"\u0386\u03b3\u03bd\u03c9\u03c3\u03c4\u03bf","eventable_url":"http://www.skroutz.gr/account/inactive_ads","event_text":"\u0397
     \u03b1\u03b3\u03b3\u03b5\u03bb\u03af\u03b1 \u03c3\u03b1\u03c2 \"Logitech M185\"
     \u03bc\u03b5 \u03c4\u03b9\u03bc\u03ae 8,99 \u20ac \u03ad\u03bb\u03b7\u03be\u03b5
-    \u03c3\u03c4\u03b9\u03c2 26/04/2013 00:44","eventable_path":"/account/inactive_ads"},"subscription_id":null,"updated_at":"2013-04-30T10:35:46+03:00","user_id":132950,"user_notified":false}}'
-:created_at: 2014-08-25 17:44:38.819301483 +03:00
+    \u03c3\u03c4\u03b9\u03c2 26/04/2013 00:44","snapshot":{"event_text":"\u0397 \u03b1\u03b3\u03b3\u03b5\u03bb\u03af\u03b1
+    \u03c3\u03b1\u03c2 \"Logitech M185\" \u03bc\u03b5 \u03c4\u03b9\u03bc\u03ae 8,99
+    \u20ac \u03ad\u03bb\u03b7\u03be\u03b5 \u03c3\u03c4\u03b9\u03c2 26/04/2013 00:44","eventable_path":"/account/inactive_ads"},"is_viewed":true,"aggregated":false,"created_at":"2013-04-26T01:00:09+03:00","updated_at":"2013-04-30T10:35:46+03:00"}}'
+:created_at: 2015-02-11 17:21:49.356005922 +02:00

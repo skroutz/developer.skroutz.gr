@@ -3,33 +3,39 @@
   :url: https://api.skroutz.gr/notifications
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer Qgq1ofejerxdYPnpOYaT1GRhwRPczj2AnkZFtNi1jrVgchHJib5xL4QkQPJYNWElNoPiOp5VBqsmoq6HgMiEA==
+    :authorization: Bearer wMhTHaBmxiju/WzM3XR6j7m9Z1Wmu8Qb2kM9DQ0R2gshoObCr3YsJZRu9PYZrdHCsKLLTK8H9rdaGkw4mWjpQ==
   :params:
     :per: 1
   :verb: GET
 :response:
   :status: 200
   :headers:
-    !binary "c2VydmVy": nginx
-    !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
-    !binary "dmFyeQ==": Accept-Encoding
-    !binary "c3RhdHVz": 200 OK
-    !binary "bGluaw==": <https://api.skroutz.gr/notifications?page=74&per=1>; rel="last",
-      <https://api.skroutz.gr/notifications?page=2&per=1>; rel="next"
-    !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
-    !binary "Y2FjaGUtY29udHJvbA==": max-age=0, private, must-revalidate
-    !binary "eC1yZXF1ZXN0LWlk": '578823051'
-    !binary "eC1ydW50aW1l": '0.101462'
-    !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "eC1hcHA=": lunkwill_ssl
-    !binary "Y29udGVudC1sZW5ndGg=": '272'
-    !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:44:38 GMT
-    !binary "eC12YXJuaXNo": '578823051'
-    !binary "YWdl": '0'
-    !binary "dmlh": 1.1 varnish
-    !binary "Y29ubmVjdGlvbg==": close
-    !binary "eC1vcmlnaW4=": varnish1
-    !binary "eC1jYWNoZQ==": MISS
-  :body: ! '{"notifications":[{"event":{"aggregated":false,"confirmed":true,"created_at":"2014-08-25T12:16:04+03:00","etype":"sku_review","eventable_id":25068,"eventable_type":"SkuReview","id":39850126,"is_viewed":true,"mail_event":false,"snapshot":null,"subscription_id":3712776,"updated_at":"2014-08-25T16:51:30+03:00","user_id":132950,"user_notified":false}}],"meta":{"pagination":{"total_results":74,"total_pages":74,"page":1,"per":1}}}'
-:created_at: 2014-08-25 17:44:38.726304627 +03:00
+    server: nginx
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '99'
+    x-ratelimit-reset: '1423668120'
+    status: 200 OK
+    link: <https://api.skroutz.gr/notifications?page=100&per=1>; rel="last", <https://api.skroutz.gr/notifications?page=2&per=1>;
+      rel="next"
+    x-ua-compatible: IE=Edge,chrome=1
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '2488866068'
+    x-runtime: '0.107212'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: frankie_ssl
+    content-length: '361'
+    accept-ranges: bytes
+    date: Wed, 11 Feb 2015 15:21:55 GMT
+    x-varnish: '2488866068'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: lb1
+    x-cache: MISS
+  :body: '{"notifications":[{"id":72610806,"etype":"price_drop","eventable_id":342825,"eventable_type":"Sku","eventable_name":"Bomann
+    DKP 5007 CB Double-Hotplate","eventable_url":"http://www.skroutz.gr/s/342825/Bomann-DKP-5007-CB-Double-Hotplate.html?from=account_notifications","event_text":null,"snapshot":{"price_min":31.5,"latest_price":32.78,"change_rate":0.039},"is_viewed":true,"aggregated":false,"created_at":"2015-02-11T12:20:40+02:00","updated_at":"2015-02-11T13:11:44+02:00"}],"meta":{"pagination":{"total_results":100,"total_pages":100,"page":1,"per":1}}}'
+:created_at: 2015-02-11 17:19:21.501194727 +02:00
