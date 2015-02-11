@@ -9,13 +9,95 @@ title: notifications
 > To access any of the <strong>User Notification</strong> endpoints, an <code>access_token</code>
 containing the `notifications` <%= link_to 'permission', '/authorization/permissions/' %> is required.
 
-
 Notifications are events (price changes of favorite products, subscribed
 discussion messages, etc).
 
 <%= partial 'partials/toc' %>
 
-## List notifications 
+## Available Notification Types
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>generic</code></td>
+      <td>A generic type of notification.</td>
+    </tr>
+    <tr>
+      <td><code>price_drop</code></td>
+      <td>
+        The price of an <%= link_to 'SKU', '/api/v3/sku' %> favorited by the User has been reduced.
+      </td>
+    </tr>
+    <tr>
+      <td><code>price_up</code></td>
+      <td>The price of an <%= link_to 'SKU', '/api/v3/sku' %> favorited by the User has increased</td>
+    </tr>
+    <tr>
+      <td><code>availability_true</code></td>
+      <td>
+        An <%= link_to 'SKU', '/api/v3/sku' %> favorited by the User is again available
+        at a <%= link_to 'Shop', '/api/v3/shops' %>.
+      </td>
+    </tr>
+    <tr>
+      <td><code>sku_review</code></td>
+      <td>
+        Review(s) have been published for an <%= link_to 'SKU', '/api/v3/sku' %> favorited by the User.
+      </td>
+    </tr>
+    <tr>
+      <td><code>expert_review</code></td>
+      <td>
+        Review(s) have been published for an <%= link_to 'SKU', '/api/v3/sku' %> favorited by the User.
+      </td>
+    </tr>
+    <tr>
+      <td><code>guide</code></td>
+      <td>
+        A new shopping guide has been published.
+      </td>
+    </tr>
+    <tr>
+      <td><code>sku_deletion</code></td>
+      <td>
+        An <%= link_to 'SKU', '/api/v3/sku' %> favorited by the User is no longer available
+        in <%= settings.site_name.capitalize %>.
+      </td>
+    </tr>
+    <tr>
+      <td><code>sku_release</code></td>
+      <td>A "future" <%= link_to 'SKU', '/api/v3/sku' %> has been released.</td>
+    </tr>
+    <tr>
+      <td><code>sku_comment</code></td>
+      <td>
+        A new <%= link_to 'SKU', '/api/v3/sku' %> comment has been published on
+        a discussion the User is subscribed to.
+      </td>
+    </tr>
+    <tr>
+      <td><code>sku_comment_reply</code></td>
+      <td>
+        A new reply has been published on an <%= link_to 'SKU', '/api/v3/sku' %> comment
+        posted by the User
+      </td>
+    </tr>
+    <tr>
+      <td><code>sku_comment_mention</code></td>
+      <td>
+        The User has been mentioned in an <%= link_to 'SKU', '/api/v3/sku' %> comment.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+## List notifications
 
 <pre class="terminal">
   GET /notifications
