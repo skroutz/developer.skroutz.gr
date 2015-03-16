@@ -357,6 +357,15 @@ requests:
       headers:
         <<: *default_headers
   -
+    key: notifications_view
+    request:
+      verb: POST
+      url: '{{base_url}}/notifications/view'
+      headers:
+        <<: *default_headers
+      params:
+        ids: [80580989, 80449671, 80372282, 80140458, 79742874]
+  -
     key: sku_reviews
     request:
       url: '{{base_url}}/skus/355766/reviews'
