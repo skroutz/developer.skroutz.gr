@@ -1,0 +1,41 @@
+---
+:request:
+  :verb: POST
+  :url: https://api.skroutz.gr/notifications/view
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3
+    :authorization: Bearer dwJGwyyT2ZdRbxOup7LLP1u1ulmNBPtc5LXkGJEVCL1EPf9R4rkRdgmgic6812097dQdwEPoA7vu/vMzUacMg==
+  :params:
+    :ids:
+    - 80580989
+    - 80449671
+    - 80372282
+    - 80140458
+    - 79742874
+:response:
+  :status: 204
+  :headers:
+    server: nginx
+    content-type: application/octet-stream
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '99'
+    x-ratelimit-reset: '1426512120'
+    status: 204 No Content
+    x-ua-compatible: IE=Edge,chrome=1
+    cache-control: no-cache
+    x-request-id: '2714344395'
+    x-runtime: '0.044858'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: frankie_ssl
+    accept-ranges: bytes
+    date: Mon, 16 Mar 2015 13:21:35 GMT
+    x-varnish: '2714344395'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: lb2
+    x-cache: MISS
+  :body: ''
+:created_at: 2015-03-16 15:18:16.183984064 +02:00
