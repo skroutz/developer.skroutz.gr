@@ -103,10 +103,22 @@ discussion messages, etc).
 
 <%= render_recording :notifications_index %>
 
-## Retrieve a single notification 
+## Retrieve a single notification
 
 <pre class="terminal">
   GET /notifications/:id
 </pre>
 
 <%= render_recording :notifications_show %>
+
+## Mark notifications as viewed
+
+<pre class="terminal">
+  POST /notifications/view{?ids[]}
+</pre>
+
+Name   | Type     | Description
+------ | -------- | -----------
+`ids`  | Array    | The notification ids to mark as viewed
+
+<%= render_recording :notifications_view %>

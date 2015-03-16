@@ -5,6 +5,11 @@ title: changelog
 
 # Changelog <%= edit_link %>
 
+## 2014-03-16 - v3.0.11
+New endpoint, `POST` `/notifications/view{?ids[]}`
+: Marking notifications as viewed can now be performed.
+<%= link_to 'Read more', '/api/v3/notifications', anchor: 'mark-notifications-as-viewed' %>.
+
 ## 2014-03-16 - v3.0.10
 Include associations of <%= link_to 'Notification', '/api/v3/notifications/' %>
 : The included associations are the following:
