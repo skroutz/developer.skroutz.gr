@@ -3,7 +3,7 @@
   :url: https://api.skroutz.gr/notifications
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer wMhTHaBmxiju/WzM3XR6j7m9Z1Wmu8Qb2kM9DQ0R2gshoObCr3YsJZRu9PYZrdHCsKLLTK8H9rdaGkw4mWjpQ==
+    :authorization: Bearer dwJGwyyT2ZdRbxOup7LLP1u1ulmNBPtc5LXkGJEVCL1EPf9R4rkRdgmgic6812097dQdwEPoA7vu/vMzUacMg==
   :params:
     :per: 1
   :verb: GET
@@ -15,27 +15,28 @@
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
     x-ratelimit-remaining: '99'
-    x-ratelimit-reset: '1423668120'
+    x-ratelimit-reset: '1426506000'
     status: 200 OK
     link: <https://api.skroutz.gr/notifications?page=100&per=1>; rel="last", <https://api.skroutz.gr/notifications?page=2&per=1>;
       rel="next"
     x-ua-compatible: IE=Edge,chrome=1
     cache-control: max-age=0, private, must-revalidate
-    x-request-id: '2488866068'
-    x-runtime: '0.107212'
+    x-request-id: '2713218307'
+    x-runtime: '0.091179'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
     x-app: frankie_ssl
-    content-length: '361'
+    content-length: '507'
     accept-ranges: bytes
-    date: Wed, 11 Feb 2015 15:21:55 GMT
-    x-varnish: '2488866068'
+    date: Mon, 16 Mar 2015 11:39:33 GMT
+    x-varnish: '2713218307'
     age: '0'
     via: 1.1 varnish
     connection: close
-    x-origin: lb1
+    x-origin: lb2
     x-cache: MISS
-  :body: '{"notifications":[{"id":72610806,"etype":"price_drop","eventable_id":342825,"eventable_type":"Sku","eventable_name":"Bomann
-    DKP 5007 CB Double-Hotplate","eventable_url":"http://www.skroutz.gr/s/342825/Bomann-DKP-5007-CB-Double-Hotplate.html?from=account_notifications","event_text":null,"snapshot":{"price_min":31.5,"latest_price":32.78,"change_rate":0.039},"is_viewed":true,"aggregated":false,"created_at":"2015-02-11T12:20:40+02:00","updated_at":"2015-02-11T13:11:44+02:00"}],"meta":{"pagination":{"total_results":100,"total_pages":100,"page":1,"per":1}}}'
-:created_at: 2015-02-11 17:19:21.501194727 +02:00
+  :body: '{"notifications":[{"id":80449671,"etype":"price_up","eventable_id":446748,"eventable_type":"Sku","eventable_name":"Tern
+    Link C7","eventable_url":"http://www.skroutz.gr/s/446748/Tern-Link-C7.html?from=account_notifications","event_text":null,"snapshot":{"price_min":410.0,"latest_price":399.0,"change_rate":0.028},"is_viewed":true,"aggregated":false,"created_at":"2015-03-15T00:49:05+02:00","updated_at":"2015-03-15T21:17:16+02:00","sku":{"id":446748,"display_name":"Tern
+    Link C7","images":{"main":"http://b.scdn.gr/images/sku_main_images/000446/446748/medium_2012-tn-photo-link-c7-blk-yellow-web.jpg","alternatives":["http://d.scdn.gr/images/sku_images/000054/54304/2012-tn-photo-link-c7-blk-yellow-fold-web.jpg"]},"click_url":null,"virtual":false,"future":false},"category_name":"\u03a0\u03bf\u03b4\u03ae\u03bb\u03b1\u03c4\u03b1"}],"meta":{"pagination":{"total_results":100,"total_pages":100,"page":1,"per":1}}}'
+:created_at: 2015-03-16 13:36:13.832454329 +02:00
