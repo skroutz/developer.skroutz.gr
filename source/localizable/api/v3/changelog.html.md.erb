@@ -5,6 +5,58 @@ title: changelog
 
 # Changelog <%= edit_link %>
 
+## 2014-03-16 - v3.0.10
+Include associations of <%= link_to 'Notification', '/api/v3/notifications/' %>
+: The included associations are the following:
+
+When the <%= link_to 'Notification', '/api/v3/notifications/' %> type is:
+
+* `price_up`
+* `price_drop`
+* `sku_review`
+* `availability_true`
+* `availability_false`
+
+Then a <%= link_to 'Sku', '/api/v3/sku/' %> is embedded in the
+<%= link_to 'Notification', '/api/v3/notifications/' %> having only the following fields:
+
+~~~
++ id
++ display_name
++ images
++ click_url
++ virtual
++ future
+~~~
+
+---
+
+When the <%= link_to 'Notification', '/api/v3/notifications/' %> type is:
+
+* `price_up`
+* `price_drop`
+
+Then we add a `category_name` attribute mirroring the `name` attribute of the
+<%= link_to 'Category', '/api/v3/category/' %> to which the associated
+<%= link_to 'Sku', '/api/v3/sku/' %> belongs.
+
+---
+
+When the <%= link_to 'Notification', '/api/v3/notifications/' %> type is:
+
+* `sku_review`
+
+Then the User who created the review is embedded in the
+<%= link_to 'Notification', '/api/v3/notifications/' %> having only the following fields:
+
+~~~
++ id
++ username
++ avatar
+~~~
+
+Also a `review_text` attribute is added for non-aggregated (aggregated: false) `sku_review` notifications.
+
 ## 2014-02-11 - v3.0.9
 Change the representation of <%= link_to 'Notification', '/api/v3/notifications/' %>
 : The changes in fields are the following:
