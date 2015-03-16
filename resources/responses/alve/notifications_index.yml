@@ -3,7 +3,7 @@
   :url: https://api.alve.com/notifications
   :headers:
     :accept: application/vnd.alve+json; version=3
-    :authorization: Bearer 9i6hvUFPPiLOuOC9ZhFny1xBu6e26vZnKxcjC8Y5bIeIOUm7dq6OaEFSl8mv3OaD3hKLpWgPCyNEWMf3o5lR5A==
+    :authorization: Bearer kYxQTj9eI38H22EYUmOnjoYVKulTXPdJmaQjP1J/oNi6H/KljK93vjkpq/iRbnZSlrv3B1FSGVX7zET5ZSXZFg==
   :params:
     :per: 1
   :verb: GET
@@ -14,28 +14,30 @@
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '98'
-    x-ratelimit-reset: '1423669980'
+    x-ratelimit-remaining: '99'
+    x-ratelimit-reset: '1426506300'
     status: 200 OK
-    link: <https://api.alve.com/notifications?page=6&per=1>; rel="last", <https://api.alve.com/notifications?page=2&per=1>;
+    link: <https://api.alve.com/notifications?page=3&per=1>; rel="last", <https://api.alve.com/notifications?page=2&per=1>;
       rel="next"
     x-ua-compatible: IE=Edge,chrome=1
     cache-control: max-age=0, private, must-revalidate
-    x-request-id: '1380273972'
-    x-runtime: '0.083292'
+    x-request-id: '206358404'
+    x-runtime: '0.094884'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
     x-app: as1_ssl
-    content-length: '328'
+    content-length: '540'
     accept-ranges: bytes
-    date: Wed, 11 Feb 2015 15:52:42 GMT
-    x-varnish: '1380273972'
+    date: Mon, 16 Mar 2015 11:44:27 GMT
+    x-varnish: '206358404'
     age: '0'
     via: 1.1 varnish
     connection: close
-    x-origin: lb1
+    x-origin: lb2
     x-cache: MISS
-  :body: '{"notifications":[{"id":40001,"etype":"price_up","eventable_id":387159,"eventable_type":"Sku","eventable_name":"Apple
-    iPhone 5s 64GB","eventable_url":"http://www.alve.com/s/387159/Apple-iPhone-5s-64GB.html?from=account_notifications","event_text":null,"snapshot":{"price_min":2499.0,"latest_price":2399.0,"change_rate":0.042},"is_viewed":false,"aggregated":false,"created_at":"2015-02-10T03:16:40+02:00","updated_at":"2015-02-10T03:16:40+02:00"}],"meta":{"pagination":{"total_results":6,"total_pages":6,"page":1,"per":1}}}'
-:created_at: 2015-02-11 17:50:08.601405559 +02:00
+  :body: '{"notifications":[{"id":45030,"etype":"price_up","eventable_id":705848,"eventable_type":"Sku","eventable_name":"General
+    Mobile Discovery Elite 32GB","eventable_url":"http://www.alve.com/s/705848/General-Mobile-Discovery-Elite-32GB.html?from=account_notifications","event_text":null,"snapshot":{"price_min":1019.0,"latest_price":1008.81,"change_rate":0.01},"is_viewed":true,"aggregated":false,"created_at":"2015-03-10T12:10:38+02:00","updated_at":"2015-03-11T16:00:39+02:00","sku":{"id":705848,"display_name":"General
+    Mobile Discovery Elite 32GB","images":{"main":"http://alve-d.scdn.gr/images/sku_main_images/000705/705848/medium_discoveryElite_size.png","alternatives":["http://alve-a.scdn.gr/images/sku_images/000815/815720/discoveryElite_Detail_right.png","http://alve-c.scdn.gr/images/sku_images/000815/815721/discoveryElite_Detail_01.png","http://alve-c.scdn.gr/images/sku_images/000815/815722/discoveryElite_Detail_02.png","http://alve-c.scdn.gr/images/sku_images/000815/815723/discoveryElite_Detail_03.png","http://alve-c.scdn.gr/images/sku_images/000815/815724/discoveryElite_Detail_04.png"]},"click_url":null,"virtual":false,"future":false},"category_name":"Cep
+    Telefonu"}],"meta":{"pagination":{"total_results":3,"total_pages":3,"page":1,"per":1}}}'
+:created_at: 2015-03-16 13:41:08.258098099 +02:00
