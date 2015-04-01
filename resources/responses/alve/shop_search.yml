@@ -3,29 +3,34 @@
   :url: https://api.alve.com/shops/search?q=mediamarkt
   :headers:
     :accept: application/vnd.alve+json; version=3
-    :authorization: Bearer ro3L8/U7wnqmbcjEGfzjTJCJ9J75lq9LbSMcZwuNey8kBoSKpOVPfuRZFYOFUy0rLS//s02U7ZEIigv0mm0oA==
+    :authorization: Bearer nLdnsdFU1yyhJWYKSkAI/wjll3j3h4rYjCVjbSpbXtMgUzwq/Ha7badR/WoVwKVgElDBSEEFJpnw6WaG61g==
   :verb: GET
 :response:
   :status: 200
   :headers:
-    !binary "c2VydmVy": nginx
-    !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
-    !binary "dmFyeQ==": Accept-Encoding
-    !binary "c3RhdHVz": 200 OK
-    !binary "Y2FjaGUtY29udHJvbA==": max-age=300, private
-    !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
-    !binary "eC1yZXF1ZXN0LWlk": '986354976'
-    !binary "eC1ydW50aW1l": '0.045820'
-    !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "eC1hcHA=": as2_ssl
-    !binary "Y29udGVudC1sZW5ndGg=": '345'
-    !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:48:45 GMT
-    !binary "eC12YXJuaXNo": '986354976'
-    !binary "YWdl": '0'
-    !binary "dmlh": 1.1 varnish
-    !binary "Y29ubmVjdGlvbg==": close
-    !binary "eC1vcmlnaW4=": varnish1
-    !binary "eC1jYWNoZQ==": MISS
-  :body: ! '{"shops":[{"id":138,"name":"Media Markt","link":"http://www.mediamarkt.com.tr","phone":"08502221500","image_url":"http://alve-c.scdn.gr/images/shops/logos/0001/mid_2b82b627-658e-43c5-86c1-ff6cea40dced.jpg","thumbshot_url":"http://alve-d.scdn.gr/images/shops/screens/f0f6510b-decc-4b19-beb1-77c6e72cbd3f.png","reviews_count":0,"review_score":0.0,"payment_methods":{"credit_card":true,"paypal":true,"bank":false,"spot_cash":false,"installments":""}}],"meta":{"pagination":{"total_results":1,"total_pages":1,"page":1,"per":25}}}'
-:created_at: 2014-08-25 17:48:45.427845967 +03:00
+    server: nginx
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '99'
+    x-ratelimit-reset: '1427876040'
+    status: 200 OK
+    cache-control: max-age=300, private
+    x-ua-compatible: IE=Edge,chrome=1
+    x-request-id: '210025573'
+    x-runtime: '0.055287'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: as2_ssl
+    content-length: '395'
+    accept-ranges: bytes
+    date: Wed, 01 Apr 2015 08:13:53 GMT
+    x-varnish: '210025573'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: lb2
+    x-cache: MISS
+  :body: '{"shops":[{"id":138,"name":"Media Markt","link":"http://www.mediamarkt.com.tr","phone":"08502221500","image_url":"http://alve-d.scdn.gr/images/shops/logos/0001/mid_abaa96a4-3519-47e8-b3c0-c27fbd50856c.jpg","thumbshot_url":"http://alve-c.scdn.gr/images/shops/screens/30c530fc-0848-4ad4-a829-a5ddfed3f98c.png","reviews_count":1,"review_score":5.0,"payment_methods":{"credit_card":true,"paypal":true,"bank":false,"spot_cash":false,"installments":"","bkm":false,"ipara":false},"shipping":{"free":false,"free_from":null,"free_from_info":null,"min_price":"2.9"}}],"meta":{"pagination":{"total_results":1,"total_pages":1,"page":1,"per":25}}}'
+:created_at: 2015-04-01 11:10:11.059854023 +03:00
