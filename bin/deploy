@@ -1,0 +1,3 @@
+#!/bin/bash
+
+for stage in skroutz alve scrooge; do bundle exec cap $stage deploy; done
