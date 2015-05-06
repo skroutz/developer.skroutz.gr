@@ -228,6 +228,12 @@ requests:
       headers:
         <<: *default_headers
   -
+    key: skus_price_history
+    request:
+      url: '{{base_url}}/skus/3034682/price_history'
+      headers:
+        <<: *default_headers
+  -
     key: sku_favorite
     request:
       url: '{{base_url}}/skus/345333/favorite'
