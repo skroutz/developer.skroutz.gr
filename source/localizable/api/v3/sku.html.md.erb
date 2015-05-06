@@ -151,6 +151,17 @@ Groups represent a logical grouping of specifications.
 
 <%= render_recording :sku_specifications_include_group %>
 
+## Retrieve a SKU's price history
+
+> ##### Note
+> Currently this endpoint responds with any available data for the last 6 months
+
+<pre class="terminal">
+  GET /skus/:id/price_history
+</pre>
+
+<%= render_recording :skus_price_history %>
+
 ## Retrieve an SKU's favorite
 
 > ##### Note
