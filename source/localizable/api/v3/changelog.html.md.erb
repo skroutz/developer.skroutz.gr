@@ -5,6 +5,11 @@ title: changelog
 
 # Changelog <%= edit_link %>
 
+## 2015-05-06 - v3.0.15
+New endpoint, `GET` `/skus/{id}/price_history`
+: Provides historical data about the average and lowest price for a <%= link_to 'Sku', '/api/v3/sku/' %>.  
+<%= link_to 'Read more', '/api/v3/sku', anchor: 'retrieve-a-skus-price-history' %>
+
 ## 2014-04-23 - v3.0.14
 Expose attribute `expenses` in <%= link_to 'Product', '/api/v3/product' %>.
 : The product expenses attribute is now present in the representation of products.  
