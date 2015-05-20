@@ -29,9 +29,9 @@ The `addOrder` command creates an Ecommerce order object.
 Name       | Type   | Required | Description
 ---------- | ------ | -------- | -----------
 `order_id` | String | Yes      | The Order ID that was produced by your e-shop. It is used to uniquely identify the transaction.
-`revenue`  | String | No       | The total revenue or grand total of the order. This value must include shipping and tax costs.
-`shipping` | String | No       | The total shipping cost of the order.
-`tax`      | String | No       | The total tax of the order.
+`revenue`  | String | Yes      | The total revenue or grand total of the order. This value must include shipping and tax costs.
+`shipping` | String | Yes      | The total shipping cost of the order.
+`tax`      | String | Yes      | The total tax of the order.
 
 ##### Example
 
