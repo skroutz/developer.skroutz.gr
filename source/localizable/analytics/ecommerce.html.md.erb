@@ -46,13 +46,16 @@ Name          | Type   | Required | Description
 ------------- | ------ | -------- | -----------
 `order_id`    | String | Yes      | The Order ID that was produced by your e-shop. This ID links items to their orders.
 `product_id`  | String | Yes      | The [Unique ID](/feedspec/#unique-id) from your e-shop.
+`name`        | String | Yes      | The [name](/feedspec/#name) of the product from your e-shop.
 `price`       | String | Yes      | The individual, unit, final price for each item.
 `quantity`    | String | Yes      | The number of units purchased in the order.
 
 > ##### Note
-> 1. As the `Product ID` you **have to** provide the same [Unique ID](/feedspec/#unique-id) that is
+> 1. As the `Product ID` you **must** provide the same [Unique ID](/feedspec/#unique-id) that is
 > submitted as part of the XML feedspec.
-> 2. Make sure your `Order ID` in your `addItem` command matches the one submitted by `addOrder`.
+> 2. The `name` of the product **must** match the [Name](/feedspec/#name) that is
+> submitted as part of the XML feedspec.
+> 3. Make sure your `Order ID` in your `addItem` command matches the one submitted by `addOrder`.
 
 ##### Example
 
