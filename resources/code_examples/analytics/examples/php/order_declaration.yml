@@ -5,21 +5,23 @@
   // Example of an Order to report with Analytics
   $order = array(
     'id'        => 123456,
-    'revenue'   => '300.50',
+    'revenue'   => '1840.38',
     'shipping'  => '3.50',
-    'tax'       => '10.00'
+    'tax'       => '422.49'
   );
 
   // Example of Order Items to report with Analytics
   $items = array();
   $items[0] = array(
     'id'        => 43667,
-    'price'     => '97.00',
+    'name'      => 'Apple IPhone 6 Plus (16GB) Space Gray EU',
+    'price'     => '654.90',
     'quantity'  => 1
   );
   $items[1] = array(
     'id'        => 25668,
-    'price'     => '100.00',
+    'name'      => 'Motorola Nexus 6 (64GB) EU Light Gray',
+    'price'     => '590.99',
     'quantity'  => 2
   );
 

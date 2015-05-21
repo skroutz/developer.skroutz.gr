@@ -4,9 +4,9 @@
   <script>
     sa('ecommerce', 'addOrder', JSON.stringify({
       order_id: '123456',  // Order ID. Required.
-      revenue:  '87.45',   // Grand Total. Includes Tax and Shipping.
+      revenue:  '4417.58', // Grand Total. Includes Tax and Shipping.
       shipping: '5.45',    // Total Shipping Cost.
-      tax:      '10.50'    // Total Tax.
+      tax:      '1014.79'  // Total Tax.
     }));
   </script>
   
@@ -15,21 +15,24 @@
     sa('ecommerce', 'addItem', JSON.stringify({
       order_id:   '123456',  // Order ID. Required.
       product_id: '111222',  // Product ID. Required.
-      price:      '5.50',    // Price per Unit. Required.
+      name:       'Apple IPhone 6 Plus (16GB) Space Gray EU',  // Product Name. Required.
+      price:      '654.90',  // Price per Unit. Required.
       quantity:   '4'        // Quantity of Items. Required.
     }));
   
     sa('ecommerce', 'addItem', JSON.stringify({
       order_id:   '123456',
       product_id: '303404',
-      price:      '60.00',
+      name:       'Motorola Nexus 6 (64GB) EU Light Gray',
+      price:      '590.99',
       quantity:   '1'
     }));
   
     sa('ecommerce', 'addItem', JSON.stringify({
       order_id:   '123456',
       product_id: '121234',
-      price:      '16.77',
+      name:       'LG G4 (64GB) EU Leather',
+      price:      '600.77',
       quantity:   '2'
     }));
   </script>

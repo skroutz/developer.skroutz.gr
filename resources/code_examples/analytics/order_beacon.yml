@@ -2,9 +2,9 @@
 :code: |
   <script>
     sa('ecommerce', 'addOrder', JSON.stringify({
-      order_id: '123456',  // Order ID. Required.
-      revenue:  '120.99',  // Grand Total. Includes Tax and Shipping.
-      shipping: '5.45',    // Total Shipping Cost.
-      tax:      '10.50'    // Total Tax.
+      order_id: '123456',   // Order ID. Required.
+      revenue:  '1315.25',  // Grand Total. Includes Tax and Shipping.
+      shipping: '5.45',     // Total Shipping Cost.
+      tax:      '301.25'    // Total Tax.
     }));
   </script>

@@ -24,6 +24,7 @@
     $item_data = json_encode(array(
       'order_id'    => $order['id'],
       'product_id'  => $item['id'],
+      'name'        => $item['name'],
       'price'       => $item['price'],
       'quantity'    => $item['quantity']
     ));
