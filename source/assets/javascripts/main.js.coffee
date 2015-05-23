@@ -172,6 +172,14 @@ class UI.ResponseHeaders
     $el.toggleClass(ACTIVE_CLASS)
     $headers.toggleClass(HIDDEN_CLASS)
 
+class UI.EasterEgg
+  BANNER = "Interested in becoming a member of our engineering team?
+  We're hiring! Open Positions: https://skroutz.workable.com/"
+
+  log = (msg) -> console.log(msg) if console?.log?
+
+  constructor: -> log(BANNER)
+
 ###
   UI.Table
 ###
@@ -191,6 +199,7 @@ UI.Table =
     UI.OffCanvas.bindListeners $('[data-ui-scope="offCanvasBtn"]')
     UI.CodeExample.bindListeners $('.example').find('.toggler')
     new UI.ResponseHeaders('.http-headers-toggler')
+    new UI.EasterEgg
     UI.Table.addResponsiveWrapper()
     UI.Anchor.scrollToTarget(location.hash, 0) if location.hash not in ['#', '']
 
