@@ -33,6 +33,9 @@ Name       | Type   | Required | Description
 `shipping` | String | Yes      | The total shipping cost of the order.
 `tax`      | String | Yes      | The total tax of the order.
 
+> ##### Note
+> Make sure **not** to include any spot cash costs in either `revenue` or `shipping`.
+
 ##### Example
 
 <%= render_code_from_file 'analytics/order_beacon' %>
