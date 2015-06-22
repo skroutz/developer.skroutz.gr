@@ -1,5 +1,9 @@
 :language: html
 :code: |
+  <!--
+  Add this script at the final step of your checkout process, after a user has successfully
+  completed a purchase. Usually this is the "Thank You" or "Receipt" page.
+  -->
   <script>
   <?php
     // Print the Analytics Ecommerce AddOrder action
