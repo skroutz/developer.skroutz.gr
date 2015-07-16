@@ -103,6 +103,7 @@ To παρόν έχει σαν σκοπό να περιγράψει την δομ
 [Manufacturer](#manufacturer)    | String  | <span class="mono">100</span>  | Ναι         | `Samsung`
 [MPN / ISBN](#mpn--isbn)         | String  | <span class="mono">80</span>   | Ναι         | `GF322234`
 [Size](#size)                    | String  | <span class="mono">500</span>  | Όχι*        | `36,37,38 1/2,40,44`
+[Weight / Volume](#weight)       | Decimal | <span class="mono">-</span>    | Όχι         | `3200`
 [Shipping Costs](#shipping-costs)| Decimal | <span class="mono">-</span>    | Όχι         | `3.22`
 [Color](#color)                  | String  | <span class="mono">100</span>  | Όχι         | `Μαύρο`
 
@@ -378,6 +379,27 @@ To <%= settings.site_name.capitalize %> χρησιμοποιεί ένα προκ
   υποδήματα, πουκάμισα, κτλ) **δεν** θα ταξινομούνται.
 
 
+#### Weight / Volume {#weight}
+
+Το μέγεθος που χρησιμοποιείται από την πλατφόρμα σας για τον υπολογισμό
+του κόστους των μεταφορικών. Αυτό μπορεί να είναι βάρος, όγκος, ογκομετρικό βάρος
+ή οποιοσδήποτε άλλος τρόπος υποστηρίζεται από το σύστημά σας.
+
+##### Παράδειγμα
+
+Για ένα προϊόν με βάρος `3.2kg`, η τιμή του πεδίου βάρους θα είναι:
+
+~~~ xml
+<weight>3200</weight>
+~~~
+
+Για ένα προϊόν με όγκο <code>2m<sup>3</sup></code>, η τιμή του πεδίου βάρους θα είναι:
+
+~~~ xml
+<weight>2</weight>
+~~~
+
+
 #### Shipping Costs
 
 Αν γνωρίζετε το ακριβές κόστος παράδοσης (π.χ. έχετε σταθερά μεταφορικά 5 ευρώ),
@@ -462,6 +484,7 @@ To χρώμα του προϊόντος. Το πεδίο χρώματος λει
         <instock>N</instock>
         <availability>Κατόπιν Παραγγελίας</availability>
         <size>38,39</size>
+        <weight>360</weight>
         <color>Μαύρο</color>
       </product>
       ...
@@ -581,6 +604,9 @@ To χρώμα του προϊόντος. Το πεδίο χρώματος λει
     </xs:simpleType>
   </xs:element>
 
+  <!-- weight -->
+  <xs:element name="weight" type="xs:decimal" />
+
   <!-- color -->
   <xs:element name="color">
     <xs:simpleType>
@@ -620,6 +646,7 @@ To χρώμα του προϊόντος. Το πεδίο χρώματος λει
 
                     <!-- optional fields -->
                     <xs:element ref="size"  minOccurs="0"/>
+                    <xs:element ref="weight" minOccurs="0"/>
                     <xs:element ref="shipping"  minOccurs="0"/>
                     <xs:element ref="color"  minOccurs="0"/>
 
