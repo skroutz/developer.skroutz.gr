@@ -105,6 +105,7 @@ Name                             | Type    | Length                         | Re
 [Manufacturer](#manufacturer)    | String  | <span class="mono">100</span>  | Yes      | `Samsung`
 [MPN / ISBN](#mpn--isbn)         | String  | <span class="mono">80</span>   | Yes      | `GF322234`
 [Size](#size)                    | String  | <span class="mono">500</span>  | No*      | `4,4.5,5-6,6 1/2`
+[Weight / Volume](#weight)       | Decimal | <span class="mono">-</span>    | No       | `3200`
 [Shipping Costs](#shipping-costs)| Decimal | <span class="mono">-</span>    | No       | `3.22`
 [Color](#color)                  | String  | <span class="mono">100</span>  | No       | `Black`
 
@@ -348,6 +349,26 @@ forward slash. (/) e.g.
 will **not** be classified.
 
 
+#### Weight / Volume {#weight}
+
+The metric used by your platform to calculate shipping costs. This can be either the weight,
+the volume, the volumetric weight or any other metric supported by your system.
+
+##### Example
+
+For a product with a weight of `3.2kg`, the value of the weight field should be:
+
+~~~ xml
+<weight>3200</weight>
+~~~
+
+For a product with a volume of <code>2m<sup>3</sup></code>, the value of the weight field should be:
+
+~~~ xml
+<weight>2</weight>
+~~~
+
+
 #### Shipping Costs
 
 The product's shipping cost regardless of the customer's location. If the
@@ -428,6 +449,7 @@ The XML excerpt below is an example of a compatible XML data feed.
         <instock>N</instock>
         <availability>Pre Order</availability>
         <size>5.5,6</size>
+        <weight>360</weight>
         <color>Black</color>
       </product>
       ...
@@ -545,6 +567,9 @@ The XML excerpt below is an example of a compatible XML data feed.
     </xs:simpleType>
   </xs:element>
 
+  <!-- weight -->
+  <xs:element name="weight" type="xs:decimal" />
+
   <!-- color -->
   <xs:element name="color">
     <xs:simpleType>
@@ -584,6 +609,7 @@ The XML excerpt below is an example of a compatible XML data feed.
 
                     <!-- optional fields -->
                     <xs:element ref="size"  minOccurs="0"/>
+                    <xs:element ref="weight" minOccurs="0"/>
                     <xs:element ref="shipping"  minOccurs="0"/>
                     <xs:element ref="color"  minOccurs="0"/>
 
