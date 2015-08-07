@@ -5,6 +5,14 @@ title: changelog
 
 # Changelog <%= edit_link %>
 
+## 2015-07-13 - v3.0.16
+Expose attribute `format` in <%= link_to 'Location', '/api/v3/shop/', anchor: 'list-shop-locations' %>.
+: The location format attribute is now present in the representation of locations.
+This attribute states whether the locations' address is `structured` or `unstructured`.
+If the format is `structured` then the specific address fields can be retrieved when
+<%= link_to 'embedding the address', '/api/v3/shop', anchor: 'retrieve-a-single-shop-location' %>.
+If the format is `unstructured` then the relevant address fields will be `null`.
+
 ## 2015-05-06 - v3.0.15
 New endpoint, `GET` `/skus/{id}/price_history`
 : Provides historical data about the average and lowest price for a <%= link_to 'Sku', '/api/v3/sku/' %>.  
