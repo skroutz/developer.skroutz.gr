@@ -3,7 +3,7 @@
   :url: https://api.alve.com/shops/298/locations
   :headers:
     :accept: application/vnd.alve+json; version=3
-    :authorization: Bearer ro3L8/U7wnqmbcjEGfzjTJCJ9J75lq9LbSMcZwuNey8kBoSKpOVPfuRZFYOFUy0rLS//s02U7ZEIigv0mm0oA==
+    :authorization: Bearer EFhNjuolAy8M1ZZlp3wxptjcWT1q0/nfRTatNKZYeG44pJo7e1OXLe8f1yGZ8X68xY6lhftqBAKon8GRaRSk/Q==
   :params:
     :per: 2
   :verb: GET
@@ -13,23 +13,29 @@
     !binary "c2VydmVy": nginx
     !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
     !binary "dmFyeQ==": Accept-Encoding
+    !binary "eC1yYXRlbGltaXQtbGltaXQ=": '100'
+    !binary "eC1yYXRlbGltaXQtcmVtYWluaW5n": '99'
+    !binary "eC1yYXRlbGltaXQtcmVzZXQ=": '1438936380'
     !binary "c3RhdHVz": 200 OK
     !binary "Y2FjaGUtY29udHJvbA==": max-age=300, private
     !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
-    !binary "eC1yZXF1ZXN0LWlk": '986354933'
-    !binary "eC1ydW50aW1l": '0.062361'
+    !binary "ZXRhZw==": W/"1361e462f1fcd99745a52e07a0f3b23c"
+    !binary "eC1yZXF1ZXN0LWlk": '249323206'
+    !binary "eC1ydW50aW1l": '0.121732'
     !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
+    !binary "YWNjZXNzLWNvbnRyb2wtYWxsb3ctb3JpZ2lu": ! '*'
+    !binary "YWNjZXNzLWNvbnRyb2wtYWxsb3ctbWV0aG9kcw==": HEAD, GET, POST, PUT, DELETE
     !binary "eC1hcHA=": as2_ssl
-    !binary "Y29udGVudC1sZW5ndGg=": '343'
+    !binary "Y29udGVudC1sZW5ndGg=": '288'
     !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:48:42 GMT
-    !binary "eC12YXJuaXNo": '986354933'
+    !binary "ZGF0ZQ==": Fri, 07 Aug 2015 08:32:29 GMT
+    !binary "eC12YXJuaXNo": '249323206'
     !binary "YWdl": '0'
     !binary "dmlh": 1.1 varnish
     !binary "Y29ubmVjdGlvbg==": close
-    !binary "eC1vcmlnaW4=": varnish1
+    !binary "eC1vcmlnaW4=": lb2
     !binary "eC1jYWNoZQ==": MISS
   :body: ! '{"locations":[{"id":63,"headquarter":true,"phones":["4443662"],"pickup_point":false,"store":false,"full_address":"Faz\u0131l
-    Kaftano\u011flu 15, P.\u039a. 34418, Ka\u011f\u0131thane, Seyrantepe, \u0130stanbul","lat":"41.099321","lng":"29.005014","info":"
+    Kaftano\u011flu 15, P.\u039a. 34418, Ka\u011f\u0131thane, Seyrantepe, \u0130stanbul","format":"unstructured","lat":"41.099321","lng":"29.005014","info":"
     Faz\u0131l Kaftano\u011flu Cad. 15, Seyrantepe / \u0130STANBUL"}],"meta":{"pagination":{"total_results":1,"total_pages":1,"page":1,"per":2}}}'
-:created_at: 2014-09-08 16:11:42.073424000 +03:00
+:created_at: 2015-08-07 11:32:29.928923000 +03:00

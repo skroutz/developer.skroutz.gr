@@ -34,7 +34,9 @@ title: shop
 <%= render_recording :shop_locations_index %>
 
 Addresses can be included / embedded using the `address` value. Addresses are
-expanded versions of the `full_address` field.
+expanded versions of the `full_address` field. If the `format` of the Location
+is `structured` then the address fields will be populated. If the `format` is
+`unstructured` then the fields will be `null`.
 
 <pre class="terminal">
   GET /shops/:shop_id/locations?embed=address
