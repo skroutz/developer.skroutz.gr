@@ -375,9 +375,18 @@ requests:
   -
     key: sku_reviews
     request:
-      url: '{{base_url}}/skus/146414/reviews'
+      url: '{{base_url}}/skus/808273/reviews'
       headers:
         <<: *default_headers
+  -
+    key: sku_review_vote_create
+    request:
+      verb: POST
+      url: '{{base_url}}/skus/808273/reviews/146/votes'
+      headers:
+        <<: *default_headers
+      params:
+        vote[helpful]: true
   -
     key: sku_specifications
     request:
