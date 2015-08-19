@@ -22,7 +22,7 @@ GEM
       execjs
     coffee-script-source (1.7.1)
     colored (1.2)
-    colorize (0.7.3)
+    colorize (0.7.7)
     compass (0.12.7)
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
@@ -117,11 +117,11 @@ GEM
     rb-kqueue (0.2.3)
       ffi (>= 0.5.0)
     ref (1.0.5)
-    response_mate (0.3.1)
+    response_mate (0.4.0)
       activesupport
       addressable
       awesome_print
-      colored
+      colorize (> 0.7.5)
       faraday
       faraday_middleware
       highline
@@ -172,5 +172,5 @@ DEPENDENCIES
   middleman-syntax (~> 2.0.0)
   pry
   pry-doc
-  response_mate (~> 0.3.1)
+  response_mate (~> 0.4.0)
   therubyracer (~> 0.12.1)

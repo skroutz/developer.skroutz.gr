@@ -8,7 +8,7 @@ gem 'middleman', '~> 3.3'
 gem 'middleman-syntax', '~> 2.0.0'
 
 # API Helpers
-gem 'response_mate', '~> 0.3.1'
+gem 'response_mate', '~> 0.4.0'
 
 # Deployments
 gem 'capistrano', '~> 3.2.1', require: false

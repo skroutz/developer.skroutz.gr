@@ -23,7 +23,7 @@ module ResponseMateHelper
   def format_request(recording)
     <<-OUT
     <p class="request">
-      <span class="verb">#{recording[:request][:verb]}</span>
+      <span class="verb">#{recording[:request][:verb].upcase}</span>
       <span class="path">#{recording[:request][:url]}</span>
     </p>
     OUT
