@@ -1,10 +1,10 @@
 ---
 :request:
-  :url: https://api.skroutz.gr/skus/355766/reviews
+  :url: http://api.skroutz.gr/skus/355766/reviews
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer iwKNu5Cbzb1ycJoJvmpAA6sN9Q9OcgdO2tq68OX1wBFLmmrbsBNYlbnm7k/qtH72XUAMNyIsxMAaCzBbx/5inQ==
-  :verb: GET
+    :authorization: Bearer _redacted_
+  :verb: :get
 :response:
   :status: 200
   :headers:
@@ -13,20 +13,21 @@
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
     x-ratelimit-remaining: '99'
-    x-ratelimit-reset: '1427876700'
+    x-ratelimit-reset: '1440003540'
     status: 200 OK
     cache-control: max-age=300, private
     x-ua-compatible: IE=Edge,chrome=1
-    x-request-id: '2894262763'
-    x-runtime: '0.030843'
+    etag: W/"9ff8bf0a02064f6d7d1ae6641b831e3d"
+    x-request-id: '2118151402'
+    x-runtime: '0.022062'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
-    x-app: benjy_ssl
-    content-length: '593'
+    x-app: rontok
+    content-length: '616'
     accept-ranges: bytes
-    date: Wed, 01 Apr 2015 08:24:31 GMT
-    x-varnish: '2894262763'
+    date: Wed, 19 Aug 2015 16:58:14 GMT
+    x-varnish: '2118151402'
     age: '0'
     via: 1.1 varnish
     connection: close
@@ -52,5 +53,5 @@
     \u03a4\u03bf \u03bc\u03cc\u03bd\u03bf \u03bc\u03ae \u03ac\u03c1\u03b9\u03c3\u03c4\u03bf
     \u03b5\u03af\u03bd\u03b1\u03b9 \u03b7 \u03c7\u03c9\u03c1\u03b7\u03c4\u03b9\u03ba\u03cc\u03c4\u03b7\u03c4\u03ac
     \u03c4\u03bf\u03c5. \u039c\u03b5 \u03bb\u03af\u03b3\u03b1 \u03c0\u03b1\u03c1\u03b1\u03c0\u03ac\u03bd\u03c9
-    \u03bb\u03af\u03c4\u03c1\u03b1 \u03b8\u03b1 \u03ae\u03c4\u03b1\u03bd \u03c4\u03ad\u03bb\u03b5\u03b9\u03bf.","rating":5,"created_at":"2013-08-13T22:00:24+03:00","demoted":false}],"meta":{"pagination":{"total_results":1,"total_pages":1,"page":1,"per":25}}}'
-:created_at: 2015-04-01 11:20:48.671387938 +03:00
+    \u03bb\u03af\u03c4\u03c1\u03b1 \u03b8\u03b1 \u03ae\u03c4\u03b1\u03bd \u03c4\u03ad\u03bb\u03b5\u03b9\u03bf.","rating":5,"created_at":"2013-08-13T22:00:24+03:00","demoted":false,"helpful_votes_count":0,"voted":false}],"meta":{"pagination":{"total_results":1,"total_pages":1,"page":1,"per":25}}}'
+:created_at: 2015-08-19 19:58:16.452280976 +03:00
