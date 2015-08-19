@@ -40,6 +40,13 @@ permissions shoot a mail at <<%= settings.api_email %>>.
       <td>User</td>
       <td><%= link_to t('docs.apiv3.notifications'), '/api/v3/notifications' %></td>
     </tr>
+    <tr>
+      <td><code>publish_sku_review_actions</code></td>
+      <td>User</td>
+      <td><%= link_to 'Publishing Actions Related to SKU Reviews',
+                      '/api/v3/sku',
+                      anchor: 'retrieve-an-skus-reviews' %></td>
+    </tr>
     <% if flavor == 'skroutz' %>
     <tr>
       <td><code>easy</code> <small class="mark">default</small></td>
