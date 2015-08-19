@@ -127,7 +127,16 @@ add the `manufacturer_ids` parameter which is an array parameter of manufacturer
   GET /skus/:id/reviews
 </pre>
 
-<%= render_recording :sku_reviews %>
+## Vote a SKU's review
+
+> ##### Note
+> Requires user token with the 'publish_sku_review_actions' permission.
+
+<pre class="terminal">
+  POST /skus/:sku_id/reviews/:review_id/votes?vote[helpful]=true|false
+</pre>
+
+<%= render_recording :sku_review_vote_create %>
 
 ## Retrieve an SKU's specifications
 
