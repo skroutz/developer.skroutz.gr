@@ -5,6 +5,29 @@ title: changelog
 
 # Changelog <%= edit_link %>
 
+## 2015-08-05 - v3.0.17
+
+New endpoint, `POST` `/api/skus/{sku_id}/reviews/{review_id}/votes{?vote}`
+: SKU review votes can now be placed (requires `publish_sku_review_actions` permission). <%= link_to 'Read more', '/api/v3/sku', anchor: 'vote-a-skus-review' %>
+
+Expose attribute `helpful_votes_count` <%= link_to 'SKU Review',
+                                                    '/api/v3/sku',
+                                                    anchor: 'retrieve-an-skus-reviews' %>.
+
+: This attribute signifies the number of users who have voted the review as helpful.
+
+
+Expose attribute `voted` in <%= link_to 'SKU Review',
+                                        '/api/v3/sku',
+                                        anchor: 'retrieve-an-skus-reviews' %>.
+: The attribute is present only for requests with authorized user. Provides information
+on whether the user has voted the review or not.
+
+New OAuth2.0 permission added <%= link_to 'publish_sku_review_actions',
+                                          '/authorization/permissions/',
+                                          anchor: 'obtainable-permissions' %>.
+: Required to perform review actions (currently: voting).
+
 ## 2015-07-13 - v3.0.16
 Expose attribute `format` in <%= link_to 'Location', '/api/v3/shop/', anchor: 'list-shop-locations' %>.
 : The location format attribute is now present in the representation of locations.
