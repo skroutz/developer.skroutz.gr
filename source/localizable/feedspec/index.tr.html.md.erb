@@ -83,12 +83,12 @@ Aşağıdaki tablo Alve tarafından tanınan ürün kayıtlarını özetlemekted
 [Image Link](#image-link)        | String  | <span class="mono">400</span>  | Evet      | `http://www.someurl.com/images/322.jpg`
 [Category Name](#category-name)  | String  | <span class="mono">250</span>  | Evet      | `Cep Telefonları`
 [Price](#price)                  | Decimal | <span class="mono">-</span>    | Evet      | `23.22`
-[InStock](#instock)              | List    | <span class="mono">-</span>    | Evet      | `Y`
 [Availability](#availability)    | String  | <span class="mono">60</span>   | Evet      | `2 gün içerisinde`
 [Manufacturer](#manufacturer)    | String  | <span class="mono">100</span>  | Evet      | `Samsung`
 [MPN / ISBN](#mpn--isbn)         | String  | <span class="mono">80</span>   | Evet      | `GF322234`
 [Size](#size)                    | String  | <span class="mono">500</span>  | Hayır*    | `4,4.5,5-6,6 1/2`
 [Weight / Volume](#weight)       | Decimal | <span class="mono">-</span>    | Hayır     | `3200`
+[InStock](#instock)              | List    | <span class="mono">-</span>    | Hayır     | `Y`
 [Shipping Costs](#shipping-costs)| Decimal | <span class="mono">-</span>    | Hayır     | `3.22`
 [Color](#color)                  | String  | <span class="mono">100</span>  | Hayır     | `Siyah`
 
@@ -224,21 +224,6 @@ kategori ismi kaydı `Bilgisayarlar > Harici Hard Diskler` şeklinde görünmeli
   bazlı kampanyalar, indirimler vb.) herkes için aynı olmalıdır.
 
 
-#### InStock
-
-Ürünün stok durumunu ifade eder.
-
-`Y`
-: ürünün mağazanızda ya da deponuzda stoğunun bulunduğu ve derhal alınabileceği
-  anlamına gelir.
-
-`N`
-: ürün stoğunun bulunmadığı anlamına gelir.
-
-> Herhangi bir bilgi yer almadığında bu kayda ilişkin değer `N` (no stock)
-  olarak dikkate alınır.
-
-
 #### Availability
 
 Ürünün internet sitenizde yer verdiğiniz şekilde teslimata uygunluğunu ifade
@@ -357,6 +342,21 @@ Hacmi <code>2m<sup>3</sup></code> olan bir ürünün ağırlık değeri alanı �
 ~~~ xml
 <weight>2</weight>
 ~~~
+
+
+#### InStock
+
+Ürünün stok durumunu ifade eder.
+
+`Y`
+: ürünün mağazanızda ya da deponuzda stoğunun bulunduğu ve derhal alınabileceği
+  anlamına gelir.
+
+`N`
+: ürün stoğunun bulunmadığı anlamına gelir.
+
+> Herhangi bir bilgi yer almadığında bu kayda ilişkin değer `N` (no stock)
+  olarak dikkate alınır.
 
 
 #### Shipping Costs
