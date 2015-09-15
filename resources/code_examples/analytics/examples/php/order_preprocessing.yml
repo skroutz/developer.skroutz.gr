@@ -10,7 +10,7 @@
   function addOrderAction(&$order) {
     $order_data = json_encode($order);
 
-    return "sa('ecommerce', 'addOrder', {$order_data});";
+    return "sa('ecommerce', 'addOrder', '{$order_data}');";
   }
 
   /**
@@ -22,7 +22,7 @@
    */
   function addItemAction(&$order, &$item) {
     $item_data = json_encode(array(
-      'order_id'    => $order['id'],
+      'order_id'    => $order['order_id'],
       'product_id'  => $item['id'],
       'name'        => $item['name'],
       'price'       => $item['price'],
