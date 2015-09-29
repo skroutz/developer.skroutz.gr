@@ -33,7 +33,7 @@ help with each command.
 
 We use a manifest that describes requests we need to have recorded.
 This file is not checked in git so you have to ask for it, shoot a
-mail at [api@skroutz.gr](api@skroutz.gr) to get it.
+mail at [api@skroutz.gr](mailto:api@skroutz.gr) to get it.
 
 
 ## License
