@@ -1,10 +1,10 @@
 ---
 :request:
-  :url: https://api.skroutz.gr/categories/73/children
+  :url: http://api.skroutz.gr/categories/73/children
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer mcmXAHRa6BqCOc3TQas5KEFIIB4VaHj1wEwrvUG6BljiO5UJO7XVfBmZ8cRyXNw2EJK2ijoos2brBwBOQ==
-  :verb: GET
+    :authorization: Bearer kWLUrsbkbjINPooZsHU/yFg52OKirqL6OSohB8VIciKAYzIsXt5DKsX3W9wr0FpsV/edY1ezldqqx1H6aQY2Eg==
+  :verb: :get
 :response:
   :status: 200
   :headers:
@@ -13,28 +13,30 @@
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
     x-ratelimit-remaining: '96'
-    x-ratelimit-reset: '1419426840'
+    x-ratelimit-reset: '1446475740'
     status: 200 OK
+    x-frame-options: SAMEORIGIN
+    x-xss-protection: 1; mode=block
+    x-content-type-options: nosniff
     cache-control: max-age=300, private
-    x-ua-compatible: IE=Edge,chrome=1
-    x-request-id: '1880266130'
-    x-runtime: '0.251652'
+    etag: W/"ecd6b6974e3d52857f14143d1785f94f"
+    x-request-id: '1643287682'
+    x-runtime: '0.019771'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
-    x-app: lunkwill_ssl
-    content-length: '397'
+    x-app: rontok
+    content-length: '478'
     accept-ranges: bytes
-    date: Wed, 24 Dec 2014 13:13:37 GMT
-    x-varnish: '1880266130'
+    date: Mon, 02 Nov 2015 14:48:29 GMT
+    x-varnish: '1643287682'
     age: '0'
     via: 1.1 varnish
     connection: close
     x-origin: lb1
     x-cache: MISS
-  :body: '{"categories":[{"id":106,"name":"\u03a3\u03c5\u03bd\u03b4\u03ad\u03c3\u03b5\u03b9\u03c2
-    Internet","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/106.jpg","parent_id":73,"fashion":false,"path":"76,1269,22,73,106","show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"},{"id":365,"name":"\u0394\u03b9\u03ac\u03c6\u03bf\u03c1\u03b5\u03c2
-    \u03a5\u03c0\u03b7\u03c1\u03b5\u03c3\u03af\u03b5\u03c2","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/365.jpg","parent_id":73,"fashion":false,"path":"76,1269,22,73,365","show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"},{"id":107,"name":"\u0395\u03c0\u03b5\u03ba\u03c4\u03ac\u03c3\u03b5\u03b9\u03c2
-    \u0395\u03b3\u03b3\u03cd\u03b7\u03c3\u03b7\u03c2","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/107.jpg","parent_id":73,"fashion":false,"path":"76,1269,22,73,107","show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"},{"id":364,"name":"\u03a5\u03c0\u03b7\u03c1\u03b5\u03c3\u03af\u03b5\u03c2
-    Internet","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/364.jpg","parent_id":73,"fashion":false,"path":"76,1269,22,73,364","show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"}],"meta":{"pagination":{"total_results":4,"total_pages":1,"page":1,"per":25}}}'
-:created_at: 2014-12-24 15:12:03.798108220 +02:00
+  :body: '{"categories":[{"id":365,"name":"Διάφορες Υπηρεσίες","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/365.jpg","parent_id":73,"fashion":false,"layout_mode":"list","web_uri":"http://api.skroutz.gr/c/365/varrious_services.html","path":"76,1269,22,73,365","show_specifications":false,"manufacturer_title":"Κατασκευαστές"},{"id":106,"name":"Συνδέσεις
+    Internet","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/106.jpg","parent_id":73,"fashion":false,"layout_mode":"list","web_uri":"http://api.skroutz.gr/c/106/syndeseis-internet.html","path":"76,1269,22,73,106","show_specifications":false,"manufacturer_title":"Κατασκευαστές"},{"id":107,"name":"Επεκτάσεις
+    Εγγύησης","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/107.jpg","parent_id":73,"fashion":false,"layout_mode":"list","web_uri":"http://api.skroutz.gr/c/107/guarantee.html","path":"76,1269,22,73,107","show_specifications":false,"manufacturer_title":"Κατασκευαστές"},{"id":364,"name":"Υπηρεσίες
+    Internet","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/364.jpg","parent_id":73,"fashion":false,"layout_mode":"list","web_uri":"http://api.skroutz.gr/c/364/internet_services.html","path":"76,1269,22,73,364","show_specifications":false,"manufacturer_title":"Κατασκευαστές"}],"meta":{"pagination":{"total_results":4,"total_pages":1,"page":1,"per":25}}}'
+:created_at: 2015-11-02 16:48:47.614222000 +02:00

@@ -1,13 +1,13 @@
 ---
 :request:
-  :url: https://api.skroutz.gr/search?q=ipone
+  :url: http://api.skroutz.gr/search?q=ipone
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer mcmXAHRa6BqCOc3TQas5KEFIIB4VaHj1wEwrvUG6BljiO5UJO7XVfBmZ8cRyXNw2EJK2ijoos2brBwBOQ==
+    :authorization: Bearer kWLUrsbkbjINPooZsHU/yFg52OKirqL6OSohB8VIciKAYzIsXt5DKsX3W9wr0FpsV/edY1ezldqqx1H6aQY2Eg==
   :params:
     :page: 1
     :per: 2
-  :verb: GET
+  :verb: :get
 :response:
   :status: 200
   :headers:
@@ -15,27 +15,29 @@
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '78'
-    x-ratelimit-reset: '1419426840'
+    x-ratelimit-remaining: '97'
+    x-ratelimit-reset: '1446476460'
     status: 200 OK
-    x-ua-compatible: IE=Edge,chrome=1
+    x-frame-options: SAMEORIGIN
+    x-xss-protection: 1; mode=block
+    x-content-type-options: nosniff
+    etag: W/"96efd42ccc538297f2ad4546f422e00d"
     cache-control: max-age=0, private, must-revalidate
-    x-request-id: '1880267425'
-    x-runtime: '0.343584'
+    x-request-id: '1219113758'
+    x-runtime: '0.044580'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
-    x-app: lunkwill_ssl
-    content-length: '415'
+    x-app: rontok
+    content-length: '504'
     accept-ranges: bytes
-    date: Wed, 24 Dec 2014 13:13:44 GMT
-    x-varnish: '1880267425'
+    date: Mon, 02 Nov 2015 15:00:59 GMT
+    x-varnish: '1219113758'
     age: '0'
     via: 1.1 varnish
     connection: close
-    x-origin: lb1
+    x-origin: lb2
     x-cache: MISS
-  :body: '{"categories":[{"id":1229,"name":"\u039b\u03b9\u03c0\u03b1\u03bd\u03c4\u03b9\u03ba\u03ac
-    Moto","children_count":0,"image_url":"http://d.scdn.gr/images/categories/large/1229.jpg","parent_id":1227,"fashion":false,"path":"76,33,382,1227,1229","show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":3},{"id":1257,"name":"\u039a\u03b1\u03b8\u03b1\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2
-    & \u03a0\u03b5\u03c1\u03b9\u03c0\u03bf\u03af\u03b7\u03c3\u03b7 \u039c\u03bf\u03c4\u03bf\u03c3\u03c5\u03ba\u03bb\u03ad\u03c4\u03b1\u03c2","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/1257.jpg","parent_id":577,"fashion":false,"path":"76,33,382,577,1257","show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2","match_count":11}],"meta":{"q":"ipone","alternatives":[{"term":"iphone","important":false}],"strong_matches":{},"pagination":{"total_results":2,"total_pages":1,"page":1,"per":2}}}'
-:created_at: 2014-12-24 15:12:10.251774623 +02:00
+  :body: '{"categories":[{"id":754,"name":"Διάφορα Αξεσουάρ MP3","children_count":0,"image_url":"http://d.scdn.gr/images/categories/large/754.jpg","parent_id":230,"fashion":false,"layout_mode":"list","web_uri":"http://api.skroutz.gr/c/754/diafora-aksesouar-mp3.html","path":"76,1269,767,230,754","show_specifications":false,"manufacturer_title":"Κατασκευαστές","match_count":1},{"id":579,"name":"Θήκες
+    Κινητών Τηλεφώνων","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/20150408173958_42b293c7.jpg","parent_id":86,"fashion":false,"layout_mode":"tiles","web_uri":"http://api.skroutz.gr/c/579/thikes-kinhtwn-thlefwnwn.html","path":"76,1269,86,579","show_specifications":false,"manufacturer_title":"Κατασκευαστές","match_count":2}],"meta":{"q":"ipone","alternatives":[],"strong_matches":{},"pagination":{"total_results":2,"total_pages":1,"page":1,"per":2}}}'
+:created_at: 2015-11-02 17:01:17.063378000 +02:00

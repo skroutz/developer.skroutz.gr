@@ -1,10 +1,10 @@
 ---
 :request:
-  :url: https://api.skroutz.gr/categories/1442/parent
+  :url: http://api.skroutz.gr/categories/1442/parent
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer mcmXAHRa6BqCOc3TQas5KEFIIB4VaHj1wEwrvUG6BljiO5UJO7XVfBmZ8cRyXNw2EJK2ijoos2brBwBOQ==
-  :verb: GET
+    :authorization: Bearer kWLUrsbkbjINPooZsHU/yFg52OKirqL6OSohB8VIciKAYzIsXt5DKsX3W9wr0FpsV/edY1ezldqqx1H6aQY2Eg==
+  :verb: :get
 :response:
   :status: 200
   :headers:
@@ -12,26 +12,28 @@
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '93'
-    x-ratelimit-reset: '1419426840'
+    x-ratelimit-remaining: '95'
+    x-ratelimit-reset: '1446475740'
     status: 200 OK
+    x-frame-options: SAMEORIGIN
+    x-xss-protection: 1; mode=block
+    x-content-type-options: nosniff
     cache-control: max-age=300, private
-    x-ua-compatible: IE=Edge,chrome=1
-    x-request-id: '1880266340'
-    x-runtime: '0.269376'
+    etag: W/"5d678a7942cf81e4eca6cab7f222e231"
+    x-request-id: '1643287691'
+    x-runtime: '0.018284'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
-    x-app: lunkwill_ssl
-    content-length: '255'
+    x-app: rontok
+    content-length: '312'
     accept-ranges: bytes
-    date: Wed, 24 Dec 2014 13:13:39 GMT
-    x-varnish: '1880266340'
+    date: Mon, 02 Nov 2015 14:48:29 GMT
+    x-varnish: '1643287691'
     age: '0'
     via: 1.1 varnish
     connection: close
     x-origin: lb1
     x-cache: MISS
-  :body: '{"category":{"id":1434,"name":"\u0388\u03c0\u03b9\u03c0\u03bb\u03b1 \u039a\u03ae\u03c0\u03bf\u03c5
-    & \u0392\u03b5\u03c1\u03ac\u03bd\u03c4\u03b1\u03c2","children_count":11,"image_url":"http://b.scdn.gr/images/categories/large/1434.jpg","parent_id":1052,"fashion":false,"path":"76,11,1052,1434","show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"}}'
-:created_at: 2014-12-24 15:12:04.807117276 +02:00
+  :body: '{"category":{"id":1434,"name":"Έπιπλα Κήπου \u0026 Βεράντας","children_count":14,"image_url":"http://b.scdn.gr/images/categories/large/1434.jpg","parent_id":1052,"fashion":false,"layout_mode":"tiles","web_uri":"http://api.skroutz.gr/c/1434/epipla-kipou-verantas.html","path":"76,11,1052,1434","show_specifications":false,"manufacturer_title":"Κατασκευαστές"}}'
+:created_at: 2015-11-02 16:48:47.645579000 +02:00
