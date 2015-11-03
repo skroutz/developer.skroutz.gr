@@ -5,6 +5,18 @@ title: changelog
 
 # Changelog <%= edit_link %>
 
+## 2015-10-31 - v3.0.18
+
+Expose new attribute `layout_mode` in <%= link_to 'Category', '/api/v3/category/' %>.
+: The layout_mode attribute is now present in the representation of categories.
+This attribute indicates how a category is going to be displayed.
+
+* `list` value is used for categories where the title and specs are more important than the image.
+* `tiles` value is used for categories where the title, specs and image are equally important.
+* `wide_tiles` value is used for categories where the image is more important than the title and specs.
+
+This new attribute is a replacement for `fashion` and `show_in_tiles` attributes which were semantically misleading.
+
 ## 2015-08-05 - v3.0.17
 
 New endpoint, `POST` `/api/skus/{sku_id}/reviews/{review_id}/votes{?vote}`
