@@ -1,10 +1,10 @@
 ---
 :request:
-  :url: https://api.skroutz.gr/categories/1442
+  :url: http://api.skroutz.gr/categories/1442
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer mcmXAHRa6BqCOc3TQas5KEFIIB4VaHj1wEwrvUG6BljiO5UJO7XVfBmZ8cRyXNw2EJK2ijoos2brBwBOQ==
-  :verb: GET
+    :authorization: Bearer kWLUrsbkbjINPooZsHU/yFg52OKirqL6OSohB8VIciKAYzIsXt5DKsX3W9wr0FpsV/edY1ezldqqx1H6aQY2Eg==
+  :verb: :get
 :response:
   :status: 200
   :headers:
@@ -13,25 +13,27 @@
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
     x-ratelimit-remaining: '97'
-    x-ratelimit-reset: '1419426840'
+    x-ratelimit-reset: '1446475740'
     status: 200 OK
+    x-frame-options: SAMEORIGIN
+    x-xss-protection: 1; mode=block
+    x-content-type-options: nosniff
     cache-control: max-age=300, private
-    x-ua-compatible: IE=Edge,chrome=1
-    x-request-id: '1944174240'
-    x-runtime: '0.239729'
+    etag: W/"3e0d25644220aa25c876709d53e9cdbf"
+    x-request-id: '1218958029'
+    x-runtime: '0.017166'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
-    x-app: lunkwill_ssl
-    content-length: '261'
+    x-app: rontok
+    content-length: '325'
     accept-ranges: bytes
-    date: Wed, 24 Dec 2014 13:13:37 GMT
-    x-varnish: '1944174240'
+    date: Mon, 02 Nov 2015 14:48:29 GMT
+    x-varnish: '1218958029'
     age: '0'
     via: 1.1 varnish
     connection: close
     x-origin: lb2
     x-cache: MISS
-  :body: '{"category":{"id":1442,"name":"\u039e\u03b1\u03c0\u03bb\u03ce\u03c3\u03c4\u03c1\u03b5\u03c2
-    \u039a\u03ae\u03c0\u03bf\u03c5 & \u0392\u03b5\u03c1\u03ac\u03bd\u03c4\u03b1\u03c2","children_count":0,"image_url":"http://b.scdn.gr/images/categories/large/1442.jpg","parent_id":1434,"fashion":false,"path":"76,11,1052,1434,1442","show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"}}'
-:created_at: 2014-12-24 15:12:03.502152369 +02:00
+  :body: '{"category":{"id":1442,"name":"Ξαπλώστρες Κήπου \u0026 Βεράντας","children_count":0,"image_url":"http://b.scdn.gr/images/categories/large/1442.jpg","parent_id":1434,"fashion":false,"layout_mode":"tiles","web_uri":"http://api.skroutz.gr/c/1442/xaplostres-kipou-verantas.html","path":"76,11,1052,1434,1442","show_specifications":false,"manufacturer_title":"Κατασκευαστές"}}'
+:created_at: 2015-11-02 16:48:47.573133000 +02:00

@@ -1,13 +1,13 @@
 ---
 :request:
-  :url: https://api.skroutz.gr/categories
+  :url: http://api.skroutz.gr/categories
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer mcmXAHRa6BqCOc3TQas5KEFIIB4VaHj1wEwrvUG6BljiO5UJO7XVfBmZ8cRyXNw2EJK2ijoos2brBwBOQ==
+    :authorization: Bearer kWLUrsbkbjINPooZsHU/yFg52OKirqL6OSohB8VIciKAYzIsXt5DKsX3W9wr0FpsV/edY1ezldqqx1H6aQY2Eg==
   :params:
     :page: 1
     :per: 5
-  :verb: GET
+  :verb: :get
 :response:
   :status: 200
   :headers:
@@ -16,31 +16,33 @@
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
     x-ratelimit-remaining: '99'
-    x-ratelimit-reset: '1419426840'
+    x-ratelimit-reset: '1446475740'
     status: 200 OK
-    link: <https://api.skroutz.gr/categories?page=284&per=5>; rel="last", <https://api.skroutz.gr/categories?page=2&per=5>;
+    x-frame-options: SAMEORIGIN
+    x-xss-protection: 1; mode=block
+    x-content-type-options: nosniff
+    link: <http://api.skroutz.gr/categories?page=426&per=5>; rel="last", <http://api.skroutz.gr/categories?page=2&per=5>;
       rel="next"
     cache-control: max-age=300, private
-    x-ua-compatible: IE=Edge,chrome=1
-    x-request-id: '1880265968'
-    x-runtime: '0.310952'
+    etag: W/"c1cf87cce423632cae84af087be6989e"
+    x-request-id: '1218958011'
+    x-runtime: '0.024364'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
-    x-app: lunkwill_ssl
-    content-length: '447'
+    x-app: rontok
+    content-length: '622'
     accept-ranges: bytes
-    date: Wed, 24 Dec 2014 13:13:37 GMT
-    x-varnish: '1880265968'
+    date: Mon, 02 Nov 2015 14:48:29 GMT
+    x-varnish: '1218958011'
     age: '0'
     via: 1.1 varnish
     connection: close
-    x-origin: lb1
+    x-origin: lb2
     x-cache: MISS
-  :body: '{"categories":[{"id":1,"name":"\u03a3\u03c4\u03b1\u03b8\u03b5\u03c1\u03ae
-    \u03a4\u03b7\u03bb\u03b5\u03c6\u03c9\u03bd\u03af\u03b1","children_count":5,"image_url":"http://a.scdn.gr/images/categories/large/1.jpg","parent_id":2,"fashion":false,"path":"76,1269,2,1","show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"},{"id":2,"name":"\u03a4\u03b7\u03bb\u03b5\u03c6\u03c9\u03bd\u03af\u03b1","children_count":3,"image_url":"http://a.scdn.gr/images/categories/large/2.jpg","parent_id":1269,"fashion":false,"path":"76,1269,2","show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"},{"id":5,"name":"\u03a6\u03c9\u03c4\u03bf\u03b3\u03c1\u03b1\u03c6\u03af\u03b1
-    & Video","children_count":3,"image_url":"http://a.scdn.gr/images/categories/large/5.jpg","parent_id":1269,"fashion":false,"path":"76,1269,5","show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"},{"id":6,"name":"\u0391\u03be\u03b5\u03c3\u03bf\u03c5\u03ac\u03c1  \u0389\u03c7\u03bf\u03c5
-    & \u0395\u03b9\u03ba\u03cc\u03bd\u03b1\u03c2","children_count":3,"image_url":"http://a.scdn.gr/images/categories/large/6.jpg","parent_id":309,"fashion":false,"path":"76,1269,309,6","show_specifications":false,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"},{"id":10,"name":"Projectors","children_count":0,"image_url":"http://d.scdn.gr/images/categories/large/10.jpg","parent_id":79,"fashion":false,"path":"76,1269,309,79,10","show_specifications":true,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"}],"meta":{"pagination":{"total_results":1420,"total_pages":284,"page":1,"per":5}}}'
-:created_at: 2014-12-24 15:12:02.888689298 +02:00
+  :body: '{"categories":[{"id":1,"name":"Σταθερή Τηλεφωνία","children_count":5,"image_url":"http://d.scdn.gr/images/categories/large/20150508125916_c7ffab14.jpg","parent_id":2,"fashion":false,"layout_mode":"list","web_uri":"http://api.skroutz.gr/c/1/statherh-tilefwnia.html","path":"76,1269,2,1","show_specifications":false,"manufacturer_title":"Κατασκευαστές"},{"id":2,"name":"Τηλεφωνία","children_count":2,"image_url":"http://b.scdn.gr/images/categories/large/20150620022724_eae5faba.jpg","parent_id":1269,"fashion":false,"layout_mode":"list","web_uri":"http://api.skroutz.gr/c/2/tilefwnia.html","path":"76,1269,2","show_specifications":false,"manufacturer_title":"Κατασκευαστές"},{"id":5,"name":"Φωτογραφία
+    \u0026 Video","children_count":3,"image_url":"http://a.scdn.gr/images/categories/large/20150511220245_0c27a42c.jpg","parent_id":1269,"fashion":false,"layout_mode":"list","web_uri":"http://api.skroutz.gr/c/5/photografia-video.html","path":"76,1269,5","show_specifications":false,"manufacturer_title":"Κατασκευαστές"},{"id":6,"name":"Διάφορα
+    Εικόνας","children_count":2,"image_url":"http://c.scdn.gr/images/categories/large/20150127155831_5_VL88_withWave.jpg","parent_id":309,"fashion":false,"layout_mode":"list","web_uri":"http://api.skroutz.gr/c/6/diafora_eikonas.html","path":"76,1269,309,6","show_specifications":false,"manufacturer_title":"Κατασκευαστές"},{"id":10,"name":"Projectors","children_count":0,"image_url":"http://d.scdn.gr/images/categories/large/20150118013550_benq_sp920p.jpg","parent_id":79,"fashion":false,"layout_mode":"list","web_uri":"http://api.skroutz.gr/c/10/protzektores.html","path":"76,1269,309,79,10","show_specifications":true,"manufacturer_title":"Κατασκευαστές"}],"meta":{"pagination":{"total_results":2128,"total_pages":426,"page":1,"per":5}}}'
+:created_at: 2015-11-02 16:48:47.498516000 +02:00
 :meta:
   :description: Lists all categories

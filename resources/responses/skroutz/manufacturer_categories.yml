@@ -1,12 +1,12 @@
 ---
 :request:
-  :url: https://api.skroutz.gr/manufacturers/356/categories
+  :url: http://api.skroutz.gr/manufacturers/356/categories
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer mcmXAHRa6BqCOc3TQas5KEFIIB4VaHj1wEwrvUG6BljiO5UJO7XVfBmZ8cRyXNw2EJK2ijoos2brBwBOQ==
+    :authorization: Bearer kWLUrsbkbjINPooZsHU/yFg52OKirqL6OSohB8VIciKAYzIsXt5DKsX3W9wr0FpsV/edY1ezldqqx1H6aQY2Eg==
   :params:
     :per: 2
-  :verb: GET
+  :verb: :get
 :response:
   :status: 200
   :headers:
@@ -14,27 +14,30 @@
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '85'
-    x-ratelimit-reset: '1419426840'
+    x-ratelimit-remaining: '99'
+    x-ratelimit-reset: '1446475860'
     status: 200 OK
-    link: <https://api.skroutz.gr/manufacturers/356/categories?page=28&per=2>; rel="last",
-      <https://api.skroutz.gr/manufacturers/356/categories?page=2&per=2>; rel="next"
-    x-ua-compatible: IE=Edge,chrome=1
+    x-frame-options: SAMEORIGIN
+    x-xss-protection: 1; mode=block
+    x-content-type-options: nosniff
+    link: <http://api.skroutz.gr/manufacturers/356/categories?page=31&per=2>; rel="last",
+      <http://api.skroutz.gr/manufacturers/356/categories?page=2&per=2>; rel="next"
+    etag: W/"fb5ce81ef30d2280de5f40aa916ade42"
     cache-control: max-age=0, private, must-revalidate
-    x-request-id: '1880266910'
-    x-runtime: '0.289148'
+    x-request-id: '1218983992'
+    x-runtime: '0.025477'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
-    x-app: lunkwill_ssl
-    content-length: '325'
+    x-app: rontok
+    content-length: '412'
     accept-ranges: bytes
-    date: Wed, 24 Dec 2014 13:13:41 GMT
-    x-varnish: '1880266910'
+    date: Mon, 02 Nov 2015 14:50:31 GMT
+    x-varnish: '1218983992'
     age: '0'
     via: 1.1 varnish
     connection: close
-    x-origin: lb1
+    x-origin: lb2
     x-cache: MISS
-  :body: '{"categories":[{"id":40,"name":"\u039a\u03b9\u03bd\u03b7\u03c4\u03ac \u03a4\u03b7\u03bb\u03ad\u03c6\u03c9\u03bd\u03b1","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/40.jpg","parent_id":86,"fashion":false,"path":"76,1269,2,86,40","show_specifications":true,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"},{"id":1105,"name":"Tablets","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/1105.jpg","parent_id":1612,"fashion":false,"path":"76,1269,22,1612,1105","show_specifications":true,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"}],"meta":{"pagination":{"total_results":55,"total_pages":28,"page":1,"per":2}}}'
-:created_at: 2014-12-24 15:12:07.589936873 +02:00
+  :body: '{"categories":[{"id":40,"name":"Κινητά Τηλέφωνα","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/20150508124644_bd07441b.jpg","parent_id":86,"fashion":false,"layout_mode":"list","web_uri":"http://api.skroutz.gr/c/40/kinhta-thlefwna.html","path":"76,1269,86,40","show_specifications":true,"manufacturer_title":"Κατασκευαστές"},{"id":1105,"name":"Tablets","children_count":0,"image_url":"http://b.scdn.gr/images/categories/large/20150127170004_1105.jpg","parent_id":1612,"fashion":false,"layout_mode":"list","web_uri":"http://api.skroutz.gr/c/1105/tablet.html","path":"76,1269,1612,1105","show_specifications":true,"manufacturer_title":"Κατασκευαστές"}],"meta":{"pagination":{"total_results":61,"total_pages":31,"page":1,"per":2}}}'
+:created_at: 2015-11-02 16:50:49.414289000 +02:00

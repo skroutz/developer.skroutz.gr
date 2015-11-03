@@ -1,10 +1,10 @@
 ---
 :request:
-  :url: https://api.skroutz.gr/search?q=nikon+1+j2
+  :url: http://api.skroutz.gr/search?q=nikon+1+j2
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer mcmXAHRa6BqCOc3TQas5KEFIIB4VaHj1wEwrvUG6BljiO5UJO7XVfBmZ8cRyXNw2EJK2ijoos2brBwBOQ==
-  :verb: GET
+    :authorization: Bearer kWLUrsbkbjINPooZsHU/yFg52OKirqL6OSohB8VIciKAYzIsXt5DKsX3W9wr0FpsV/edY1ezldqqx1H6aQY2Eg==
+  :verb: :get
 :response:
   :status: 200
   :headers:
@@ -12,32 +12,34 @@
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '74'
-    x-ratelimit-reset: '1419426840'
+    x-ratelimit-remaining: '95'
+    x-ratelimit-reset: '1446476460'
     status: 200 OK
-    x-ua-compatible: IE=Edge,chrome=1
+    x-frame-options: SAMEORIGIN
+    x-xss-protection: 1; mode=block
+    x-content-type-options: nosniff
+    etag: W/"379cea22944b68e83ed1b994e02d8369"
     cache-control: max-age=0, private, must-revalidate
-    x-request-id: '1880267739'
-    x-runtime: '0.445629'
+    x-request-id: '1219113790'
+    x-runtime: '0.175770'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
-    x-app: lunkwill_ssl
-    content-length: '809'
+    x-app: rontok
+    content-length: '905'
     accept-ranges: bytes
-    date: Wed, 24 Dec 2014 13:13:46 GMT
-    x-varnish: '1880267739'
+    date: Mon, 02 Nov 2015 15:00:59 GMT
+    x-varnish: '1219113790'
     age: '0'
     via: 1.1 varnish
     connection: close
-    x-origin: lb1
+    x-origin: lb2
     x-cache: MISS
-  :body: '{"categories":[{"id":434,"name":"DSLR & Mirrorless","children_count":0,"image_url":"http://d.scdn.gr/images/categories/large/434.jpg","parent_id":1670,"fashion":false,"path":"76,1269,5,231,1670,434","show_specifications":true,"manufacturer_title":"\u039a\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03c4\u03ad\u03c2"}],"meta":{"q":"nikon
+  :body: '{"categories":[{"id":1914,"name":"Mirrorless","children_count":0,"image_url":"http://d.scdn.gr/images/categories/large/20150511152352_1251c347.jpeg","parent_id":1670,"fashion":false,"layout_mode":"list","web_uri":"http://api.skroutz.gr/c/1914/Mirrorless.html","path":"76,1269,5,231,1670,1914","show_specifications":true,"manufacturer_title":"Κατασκευαστές"}],"meta":{"q":"nikon
     1 j2","alternatives":[],"strong_matches":{"sku":{"id":2287737,"ean":"","pn":"VVA166K001
     VVA165K001 VVA166K005 VVA165K005 VVA164K005 VVA161K005 VVA161K003 VVA163K001 VVA162K001
     VVA161K001 VVA164K001 VVA163K005 VVA162K005","name":"1 J2 Kit","display_name":"Nikon
-    1 J2 Kit","category_id":434,"first_product_shop_info":null,"click_url":null,"price_max":535.23,"price_min":324.0,"reviewscore":5.0,"shop_count":2,"plain_spec_summary":"Mirrorless
-    Kit, 10.1 MP, \u0391\u03b9\u03c3\u03b8\u03b7\u03c4\u03ae\u03c1\u03b1\u03c2: CMOS,
-    \u039f\u03b8\u03cc\u03bd\u03b7: 3.0 inches, Video: MOV, \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7
-    Video: 1920 x 1080 pixels","manufacturer_id":156,"future":false,"reviews_count":1,"virtual":false,"images":{"main":"http://c.scdn.gr/images/sku_main_images/002287/2287737/medium_27572_Nikon_1_J2_left.png","alternatives":["http://d.scdn.gr/images/sku_images/002916/2916078/27574_Nikon_1_J2_left.png","http://a.scdn.gr/images/sku_images/002916/2916079/27575_Nikon_1_J2_left.png","http://d.scdn.gr/images/sku_images/002916/2916080/27576_Nikon_1_J2_left.png","http://a.scdn.gr/images/sku_images/002916/2916081/27577_Nikon_1_J2_left.png","http://d.scdn.gr/images/sku_images/002916/2916090/27573_Nikon_1_J2_left.png","http://a.scdn.gr/images/sku_images/002916/2916092/Nikon_1_J2_BK_front.jpg","http://b.scdn.gr/images/sku_images/002916/2916094/27572_Nikon_1_J2_back.png","http://d.scdn.gr/images/sku_images/002916/2916095/nikon_10-30mm-front-103286.jpg","http://d.scdn.gr/images/sku_images/002916/2916096/1532262.jpg","http://a.scdn.gr/images/sku_images/002916/2916097/5627_nikon_1_30-110mm_black.jpg"]}}},"pagination":{"total_results":1,"total_pages":1,"page":1,"per":25}}}'
-:created_at: 2014-12-24 15:12:11.963356174 +02:00
+    1 J2 Kit","category_id":1914,"first_product_shop_info":"266|EasyBuyWorld|ebwstore","click_url":null,"price_max":375.0,"price_min":375.0,"reviewscore":5.0,"shop_count":1,"plain_spec_summary":"Mirrorless
+    Kit, Ανάλυση: 10.1 MP, Αισθητήρας: CMOS, Οθόνη: 3.0 inches, Ανάλυση Photo: 3872
+    x 2592 pixels","manufacturer_id":156,"future":false,"reviews_count":1,"virtual":false,"images":{"main":"http://c.scdn.gr/images/sku_main_images/002287/2287737/medium_27572_Nikon_1_J2_left.png","alternatives":["http://d.scdn.gr/images/sku_images/002916/2916078/27574_Nikon_1_J2_left.png","http://a.scdn.gr/images/sku_images/002916/2916079/27575_Nikon_1_J2_left.png","http://d.scdn.gr/images/sku_images/002916/2916080/27576_Nikon_1_J2_left.png","http://a.scdn.gr/images/sku_images/002916/2916081/27577_Nikon_1_J2_left.png","http://d.scdn.gr/images/sku_images/002916/2916090/27573_Nikon_1_J2_left.png","http://a.scdn.gr/images/sku_images/002916/2916092/Nikon_1_J2_BK_front.jpg","http://b.scdn.gr/images/sku_images/002916/2916094/27572_Nikon_1_J2_back.png","http://d.scdn.gr/images/sku_images/002916/2916095/nikon_10-30mm-front-103286.jpg","http://d.scdn.gr/images/sku_images/002916/2916096/1532262.jpg","http://a.scdn.gr/images/sku_images/002916/2916097/5627_nikon_1_30-110mm_black.jpg"]},"web_uri":"http://www.skroutz.gr/s/2287737/1%20J2%20Kit.html"}},"pagination":{"total_results":1,"total_pages":1,"page":1,"per":25}}}'
+:created_at: 2015-11-02 17:01:17.365134000 +02:00
