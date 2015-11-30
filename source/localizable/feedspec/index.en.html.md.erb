@@ -104,7 +104,7 @@ Name                             | Type    | Length                         | Re
 [Manufacturer](#manufacturer)    | String  | <span class="mono">100</span>  | Yes      | `Samsung`
 [MPN / ISBN](#mpn--isbn)         | String  | <span class="mono">80</span>   | Yes      | `GF322234`
 [Size](#size)                    | String  | <span class="mono">500</span>  | No*      | `4,4.5,5-6,6 1/2`
-[Weight / Volume](#weight)       | Decimal | <span class="mono">-</span>    | No       | `3200`
+[Weight](#weight)                | Decimal | <span class="mono">-</span>    | No       | `3200`
 [InStock](#instock)              | List    | <span class="mono">-</span>    | No       | `Y`
 [Shipping Costs](#shipping-costs)| Decimal | <span class="mono">-</span>    | No       | `3.22`
 [Color](#color)                  | String  | <span class="mono">100</span>  | No**     | `Black`
@@ -329,24 +329,25 @@ forward slash. (/) e.g.
 will **not** be classified.
 
 
-#### Weight / Volume {#weight}
+#### Weight
 
-The metric used by your platform to calculate shipping costs. This can be either the weight,
-the volume, the volumetric weight or any other metric supported by your system.
+The product's weight used by your platform to calculate shipping costs in grams. If you wish to provide 
+it in kilograms you can do so by adding `kg` to the value string.
 
 ##### Example
 
-For a product with a weight of `3.2kg`, the value of the weight field should be:
+For a product with a weight of `3.2kg`, the value of the weight field can be:
 
 ~~~ xml
 <weight>3200</weight>
 ~~~
 
-For a product with a volume of <code>2m<sup>3</sup></code>, the value of the weight field should be:
+or
 
 ~~~ xml
-<weight>2</weight>
+<weight>3.2 kg</weight>
 ~~~
+
 
 #### InStock
 
