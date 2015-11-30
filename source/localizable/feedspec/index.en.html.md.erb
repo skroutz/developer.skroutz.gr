@@ -328,8 +328,21 @@ forward slash. (/) e.g.
 > Products that are identified by sizes and the size information is not provided
 will **not** be classified.
 
-
 #### Weight
+
+<% if flavor == 'alve' %>
+
+The metric used by your platform to calculate shipping costs. This value is considered to 
+be in desi.
+
+##### Example
+
+For a product of `3.2 desi`, the value of the weight field should be:
+
+~~~ xml
+<weight>3.2</weight>
+~~~
+<% else %>
 
 The product's weight used by your platform to calculate shipping costs in grams. If you wish to provide 
 it in kilograms you can do so by adding `kg` to the value string.
@@ -347,6 +360,7 @@ or
 ~~~ xml
 <weight>3.2 kg</weight>
 ~~~
+<% end %>
 
 
 #### InStock

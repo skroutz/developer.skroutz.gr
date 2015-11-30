@@ -87,7 +87,7 @@ Aşağıdaki tablo Alve tarafından tanınan ürün kayıtlarını özetlemekted
 [Manufacturer](#manufacturer)    | String  | <span class="mono">100</span>  | Evet      | `Samsung`
 [MPN / ISBN](#mpn--isbn)         | String  | <span class="mono">80</span>   | Evet      | `GF322234`
 [Size](#size)                    | String  | <span class="mono">500</span>  | Hayır*    | `4,4.5,5-6,6 1/2`
-[Weight / Volume](#weight)       | Decimal | <span class="mono">-</span>    | Hayır     | `3200`
+[Weight](#weight)                | Decimal | <span class="mono">-</span>    | Hayır     | `3200`
 [InStock](#instock)              | List    | <span class="mono">-</span>    | Hayır     | `Y`
 [Shipping Costs](#shipping-costs)| Decimal | <span class="mono">-</span>    | Hayır     | `3.22`
 [Color](#color)                  | String  | <span class="mono">100</span>  | Hayır     | `Siyah`
@@ -325,23 +325,15 @@ pantolonlar), bu ölçülere ön bölme işareti (/) kullanarak yer verebilirsin
 #### Weight / Volume {#weight}
 
 Kargo ücretlerini hesaplamak için platformunuzda kullandığınız ölçüyü ifade eder.
-Bu ya ağırlık, hacim, hacimsel ağırlık ya da sisteminiz tarafından desteklenen
-herhangi farklı bir ölçüm olabilir.
+Bu değerin desi cinsinden olması gerekir.
 
 ##### Örnek
 
-Ağırlığı `3.2kg` olan bir ürünün ağırlık değeri alanı şu şekilde doldurulmalıdır:
+Birimi `3.2 desi` olan bir ürün için ağırlık karşılığı şu şekilde girilmelidir:
 
 ~~~ xml
-<weight>3200</weight>
+<weight>3.2</weight>
 ~~~
-
-Hacmi <code>2m<sup>3</sup></code> olan bir ürünün ağırlık değeri alanı şu şekilde doldurulmalıdır:
-
-~~~ xml
-<weight>2</weight>
-~~~
-
 
 #### InStock
 
