@@ -102,7 +102,7 @@ To παρόν έχει σαν σκοπό να περιγράψει την δομ
 [Manufacturer](#manufacturer)    | String  | <span class="mono">100</span>  | Ναι         | `Samsung`
 [MPN / ISBN](#mpn--isbn)         | String  | <span class="mono">80</span>   | Ναι         | `GF322234`
 [Size](#size)                    | String  | <span class="mono">500</span>  | Όχι*        | `36,37,38 1/2,40,44`
-[Weight / Volume](#weight)       | Decimal | <span class="mono">-</span>    | Όχι         | `3200`
+[Weight](#weight)                | Decimal | <span class="mono">-</span>    | Όχι         | `3200`
 [InStock](#instock)              | List    | <span class="mono">-</span>    | Όχι         | `Y`
 [Shipping Costs](#shipping-costs)| Decimal | <span class="mono">-</span>    | Όχι         | `3.22`
 [Color](#color)                  | String  | <span class="mono">100</span>  | Όχι         | `Μαύρο`
@@ -361,11 +361,11 @@ To <%= settings.site_name.capitalize %> χρησιμοποιεί ένα προκ
   υποδήματα, πουκάμισα, κτλ) **δεν** θα ταξινομούνται.
 
 
-#### Weight / Volume {#weight}
+#### Weight {#weight}
 
-Το μέγεθος που χρησιμοποιείται από την πλατφόρμα σας για τον υπολογισμό
-του κόστους των μεταφορικών. Αυτό μπορεί να είναι βάρος, όγκος, ογκομετρικό βάρος
-ή οποιοσδήποτε άλλος τρόπος υποστηρίζεται από το σύστημά σας.
+Το βάρος του προϊόντος (πραγματικό ή ογκομετρικό), σε γραμμάρια, που χρησιμοποιείται από την πλατφόρμα 
+σας για τον υπολογισμό του κόστους των μεταφορικών. Αν θέλετε να χρησιμοποιήσετε κιλά μπορείτε να το 
+κάνετε προσθέτοντας `kg` στο τέλος της τιμής.
 
 ##### Παράδειγμα
 
@@ -375,10 +375,10 @@ To <%= settings.site_name.capitalize %> χρησιμοποιεί ένα προκ
 <weight>3200</weight>
 ~~~
 
-Για ένα προϊόν με όγκο <code>2m<sup>3</sup></code>, η τιμή του πεδίου βάρους θα είναι:
+ή
 
 ~~~ xml
-<weight>2</weight>
+<weight>3.2 kg</weight>
 ~~~
 
 
