@@ -10,6 +10,7 @@ engineering_blog_domain: 'engineering.skroutz.gr'
 feed_validator_domain: 'validator.skroutz.gr'
 
 api_email: 'api@skroutz.gr'
+analytics_email: 'analytics@skroutz.gr'
 
 github_profile: 'https://github.com/skroutz'
 apiv3_early_access_form: 'http://docs.google.com/forms/d/1mUk6pvAXR7yiMqtau8FWnBFamKCY320fL70El_RgN68/viewform'
