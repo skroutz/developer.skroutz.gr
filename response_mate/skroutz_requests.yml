@@ -216,6 +216,12 @@ requests:
       headers:
         <<: *default_headers
   -
+    key: skus_reviews
+    request:
+      url: '{{base_url}}/skus/3690169/reviews'
+      headers:
+        <<: *default_headers
+  -
     key: skus_products
     request:
       url: '{{base_url}}/skus/3783654/products'
