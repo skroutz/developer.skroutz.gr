@@ -67,3 +67,14 @@ Name        | Type   | Value                                                    
 ----------- | ------ | -------------------------------------------------------- | ------------
 `order_by`  | String | `name`, `popularity` <small class="mark">default</small> | Order by name or popularity
 `order_dir` | String | `asc`, `desc` <small class="mark">default</small>        | Order ascending or descending
+
+## List a category's favorites
+
+> ##### Note
+> Requires user token with the 'favorites' permission.
+
+<pre class="terminal">
+  GET /categories/:id/favorites
+</pre>
+
+<%= render_recording :category_favorites %>
