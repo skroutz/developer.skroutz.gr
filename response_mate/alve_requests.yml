@@ -62,6 +62,12 @@ requests:
       headers:
         <<: *default_headers
   -
+    key: category_favorites
+    request:
+      url: '{{base_url}}/categories/33/favorites'
+      headers:
+        <<: *default_headers
+  -
     key: shops_show
     request:
       url: '{{base_url}}/shops/298'
