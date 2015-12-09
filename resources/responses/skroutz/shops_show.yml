@@ -1,10 +1,10 @@
 ---
 :request:
-  :url: https://api.skroutz.gr/shops/11
+  :url: http://api.skroutz.gr/shops/452
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer iwKNu5Cbzb1ycJoJvmpAA6sN9Q9OcgdO2tq68OX1wBFLmmrbsBNYlbnm7k/qtH72XUAMNyIsxMAaCzBbx/5inQ==
-  :verb: GET
+    :authorization: Bearer 9bBb/SfslzfXVoyFdulvm0kWf5aBa1P6oQEknj2BCvEFK0D9fQTlrALG3lWogTNaEmdSGFs1eCqyBVAbIFHJVw==
+  :verb: :get
 :response:
   :status: 200
   :headers:
@@ -13,26 +13,29 @@
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
     x-ratelimit-remaining: '99'
-    x-ratelimit-reset: '1427875620'
+    x-ratelimit-reset: '1449664440'
     status: 200 OK
+    x-frame-options: SAMEORIGIN
+    x-xss-protection: 1; mode=block
+    x-content-type-options: nosniff
     cache-control: max-age=300, private
-    x-ua-compatible: IE=Edge,chrome=1
-    x-request-id: '2879385230'
-    x-runtime: '0.030283'
+    etag: W/"53edfd2ed62232451b83a33495546a1f"
+    x-request-id: '2013128232'
+    x-runtime: '0.043405'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
-    x-app: benjy_ssl
-    content-length: '391'
+    x-app: kavula
+    content-length: '507'
     accept-ranges: bytes
-    date: Wed, 01 Apr 2015 08:06:45 GMT
-    x-varnish: '2879385230'
+    date: Wed, 09 Dec 2015 12:33:56 GMT
+    x-varnish: '2013128232'
     age: '0'
     via: 1.1 varnish
     connection: close
-    x-origin: lb2
+    x-origin: lb1
     x-cache: MISS
-  :body: '{"shop":{"id":11,"name":"\u03a0\u03bb\u03b1\u03af\u03c3\u03b9\u03bf","link":"http://www.plaisio.gr/","phone":"8001112345","image_url":"http://b.scdn.gr/images/shops/logos/0000/mid_f44045fa-e4cf-4723-9702-ae163b5c4036.jpg","thumbshot_url":"http://a.scdn.gr/images/shops/screens/20150316140951_650c20ff.png","reviews_count":298,"review_score":3.18,"payment_methods":{"credit_card":true,"paypal":false,"bank":true,"spot_cash":true,"installments":"\u03ad\u03c9\u03c2
-    48  \u03b4\u03cc\u03c3\u03b5\u03b9\u03c2 \u03bc\u03b5 \u03c0\u03b9\u03c3\u03c4\u03c9\u03c4\u03b9\u03ba\u03ae
-    \u03ba\u03ac\u03c1\u03c4\u03b1 "},"shipping":{"free":true,"free_from":85,"free_from_info":"","min_price":"3"}}}'
-:created_at: 2015-04-01 11:03:02.555874472 +03:00
+  :body: '{"shop":{"id":452,"name":"Kotsovolos","link":"http://www.kotsovolos.gr","phone":"2102899999","image_url":"http://b.scdn.gr/images/shops/logos/0004/mid_d5867ac8-867b-4395-99bc-db04e459fe4d.jpg","thumbshot_url":"http://c.scdn.gr/images/shops/screens/20150731105054_75756119.png","reviews_count":337,"review_score":2.48,"payment_methods":{"credit_card":true,"paypal":false,"bank":false,"spot_cash":true,"installments":"Εώς
+    12 άτοκες δόσεις μέσω πιστωτικής κάρτας για αγορές άνω των 60 Ευρω.\r\nΕώς 48
+    δόσεις μέσω δανειοδότησης Κωτσόβολου."},"shipping":{"free":true,"free_from":85,"free_from_info":"","min_price":"3.99"},"web_uri":"http://skroutz.gr/m/452/Kotsovolos"}}'
+:created_at: 2015-12-09 14:33:25.426765681 +02:00

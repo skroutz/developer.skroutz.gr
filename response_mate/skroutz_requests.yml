@@ -70,13 +70,13 @@ requests:
   -
     key: shops_show
     request:
-      url: '{{base_url}}/shops/11'
+      url: '{{base_url}}/shops/452'
       headers:
         <<: *default_headers
   -
     key: shop_locations_index
     request:
-      url: '{{base_url}}/shops/11/locations'
+      url: '{{base_url}}/shops/452/locations'
       headers:
         <<: *default_headers
       params:
@@ -84,7 +84,7 @@ requests:
   -
     key: shop_locations_index_embed_address
     request:
-      url: '{{base_url}}/shops/11/locations?embed=address'
+      url: '{{base_url}}/shops/452/locations?embed=address'
       headers:
         <<: *default_headers
       params:
@@ -92,13 +92,13 @@ requests:
   -
     key: shop_locations_show
     request:
-      url: '{{base_url}}/shops/11/locations/2'
+      url: '{{base_url}}/shops/452/locations/2500'
       headers:
         <<: *default_headers
   -
     key: shop_locations_show_embed_address
     request:
-      url: '{{base_url}}/shops/11/locations/2?embed=address'
+      url: '{{base_url}}/shops/452/locations/2500?embed=address'
       headers:
         <<: *default_headers
   -
@@ -260,7 +260,7 @@ requests:
   -
     key: products_search
     request:
-      url: '{{base_url}}/shops/11/products/search?shop_uid=2209985'
+      url: '{{base_url}}/shops/452/products/search?shop_uid=95F'
       headers:
         <<: *default_headers
   -
@@ -421,6 +421,6 @@ requests:
   -
     key: shop_search
     request:
-      url: '{{base_url}}/shops/search?q=plaisio'
+      url: '{{base_url}}/shops/search?q=spartoo'
       headers:
         <<: *default_headers

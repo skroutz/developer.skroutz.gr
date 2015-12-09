@@ -1,40 +1,41 @@
 ---
 :request:
-  :url: https://api.skroutz.gr/shops/11/locations/2?embed=address
+  :url: http://api.skroutz.gr/shops/452/locations/2500?embed=address
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer jaPv59VEwoRrZw1HhtdrTeZBZYAutljWLsGpJxQHwkR9zKRAEvyCjWNDDmdIrXL6HNM2VZIOScxkI4OoemUcA==
-  :verb: GET
+    :authorization: Bearer 9bBb/SfslzfXVoyFdulvm0kWf5aBa1P6oQEknj2BCvEFK0D9fQTlrALG3lWogTNaEmdSGFs1eCqyBVAbIFHJVw==
+  :verb: :get
 :response:
   :status: 200
   :headers:
-    !binary "c2VydmVy": nginx
-    !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
-    !binary "dmFyeQ==": Accept-Encoding
-    !binary "eC1yYXRlbGltaXQtbGltaXQ=": '100'
-    !binary "eC1yYXRlbGltaXQtcmVtYWluaW5n": '98'
-    !binary "eC1yYXRlbGltaXQtcmVzZXQ=": '1438937280'
-    !binary "c3RhdHVz": 200 OK
-    !binary "Y2FjaGUtY29udHJvbA==": max-age=300, private
-    !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
-    !binary "ZXRhZw==": W/"a33ba173cc6222c1214c0bcf2fbd6d22"
-    !binary "eC1yZXF1ZXN0LWlk": '221593726'
-    !binary "eC1ydW50aW1l": '0.027539'
-    !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "YWNjZXNzLWNvbnRyb2wtYWxsb3ctb3JpZ2lu": ! '*'
-    !binary "YWNjZXNzLWNvbnRyb2wtYWxsb3ctbWV0aG9kcw==": HEAD, GET, POST, PUT, DELETE
-    !binary "eC1hcHA=": kwaltz_ssl
-    !binary "Y29udGVudC1sZW5ndGg=": '294'
-    !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Fri, 07 Aug 2015 08:47:14 GMT
-    !binary "eC12YXJuaXNo": '221593726'
-    !binary "YWdl": '0'
-    !binary "dmlh": 1.1 varnish
-    !binary "Y29ubmVjdGlvbg==": close
-    !binary "eC1vcmlnaW4=": lb2
-    !binary "eC1jYWNoZQ==": MISS
-  :body: ! '{"location":{"id":2,"headquarter":true,"phones":["2105587700"],"pickup_point":true,"store":true,"full_address":"\u0398\u0395\u03a3\u0397
-    \u03a3\u039a\u039b\u0397\u03a1\u0399 1, \u03a4.\u039a. 19600, \u039c\u0391\u0393\u039f\u03a5\u039b\u0391,
-    \u0391\u03c4\u03c4\u03b9\u03ba\u03ae\u03c2","format":"structured","lat":"38.083786","lng":"23.526396","info":"","address":{"id":2,"street_number":"1","street":"\u0398\u0395\u03a3\u0397
-    \u03a3\u039a\u039b\u0397\u03a1\u0399","postcode":"19600","city":"\u039c\u0391\u0393\u039f\u03a5\u039b\u0391","region":"\u0391\u03c4\u03c4\u03b9\u03ba\u03ae\u03c2","country":"\u0395\u03bb\u03bb\u03ac\u03b4\u03b1"}}}'
-:created_at: 2015-08-07 11:47:14.264193000 +03:00
+    server: nginx
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '95'
+    x-ratelimit-reset: '1449664440'
+    status: 200 OK
+    x-frame-options: SAMEORIGIN
+    x-xss-protection: 1; mode=block
+    x-content-type-options: nosniff
+    cache-control: max-age=300, private
+    etag: W/"f68744a02bc0ed4ef5c8daf6b6ee1eda"
+    x-request-id: '1649553227'
+    x-runtime: '0.028215'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: kavula
+    content-length: '327'
+    accept-ranges: bytes
+    date: Wed, 09 Dec 2015 12:33:59 GMT
+    x-varnish: '1649553227'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: lb2
+    x-cache: MISS
+  :body: '{"location":{"id":2500,"headquarter":true,"phones":["2102899999"],"pickup_point":false,"store":false,"full_address":"14ο
+    ΧΛΜ ΕΟ ΑΘΗΝΩΝ ΛΑΜΙΑΣ 14, Τ.Κ. 14452, ΜΕΤΑΜΟΡΦΩΣΗ, Αττικής","format":"structured","lat":"38.062297","lng":"23.75991","info":"","address":{"id":2500,"street_number":"14","street":"14ο
+    ΧΛΜ ΕΟ ΑΘΗΝΩΝ ΛΑΜΙΑΣ","postcode":"14452","city":"ΜΕΤΑΜΟΡΦΩΣΗ","region":"Αττικής","country":"Ελλάδα"}}}'
+:created_at: 2015-12-09 14:33:28.937227875 +02:00
