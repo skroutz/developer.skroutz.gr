@@ -75,23 +75,24 @@ Aşağıdaki tablo Alve tarafından tanınan ürün kayıtlarını özetlemekted
   </p>
 </div>
 
-İsim                             | Tip     | Maksimum Ölçü                  | Zorunlu   | Örnek
--------------------------------- | ------- | ------------------------------ | --------- | ------------------------------------------
-[Unique ID](#unique-id)          | String  | <span class="mono">200</span>  | Evet      | `322`
-[Name](#name)                    | String  | <span class="mono">300</span>  | Evet      | `Samsung Galaxy S4 16GB`
-[Product Link](#product-link)    | String  | <span class="mono">1000</span> | Evet      | `http://www.someurl.com/products/322.html`
-[Image Link](#image-link)        | String  | <span class="mono">400</span>  | Evet      | `http://www.someurl.com/images/322.jpg`
-[Category Name](#category-name)  | String  | <span class="mono">250</span>  | Evet      | `Cep Telefonları`
-[Price](#price)                  | Decimal | <span class="mono">-</span>    | Evet      | `23.22`
-[Availability](#availability)    | String  | <span class="mono">60</span>   | Evet      | `2 gün içerisinde`
-[Manufacturer](#manufacturer)    | String  | <span class="mono">100</span>  | Evet      | `Samsung`
-[MPN / ISBN](#mpn--isbn)         | String  | <span class="mono">80</span>   | Evet      | `GF322234`
-[EAN / Barcode](#ean--barcode)   | Integer | <span class="mono">13</span>   | Hayir     | `9780471117094`
-[Size](#size)                    | String  | <span class="mono">500</span>  | Hayır*    | `4,4.5,5-6,6 1/2`
-[Weight](#weight)                | Decimal | <span class="mono">-</span>    | Hayır     | `3200`
-[InStock](#instock)              | List    | <span class="mono">-</span>    | Hayır     | `Y`
-[Shipping Costs](#shipping-costs)| Decimal | <span class="mono">-</span>    | Hayır     | `3.22`
-[Color](#color)                  | String  | <span class="mono">100</span>  | Hayır     | `Siyah`
+İsim                                            | Tip     | Maksimum Ölçü                  | Zorunlu   | Örnek
+----------------------------------------------- | ------- | ------------------------------ | --------- | ------------------------------------------
+[Unique ID](#unique-id)                         | String  | <span class="mono">200</span>  | Evet      | `322`
+[Name](#name)                                   | String  | <span class="mono">300</span>  | Evet      | `Samsung Galaxy S4 16GB`
+[Product Link](#product-link)                   | String  | <span class="mono">1000</span> | Evet      | `http://www.someurl.com/products/322.html`
+[Image Link](#image-link)                       | String  | <span class="mono">400</span>  | Evet      | `http://www.someurl.com/images/322.jpg`
+[Additional Image Link](#additional-image-link) | String  | <span class="mono">400</span>  | Hayir     | `http://www.someurl.com/images/322/front_view.jpg`
+[Category Name](#category-name)                 | String  | <span class="mono">250</span>  | Evet      | `Cep Telefonları`
+[Price](#price)                                 | Decimal | <span class="mono">-</span>    | Evet      | `23.22`
+[Availability](#availability)                   | String  | <span class="mono">60</span>   | Evet      | `2 gün içerisinde`
+[Manufacturer](#manufacturer)                   | String  | <span class="mono">100</span>  | Evet      | `Samsung`
+[MPN / ISBN](#mpn--isbn)                        | String  | <span class="mono">80</span>   | Evet      | `GF322234`
+[EAN / Barcode](#ean--barcode)                  | Integer | <span class="mono">13</span>   | Hayir     | `9780471117094`
+[Size](#size)                                   | String  | <span class="mono">500</span>  | Hayır*    | `4,4.5,5-6,6 1/2`
+[Weight](#weight)                               | Decimal | <span class="mono">-</span>    | Hayır     | `3200`
+[InStock](#instock)                             | List    | <span class="mono">-</span>    | Hayır     | `Y`
+[Shipping Costs](#shipping-costs)               | Decimal | <span class="mono">-</span>    | Hayır     | `3.22`
+[Color](#color)                                 | String  | <span class="mono">100</span>  | Hayır     | `Siyah`
 
 <small>* Moda kategorisindeki tüm ürünler için ölçü bilgisi zorunludur</small>
 
@@ -197,6 +198,30 @@ yaratılması açısından faydalı olacaktır.
 <imageurl>http://www.mydomain.com/photos/b&amp;amp;b.jpg</imageurl>
 <url><![CDATA[http://www.mydomain.com/photos/b&amp;b.jpg]]></url>
 ~~~
+
+
+
+#### Additional Image Link
+
+Ürünün ek fotoğrafları için kullanılır. Aynı ürüne ait farklı açılardan
+ya da farklı bir sunuşla gösterilen fotoğraflar veya bunların kombinasyonu
+ürünün <%= settings.site_name.capitalize %>’deki sunumuna katkıda bulunur.
+
+Opsiyonel olmakla birlikte bu alanın kullanılması tavsiye edilir. Her bir
+farklı fotoğraf için bir kere olacak şekilde, bir feed içerisinde birden
+çok kez görünebilir. [Image Link](#image-link) ile aynı sınırlamalara sahiptir.
+
+##### Örnek
+
+~~~ xml
+<image>http://www.mydomain.com/photos/1.jpg</image>
+<imageurl>http://www.mydomain.com/photos/b&amp;amp;b.jpg</imageurl>
+<additional_imageurl>http://www.mydomain.com/photos/product1/front.jpg</additional_imageurl>
+<additional_imageurl>http://www.mydomain.com/photos/product1/sides.jpg</additional_imageurl>
+<additional_imageurl>http://www.mydomain.com/photos/product1/packaged.jpg</additional_imageurl>
+<url><![CDATA[http://www.mydomain.com/photos/b&amp;b.jpg]]></url>
+~~~
+
 
 
 #### Category Name
@@ -408,6 +433,7 @@ Aşağıdaki XML alıntısı, uygun bir XML Data Feed’ine örnek oluşturmakta
         <name><![CDATA[MadBiker 600]]></name>
         <link><![CDATA[http://www.mywebstore.com.tr/product/322233]]></link>
         <image><![CDATA[http://www.mywebstore.com.tr/product/322233.jpg]]></image>
+        <additionalimage><![CDATA[http://www.mywebstore.com.tr/product/322233/front.jpg]]></additionalimage>
         <category><![CDATA[Spor > Extreme Sports]]></category>
         <price_with_vat>322.33</price_with_vat>
         <manufacturer><![CDATA[SuperGlasses]]></manufacturer>
@@ -466,6 +492,15 @@ Aşağıdaki XML alıntısı, uygun bir XML Data Feed’ine örnek oluşturmakta
 
   <!-- image -->
   <xs:element name="image">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:maxLength value="400" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <!-- additional image -->
+  <xs:element name="additional_image">
     <xs:simpleType>
       <xs:restriction base="xs:string">
         <xs:maxLength value="400" />
@@ -584,6 +619,7 @@ Aşağıdaki XML alıntısı, uygun bir XML Data Feed’ine örnek oluşturmakta
                     <xs:element ref="instock" />
 
                     <!-- optional fields -->
+                    <xs:element ref="additional_image"  minOccurs="0"/>
                     <xs:element ref="ean"  minOccurs="0"/>
                     <xs:element ref="size"  minOccurs="0"/>
                     <xs:element ref="weight" minOccurs="0"/>
