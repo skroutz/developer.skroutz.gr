@@ -15,31 +15,31 @@
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '96'
-    x-ratelimit-reset: '1446476460'
+    x-ratelimit-remaining: '93'
+    x-ratelimit-reset: '1449665460'
     status: 200 OK
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
     link: <http://api.skroutz.gr/search?page=63&per=2&q=iphone>; rel="last", <http://api.skroutz.gr/search?page=2&per=2&q=iphone>;
       rel="next"
-    etag: W/"4e40711545c26a2f1f789611c15cdf89"
+    etag: W/"113f7ef638cdc7039b71f34caf2ffb38"
     cache-control: max-age=0, private, must-revalidate
-    x-request-id: '1219113770'
-    x-runtime: '0.088052'
+    x-request-id: '1649756038'
+    x-runtime: '0.068039'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
-    x-app: rontok
-    content-length: '490'
+    x-app: kavula
+    content-length: '486'
     accept-ranges: bytes
-    date: Mon, 02 Nov 2015 15:00:59 GMT
-    x-varnish: '1219113770'
+    date: Wed, 09 Dec 2015 12:50:25 GMT
+    x-varnish: '1649756038'
     age: '0'
     via: 1.1 varnish
     connection: close
     x-origin: lb2
     x-cache: MISS
-  :body: '{"categories":[{"id":40,"name":"Κινητά Τηλέφωνα","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/20150508124644_bd07441b.jpg","parent_id":86,"fashion":false,"layout_mode":"list","web_uri":"http://api.skroutz.gr/c/40/kinhta-thlefwna.html","path":"76,1269,86,40","show_specifications":true,"manufacturer_title":"Κατασκευαστές","match_count":18},{"id":579,"name":"Θήκες
-    Κινητών Τηλεφώνων","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/20150408173958_42b293c7.jpg","parent_id":86,"fashion":false,"layout_mode":"tiles","web_uri":"http://api.skroutz.gr/c/579/thikes-kinhtwn-thlefwnwn.html","path":"76,1269,86,579","show_specifications":false,"manufacturer_title":"Κατασκευαστές","match_count":16534}],"meta":{"q":"iphone","alternatives":[],"strong_matches":{},"pagination":{"total_results":126,"total_pages":63,"page":1,"per":2}}}'
-:created_at: 2015-11-02 17:01:17.171187000 +02:00
+  :body: '{"categories":[{"id":40,"name":"Κινητά Τηλέφωνα","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/20150508124644_bd07441b.jpg","parent_id":86,"fashion":false,"layout_mode":"list","web_uri":"http://skroutz.gr/c/40/kinhta-thlefwna.html","path":"76,1269,86,40","show_specifications":true,"manufacturer_title":"Κατασκευαστές","match_count":18},{"id":579,"name":"Θήκες
+    Κινητών Τηλεφώνων","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/20150408173958_42b293c7.jpg","parent_id":86,"fashion":false,"layout_mode":"tiles","web_uri":"http://skroutz.gr/c/579/thikes-kinhtwn-thlefwnwn.html","path":"76,1269,86,579","show_specifications":false,"manufacturer_title":"Κατασκευαστές","match_count":16871}],"meta":{"q":"iphone","alternatives":[],"strong_matches":{},"pagination":{"total_results":126,"total_pages":63,"page":1,"per":2}}}'
+:created_at: 2015-12-09 14:49:54.807525628 +02:00

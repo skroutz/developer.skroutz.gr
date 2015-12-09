@@ -12,28 +12,28 @@
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '95'
-    x-ratelimit-reset: '1446475740'
+    x-ratelimit-remaining: '96'
+    x-ratelimit-reset: '1449665460'
     status: 200 OK
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
     cache-control: max-age=300, private
-    etag: W/"5d678a7942cf81e4eca6cab7f222e231"
-    x-request-id: '1643287691'
-    x-runtime: '0.018284'
+    etag: W/"5ce5ae7dbac5896f293722a93b7c1f08"
+    x-request-id: '2013296575'
+    x-runtime: '0.022275'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
-    x-app: rontok
-    content-length: '312'
+    x-app: kavula
+    content-length: '309'
     accept-ranges: bytes
-    date: Mon, 02 Nov 2015 14:48:29 GMT
-    x-varnish: '1643287691'
+    date: Wed, 09 Dec 2015 12:50:22 GMT
+    x-varnish: '2013296575'
     age: '0'
     via: 1.1 varnish
     connection: close
     x-origin: lb1
     x-cache: MISS
-  :body: '{"category":{"id":1434,"name":"Έπιπλα Κήπου \u0026 Βεράντας","children_count":14,"image_url":"http://b.scdn.gr/images/categories/large/1434.jpg","parent_id":1052,"fashion":false,"layout_mode":"tiles","web_uri":"http://api.skroutz.gr/c/1434/epipla-kipou-verantas.html","path":"76,11,1052,1434","show_specifications":false,"manufacturer_title":"Κατασκευαστές"}}'
-:created_at: 2015-11-02 16:48:47.645579000 +02:00
+  :body: '{"category":{"id":1434,"name":"Έπιπλα Κήπου \u0026 Βεράντας","children_count":14,"image_url":"http://b.scdn.gr/images/categories/large/1434.jpg","parent_id":1052,"fashion":false,"layout_mode":"tiles","web_uri":"http://skroutz.gr/c/1434/epipla-kipou-verantas.html","path":"76,11,1052,1434","show_specifications":false,"manufacturer_title":"Κατασκευαστές"}}'
+:created_at: 2015-12-09 14:49:52.093958606 +02:00

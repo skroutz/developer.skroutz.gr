@@ -12,31 +12,31 @@
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '96'
-    x-ratelimit-reset: '1446475740'
+    x-ratelimit-remaining: '99'
+    x-ratelimit-reset: '1449665460'
     status: 200 OK
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
     cache-control: max-age=300, private
-    etag: W/"ecd6b6974e3d52857f14143d1785f94f"
-    x-request-id: '1643287682'
-    x-runtime: '0.019771'
+    etag: W/"728a7b24e85b19bb28f45ed44ee69a00"
+    x-request-id: '2013296154'
+    x-runtime: '0.023148'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
-    x-app: rontok
-    content-length: '478'
+    x-app: kavula
+    content-length: '474'
     accept-ranges: bytes
-    date: Mon, 02 Nov 2015 14:48:29 GMT
-    x-varnish: '1643287682'
+    date: Wed, 09 Dec 2015 12:50:20 GMT
+    x-varnish: '2013296154'
     age: '0'
     via: 1.1 varnish
     connection: close
     x-origin: lb1
     x-cache: MISS
-  :body: '{"categories":[{"id":365,"name":"Διάφορες Υπηρεσίες","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/365.jpg","parent_id":73,"fashion":false,"layout_mode":"list","web_uri":"http://api.skroutz.gr/c/365/varrious_services.html","path":"76,1269,22,73,365","show_specifications":false,"manufacturer_title":"Κατασκευαστές"},{"id":106,"name":"Συνδέσεις
-    Internet","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/106.jpg","parent_id":73,"fashion":false,"layout_mode":"list","web_uri":"http://api.skroutz.gr/c/106/syndeseis-internet.html","path":"76,1269,22,73,106","show_specifications":false,"manufacturer_title":"Κατασκευαστές"},{"id":107,"name":"Επεκτάσεις
-    Εγγύησης","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/107.jpg","parent_id":73,"fashion":false,"layout_mode":"list","web_uri":"http://api.skroutz.gr/c/107/guarantee.html","path":"76,1269,22,73,107","show_specifications":false,"manufacturer_title":"Κατασκευαστές"},{"id":364,"name":"Υπηρεσίες
-    Internet","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/364.jpg","parent_id":73,"fashion":false,"layout_mode":"list","web_uri":"http://api.skroutz.gr/c/364/internet_services.html","path":"76,1269,22,73,364","show_specifications":false,"manufacturer_title":"Κατασκευαστές"}],"meta":{"pagination":{"total_results":4,"total_pages":1,"page":1,"per":25}}}'
-:created_at: 2015-11-02 16:48:47.614222000 +02:00
+  :body: '{"categories":[{"id":365,"name":"Διάφορες Υπηρεσίες","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/365.jpg","parent_id":73,"fashion":false,"layout_mode":"list","web_uri":"http://skroutz.gr/c/365/varrious_services.html","path":"76,1269,22,73,365","show_specifications":false,"manufacturer_title":"Κατασκευαστές"},{"id":106,"name":"Συνδέσεις
+    Internet","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/106.jpg","parent_id":73,"fashion":false,"layout_mode":"list","web_uri":"http://skroutz.gr/c/106/syndeseis-internet.html","path":"76,1269,22,73,106","show_specifications":false,"manufacturer_title":"Κατασκευαστές"},{"id":107,"name":"Επεκτάσεις
+    Εγγύησης","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/107.jpg","parent_id":73,"fashion":false,"layout_mode":"list","web_uri":"http://skroutz.gr/c/107/guarantee.html","path":"76,1269,22,73,107","show_specifications":false,"manufacturer_title":"Κατασκευαστές"},{"id":364,"name":"Υπηρεσίες
+    Internet","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/364.jpg","parent_id":73,"fashion":false,"layout_mode":"list","web_uri":"http://skroutz.gr/c/364/internet_services.html","path":"76,1269,22,73,364","show_specifications":false,"manufacturer_title":"Κατασκευαστές"}],"meta":{"pagination":{"total_results":4,"total_pages":1,"page":1,"per":25}}}'
+:created_at: 2015-12-09 14:49:49.419571634 +02:00
