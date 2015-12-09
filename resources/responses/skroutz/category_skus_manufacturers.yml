@@ -1,62 +1,55 @@
 ---
 :request:
-  :url: https://api.skroutz.gr/categories/40/skus?manufacturer_ids[]=28&manufacturer_ids[]=2
+  :url: http://api.skroutz.gr/categories/40/skus?manufacturer_ids[]=28&manufacturer_ids[]=2
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer Qgq1ofejerxdYPnpOYaT1GRhwRPczj2AnkZFtNi1jrVgchHJib5xL4QkQPJYNWElNoPiOp5VBqsmoq6HgMiEA==
+    :authorization: Bearer 9bBb/SfslzfXVoyFdulvm0kWf5aBa1P6oQEknj2BCvEFK0D9fQTlrALG3lWogTNaEmdSGFs1eCqyBVAbIFHJVw==
   :params:
     :per: 4
-  :verb: GET
+  :verb: :get
 :response:
   :status: 200
   :headers:
-    !binary "c2VydmVy": nginx
-    !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
-    !binary "dmFyeQ==": Accept-Encoding
-    !binary "c3RhdHVz": 200 OK
-    !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
-    !binary "Y2FjaGUtY29udHJvbA==": max-age=0, private, must-revalidate
-    !binary "eC1yZXF1ZXN0LWlk": '578822954'
-    !binary "eC1ydW50aW1l": '0.130782'
-    !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "eC1hcHA=": lunkwill_ssl
-    !binary "Y29udGVudC1sZW5ndGg=": '1137'
-    !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:44:38 GMT
-    !binary "eC12YXJuaXNo": '578822954'
-    !binary "YWdl": '0'
-    !binary "dmlh": 1.1 varnish
-    !binary "Y29ubmVjdGlvbg==": close
-    !binary "eC1vcmlnaW4=": varnish1
-    !binary "eC1jYWNoZQ==": MISS
-  :body: ! '{"skus":[{"id":2119391,"ean":"","pn":"GT-E1200","name":"E1200","display_name":"Samsung
-    E1200","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":32.2,"price_min":13.82,"reviewscore":4.0,"shop_count":15,"plain_spec_summary":"Single
-    SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
-    2G,   \u039f\u03b8\u03cc\u03bd\u03b7: 1.52\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7:
-    128 x 128 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2: \u03a6\u03c5\u03c3\u03b9\u03ba\u03cc
-    \u03a0\u03bb\u03b7\u03ba\u03c4\u03c1\u03bf\u03bb\u03cc\u03b3\u03b9\u03bf,  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
-    \u039c\u03bd\u03ae\u03bc\u03b7: 100 MB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
-    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: N/A, Feature Phone","manufacturer_id":28,"future":false,"reviews_count":8,"virtual":false,"images":{"main":"http://d.scdn.gr/images/sku_main_images/002119/2119391/medium_gr_GT-E1200ZWMVGR_301_Front","alternatives":["http://a.scdn.gr/images/sku_images/012918/12918567/gr_GT-E1200ZWMVGR_309_Dynamic","http://b.scdn.gr/images/sku_images/012918/12918568/gr_GT-E1200ZWMVGR_304_Left","http://c.scdn.gr/images/sku_images/012918/12918569/gr_GT-E1200ZWMVGR_302_Back","http://d.scdn.gr/images/sku_images/012918/12918571/gr_GT-E1200ZWMVGR_321_Front","http://c.scdn.gr/images/sku_images/012918/12918572/gr_GT-E1200ZWMVGR_329_Dynamic","http://a.scdn.gr/images/sku_images/012918/12918573/gr_GT-E1200ZWMVGR_323_Right","http://c.scdn.gr/images/sku_images/012918/12918574/gr_GT-E1200ZWMVGR_322_Back"]}},{"id":274886,"ean":"","pn":"E1170","name":"E1170","display_name":"Samsung
-    E1170","category_id":40,"first_product_shop_info":"62|Technoshop|technoshop","click_url":null,"price_max":14.99,"price_min":14.99,"reviewscore":3.0,"shop_count":1,"plain_spec_summary":"Single
-    SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
-    2G,   \u039f\u03b8\u03cc\u03bd\u03b7: 1.52\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7:
-    128 x 128 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2: \u03a6\u03c5\u03c3\u03b9\u03ba\u03cc
-    \u03a0\u03bb\u03b7\u03ba\u03c4\u03c1\u03bf\u03bb\u03cc\u03b3\u03b9\u03bf,  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
-    \u039c\u03bd\u03ae\u03bc\u03b7: 16 GB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
-    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: N/A, Feature Phone","manufacturer_id":28,"future":false,"reviews_count":3,"virtual":false,"images":{"main":"http://a.scdn.gr/images/sku_main_images/000274/274886/medium_Samsung-E1170-Unlocked-_-www.1stMobile.co_.uk-2C.jpg","alternatives":["http://b.scdn.gr/images/sku_images/013437/13437048/39773.samsung-e1170.jpg"]}},{"id":328970,"ean":"","pn":"E1050","name":"E1050","display_name":"Samsung
-    E1050","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":33.4,"price_min":19.9,"reviewscore":3.22222,"shop_count":5,"plain_spec_summary":"Single
-    SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
-    2G,   \u039f\u03b8\u03cc\u03bd\u03b7: 1.43\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7:
-    128 x 128 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2: \u03a6\u03c5\u03c3\u03b9\u03ba\u03cc
-    \u03a0\u03bb\u03b7\u03ba\u03c4\u03c1\u03bf\u03bb\u03cc\u03b3\u03b9\u03bf,    \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
-    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: N/A, Feature Phone","manufacturer_id":28,"future":false,"reviews_count":9,"virtual":false,"images":{"main":"http://a.scdn.gr/images/sku_main_images/000328/328970/medium_sku_picture_5c590d.jpg.jpg","alternatives":["http://d.scdn.gr/images/sku_images/000027/27521/sku_picture_7f327b.jpg.jpg","http://c.scdn.gr/images/sku_images/000027/27523/sku_picture_1607d7.jpg.jpg"]}},{"id":3967621,"ean":"","pn":"GT-E1270","name":"E1270","display_name":"Samsung
-    E1270","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":41.82,"price_min":22.83,"reviewscore":5.0,"shop_count":21,"plain_spec_summary":"Single
-    SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
-    2G,   \u039f\u03b8\u03cc\u03bd\u03b7: 1.77\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7:
-    160 x 128 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2: \u03a6\u03c5\u03c3\u03b9\u03ba\u03cc
-    \u03a0\u03bb\u03b7\u03ba\u03c4\u03c1\u03bf\u03bb\u03cc\u03b3\u03b9\u03bf,  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
-    \u039c\u03bd\u03ae\u03bc\u03b7: 0 GB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
-    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: N/A, Feature Phone","manufacturer_id":28,"future":false,"reviews_count":1,"virtual":false,"images":{"main":"http://a.scdn.gr/images/sku_main_images/003967/3967621/medium_e1270-black-4391e26073eb2f1d10ac82ff02a6a49b.jpg","alternatives":["http://c.scdn.gr/images/sku_images/011439/11439215/samsunggt-e1270rd1.jpg","http://b.scdn.gr/images/sku_images/011439/11439216/samsunggt-e1270bk1.jpg","http://d.scdn.gr/images/sku_images/011439/11439218/de_GT-E1270GRADBT_000195046_Front-Open_white","http://b.scdn.gr/images/sku_images/011439/11439219/IS199334.jpg","http://b.scdn.gr/images/sku_images/011610/11610016/de_GT-E1270GRADBT_001_Front_white"]}}],"meta":{"pagination":{"total_results":121,"total_pages":31,"page":1,"per":4}}}'
-:created_at: 2014-08-25 17:44:38.124483309 +03:00
+    server: nginx
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '94'
+    x-ratelimit-reset: '1449661680'
+    status: 200 OK
+    x-frame-options: SAMEORIGIN
+    x-xss-protection: 1; mode=block
+    x-content-type-options: nosniff
+    etag: W/"13f43c6b9175be66049a08cc34c665eb"
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '1648995602'
+    x-runtime: '0.081081'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: kavula
+    content-length: '1190'
+    accept-ranges: bytes
+    date: Wed, 09 Dec 2015 11:47:05 GMT
+    x-varnish: '1648995602'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: lb2
+    x-cache: MISS
+  :body: '{"skus":[{"id":2119391,"ean":"","pn":"GT-E1200i","name":"E1200","display_name":"Samsung
+    E1200","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":39.9,"price_min":19.4,"reviewscore":4.38889,"shop_count":9,"plain_spec_summary":"Feature
+    Phone,  Single, Οθόνη: 1.52\", Πυρήνες CPU: 1,   Μνήμη Αποθήκευσης: 100 MB,    Δίκτυο
+    Σύνδεσης: 2G, Λειτουργικό Σύστημα: Κατασκευαστή","manufacturer_id":28,"future":false,"reviews_count":36,"virtual":false,"images":{"main":"http://d.scdn.gr/images/sku_main_images/002119/2119391/medium_gr_GT-E1200ZWMVGR_301_Front","alternatives":["http://a.scdn.gr/images/sku_images/012918/12918567/gr_GT-E1200ZWMVGR_309_Dynamic","http://b.scdn.gr/images/sku_images/012918/12918568/gr_GT-E1200ZWMVGR_304_Left","http://c.scdn.gr/images/sku_images/012918/12918569/gr_GT-E1200ZWMVGR_302_Back","http://d.scdn.gr/images/sku_images/012918/12918571/gr_GT-E1200ZWMVGR_321_Front","http://c.scdn.gr/images/sku_images/012918/12918572/gr_GT-E1200ZWMVGR_329_Dynamic","http://a.scdn.gr/images/sku_images/012918/12918573/gr_GT-E1200ZWMVGR_323_Right","http://c.scdn.gr/images/sku_images/012918/12918574/gr_GT-E1200ZWMVGR_322_Back"]},"web_uri":"http://skroutz.gr/s/2119391/Samsung-E1200.html"},{"id":3967621,"ean":"","pn":"GT-E1270","name":"E1270","display_name":"Samsung
+    E1270","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":35.5,"price_min":34.54,"reviewscore":4.6,"shop_count":5,"plain_spec_summary":"Feature
+    Phone,  Single, Οθόνη: 1.77\", CPU: 208 MHz, Πυρήνες CPU: 1,   Μνήμη Αποθήκευσης:
+    0 GB,    Δίκτυο Σύνδεσης: 2G, Λειτουργικό Σύστημα: Κατασκευαστή","manufacturer_id":28,"future":false,"reviews_count":5,"virtual":false,"images":{"main":"http://a.scdn.gr/images/sku_main_images/003967/3967621/medium_e1270-black-4391e26073eb2f1d10ac82ff02a6a49b.jpg","alternatives":["http://c.scdn.gr/images/sku_images/011439/11439215/samsunggt-e1270rd1.jpg","http://b.scdn.gr/images/sku_images/011439/11439216/samsunggt-e1270bk1.jpg","http://d.scdn.gr/images/sku_images/011439/11439218/de_GT-E1270GRADBT_000195046_Front-Open_white","http://b.scdn.gr/images/sku_images/011439/11439219/IS199334.jpg","http://b.scdn.gr/images/sku_images/011610/11610016/de_GT-E1270GRADBT_001_Front_white"]},"web_uri":"http://skroutz.gr/s/3967621/Samsung-E1270.html"},{"id":5749988,"ean":"","pn":"SM-B312E","name":"Metro
+    312","display_name":"Samsung Metro 312","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":43.0,"price_min":35.0,"reviewscore":0.0,"shop_count":2,"plain_spec_summary":"Feature
+    Phone,  Single, Οθόνη: 2.0\", CPU: 208 MHz, Πυρήνες CPU: 1,       Δίκτυο Σύνδεσης:
+    2G, Λειτουργικό Σύστημα: Κατασκευαστή","manufacturer_id":28,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://d.scdn.gr/images/sku_main_images/005749/5749988/medium_20141118102053_in_SM-B312EZWDINU_001_Front_whiteflower.","alternatives":["http://b.scdn.gr/images/sku_images/014189/14189069/20141118102055_in_SM-B312EZWDINU_002_Back_whiteflower.","http://a.scdn.gr/images/sku_images/014189/14189070/20141118102058_in_SM-B312EZWDINU_003_L-Perspective_whiteflower.","http://d.scdn.gr/images/sku_images/014189/14189071/20141118102101_in_SM-B312EZWDINU_004_R-Perspective_whiteflower."]},"web_uri":"http://skroutz.gr/s/5749988/Samsung-Metro-312.html"},{"id":3961793,"ean":"","pn":"GT-C3590","name":"C3590","display_name":"Samsung
+    C3590","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":74.8,"price_min":65.9,"reviewscore":4.5,"shop_count":9,"plain_spec_summary":"Feature
+    Phone,  Single, Οθόνη: 2.4\", CPU: 416 MHz, Πυρήνες CPU: 1,       Δίκτυο Σύνδεσης:
+    2G, Λειτουργικό Σύστημα: Κατασκευαστή","manufacturer_id":28,"future":false,"reviews_count":2,"virtual":false,"images":{"main":"http://d.scdn.gr/images/sku_main_images/003961/3961793/medium_samsung-c3590-full-2.jpg","alternatives":[]},"web_uri":"http://skroutz.gr/s/3961793/Samsung-C3590.html"}],"meta":{"ordered_by":"price","pagination":{"total_results":98,"total_pages":25,"page":1,"per":4}}}'
+:created_at: 2015-12-09 13:46:34.332141643 +02:00
 :meta:
   :description: Lists skus filtered by manufacturers.

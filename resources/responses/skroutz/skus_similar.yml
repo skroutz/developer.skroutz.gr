@@ -1,60 +1,52 @@
 ---
 :request:
-  :url: https://api.skroutz.gr/skus/3034682/similar
+  :url: http://api.skroutz.gr/skus/3034682/similar
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer Qgq1ofejerxdYPnpOYaT1GRhwRPczj2AnkZFtNi1jrVgchHJib5xL4QkQPJYNWElNoPiOp5VBqsmoq6HgMiEA==
-  :verb: GET
+    :authorization: Bearer 9bBb/SfslzfXVoyFdulvm0kWf5aBa1P6oQEknj2BCvEFK0D9fQTlrALG3lWogTNaEmdSGFs1eCqyBVAbIFHJVw==
+  :verb: :get
 :response:
   :status: 200
   :headers:
-    !binary "c2VydmVy": nginx
-    !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
-    !binary "dmFyeQ==": Accept-Encoding
-    !binary "c3RhdHVz": 200 OK
-    !binary "Y2FjaGUtY29udHJvbA==": max-age=300, private
-    !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
-    !binary "eC1yZXF1ZXN0LWlk": '578822706'
-    !binary "eC1ydW50aW1l": '0.079332'
-    !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "eC1hcHA=": lunkwill_ssl
-    !binary "Y29udGVudC1sZW5ndGg=": '1502'
-    !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:44:36 GMT
-    !binary "eC12YXJuaXNo": '578822706'
-    !binary "YWdl": '0'
-    !binary "dmlh": 1.1 varnish
-    !binary "Y29ubmVjdGlvbg==": close
-    !binary "eC1vcmlnaW4=": varnish1
-    !binary "eC1jYWNoZQ==": MISS
-  :body: ! '{"skus":[{"id":4503613,"ean":"","pn":"G900F","name":"Galaxy S5 (16GB)","display_name":"Samsung
-    Galaxy S5 (16GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":759.0,"price_min":451.0,"reviewscore":3.92982,"shop_count":41,"plain_spec_summary":"Single
-    SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
-    4G - LTE / 3G, \u039a\u03ac\u03bc\u03b5\u03c1\u03b1: 16 MP,  \u039f\u03b8\u03cc\u03bd\u03b7:
-    5.1\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7: 1920 x 1080 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2:
-    \u039f\u03b8\u03cc\u03bd\u03b7 \u03b1\u03c6\u03ae\u03c2 (Touch screen),  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
-    \u039c\u03bd\u03ae\u03bc\u03b7: 16 GB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
-    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: Android, SmartPhone","manufacturer_id":28,"future":false,"reviews_count":57,"virtual":false,"images":{"main":"http://d.scdn.gr/images/sku_main_images/004503/4503613/medium_1978590_676086919123071_850436902_o.jpg","alternatives":["http://c.scdn.gr/images/sku_images/012275/12275390/1909147_676086882456408_1612656443_o.jpg","http://b.scdn.gr/images/sku_images/012275/12275391/1890569_676086962456400_1440904672_o.jpg","http://b.scdn.gr/images/sku_images/012275/12275392/1602080_676086979123065_1627135353_o.jpg","http://b.scdn.gr/images/sku_images/012275/12275393/1973543_676087052456391_1928826321_o.jpg","http://b.scdn.gr/images/sku_images/012275/12275394/1493371_676087075789722_953348465_o.jpg","http://d.scdn.gr/images/sku_images/012275/12275396/1941344_676087145789715_1041600059_o.jpg","http://b.scdn.gr/images/sku_images/012275/12275397/1601995_676087295789700_1201107293_o.jpg","http://c.scdn.gr/images/sku_images/012275/12275401/1941601_676087385789691_49768826_o.jpg","http://b.scdn.gr/images/sku_images/012275/12275402/1965633_676087505789679_1789703906_o.jpg","http://d.scdn.gr/images/sku_images/012275/12275403/1957850_676087535789676_1111881594_o.jpg","http://a.scdn.gr/images/sku_images/012275/12275406/1655505_676087569123006_588120090_o.jpg","http://c.scdn.gr/images/sku_images/012275/12275407/1801194_676087752456321_1892287034_o.jpg"]}},{"id":1828505,"ean":"","pn":"I9300
-    16GB","name":"Galaxy S III i9300 16GB","display_name":"Samsung Galaxy S III i9300
-    16GB","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":369.0,"price_min":233.99,"reviewscore":4.36628,"shop_count":37,"plain_spec_summary":"Single
-    SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
-    3G, \u039a\u03ac\u03bc\u03b5\u03c1\u03b1: 8 MP,  \u039f\u03b8\u03cc\u03bd\u03b7:
-    4.8\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7: 1280 x 720 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2:
-    \u039f\u03b8\u03cc\u03bd\u03b7 \u03b1\u03c6\u03ae\u03c2 (Touch screen),  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
-    \u039c\u03bd\u03ae\u03bc\u03b7: 16.0 GB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
-    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: Android, SmartPhone","manufacturer_id":28,"future":false,"reviews_count":172,"virtual":false,"images":{"main":"http://d.scdn.gr/images/sku_main_images/001828/1828505/medium_samsung-i9300-galaxy-s-iii-1.jpg","alternatives":["http://c.scdn.gr/images/sku_images/000893/893169/samsung-i9300-galaxy-s-iii-glossy-white.jpg","http://c.scdn.gr/images/sku_images/001310/1310690/samsung-i9300-galaxy-s-iii-ofic.jpg","http://a.scdn.gr/images/sku_images/006421/6421796/samsung-galaxy-s3-red1.jpg","http://a.scdn.gr/images/sku_images/006421/6421840/Samsung-Galaxy-S3-in-Sapphire-black.jpg","http://d.scdn.gr/images/sku_images/006422/6422140/samsung-i9300-galaxy-s-iii-amber-brown-garnet-red-sapphire-black-titanium-grey.jpg"]}},{"id":3385582,"ean":"","pn":"GT-i9195","name":"Galaxy
-    S4 mini i9195 LTE (8GB)","display_name":"Samsung Galaxy S4 mini i9195 LTE (8GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":410.0,"price_min":233.0,"reviewscore":4.35526,"shop_count":49,"plain_spec_summary":"Single
-    SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
-    4G - LTE / 3G, \u039a\u03ac\u03bc\u03b5\u03c1\u03b1: 8 MP,  \u039f\u03b8\u03cc\u03bd\u03b7:
-    4.3\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7: 960 x 540 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2:
-    \u039f\u03b8\u03cc\u03bd\u03b7 \u03b1\u03c6\u03ae\u03c2 (Touch screen),  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
-    \u039c\u03bd\u03ae\u03bc\u03b7: 8.0 GB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
-    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: Android, SmartPhone","manufacturer_id":28,"future":false,"reviews_count":76,"virtual":false,"images":{"main":"http://b.scdn.gr/images/sku_main_images/003385/3385582/medium_samsung-galaxy-s4-mini-I9190-1.jpg","alternatives":["http://b.scdn.gr/images/sku_images/009800/9800358/samsung-galaxy-s4-mini-I9190-2.jpg","http://a.scdn.gr/images/sku_images/009800/9800359/samsung-galaxy-s4-mini-I9190-3.jpg"]}},{"id":4771538,"ean":"","pn":"GT-I9506","name":"Galaxy
-    S4 I9506 (16GB)","display_name":"Samsung Galaxy S4 I9506 (16GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":461.9,"price_min":363.99,"reviewscore":4.9375,"shop_count":4,"plain_spec_summary":"Single
-    SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
-    4G - LTE / 3G, \u039a\u03ac\u03bc\u03b5\u03c1\u03b1: 13.0 MP,  \u039f\u03b8\u03cc\u03bd\u03b7:
-    5.0\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7: 1920 x 1080 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2:
-    \u039f\u03b8\u03cc\u03bd\u03b7 \u03b1\u03c6\u03ae\u03c2 (Touch screen),  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
-    \u039c\u03bd\u03ae\u03bc\u03b7: 16.0 GB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
-    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: Android, SmartPhone","manufacturer_id":28,"future":false,"reviews_count":16,"virtual":false,"images":{"main":"http://d.scdn.gr/images/sku_main_images/004771/4771538/medium_41vUWWt4yaL.jpg","alternatives":["http://d.scdn.gr/images/sku_images/012665/12665468/sg_GT-I9506ZWAXSP_004_3000x2000_black_10039304073444","http://b.scdn.gr/images/sku_images/012665/12665469/sg_GT-I9506ZWAXSP_005_3000x2000_black","http://d.scdn.gr/images/sku_images/012665/12665470/41SarYgCveL.jpg","http://b.scdn.gr/images/sku_images/012665/12665471/41lrOZa6QVL.jpg","http://d.scdn.gr/images/sku_images/012665/12665472/51hHep39pOL.jpg"]}}],"meta":{"pagination":{"total_results":4,"total_pages":1,"page":1,"per":25}}}'
-:created_at: 2014-08-25 17:44:36.484382472 +03:00
+    server: nginx
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '96'
+    x-ratelimit-reset: '1449661380'
+    status: 200 OK
+    x-frame-options: SAMEORIGIN
+    x-xss-protection: 1; mode=block
+    x-content-type-options: nosniff
+    cache-control: max-age=300, private
+    etag: W/"7e3d6e1c5dfa116e97d4db2f63f0c03b"
+    x-request-id: '2012616745'
+    x-runtime: '0.041859'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: kavula
+    content-length: '1658'
+    accept-ranges: bytes
+    date: Wed, 09 Dec 2015 11:42:22 GMT
+    x-varnish: '2012616745'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: lb1
+    x-cache: MISS
+  :body: '{"skus":[{"id":7335154,"ean":"","pn":"SM-G903FZ","name":"Galaxy S5 Neo (16GB)","display_name":"Samsung
+    Galaxy S5 Neo (16GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":479.0,"price_min":289.9,"reviewscore":5.0,"shop_count":35,"plain_spec_summary":"SmartPhone,  Single,
+    Οθόνη: 5.1\", CPU: 1600 MHz, Πυρήνες CPU: 8, RAM: 2 GB,  Μνήμη Αποθήκευσης: 16
+    GB,    Δίκτυο Σύνδεσης: 3.5G / 3G / 4G, Λειτουργικό Σύστημα: Android","manufacturer_id":28,"future":false,"reviews_count":10,"virtual":false,"images":{"main":"http://c.scdn.gr/images/sku_main_images/007335/7335154/medium_20150824164423_samsung_galaxy_s5_neo_16gb.jpeg","alternatives":["http://d.scdn.gr/images/sku_images/014839/14839982/20150824164425_a5fe2046.jpeg","http://c.scdn.gr/images/sku_images/014839/14839985/20150824164426_d51afa6e.jpeg","http://a.scdn.gr/images/sku_images/014839/14839983/20150824164426_16e68a27.jpeg","http://c.scdn.gr/images/sku_images/014839/14839984/20150824164426_abf38a95.jpeg","http://d.scdn.gr/images/sku_images/014839/14839986/20150824164427_2dd7d267.jpeg","http://c.scdn.gr/images/sku_images/014839/14839987/20150824164428_3eecc058.jpeg","http://b.scdn.gr/images/sku_images/014839/14839988/20150824164431_ee1a29ab.jpeg"]},"web_uri":"http://skroutz.gr/s/7335154/Samsung-Galaxy-S5-Neo-16GB.html"},{"id":6003622,"ean":"","pn":"SM-A500F
+    SM-A500FZ SM-A500FU","name":"Galaxy A5 (16GB)","display_name":"Samsung Galaxy
+    A5 (16GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":369.0,"price_min":232.4,"reviewscore":4.60714,"shop_count":48,"plain_spec_summary":"SmartPhone,  Single,
+    Οθόνη: 5\", CPU: 1200 MHz, Πυρήνες CPU: 4, RAM: 2 GB,  Μνήμη Αποθήκευσης: 16 GB,    Δίκτυο
+    Σύνδεσης: 3.5G / 3G / 4G, Λειτουργικό Σύστημα: Android, Μπαταρία: 2300 mAh","manufacturer_id":28,"future":false,"reviews_count":56,"virtual":false,"images":{"main":"http://a.scdn.gr/images/sku_main_images/006003/6003622/medium_20150119111818_my_SM-A500FZSAXME_000266157_front_SS__black....","alternatives":["http://b.scdn.gr/images/sku_images/014540/14540760/20150119111617_my_SM-A500FZSAXME_000266211_Dynamic_SS__black..","http://b.scdn.gr/images/sku_images/014540/14540761/20150119111626_my_SM-A500FZSAXME_000270392_SS-Back_black..","http://b.scdn.gr/images/sku_images/014540/14540762/20150119111629_my_SM-A500FZSAXME_000270881_Set_SS__white..","http://b.scdn.gr/images/sku_images/014540/14540763/20150119111633_my_SM-A500FZSAXME_000270863_Dynamic_SS__white..","http://a.scdn.gr/images/sku_images/014540/14540764/20150119111636_my_SM-A500FZSAXME_000267220_SS-Dynamic_white..","http://d.scdn.gr/images/sku_images/014540/14540766/20150119111641_my_SM-A500FZSAXME_000266491_Front_SS__gold..","http://c.scdn.gr/images/sku_images/014540/14540767/20150119111644_my_SM-A500FZSAXME_000266536_L-Perspective_SS__gold..","http://c.scdn.gr/images/sku_images/014540/14540768/20150119111647_my_SM-A500FZSAXME_000270620_SS-Set_gold..","http://c.scdn.gr/images/sku_images/014540/14540769/20150119111651_my_SM-A500FZSAXME_000270611_SS-Set_gold..","http://d.scdn.gr/images/sku_images/014540/14540770/20150119111654_my_SM-A500FZSAXME_000266662_L-Perspective_SS__silver..","http://a.scdn.gr/images/sku_images/014540/14540771/20150119111658_my_SM-A500FZSAXME_000266635_R-Perspective_SS__silver..","http://c.scdn.gr/images/sku_images/014540/14540772/20150119111701_my_SM-A500FZSAXME_000266653_L-Side_SS__silver..","http://a.scdn.gr/images/sku_images/014540/14540773/20150119111706_my_SM-A500FZSAXME_000266644_R-Side_SS__silver.."]},"web_uri":"http://skroutz.gr/s/6003622/Samsung-Galaxy-A5-16GB.html"},{"id":6260915,"ean":"","pn":"SM-G920F
+    32GB","name":"Galaxy S6 (32GB)","display_name":"Samsung Galaxy S6 (32GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":847.0,"price_min":430.0,"reviewscore":4.42647,"shop_count":53,"plain_spec_summary":"SmartPhone,  Single,
+    Οθόνη: 5.1\", CPU: 2100 MHz, Πυρήνες CPU: 4+4, RAM: 3 GB,  Μνήμη Αποθήκευσης:
+    32.0 GB,    Δίκτυο Σύνδεσης: 3.5G / 3G / 4G, Λειτουργικό Σύστημα: Android","manufacturer_id":28,"future":false,"reviews_count":68,"virtual":false,"images":{"main":"http://a.scdn.gr/images/sku_main_images/006260/6260915/medium_20150302105253_samsung_galaxy_s6_32gb.png","alternatives":["http://b.scdn.gr/images/sku_images/014782/14782538/20150302104558_5384a7b1.jpeg","http://d.scdn.gr/images/sku_images/014782/14782539/20150302104600_4089eef2.jpeg","http://c.scdn.gr/images/sku_images/014782/14782532/20150302104534_948de585.jpeg","http://d.scdn.gr/images/sku_images/014782/14782533/20150302104540_e52cdf1d.jpeg","http://b.scdn.gr/images/sku_images/014782/14782534/20150302104543_0ac33112.jpeg","http://a.scdn.gr/images/sku_images/014782/14782535/20150302104549_fa86ffa6.jpeg","http://a.scdn.gr/images/sku_images/014782/14782536/20150302104552_5f15ae4f.jpeg","http://d.scdn.gr/images/sku_images/014782/14782537/20150302104555_d626413a.jpeg","http://a.scdn.gr/images/sku_images/014782/14782541/20150302104610_27ff4aa2.jpeg","http://d.scdn.gr/images/sku_images/014782/14782542/20150302104631_09e2f16f.png","http://a.scdn.gr/images/sku_images/014782/14782527/20150302104426_947a3d4c.png"]},"web_uri":"http://skroutz.gr/s/6260915/Samsung-Galaxy-S6-32GB.html"},{"id":5066415,"ean":"","pn":"GT-i9301i","name":"Galaxy
+    S3 Neo (16GB)","display_name":"Samsung Galaxy S3 Neo (16GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":214.0,"price_min":153.0,"reviewscore":4.47619,"shop_count":41,"plain_spec_summary":"SmartPhone,  Single,
+    Οθόνη: 4.8\", CPU: 1400 MHz, Πυρήνες CPU: 4, RAM: 1.5 GB,  Μνήμη Αποθήκευσης:
+    16 GB,    Δίκτυο Σύνδεσης: 2G / 3G, Λειτουργικό Σύστημα: Android","manufacturer_id":28,"future":false,"reviews_count":273,"virtual":false,"images":{"main":"http://b.scdn.gr/images/sku_main_images/005066/5066415/medium_Samsung-Galaxy-S-III-Neo-1.jpg","alternatives":["http://a.scdn.gr/images/sku_images/013121/13121682/samsung_galaxy_s_iii_neo_official_ndtv.jpg","http://c.scdn.gr/images/sku_images/013121/13121678/samsung_galaxy_s3_neo_gt_i9301i-1536_20_8_.jpg","http://a.scdn.gr/images/sku_images/013121/13121679/samsung_galaxy_s3_neo_gt_i9301i-1536_20_2_.jpg","http://b.scdn.gr/images/sku_images/013121/13121677/20150219122229_e0b3bd81.jpeg","http://a.scdn.gr/images/sku_images/013121/13121681/samsung-i9301l-galaxy-s3-neo-4_04f1.jpg"]},"web_uri":"http://skroutz.gr/s/5066415/Samsung-Galaxy-S3-Neo-16GB.html"}],"meta":{"pagination":{"total_results":4,"total_pages":1,"page":1,"per":25}}}'
+:created_at: 2015-12-09 13:41:51.280010402 +02:00

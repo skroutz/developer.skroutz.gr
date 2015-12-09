@@ -1,40 +1,44 @@
 ---
 :request:
-  :url: https://api.skroutz.gr/categories/40/skus?include_meta=applied_filters&filter_ids[]=6282&manufacturer_ids[]=28
+  :url: http://api.skroutz.gr/categories/40/skus?include_meta=applied_filters&filter_ids[]=6282&manufacturer_ids[]=28
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer Qgq1ofejerxdYPnpOYaT1GRhwRPczj2AnkZFtNi1jrVgchHJib5xL4QkQPJYNWElNoPiOp5VBqsmoq6HgMiEA==
+    :authorization: Bearer 9bBb/SfslzfXVoyFdulvm0kWf5aBa1P6oQEknj2BCvEFK0D9fQTlrALG3lWogTNaEmdSGFs1eCqyBVAbIFHJVw==
   :params:
     :per: 1
-  :verb: GET
+  :verb: :get
 :response:
   :status: 200
   :headers:
-    !binary "c2VydmVy": nginx
-    !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
-    !binary "dmFyeQ==": Accept-Encoding
-    !binary "c3RhdHVz": 200 OK
-    !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
-    !binary "Y2FjaGUtY29udHJvbA==": max-age=0, private, must-revalidate
-    !binary "eC1yZXF1ZXN0LWlk": '578823028'
-    !binary "eC1ydW50aW1l": '0.102269'
-    !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "eC1hcHA=": lunkwill_ssl
-    !binary "Y29udGVudC1sZW5ndGg=": '686'
-    !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:44:38 GMT
-    !binary "eC12YXJuaXNo": '578823028'
-    !binary "YWdl": '0'
-    !binary "dmlh": 1.1 varnish
-    !binary "Y29ubmVjdGlvbg==": close
-    !binary "eC1vcmlnaW4=": varnish1
-    !binary "eC1jYWNoZQ==": MISS
-  :body: ! '{"skus":[{"id":3595964,"ean":"","pn":"GT-S5280","name":"Galaxy Star S5280","display_name":"Samsung
-    Galaxy Star S5280","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":76.4,"price_min":52.95,"reviewscore":3.83333,"shop_count":11,"plain_spec_summary":"Single
-    SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
-    2G, \u039a\u03ac\u03bc\u03b5\u03c1\u03b1: 2.0 MP,  \u039f\u03b8\u03cc\u03bd\u03b7:
-    3.0\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7: 320 x 240 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2:
-    \u039f\u03b8\u03cc\u03bd\u03b7 \u03b1\u03c6\u03ae\u03c2 (Touch screen),  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
-    \u039c\u03bd\u03ae\u03bc\u03b7: 4.0 GB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
-    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: Android, SmartPhone","manufacturer_id":28,"future":false,"reviews_count":6,"virtual":false,"images":{"main":"http://b.scdn.gr/images/sku_main_images/003595/3595964/medium_samsung-galaxy-star-s5280-3.jpg","alternatives":["http://b.scdn.gr/images/sku_images/010955/10955511/Samsung-Galaxy-Star-S5280_7.jpg","http://a.scdn.gr/images/sku_images/010955/10955523/samsung-galaxy-star-s5280-1.jpg","http://c.scdn.gr/images/sku_images/010955/10955535/Samsung-Galaxy-Star-S5280-500x500.png"]}}],"meta":{"applied_filters":{"filters":[6282],"manufacturers":[28]},"pagination":{"total_results":71,"total_pages":71,"page":1,"per":1}}}'
-:created_at: 2014-08-25 17:44:38.589720575 +03:00
+    server: nginx
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '91'
+    x-ratelimit-reset: '1449661680'
+    status: 200 OK
+    x-frame-options: SAMEORIGIN
+    x-xss-protection: 1; mode=block
+    x-content-type-options: nosniff
+    etag: W/"656664d9eb00623436ef859785e5aca9"
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '1648996121'
+    x-runtime: '0.059580'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: kavula
+    content-length: '684'
+    accept-ranges: bytes
+    date: Wed, 09 Dec 2015 11:47:07 GMT
+    x-varnish: '1648996121'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: lb2
+    x-cache: MISS
+  :body: '{"skus":[{"id":5699813,"ean":"","pn":"SM-G110H","name":"Galaxy Pocket 2","display_name":"Samsung
+    Galaxy Pocket 2","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":69.0,"price_min":68.8,"reviewscore":2.30769,"shop_count":5,"plain_spec_summary":"SmartPhone,  Single,
+    Οθόνη: 3.3\", CPU: 1000 MHz, Πυρήνες CPU: 1, RAM: 512 MB,  Μνήμη Αποθήκευσης:
+    4.0 GB,    Δίκτυο Σύνδεσης: 3G, Λειτουργικό Σύστημα: Android","manufacturer_id":28,"future":false,"reviews_count":13,"virtual":false,"images":{"main":"http://d.scdn.gr/images/sku_main_images/005699/5699813/medium_image_8133.jpg","alternatives":["http://b.scdn.gr/images/sku_images/014023/14023143/dien-thoai-samsung-galaxy-pocket-2-sm-g110h-3.jpg","http://b.scdn.gr/images/sku_images/014023/14023147/1.jpg","http://a.scdn.gr/images/sku_images/014023/14023153/dien-thoai-samsung-galaxy-pocket-2-sm-g110h-1.jpg"]},"web_uri":"http://skroutz.gr/s/5699813/Samsung-Galaxy-Pocket-2.html"}],"meta":{"ordered_by":"price","applied_filters":{"filters":[6282],"manufacturers":[28]},"pagination":{"total_results":63,"total_pages":63,"page":1,"per":1}}}'
+:created_at: 2015-12-09 13:46:37.001077252 +02:00

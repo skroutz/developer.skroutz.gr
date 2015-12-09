@@ -1,57 +1,53 @@
 ---
 :request:
-  :url: https://api.skroutz.gr/categories/40/skus
+  :url: http://api.skroutz.gr/categories/40/skus
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer Qgq1ofejerxdYPnpOYaT1GRhwRPczj2AnkZFtNi1jrVgchHJib5xL4QkQPJYNWElNoPiOp5VBqsmoq6HgMiEA==
+    :authorization: Bearer 9bBb/SfslzfXVoyFdulvm0kWf5aBa1P6oQEknj2BCvEFK0D9fQTlrALG3lWogTNaEmdSGFs1eCqyBVAbIFHJVw==
   :params:
     :page: 1
     :per: 3
-  :verb: GET
+  :verb: :get
 :response:
   :status: 200
   :headers:
-    !binary "c2VydmVy": nginx
-    !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
-    !binary "dmFyeQ==": Accept-Encoding
-    !binary "c3RhdHVz": 200 OK
-    !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
-    !binary "Y2FjaGUtY29udHJvbA==": max-age=0, private, must-revalidate
-    !binary "eC1yZXF1ZXN0LWlk": '578822165'
-    !binary "eC1ydW50aW1l": '0.109060'
-    !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "eC1hcHA=": lunkwill_ssl
-    !binary "Y29udGVudC1sZW5ndGg=": '961'
-    !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:44:33 GMT
-    !binary "eC12YXJuaXNo": '578822165'
-    !binary "YWdl": '0'
-    !binary "dmlh": 1.1 varnish
-    !binary "Y29ubmVjdGlvbg==": close
-    !binary "eC1vcmlnaW4=": varnish1
-    !binary "eC1jYWNoZQ==": MISS
-  :body: ! '{"skus":[{"id":5066489,"ean":"","pn":"S519","name":"S519","display_name":"ZTE
-    S519","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":15.9,"price_min":12.9,"reviewscore":0.0,"shop_count":2,"plain_spec_summary":"Single
-    SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
-    2G,   \u039f\u03b8\u03cc\u03bd\u03b7: 1.44\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7:
-    128 x 128 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2: \u03a6\u03c5\u03c3\u03b9\u03ba\u03cc
-    \u03a0\u03bb\u03b7\u03ba\u03c4\u03c1\u03bf\u03bb\u03cc\u03b3\u03b9\u03bf,  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
-    \u039c\u03bd\u03ae\u03bc\u03b7: 32 MB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
-    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: N/A, Feature Phone","manufacturer_id":4834,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://c.scdn.gr/images/sku_main_images/005066/5066489/medium_Feature-phone-S519.png","alternatives":["http://b.scdn.gr/images/sku_images/013121/13121756/s519.jpg"]}},{"id":2119391,"ean":"","pn":"GT-E1200","name":"E1200","display_name":"Samsung
-    E1200","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":32.2,"price_min":13.82,"reviewscore":4.0,"shop_count":15,"plain_spec_summary":"Single
-    SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
-    2G,   \u039f\u03b8\u03cc\u03bd\u03b7: 1.52\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7:
-    128 x 128 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2: \u03a6\u03c5\u03c3\u03b9\u03ba\u03cc
-    \u03a0\u03bb\u03b7\u03ba\u03c4\u03c1\u03bf\u03bb\u03cc\u03b3\u03b9\u03bf,  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
-    \u039c\u03bd\u03ae\u03bc\u03b7: 100 MB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
-    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: N/A, Feature Phone","manufacturer_id":28,"future":false,"reviews_count":8,"virtual":false,"images":{"main":"http://d.scdn.gr/images/sku_main_images/002119/2119391/medium_gr_GT-E1200ZWMVGR_301_Front","alternatives":["http://a.scdn.gr/images/sku_images/012918/12918567/gr_GT-E1200ZWMVGR_309_Dynamic","http://b.scdn.gr/images/sku_images/012918/12918568/gr_GT-E1200ZWMVGR_304_Left","http://c.scdn.gr/images/sku_images/012918/12918569/gr_GT-E1200ZWMVGR_302_Back","http://d.scdn.gr/images/sku_images/012918/12918571/gr_GT-E1200ZWMVGR_321_Front","http://c.scdn.gr/images/sku_images/012918/12918572/gr_GT-E1200ZWMVGR_329_Dynamic","http://a.scdn.gr/images/sku_images/012918/12918573/gr_GT-E1200ZWMVGR_323_Right","http://c.scdn.gr/images/sku_images/012918/12918574/gr_GT-E1200ZWMVGR_322_Back"]}},{"id":3599366,"ean":"","pn":"OT-1010D","name":"One
-    Touch 1010D (OT-1010D)","display_name":"Alcatel One Touch 1010D (OT-1010D)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":20.29,"price_min":14.47,"reviewscore":1.66667,"shop_count":13,"plain_spec_summary":"Dual
-    SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
-    2G,   \u039f\u03b8\u03cc\u03bd\u03b7: 1.45\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7:
-    128 x 128 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2: \u03a6\u03c5\u03c3\u03b9\u03ba\u03cc
-    \u03a0\u03bb\u03b7\u03ba\u03c4\u03c1\u03bf\u03bb\u03cc\u03b3\u03b9\u03bf,  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
-    \u039c\u03bd\u03ae\u03bc\u03b7: 0 GB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
-    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: N/A, Feature Phone","manufacturer_id":417,"future":false,"reviews_count":3,"virtual":false,"images":{"main":"http://b.scdn.gr/images/sku_main_images/003599/3599366/medium_ALCATEL_20OT-1010-500x500.jpg","alternatives":["http://a.scdn.gr/images/sku_images/010958/10958742/1010-black-copy-20130523114837.png"]}}],"meta":{"pagination":{"total_results":591,"total_pages":197,"page":1,"per":3}}}'
-:created_at: 2014-08-25 17:44:33.274572836 +03:00
+    server: nginx
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '99'
+    x-ratelimit-reset: '1449661620'
+    status: 200 OK
+    x-frame-options: SAMEORIGIN
+    x-xss-protection: 1; mode=block
+    x-content-type-options: nosniff
+    etag: W/"2d8129a11d448a6482a8352e464afac4"
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '1648993559'
+    x-runtime: '0.066070'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: kavula
+    content-length: '965'
+    accept-ranges: bytes
+    date: Wed, 09 Dec 2015 11:46:54 GMT
+    x-varnish: '1648993559'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: lb2
+    x-cache: MISS
+  :body: '{"skus":[{"id":6535417,"ean":"5907377863427","pn":"MS1701","name":"MS1701","display_name":"Manta
+    MS1701","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":25.0,"price_min":14.8,"reviewscore":1.0,"shop_count":8,"plain_spec_summary":"Feature
+    Phone,  Dual, Οθόνη: 1.77\", Πυρήνες CPU: 1,       Δίκτυο Σύνδεσης: 2G, Λειτουργικό
+    Σύστημα: Κατασκευαστή","manufacturer_id":3285,"future":false,"reviews_count":1,"virtual":false,"images":{"main":"http://b.scdn.gr/images/sku_main_images/006535/6535417/medium_20150409101904_manta_ms1701.jpeg","alternatives":["http://b.scdn.gr/images/sku_images/014796/14796241/20150409101904_ca68be5d.jpeg","http://d.scdn.gr/images/sku_images/014796/14796242/20150409101906_31e8517e.jpeg"]},"web_uri":"http://skroutz.gr/s/6535417/Manta-MS1701.html"},{"id":7904356,"ean":"","pn":"1016D-3AALGR1","name":"OneTouch
+    1016D","display_name":"Alcatel OneTouch 1016D","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":28.0,"price_min":15.5,"reviewscore":0.0,"shop_count":8,"plain_spec_summary":"Feature
+    Phone,  Dual, Οθόνη: 1.8\", RAM: 4 MB,      Δίκτυο Σύνδεσης: 2G, Λειτουργικό Σύστημα:
+    Κατασκευαστή, Μπαταρία: 400 mAh","manufacturer_id":417,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://a.scdn.gr/images/sku_main_images/007904/7904356/medium_20151119135310_alcatel_onetouch_1016d.jpeg","alternatives":["http://a.scdn.gr/images/sku_images/014876/14876270/20151119135313_4523f4ea.jpeg","http://d.scdn.gr/images/sku_images/014876/14876271/20151119135313_c7b8c845.jpeg","http://d.scdn.gr/images/sku_images/014876/14876272/20151119135316_cdbde627.jpeg"]},"web_uri":"http://skroutz.gr/s/7904356/Alcatel-OneTouch-1016D.html"},{"id":7562852,"ean":"","pn":"1013X","name":"OneTouch
+    1013X","display_name":"Alcatel OneTouch 1013X","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":23.0,"price_min":17.0,"reviewscore":0.0,"shop_count":2,"plain_spec_summary":"Feature
+    Phone,  Single, Οθόνη: 1.5\",       Δίκτυο Σύνδεσης: 2G, Λειτουργικό Σύστημα:
+    Κατασκευαστή","manufacturer_id":417,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://a.scdn.gr/images/sku_main_images/007562/7562852/medium_20151001094845_alcatel_one_touch_1013x.jpeg","alternatives":["http://b.scdn.gr/images/sku_images/014856/14856621/20151001094850_7561711f.jpeg","http://a.scdn.gr/images/sku_images/014856/14856620/20151001094850_cd5ba85c.jpeg","http://b.scdn.gr/images/sku_images/014856/14856619/20151001094849_f732bfc0.jpeg","http://b.scdn.gr/images/sku_images/014856/14856618/20151001094848_18c489e2.jpeg"]},"web_uri":"http://skroutz.gr/s/7562852/Alcatel-OneTouch-1013X.html"}],"meta":{"ordered_by":"price","pagination":{"total_results":640,"total_pages":214,"page":1,"per":3}}}'
+:created_at: 2015-12-09 13:46:23.910675173 +02:00
 :meta:
   :description: Lists only skus belonging to category specified in path

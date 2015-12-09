@@ -1,49 +1,54 @@
 ---
 :request:
-  :url: https://api.skroutz.gr/manufacturers/356/skus
+  :url: http://api.skroutz.gr/manufacturers/356/skus
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer Qgq1ofejerxdYPnpOYaT1GRhwRPczj2AnkZFtNi1jrVgchHJib5xL4QkQPJYNWElNoPiOp5VBqsmoq6HgMiEA==
+    :authorization: Bearer 9bBb/SfslzfXVoyFdulvm0kWf5aBa1P6oQEknj2BCvEFK0D9fQTlrALG3lWogTNaEmdSGFs1eCqyBVAbIFHJVw==
   :params:
     :per: 2
-  :verb: GET
+  :verb: :get
 :response:
   :status: 200
   :headers:
-    !binary "c2VydmVy": nginx
-    !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
-    !binary "dmFyeQ==": Accept-Encoding
-    !binary "c3RhdHVz": 200 OK
-    !binary "bGluaw==": <https://api.skroutz.gr/manufacturers/356/skus?page=309&per=2>;
-      rel="last", <https://api.skroutz.gr/manufacturers/356/skus?page=2&per=2>; rel="next"
-    !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
-    !binary "Y2FjaGUtY29udHJvbA==": max-age=0, private, must-revalidate
-    !binary "eC1yZXF1ZXN0LWlk": '578822356'
-    !binary "eC1ydW50aW1l": '0.079533'
-    !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "eC1hcHA=": lunkwill_ssl
-    !binary "Y29udGVudC1sZW5ndGg=": '808'
-    !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:44:34 GMT
-    !binary "eC12YXJuaXNo": '578822356'
-    !binary "YWdl": '0'
-    !binary "dmlh": 1.1 varnish
-    !binary "Y29ubmVjdGlvbg==": close
-    !binary "eC1vcmlnaW4=": varnish1
-    !binary "eC1jYWNoZQ==": MISS
-  :body: ! '{"skus":[{"id":3783654,"ean":"","pn":"","name":"iPhone 5S (16GB)","display_name":"Apple
-    iPhone 5S (16GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":756.52,"price_min":543.9,"reviewscore":4.06667,"shop_count":40,"plain_spec_summary":"Single
-    SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
-    4G - LTE / 3G, \u039a\u03ac\u03bc\u03b5\u03c1\u03b1: 8.0 MP,  \u039f\u03b8\u03cc\u03bd\u03b7:
-    4.0\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7: 1136 x 640 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2:
-    \u039f\u03b8\u03cc\u03bd\u03b7 \u03b1\u03c6\u03ae\u03c2 (Touch screen),  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
-    \u039c\u03bd\u03ae\u03bc\u03b7: 16.0 GB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
-    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: iOS, SmartPhone","manufacturer_id":356,"future":false,"reviews_count":75,"virtual":false,"images":{"main":"http://d.scdn.gr/images/sku_main_images/003783/3783654/medium_iphone5s-gallery1-2013.jpg","alternatives":["http://b.scdn.gr/images/sku_images/012176/12176629/iphone5s-gallery2-2013","http://d.scdn.gr/images/sku_images/012176/12176643/iphone5s-gallery3-2013","http://d.scdn.gr/images/sku_images/012176/12176654/iphone5s-gallery5-2013","http://b.scdn.gr/images/sku_images/012176/12176660/iphone5s-gallery6-2013","http://c.scdn.gr/images/sku_images/012176/12176664/iphone5s-gallery8-2013","http://a.scdn.gr/images/sku_images/012279/12279003/iphone5s-gallery4-2013","http://b.scdn.gr/images/sku_images/012279/12279027/iphone5s-gallery1-2013"]}},{"id":3902581,"ean":"","pn":"","name":"iPhone
-    4S (8GB)","display_name":"Apple iPhone 4S (8GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":399.0,"price_min":282.0,"reviewscore":4.66667,"shop_count":37,"plain_spec_summary":"Single
-    SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
-    3G, \u039a\u03ac\u03bc\u03b5\u03c1\u03b1: 8 MP,  \u039f\u03b8\u03cc\u03bd\u03b7:
-    3.5\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7: 640 x 960 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2:
-    \u039f\u03b8\u03cc\u03bd\u03b7 \u03b1\u03c6\u03ae\u03c2 (Touch screen),  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
-    \u039c\u03bd\u03ae\u03bc\u03b7: 8.0 GB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
-    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: iOS, SmartPhone","manufacturer_id":356,"future":false,"reviews_count":15,"virtual":false,"images":{"main":"http://d.scdn.gr/images/sku_main_images/003902/3902581/medium_color_white.jpg","alternatives":["http://c.scdn.gr/images/sku_images/011350/11350754/color_black.jpg"]}}],"meta":{"pagination":{"total_results":617,"total_pages":309,"page":1,"per":2}}}'
-:created_at: 2014-08-25 17:44:34.399310823 +03:00
+    server: nginx
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '98'
+    x-ratelimit-reset: '1449661620'
+    status: 200 OK
+    x-frame-options: SAMEORIGIN
+    x-xss-protection: 1; mode=block
+    x-content-type-options: nosniff
+    link: <http://api.skroutz.gr/manufacturers/356/skus?page=351&per=2>; rel="last",
+      <http://api.skroutz.gr/manufacturers/356/skus?page=2&per=2>; rel="next"
+    etag: W/"f8abd4ed2965086b829e7735e16afdb3"
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '1648993759'
+    x-runtime: '0.053488'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: kavula
+    content-length: '1169'
+    accept-ranges: bytes
+    date: Wed, 09 Dec 2015 11:46:55 GMT
+    x-varnish: '1648993759'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: lb2
+    x-cache: MISS
+  :body: '{"skus":[{"id":7423345,"ean":"","pn":"MKQL2B/A\r MKQM2B/A\r MKQK2B/A\r MKQJ2B/A\r
+    MKQJ2GH/A\r MKQK2GH/A\r MKQL2GH/A\r MKQM2GH/A\r MKQL2ZD/A\r MKQJ2ZD/A\r MKQK2ZD/A\r
+    MKQK2PM/A\r MKQM2ZD/A","name":"iPhone 6s (16GB)","display_name":"Apple iPhone
+    6s (16GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":965.69,"price_min":659.0,"reviewscore":4.41667,"shop_count":53,"plain_spec_summary":"SmartPhone,  Single,
+    Οθόνη: 4.7\", CPU: 1840 MHz, Πυρήνες CPU: 2, RAM: 2 GB,  Μνήμη Αποθήκευσης: 16
+    GB,    Δίκτυο Σύνδεσης: 3G / 4G / 3.5G, Λειτουργικό Σύστημα: iOS, Μπαταρία: 1715
+    mAh","manufacturer_id":356,"future":false,"reviews_count":12,"virtual":false,"images":{"main":"http://c.scdn.gr/images/sku_main_images/007423/7423345/medium_20150910105706_apple_iphone_6s_16gb.jpeg","alternatives":["http://d.scdn.gr/images/sku_images/014847/14847025/20150910102252_975df23e.jpeg","http://a.scdn.gr/images/sku_images/014847/14847101/20150910104748_86d6b43d.jpeg","http://b.scdn.gr/images/sku_images/014847/14847104/20150910104831_d2347485.jpeg","http://c.scdn.gr/images/sku_images/014847/14847026/20150910102300_eaabe05b.jpeg","http://c.scdn.gr/images/sku_images/014847/14847103/20150910104825_f9753234.jpeg","http://d.scdn.gr/images/sku_images/014847/14847100/20150910104733_b7d8cfcc.jpeg","http://d.scdn.gr/images/sku_images/014847/14847086/20150910103920_f8042167.jpeg","http://a.scdn.gr/images/sku_images/014847/14847088/20150910104003_f477adb6.jpeg","http://a.scdn.gr/images/sku_images/014847/14847112/20150910104933_b44de182.jpeg","http://b.scdn.gr/images/sku_images/014847/14847092/20150910104149_c5649a8f.jpeg","http://b.scdn.gr/images/sku_images/014847/14847124/20150910105642_3669aafa.jpeg","http://d.scdn.gr/images/sku_images/014847/14847087/20150910103949_d93c3eda.jpeg","http://d.scdn.gr/images/sku_images/014847/14847113/20150910104951_48b3eb2d.jpeg","http://b.scdn.gr/images/sku_images/014847/14847108/20150910104847_610650f8.jpeg","http://c.scdn.gr/images/sku_images/014847/14847109/20150910104902_49619c04.jpeg"]},"web_uri":"http://skroutz.gr/s/7423345/Apple-iPhone-6s-16GB.html"},{"id":5307730,"ean":"","pn":"MG472ZD/A\r
+    MG472GH/A\r MG482B/A\r MG482ZD/A\r MG472QL/A\r MG4N2LL/A\r MG472QN/A\r MG492GH/A\r
+    MG482GH/A\r MG492ZD/A\r MG542LL/A\r MG562LL/A\r MG552LL/A\r MG6A2LL/","name":"iPhone
+    6 (16GB)","display_name":"Apple iPhone 6 (16GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":739.0,"price_min":578.9,"reviewscore":4.39333,"shop_count":41,"plain_spec_summary":"SmartPhone,  Single,
+    Οθόνη: 4.7\", CPU: 1380 MHz, Πυρήνες CPU: 2, RAM: 1 GB,  Μνήμη Αποθήκευσης: 16
+    GB,    Δίκτυο Σύνδεσης: 3G / 4G, Λειτουργικό Σύστημα: iOS","manufacturer_id":356,"future":false,"reviews_count":150,"virtual":false,"images":{"main":"http://b.scdn.gr/images/sku_main_images/005307/5307730/medium_1.png","alternatives":["http://b.scdn.gr/images/sku_images/013539/13539082/2.png","http://b.scdn.gr/images/sku_images/013539/13539083/3.png","http://d.scdn.gr/images/sku_images/013539/13539084/4.png","http://d.scdn.gr/images/sku_images/013539/13539085/5.png","http://c.scdn.gr/images/sku_images/013539/13539086/6.png","http://d.scdn.gr/images/sku_images/013539/13539087/8.png","http://b.scdn.gr/images/sku_images/013539/13539088/10.png","http://d.scdn.gr/images/sku_images/013539/13539089/7.png","http://d.scdn.gr/images/sku_images/013539/13539090/12.png","http://d.scdn.gr/images/sku_images/013539/13539091/9.png","http://c.scdn.gr/images/sku_images/013539/13539092/Untitled13.png","http://a.scdn.gr/images/sku_images/013539/13539093/11.png"]},"web_uri":"http://skroutz.gr/s/5307730/Apple-iPhone-6-16GB.html"}],"meta":{"pagination":{"total_results":701,"total_pages":351,"page":1,"per":2}}}'
+:created_at: 2015-12-09 13:46:24.799403043 +02:00

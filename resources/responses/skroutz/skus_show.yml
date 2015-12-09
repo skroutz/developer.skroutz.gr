@@ -1,38 +1,42 @@
 ---
 :request:
-  :url: https://api.skroutz.gr/skus/3690169
+  :url: http://api.skroutz.gr/skus/3690169
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer Qgq1ofejerxdYPnpOYaT1GRhwRPczj2AnkZFtNi1jrVgchHJib5xL4QkQPJYNWElNoPiOp5VBqsmoq6HgMiEA==
-  :verb: GET
+    :authorization: Bearer 9bBb/SfslzfXVoyFdulvm0kWf5aBa1P6oQEknj2BCvEFK0D9fQTlrALG3lWogTNaEmdSGFs1eCqyBVAbIFHJVw==
+  :verb: :get
 :response:
   :status: 200
   :headers:
-    !binary "c2VydmVy": nginx
-    !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
-    !binary "dmFyeQ==": Accept-Encoding
-    !binary "c3RhdHVz": 200 OK
-    !binary "Y2FjaGUtY29udHJvbA==": max-age=300, private
-    !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
-    !binary "eC1yZXF1ZXN0LWlk": '578822651'
-    !binary "eC1ydW50aW1l": '0.048131'
-    !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "eC1hcHA=": lunkwill_ssl
-    !binary "Y29udGVudC1sZW5ndGg=": '623'
-    !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:44:36 GMT
-    !binary "eC12YXJuaXNo": '578822651'
-    !binary "YWdl": '0'
-    !binary "dmlh": 1.1 varnish
-    !binary "Y29ubmVjdGlvbg==": close
-    !binary "eC1vcmlnaW4=": varnish1
-    !binary "eC1jYWNoZQ==": MISS
-  :body: ! '{"sku":{"id":3690169,"ean":"","pn":"D802 16GB","name":"G2 (16GB)","display_name":"LG
-    G2 (16GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":599.0,"price_min":288.74,"reviewscore":4.63905,"shop_count":37,"plain_spec_summary":"Single
-    SIM, \u0394\u03af\u03ba\u03c4\u03c5\u03bf \u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2:
-    2G / 3G / 4G - LTE, \u039a\u03ac\u03bc\u03b5\u03c1\u03b1: 13 MP,  \u039f\u03b8\u03cc\u03bd\u03b7:
-    5.2\" , \u0391\u03bd\u03ac\u03bb\u03c5\u03c3\u03b7: 1920 x 1080 pixels, \u03a7\u03b5\u03b9\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2:
-    \u039f\u03b8\u03cc\u03bd\u03b7 \u03b1\u03c6\u03ae\u03c2 (Touch screen),  \u0395\u03c3\u03c9\u03c4\u03b5\u03c1\u03b9\u03ba\u03ae
-    \u039c\u03bd\u03ae\u03bc\u03b7: 16.0 GB,  \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
-    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1: Android, SmartPhone","manufacturer_id":30,"future":false,"reviews_count":169,"virtual":false,"images":{"main":"http://b.scdn.gr/images/sku_main_images/003690/3690169/medium_LGG2_Front.jpg","alternatives":["http://a.scdn.gr/images/sku_images/011093/11093658/LGG2_Side.jpg","http://a.scdn.gr/images/sku_images/011093/11093662/thum_gallery3.png","http://a.scdn.gr/images/sku_images/011093/11093663/thum_gallery6.png","http://b.scdn.gr/images/sku_images/011093/11093667/LGG2.jpg","http://a.scdn.gr/images/sku_images/011093/11093669/thum_gallery4.png"]}}}'
-:created_at: 2014-08-25 17:44:36.154182531 +03:00
+    server: nginx
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '99'
+    x-ratelimit-reset: '1449661380'
+    status: 200 OK
+    x-frame-options: SAMEORIGIN
+    x-xss-protection: 1; mode=block
+    x-content-type-options: nosniff
+    cache-control: max-age=300, private
+    etag: W/"e18d2af295d05c045054df823fb15127"
+    x-request-id: '2012616336'
+    x-runtime: '0.023450'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: kavula
+    content-length: '619'
+    accept-ranges: bytes
+    date: Wed, 09 Dec 2015 11:42:19 GMT
+    x-varnish: '2012616336'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: lb1
+    x-cache: MISS
+  :body: '{"sku":{"id":3690169,"ean":"","pn":"D802 16GB","name":"G2 (16GB)","display_name":"LG
+    G2 (16GB)","category_id":40,"first_product_shop_info":"1521|Kaizer Shop|kaizershop","click_url":null,"price_max":290.0,"price_min":290.0,"reviewscore":4.614,"shop_count":1,"plain_spec_summary":"SmartPhone,  Single,
+    Οθόνη: 5.2\", CPU: 2260 MHz, Πυρήνες CPU: 4, RAM: 2 GB,  Μνήμη Αποθήκευσης: 16
+    GB,    Δίκτυο Σύνδεσης: 2G / 3G / 4G, Λειτουργικό Σύστημα: Android","manufacturer_id":30,"future":false,"reviews_count":443,"virtual":false,"images":{"main":"http://b.scdn.gr/images/sku_main_images/003690/3690169/medium_LGG2_Front.jpg","alternatives":["http://a.scdn.gr/images/sku_images/011093/11093658/LGG2_Side.jpg","http://a.scdn.gr/images/sku_images/011093/11093662/thum_gallery3.png","http://a.scdn.gr/images/sku_images/011093/11093663/thum_gallery6.png","http://b.scdn.gr/images/sku_images/011093/11093667/LGG2.jpg","http://a.scdn.gr/images/sku_images/011093/11093669/thum_gallery4.png"]},"web_uri":"http://skroutz.gr/s/3690169/LG-G2-16GB.html"}}'
+:created_at: 2015-12-09 13:41:48.563146828 +02:00
