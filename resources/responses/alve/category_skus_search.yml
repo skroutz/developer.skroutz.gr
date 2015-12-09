@@ -1,43 +1,49 @@
 ---
 :request:
-  :url: https://api.alve.com/categories/33/skus?q=iphone
+  :url: http://api.alve.com/categories/33/skus?q=iphone
   :headers:
     :accept: application/vnd.alve+json; version=3
-    :authorization: Bearer ro3L8/U7wnqmbcjEGfzjTJCJ9J75lq9LbSMcZwuNey8kBoSKpOVPfuRZFYOFUy0rLS//s02U7ZEIigv0mm0oA==
+    :authorization: Bearer XsWUwEUOwk8OHBcwxIKVzLxJQVPsb6xXtim5MltaRcg8zbrh9qcdU2keW/pI/Bw9Vz9YPVWmWlT3llbzI54yTQ==
   :params:
     :per: 2
-  :verb: GET
+  :verb: :get
 :response:
   :status: 200
   :headers:
-    !binary "c2VydmVy": nginx
-    !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
-    !binary "dmFyeQ==": Accept-Encoding
-    !binary "c3RhdHVz": 200 OK
-    !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
-    !binary "Y2FjaGUtY29udHJvbA==": max-age=0, private, must-revalidate
-    !binary "eC1yZXF1ZXN0LWlk": '986354962'
-    !binary "eC1ydW50aW1l": '0.081155'
-    !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "eC1hcHA=": as2_ssl
-    !binary "Y29udGVudC1sZW5ndGg=": '826'
-    !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:48:44 GMT
-    !binary "eC12YXJuaXNo": '986354962'
-    !binary "YWdl": '0'
-    !binary "dmlh": 1.1 varnish
-    !binary "Y29ubmVjdGlvbg==": close
-    !binary "eC1vcmlnaW4=": varnish1
-    !binary "eC1jYWNoZQ==": MISS
-  :body: ! '{"skus":[{"id":347349,"ean":"","pn":"MD235D/A","name":"iPhone 4s 8GB","display_name":"Apple
-    iPhone 4s 8GB","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":1785.58,"price_min":1087.49,"reviewscore":0.0,"shop_count":24,"plain_spec_summary":"Single
-    SIM, A\u011f Ba\u011flant\u0131s\u0131: 2G / 3G, Kamera: 8 Megapiksel,  Ekran:
-    3.5\", 640 x 960 piksel, Kullan\u0131m Y\u00f6ntemi: Dokunmatik ekran (Touch screen),  Dahili
-    Haf\u0131za: 8 GB,  \u0130\u015fletim Sistemi: iOS, \u00c7\u0131k\u0131\u015f
-    Tarihi: 2011, Smart Phone","manufacturer_id":28,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://alve-b.scdn.gr/images/sku_main_images/000347/347349/medium_iphone4-900x900.jpg","alternatives":["http://alve-b.scdn.gr/images/sku_images/000407/407140/16713_12249449_3209.jpg","http://alve-c.scdn.gr/images/sku_images/000407/407141/15743_12249449-7336.jpg","http://alve-a.scdn.gr/images/sku_images/000485/485843/psd-iphone4s-large.jpg","http://alve-b.scdn.gr/images/sku_images/000643/643881/145011470-2-apple_iphone_4s_16_gb_black_akilli_telefon_ar_tek.jpg","http://alve-c.scdn.gr/images/sku_images/000643/643880/iphone-4s-black.png"]}},{"id":25285,"ean":"","pn":"MD128DN/A","name":"iPhone
-    4 8GB","display_name":"Apple iPhone 4 8GB","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":1270.77,"price_min":969.0,"reviewscore":0.0,"shop_count":7,"plain_spec_summary":"Single
-    SIM, A\u011f Ba\u011flant\u0131s\u0131: 2G / 3G, Kamera: 5 Megapiksel,  Ekran:
-    3.5\", 640 x 960 piksel, Kullan\u0131m Y\u00f6ntemi: Dokunmatik ekran (Touch screen),  Dahili
-    Haf\u0131za: 8 GB,  \u0130\u015fletim Sistemi: iOS, \u00c7\u0131k\u0131\u015f
-    Tarihi: 2010, Smart Phone","manufacturer_id":28,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://alve-d.scdn.gr/images/sku_main_images/000025/25285/medium_iphone4s.jpg","alternatives":["http://alve-a.scdn.gr/images/sku_images/000025/25851/12741107_6752.jpg","http://alve-d.scdn.gr/images/sku_images/000025/25852/12741107_5068.jpg","http://alve-a.scdn.gr/images/sku_images/000464/464699/iphone-4-240d-800.jpg","http://alve-d.scdn.gr/images/sku_images/000485/485850/iphone4.jpg","http://alve-d.scdn.gr/images/sku_images/000485/485852/12741107_8884.jpg"]}}],"meta":{"pagination":{"total_results":14,"total_pages":7,"page":1,"per":2}}}'
-:created_at: 2014-08-25 17:48:44.448355611 +03:00
+    server: nginx
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '89'
+    x-ratelimit-reset: '1449661980'
+    status: 200 OK
+    x-frame-options: SAMEORIGIN
+    x-xss-protection: 1; mode=block
+    x-content-type-options: nosniff
+    etag: W/"6d0d43654707669bc0399f7254a0b92c"
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '287459664'
+    x-runtime: '0.063556'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: as1
+    content-length: '934'
+    accept-ranges: bytes
+    date: Wed, 09 Dec 2015 11:52:21 GMT
+    x-varnish: '287459664'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: lb2
+    x-cache: MISS
+  :body: '{"skus":[{"id":345440,"ean":"","pn":"","name":"iPhone 5s 16GB","display_name":"Apple
+    iPhone 5s 16GB","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":2128.5,"price_min":1199.0,"reviewscore":0.0,"shop_count":13,"plain_spec_summary":"SIM:
+    Tek, Ağ Bağlantısı: 2G / 3G / 4G, Kamera: 8 MP,  640 x 1136 piksel Dokunmatik
+    Ekran (Touchscreen),  Dahili Hafıza: 16 GB,  İşletim Sistemi: iOS, Çıkış Tarihi:
+    2013, SmartPhone, 1560 mAh, Ekran Boyutu: Küçük (3.5\" - 4.5\")","manufacturer_id":28,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://alve-a.scdn.gr/images/sku_main_images/000345/345440/medium_topic_iphone_5s.png","alternatives":["http://alve-d.scdn.gr/images/sku_images/000401/401209/hero_start__keyframe.jpg","http://alve-c.scdn.gr/images/sku_images/000401/401211/performance_m7_hero.jpg","http://alve-c.scdn.gr/images/sku_images/000658/658682/touchid_hero.jpg","http://alve-b.scdn.gr/images/sku_images/000804/804842/iPhone-5S-gold.jpg","http://alve-d.scdn.gr/images/sku_images/000804/804843/iphone5s.jpg"]},"web_uri":"http://alve.com/s/345440/Apple-iPhone-5s-16GB.html"},{"id":3253124,"ean":"","pn":"","name":"iPhone
+    6s 16GB","display_name":"Apple iPhone 6s 16GB","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":3478.8,"price_min":2779.0,"reviewscore":0.0,"shop_count":30,"plain_spec_summary":"SIM:
+    Tek, Ağ Bağlantısı: 2G / 3G / 4G, Kamera: 12 MP,  1334x750 piksel Dokunmatik Ekran
+    (Touchscreen),  Dahili Hafıza: 16 GB,  İşletim Sistemi: iOS, Çıkış Tarihi: 2015,
+    SmartPhone, 1715 mAh, Ekran Boyutu: Orta (4.6\" - 5.3\")","manufacturer_id":28,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://alve-a.scdn.gr/images/sku_main_images/003253/3253124/medium_20150910092821_apple_iphone_6s.jpeg","alternatives":["http://alve-c.scdn.gr/images/sku_images/002399/2399161/20150910092822_6395b774.jpeg","http://alve-d.scdn.gr/images/sku_images/002399/2399163/20150910092834_25250209.jpeg","http://alve-b.scdn.gr/images/sku_images/002399/2399164/20150910092841_271c6a58.jpeg","http://alve-a.scdn.gr/images/sku_images/002399/2399165/20150910092842_620e7c06.jpeg","http://alve-a.scdn.gr/images/sku_images/002399/2399167/20150910092854_c1994e53.jpeg","http://alve-c.scdn.gr/images/sku_images/002399/2399172/20150910094659_bf225396.jpeg"]},"web_uri":"http://alve.com/s/3253124/Apple-iPhone-6s-16GB.html"}],"meta":{"ordered_by":"popularity","pagination":{"total_results":15,"total_pages":8,"page":1,"per":2}}}'
+:created_at: 2015-12-09 13:51:50.910658636 +02:00

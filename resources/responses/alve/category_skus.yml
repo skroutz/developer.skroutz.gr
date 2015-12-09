@@ -1,51 +1,56 @@
 ---
 :request:
-  :url: https://api.alve.com/categories/33/skus
+  :url: http://api.alve.com/categories/33/skus
   :headers:
     :accept: application/vnd.alve+json; version=3
-    :authorization: Bearer ro3L8/U7wnqmbcjEGfzjTJCJ9J75lq9LbSMcZwuNey8kBoSKpOVPfuRZFYOFUy0rLS//s02U7ZEIigv0mm0oA==
+    :authorization: Bearer XsWUwEUOwk8OHBcwxIKVzLxJQVPsb6xXtim5MltaRcg8zbrh9qcdU2keW/pI/Bw9Vz9YPVWmWlT3llbzI54yTQ==
   :params:
     :page: 1
     :per: 3
-  :verb: GET
+  :verb: :get
 :response:
   :status: 200
   :headers:
-    !binary "c2VydmVy": nginx
-    !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
-    !binary "dmFyeQ==": Accept-Encoding
-    !binary "c3RhdHVz": 200 OK
-    !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
-    !binary "Y2FjaGUtY29udHJvbA==": max-age=0, private, must-revalidate
-    !binary "eC1yZXF1ZXN0LWlk": '986354930'
-    !binary "eC1ydW50aW1l": '0.082780'
-    !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "eC1hcHA=": as2_ssl
-    !binary "Y29udGVudC1sZW5ndGg=": '1018'
-    !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:48:41 GMT
-    !binary "eC12YXJuaXNo": '986354930'
-    !binary "YWdl": '0'
-    !binary "dmlh": 1.1 varnish
-    !binary "Y29ubmVjdGlvbg==": close
-    !binary "eC1vcmlnaW4=": varnish1
-    !binary "eC1jYWNoZQ==": MISS
-  :body: ! '{"skus":[{"id":705848,"ean":"","pn":"","name":"Discovery Elite 32GB","display_name":"General
-    Mobile Discovery Elite 32GB","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":1401.83,"price_min":1149.79,"reviewscore":3.0,"shop_count":27,"plain_spec_summary":"A\u011f
-    Ba\u011flant\u0131s\u0131: 2G / 3G, Kamera: 16 Megapiksel,  Ekran: 5.5\", 1920
-    x 1080 piksel, Kullan\u0131m Y\u00f6ntemi: Dokunmatik ekran (Touch screen),  Dahili
-    Haf\u0131za: 32 GB,  \u0130\u015fletim Sistemi: Android, \u00c7\u0131k\u0131\u015f
-    Tarihi: 2014, Smart Phone","manufacturer_id":91,"future":false,"reviews_count":1,"virtual":false,"images":{"main":"http://alve-d.scdn.gr/images/sku_main_images/000705/705848/medium_discoveryElite_size.png","alternatives":["http://alve-a.scdn.gr/images/sku_images/000815/815720/discoveryElite_Detail_right.png","http://alve-c.scdn.gr/images/sku_images/000815/815721/discoveryElite_Detail_01.png","http://alve-c.scdn.gr/images/sku_images/000815/815722/discoveryElite_Detail_02.png","http://alve-c.scdn.gr/images/sku_images/000815/815723/discoveryElite_Detail_03.png","http://alve-c.scdn.gr/images/sku_images/000815/815724/discoveryElite_Detail_04.png"]}},{"id":347349,"ean":"","pn":"MD235D/A","name":"iPhone
-    4s 8GB","display_name":"Apple iPhone 4s 8GB","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":1785.58,"price_min":1087.49,"reviewscore":0.0,"shop_count":24,"plain_spec_summary":"Single
-    SIM, A\u011f Ba\u011flant\u0131s\u0131: 2G / 3G, Kamera: 8 Megapiksel,  Ekran:
-    3.5\", 640 x 960 piksel, Kullan\u0131m Y\u00f6ntemi: Dokunmatik ekran (Touch screen),  Dahili
-    Haf\u0131za: 8 GB,  \u0130\u015fletim Sistemi: iOS, \u00c7\u0131k\u0131\u015f
-    Tarihi: 2011, Smart Phone","manufacturer_id":28,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://alve-b.scdn.gr/images/sku_main_images/000347/347349/medium_iphone4-900x900.jpg","alternatives":["http://alve-b.scdn.gr/images/sku_images/000407/407140/16713_12249449_3209.jpg","http://alve-c.scdn.gr/images/sku_images/000407/407141/15743_12249449-7336.jpg","http://alve-a.scdn.gr/images/sku_images/000485/485843/psd-iphone4s-large.jpg","http://alve-b.scdn.gr/images/sku_images/000643/643881/145011470-2-apple_iphone_4s_16_gb_black_akilli_telefon_ar_tek.jpg","http://alve-c.scdn.gr/images/sku_images/000643/643880/iphone-4s-black.png"]}},{"id":25285,"ean":"","pn":"MD128DN/A","name":"iPhone
-    4 8GB","display_name":"Apple iPhone 4 8GB","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":1270.77,"price_min":969.0,"reviewscore":0.0,"shop_count":7,"plain_spec_summary":"Single
-    SIM, A\u011f Ba\u011flant\u0131s\u0131: 2G / 3G, Kamera: 5 Megapiksel,  Ekran:
-    3.5\", 640 x 960 piksel, Kullan\u0131m Y\u00f6ntemi: Dokunmatik ekran (Touch screen),  Dahili
-    Haf\u0131za: 8 GB,  \u0130\u015fletim Sistemi: iOS, \u00c7\u0131k\u0131\u015f
-    Tarihi: 2010, Smart Phone","manufacturer_id":28,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://alve-d.scdn.gr/images/sku_main_images/000025/25285/medium_iphone4s.jpg","alternatives":["http://alve-a.scdn.gr/images/sku_images/000025/25851/12741107_6752.jpg","http://alve-d.scdn.gr/images/sku_images/000025/25852/12741107_5068.jpg","http://alve-a.scdn.gr/images/sku_images/000464/464699/iphone-4-240d-800.jpg","http://alve-d.scdn.gr/images/sku_images/000485/485850/iphone4.jpg","http://alve-d.scdn.gr/images/sku_images/000485/485852/12741107_8884.jpg"]}}],"meta":{"pagination":{"total_results":266,"total_pages":89,"page":1,"per":3}}}'
-:created_at: 2014-08-25 17:48:41.799794700 +03:00
+    server: nginx
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '99'
+    x-ratelimit-reset: '1449661980'
+    status: 200 OK
+    x-frame-options: SAMEORIGIN
+    x-xss-protection: 1; mode=block
+    x-content-type-options: nosniff
+    etag: W/"25516a88cd34f2726ec45c6c4f106b00"
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '287459619'
+    x-runtime: '0.120059'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: as1
+    content-length: '1133'
+    accept-ranges: bytes
+    date: Wed, 09 Dec 2015 11:52:11 GMT
+    x-varnish: '287459619'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: lb2
+    x-cache: MISS
+  :body: '{"skus":[{"id":3155889,"ean":"","pn":"","name":"Galaxy J7","display_name":"Samsung
+    Galaxy J7","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":1199.0,"price_min":869.0,"reviewscore":5.0,"shop_count":15,"plain_spec_summary":"SIM:
+    Çift, Ağ Bağlantısı: 2G / 3.5G / 3G / 4G, Kamera: 13 MP,  1280 x 720 piksel Dokunmatik
+    Ekran (Touchscreen),  Dahili Hafıza: 16 GB,  İşletim Sistemi: Android, Çıkış Tarihi:
+    2015, SmartPhone, 3000 mAh, Ekran Boyutu: Büyük (5.5\" ve üzeri)","manufacturer_id":36,"future":false,"reviews_count":1,"virtual":false,"images":{"main":"http://alve-a.scdn.gr/images/sku_main_images/003155/3155889/medium_20150817165332_samsung_galaxy_j7.jpeg","alternatives":["http://alve-d.scdn.gr/images/sku_images/002392/2392523/20150817165336_8c5afb37.jpeg","http://alve-a.scdn.gr/images/sku_images/002392/2392524/20150817165337_d3cbc980.jpeg","http://alve-c.scdn.gr/images/sku_images/002392/2392525/20150817165338_0db4e525.jpeg","http://alve-b.scdn.gr/images/sku_images/002392/2392526/20150817165340_81dcfd5a.jpeg","http://alve-b.scdn.gr/images/sku_images/002392/2392527/20150817165342_b5fa3a1c.jpeg","http://alve-d.scdn.gr/images/sku_images/002392/2392528/20150817165343_6ace81fb.jpeg"]},"web_uri":"http://alve.com/s/3155889/Samsung-Galaxy-J7.html"},{"id":2600604,"ean":"","pn":"ZE551ML","name":"ZenFone
+    2 16GB","display_name":"Asus ZenFone 2 16GB","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":1410.81,"price_min":790.16,"reviewscore":5.0,"shop_count":23,"plain_spec_summary":"SIM:
+    Çift, Ağ Bağlantısı: 2G / 3G / 4G, Kamera: 13 MP,  1920 x 1080 piksel Dokunmatik
+    Ekran (Touchscreen),  Dahili Hafıza: 16 GB,  İşletim Sistemi: Android, Çıkış Tarihi:
+    2015, SmartPhone, 3000 mAh, Ekran Boyutu: Büyük (5.5\" ve üzeri)","manufacturer_id":3,"future":false,"reviews_count":1,"virtual":false,"images":{"main":"http://alve-d.scdn.gr/images/sku_main_images/002600/2600604/medium_20150615111509_asus_zenfone_2.jpeg","alternatives":["http://alve-d.scdn.gr/images/sku_images/002379/2379652/20150615111509_cb79955d.jpeg","http://alve-b.scdn.gr/images/sku_images/002379/2379653/20150615111509_477b8817.jpeg","http://alve-b.scdn.gr/images/sku_images/002379/2379654/20150615111512_343ca91b.jpeg","http://alve-b.scdn.gr/images/sku_images/002379/2379655/20150615111516_e0fe8952.jpeg","http://alve-d.scdn.gr/images/sku_images/002379/2379656/20150615111518_a372a705.jpeg"]},"web_uri":"http://alve.com/s/2600604/Asus-ZenFone-2-16GB.html"},{"id":2312522,"ean":"","pn":"","name":"G4
+    32GB","display_name":"LG G4 32GB","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":2199.0,"price_min":1599.0,"reviewscore":4.0,"shop_count":27,"plain_spec_summary":"SIM:
+    Tek, Ağ Bağlantısı: 2G / 3G / 4G, Kamera: 16 MP,  1440 x 2560 piksel Dokunmatik
+    Ekran (Touchscreen),  Dahili Hafıza: 32 GB,  İşletim Sistemi: Android, Çıkış Tarihi:
+    2015, SmartPhone, 3000 mAh, Ekran Boyutu: Büyük (5.5\" ve üzeri)","manufacturer_id":53,"future":false,"reviews_count":1,"virtual":false,"images":{"main":"http://alve-a.scdn.gr/images/sku_main_images/002312/2312522/medium_20151020145516_lg_g4_32gb.jpeg","alternatives":["http://alve-d.scdn.gr/images/sku_images/002369/2369864/20150427111816_5e1eca06.jpeg","http://alve-a.scdn.gr/images/sku_images/002369/2369865/20150427111820_cd2a7b7d.jpeg","http://alve-b.scdn.gr/images/sku_images/002369/2369866/20150427111822_473a84c0.jpeg","http://alve-d.scdn.gr/images/sku_images/002408/2408652/20151020145445_e9cea301.jpeg","http://alve-a.scdn.gr/images/sku_images/002408/2408653/20151020145501_1ed3c60d.jpeg","http://alve-b.scdn.gr/images/sku_images/002408/2408654/20151020145513_4a3d84e9.jpeg"]},"web_uri":"http://alve.com/s/2312522/LG-G4-32GB.html"}],"meta":{"ordered_by":"popularity","pagination":{"total_results":233,"total_pages":78,"page":1,"per":3}}}'
+:created_at: 2015-12-09 13:51:40.950084107 +02:00
 :meta:
   :description: Lists only skus belonging to category specified in path

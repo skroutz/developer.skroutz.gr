@@ -1,36 +1,43 @@
 ---
 :request:
-  :url: https://api.alve.com/skus/146414
+  :url: http://api.alve.com/skus/146414
   :headers:
     :accept: application/vnd.alve+json; version=3
-    :authorization: Bearer ro3L8/U7wnqmbcjEGfzjTJCJ9J75lq9LbSMcZwuNey8kBoSKpOVPfuRZFYOFUy0rLS//s02U7ZEIigv0mm0oA==
-  :verb: GET
+    :authorization: Bearer XsWUwEUOwk8OHBcwxIKVzLxJQVPsb6xXtim5MltaRcg8zbrh9qcdU2keW/pI/Bw9Vz9YPVWmWlT3llbzI54yTQ==
+  :verb: :get
 :response:
   :status: 200
   :headers:
-    !binary "c2VydmVy": nginx
-    !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
-    !binary "dmFyeQ==": Accept-Encoding
-    !binary "c3RhdHVz": 200 OK
-    !binary "Y2FjaGUtY29udHJvbA==": max-age=300, private
-    !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
-    !binary "eC1yZXF1ZXN0LWlk": '986354955'
-    !binary "eC1ydW50aW1l": '0.036931'
-    !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "eC1hcHA=": as2_ssl
-    !binary "Y29udGVudC1sZW5ndGg=": '626'
-    !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:48:43 GMT
-    !binary "eC12YXJuaXNo": '986354955'
-    !binary "YWdl": '0'
-    !binary "dmlh": 1.1 varnish
-    !binary "Y29ubmVjdGlvbg==": close
-    !binary "eC1vcmlnaW4=": varnish1
-    !binary "eC1jYWNoZQ==": MISS
-  :body: ! '{"sku":{"id":146414,"ean":"","pn":"","name":"Galaxy S4 i9500 16GB","display_name":"Samsung
-    Galaxy S4 i9500 16GB","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":1838.74,"price_min":1152.0,"reviewscore":0.0,"shop_count":39,"plain_spec_summary":"Single
-    SIM, A\u011f Ba\u011flant\u0131s\u0131: 2G / 3G / 4G - LTE, Kamera: 13 Megapiksel,  Ekran:
-    5\", 1920 x 1080 piksel, Kullan\u0131m Y\u00f6ntemi: Dokunmatik ekran (Touch screen),  Dahili
-    Haf\u0131za: 16 GB,  \u0130\u015fletim Sistemi: Android, \u00c7\u0131k\u0131\u015f
-    Tarihi: 2013, Smart Phone","manufacturer_id":36,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://alve-d.scdn.gr/images/sku_main_images/000146/146414/medium_img_relationship_01_phone.png","alternatives":["http://alve-a.scdn.gr/images/sku_images/000146/146255/img_lifecare_02_phone.png","http://alve-c.scdn.gr/images/sku_images/000485/485868/Samsung-Galaxy-S4.jpg","http://alve-d.scdn.gr/images/sku_images/000485/485869/samsung-galaxy-s4-red-blue.jpg","http://alve-c.scdn.gr/images/sku_images/000485/485870/Samsung-Galaxy-S4-Artic-Blu.jpg","http://alve-a.scdn.gr/images/sku_images/000485/485871/Galaxy-S4-black-and-white.jpg"]}}}'
-:created_at: 2014-08-25 17:48:43.364352156 +03:00
+    server: nginx
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '95'
+    x-ratelimit-reset: '1449661980'
+    status: 200 OK
+    x-frame-options: SAMEORIGIN
+    x-xss-protection: 1; mode=block
+    x-content-type-options: nosniff
+    cache-control: max-age=300, private
+    etag: W/"fa041dbe125b68ac92727d948cc8166b"
+    x-request-id: '1088836109'
+    x-runtime: '0.042314'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: as1
+    content-length: '655'
+    accept-ranges: bytes
+    date: Wed, 09 Dec 2015 11:52:16 GMT
+    x-varnish: '1088836109'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: lb1
+    x-cache: MISS
+  :body: '{"sku":{"id":146414,"ean":"","pn":"","name":"Galaxy S4 i9500 16GB","display_name":"Samsung
+    Galaxy S4 i9500 16GB","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":1299.0,"price_min":775.0,"reviewscore":0.0,"shop_count":3,"plain_spec_summary":"SIM:
+    Tek, Ağ Bağlantısı: 2G / 3G / 4G, Kamera: 13 MP,  1920 x 1080 piksel Dokunmatik
+    Ekran (Touchscreen),  Dahili Hafıza: 16 GB,  İşletim Sistemi: Android, Çıkış Tarihi:
+    2013, SmartPhone, 2600 mAh, Ekran Boyutu: Orta (4.6\" - 5.3\")","manufacturer_id":36,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://alve-d.scdn.gr/images/sku_main_images/000146/146414/medium_img_relationship_01_phone.png","alternatives":["http://alve-a.scdn.gr/images/sku_images/000146/146255/img_lifecare_02_phone.png","http://alve-c.scdn.gr/images/sku_images/000485/485868/Samsung-Galaxy-S4.jpg","http://alve-d.scdn.gr/images/sku_images/000485/485869/samsung-galaxy-s4-red-blue.jpg","http://alve-c.scdn.gr/images/sku_images/000485/485870/Samsung-Galaxy-S4-Artic-Blu.jpg","http://alve-a.scdn.gr/images/sku_images/000485/485871/Galaxy-S4-black-and-white.jpg"]},"web_uri":"http://alve.com/s/146414/Samsung-Galaxy-S4-i9500-16GB.html"}}'
+:created_at: 2015-12-09 13:51:45.629864019 +02:00

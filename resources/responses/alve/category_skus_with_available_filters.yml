@@ -1,38 +1,45 @@
 ---
 :request:
-  :url: https://api.alve.com/categories/33/skus?include_meta=available_filters
+  :url: http://api.alve.com/categories/33/skus?include_meta=available_filters
   :headers:
     :accept: application/vnd.alve+json; version=3
-    :authorization: Bearer ro3L8/U7wnqmbcjEGfzjTJCJ9J75lq9LbSMcZwuNey8kBoSKpOVPfuRZFYOFUy0rLS//s02U7ZEIigv0mm0oA==
+    :authorization: Bearer XsWUwEUOwk8OHBcwxIKVzLxJQVPsb6xXtim5MltaRcg8zbrh9qcdU2keW/pI/Bw9Vz9YPVWmWlT3llbzI54yTQ==
   :params:
     :per: 1
-  :verb: GET
+  :verb: :get
 :response:
   :status: 200
   :headers:
-    !binary "c2VydmVy": nginx
-    !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
-    !binary "dmFyeQ==": Accept-Encoding
-    !binary "c3RhdHVz": 200 OK
-    !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
-    !binary "Y2FjaGUtY29udHJvbA==": max-age=0, private, must-revalidate
-    !binary "eC1yZXF1ZXN0LWlk": '986354965'
-    !binary "eC1ydW50aW1l": '0.046497'
-    !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "eC1hcHA=": as2_ssl
-    !binary "Y29udGVudC1sZW5ndGg=": '864'
-    !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:48:44 GMT
-    !binary "eC12YXJuaXNo": '986354965'
-    !binary "YWdl": '0'
-    !binary "dmlh": 1.1 varnish
-    !binary "Y29ubmVjdGlvbg==": close
-    !binary "eC1vcmlnaW4=": varnish1
-    !binary "eC1jYWNoZQ==": MISS
-  :body: ! '{"skus":[{"id":705848,"ean":"","pn":"","name":"Discovery Elite 32GB","display_name":"General
-    Mobile Discovery Elite 32GB","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":1401.83,"price_min":1149.79,"reviewscore":3.0,"shop_count":27,"plain_spec_summary":"A\u011f
-    Ba\u011flant\u0131s\u0131: 2G / 3G, Kamera: 16 Megapiksel,  Ekran: 5.5\", 1920
-    x 1080 piksel, Kullan\u0131m Y\u00f6ntemi: Dokunmatik ekran (Touch screen),  Dahili
-    Haf\u0131za: 32 GB,  \u0130\u015fletim Sistemi: Android, \u00c7\u0131k\u0131\u015f
-    Tarihi: 2014, Smart Phone","manufacturer_id":91,"future":false,"reviews_count":1,"virtual":false,"images":{"main":"http://alve-d.scdn.gr/images/sku_main_images/000705/705848/medium_discoveryElite_size.png","alternatives":["http://alve-a.scdn.gr/images/sku_images/000815/815720/discoveryElite_Detail_right.png","http://alve-c.scdn.gr/images/sku_images/000815/815721/discoveryElite_Detail_01.png","http://alve-c.scdn.gr/images/sku_images/000815/815722/discoveryElite_Detail_02.png","http://alve-c.scdn.gr/images/sku_images/000815/815723/discoveryElite_Detail_03.png","http://alve-c.scdn.gr/images/sku_images/000815/815724/discoveryElite_Detail_04.png"]}}],"meta":{"available_filters":{"filters":{"7994":223,"7995":60,"4837":159,"7997":60,"7991":48,"4836":8,"4806":105,"4808":55,"4809":22,"4801":162,"4805":16,"4802":14,"4828":186,"4829":106,"4830":37,"4833":73,"4832":69,"37655":81,"37656":43,"37653":124,"37654":76,"8012":42,"8013":27,"43149":82,"43148":80,"43150":67,"43151":37},"manufacturers":{"36":61,"179":59,"178":25,"53":23,"30":22,"28":14,"103":11,"1139":9,"91":6,"2244":4,"601":4,"183":4,"39":4,"92":3,"3":3,"1029":2,"95":2,"44":2,"16":2,"2239":1,"1566":1,"1417":1,"1310":1,"299":1,"153":1}},"pagination":{"total_results":266,"total_pages":266,"page":1,"per":1}}}'
-:created_at: 2014-08-25 17:48:44.712102790 +03:00
+    server: nginx
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '86'
+    x-ratelimit-reset: '1449661980'
+    status: 200 OK
+    x-frame-options: SAMEORIGIN
+    x-xss-protection: 1; mode=block
+    x-content-type-options: nosniff
+    etag: W/"551ae27308921c91267c718bc7d8f5a7"
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '287459677'
+    x-runtime: '0.060647'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: as1
+    content-length: '1048'
+    accept-ranges: bytes
+    date: Wed, 09 Dec 2015 11:52:24 GMT
+    x-varnish: '287459677'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: lb2
+    x-cache: MISS
+  :body: '{"skus":[{"id":3155889,"ean":"","pn":"","name":"Galaxy J7","display_name":"Samsung
+    Galaxy J7","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":1199.0,"price_min":869.0,"reviewscore":5.0,"shop_count":15,"plain_spec_summary":"SIM:
+    Çift, Ağ Bağlantısı: 2G / 3.5G / 3G / 4G, Kamera: 13 MP,  1280 x 720 piksel Dokunmatik
+    Ekran (Touchscreen),  Dahili Hafıza: 16 GB,  İşletim Sistemi: Android, Çıkış Tarihi:
+    2015, SmartPhone, 3000 mAh, Ekran Boyutu: Büyük (5.5\" ve üzeri)","manufacturer_id":36,"future":false,"reviews_count":1,"virtual":false,"images":{"main":"http://alve-a.scdn.gr/images/sku_main_images/003155/3155889/medium_20150817165332_samsung_galaxy_j7.jpeg","alternatives":["http://alve-d.scdn.gr/images/sku_images/002392/2392523/20150817165336_8c5afb37.jpeg","http://alve-a.scdn.gr/images/sku_images/002392/2392524/20150817165337_d3cbc980.jpeg","http://alve-c.scdn.gr/images/sku_images/002392/2392525/20150817165338_0db4e525.jpeg","http://alve-b.scdn.gr/images/sku_images/002392/2392526/20150817165340_81dcfd5a.jpeg","http://alve-b.scdn.gr/images/sku_images/002392/2392527/20150817165342_b5fa3a1c.jpeg","http://alve-d.scdn.gr/images/sku_images/002392/2392528/20150817165343_6ace81fb.jpeg"]},"web_uri":"http://alve.com/s/3155889/Samsung-Galaxy-J7.html"}],"meta":{"ordered_by":"popularity","available_filters":{"filters":{"4828":209,"4829":172,"4830":101,"4832":98,"4833":37,"71830":37,"7994":213,"7995":120,"4801":180,"4802":15,"4805":14,"4808":110,"4809":62,"4806":39,"73211":105,"7997":68,"7991":15,"4836":1,"8012":67,"8013":44,"74860":92,"74859":74,"74861":44,"74862":23,"37653":190,"37654":123,"57147":11,"54888":90,"37656":82,"37655":32,"73208":75,"73207":40,"73209":11,"73210":4},"manufacturers":{"36":50,"178":21,"53":19,"30":18,"179":18,"28":15,"12":10,"183":9,"39":8,"91":8,"3":7,"169":6,"601":4,"103":3,"111":3,"2702":3,"44":2,"50":2,"92":2,"95":2,"279":2,"1139":2,"1380":2,"1520":2,"2996":2,"3053":2,"83":1,"153":1,"233":1,"1417":1,"1566":1,"2006":1,"2239":1,"5875":1,"5876":1,"5877":1,"5878":1}},"pagination":{"total_results":233,"total_pages":233,"page":1,"per":1}}}'
+:created_at: 2015-12-09 13:51:53.555080770 +02:00
