@@ -15,31 +15,31 @@
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '96'
-    x-ratelimit-reset: '1446479520'
+    x-ratelimit-remaining: '93'
+    x-ratelimit-reset: '1449665580'
     status: 200 OK
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
-    link: <https://api.alve.com/search?page=19&per=2&q=iphone>; rel="last", <https://api.alve.com/search?page=2&per=2&q=iphone>;
+    link: <http://api.alve.com/search?page=17&per=2&q=iphone>; rel="last", <http://api.alve.com/search?page=2&per=2&q=iphone>;
       rel="next"
-    etag: W/"64ee29ebb90b05511917b5a6bbb3c4b4"
+    etag: W/"4340d3cb9b11915274e53459435a54f6"
     cache-control: max-age=0, private, must-revalidate
-    x-request-id: '278775902'
-    x-runtime: '0.037996'
+    x-request-id: '287473313'
+    x-runtime: '0.057885'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
-    x-app: as3_ssl
-    content-length: '411'
+    x-app: as1
+    content-length: '404'
     accept-ranges: bytes
-    date: Mon, 02 Nov 2015 15:51:17 GMT
-    x-varnish: '278775902'
+    date: Wed, 09 Dec 2015 12:52:09 GMT
+    x-varnish: '287473313'
     age: '0'
     via: 1.1 varnish
     connection: close
     x-origin: lb2
     x-cache: MISS
-  :body: '{"categories":[{"id":33,"name":"Cep Telefonu","children_count":0,"image_url":"http://alve-c.scdn.gr/images/categories/large/20150622142746_9efad8e8.jpg","parent_id":32,"fashion":false,"layout_mode":"list","web_uri":"https://api.alve.com/c/33/cep-telefonu.html","path":"1,2,12,32,33","show_specifications":true,"manufacturer_title":"Markalar","match_count":15},{"id":34,"name":"Cep
-    Telefonu Kılıfı","children_count":0,"image_url":"http://alve-a.scdn.gr/images/categories/large/34.jpg","parent_id":32,"fashion":false,"layout_mode":"tiles","web_uri":"https://api.alve.com/c/34/cep-telefonu-kilifi.html","path":"1,2,12,32,34","show_specifications":false,"manufacturer_title":"Markalar","match_count":5690}],"meta":{"q":"iphone","alternatives":[],"strong_matches":{},"pagination":{"total_results":37,"total_pages":19,"page":1,"per":2}}}'
-:created_at: 2015-11-02 17:51:35.258100000 +02:00
+  :body: '{"categories":[{"id":33,"name":"Cep Telefonu","children_count":0,"image_url":"http://alve-c.scdn.gr/images/categories/large/20150622142746_9efad8e8.jpg","parent_id":32,"fashion":false,"layout_mode":"list","web_uri":"http://alve.com/c/33/cep-telefonu.html","path":"1,2,12,32,33","show_specifications":true,"manufacturer_title":"Markalar","match_count":15},{"id":34,"name":"Cep
+    Telefonu Kılıfı","children_count":0,"image_url":"http://alve-a.scdn.gr/images/categories/large/34.jpg","parent_id":32,"fashion":false,"layout_mode":"tiles","web_uri":"http://alve.com/c/34/cep-telefonu-kilifi.html","path":"1,2,12,32,34","show_specifications":false,"manufacturer_title":"Markalar","match_count":5457}],"meta":{"q":"iphone","alternatives":[],"strong_matches":{},"pagination":{"total_results":33,"total_pages":17,"page":1,"per":2}}}'
+:created_at: 2015-12-09 14:51:38.742455763 +02:00

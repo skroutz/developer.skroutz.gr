@@ -12,28 +12,28 @@
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '95'
-    x-ratelimit-reset: '1446479700'
+    x-ratelimit-remaining: '96'
+    x-ratelimit-reset: '1449665580'
     status: 200 OK
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
     cache-control: max-age=300, private
-    etag: W/"de23c130a54fa32cb23337c8784bf184"
-    x-request-id: '278776691'
-    x-runtime: '0.019862'
+    etag: W/"9617c5d98289227600b249b385c290c2"
+    x-request-id: '287473303'
+    x-runtime: '0.024667'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
-    x-app: as3_ssl
-    content-length: '257'
+    x-app: as1
+    content-length: '252'
     accept-ranges: bytes
-    date: Mon, 02 Nov 2015 15:54:38 GMT
-    x-varnish: '278776691'
+    date: Wed, 09 Dec 2015 12:52:06 GMT
+    x-varnish: '287473303'
     age: '0'
     via: 1.1 varnish
     connection: close
     x-origin: lb2
     x-cache: MISS
-  :body: '{"category":{"id":32,"name":"Cep Telefonu Dünyası","children_count":9,"image_url":"http://alve-a.scdn.gr/images/categories/large/32.jpg","parent_id":12,"fashion":false,"layout_mode":"list","web_uri":"https://api.alve.com/c/32/cep-telefonu-dunyasi.html","path":"1,2,12,32","show_specifications":false,"manufacturer_title":"Markalar"}}'
-:created_at: 2015-11-02 17:54:56.342974000 +02:00
+  :body: '{"category":{"id":32,"name":"Cep Telefonu Dünyası","children_count":9,"image_url":"http://alve-a.scdn.gr/images/categories/large/32.jpg","parent_id":12,"fashion":false,"layout_mode":"list","web_uri":"http://alve.com/c/32/cep-telefonu-dunyasi.html","path":"1,2,12,32","show_specifications":false,"manufacturer_title":"Markalar"}}'
+:created_at: 2015-12-09 14:51:35.986249210 +02:00

@@ -12,35 +12,35 @@
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '96'
-    x-ratelimit-reset: '1446479700'
+    x-ratelimit-remaining: '99'
+    x-ratelimit-reset: '1449665580'
     status: 200 OK
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
     cache-control: max-age=300, private
-    etag: W/"2f3420deb715e1cbb75c7e100e7c7f28"
-    x-request-id: '278776690'
-    x-runtime: '0.028005'
+    etag: W/"89a31b74b0820f6c001c3823dfec58d6"
+    x-request-id: '287473296'
+    x-runtime: '0.045521'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
-    x-app: as3_ssl
-    content-length: '690'
+    x-app: as1
+    content-length: '679'
     accept-ranges: bytes
-    date: Mon, 02 Nov 2015 15:54:38 GMT
-    x-varnish: '278776690'
+    date: Wed, 09 Dec 2015 12:52:04 GMT
+    x-varnish: '287473296'
     age: '0'
     via: 1.1 varnish
     connection: close
     x-origin: lb2
     x-cache: MISS
-  :body: '{"categories":[{"id":33,"name":"Cep Telefonu","children_count":0,"image_url":"http://alve-c.scdn.gr/images/categories/large/20150622142746_9efad8e8.jpg","parent_id":32,"fashion":false,"layout_mode":"list","web_uri":"https://api.alve.com/c/33/cep-telefonu.html","path":"1,2,12,32,33","show_specifications":true,"manufacturer_title":"Markalar"},{"id":34,"name":"Cep
-    Telefonu Kılıfı","children_count":0,"image_url":"http://alve-a.scdn.gr/images/categories/large/34.jpg","parent_id":32,"fashion":false,"layout_mode":"tiles","web_uri":"https://api.alve.com/c/34/cep-telefonu-kilifi.html","path":"1,2,12,32,34","show_specifications":false,"manufacturer_title":"Markalar"},{"id":545,"name":"Ekran
-    Koruyucu Film","children_count":0,"image_url":"http://alve-d.scdn.gr/images/categories/large/545.jpg","parent_id":32,"fashion":false,"layout_mode":"tiles","web_uri":"https://api.alve.com/c/545/ekran-koruyucu-film.html","path":"1,2,12,32,545","show_specifications":false,"manufacturer_title":"Markalar"},{"id":673,"name":"Powerbank","children_count":0,"image_url":"http://alve-a.scdn.gr/images/categories/large/20150422120134_4664c94c.jpg","parent_id":32,"fashion":false,"layout_mode":"tiles","web_uri":"https://api.alve.com/c/673/tasinabilir-sarj-cihazi.html","path":"1,2,12,32,673","show_specifications":true,"manufacturer_title":"Markalar"},{"id":546,"name":"Cep
-    Telefonu Şarj Aleti","children_count":0,"image_url":"http://alve-d.scdn.gr/images/categories/large/546.jpg","parent_id":32,"fashion":false,"layout_mode":"tiles","web_uri":"https://api.alve.com/c/546/cep-telefonu-sarj-aleti.html","path":"1,2,12,32,546","show_specifications":false,"manufacturer_title":"Markalar"},{"id":35,"name":"Bluetooth
-    Kulaklık","children_count":0,"image_url":"http://alve-a.scdn.gr/images/categories/large/35.jpg","parent_id":32,"fashion":false,"layout_mode":"tiles","web_uri":"https://api.alve.com/c/35/bluetooth-kulaklik.html","path":"1,2,12,32,35","show_specifications":false,"manufacturer_title":"Markalar"},{"id":647,"name":"Akıllı
-    Saat","children_count":0,"image_url":"http://alve-d.scdn.gr/images/categories/large/20150126145642_1705.jpg","parent_id":32,"fashion":false,"layout_mode":"tiles","web_uri":"https://api.alve.com/c/647/akilli-saat.html","path":"1,2,12,32,647","show_specifications":true,"manufacturer_title":"Markalar"},{"id":548,"name":"Cep
-    Telefonu Bataryası","children_count":0,"image_url":"http://alve-c.scdn.gr/images/categories/large/548.jpg","parent_id":32,"fashion":false,"layout_mode":"tiles","web_uri":"https://api.alve.com/c/548/cep-telefonu-bataryasi.html","path":"1,2,12,32,548","show_specifications":false,"manufacturer_title":"Markalar"},{"id":738,"name":"Selfie
-    Çubuğu","children_count":0,"image_url":"http://alve-c.scdn.gr/images/categories/large/20150904134717_d945d77e.jpg","parent_id":32,"fashion":false,"layout_mode":"list","web_uri":"https://api.alve.com/c/738/selfie-cubugu.html","path":"1,2,12,32,738","show_specifications":false,"manufacturer_title":"Markalar"}],"meta":{"pagination":{"total_results":9,"total_pages":1,"page":1,"per":25}}}'
-:created_at: 2015-11-02 17:54:56.287880000 +02:00
+  :body: '{"categories":[{"id":33,"name":"Cep Telefonu","children_count":0,"image_url":"http://alve-c.scdn.gr/images/categories/large/20150622142746_9efad8e8.jpg","parent_id":32,"fashion":false,"layout_mode":"list","web_uri":"http://alve.com/c/33/cep-telefonu.html","path":"1,2,12,32,33","show_specifications":true,"manufacturer_title":"Markalar"},{"id":34,"name":"Cep
+    Telefonu Kılıfı","children_count":0,"image_url":"http://alve-a.scdn.gr/images/categories/large/34.jpg","parent_id":32,"fashion":false,"layout_mode":"tiles","web_uri":"http://alve.com/c/34/cep-telefonu-kilifi.html","path":"1,2,12,32,34","show_specifications":false,"manufacturer_title":"Markalar"},{"id":545,"name":"Ekran
+    Koruyucu Film","children_count":0,"image_url":"http://alve-d.scdn.gr/images/categories/large/545.jpg","parent_id":32,"fashion":false,"layout_mode":"tiles","web_uri":"http://alve.com/c/545/ekran-koruyucu-film.html","path":"1,2,12,32,545","show_specifications":false,"manufacturer_title":"Markalar"},{"id":546,"name":"Cep
+    Telefonu Şarj Aleti","children_count":0,"image_url":"http://alve-d.scdn.gr/images/categories/large/546.jpg","parent_id":32,"fashion":false,"layout_mode":"tiles","web_uri":"http://alve.com/c/546/cep-telefonu-sarj-aleti.html","path":"1,2,12,32,546","show_specifications":false,"manufacturer_title":"Markalar"},{"id":673,"name":"Powerbank","children_count":0,"image_url":"http://alve-a.scdn.gr/images/categories/large/20150422120134_4664c94c.jpg","parent_id":32,"fashion":false,"layout_mode":"tiles","web_uri":"http://alve.com/c/673/tasinabilir-sarj-cihazi.html","path":"1,2,12,32,673","show_specifications":true,"manufacturer_title":"Markalar"},{"id":647,"name":"Akıllı
+    Saat","children_count":0,"image_url":"http://alve-d.scdn.gr/images/categories/large/20150126145642_1705.jpg","parent_id":32,"fashion":false,"layout_mode":"tiles","web_uri":"http://alve.com/c/647/akilli-saat.html","path":"1,2,12,32,647","show_specifications":true,"manufacturer_title":"Markalar"},{"id":35,"name":"Bluetooth
+    Kulaklık","children_count":0,"image_url":"http://alve-a.scdn.gr/images/categories/large/35.jpg","parent_id":32,"fashion":false,"layout_mode":"tiles","web_uri":"http://alve.com/c/35/bluetooth-kulaklik.html","path":"1,2,12,32,35","show_specifications":false,"manufacturer_title":"Markalar"},{"id":548,"name":"Cep
+    Telefonu Bataryası","children_count":0,"image_url":"http://alve-c.scdn.gr/images/categories/large/548.jpg","parent_id":32,"fashion":false,"layout_mode":"tiles","web_uri":"http://alve.com/c/548/cep-telefonu-bataryasi.html","path":"1,2,12,32,548","show_specifications":false,"manufacturer_title":"Markalar"},{"id":738,"name":"Selfie
+    Çubuğu","children_count":0,"image_url":"http://alve-c.scdn.gr/images/categories/large/20150904134717_d945d77e.jpg","parent_id":32,"fashion":false,"layout_mode":"tiles","web_uri":"http://alve.com/c/738/selfie-cubugu.html","path":"1,2,12,32,738","show_specifications":false,"manufacturer_title":"Markalar"}],"meta":{"pagination":{"total_results":9,"total_pages":1,"page":1,"per":25}}}'
+:created_at: 2015-12-09 14:51:33.260488216 +02:00
