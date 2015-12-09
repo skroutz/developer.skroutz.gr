@@ -1,33 +1,46 @@
 ---
 :request:
-  :url: https://api.alve.com/shops/3/reviews
+  :url: http://api.alve.com/shops/207/reviews
   :headers:
     :accept: application/vnd.alve+json; version=3
-    :authorization: Bearer ro3L8/U7wnqmbcjEGfzjTJCJ9J75lq9LbSMcZwuNey8kBoSKpOVPfuRZFYOFUy0rLS//s02U7ZEIigv0mm0oA==
+    :authorization: Bearer XsWUwEUOwk8OHBcwxIKVzLxJQVPsb6xXtim5MltaRcg8zbrh9qcdU2keW/pI/Bw9Vz9YPVWmWlT3llbzI54yTQ==
   :params:
     :per: 3
-  :verb: GET
+  :verb: :get
 :response:
   :status: 200
   :headers:
-    !binary "c2VydmVy": nginx
-    !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
-    !binary "dmFyeQ==": Accept-Encoding
-    !binary "c3RhdHVz": 200 OK
-    !binary "Y2FjaGUtY29udHJvbA==": max-age=300, private
-    !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
-    !binary "eC1yZXF1ZXN0LWlk": '465819202'
-    !binary "eC1ydW50aW1l": '0.048000'
-    !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "eC1hcHA=": as2_ssl
-    !binary "Y29udGVudC1sZW5ndGg=": '92'
-    !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:48:45 GMT
-    !binary "eC12YXJuaXNo": '465819202'
-    !binary "YWdl": '0'
-    !binary "dmlh": 1.1 varnish
-    !binary "Y29ubmVjdGlvbg==": close
-    !binary "eC1vcmlnaW4=": varnish2
-    !binary "eC1jYWNoZQ==": MISS
-  :body: ! '{"reviews":[],"meta":{"pagination":{"total_results":0,"total_pages":0,"page":1,"per":3}}}'
-:created_at: 2014-08-25 17:48:45.352468105 +03:00
+    server: nginx
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '94'
+    x-ratelimit-reset: '1449665340'
+    status: 200 OK
+    x-frame-options: SAMEORIGIN
+    x-xss-protection: 1; mode=block
+    x-content-type-options: nosniff
+    cache-control: max-age=300, private
+    etag: W/"ee02b265f0b9dfd5dd40477b378a3d86"
+    x-request-id: '1088843695'
+    x-runtime: '0.035636'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: as1
+    content-length: '442'
+    accept-ranges: bytes
+    date: Wed, 09 Dec 2015 12:48:55 GMT
+    x-varnish: '1088843695'
+    age: '0'
+    via: 1.1 varnish
+    connection: close
+    x-origin: lb1
+    x-cache: MISS
+  :body: '{"reviews":[{"id":54,"user_id":9138,"review":"Kliksa''dan satın aldığım
+    telefon 24 saat dolmadan elime ulaştı. Kargo süreci boyunca sürekli bilgilendirildim
+    ve sorunsuz bir alışveriş süreci yaşadım.","rating":5,"shop_reply":null,"created_at":"2015-11-19T10:07:21+02:00"},{"id":35,"user_id":16,"review":"Kliksa
+    dan çay makinesi sipariş ettim.Pazartesi verdiğim sipariş , hızlı bir şekilde
+    salı günü elime ulaştı.Ayrıca ürünün kargoda zarar görmemesi için , ekstra bir
+    karton kutuya koymaları güzel olmuş.","rating":5,"shop_reply":null,"created_at":"2015-05-12T10:46:40+03:00"}],"meta":{"pagination":{"total_results":2,"total_pages":1,"page":1,"per":3}}}'
+:created_at: 2015-12-09 14:48:24.339685497 +02:00
