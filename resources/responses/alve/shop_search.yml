@@ -1,9 +1,9 @@
 ---
 :request:
-  :url: http://api.alve.com/shops/search?q=KlikSA
+  :url: http://api.alve.com/shops/search?q=%C4%B0stanbul
   :headers:
     :accept: application/vnd.alve+json; version=3
-    :authorization: Bearer XsWUwEUOwk8OHBcwxIKVzLxJQVPsb6xXtim5MltaRcg8zbrh9qcdU2keW/pI/Bw9Vz9YPVWmWlT3llbzI54yTQ==
+    :authorization: Bearer 0M5YA455aLcLIpjqNvIqsCiEOyOGhvQJ/RC/RpLlYb/whhW3zaZXfA5kXDydYmTBALlvrfIW8oIV/5Sx/tCA6w==
   :verb: :get
 :response:
   :status: 200
@@ -12,28 +12,28 @@
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '93'
-    x-ratelimit-reset: '1449665340'
+    x-ratelimit-remaining: '98'
+    x-ratelimit-reset: '1453463700'
     status: 200 OK
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
     cache-control: max-age=300, private
-    etag: W/"c63500a7a46e1300e795a875970479e9"
-    x-request-id: '287472630'
-    x-runtime: '0.027252'
+    etag: W/"765b7dc63f2c0b7e766eb1a8b7f5c5af"
+    x-request-id: '299894385'
+    x-runtime: '0.030951'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
     x-app: as1
-    content-length: '403'
+    content-length: '458'
     accept-ranges: bytes
-    date: Wed, 09 Dec 2015 12:48:56 GMT
-    x-varnish: '287472630'
+    date: Fri, 22 Jan 2016 11:54:44 GMT
+    x-varnish: '299894385'
     age: '0'
     via: 1.1 varnish
     connection: close
     x-origin: lb2
     x-cache: MISS
-  :body: '{"shops":[{"id":207,"name":"KlikSA","link":"http://www.kliksa.com","phone":"4445756","image_url":"http://alve-c.scdn.gr/images/shops/logos/0002/mid_5bdfbc0a-5397-4bd1-a9dc-5f876cb07eee.jpg","thumbshot_url":"http://alve-c.scdn.gr/images/shops/screens/f060abd2-0d12-43c5-afd2-8ebf690913b4.png","reviews_count":2,"review_score":5.0,"payment_methods":{"credit_card":true,"paypal":true,"bank":true,"spot_cash":false,"installments":"","bkm":false,"ipara":false},"shipping":{"free":false,"free_from":null,"free_from_info":null,"min_price":"5"},"web_uri":"http://alve.com/m/207/KlikSA"}],"meta":{"pagination":{"total_results":1,"total_pages":1,"page":1,"per":25}}}'
-:created_at: 2015-12-09 14:48:25.209708414 +02:00
+  :body: '{"shops":[{"id":42,"name":"İstanbul Bilişim","link":"http://www.istanbulbilisim.com.tr/","phone":"08503330912","image_url":"http://alve-c.scdn.gr/images/shops/logos/0000/mid_a5c34f50-e5ff-4389-8b33-afda9cb774b6.jpg","thumbshot_url":"http://alve-c.scdn.gr/images/shops/screens/0d9cc7c7-9e72-416a-93b3-163f9931af46.png","reviews_count":1,"latest_reviews_count":0,"review_score":0.0,"payment_methods":{"credit_card":true,"paypal":false,"bank":true,"spot_cash":false,"installments":"","bkm":false,"ipara":false},"shipping":{"free":false,"free_from":null,"free_from_info":null,"min_price":"4.17"},"web_uri":"http://alve.com/m/42/%C4%B0stanbul-Bili%C5%9Fim"}],"meta":{"pagination":{"total_results":1,"total_pages":1,"page":1,"per":25}}}'
+:created_at: 2016-01-22 13:54:15.646258272 +02:00
