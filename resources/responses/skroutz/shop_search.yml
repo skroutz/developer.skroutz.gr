@@ -3,7 +3,7 @@
   :url: http://api.skroutz.gr/shops/search?q=spartoo
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer 9bBb/SfslzfXVoyFdulvm0kWf5aBa1P6oQEknj2BCvEFK0D9fQTlrALG3lWogTNaEmdSGFs1eCqyBVAbIFHJVw==
+    :authorization: Bearer frqURAdaUKMBlG4dXbTaqrlAhmWNdlto20secslqRfkrb8dG3r2I8WJ1dSfKKj3aqAN5RlsSTobLMvsrrtrd7A==
   :verb: :get
 :response:
   :status: 200
@@ -13,27 +13,27 @@
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
     x-ratelimit-remaining: '98'
-    x-ratelimit-reset: '1449664500'
+    x-ratelimit-reset: '1453463880'
     status: 200 OK
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
     cache-control: max-age=300, private
-    etag: W/"9e48f3afa8b62bc1d9e3ff1b3f617be6"
-    x-request-id: '1649553592'
-    x-runtime: '0.027187'
+    etag: W/"5913f1a3d5ece0eb2d56506c802abfa3"
+    x-request-id: '2260050746'
+    x-runtime: '0.032211'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
     x-app: kavula
-    content-length: '406'
+    content-length: '416'
     accept-ranges: bytes
-    date: Wed, 09 Dec 2015 12:34:01 GMT
-    x-varnish: '1649553592'
+    date: Fri, 22 Jan 2016 11:57:21 GMT
+    x-varnish: '2260050746'
     age: '0'
     via: 1.1 varnish
     connection: close
     x-origin: lb2
     x-cache: MISS
-  :body: '{"shops":[{"id":1449,"name":"Spartoo (fr)","link":"http://www.spartoo.gr","phone":"2111982659","image_url":"http://b.scdn.gr/images/shops/logos/0014/mid_a38a900f-c94a-46c0-ac35-07cc8f82e4b3.jpg","thumbshot_url":"http://c.scdn.gr/images/shops/screens/1b5b390d-ef94-40ec-af0c-df34121edc93.png","reviews_count":26,"review_score":4.47,"payment_methods":{"credit_card":true,"paypal":true,"bank":false,"spot_cash":true,"installments":""},"shipping":{"free":true,"free_from":null,"free_from_info":"","min_price":""},"web_uri":"http://skroutz.gr/m/1449/Spartoo-fr"}],"meta":{"pagination":{"total_results":1,"total_pages":1,"page":1,"per":25}}}'
-:created_at: 2015-12-09 14:33:30.674136567 +02:00
+  :body: '{"shops":[{"id":1449,"name":"Spartoo (fr)","link":"http://www.spartoo.gr","phone":"2111982659","image_url":"http://b.scdn.gr/images/shops/logos/0014/mid_a38a900f-c94a-46c0-ac35-07cc8f82e4b3.jpg","thumbshot_url":"http://c.scdn.gr/images/shops/screens/1b5b390d-ef94-40ec-af0c-df34121edc93.png","reviews_count":27,"latest_reviews_count":19,"review_score":4.26,"payment_methods":{"credit_card":true,"paypal":true,"bank":false,"spot_cash":true,"installments":""},"shipping":{"free":true,"free_from":null,"free_from_info":"","min_price":""},"web_uri":"http://skroutz.gr/m/1449/Spartoo-fr"}],"meta":{"pagination":{"total_results":1,"total_pages":1,"page":1,"per":25}}}'
+:created_at: 2016-01-22 13:56:52.666519848 +02:00

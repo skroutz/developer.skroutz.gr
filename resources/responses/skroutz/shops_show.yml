@@ -3,7 +3,7 @@
   :url: http://api.skroutz.gr/shops/452
   :headers:
     :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer 9bBb/SfslzfXVoyFdulvm0kWf5aBa1P6oQEknj2BCvEFK0D9fQTlrALG3lWogTNaEmdSGFs1eCqyBVAbIFHJVw==
+    :authorization: Bearer frqURAdaUKMBlG4dXbTaqrlAhmWNdlto20secslqRfkrb8dG3r2I8WJ1dSfKKj3aqAN5RlsSTobLMvsrrtrd7A==
   :verb: :get
 :response:
   :status: 200
@@ -13,29 +13,29 @@
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
     x-ratelimit-remaining: '99'
-    x-ratelimit-reset: '1449664440'
+    x-ratelimit-reset: '1453463880'
     status: 200 OK
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
     cache-control: max-age=300, private
-    etag: W/"53edfd2ed62232451b83a33495546a1f"
-    x-request-id: '2013128232'
-    x-runtime: '0.043405'
+    etag: W/"997454096a80769fe770d14b59ef531a"
+    x-request-id: '2511882583'
+    x-runtime: '0.015890'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
     x-app: kavula
-    content-length: '507'
+    content-length: '520'
     accept-ranges: bytes
-    date: Wed, 09 Dec 2015 12:33:56 GMT
-    x-varnish: '2013128232'
+    date: Fri, 22 Jan 2016 11:57:21 GMT
+    x-varnish: '2511882583'
     age: '0'
     via: 1.1 varnish
     connection: close
     x-origin: lb1
     x-cache: MISS
-  :body: '{"shop":{"id":452,"name":"Kotsovolos","link":"http://www.kotsovolos.gr","phone":"2102899999","image_url":"http://b.scdn.gr/images/shops/logos/0004/mid_d5867ac8-867b-4395-99bc-db04e459fe4d.jpg","thumbshot_url":"http://c.scdn.gr/images/shops/screens/20150731105054_75756119.png","reviews_count":337,"review_score":2.48,"payment_methods":{"credit_card":true,"paypal":false,"bank":false,"spot_cash":true,"installments":"Εώς
+  :body: '{"shop":{"id":452,"name":"Kotsovolos","link":"http://www.kotsovolos.gr","phone":"2102899999","image_url":"http://b.scdn.gr/images/shops/logos/0004/mid_d5867ac8-867b-4395-99bc-db04e459fe4d.jpg","thumbshot_url":"http://c.scdn.gr/images/shops/screens/20150731105054_75756119.png","reviews_count":354,"latest_reviews_count":106,"review_score":2.66,"payment_methods":{"credit_card":true,"paypal":false,"bank":true,"spot_cash":true,"installments":"Εώς
     12 άτοκες δόσεις μέσω πιστωτικής κάρτας για αγορές άνω των 60 Ευρω.\r\nΕώς 48
     δόσεις μέσω δανειοδότησης Κωτσόβολου."},"shipping":{"free":true,"free_from":85,"free_from_info":"","min_price":"3.99"},"web_uri":"http://skroutz.gr/m/452/Kotsovolos"}}'
-:created_at: 2015-12-09 14:33:25.426765681 +02:00
+:created_at: 2016-01-22 13:56:52.620261429 +02:00
