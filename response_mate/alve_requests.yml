@@ -70,13 +70,13 @@ requests:
   -
     key: shops_show
     request:
-      url: '{{base_url}}/shops/207'
+      url: '{{base_url}}/shops/42'
       headers:
         <<: *default_headers
   -
     key: shop_locations_index
     request:
-      url: '{{base_url}}/shops/207/locations'
+      url: '{{base_url}}/shops/42/locations'
       headers:
         <<: *default_headers
       params:
@@ -84,7 +84,7 @@ requests:
   -
     key: shop_locations_index_embed_address
     request:
-      url: '{{base_url}}/shops/207/locations?embed=address'
+      url: '{{base_url}}/shops/42/locations?embed=address'
       headers:
         <<: *default_headers
       params:
@@ -92,13 +92,13 @@ requests:
   -
     key: shop_locations_show
     request:
-      url: '{{base_url}}/shops/207/locations/13'
+      url: '{{base_url}}/shops/42/locations/250'
       headers:
         <<: *default_headers
   -
     key: shop_locations_show_embed_address
     request:
-      url: '{{base_url}}/shops/207/locations/13?embed=address'
+      url: '{{base_url}}/shops/42/locations/250?embed=address'
       headers:
         <<: *default_headers
   -
@@ -414,7 +414,7 @@ requests:
   -
     key: shop_reviews
     request:
-      url: '{{base_url}}/shops/207/reviews'
+      url: '{{base_url}}/shops/42/reviews'
       headers:
         <<: *default_headers
       params:
@@ -422,6 +422,6 @@ requests:
   -
     key: shop_search
     request:
-      url: '{{base_url}}/shops/search?q=KlikSA'
+      url: '{{base_url}}/shops/search?q=İstanbul'
       headers:
         <<: *default_headers
