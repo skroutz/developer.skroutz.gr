@@ -11,6 +11,7 @@ apiv3:
     - { title: 'shop' }
     - { title: 'manufacturer' }
     - { title: 'search' }
+    - { title: 'flag' }
     - { title: 'filter_groups' }
     - { title: 'favorites' }
     - { title: 'notifications' }

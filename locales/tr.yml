@@ -26,6 +26,7 @@ tr:
       shop: 'Shop'
       manufacturer: 'Manufacturer'
       search: 'Search'
+      flag: 'Flag'
       filter_groups: 'Filter Groups'
       favorites: 'User Favorites'
       notifications: 'User Notifications'

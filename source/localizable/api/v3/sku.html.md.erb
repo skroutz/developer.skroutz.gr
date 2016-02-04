@@ -140,6 +140,21 @@ add the `manufacturer_ids` parameter which is an array parameter of manufacturer
 
 <%= render_recording :sku_review_vote_create %>
 
+## Flag a SKU's review
+
+> ##### Note
+> Requires user token with the 'publish_sku_review_actions' permission.
+
+> To retrieve all available flags, see <%= link_to 'Flag', '/api/v3/flag' %>.
+
+Returns empty body, unless an error occurs.
+
+<pre class="terminal">
+  POST /skus/:sku_id/reviews/:review_id/flags?flag[reason]=bad_language|wrong_section|spam
+</pre>
+
+<%= render_recording :sku_review_flag_create %>
+
 ## Retrieve an SKU's specifications
 
 SKU specifications can be retrieved with the following request.
