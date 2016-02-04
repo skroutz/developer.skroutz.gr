@@ -400,6 +400,15 @@ requests:
       params:
         vote[helpful]: true
   -
+    key: sku_review_flag_create
+    request:
+      verb: POST
+      url: '{{base_url}}/skus/808273/reviews/146/flags'
+      headers:
+        <<: *default_headers
+      params:
+        flag[reason]: spam
+  -
     key: sku_specifications
     request:
       url: '{{base_url}}/skus/146414/specifications'
@@ -423,5 +432,11 @@ requests:
     key: shop_search
     request:
       url: '{{base_url}}/shops/search?q=İstanbul'
+      headers:
+        <<: *default_headers
+  -
+    key: flags_index
+    request:
+      url: '{{base_url}}/flags'
       headers:
         <<: *default_headers
