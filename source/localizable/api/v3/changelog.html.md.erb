@@ -5,6 +5,16 @@ title: changelog
 
 # Changelog <%= edit_link %>
 
+## 2016-02-02 - v3.0.21
+
+* Add <%= link_to 'Flag', '/api/v3/flag' %> resource.
+* Add SKU Review <%= link_to 'flagging endpoint',
+                             '/api/v3/sku/',
+                             anchor: 'flag-a-skus-review' %>.
+
+Expose new attribute `flagged` in <%= link_to 'SKU', '/api/v3/sku/' %>.
+: Signifies whether the user has flagged the review (available for user authenticated requests).
+
 ## 2016-01-22 - v3.0.20
 
 Add `latest_reviews_count` info to <%= link_to 'Shop', '/api/v3/shop' %>.
@@ -36,8 +46,8 @@ New endpoint, `POST` `/api/skus/{sku_id}/reviews/{review_id}/votes{?vote}`
 : SKU review votes can now be placed (requires `publish_sku_review_actions` permission). <%= link_to 'Read more', '/api/v3/sku', anchor: 'vote-a-skus-review' %>
 
 Expose attribute `helpful_votes_count` <%= link_to 'SKU Review',
-                                                    '/api/v3/sku',
-                                                    anchor: 'retrieve-an-skus-reviews' %>.
+                                                   '/api/v3/sku',
+                                                   anchor: 'retrieve-an-skus-reviews' %>.
 
 : This attribute signifies the number of users who have voted the review as helpful.
 
