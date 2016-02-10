@@ -38,7 +38,7 @@ Name            | Type     | Value               | Required | Description
 `client_secret` | String   |                     | Yes      | The application client secret supplied by <%= settings.site_name.capitalize %>
 `redirect_uri`  | String   |                     | Yes      | The redirect uri of the application
 `grant_type`    | String   | `client_credentials`| Yes      | The grant type of the request. Value must be `client_credentials`.
-`scope`         | String   | `public`, `favorites`, `notifications`<%= ', `easy` <small class="mark">default</small>' if flavor == 'skroutz' %>| Yes      | The space separated set of permissions your application wishes
+`scope`         | String   | `public`, `favorites`, `notifications`| Yes      | The space separated set of permissions your application wishes
 
 ### User Token
 
@@ -57,7 +57,7 @@ Name            | Type     | Value | Required  | Description
 `client_id`     | String   |       | Yes       | The application client ID supplied by <%= settings.site_name.capitalize %>
 `redirect_uri`  | String   |       | Yes       | The redirect uri of the application
 `response_type` | String   | `code`| Yes       | The type of the response. Value must be `code`.
-`scope`         | String   | `public`, `favorites`, `notifications`<%= ', `easy` <small class="mark">default</small>' if flavor == 'skroutz' %>| Yes       | The space separated set of permissions your application wishes
+`scope`         | String   | `public`, `favorites`, `notifications`| Yes       | The space separated set of permissions your application wishes
 
 If you perform the above request the user will get to see a screen prompting to
 authorize your application to access the resources you specified in the
@@ -145,7 +145,7 @@ Name            | Type     | Value               | Required | Description
 `client_secret` | String   |                     | Yes      | The application client secret supplied by <%= settings.site_name.capitalize %>
 `redirect_uri`  | String   |                     | Yes      | The redirect uri of the application
 `grant_type`    | String   | `client_credentials`| Yes      | The grant type of the request. Value must be `client_credentials`.
-`scope`         | String   | `public`, `favorites`, `notifications`<%= ', `easy` <small class="mark">default</small>' if flavor == 'skroutz' %>| Yes      | The space separated set of permissions your application wishes
+`scope`         | String   | `public`, `favorites`, `notifications`| Yes      | The space separated set of permissions your application wishes
 
 The above request will respond with an existing or a new application token. Notice that
 in this case you don't need to exchange a refresh token for an application token.

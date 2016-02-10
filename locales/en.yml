@@ -4,7 +4,6 @@ en:
     apiv3: 'API v3'
     apiv2: 'API v2'
     feedspec: 'XML Feed'
-    easy: "%{flavor} Easy"
     authorization: 'Authorization'
     analytics: 'Analytics'
     widgets: 'Widgets'
@@ -43,11 +42,6 @@ en:
       user: 'User'
     feedspec:
       short_description: 'Integrate your eshop with %{flavor} and reach millions of consumers.'
-    easy:
-      short_description: 'Easier and faster checkouts for your visitors. With a click of a button.'
-      overview: 'Overview'
-      endpoints: 'Endpoints'
-      implementations: 'Implementations'
     authorization:
       short_description: 'Learn how to ask for authorization and access user data using OAuth 2.0.'
       overview: 'Overview'

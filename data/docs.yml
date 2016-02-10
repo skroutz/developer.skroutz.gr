@@ -34,17 +34,6 @@ feedspec:
   featured: true
   icon: 'fa-file-text-o'
 
-easy:
-  base: '/easy/'
-  featured: true
-  icon: 'icon-easy'
-  flavors:
-    - skroutz
-  pages:
-    - { title: 'overview', url: '/easy/' }
-    - { title: 'endpoints' }
-    - { title: 'implementations' }
-
 authorization:
   base: '/authorization/'
   featured: true
