@@ -36,6 +36,11 @@ feedspec:
   featured: true
   icon: 'fa-file-text-o'
 
+csvspec:
+  base: '/csvspec/'
+  featured: true
+  icon: 'fa-file-text-o'
+
 authorization:
   base: '/authorization/'
   featured: true
