@@ -47,6 +47,11 @@ permissions shoot a mail at <<%= settings.api_email %>>.
                       '/api/v3/sku',
                       anchor: 'retrieve-an-skus-reviews' %></td>
     </tr>
+    <tr>
+      <td><code>current_user_profile</code></td>
+      <td>User</td>
+      <td><%= link_to 'Authorized User Profile', '/api/v3/user' %></td>
+    </tr>
   </tbody>
 </table>
 
@@ -83,5 +88,6 @@ the scope param.
 Users consent will be required in order to grant any of those permissions.
 You **must not** share these data with 3rd parties.
 
+* <%= link_to t('docs.apiv3.user'), '/api/v3/user/' %>
 * <%= link_to t('docs.apiv3.favorites'), '/api/v3/favorites/' %>
 * <%= link_to t('docs.apiv3.notifications'), '/api/v3/notifications/' %>
