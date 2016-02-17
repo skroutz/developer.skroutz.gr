@@ -440,3 +440,9 @@ requests:
       url: '{{base_url}}/flags'
       headers:
         <<: *default_headers
+  -
+    key: user
+    request:
+      url: '{{base_url}}/user'
+      headers:
+        <<: *default_headers

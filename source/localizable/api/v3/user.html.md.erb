@@ -1,0 +1,28 @@
+---
+parent: apiv3
+title: user profile
+---
+
+# User Profile <%= edit_link %>
+
+Provides information about Users.
+
+<%= partial 'partials/toc' %>
+
+# Field Guide
+
+Field         | Type   | Description
+------------- | ------ | ------------
+`id`          | Number | The unique identifier reference to the resouce
+`username`    | String | The username of the user
+`name`        | String | The first name of the user
+`sex`         | String | `"male"` or `"female"` or `null`
+`avater`      | String | URI of the avatar image of the user
+
+## Retrieve the profile of the authenticated user
+
+<pre class="terminal">
+  GET /user
+</pre>
+
+<%= render_recording :user %>

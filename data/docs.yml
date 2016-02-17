@@ -13,6 +13,7 @@ apiv3:
     - { title: 'search' }
     - { title: 'flag' }
     - { title: 'filter_groups' }
+    - { title: 'user' }
     - { title: 'favorites' }
     - { title: 'notifications' }
 

@@ -27,6 +27,7 @@ tr:
       search: 'Search'
       flag: 'Flag'
       filter_groups: 'Filter Groups'
+      user: 'User Profile'
       favorites: 'User Favorites'
       notifications: 'User Notifications'
       troubleshooting: 'Troubleshooting'
