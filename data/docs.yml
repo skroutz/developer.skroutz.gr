@@ -4,6 +4,7 @@ apiv3:
   icon: 'fa-code'
   pages:
     - { title: 'overview', url: '/api/v3/' }
+    - { title: 'libraries' }
     - { title: 'changelog' }
     - { title: 'category' }
     - { title: 'sku' }
