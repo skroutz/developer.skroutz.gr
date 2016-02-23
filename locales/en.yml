@@ -4,6 +4,7 @@ en:
     apiv3: 'API v3'
     apiv2: 'API v2'
     feedspec: 'XML Feed'
+    csvspec: 'CSV Feed'
     authorization: 'Authorization'
     analytics: 'Analytics'
     widgets: 'Widgets'
@@ -43,6 +44,8 @@ en:
       book: 'Book'
       user: 'User'
     feedspec:
+      short_description: 'Integrate your eshop with %{flavor} and reach millions of consumers.'
+    csvspec:
       short_description: 'Integrate your eshop with %{flavor} and reach millions of consumers.'
     authorization:
       short_description: 'Learn how to ask for authorization and access user data using OAuth 2.0.'
