@@ -40,6 +40,8 @@ csvspec:
   base: '/csvspec/'
   featured: true
   icon: 'fa-file-text-o'
+  flavors:
+    - scrooge
 
 authorization:
   base: '/authorization/'
