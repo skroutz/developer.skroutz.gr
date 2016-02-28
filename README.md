@@ -38,4 +38,6 @@ mail at [api@skroutz.gr](mailto:api@skroutz.gr) to get it.
 
 ## License
 
-[Creative Commons CC-BY license](http://creativecommons.org/licenses/by/3.0/us/)
+![cc-by-4.0](https://licensebuttons.net/l/by/3.0/88x31.png)
+
+[Creative Commons CC-BY license](http://creativecommons.org/licenses/by/4.0)
