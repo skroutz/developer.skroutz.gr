@@ -400,6 +400,15 @@ requests:
       params:
         vote[helpful]: true
   -
+    key: sku_review_vote_create_embed_sku_review
+    request:
+      verb: POST
+      url: '{{base_url}}/skus/808273/reviews/265/votes?embed=sku_review'
+      headers:
+        <<: *default_headers
+      params:
+        vote[helpful]: true
+  -
     key: sku_review_flag_create
     request:
       verb: POST

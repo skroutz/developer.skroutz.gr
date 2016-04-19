@@ -13,26 +13,27 @@
     server: nginx
     content-type: application/json; charset=utf-8
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '99'
-    x-ratelimit-reset: '1440017820'
-    status: 201 Created
-    x-ua-compatible: IE=Edge,chrome=1
-    etag: '"078ec4e2a49a917737bba7529095477a"'
+    x-ratelimit-remaining: '47'
+    x-ratelimit-reset: '1461061200'
+    x-frame-options: SAMEORIGIN
+    x-xss-protection: 1; mode=block
+    x-content-type-options: nosniff
+    etag: W/"3a841e254f7dde64ab48d78ecef6b199"
     cache-control: max-age=0, private, must-revalidate
-    x-request-id: '2120032783'
-    x-runtime: '0.049846'
+    x-request-id: '945377286'
+    x-runtime: '0.076505'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
     x-app: rontok
-    content-length: '148'
+    content-length: '128'
     accept-ranges: bytes
-    date: Wed, 19 Aug 2015 20:56:12 GMT
-    x-varnish: '2120032783'
+    date: Tue, 19 Apr 2016 10:19:07 GMT
+    x-varnish: '945377286'
     age: '0'
     via: 1.1 varnish
     connection: close
     x-origin: lb1
     x-cache: MISS
-  :body: '{"created_at":"2015-08-19T23:56:12+03:00","helpful":true,"id":41415,"sku_review_id":58338,"updated_at":"2015-08-19T23:56:12+03:00","user_id":132950}'
-:created_at: 2015-08-19 23:56:14.989138168 +03:00
+  :body: '{"sku_review_vote":{"id":131654,"sku_review_id":58338,"user_id":389640,"helpful":true,"created_at":"2016-04-19T13:19:07+03:00"}}'
+:created_at: 2016-04-19 13:19:07.435611363 +03:00

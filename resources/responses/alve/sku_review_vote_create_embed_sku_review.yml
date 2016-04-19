@@ -1,7 +1,7 @@
 ---
 :request:
   :verb: :post
-  :url: http://api.alve.com/skus/808273/reviews/146/votes
+  :url: http://api.alve.com/skus/808273/reviews/265/votes?embed=sku_review
   :headers:
     :accept: application/vnd.alve+json; version=3
     :authorization: Bearer _redacted_
@@ -13,27 +13,28 @@
     server: nginx
     content-type: application/json; charset=utf-8
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '47'
+    x-ratelimit-remaining: '46'
     x-ratelimit-reset: '1461072300'
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
-    etag: W/"daeb988bb930642b1834aa7a2eb323d0"
+    etag: W/"b91a3294a827d80d4128c10f05d12ae7"
     cache-control: max-age=0, private, must-revalidate
-    x-request-id: '894351511'
-    x-runtime: '0.096165'
+    x-request-id: '894351512'
+    x-runtime: '0.055761'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
     x-app: as2
-    content-length: '120'
+    content-length: '407'
     accept-ranges: bytes
     date: Tue, 19 Apr 2016 13:24:07 GMT
-    x-varnish: '894351511'
+    x-varnish: '894351512'
     age: '0'
     via: 1.1 varnish
     connection: close
     x-origin: lb1
     x-cache: MISS
-  :body: '{"sku_review_vote":{"id":60,"sku_review_id":146,"user_id":9529,"helpful":true,"created_at":"2016-04-19T16:24:06+03:00"}}'
-:created_at: 2016-04-19 16:24:07.056584645 +03:00
+  :body: '{"sku_review_vote":{"id":61,"sku_review_id":265,"user_id":9529,"helpful":true,"created_at":"2016-04-19T16:24:07+03:00","sku_review":{"id":265,"user_id":9352,"review":"LG
+    G3 aldım ve kullanıyorum.\r\ncok memnunum. anlatılmaz yaşanır. tavsiye ederim","rating":5,"created_at":"2015-12-01T13:58:56+02:00","demoted":true,"votes_count":3,"helpful_votes_count":3,"voted":true,"flagged":false,"helpful":true}}}'
+:created_at: 2016-04-19 16:24:07.165017452 +03:00

@@ -140,6 +140,18 @@ add the `manufacturer_ids` parameter which is an array parameter of manufacturer
 
 <%= render_recording :sku_review_vote_create %>
 
+#### Linked resources
+
+The sku review can be included / embedded using the `sku_review` value.  
+This way, an up-to-date information about the total number of votes / helpful votes
+can be received.
+
+<pre class="terminal">
+  POST /skus/:sku_id/reviews/:review_id/votes?embed=sku_review&vote[helpful]=true|false
+</pre>
+
+<%= render_recording :sku_review_vote_create_embed_sku_review %>
+
 ## Flag a SKU's review
 
 > ##### Note

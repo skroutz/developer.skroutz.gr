@@ -5,6 +5,18 @@ title: changelog
 
 # Changelog <%= edit_link %>
 
+## 2016-04-19 - v3.0.22
+
+* Add optional sku review linked resource in <%= link_to 'SKU Review Vote',
+                                                         '/api/v3/sku',
+                                                         anchor: 'vote-a-skus-review' %>.
+
+Expose attribute `helpful` in <%= link_to 'SKU Review',
+                                           '/api/v3/sku',
+                                           anchor: 'retrieve-an-skus-reviews' %>.
+
+: This attribute signifies whether the user has voted the review as helpful or not (available for user authenticated requests).
+
 ## 2016-02-02 - v3.0.21
 
 * Add <%= link_to 'Flag', '/api/v3/flag' %> resource.
