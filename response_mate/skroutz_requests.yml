@@ -399,6 +399,15 @@ requests:
       params:
         vote[helpful]: true
   -
+    key: sku_review_vote_create_embed_sku_review
+    request:
+      verb: POST
+      url: '{{base_url}}/skus/6535417/reviews/81293/votes?embed=sku_review'
+      headers:
+        <<: *default_headers
+      params:
+        vote[helpful]: false
+  -
     key: sku_review_flag_create
     request:
       verb: POST
