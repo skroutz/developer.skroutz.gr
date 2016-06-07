@@ -149,6 +149,8 @@ parameter will return the first page.
 
 You can make up to a certain amount of requests for each OAuth token associated with your application.
 
+We currently allow up to 100 requests per minute.
+
 You can check the returned HTTP headers of any API request to see your current
 rate limit status:
 
@@ -160,15 +162,15 @@ $ curl -i https://<%= settings.api_domain %>/categories/1440 \
 HTTP/1.1 200 OK
 Date: Mon, 01 Jul 2013 17:27:06 GMT
 Status: 200 OK
-X-RateLimit-Limit: 60
-X-RateLimit-Remaining: 56
-X-RateLimit-Reset: 1372700873
+X-RateLimit-Limit: 100
+X-RateLimit-Remaining: 99
+X-RateLimit-Reset: 1465285680
 </pre>
 
 The headers tell you everything you need to know about your current rate limit status:
 
 `X-RateLimit-Limit`
-: The maximum number of requests that the consumer is permitted to make per hour.
+: The maximum number of requests that the consumer is permitted to make per minute.
 
 `X-RateLimit-Remaining`
 : The number of requests remaining in the current rate limit window.
