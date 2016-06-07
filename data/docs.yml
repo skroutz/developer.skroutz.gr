@@ -61,6 +61,7 @@ analytics:
     - { title: 'how_it_works' }
     - { title: 'settings' }
     - { title: 'ecommerce' }
+    - { title: 'libraries' }
     - { title: 'examples' }
     - { title: 'faq' }
 
