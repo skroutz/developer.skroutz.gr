@@ -106,13 +106,14 @@ Name                                                   | Type    | Length       
 [MPN / ISBN](#mpn--isbn)                               | String  | <span class="mono">80</span>   | Yes      | `GF322234`
 [EAN / Barcode](#ean--barcode)                         | Integer | <span class="mono">13</span>   | No       | `9780471117094`
 [Size](#size)                                          | String  | <span class="mono">500</span>  | No*      | `4,4.5,5-6,6 1/2`
-[Weight](#weight)                                      | Decimal | <span class="mono">-</span>    | No       | `3200`
+[Weight](#weight)                                      | Decimal | <span class="mono">-</span>    | No**     | `3200`
 [InStock](#instock)                                    | List    | <span class="mono">-</span>    | No       | `Y`
 [Shipping Costs](#shipping-costs)                      | Decimal | <span class="mono">-</span>    | No       | `3.22`
-[Color](#color)                                        | String  | <span class="mono">100</span>  | No**     | `Black`
+[Color](#color)                                        | String  | <span class="mono">100</span>  | No***    | `Black`
 
 <small>* Required by all fashion items with sizes</small><br />
-<small>** Required by all fashion items</small>
+<small>** Required by all shops that use weight in shipping cost rules</small><br />
+<small>*** Required by all fashion items</small>
 
 
 #### Unique ID
