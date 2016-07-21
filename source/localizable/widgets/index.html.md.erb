@@ -13,30 +13,30 @@ have to replace the product `id` with the one that appears at the product web
 address, e.g.
 
 <pre class="terminal">
-http://<%= settings.domain %>/s/<strong>2567463</strong>/Apple-iPad-mini-Wifi-16GB.html
+http://www.<%= settings.domain %>/s/<strong>2567463</strong>/Apple-iPad-mini-Wifi-16GB.html
 </pre>
 
 ##### Example
 
 ~~~ html
 <div class="skroutz-widget">
-  <script type="text/javascript" src="//<%= settings.domain %>/javascripts/widget-v1.js" charset="utf-8"></script>
+  <script type="text/javascript" src="//www.<%= settings.domain %>/javascripts/widget-v1.js" charset="utf-8"></script>
   <script type="text/javascript" charset="utf-8" >
     new SkroutzWidget().display_sku({id:2567463});
   </script>
-  <p class="skwidget-footer">powered by <a href="http://<%= settings.domain %>" title="<%= settings.site_name.capitalize %>"><%= settings.site_name.capitalize %></a></p>
+  <p class="skwidget-footer">powered by <a href="http://www.<%= settings.domain %>" title="<%= settings.site_name.capitalize %>"><%= settings.site_name.capitalize %></a></p>
 </div>
 ~~~
 
 ##### Result
 
 <div class="skroutz-widget">
-  <script type="text/javascript" src="//<%= settings.domain %>/javascripts/widget-v1.js" charset="utf-8"></script>
+  <script type="text/javascript" src="//www.<%= settings.domain %>/javascripts/widget-v1.js" charset="utf-8"></script>
   <script type="text/javascript" charset="utf-8" >
     new SkroutzWidget().display_sku({id:2567463});
   </script>
   <p class="skwidget-footer">powered by
-    <a href="http://<%= settings.domain %>" title="<%= settings.site_name.capitalize %>"><%= settings.site_name.capitalize %></a>
+    <a href="http://www.<%= settings.domain %>" title="<%= settings.site_name.capitalize %>"><%= settings.site_name.capitalize %></a>
   </p>
 </div>
 
@@ -49,22 +49,22 @@ in <%= settings.site_name.capitalize %>.
 
 ~~~ html
 <div class="skroutz-widget">
-  <script type="text/javascript" src="//<%= settings.domain %>/javascripts/widget-v1.js" charset="utf-8"></script>
+  <script type="text/javascript" src="//www.<%= settings.domain %>/javascripts/widget-v1.js" charset="utf-8"></script>
   <script type="text/javascript" charset="utf-8" >
     new SkroutzWidget().display_popular({keyphrase:'samsung'});
   </script>
-  <p class="skwidget-footer">powered by <a href="http://<%= settings.domain %>" title="<%= settings.site_name.capitalize %>"><%= settings.site_name.capitalize %></a></p>
+  <p class="skwidget-footer">powered by <a href="http://www.<%= settings.domain %>" title="<%= settings.site_name.capitalize %>"><%= settings.site_name.capitalize %></a></p>
 </div>
 ~~~
 
 ##### Result
 
 <div class="skroutz-widget">
-  <script type="text/javascript" src="//<%= settings.domain %>/javascripts/widget-v1.js" charset="utf-8"></script>
+  <script type="text/javascript" src="//www.<%= settings.domain %>/javascripts/widget-v1.js" charset="utf-8"></script>
   <script type="text/javascript" charset="utf-8" >
     new SkroutzWidget().display_popular({keyphrase:'samsung'});
   </script>
-  <p class="skwidget-footer">powered by <a href="http://<%= settings.domain %>" title="<%= settings.site_name.capitalize %>"><%= settings.site_name.capitalize %></a></p>
+  <p class="skwidget-footer">powered by <a href="http://www.<%= settings.domain %>" title="<%= settings.site_name.capitalize %>"><%= settings.site_name.capitalize %></a></p>
 </div>
 
 ## Search results for a specific Category
@@ -74,29 +74,29 @@ only have to replace the `keyphrase` and the `category_id` with the actual `cate
 as it appears at the category web address, e.g.
 
 <pre class="terminal">
-http://<%= settings.domain %>/c/<strong>40</strong>/kinhta-thlefwna.html
+http://www.<%= settings.domain %>/c/<strong>40</strong>/kinhta-thlefwna.html
 </pre>
 
 ##### Example
 
 ~~~ html
 <div class="skroutz-widget">
-  <script type="text/javascript" src="//<%= settings.domain %>/javascripts/widget-v1.js" charset="utf-8"></script>
+  <script type="text/javascript" src="//www.<%= settings.domain %>/javascripts/widget-v1.js" charset="utf-8"></script>
   <script type="text/javascript" charset="utf-8" >
     new SkroutzWidget().display_popular({category_id:40, keyphrase:'iphone'});
   </script>
-  <p class="skwidget-footer">powered by <a href="http://<%= settings.domain %>" title="<%= settings.site_name.capitalize %>"><%= settings.site_name.capitalize %></a></p>
+  <p class="skwidget-footer">powered by <a href="http://www.<%= settings.domain %>" title="<%= settings.site_name.capitalize %>"><%= settings.site_name.capitalize %></a></p>
 </div>
 ~~~
 
 ##### Result
 
 <div class="skroutz-widget">
-  <script type="text/javascript" src="//<%= settings.domain %>/javascripts/widget-v1.js" charset="utf-8"></script>
+  <script type="text/javascript" src="//www.<%= settings.domain %>/javascripts/widget-v1.js" charset="utf-8"></script>
   <script type="text/javascript" charset="utf-8" >
     new SkroutzWidget().display_popular({category_id:40, keyphrase:'iphone'});
   </script>
-  <p class="skwidget-footer">powered by <a href="http://<%= settings.domain %>" title="<%= settings.site_name.capitalize %>"><%= settings.site_name.capitalize %></a></p>
+  <p class="skwidget-footer">powered by <a href="http://www.<%= settings.domain %>" title="<%= settings.site_name.capitalize %>"><%= settings.site_name.capitalize %></a></p>
 </div>
 
 ## Top category products 
@@ -106,29 +106,29 @@ only have to replace the `category_id` with the actual category id as it appears
 the category web address, e.g.
 
 <pre class="terminal">
-http://<%= settings.domain %>/c/<strong>40</strong>/kinhta-thlefwna.html
+http://www.<%= settings.domain %>/c/<strong>40</strong>/kinhta-thlefwna.html
 </pre>
 
 ##### Example
 
 ~~~ html
 <div class="skroutz-widget">
-  <script type="text/javascript" src="//<%= settings.domain %>/javascripts/widget-v1.js" charset="utf-8"></script>
+  <script type="text/javascript" src="//www.<%= settings.domain %>/javascripts/widget-v1.js" charset="utf-8"></script>
   <script type="text/javascript" charset="utf-8" >
     new SkroutzWidget().display_popular({category_id:40});
   </script>
-  <p class="skwidget-footer">powered by <a href="http://<%= settings.domain %>" title="<%= settings.site_name.capitalize %>"><%= settings.site_name.capitalize %></a></p>
+  <p class="skwidget-footer">powered by <a href="http://www.<%= settings.domain %>" title="<%= settings.site_name.capitalize %>"><%= settings.site_name.capitalize %></a></p>
 </div>
 ~~~
 
 ##### Result
 
 <div class="skroutz-widget">
-  <script type="text/javascript" src="//<%= settings.domain %>/javascripts/widget-v1.js" charset="utf-8"></script>
+  <script type="text/javascript" src="//www.<%= settings.domain %>/javascripts/widget-v1.js" charset="utf-8"></script>
   <script type="text/javascript" charset="utf-8" >
     new SkroutzWidget().display_popular({category_id:40});
   </script>
-  <p class="skwidget-footer">powered by <a href="http://<%= settings.domain %>" title="<%= settings.site_name.capitalize %>"><%= settings.site_name.capitalize %></a></p>
+  <p class="skwidget-footer">powered by <a href="http://www.<%= settings.domain %>" title="<%= settings.site_name.capitalize %>"><%= settings.site_name.capitalize %></a></p>
 </div>
 
 ## Parameters
@@ -142,10 +142,10 @@ http://<%= settings.domain %>/c/<strong>40</strong>/kinhta-thlefwna.html
 
 ~~~ html
 <div class="skroutz-widget">
-  <script type="text/javascript" src="//<%= settings.domain %>/javascripts/widget-v1.js" charset="utf-8"></script>
+  <script type="text/javascript" src="//www.<%= settings.domain %>/javascripts/widget-v1.js" charset="utf-8"></script>
   <script type="text/javascript" charset="utf-8" >
     new SkroutzWidget({target:'_blank'}).display_popular({category_id:40});
   </script>
-  <p class="skwidget-footer">powered by <a href="http://<%= settings.domain %>" title="<%= settings.site_name.capitalize %>"><%= settings.site_name.capitalize %></a></p>
+  <p class="skwidget-footer">powered by <a href="http://www.<%= settings.domain %>" title="<%= settings.site_name.capitalize %>"><%= settings.site_name.capitalize %></a></p>
 </div>
 ~~~
