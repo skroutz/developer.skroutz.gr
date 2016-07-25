@@ -17,6 +17,7 @@ en:
   docs:
     index:
       view_doc: 'View Documentation'
+      request_access: 'Request Access'
     apiv3:
       short_description: 'The official %{flavor} API. Access the huge %{flavor} database and create beautiful apps.'
       overview: 'Overview'
@@ -35,7 +36,6 @@ en:
       favorites: 'User Favorites'
       notifications: 'User Notifications'
       troubleshooting: 'Troubleshooting'
-      early_access: 'Early Access Request'
     apiv2:
       short_description: 'Oldie but still goldie. API v2 is deprecated and should not be used for new applications.'
       overview: 'Overview'

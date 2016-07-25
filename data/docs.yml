@@ -1,6 +1,7 @@
 apiv3:
   base: '/api/v3/'
   featured: true
+  request_form: true
   icon: 'fa-code'
   pages:
     - { title: 'overview', url: '/api/v3/' }
