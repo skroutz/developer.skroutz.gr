@@ -13,7 +13,7 @@ api_email: 'api@alve.com'
 analytics_email: 'analytics@alve.com'
 
 github_profile: 'https://github.com/skroutz'
-apiv3_early_access_form: 'http://docs.google.com/forms/d/1mUk6pvAXR7yiMqtau8FWnBFamKCY320fL70El_RgN68/viewform'
+api_access_form: 'http://skroutz.it/API_access'
 
 # External Services
 google_analytics_code: 'UA-31711644-1'
