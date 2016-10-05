@@ -5,6 +5,101 @@ title: changelog
 
 # Changelog <%= edit_link %>
 
+## 2016-10-5 - v3.1.0
+
+### Introducing API minor version support!
+
+You can read more about it in our <%= link_to 'Versioning',
+                                              '/api/v3',
+                                              anchor: 'versioning' %>
+section.
+
+* Error responses are normalized into a common format. Read more about it in the
+<%= link_to 'Error Handling',
+            '/api/v3',
+            anchor: 'error-handling' %>
+section.
+
+
+Expose attribute `favorited` in <%= link_to 'Sku',
+                                            '/api/v3/sku' %>.
+
+: This attribute signifies whether the user has favorited the SKU (available for user authenticated requests).
+
+## 2016-10-4 - v3.0.23
+
+* Shop `review_score` is now rounded to 1 decimal point in <%= link_to 'Shop',
+                                                                       '/api/v3/shop',
+                                                                       anchor: 'retrieve-a-single-shop' %>.
+
+Expose attribute `i` in <%= link_to 'Search Autocomplete',
+                                    '/api/v3/search',
+                                    anchor: 'autocomplete' %>.
+
+: This attribute is an index that can be used as the starting point from where the keyphrase should be highlighted.
+
+Expose attribute `order` in <%= link_to 'Sku specification',
+                                        '/api/v3/sku',
+                                        anchor: 'retrieve-an-skus-specifications' %>.
+
+: Clients can use this field to ensure the specifications are in the correct order.  
+Additionally the specifications are now returned in the correct order to begin with.
+
+Expose attribute `sizes` in <%= link_to 'Products',
+                                        '/api/v3/product',
+                                        anchor: 'retrieve-a-single-product' %>.
+
+: A mapping to other sizes is also provided.
+
+Remove attribute `name`  in <%= link_to 'User',
+                                        '/api/v3/user' %>.
+
+: The `name` attribute was not used and it was always returning 'null'.
+
+Expose attribute `type` in <%= link_to 'User',
+                                       '/api/v3/user' %>.
+
+: A user can register through skroutz or by choosing a 3rd provider like Facebook or Google.  
+The `type` attribute contains this info.
+
+Expose optional attribute `sku_rating_breakdown` in <%= link_to 'Sku reviews',
+                                                                '/api/v3/sku',
+                                                                anchor: 'retrieve-an-skus-reviews' %>.
+
+: This is a summary of sku reviews. Contains the total amount of votes for each star.
+
+Expose attribute `extra_info` in <%= link_to 'Shop',
+                                             '/api/v3/shop',
+                                             anchor: 'retrieve-a-single-shop' %>.
+
+: The attribute is a hash containing 2 fields: `time_on_platform` & `orders_per_week`.
+
+#### Shop review changes
+
+&nbsp;&nbsp; Due to shop reviews changing from a 5 star rating system to a binary system (positive / negative)  
+&nbsp;&nbsp; and moving to a more structured approach, the following changes are made:
+
+Expose attribute `negative` in <%= link_to 'Shop review',
+                                           '/api/v3/shop',
+                                           anchor: 'retrieve-a-shops-reviews' %>.
+Expose attribute `reasons` in <%= link_to 'Shop review',
+                                          '/api/v3/shop',
+                                          anchor: 'retrieve-a-shops-reviews' %>.
+
+: An array list of reasons the user selected. The `negative` field above tells if the reasons are negative or positive.
+
+Expose optional attribute `shop_rating_breakdown` in <%= link_to 'Shop review',
+                                                                 '/api/v3/shop',
+                                                                 anchor: 'retrieve-a-shops-reviews' %>.
+
+: This is a summary of shop reviews. Contains the total amount of votes for each impression (positive / negative).
+
+Expose attribute `to_positive_reasons` in <%= link_to 'Shop',
+                                                      '/api/v3/shop',
+                                                      anchor: 'retrieve-a-single-shop' %>.
+
+: An array list of positive reasons for the shop aggregated by all reviews.
+
 ## 2016-04-19 - v3.0.22
 
 * Add optional sku review linked resource in <%= link_to 'SKU Review Vote',

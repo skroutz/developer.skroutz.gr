@@ -1,42 +1,45 @@
 ---
 :request:
-  :url: https://api.skroutz.gr/notifications
+  :url: http://api.skroutz.gr/notifications
   :headers:
-    :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer dwJGwyyT2ZdRbxOup7LLP1u1ulmNBPtc5LXkGJEVCL1EPf9R4rkRdgmgic6812097dQdwEPoA7vu/vMzUacMg==
+    :accept: application/vnd.skroutz+json; version=3.1
+    :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
   :params:
     :per: 1
-  :verb: GET
+  :verb: :get
 :response:
   :status: 200
   :headers:
     server: nginx
+    date: Wed, 05 Oct 2016 13:59:54 GMT
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '99'
-    x-ratelimit-reset: '1426506000'
-    status: 200 OK
-    link: <https://api.skroutz.gr/notifications?page=100&per=1>; rel="last", <https://api.skroutz.gr/notifications?page=2&per=1>;
+    x-ratelimit-remaining: '51'
+    x-ratelimit-reset: '1475676000'
+    x-frame-options: SAMEORIGIN
+    x-xss-protection: 1; mode=block
+    x-content-type-options: nosniff
+    link: <http://api.skroutz.gr/notifications?page=100&per=1>; rel="last", <http://api.skroutz.gr/notifications?page=2&per=1>;
       rel="next"
-    x-ua-compatible: IE=Edge,chrome=1
+    etag: W/"30ef506559be58629ebe54b2d2e3b6b5"
     cache-control: max-age=0, private, must-revalidate
-    x-request-id: '2713218307'
-    x-runtime: '0.091179'
+    x-request-id: '727457027'
+    x-runtime: '0.050126'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
-    x-app: frankie_ssl
-    content-length: '507'
-    accept-ranges: bytes
-    date: Mon, 16 Mar 2015 11:39:33 GMT
-    x-varnish: '2713218307'
+    x-app: rontok
+    x-varnish: '727457026'
     age: '0'
-    via: 1.1 varnish
-    connection: close
+    via: 1.1 varnish-v4
     x-origin: lb2
     x-cache: MISS
-  :body: '{"notifications":[{"id":80449671,"etype":"price_up","eventable_id":446748,"eventable_type":"Sku","eventable_name":"Tern
-    Link C7","eventable_url":"http://www.skroutz.gr/s/446748/Tern-Link-C7.html?from=account_notifications","event_text":null,"snapshot":{"price_min":410.0,"latest_price":399.0,"change_rate":0.028},"is_viewed":true,"aggregated":false,"created_at":"2015-03-15T00:49:05+02:00","updated_at":"2015-03-15T21:17:16+02:00","sku":{"id":446748,"display_name":"Tern
-    Link C7","images":{"main":"http://b.scdn.gr/images/sku_main_images/000446/446748/medium_2012-tn-photo-link-c7-blk-yellow-web.jpg","alternatives":["http://d.scdn.gr/images/sku_images/000054/54304/2012-tn-photo-link-c7-blk-yellow-fold-web.jpg"]},"click_url":null,"virtual":false,"future":false},"category_name":"\u03a0\u03bf\u03b4\u03ae\u03bb\u03b1\u03c4\u03b1"}],"meta":{"pagination":{"total_results":100,"total_pages":100,"page":1,"per":1}}}'
-:created_at: 2015-03-16 13:36:13.832454329 +02:00
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    transfer-encoding: chunked
+    connection: close
+  :body: '{"notifications":[{"id":314233664,"etype":"price_drop","eventable_id":4672057,"eventable_type":"Sku","eventable_name":"Omron
+    M6 HEM-7321","eventable_url":"http://api.skroutz.gr/s/4672057/Omron-M6-HEM-7321.html?from=account_notifications","event_text":null,"snapshot":{"price_min":56.19,"latest_price":56.89,"change_rate":0.012,"from_threshold":false},"is_viewed":true,"aggregated":false,"created_at":"2016-10-05T16:16:29+03:00","updated_at":"2016-10-05T16:46:32+03:00","sku":{"id":4672057,"category_id":1339,"display_name":"Omron
+    M6 HEM-7321","images":{"main":"https://d.scdn.gr/images/sku_main_images/004672/4672057/medium_14967045-orig.jpg","alternatives":[]},"click_url":null,"virtual":false,"future":false,"first_product_shop_info":null},"category_name":"Πιεσόμετρα"}],"meta":{"pagination":{"total_results":100,"total_pages":100,"page":1,"per":1}}}'
+:created_at: 2016-10-05 16:59:54.289425913 +03:00

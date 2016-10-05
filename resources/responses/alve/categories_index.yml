@@ -1,9 +1,9 @@
 ---
 :request:
-  :url: https://api.alve.com/categories
+  :url: http://api.alve.com/categories
   :headers:
-    :accept: application/vnd.alve+json; version=3
-    :authorization: Bearer 5Iq6FpP5ygw3M/ajGUZ34X4vsUprjIan8Dypsni6eEuJ0987ERkjw7APTTgyRk58KbqtrgGSnb46w3/dmew==
+    :accept: application/vnd.alve+json; version=3.1
+    :authorization: Bearer Ei3DkEzs/gQSMk8EW8mPBJEyYPCliK7bvq1KhuNcnkrnbMd2TrbOfdvf1PpyWJ8nqQEorWau0Aq0xppWe4gdzg==
   :params:
     :page: 1
     :per: 5
@@ -12,38 +12,37 @@
   :status: 200
   :headers:
     server: nginx
+    date: Wed, 05 Oct 2016 14:33:30 GMT
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
     x-ratelimit-remaining: '99'
-    x-ratelimit-reset: '1446479700'
-    status: 200 OK
+    x-ratelimit-reset: '1475678040'
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
-    link: <https://api.alve.com/categories?page=142&per=5>; rel="last", <https://api.alve.com/categories?page=2&per=5>;
+    link: <http://api.alve.com/categories?page=187&per=5>; rel="last", <http://api.alve.com/categories?page=2&per=5>;
       rel="next"
     cache-control: max-age=300, private
-    etag: W/"3490aec6007d336c2191d244d4099210"
-    x-request-id: '278776689'
-    x-runtime: '0.021881'
+    etag: W/"710dcc85069f2d872e5c3df3854ad5cf"
+    x-request-id: '57941365'
+    x-runtime: '0.089125'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
-    x-app: as3_ssl
-    content-length: '423'
-    accept-ranges: bytes
-    date: Mon, 02 Nov 2015 15:54:38 GMT
-    x-varnish: '278776689'
+    x-app: as1
+    x-varnish: '57941364'
     age: '0'
-    via: 1.1 varnish
-    connection: close
+    via: 1.1 varnish-v4
     x-origin: lb2
     x-cache: MISS
-  :body: '{"categories":[{"id":1,"name":"Alve","children_count":6,"image_url":"http://alve-a.scdn.gr/images/categories/large/1.jpg","parent_id":0,"fashion":false,"layout_mode":"list","web_uri":"https://api.alve.com/c/1/root.html","path":"1","show_specifications":false,"manufacturer_title":"Markalar"},{"id":2,"name":"Τeknoloji","children_count":7,"image_url":"http://alve-a.scdn.gr/images/categories/large/2.jpg","parent_id":1,"fashion":false,"layout_mode":"list","web_uri":"https://api.alve.com/c/2/teknoloji.html","path":"1,2","show_specifications":false,"manufacturer_title":"Markalar"},{"id":3,"name":"Moda
-    - Güzellik","children_count":11,"image_url":"http://alve-a.scdn.gr/images/categories/large/3.jpg","parent_id":1,"fashion":false,"layout_mode":"list","web_uri":"https://api.alve.com/c/3/moda.html","path":"1,3","show_specifications":false,"manufacturer_title":"Markalar"},{"id":4,"name":"Çocuk
-    - Bebek","children_count":6,"image_url":"http://alve-a.scdn.gr/images/categories/large/4.jpg","parent_id":1,"fashion":false,"layout_mode":"list","web_uri":"https://api.alve.com/c/4/cocuk-bebek.html","path":"1,4","show_specifications":false,"manufacturer_title":"Markalar"},{"id":5,"name":"Hobi
-    - Spor","children_count":9,"image_url":"http://alve-a.scdn.gr/images/categories/large/5.jpg","parent_id":1,"fashion":false,"layout_mode":"list","web_uri":"https://api.alve.com/c/5/hobi-spor.html","path":"1,5","show_specifications":false,"manufacturer_title":"Markalar"}],"meta":{"pagination":{"total_results":708,"total_pages":142,"page":1,"per":5}}}'
-:created_at: 2015-11-02 17:54:56.107277000 +02:00
+    x-cached: alve miss(0)
+    accept-ranges: bytes
+    content-length: '474'
+    connection: close
+  :body: '{"categories":[{"id":1,"name":"Alve","children_count":7,"image_url":"https://alve-d.scdn.gr/ds/categories/1/1.jpg","parent_id":0,"fashion":false,"layout_mode":"list","web_uri":"http://alve.com/c/1/root.html","code":"root","path":"1","show_specifications":false,"manufacturer_title":"Markalar"},{"id":2,"name":"Τeknoloji","children_count":8,"image_url":"https://alve-c.scdn.gr/ds/categories/2/2.jpg","parent_id":1,"fashion":false,"layout_mode":"list","web_uri":"http://alve.com/c/2/teknoloji.html","code":"technology","path":"1,2","show_specifications":false,"manufacturer_title":"Markalar"},{"id":3,"name":"Moda","children_count":7,"image_url":"https://alve-c.scdn.gr/ds/categories/3/20160328125843_4941742a.jpg","parent_id":1,"fashion":false,"layout_mode":"list","web_uri":"http://alve.com/c/3/moda.html","code":"fashion","path":"1,3","show_specifications":false,"manufacturer_title":"Markalar"},{"id":4,"name":"Çocuk
+    - Bebek","children_count":7,"image_url":"https://alve-a.scdn.gr/ds/categories/4/4.jpg","parent_id":1,"fashion":false,"layout_mode":"list","web_uri":"http://alve.com/c/4/cocuk-bebek.html","code":"baby-kids","path":"1,4","show_specifications":false,"manufacturer_title":"Markalar"},{"id":5,"name":"Hobi
+    - Spor","children_count":8,"image_url":"https://alve-a.scdn.gr/ds/categories/5/5.jpg","parent_id":1,"fashion":false,"layout_mode":"list","web_uri":"http://alve.com/c/5/hobi-spor.html","code":"hobbies-sports","path":"1,5","show_specifications":false,"manufacturer_title":"Markalar"}],"meta":{"pagination":{"total_results":932,"total_pages":187,"page":1,"per":5}}}'
+:created_at: 2016-10-05 17:33:30.109721390 +03:00
 :meta:
   :description: Lists all categories

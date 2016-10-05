@@ -2,38 +2,38 @@
 :request:
   :url: http://api.alve.com/categories/33/favorites
   :headers:
-    :accept: application/vnd.alve+json; version=3
-    :authorization: Bearer XsWUwEUOwk8OHBcwxIKVzLxJQVPsb6xXtim5MltaRcg8zbrh9qcdU2keW/pI/Bw9Vz9YPVWmWlT3llbzI54yTQ==
+    :accept: application/vnd.alve+json; version=3.1
+    :authorization: Bearer Ei3DkEzs/gQSMk8EW8mPBJEyYPCliK7bvq1KhuNcnkrnbMd2TrbOfdvf1PpyWJ8nqQEorWau0Aq0xppWe4gdzg==
   :verb: :get
 :response:
   :status: 200
   :headers:
     server: nginx
+    date: Wed, 05 Oct 2016 14:33:30 GMT
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '99'
-    x-ratelimit-reset: '1449590280'
-    status: 200 OK
+    x-ratelimit-remaining: '92'
+    x-ratelimit-reset: '1475678040'
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
-    etag: W/"83031efb0190854fb71ad5df38eddbbd"
+    etag: W/"90a88a0c23ebbc141e4768690ad112d4"
     cache-control: max-age=0, private, must-revalidate
-    x-request-id: '1088714100'
-    x-runtime: '0.069799'
+    x-request-id: '43162765'
+    x-runtime: '0.073494'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
     x-app: as1
-    content-length: '281'
-    accept-ranges: bytes
-    date: Tue, 08 Dec 2015 15:57:08 GMT
-    x-varnish: '1088714100'
+    x-varnish: '43162764'
     age: '0'
-    via: 1.1 varnish
-    connection: close
+    via: 1.1 varnish-v4
     x-origin: lb1
     x-cache: MISS
-  :body: '{"favorites":[{"id":5236,"have_it":false,"user_id":1184,"user_notes":null,"sku_id":3155889,"created_at":"2015-12-08T17:56:02+02:00","updated_at":"2015-12-08T17:56:02+02:00","get_absolute_threshold":null},{"id":5237,"have_it":false,"user_id":1184,"user_notes":null,"sku_id":2600604,"created_at":"2015-12-08T17:56:03+02:00","updated_at":"2015-12-08T17:56:03+02:00","get_absolute_threshold":null},{"id":5238,"have_it":false,"user_id":1184,"user_notes":null,"sku_id":2312522,"created_at":"2015-12-08T17:56:04+02:00","updated_at":"2015-12-08T17:56:04+02:00","get_absolute_threshold":null},{"id":5239,"have_it":false,"user_id":1184,"user_notes":null,"sku_id":808273,"created_at":"2015-12-08T17:56:05+02:00","updated_at":"2015-12-08T17:56:05+02:00","get_absolute_threshold":null},{"id":5240,"have_it":false,"user_id":1184,"user_notes":null,"sku_id":1966870,"created_at":"2015-12-08T17:56:06+02:00","updated_at":"2015-12-08T17:56:06+02:00","get_absolute_threshold":null},{"id":5241,"have_it":false,"user_id":1184,"user_notes":null,"sku_id":3222580,"created_at":"2015-12-08T17:56:07+02:00","updated_at":"2015-12-08T17:56:07+02:00","get_absolute_threshold":null}],"meta":{"pagination":{"total_results":6,"total_pages":1,"page":1,"per":25}}}'
-:created_at: 2015-12-08 17:56:37.512980562 +02:00
+    x-cached: alve miss(0)
+    accept-ranges: bytes
+    content-length: '195'
+    connection: close
+  :body: '{"favorites":[{"id":6301,"have_it":false,"user_id":9529,"user_notes":null,"sku_id":387159,"created_at":"2016-04-19T16:24:05+03:00","updated_at":"2016-04-19T16:24:05+03:00","get_absolute_threshold":null}],"meta":{"pagination":{"total_results":1,"total_pages":1,"page":1,"per":25}}}'
+:created_at: 2016-10-05 17:33:30.819370684 +03:00

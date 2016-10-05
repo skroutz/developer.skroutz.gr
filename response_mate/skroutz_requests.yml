@@ -1,5 +1,5 @@
 default_headers: &default_headers
-  accept: 'application/vnd.skroutz+json; version=3'
+  accept: 'application/vnd.skroutz+json; version=3.1'
   authorization: "Bearer {{oauth_token}}"
 
 name: apiv3
@@ -31,7 +31,7 @@ requests:
   -
     key: children_api_category
     request:
-      url: '{{base_url}}/categories/73/children'
+      url: '{{base_url}}/categories/252/children'
       headers:
         <<: *default_headers
   -
@@ -272,7 +272,7 @@ requests:
   -
     key: favorites_show
     request:
-      url: '{{base_url}}/favorites/825561'
+      url: '{{base_url}}/favorites/5896665'
       headers:
         <<: *default_headers
   -
@@ -288,7 +288,7 @@ requests:
     key: favorite_update
     request:
       verb: PUT
-      url: '{{base_url}}/favorites/340676'
+      url: '{{base_url}}/favorites/5896665'
       headers:
         <<: *default_headers
       params:
@@ -371,7 +371,7 @@ requests:
   -
     key: notifications_show
     request:
-      url: '{{base_url}}/notifications/3642082'
+      url: '{{base_url}}/notifications/314233664'
       headers:
         <<: *default_headers
   -
@@ -382,7 +382,7 @@ requests:
       headers:
         <<: *default_headers
       params:
-        ids: [80580989, 80449671, 80372282, 80140458, 79742874]
+        ids: [314083116, 80449671, 80372282, 80140458, 79742874]
   -
     key: sku_reviews
     request:
@@ -390,10 +390,16 @@ requests:
       headers:
         <<: *default_headers
   -
+    key: sku_reviews_with_rating_breakdown
+    request:
+      url: '{{base_url}}/skus/3982592/reviews?include_meta=sku_rating_breakdown'
+      headers:
+        <<: *default_headers
+  -
     key: sku_review_vote_create
     request:
       verb: POST
-      url: '{{base_url}}/skus/3444904/reviews/58338/votes'
+      url: '{{base_url}}/skus/3982592/reviews/21943/votes'
       headers:
         <<: *default_headers
       params:
@@ -402,7 +408,7 @@ requests:
     key: sku_review_vote_create_embed_sku_review
     request:
       verb: POST
-      url: '{{base_url}}/skus/6535417/reviews/81293/votes?embed=sku_review'
+      url: '{{base_url}}/skus/3982592/reviews/18689/votes?embed=sku_review'
       headers:
         <<: *default_headers
       params:
@@ -411,7 +417,7 @@ requests:
     key: sku_review_flag_create
     request:
       verb: POST
-      url: '{{base_url}}/skus/3444904/reviews/58338/flags'
+      url: '{{base_url}}/skus/3982592/reviews/17407/flags'
       headers:
         <<: *default_headers
       params:
@@ -431,7 +437,15 @@ requests:
   -
     key: shop_reviews
     request:
-      url: '{{base_url}}/shops/3/reviews'
+      url: '{{base_url}}/shops/452/reviews'
+      headers:
+        <<: *default_headers
+      params:
+        per: 3
+  -
+    key: shop_reviews_with_rating_breakdown
+    request:
+      url: '{{base_url}}/shops/452/reviews?include_meta=shop_rating_breakdown'
       headers:
         <<: *default_headers
       params:

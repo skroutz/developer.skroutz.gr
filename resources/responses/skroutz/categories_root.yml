@@ -2,38 +2,38 @@
 :request:
   :url: http://api.skroutz.gr/categories/root
   :headers:
-    :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer kWLUrsbkbjINPooZsHU/yFg52OKirqL6OSohB8VIciKAYzIsXt5DKsX3W9wr0FpsV/edY1ezldqqx1H6aQY2Eg==
+    :accept: application/vnd.skroutz+json; version=3.1
+    :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
   :verb: :get
 :response:
   :status: 200
   :headers:
     server: nginx
+    date: Wed, 05 Oct 2016 13:59:51 GMT
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
     x-ratelimit-remaining: '98'
-    x-ratelimit-reset: '1446475740'
-    status: 200 OK
+    x-ratelimit-reset: '1475676000'
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
     cache-control: max-age=300, private
-    etag: W/"75416eccbe3f573a935ebfa9b10bd043"
-    x-request-id: '1643287665'
-    x-runtime: '0.018260'
+    etag: W/"7d50d81aa425481d67d98f7b20ff1cab"
+    x-request-id: '683285214'
+    x-runtime: '0.016221'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
     x-app: rontok
-    content-length: '244'
-    accept-ranges: bytes
-    date: Mon, 02 Nov 2015 14:48:29 GMT
-    x-varnish: '1643287665'
+    x-varnish: '683285213'
     age: '0'
-    via: 1.1 varnish
-    connection: close
+    via: 1.1 varnish-v4
     x-origin: lb1
     x-cache: MISS
-  :body: '{"category":{"id":76,"name":"Skroutz","children_count":6,"image_url":"http://c.scdn.gr/images/categories/large/76.jpg","parent_id":0,"fashion":false,"layout_mode":"list","web_uri":"http://api.skroutz.gr/c/76/skroutz.html","path":"76","show_specifications":false,"manufacturer_title":"Κατασκευαστές"}}'
-:created_at: 2015-11-02 16:48:47.541117000 +02:00
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    content-length: '245'
+    connection: close
+  :body: '{"category":{"id":76,"name":"Skroutz","children_count":7,"image_url":"https://a.scdn.gr/ds/categories/76/76.jpg","parent_id":0,"fashion":false,"layout_mode":"list","web_uri":"http://skroutz.gr/c/76/skroutz.html","code":"skroutz","path":"76","show_specifications":false,"manufacturer_title":"Κατασκευαστές"}}'
+:created_at: 2016-10-05 16:59:51.062012294 +03:00

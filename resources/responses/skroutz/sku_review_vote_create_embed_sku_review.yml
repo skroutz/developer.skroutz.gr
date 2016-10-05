@@ -1,32 +1,42 @@
 ---
 :request:
   :verb: :post
-  :url: http://api.skroutz.gr/skus/6535417/reviews/81293/votes?embed=sku_review
+  :url: http://api.skroutz.gr/skus/3982592/reviews/18689/votes?embed=sku_review
   :headers:
-    :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer _redacted_
+    :accept: application/vnd.skroutz+json; version=3.1
+    :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
   :params:
     :vote[helpful]: false
 :response:
   :status: 201
   :headers:
+    server: nginx
+    date: Wed, 05 Oct 2016 13:59:54 GMT
+    content-type: application/json; charset=utf-8
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '45'
+    x-ratelimit-reset: '1475676000'
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
-    access-control-allow-origin: "*"
-    access-control-request-method: "*"
-    content-type: application/json; charset=utf-8
-    x-meta-request-version: 0.2.1
-    etag: W/"42330fa867c2835883998cba1bd2cf4f"
+    etag: W/"138c6c8868188c20e840bf3e217073fb"
     cache-control: max-age=0, private, must-revalidate
-    x-request-id: 8ac8f1f6-6e57-44a9-859a-114864e402d6
-    x-runtime: '0.096420'
-    server: WEBrick/1.3.1 (Ruby/2.1.7/2015-08-18)
-    date: Tue, 19 Apr 2016 11:25:34 GMT
-    content-length: '374'
+    x-request-id: '725897612'
+    x-runtime: '0.061443'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: rontok
+    x-varnish: '725897611'
+    age: '0'
+    via: 1.1 varnish-v4
+    x-origin: lb2
+    x-cache: MISS
+    x-cached: skroutz miss(0)
+    content-length: '680'
     connection: close
-    set-cookie: locale=el_GR; path=/, _helmet_couch=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTk0MGVhNmUyMzE1OWE5Mjg1Njk3ZWU5OTc4NjRhODY4BjsAVEkiC2xvY2FsZQY7AFRJIgplbF9HUgY7AEY%3D--9777bb7ae034e4d73facc1779b7c84f2b152d817;
-      path=/; expires=Wed, 19 Apr 2017 11:25:34 -0000; HttpOnly
-  :body: '{"sku_review_vote":{"id":131576,"sku_review_id":81293,"user_id":447533,"helpful":false,"created_at":"2016-04-19T14:25:34+03:00","sku_review":{"id":81293,"user_id":389640,"review":"bad
-    review!!!!!!!!!!!!!!!!!!!!!!!!!!!","rating":1,"created_at":"2016-04-19T14:24:13+03:00","demoted":false,"votes_count":1,"helpful_votes_count":0,"voted":true,"flagged":false,"helpful":false}}}'
-:created_at: 2016-04-19 14:25:34.219723104 +03:00
+  :body: '{"sku_review_vote":{"id":220579,"sku_review_id":18689,"user_id":334941,"helpful":false,"created_at":"2016-10-05T16:59:54+03:00","sku_review":{"id":18689,"user_id":180286,"review":"Ευκολοχρηστο
+    δικαρτο με απιστευτες δυνατοτητες,(bluetooth-φακο-καμερα) για την κατηγορια τιμης
+    του.Δυνατη αναπαραγωγη ηχων κλησης -ραδιοφωνου-βιντεο-mp3 και απιστευτη μπαταρια
+    με μολις 25 ευρω!","rating":4,"created_at":"2014-02-21T13:03:32+02:00","demoted":false,"votes_count":10,"helpful_votes_count":9,"voted":true,"flagged":false,"helpful":false}}}'
+:created_at: 2016-10-05 16:59:54.564233683 +03:00

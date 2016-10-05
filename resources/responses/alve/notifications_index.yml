@@ -1,43 +1,48 @@
 ---
 :request:
-  :url: https://api.alve.com/notifications
+  :url: http://api.alve.com/notifications
   :headers:
-    :accept: application/vnd.alve+json; version=3
-    :authorization: Bearer kYxQTj9eI38H22EYUmOnjoYVKulTXPdJmaQjP1J/oNi6H/KljK93vjkpq/iRbnZSlrv3B1FSGVX7zET5ZSXZFg==
+    :accept: application/vnd.alve+json; version=3.1
+    :authorization: Bearer Ei3DkEzs/gQSMk8EW8mPBJEyYPCliK7bvq1KhuNcnkrnbMd2TrbOfdvf1PpyWJ8nqQEorWau0Aq0xppWe4gdzg==
   :params:
     :per: 1
-  :verb: GET
+  :verb: :get
 :response:
   :status: 200
   :headers:
     server: nginx
+    date: Wed, 05 Oct 2016 14:33:36 GMT
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '99'
-    x-ratelimit-reset: '1426506300'
-    status: 200 OK
-    link: <https://api.alve.com/notifications?page=3&per=1>; rel="last", <https://api.alve.com/notifications?page=2&per=1>;
-      rel="next"
-    x-ua-compatible: IE=Edge,chrome=1
+    x-ratelimit-remaining: '51'
+    x-ratelimit-reset: '1475678040'
+    x-frame-options: SAMEORIGIN
+    x-xss-protection: 1; mode=block
+    x-content-type-options: nosniff
+    etag: W/"50ca985a02a89260a4ee4823ab227646"
     cache-control: max-age=0, private, must-revalidate
-    x-request-id: '206358404'
-    x-runtime: '0.094884'
+    x-request-id: '57564593'
+    x-runtime: '0.067914'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
-    x-app: as1_ssl
-    content-length: '540'
-    accept-ranges: bytes
-    date: Mon, 16 Mar 2015 11:44:27 GMT
-    x-varnish: '206358404'
+    x-app: as1
+    x-varnish: '57564592'
     age: '0'
-    via: 1.1 varnish
-    connection: close
+    via: 1.1 varnish-v4
     x-origin: lb2
     x-cache: MISS
+    x-cached: alve miss(0)
+    accept-ranges: bytes
+    content-length: '93'
+    connection: close
   :body: '{"notifications":[{"id":45030,"etype":"price_up","eventable_id":705848,"eventable_type":"Sku","eventable_name":"General
-    Mobile Discovery Elite 32GB","eventable_url":"http://www.alve.com/s/705848/General-Mobile-Discovery-Elite-32GB.html?from=account_notifications","event_text":null,"snapshot":{"price_min":1019.0,"latest_price":1008.81,"change_rate":0.01},"is_viewed":true,"aggregated":false,"created_at":"2015-03-10T12:10:38+02:00","updated_at":"2015-03-11T16:00:39+02:00","sku":{"id":705848,"display_name":"General
-    Mobile Discovery Elite 32GB","images":{"main":"http://alve-d.scdn.gr/images/sku_main_images/000705/705848/medium_discoveryElite_size.png","alternatives":["http://alve-a.scdn.gr/images/sku_images/000815/815720/discoveryElite_Detail_right.png","http://alve-c.scdn.gr/images/sku_images/000815/815721/discoveryElite_Detail_01.png","http://alve-c.scdn.gr/images/sku_images/000815/815722/discoveryElite_Detail_02.png","http://alve-c.scdn.gr/images/sku_images/000815/815723/discoveryElite_Detail_03.png","http://alve-c.scdn.gr/images/sku_images/000815/815724/discoveryElite_Detail_04.png"]},"click_url":null,"virtual":false,"future":false},"category_name":"Cep
+    Mobile Discovery Elite 32GB","eventable_url":"http://www.alve.com/s/705848/General-Mobile-Discovery-Elite-32GB.html?from=account_notifications","event_text":null,"snapshot":{"price_min":1019.0,"latest_price":1008.81,"change_rate":
+    0.01},"is_viewed":true,"aggregated":false,"created_at":"2015-03-10T12:10:38+02:00","updated_at":"2015-03-11T16:00:39+02:00","sku":{"id":705848,"display_name":"General
+    Mobile Discovery Elite 32GB","images":{"main":"http://alve-d.scdn.gr/images/sku_main_images/000705/705848/medium_discoveryElite_size.png","alternatives":["http://alve-a.scdn.gr/images/sku_images/000815/815720/discoveryElite_Detail
+    _right.png","http://alve-c.scdn.gr/images/sku_images/000815/815721/discoveryElite_Detail_01.png","http://alve-c.scdn.gr/images/sku_images/000815/815722/discoveryElite_Detail_02.png","http://alve-c.scdn.gr/images/sku_images/000815/8157
+    23/discoveryElite_Detail_03.png","http://alve-c.scdn.gr/images/sku_images/000815/815724/discoveryElite_Detail_04.png"]},"click_url":null,"virtual":false,"future":false},"category_name":"Cep
     Telefonu"}],"meta":{"pagination":{"total_results":3,"total_pages":3,"page":1,"per":1}}}'
-:created_at: 2015-03-16 13:41:08.258098099 +02:00
+
+:created_at: 2016-10-05 17:33:36.061606287 +03:00

@@ -2,40 +2,40 @@
 :request:
   :url: http://api.skroutz.gr/shops/452/locations/2500?embed=address
   :headers:
-    :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer 9bBb/SfslzfXVoyFdulvm0kWf5aBa1P6oQEknj2BCvEFK0D9fQTlrALG3lWogTNaEmdSGFs1eCqyBVAbIFHJVw==
+    :accept: application/vnd.skroutz+json; version=3.1
+    :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
   :verb: :get
 :response:
   :status: 200
   :headers:
     server: nginx
+    date: Wed, 05 Oct 2016 13:59:51 GMT
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '95'
-    x-ratelimit-reset: '1449664440'
-    status: 200 OK
+    x-ratelimit-remaining: '87'
+    x-ratelimit-reset: '1475676000'
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
     cache-control: max-age=300, private
     etag: W/"f68744a02bc0ed4ef5c8daf6b6ee1eda"
-    x-request-id: '1649553227'
-    x-runtime: '0.028215'
+    x-request-id: '728686418'
+    x-runtime: '0.031364'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
-    x-app: kavula
-    content-length: '327'
-    accept-ranges: bytes
-    date: Wed, 09 Dec 2015 12:33:59 GMT
-    x-varnish: '1649553227'
+    x-app: rontok
+    x-varnish: '728686417'
     age: '0'
-    via: 1.1 varnish
-    connection: close
+    via: 1.1 varnish-v4
     x-origin: lb2
     x-cache: MISS
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    content-length: '327'
+    connection: close
   :body: '{"location":{"id":2500,"headquarter":true,"phones":["2102899999"],"pickup_point":false,"store":false,"full_address":"14ο
     ΧΛΜ ΕΟ ΑΘΗΝΩΝ ΛΑΜΙΑΣ 14, Τ.Κ. 14452, ΜΕΤΑΜΟΡΦΩΣΗ, Αττικής","format":"structured","lat":"38.062297","lng":"23.75991","info":"","address":{"id":2500,"street_number":"14","street":"14ο
     ΧΛΜ ΕΟ ΑΘΗΝΩΝ ΛΑΜΙΑΣ","postcode":"14452","city":"ΜΕΤΑΜΟΡΦΩΣΗ","region":"Αττικής","country":"Ελλάδα"}}}'
-:created_at: 2015-12-09 14:33:28.937227875 +02:00
+:created_at: 2016-10-05 16:59:51.606305635 +03:00

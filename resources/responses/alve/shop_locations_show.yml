@@ -1,41 +1,41 @@
 ---
 :request:
-  :url: http://api.alve.com/shops/207/locations/13
+  :url: http://api.alve.com/shops/42/locations/250
   :headers:
-    :accept: application/vnd.alve+json; version=3
-    :authorization: Bearer XsWUwEUOwk8OHBcwxIKVzLxJQVPsb6xXtim5MltaRcg8zbrh9qcdU2keW/pI/Bw9Vz9YPVWmWlT3llbzI54yTQ==
+    :accept: application/vnd.alve+json; version=3.1
+    :authorization: Bearer Ei3DkEzs/gQSMk8EW8mPBJEyYPCliK7bvq1KhuNcnkrnbMd2TrbOfdvf1PpyWJ8nqQEorWau0Aq0xppWe4gdzg==
   :verb: :get
 :response:
   :status: 200
   :headers:
     server: nginx
+    date: Wed, 05 Oct 2016 14:33:31 GMT
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '96'
-    x-ratelimit-reset: '1449665340'
-    status: 200 OK
+    x-ratelimit-remaining: '88'
+    x-ratelimit-reset: '1475678040'
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
     cache-control: max-age=300, private
-    etag: W/"e355b24a098d1a25ea6fe3109c460e70"
-    x-request-id: '1088843691'
-    x-runtime: '0.026211'
+    etag: W/"3baff6e0d3baf2b769b0560270f0e4a7"
+    x-request-id: '43102424'
+    x-runtime: '0.092903'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
     x-app: as1
-    content-length: '241'
-    accept-ranges: bytes
-    date: Wed, 09 Dec 2015 12:48:53 GMT
-    x-varnish: '1088843691'
+    x-varnish: '43102423'
     age: '0'
-    via: 1.1 varnish
-    connection: close
+    via: 1.1 varnish-v4
     x-origin: lb1
     x-cache: MISS
-  :body: '{"location":{"id":13,"headquarter":true,"phones":["4445756"],"pickup_point":false,"store":false,"full_address":"Batman
-    18, P.Κ. 34734, Kadıköy, Sahrayıcedid, İstanbul","format":"unstructured","lat":"40.98765","lng":"29.083454","info":"Batman
-    Sok. No:18 Sahrayıcedid / Kadıköy - İstanbul"}}'
-:created_at: 2015-12-09 14:48:22.564570647 +02:00
+    x-cached: alve miss(0)
+    accept-ranges: bytes
+    content-length: '279'
+    connection: close
+  :body: '{"location":{"id":250,"headquarter":false,"phones":["08503330912"],"pickup_point":true,"store":true,"full_address":"Londra
+    Asfaltı 11, P.Κ. 34158, Bakırköy, Ataköy, İstanbul","format":"unstructured","lat":"40.991691","lng":"28.829927","info":"Londra
+    Asfaltı Kuleli Mevkii E-5 Karayolu Üzeri AirportAvm Kat -1 NO:11 Bakırköy / İstanbul"}}'
+:created_at: 2016-10-05 17:33:31.524827052 +03:00

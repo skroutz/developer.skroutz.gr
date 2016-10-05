@@ -2,8 +2,8 @@
 :request:
   :url: http://api.skroutz.gr/categories/40/skus?q=iphone
   :headers:
-    :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer 9bBb/SfslzfXVoyFdulvm0kWf5aBa1P6oQEknj2BCvEFK0D9fQTlrALG3lWogTNaEmdSGFs1eCqyBVAbIFHJVw==
+    :accept: application/vnd.skroutz+json; version=3.1
+    :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
   :params:
     :per: 2
   :verb: :get
@@ -11,37 +11,42 @@
   :status: 200
   :headers:
     server: nginx
+    date: Wed, 05 Oct 2016 13:59:53 GMT
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '95'
-    x-ratelimit-reset: '1449661680'
-    status: 200 OK
+    x-ratelimit-remaining: '56'
+    x-ratelimit-reset: '1475676000'
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
-    etag: W/"7ecbb8ad282a09bb6fc75a71d0c26334"
+    etag: W/"ff154cb71d0b1cf3819a1aa6b042894c"
     cache-control: max-age=0, private, must-revalidate
-    x-request-id: '1648995430'
-    x-runtime: '0.045412'
+    x-request-id: '716107480'
+    x-runtime: '0.063052'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
-    x-app: kavula
-    content-length: '846'
-    accept-ranges: bytes
-    date: Wed, 09 Dec 2015 11:47:04 GMT
-    x-varnish: '1648995430'
+    x-app: rontok
+    x-varnish: '716107479'
     age: '0'
-    via: 1.1 varnish
-    connection: close
+    via: 1.1 varnish-v4
     x-origin: lb2
     x-cache: MISS
-  :body: '{"skus":[{"id":3902581,"ean":"","pn":"MF265DN/A MF266DN/A","name":"iPhone
-    4S (8GB)","display_name":"Apple iPhone 4S (8GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":330.0,"price_min":316.37,"reviewscore":3.97619,"shop_count":8,"plain_spec_summary":"SmartPhone,  Single,
-    Οθόνη: 3.5\", CPU: 1000 MHz, Πυρήνες CPU: 2, RAM: 512 MB,  Μνήμη Αποθήκευσης:
-    8 GB,    Δίκτυο Σύνδεσης: 3G, Λειτουργικό Σύστημα: iOS","manufacturer_id":356,"future":false,"reviews_count":84,"virtual":false,"images":{"main":"http://d.scdn.gr/images/sku_main_images/003902/3902581/medium_20151106131658_apple_iphone_4s_8gb.jpeg","alternatives":["http://c.scdn.gr/images/sku_images/011350/11350754/20151106131705_b6efaa30.jpeg"]},"web_uri":"http://skroutz.gr/s/3902581/Apple-iPhone-4S-8GB.html"},{"id":390486,"ean":"","pn":"iPhone
-    4S 16GB","name":"iPhone 4S (16GB)","display_name":"Apple iPhone 4S (16GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":379.0,"price_min":324.85,"reviewscore":4.45455,"shop_count":4,"plain_spec_summary":"SmartPhone,  Single,
-    Οθόνη: 3.5\", CPU: 1000 MHz, Πυρήνες CPU: 2, RAM: 512 MB,  Μνήμη Αποθήκευσης:
-    16.0 GB,    Δίκτυο Σύνδεσης: 3G, Λειτουργικό Σύστημα: iOS","manufacturer_id":356,"future":false,"reviews_count":66,"virtual":false,"images":{"main":"http://d.scdn.gr/images/sku_main_images/000390/390486/medium_1234.jpg","alternatives":["http://a.scdn.gr/images/sku_images/012928/12928351/Untitled.jpg","http://b.scdn.gr/images/sku_images/012928/12928352/12345.jpg","http://a.scdn.gr/images/sku_images/012928/12928353/smartfon-apple-iphone-4s-16gb-white-md239ru-i-a-30014672b.jpg","http://a.scdn.gr/images/sku_images/012928/12928354/smartfon-apple-iphone-4s-16gb-white-md239ru-i-a-30014672b2.jpg","http://b.scdn.gr/images/sku_images/012928/12928355/smartfon-apple-iphone-4s-16gb-white-md239ru-i-a-30014672b1.jpg"]},"web_uri":"http://skroutz.gr/s/390486/Apple-iPhone-4S-16GB.html"}],"meta":{"ordered_by":"price","pagination":{"total_results":18,"total_pages":9,"page":1,"per":2}}}'
-:created_at: 2015-12-09 13:46:33.421981112 +02:00
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    transfer-encoding: chunked
+    connection: close
+  :body: '{"skus":[{"id":3783654,"ean":"","pn":"ME432GB/A ME433GB/A ME434GB/A ME432DN/A
+    ME433DN/A ME434DN/A ME432B/A ME433B/A ME434B/A ME432KS/A ME307LL/A ME298LL/A ME432CS/A
+    ME306LL/A ME323LL/A ME2","name":"iPhone 5S (16GB)","display_name":"Apple iPhone
+    5S (16GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":567.0,"price_min":275.3,"reviewscore":4.22026,"shop_count":62,"plain_spec_summary":"SmartPhone,
+    SIM: Single, Οθόνη: 4\", 1136 x 640 pixels, CPU: 1300 MHz, Πυρήνες CPU: 2, RAM:
+    1 GB, Μνήμη Αποθήκευσης: 16 GB, Δίκτυο: 4G, Κάμερα: 8 MP, Λειτουργικό: iOS, Μπαταρία:
+    1560 mAh","manufacturer_id":356,"future":false,"reviews_count":227,"virtual":false,"images":{"main":"https://d.scdn.gr/images/sku_main_images/003783/3783654/medium_20160802142646_apple_iphone_5s_16gb.jpeg","alternatives":["https://c.scdn.gr/images/sku_images/015749/15749455/20160804130145_bd138128.jpeg","https://c.scdn.gr/images/sku_images/015730/15730415/20160801174234_b1f375b2.jpeg","https://b.scdn.gr/images/sku_images/015749/15749493/20160804131811_88a8b95d.jpeg","https://b.scdn.gr/images/sku_images/015730/15730400/20160802142647_6c5d9de1.jpeg","https://b.scdn.gr/images/sku_images/012176/12176629/iphone5s-gallery2-2013","https://d.scdn.gr/images/sku_images/012176/12176643/iphone5s-gallery3-2013","https://a.scdn.gr/images/sku_images/015730/15730414/20160801174220_301fe755.jpeg","https://b.scdn.gr/images/sku_images/015730/15730405/20160801173748_b13c34a6.jpeg","https://c.scdn.gr/images/sku_images/015749/15749464/20160804130546_df38f1e8.jpeg","https://a.scdn.gr/images/sku_images/015749/15749477/20160804131254_2878491d.jpeg","https://d.scdn.gr/images/sku_images/015749/15749478/20160804131303_c8ded413.jpeg","https://d.scdn.gr/images/sku_images/015749/15749479/20160804131311_566c96bb.jpeg","https://d.scdn.gr/images/sku_images/012176/12176654/iphone5s-gallery5-2013","https://a.scdn.gr/images/sku_images/012279/12279003/iphone5s-gallery4-2013","https://b.scdn.gr/images/sku_images/012176/12176660/iphone5s-gallery6-2013","https://c.scdn.gr/images/sku_images/012176/12176664/iphone5s-gallery8-2013"]},"web_uri":"http://skroutz.gr/s/3783654/Apple-iPhone-5S-16GB.html","favorited":true},{"id":4763156,"ean":"","pn":"MG902GB/A
+    MG902DN/A MG902KS/A MG8X2KS/A MG8X2DN/A MG8X2GB/A","name":"iPhone 5C (8GB)","display_name":"Apple
+    iPhone 5C (8GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":344.0,"price_min":319.0,"reviewscore":3.80769,"shop_count":7,"plain_spec_summary":"SmartPhone,
+    SIM: Single, Οθόνη: 4\", 1136 x 640 pixels, CPU: 1300 MHz, Πυρήνες CPU: 2, RAM:
+    1 GB, Μνήμη Αποθήκευσης: 8 GB, Δίκτυο: 4G, Κάμερα: 8 MP, Λειτουργικό: iOS, Μπαταρία:
+    1510 mAh","manufacturer_id":356,"future":false,"reviews_count":26,"virtual":false,"images":{"main":"https://a.scdn.gr/images/sku_main_images/004763/4763156/medium_iPhone5c_34L_AllColors_PRINT_verge_super_wide.jpg","alternatives":["https://a.scdn.gr/images/sku_images/012656/12656398/design_materials.jpg","https://c.scdn.gr/images/sku_images/012656/12656407/N48-Blue_PB-PF-PSL-LockUp_v3_TZ_w-PRINT_verge_super_wide.jpg","https://c.scdn.gr/images/sku_images/012656/12656409/iphone5c-selection-green-2013","https://a.scdn.gr/images/sku_images/012656/12656414/iphone5c-selection-yellow-2013","https://b.scdn.gr/images/sku_images/012656/12656422/iphone5c-selection-white-2013"]},"web_uri":"http://skroutz.gr/s/4763156/Apple-iPhone-5C-8GB.html","favorited":true}],"meta":{"ordered_by":"price","pagination":{"total_results":24,"total_pages":12,"page":1,"per":2}}}'
+:created_at: 2016-10-05 16:59:53.912022169 +03:00

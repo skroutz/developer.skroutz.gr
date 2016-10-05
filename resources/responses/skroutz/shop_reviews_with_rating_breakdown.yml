@@ -1,6 +1,6 @@
 ---
 :request:
-  :url: http://api.skroutz.gr/shops/452/reviews
+  :url: http://api.skroutz.gr/shops/452/reviews?include_meta=shop_rating_breakdown
   :headers:
     :accept: application/vnd.skroutz+json; version=3.1
     :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
@@ -15,22 +15,23 @@
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '41'
+    x-ratelimit-remaining: '40'
     x-ratelimit-reset: '1475676000'
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
-    link: <http://api.skroutz.gr/shops/452/reviews?page=139&per=3>; rel="last", <http://api.skroutz.gr/shops/452/reviews?page=2&per=3>;
+    link: <http://api.skroutz.gr/shops/452/reviews?include_meta=shop_rating_breakdown&page=139&per=3>;
+      rel="last", <http://api.skroutz.gr/shops/452/reviews?include_meta=shop_rating_breakdown&page=2&per=3>;
       rel="next"
     cache-control: max-age=300, private
-    etag: W/"d1caa06d0250703973b9c6e74d8605a1"
-    x-request-id: '685997320'
-    x-runtime: '0.041931'
+    etag: W/"8478e376522c4dde23bffd8b4316638f"
+    x-request-id: '687954155'
+    x-runtime: '0.065955'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
     x-app: rontok
-    x-varnish: '685997319'
+    x-varnish: '687954154'
     age: '0'
     via: 1.1 varnish-v4
     x-origin: lb1
@@ -74,5 +75,5 @@
     και μου έδωσαν πάλι την απάντηση πως θα παραλάβω τέλος του μήνα!!! αποτέλεσμα
     να έχω εξόφληση την συσκευή μέσω πιστωτικής και να μην ξέρω πότε θα παραλάβω και
     περιμένοντας μπας και μου έρθει κάποιο μνμ!!! απαραδεκτοι! θέλω να ακυρώσω την
-    παραγγελία και δεν μπορώ!!!","rating":1.0,"shop_reply":null,"created_at":"2016-09-18T00:21:36+03:00","negative":true,"reasons":["order_status_absent","wrong_availability","bad_communication"]}],"meta":{"pagination":{"total_results":417,"total_pages":139,"page":1,"per":3}}}'
-:created_at: 2016-10-05 16:59:54.726389017 +03:00
+    παραγγελία και δεν μπορώ!!!","rating":1.0,"shop_reply":null,"created_at":"2016-09-18T00:21:36+03:00","negative":true,"reasons":["order_status_absent","wrong_availability","bad_communication"]}],"meta":{"shop_rating_breakdown":[{"impression":"positive","percentage":45,"count":46},{"impression":"negative","percentage":55,"count":56}],"pagination":{"total_results":417,"total_pages":139,"page":1,"per":3}}}'
+:created_at: 2016-10-05 16:59:54.801185800 +03:00

@@ -1,31 +1,39 @@
 ---
 :request:
-  :url: https://api.skroutz.gr/skus/2588170/specifications?include=group
+  :url: http://api.skroutz.gr/skus/2588170/specifications?include=group
   :headers:
-    :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer IvriY9deJCTrAnJbD2eKILHJxQL4aOV8674B65CLAZRjOiAeqAB8hNUHlSd9CYY/gaNdXLO5l0xn7DAVv3CNg==
-  :verb: GET
+    :accept: application/vnd.skroutz+json; version=3.1
+    :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
+  :verb: :get
 :response:
   :status: 200
   :headers:
-    !binary "c2VydmVy": nginx
-    !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
-    !binary "dmFyeQ==": Accept-Encoding
-    !binary "c3RhdHVz": 200 OK
-    !binary "Y2FjaGUtY29udHJvbA==": max-age=300, private
-    !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
-    !binary "eC1yZXF1ZXN0LWlk": '2752136654'
-    !binary "eC1ydW50aW1l": '0.096605'
-    !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "eC1hcHA=": frankie_ssl
-    !binary "Y29udGVudC1sZW5ndGg=": '222'
-    !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Mon, 08 Sep 2014 11:51:11 GMT
-    !binary "eC12YXJuaXNo": '2752136654'
-    !binary "YWdl": '0'
-    !binary "dmlh": 1.1 varnish
-    !binary "Y29ubmVjdGlvbg==": close
-    !binary "eC1vcmlnaW4=": varnish2
-    !binary "eC1jYWNoZQ==": MISS
-  :body: ! '{"groups":[{"id":234,"name":"\u03a7\u03b1\u03c1\u03b1\u03ba\u03c4\u03b7\u03c1\u03b9\u03c3\u03c4\u03b9\u03ba\u03ac","order":5}],"specifications":[{"id":867,"name":"\u03a6\u03cd\u03bb\u03bf","unit":"","values":["\u0391\u03bd\u03b4\u03c1\u03b9\u03ba\u03ac"],"group_id":234},{"id":868,"name":"\u03a5\u03bb\u03b9\u03ba\u03cc","unit":"","values":["\u039a\u03b1\u03bf\u03c5\u03c4\u03c3\u03bf\u03cd\u03ba/\u03a0\u03bb\u03b1\u03c3\u03c4\u03b9\u03ba\u03cc"],"group_id":234},{"id":869,"name":"\u03a4\u03cd\u03c0\u03bf\u03c2","unit":"","values":["\u0391\u03bd\u03b1\u03bb\u03bf\u03b3\u03b9\u03ba\u03cc"],"group_id":234}]}'
-:created_at: 2014-09-08 14:51:11.392064000 +03:00
+    server: nginx
+    date: Wed, 05 Oct 2016 13:59:54 GMT
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '42'
+    x-ratelimit-reset: '1475676000'
+    x-frame-options: SAMEORIGIN
+    x-xss-protection: 1; mode=block
+    x-content-type-options: nosniff
+    cache-control: max-age=300, private
+    etag: W/"a041266ec07772c1c578a91fad630642"
+    x-request-id: '685997317'
+    x-runtime: '0.023246'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: rontok
+    x-varnish: '685997316'
+    age: '0'
+    via: 1.1 varnish-v4
+    x-origin: lb1
+    x-cache: MISS
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    content-length: '210'
+    connection: close
+  :body: '{"groups":[{"id":234,"name":"Χαρακτηριστικά","order":5}],"specifications":[{"id":868,"name":"Υλικό","values":["Καουτσούκ/Πλαστικό"],"order":10,"unit":"","group_id":234},{"id":869,"name":"Τύπος","values":["Αναλογικό"],"order":15,"unit":"","group_id":234}]}'
+:created_at: 2016-10-05 16:59:54.676354347 +03:00

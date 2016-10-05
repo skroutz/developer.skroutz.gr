@@ -1,40 +1,53 @@
 ---
 :request:
   :verb: :post
-  :url: http://api.alve.com/skus/808273/reviews/265/votes?embed=sku_review
+  :url: http://api.alve.com/skus/2312522/reviews/435/votes?embed=sku_review
   :headers:
-    :accept: application/vnd.alve+json; version=3
-    :authorization: Bearer _redacted_
+    :accept: application/vnd.alve+json; version=3.1
+    :authorization: Bearer Ei3DkEzs/gQSMk8EW8mPBJEyYPCliK7bvq1KhuNcnkrnbMd2TrbOfdvf1PpyWJ8nqQEorWau0Aq0xppWe4gdzg==
   :params:
     :vote[helpful]: true
 :response:
   :status: 201
   :headers:
     server: nginx
+    date: Wed, 05 Oct 2016 14:33:36 GMT
     content-type: application/json; charset=utf-8
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '46'
-    x-ratelimit-reset: '1461072300'
+    x-ratelimit-remaining: '45'
+    x-ratelimit-reset: '1475678040'
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
-    etag: W/"b91a3294a827d80d4128c10f05d12ae7"
+    etag: W/"aeb93130631aabcea80dc853eded4546"
     cache-control: max-age=0, private, must-revalidate
-    x-request-id: '894351512'
-    x-runtime: '0.055761'
+    x-request-id: '43076556'
+    x-runtime: '0.048885'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
-    x-app: as2
-    content-length: '407'
-    accept-ranges: bytes
-    date: Tue, 19 Apr 2016 13:24:07 GMT
-    x-varnish: '894351512'
+    x-app: as1
+    x-varnish: '43076555'
     age: '0'
-    via: 1.1 varnish
-    connection: close
+    via: 1.1 varnish-v4
     x-origin: lb1
     x-cache: MISS
-  :body: '{"sku_review_vote":{"id":61,"sku_review_id":265,"user_id":9529,"helpful":true,"created_at":"2016-04-19T16:24:07+03:00","sku_review":{"id":265,"user_id":9352,"review":"LG
-    G3 aldım ve kullanıyorum.\r\ncok memnunum. anlatılmaz yaşanır. tavsiye ederim","rating":5,"created_at":"2015-12-01T13:58:56+02:00","demoted":true,"votes_count":3,"helpful_votes_count":3,"voted":true,"flagged":false,"helpful":true}}}'
-:created_at: 2016-04-19 16:24:07.165017452 +03:00
+    x-cached: alve miss(0)
+    content-length: '1565'
+    connection: close
+  :body: '{"sku_review_vote":{"id":67,"sku_review_id":435,"user_id":9529,"helpful":true,"created_at":"2016-10-05T17:33:36+03:00","sku_review":{"id":435,"user_id":12065,"review":"Mükemmel
+    beğeni verdim,bu sizi yanıltmasın.Burada fiyat-performans açısından değerlendirdim
+    ve SINIFINDAKİLER arasında gerçekten de mükemmel...\r\nKamerası (çekimi) kendi
+    ekranında mükemmel görüntü veriyor .Yani ekranı da,Piksel yoğunluğu olarak güzel.\r\nBire-bir
+    lg g3 , apple 6s ,samsung j2-j5-j7 ile sınadım;eniyisi lg g4...\r\nRam 3 gb...\r\nÇekirdek
+    sayıları da zaten lg g5 te de aynı ama performans açısından lg g4 oyun vb de çabuk
+    ısınıyor...\r\nKorkulacak birşey değil.\r\nSadece pil ömrü kısa gibi ve SERVİS
+    ile ilgili ŞİKÂYET VAR...Çok ilgisiz,sallayan vb. diye bahsediliyor ki BENCE;\r\nSERVİS
+    HİZMETİ DE SAĞLAM BİR TELEFON KADAR ÖNEMLİDİR.BEN O YORUMLAR SEBEBİYLE LG TEL.
+    ALMIYORUM DESEM YALAN OLMAZ.\r\nyOKSA AMİRAL GEMİSİ SAYILABİLECEK LG V20 meselâ
+    fiyatı yüksek olmayacak olsa sınıfının hatırı sayılırlarından olacak..Enazından
+    2017''nin ilk yarısına kadar imzası aşağıda olacaktır...\r\nO da pek beklenen
+    gibi değil ama başka bir zaman,sırası geldiğinde yazarım...\r\nPeki tâvsiye eder
+    misin derseniz;\"SERVİS İLE CEBELLEŞİRİM...\",diyorsanız,özellikle çözünürlüğü
+    ve fiyatı için sınıfında İLK SIRADA TÂVSİYEM''dir...","rating":5,"created_at":"2016-09-18T18:10:29+03:00","demoted":false,"votes_count":1,"helpful_votes_count":1,"voted":true,"flagged":false,"helpful":true}}}'
+:created_at: 2016-10-05 17:33:36.728183326 +03:00

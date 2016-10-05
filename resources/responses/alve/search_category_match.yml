@@ -1,9 +1,9 @@
 ---
 :request:
-  :url: https://api.alve.com/search?q=Tablets
+  :url: http://api.alve.com/search?q=Tablets
   :headers:
-    :accept: application/vnd.alve+json; version=3
-    :authorization: Bearer 5Iq6FpP5ygw3M/ajGUZ34X4vsUprjIan8Dypsni6eEuJ0987ERkjw7APTTgyRk58KbqtrgGSnb46w3/dmew==
+    :accept: application/vnd.alve+json; version=3.1
+    :authorization: Bearer Ei3DkEzs/gQSMk8EW8mPBJEyYPCliK7bvq1KhuNcnkrnbMd2TrbOfdvf1PpyWJ8nqQEorWau0Aq0xppWe4gdzg==
   :params:
     :page: 1
     :per: 2
@@ -12,34 +12,33 @@
   :status: 200
   :headers:
     server: nginx
+    date: Wed, 05 Oct 2016 14:33:32 GMT
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '94'
-    x-ratelimit-reset: '1449665580'
-    status: 200 OK
+    x-ratelimit-remaining: '80'
+    x-ratelimit-reset: '1475678040'
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
     link: <http://api.alve.com/search?page=2&per=2&q=Tablets>; rel="last", <http://api.alve.com/search?page=2&per=2&q=Tablets>;
       rel="next"
-    etag: W/"579f524e42a8e435951f54a0c17e6435"
+    etag: W/"a3d5c0f2453df94e771136dcef3fcab1"
     cache-control: max-age=0, private, must-revalidate
-    x-request-id: '287473307'
-    x-runtime: '0.053836'
+    x-request-id: '57941392'
+    x-runtime: '0.090974'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
     x-app: as1
-    content-length: '405'
-    accept-ranges: bytes
-    date: Wed, 09 Dec 2015 12:52:08 GMT
-    x-varnish: '287473307'
+    x-varnish: '57941391'
     age: '0'
-    via: 1.1 varnish
-    connection: close
+    via: 1.1 varnish-v4
     x-origin: lb2
     x-cache: MISS
-  :body: '{"categories":[{"id":19,"name":"Tablet","children_count":0,"image_url":"http://alve-c.scdn.gr/images/categories/large/20150622142809_2e78d8bc.jpg","parent_id":9,"fashion":false,"layout_mode":"tiles","web_uri":"http://alve.com/c/19/tablet.html","path":"1,2,8,9,19","show_specifications":true,"manufacturer_title":"Markalar","match_count":348},{"id":297,"name":"Beslenme
-    - Sağlık","children_count":0,"image_url":"http://alve-d.scdn.gr/images/categories/large/297.jpg","parent_id":173,"fashion":false,"layout_mode":"tiles","web_uri":"http://alve.com/c/297/beslenme-saglik.html","path":"1,5,173,297","show_specifications":false,"manufacturer_title":"Markalar","match_count":5}],"meta":{"q":"Tablets","alternatives":[],"strong_matches":{},"pagination":{"total_results":3,"total_pages":2,"page":1,"per":2}}}'
-:created_at: 2015-12-09 14:51:37.844942683 +02:00
+    x-cached: alve miss(0)
+    accept-ranges: bytes
+    transfer-encoding: chunked
+    connection: close
+  :body: '{"categories":[{"id":19,"name":"Tablet","children_count":0,"image_url":"https://alve-d.scdn.gr/ds/categories/19/20150622142809_2e78d8bc.jpg","parent_id":9,"fashion":false,"layout_mode":"tiles","web_uri":"http://alve.com/c/19/tablet.html","code":"tablet","path":"1,2,8,9,19","show_specifications":true,"manufacturer_title":"Markalar","match_count":343},{"id":297,"name":"Beslenme","children_count":0,"image_url":"https://alve-d.scdn.gr/ds/categories/297/297.jpg","parent_id":790,"fashion":false,"layout_mode":"tiles","web_uri":"http://alve.com/c/297/beslenme_ilaclar.html","code":"beslenme_ilaclar","path":"1,790,297","show_specifications":false,"manufacturer_title":"Markalar","match_count":2}],"meta":{"q":"Tablets","alternatives":[],"strong_matches":{"category":{"id":19,"name":"Tablet","children_count":0,"image_url":"https://alve-d.scdn.gr/ds/categories/19/20150622142809_2e78d8bc.jpg","parent_id":9,"fashion":false,"layout_mode":"tiles","web_uri":"http://alve.com/c/19/tablet.html","code":"tablet","path":"1,2,8,9,19","show_specifications":true,"manufacturer_title":"Markalar"}},"pagination":{"total_results":4,"total_pages":2,"page":1,"per":2}}}'
+:created_at: 2016-10-05 17:33:32.425818247 +03:00

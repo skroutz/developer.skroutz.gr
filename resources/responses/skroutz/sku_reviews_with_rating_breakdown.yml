@@ -1,0 +1,67 @@
+---
+:request:
+  :url: http://api.skroutz.gr/skus/3982592/reviews?include_meta=sku_rating_breakdown
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3.1
+    :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
+  :verb: :get
+:response:
+  :status: 200
+  :headers:
+    server: nginx
+    date: Wed, 05 Oct 2016 14:01:55 GMT
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '99'
+    x-ratelimit-reset: '1475676120'
+    x-frame-options: SAMEORIGIN
+    x-xss-protection: 1; mode=block
+    x-content-type-options: nosniff
+    cache-control: max-age=300, private
+    etag: W/"a63a326260c3e7454f47e3cfc2e05070"
+    x-request-id: '688632700'
+    x-runtime: '0.036145'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: rontok
+    x-varnish: '688632699'
+    age: '0'
+    via: 1.1 varnish-v4
+    x-origin: lb1
+    x-cache: MISS
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    transfer-encoding: chunked
+    connection: close
+  :body: '{"reviews":[{"id":90673,"user_id":489698,"review":"Πάρα πολύ καλό στη χρήση
+    του, πολύ βολικό και κρατάει οπάρα πολύ ή μπαταρία του. Άριστο!","rating":5,"created_at":"2016-07-27T14:10:45+03:00","demoted":false,"votes_count":1,"helpful_votes_count":1,"voted":false,"flagged":false,"helpful":false},{"id":30182,"user_id":59043,"review":"Γενικά
+    πολύ μέτρια κατασκευή. Οι επιλογές του μενού είναι πολύ περιορισμένες: λίγα ringtones,
+    λίγες επιλογές εμφάνισης. Υπενθυμίσεις μέχρι 10 (και όχι με διάκριση σε γενέθλια,συνάντηση
+    κλπ). Γενικά προορίζεται για άτομα που θέλουν ένα κινητό μόνο για να μιλάνε και
+    δεν ασχολούνται με επιμέρους ρυθμίσεις. Η μπαταρία του πάντως φαίνεται πολύ δυντατή
+    (για να μη λέμε μόνο τα αρνητικά)","rating":3,"created_at":"2014-11-28T17:47:07+02:00","demoted":false,"votes_count":11,"helpful_votes_count":8,"voted":true,"flagged":false,"helpful":true},{"id":30172,"user_id":136125,"review":"Έχει
+    πολύ δυνατό ραδιόφωνο με πολύ καλό σήμα. Επίσης η ανοικτή ακρόαση ειναι δυνατή.","rating":5,"created_at":"2014-11-28T14:21:55+02:00","demoted":false,"votes_count":10,"helpful_votes_count":10,"voted":true,"flagged":false,"helpful":true},{"id":24840,"user_id":60856,"review":"Το
+    πιο άχρηστο κινητό που έχω αγοράσει ποτε. Κάκιστη ποιότητα του ακουστικού. Με
+    μια λέξη για τα σκουπίδια...","rating":1,"created_at":"2014-08-19T11:55:50+03:00","demoted":false,"votes_count":21,"helpful_votes_count":5,"voted":true,"flagged":true,"helpful":true},{"id":21943,"user_id":46256,"review":"Καλό,
+    φτηνό, στιβαρό κινητό τ/φ. Με 25ε έχεις DUAL SIM, ραδιόφωνο, ακουστικά (που περιέχονται
+    στην συσκευασία), δυνατότητα φωτογραφίας, πολύ καλή μπαταρία. Στα αρνητικά, ο
+    κατάλογος επαφών που δεν μπορεί να αποθηκεύσει όνομα επαφής πάνω από 7 χαρακτήρες.","rating":3,"created_at":"2014-06-07T01:04:18+03:00","demoted":false,"votes_count":11,"helpful_votes_count":9,"voted":true,"flagged":false,"helpful":true},{"id":18689,"user_id":180286,"review":"Ευκολοχρηστο
+    δικαρτο με απιστευτες δυνατοτητες,(bluetooth-φακο-καμερα) για την κατηγορια τιμης
+    του.Δυνατη αναπαραγωγη ηχων κλησης -ραδιοφωνου-βιντεο-mp3 και απιστευτη μπαταρια
+    με μολις 25 ευρω!","rating":4,"created_at":"2014-02-21T13:03:32+02:00","demoted":false,"votes_count":10,"helpful_votes_count":9,"voted":true,"flagged":false,"helpful":false},{"id":17407,"user_id":109176,"review":"Σχετικά
+    Φθηνό αν και υπάρχουν αλλα δίκαρτα σε καλύτερη τιμή. Εχει καλή μπαταρία που είναι
+    ενα μεγάλο +\r\nΔέχεται κάρτα μνήμης οπότε μπορείς να βάλεις τα αγαπημένα σου
+    κομμάτια.\r\n\r\nΣτα μειονεκτήματά του είναι η τελείως χάλια ανάλυση που έχει...(ελάχιστα
+    καλύτερη ας ήτανε)\r\nΕπίσης δεν έχει κάποιες ρυθμίσεις που θα μπορούσαν να προσθέσουν
+    πολύ εύκολα. (Πολύ Πρόχειρο το κάνανε)\r\nΚαι ο δείκτης SAR του είναι αρκετά υψηλός
+    1,30.\r\n\r\nΣυμπέρασμα: Είναι ενα απλό δίκαρτο το οποίο προορίζεται σίγουρα για
+    απλή χρίση, με μουσική. Αν είχε καλύτερη ποιότητα εικόνας και κάποιες παραπάνω
+    ρυθμίσεις θα ήταν σίγουρα πολύ καλύτερο.","rating":3,"created_at":"2014-01-11T12:34:14+02:00","demoted":false,"votes_count":8,"helpful_votes_count":3,"voted":false,"flagged":true,"helpful":false},{"id":17372,"user_id":101788,"review":"Πολυ
+    καλο κινητο για τα λεφτα του κ για πολυ απλη χρηση! Η μπαταρια του κραταει παρα
+    πολυ! Απο την πρωτη φορτιση το φορτισα παλι μετα απο 10 μερες στην κυριολεξια!!!
+    Πολυ δυνατο ηχειο που ο ηχος κλησης ακουγεται πολυ καλα! Διαθετει κ ραδιο κ παιζει
+    mp3! Δεχεται μεγαλη χωρητικοτητας καρτα μνημης...εγω του εβαλα 8GB κ την αναγνωριζει
+    χωρις να κολαε!\r\nΗ ΝΟΚΙΑ σε ολα ειναι πολυ μπροστα!!! ΝΟΚΙΑ κ μονο!!!","rating":5,"created_at":"2014-01-10T00:41:30+02:00","demoted":false,"votes_count":8,"helpful_votes_count":8,"voted":false,"flagged":false,"helpful":false}],"meta":{"sku_rating_breakdown":[{"star":5,"percentage":38,"count":3},{"star":4,"percentage":13,"count":1},{"star":3,"percentage":38,"count":3},{"star":2,"percentage":0,"count":0},{"star":1,"percentage":13,"count":1}],"pagination":{"total_results":8,"total_pages":1,"page":1,"per":25}}}'
+:created_at: 2016-10-05 17:01:55.090691827 +03:00

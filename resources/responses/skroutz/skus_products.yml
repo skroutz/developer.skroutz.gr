@@ -1,87 +1,90 @@
 ---
 :request:
-  :url: https://api.skroutz.gr/skus/3783654/products
+  :url: http://api.skroutz.gr/skus/3783654/products
   :headers:
-    :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer xhmv836m775MpD0w0ZjgcjqMGucgVS5gJ/HNQRVXalGSFZ0GZbcIJohshjsFjo/C6uPKdH20gEytP9k0T90Qw==
-  :verb: GET
+    :accept: application/vnd.skroutz+json; version=3.1
+    :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
+  :verb: :get
 :response:
   :status: 200
   :headers:
     server: nginx
+    date: Wed, 05 Oct 2016 13:59:52 GMT
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '99'
-    x-ratelimit-reset: '1429778160'
-    status: 200 OK
-    link: <https://api.skroutz.gr/skus/3783654/products?page=4>; rel="last", <https://api.skroutz.gr/skus/3783654/products?page=2>;
+    x-ratelimit-remaining: '69'
+    x-ratelimit-reset: '1475676000'
+    x-frame-options: SAMEORIGIN
+    x-xss-protection: 1; mode=block
+    x-content-type-options: nosniff
+    link: <http://api.skroutz.gr/skus/3783654/products?page=5>; rel="last", <http://api.skroutz.gr/skus/3783654/products?page=2>;
       rel="next"
     cache-control: max-age=300, private
-    x-ua-compatible: IE=Edge,chrome=1
-    x-request-id: '3107775828'
-    x-runtime: '0.156295'
+    etag: W/"cf8de95762ed84199298b591f3f9d8df"
+    x-request-id: '729385994'
+    x-runtime: '0.086946'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
-    x-app: frankie_ssl
-    content-length: '1073'
-    accept-ranges: bytes
-    date: Thu, 23 Apr 2015 08:35:22 GMT
-    x-varnish: '3107775828'
+    x-app: rontok
+    x-varnish: '729385993'
     age: '0'
-    via: 1.1 varnish
-    connection: close
+    via: 1.1 varnish-v4
     x-origin: lb2
     x-cache: MISS
-  :body: '{"products":[{"id":14029251,"name":"Apple iPhone 5S GOLD (16GB) EU","sku_id":3783654,"shop_id":2218,"category_id":40,"availability":"\u03a3\u03b5
-    \u03b1\u03c0\u03cc\u03b8\u03b5\u03bc\u03b1","click_url":"https://www.skroutz.gr/products/show/14029251?client_id=RO6HMDnulVMcaQwxts3xw%3D%3D&from=api","shop_uid":"156","expenses":null,"price":507.0},{"id":16308276,"name":"Apple
-    iPhone 5s 16GB Space grey EU","sku_id":3783654,"shop_id":2579,"category_id":40,"availability":"\u03a3\u03b5
-    \u03b1\u03c0\u03cc\u03b8\u03b5\u03bc\u03b1","click_url":"https://www.skroutz.gr/products/show/16308276?client_id=RO6HMDnulVMcaQwxts3xw%3D%3D&from=api","shop_uid":"57","expenses":null,"price":507.0},{"id":13676063,"name":"Apple
-    iPhone 5S (16GB) EU  SILVER GOLD","sku_id":3783654,"shop_id":1628,"category_id":40,"availability":"\u03a3\u03b5
-    \u03b1\u03c0\u03cc\u03b8\u03b5\u03bc\u03b1","click_url":"https://www.skroutz.gr/products/show/13676063?client_id=RO6HMDnulVMcaQwxts3xw%3D%3D&from=api","shop_uid":"344","expenses":null,"price":507.15},{"id":14264438,"name":"Apple
-    iPhone 5S 16GB Space Grey EU","sku_id":3783654,"shop_id":2252,"category_id":40,"availability":"\u03a3\u03b5
-    \u03b1\u03c0\u03cc\u03b8\u03b5\u03bc\u03b1","click_url":"https://www.skroutz.gr/products/show/14264438?client_id=RO6HMDnulVMcaQwxts3xw%3D%3D&from=api","shop_uid":"429822","expenses":null,"price":508.9},{"id":17780903,"name":"IPHONE
-    5S 16GB SPACE GRAY EU (Apple)","sku_id":3783654,"shop_id":2431,"category_id":40,"availability":"\u03a3\u03b5
-    \u03b1\u03c0\u03cc\u03b8\u03b5\u03bc\u03b1","click_url":"https://www.skroutz.gr/products/show/17780903?client_id=RO6HMDnulVMcaQwxts3xw%3D%3D&from=api","shop_uid":"3436","expenses":null,"price":508.9},{"id":13582182,"name":"iPhone
-    5S 16GB Space Grey EU","sku_id":3783654,"shop_id":1967,"category_id":40,"availability":"\u03a3\u03b5
-    \u03b1\u03c0\u03cc\u03b8\u03b5\u03bc\u03b1","click_url":"https://www.skroutz.gr/products/show/13582182?client_id=RO6HMDnulVMcaQwxts3xw%3D%3D&from=api","shop_uid":"513","expenses":null,"price":508.9},{"id":13582184,"name":"iPhone
-    5S 16GB Gold EU","sku_id":3783654,"shop_id":1967,"category_id":40,"availability":"\u03a3\u03b5
-    \u03b1\u03c0\u03cc\u03b8\u03b5\u03bc\u03b1","click_url":"https://www.skroutz.gr/products/show/13582184?client_id=RO6HMDnulVMcaQwxts3xw%3D%3D&from=api","shop_uid":"515","expenses":null,"price":509.5},{"id":14264490,"name":"Apple
-    iPhone 5S 16GB Gold  US","sku_id":3783654,"shop_id":2252,"category_id":40,"availability":"\u03a3\u03b5
-    \u03b1\u03c0\u03cc\u03b8\u03b5\u03bc\u03b1","click_url":"https://www.skroutz.gr/products/show/14264490?client_id=RO6HMDnulVMcaQwxts3xw%3D%3D&from=api","shop_uid":"505480","expenses":null,"price":510.7},{"id":14027749,"name":"Apple
-    iPhone 5S 16GB Silver White EU","sku_id":3783654,"shop_id":2047,"category_id":40,"availability":"\u03a3\u03b5
-    \u03b1\u03c0\u03cc\u03b8\u03b5\u03bc\u03b1","click_url":"https://www.skroutz.gr/products/show/14027749?client_id=RO6HMDnulVMcaQwxts3xw%3D%3D&from=api","shop_uid":"375","expenses":null,"price":512.99},{"id":16607920,"name":"Apple
-    iPhone 5S 16GB Gold  White EU","sku_id":3783654,"shop_id":2047,"category_id":40,"availability":"\u03a3\u03b5
-    \u03b1\u03c0\u03cc\u03b8\u03b5\u03bc\u03b1","click_url":"https://www.skroutz.gr/products/show/16607920?client_id=RO6HMDnulVMcaQwxts3xw%3D%3D&from=api","shop_uid":"986","expenses":null,"price":512.99},{"id":16607921,"name":"Apple
-    iPhone 5S 16GB Space Grey EU","sku_id":3783654,"shop_id":2047,"category_id":40,"availability":"\u03a3\u03b5
-    \u03b1\u03c0\u03cc\u03b8\u03b5\u03bc\u03b1","click_url":"https://www.skroutz.gr/products/show/16607921?client_id=RO6HMDnulVMcaQwxts3xw%3D%3D&from=api","shop_uid":"985","expenses":null,"price":512.99},{"id":13989244,"name":"Apple
-    iPhone 5S (16GB) Gold White EU","sku_id":3783654,"shop_id":329,"category_id":40,"availability":"\u03a3\u03b5
-    \u03b1\u03c0\u03cc\u03b8\u03b5\u03bc\u03b1","click_url":"https://www.skroutz.gr/products/show/13989244?client_id=RO6HMDnulVMcaQwxts3xw%3D%3D&from=api","shop_uid":"1481","expenses":null,"price":512.99},{"id":14282595,"name":"Apple
-    iPhone 5S (16GB) Silver White EU","sku_id":3783654,"shop_id":329,"category_id":40,"availability":"\u03a3\u03b5
-    \u03b1\u03c0\u03cc\u03b8\u03b5\u03bc\u03b1","click_url":"https://www.skroutz.gr/products/show/14282595?client_id=RO6HMDnulVMcaQwxts3xw%3D%3D&from=api","shop_uid":"1522","expenses":null,"price":512.99},{"id":17713701,"name":"Apple
-    iPhone 5S (16GB) SPACE GREY EU","sku_id":3783654,"shop_id":329,"category_id":40,"availability":"\u03a3\u03b5
-    \u03b1\u03c0\u03cc\u03b8\u03b5\u03bc\u03b1","click_url":"https://www.skroutz.gr/products/show/17713701?client_id=RO6HMDnulVMcaQwxts3xw%3D%3D&from=api","shop_uid":"2462","expenses":null,"price":512.99},{"id":16966397,"name":"iPhone
-    5s Gold 16GB EU","sku_id":3783654,"shop_id":2004,"category_id":40,"availability":"\u03a3\u03b5
-    \u03b1\u03c0\u03cc\u03b8\u03b5\u03bc\u03b1","click_url":"https://www.skroutz.gr/products/show/16966397?client_id=RO6HMDnulVMcaQwxts3xw%3D%3D&from=api","shop_uid":"KZR-RGILH10T","expenses":null,"price":513.0},{"id":16966398,"name":"iPhone
-    5s Space Grey 16GB EU","sku_id":3783654,"shop_id":2004,"category_id":40,"availability":"\u03a3\u03b5
-    \u03b1\u03c0\u03cc\u03b8\u03b5\u03bc\u03b1","click_url":"https://www.skroutz.gr/products/show/16966398?client_id=RO6HMDnulVMcaQwxts3xw%3D%3D&from=api","shop_uid":"KZR-69GN2084","expenses":null,"price":513.0},{"id":17330275,"name":"iPhone
-    5s Silver White 16GB EU","sku_id":3783654,"shop_id":2004,"category_id":40,"availability":"\u03a3\u03b5
-    \u03b1\u03c0\u03cc\u03b8\u03b5\u03bc\u03b1","click_url":"https://www.skroutz.gr/products/show/17330275?client_id=RO6HMDnulVMcaQwxts3xw%3D%3D&from=api","shop_uid":"KZR-RQFTU3BK","expenses":null,"price":513.0},{"id":13582183,"name":"iPhone
-    5S 16GB Silver White EU","sku_id":3783654,"shop_id":1967,"category_id":40,"availability":"\u03a3\u03b5
-    \u03b1\u03c0\u03cc\u03b8\u03b5\u03bc\u03b1","click_url":"https://www.skroutz.gr/products/show/13582183?client_id=RO6HMDnulVMcaQwxts3xw%3D%3D&from=api","shop_uid":"514","expenses":null,"price":513.5},{"id":13955202,"name":"Apple
-    iPhone 5S 16GB Silver White EU","sku_id":3783654,"shop_id":1996,"category_id":40,"availability":"\u03a3\u03b5
-    \u03b1\u03c0\u03cc\u03b8\u03b5\u03bc\u03b1","click_url":"https://www.skroutz.gr/products/show/13955202?client_id=RO6HMDnulVMcaQwxts3xw%3D%3D&from=api","shop_uid":"487","expenses":null,"price":514.0},{"id":17202077,"name":"Apple
-    iPhone 5S 16GB Space Grey EU","sku_id":3783654,"shop_id":1996,"category_id":40,"availability":"\u03a3\u03b5
-    \u03b1\u03c0\u03cc\u03b8\u03b5\u03bc\u03b1","click_url":"https://www.skroutz.gr/products/show/17202077?client_id=RO6HMDnulVMcaQwxts3xw%3D%3D&from=api","shop_uid":"725","expenses":null,"price":514.0},{"id":17537971,"name":"Apple
-    iPhone 5S 16GB Gold White EU","sku_id":3783654,"shop_id":1996,"category_id":40,"availability":"\u03a3\u03b5
-    \u03b1\u03c0\u03cc\u03b8\u03b5\u03bc\u03b1","click_url":"https://www.skroutz.gr/products/show/17537971?client_id=RO6HMDnulVMcaQwxts3xw%3D%3D&from=api","shop_uid":"762","expenses":null,"price":514.0},{"id":13944554,"name":"Apple
-    iPhone 5S Space Grey 16 GB (EU)","sku_id":3783654,"shop_id":1093,"category_id":40,"availability":"\u03a3\u03b5
-    \u03b1\u03c0\u03cc\u03b8\u03b5\u03bc\u03b1","click_url":"https://www.skroutz.gr/products/show/13944554?client_id=RO6HMDnulVMcaQwxts3xw%3D%3D&from=api","shop_uid":"36283","expenses":null,"price":514.9},{"id":13944555,"name":"Apple
-    iPhone 5S Gold 16 GB (EU)","sku_id":3783654,"shop_id":1093,"category_id":40,"availability":"\u03a3\u03b5
-    \u03b1\u03c0\u03cc\u03b8\u03b5\u03bc\u03b1","click_url":"https://www.skroutz.gr/products/show/13944555?client_id=RO6HMDnulVMcaQwxts3xw%3D%3D&from=api","shop_uid":"36405","expenses":null,"price":514.9},{"id":13944556,"name":"Apple
-    iPhone 5S Silver 16 GB (EU)","sku_id":3783654,"shop_id":1093,"category_id":40,"availability":"\u039a\u03b1\u03c4\u03cc\u03c0\u03b9\u03bd
-    \u03a0\u03b1\u03c1\u03b1\u03b3\u03b3\u03b5\u03bb\u03af\u03b1\u03c2","click_url":"https://www.skroutz.gr/products/show/13944556?client_id=RO6HMDnulVMcaQwxts3xw%3D%3D&from=api","shop_uid":"36313","expenses":null,"price":514.9},{"id":17192094,"name":"APPLE
-    IPHONE 5S 16GB GOLD EU","sku_id":3783654,"shop_id":2723,"category_id":40,"availability":"1
-    \u03ad\u03c9\u03c2 3 \u03b7\u03bc\u03ad\u03c1\u03b5\u03c2","click_url":"https://www.skroutz.gr/products/show/17192094?client_id=RO6HMDnulVMcaQwxts3xw%3D%3D&from=api","shop_uid":"1121112206803","expenses":null,"price":518.38}],"meta":{"pagination":{"total_results":82,"total_pages":4,"page":1,"per":25}}}'
-:created_at: 2015-04-23 11:31:11.426135510 +03:00
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    transfer-encoding: chunked
+    connection: close
+  :body: '{"products":[{"id":13704407,"name":"Apple iPhone 5s 16GB Silver EU","sku_id":3783654,"shop_id":1164,"category_id":40,"availability":"Παράδοση
+    1 έως 3 ημέρες","click_url":"https://www.skroutz.gr/products/show/13704407?client_id=NtTjLhJl3LuJf4CCp6yiyw%3D%3D\u0026from=api","shop_uid":"4077","expenses":null,"web_uri":"http://skroutz.gr/products/show/13704407","sizes":[],"price":275.3,"immediate_pickup":false},{"id":22636720,"name":"Apple
+    IPhone 5S 16GB Space Grey EU","sku_id":3783654,"shop_id":3427,"category_id":40,"availability":"Άμεση
+    παραλαβή / Παράδοση 1 έως 3 ημέρες","click_url":"https://www.skroutz.gr/products/show/22636720?client_id=NtTjLhJl3LuJf4CCp6yiyw%3D%3D\u0026from=api","shop_uid":"68","expenses":null,"web_uri":"http://skroutz.gr/products/show/22636720","sizes":[],"price":278.49,"immediate_pickup":true},{"id":22411194,"name":"APPLE
+    IPHONE 5S 16GB SPACE GREY EU","sku_id":3783654,"shop_id":1306,"category_id":40,"availability":"Κατόπιν
+    παραγγελίας","click_url":"https://www.skroutz.gr/products/show/22411194?client_id=NtTjLhJl3LuJf4CCp6yiyw%3D%3D\u0026from=api","shop_uid":"31955","expenses":null,"web_uri":"http://skroutz.gr/products/show/22411194","sizes":[],"price":279.6,"immediate_pickup":false},{"id":22411195,"name":"APPLE
+    IPHONE 5S 16GB SILVER EU","sku_id":3783654,"shop_id":1306,"category_id":40,"availability":"Κατόπιν
+    παραγγελίας","click_url":"https://www.skroutz.gr/products/show/22411195?client_id=NtTjLhJl3LuJf4CCp6yiyw%3D%3D\u0026from=api","shop_uid":"22170","expenses":null,"web_uri":"http://skroutz.gr/products/show/22411195","sizes":[],"price":279.6,"immediate_pickup":false},{"id":24946435,"name":"Apple
+    iPhone 5s (16gb) space-gray EU","sku_id":3783654,"shop_id":3779,"category_id":40,"availability":"Άμεση
+    παραλαβή / Παράδοση 1 έως 3 ημέρες","click_url":"https://www.skroutz.gr/products/show/24946435?client_id=NtTjLhJl3LuJf4CCp6yiyw%3D%3D\u0026from=api","shop_uid":"1593","expenses":null,"web_uri":"http://skroutz.gr/products/show/24946435","sizes":[],"price":279.7,"immediate_pickup":true},{"id":25468845,"name":"Apple
+    iPhone 5S 16GB Silver EU","sku_id":3783654,"shop_id":3852,"category_id":40,"availability":"Άμεση
+    παραλαβή / Παράδοση 1 έως 3 ημέρες","click_url":"https://www.skroutz.gr/products/show/25468845?client_id=NtTjLhJl3LuJf4CCp6yiyw%3D%3D\u0026from=api","shop_uid":"36212","expenses":null,"web_uri":"http://skroutz.gr/products/show/25468845","sizes":[],"price":279.95,"immediate_pickup":true},{"id":25468847,"name":"Apple
+    iPhone 5S 16GB Space Gray EU","sku_id":3783654,"shop_id":3852,"category_id":40,"availability":"Άμεση
+    παραλαβή / Παράδοση 1 έως 3 ημέρες","click_url":"https://www.skroutz.gr/products/show/25468847?client_id=NtTjLhJl3LuJf4CCp6yiyw%3D%3D\u0026from=api","shop_uid":"36206","expenses":null,"web_uri":"http://skroutz.gr/products/show/25468847","sizes":[],"price":279.95,"immediate_pickup":true},{"id":24503555,"name":"Apple
+    iPhone 5s 4G 16GB Space Grey EU Apple","sku_id":3783654,"shop_id":3704,"category_id":40,"availability":"Παράδοση
+    1 έως 3 ημέρες","click_url":"https://www.skroutz.gr/products/show/24503555?client_id=NtTjLhJl3LuJf4CCp6yiyw%3D%3D\u0026from=api","shop_uid":"104","expenses":null,"web_uri":"http://skroutz.gr/products/show/24503555","sizes":[],"price":279.99,"immediate_pickup":false},{"id":17800324,"name":"Apple
+    iPhone 5s Space Grey 16GB EU (Πληρωμή σε εώς 9 δόσεις)","sku_id":3783654,"shop_id":2458,"category_id":40,"availability":"Άμεση
+    παραλαβή / Παράδοση 1 έως 3 ημέρες","click_url":"https://www.skroutz.gr/products/show/17800324?client_id=NtTjLhJl3LuJf4CCp6yiyw%3D%3D\u0026from=api","shop_uid":"3992","expenses":null,"web_uri":"http://skroutz.gr/products/show/17800324","sizes":[],"price":280.0,"immediate_pickup":true},{"id":20820803,"name":"iPhone
+    5s Silver White 16GB (αγγλικος φορτιστης + ανταπτορας) EU","sku_id":3783654,"shop_id":2004,"category_id":40,"availability":"Άμεση
+    παραλαβή / Παράδοση 1 έως 3 ημέρες","click_url":"https://www.skroutz.gr/products/show/20820803?client_id=NtTjLhJl3LuJf4CCp6yiyw%3D%3D\u0026from=api","shop_uid":"KZR-LSYF8TN7","expenses":null,"web_uri":"http://skroutz.gr/products/show/20820803","sizes":[],"price":280.0,"immediate_pickup":true},{"id":22808560,"name":"iPhone
+    5s Space Grey 16GB ΜΑΥΡΟ ΓΚΡΙΖΟ (αγγλικος φορτιστης + ανταπτορας) EU","sku_id":3783654,"shop_id":2004,"category_id":40,"availability":"Άμεση
+    παραλαβή / Παράδοση 1 έως 3 ημέρες","click_url":"https://www.skroutz.gr/products/show/22808560?client_id=NtTjLhJl3LuJf4CCp6yiyw%3D%3D\u0026from=api","shop_uid":"KZR-IKPZGAXH","expenses":null,"web_uri":"http://skroutz.gr/products/show/22808560","sizes":[],"price":280.0,"immediate_pickup":true},{"id":22618523,"name":"Apple
+    iPhone 5S 16GB Space Grey (Αγγλικός Φορτιστής - Περιλαμβάνεται Αντάπτορας) EU","sku_id":3783654,"shop_id":2252,"category_id":40,"availability":"Άμεση
+    παραλαβή / Παράδοση 1 έως 3 ημέρες","click_url":"https://www.skroutz.gr/products/show/22618523?client_id=NtTjLhJl3LuJf4CCp6yiyw%3D%3D\u0026from=api","shop_uid":"659990","expenses":null,"web_uri":"http://skroutz.gr/products/show/22618523","sizes":[],"price":280.0,"immediate_pickup":true},{"id":22810468,"name":"Apple
+    iPhone 5S 16GB Silver White (Αγγλικός Φορτιστής - Περιλαμβάνεται Αντάπτορας) EU","sku_id":3783654,"shop_id":2252,"category_id":40,"availability":"Άμεση
+    παραλαβή / Παράδοση 1 έως 3 ημέρες","click_url":"https://www.skroutz.gr/products/show/22810468?client_id=NtTjLhJl3LuJf4CCp6yiyw%3D%3D\u0026from=api","shop_uid":"659999","expenses":null,"web_uri":"http://skroutz.gr/products/show/22810468","sizes":[],"price":280.0,"immediate_pickup":true},{"id":25563804,"name":"Apple
+    iPhone 5S (16GB) Silver White EU","sku_id":3783654,"shop_id":2281,"category_id":40,"availability":"Άμεση
+    παραλαβή / Παράδοση 1 έως 3 ημέρες","click_url":"https://www.skroutz.gr/products/show/25563804?client_id=NtTjLhJl3LuJf4CCp6yiyw%3D%3D\u0026from=api","shop_uid":"1975","expenses":null,"web_uri":"http://skroutz.gr/products/show/25563804","sizes":[],"price":280.0,"immediate_pickup":true},{"id":25564399,"name":"Apple
+    iPhone 5S (16GB) Space Grey (Αγγλικός Φορτιστής-Με Αντάπτορα) EU","sku_id":3783654,"shop_id":2281,"category_id":40,"availability":"Άμεση
+    παραλαβή / Παράδοση 1 έως 3 ημέρες","click_url":"https://www.skroutz.gr/products/show/25564399?client_id=NtTjLhJl3LuJf4CCp6yiyw%3D%3D\u0026from=api","shop_uid":"7510","expenses":null,"web_uri":"http://skroutz.gr/products/show/25564399","sizes":[],"price":280.0,"immediate_pickup":true},{"id":13626013,"name":"APPLE
+    IPHONE 5s 16GB space-grey eu - Πληρωμή και σε εως 12 δόσεις","sku_id":3783654,"shop_id":2032,"category_id":40,"availability":"Άμεση
+    παραλαβή / Παράδοση 1 έως 3 ημέρες","click_url":"https://www.skroutz.gr/products/show/13626013?client_id=NtTjLhJl3LuJf4CCp6yiyw%3D%3D\u0026from=api","shop_uid":"478","expenses":null,"web_uri":"http://skroutz.gr/products/show/13626013","sizes":[],"price":280.0,"immediate_pickup":true},{"id":13626015,"name":"APPLE
+    IPHONE 5S 16GB SILVER EU - Πληρωμή και σε εως 12 δόσεις","sku_id":3783654,"shop_id":2032,"category_id":40,"availability":"Άμεση
+    παραλαβή / Παράδοση 1 έως 3 ημέρες","click_url":"https://www.skroutz.gr/products/show/13626015?client_id=NtTjLhJl3LuJf4CCp6yiyw%3D%3D\u0026from=api","shop_uid":"480","expenses":null,"web_uri":"http://skroutz.gr/products/show/13626015","sizes":[],"price":280.0,"immediate_pickup":true},{"id":13582182,"name":"iPhone
+    5S 16GB Space Grey ΜΕ ΑΝΤΑΠΤΟΡΑ EU","sku_id":3783654,"shop_id":1967,"category_id":40,"availability":"Άμεση
+    παραλαβή / Παράδοση 1 έως 3 ημέρες","click_url":"https://www.skroutz.gr/products/show/13582182?client_id=NtTjLhJl3LuJf4CCp6yiyw%3D%3D\u0026from=api","shop_uid":"513","expenses":null,"web_uri":"http://skroutz.gr/products/show/13582182","sizes":[],"price":280.0,"immediate_pickup":true},{"id":13582183,"name":"iPhone
+    5S 16GB Silver White ΜΕ ΑΝΤΑΠΤΟΡΑ EU","sku_id":3783654,"shop_id":1967,"category_id":40,"availability":"Άμεση
+    παραλαβή / Παράδοση 1 έως 3 ημέρες","click_url":"https://www.skroutz.gr/products/show/13582183?client_id=NtTjLhJl3LuJf4CCp6yiyw%3D%3D\u0026from=api","shop_uid":"514","expenses":null,"web_uri":"http://skroutz.gr/products/show/13582183","sizes":[],"price":280.0,"immediate_pickup":true},{"id":15436082,"name":"Apple
+    iPhone 5S 16GB Space Grey Αγγλικός Φορτιστής + αντάπτορας EU","sku_id":3783654,"shop_id":1996,"category_id":40,"availability":"Άμεση
+    παραλαβή / Παράδοση 1 έως 3 ημέρες","click_url":"https://www.skroutz.gr/products/show/15436082?client_id=NtTjLhJl3LuJf4CCp6yiyw%3D%3D\u0026from=api","shop_uid":"628","expenses":null,"web_uri":"http://skroutz.gr/products/show/15436082","sizes":[],"price":280.0,"immediate_pickup":true},{"id":20978591,"name":"Apple
+    iPhone 5s 4G 16GB SPACE GREY EU","sku_id":3783654,"shop_id":853,"category_id":40,"availability":"Παράδοση
+    1 έως 3 ημέρες","click_url":"https://www.skroutz.gr/products/show/20978591?client_id=NtTjLhJl3LuJf4CCp6yiyw%3D%3D\u0026from=api","shop_uid":"1226091","expenses":null,"web_uri":"http://skroutz.gr/products/show/20978591","sizes":[],"price":280.0,"immediate_pickup":false},{"id":23893785,"name":"APPLE
+    iPHONE 5s 16 GB Space Gray EU","sku_id":3783654,"shop_id":1302,"category_id":40,"availability":"Άμεση
+    παραλαβή / Παράδοση 1 έως 3 ημέρες","click_url":"https://www.skroutz.gr/products/show/23893785?client_id=NtTjLhJl3LuJf4CCp6yiyw%3D%3D\u0026from=api","shop_uid":"a12c4c46-442c-435b-850b-0edb17b90365","expenses":null,"web_uri":"http://skroutz.gr/products/show/23893785","sizes":[],"price":280.0,"immediate_pickup":true},{"id":14609544,"name":"Apple
+    iPhone 5S 16GB Silver EU","sku_id":3783654,"shop_id":1207,"category_id":40,"availability":"Παράδοση
+    4 έως 10 ημέρες","click_url":"https://www.skroutz.gr/products/show/14609544?client_id=NtTjLhJl3LuJf4CCp6yiyw%3D%3D\u0026from=api","shop_uid":"45409","expenses":null,"web_uri":"http://skroutz.gr/products/show/14609544","sizes":[],"price":285.0,"immediate_pickup":false},{"id":17007786,"name":"Apple
+    iPhone 5S 16GB Space Gray EU","sku_id":3783654,"shop_id":1207,"category_id":40,"availability":"Παράδοση
+    4 έως 10 ημέρες","click_url":"https://www.skroutz.gr/products/show/17007786?client_id=NtTjLhJl3LuJf4CCp6yiyw%3D%3D\u0026from=api","shop_uid":"45368","expenses":null,"web_uri":"http://skroutz.gr/products/show/17007786","sizes":[],"price":285.0,"immediate_pickup":false},{"id":15478173,"name":"Apple
+    iPhone 5S 16GB Space Grey EU (Δώρο Tempered Glass + Θήκη) APPLE","sku_id":3783654,"shop_id":1030,"category_id":40,"availability":"Παράδοση
+    1 έως 3 ημέρες","click_url":"https://www.skroutz.gr/products/show/15478173?client_id=NtTjLhJl3LuJf4CCp6yiyw%3D%3D\u0026from=api","shop_uid":"16163","expenses":4.0,"web_uri":"http://skroutz.gr/products/show/15478173","sizes":[],"price":285.0,"immediate_pickup":false}],"meta":{"pagination":{"total_results":122,"total_pages":5,"page":1,"per":25}}}'
+:created_at: 2016-10-05 16:59:52.916042379 +03:00

@@ -1,39 +1,39 @@
 ---
 :request:
   :verb: :post
-  :url: http://api.skroutz.gr/skus/3444904/reviews/58338/votes
+  :url: http://api.skroutz.gr/skus/3982592/reviews/21943/votes
   :headers:
-    :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer _redacted_
+    :accept: application/vnd.skroutz+json; version=3.1
+    :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
   :params:
     :vote[helpful]: true
 :response:
   :status: 201
   :headers:
     server: nginx
+    date: Wed, 05 Oct 2016 13:59:54 GMT
     content-type: application/json; charset=utf-8
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '47'
-    x-ratelimit-reset: '1461061200'
+    x-ratelimit-remaining: '46'
+    x-ratelimit-reset: '1475676000'
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
-    etag: W/"3a841e254f7dde64ab48d78ecef6b199"
+    etag: W/"c94723e9c39531e992f774bec37c6436"
     cache-control: max-age=0, private, must-revalidate
-    x-request-id: '945377286'
-    x-runtime: '0.076505'
+    x-request-id: '688080378'
+    x-runtime: '0.076074'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
     x-app: rontok
-    content-length: '128'
-    accept-ranges: bytes
-    date: Tue, 19 Apr 2016 10:19:07 GMT
-    x-varnish: '945377286'
+    x-varnish: '688080377'
     age: '0'
-    via: 1.1 varnish
-    connection: close
+    via: 1.1 varnish-v4
     x-origin: lb1
     x-cache: MISS
-  :body: '{"sku_review_vote":{"id":131654,"sku_review_id":58338,"user_id":389640,"helpful":true,"created_at":"2016-04-19T13:19:07+03:00"}}'
-:created_at: 2016-04-19 13:19:07.435611363 +03:00
+    x-cached: skroutz miss(0)
+    content-length: '128'
+    connection: close
+  :body: '{"sku_review_vote":{"id":220578,"sku_review_id":21943,"user_id":334941,"helpful":true,"created_at":"2016-10-05T16:59:54+03:00"}}'
+:created_at: 2016-10-05 16:59:54.495112332 +03:00

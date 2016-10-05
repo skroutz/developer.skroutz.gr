@@ -2,8 +2,8 @@
 :request:
   :url: http://api.skroutz.gr/categories/40/skus?filter_ids[]=355559&filter_ids[]=6282
   :headers:
-    :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer 9bBb/SfslzfXVoyFdulvm0kWf5aBa1P6oQEknj2BCvEFK0D9fQTlrALG3lWogTNaEmdSGFs1eCqyBVAbIFHJVw==
+    :accept: application/vnd.skroutz+json; version=3.1
+    :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
   :params:
     :per: 4
   :verb: :get
@@ -11,47 +11,49 @@
   :status: 200
   :headers:
     server: nginx
+    date: Wed, 05 Oct 2016 13:59:54 GMT
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '93'
-    x-ratelimit-reset: '1449661680'
-    status: 200 OK
+    x-ratelimit-remaining: '54'
+    x-ratelimit-reset: '1475676000'
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
-    etag: W/"2f691891cc54b647cd9ef66176f782e2"
+    etag: W/"193f141eae2c85791366056a4225b955"
     cache-control: max-age=0, private, must-revalidate
-    x-request-id: '1648995791'
-    x-runtime: '0.090107'
+    x-request-id: '725316923'
+    x-runtime: '0.076237'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
-    x-app: kavula
-    content-length: '1480'
-    accept-ranges: bytes
-    date: Wed, 09 Dec 2015 11:47:06 GMT
-    x-varnish: '1648995791'
+    x-app: rontok
+    x-varnish: '725316922'
     age: '0'
-    via: 1.1 varnish
-    connection: close
+    via: 1.1 varnish-v4
     x-origin: lb2
     x-cache: MISS
-  :body: '{"skus":[{"id":7723156,"ean":"","pn":"4024D-2AALE11\r 4024D-2BALE11\r 4024D-2CALE11","name":"OneTouch
-    Pixi First (4GB)","display_name":"Alcatel OneTouch Pixi First (4GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":69.0,"price_min":68.9,"reviewscore":0.0,"shop_count":5,"plain_spec_summary":"SmartPhone,  Dual,
-    Οθόνη: 4\", CPU: 1200 MHz, Πυρήνες CPU: 4, RAM: 512 MB,  Μνήμη Αποθήκευσης: 4
-    GB,    Δίκτυο Σύνδεσης: 3G, Λειτουργικό Σύστημα: Android","manufacturer_id":417,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://c.scdn.gr/images/sku_main_images/007723/7723156/medium_20151021142041_alcatel_onetouch_pixi_first_4gb.jpeg","alternatives":["http://b.scdn.gr/images/sku_images/014864/14864577/20151021142042_26613da3.jpeg","http://a.scdn.gr/images/sku_images/014864/14864578/20151021142043_170bcebf.jpeg","http://a.scdn.gr/images/sku_images/014864/14864579/20151021142047_f495b444.jpeg","http://d.scdn.gr/images/sku_images/014864/14864580/20151021142049_2d020837.jpeg","http://b.scdn.gr/images/sku_images/014864/14864581/20151021142049_8dbceab9.jpeg","http://a.scdn.gr/images/sku_images/014864/14864582/20151021142053_96122740.jpeg"]},"web_uri":"http://skroutz.gr/s/7723156/Alcatel-OneTouch-Pixi-First-4GB.html"},{"id":7905033,"ean":"","pn":"C340","name":"Blade
-    Q2 (4GB)","display_name":"ZTE Blade Q2 (4GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":73.9,"price_min":69.9,"reviewscore":0.0,"shop_count":3,"plain_spec_summary":"SmartPhone,  Dual,
-    Οθόνη: 4\", CPU: 1300 MHz, Πυρήνες CPU: 4, RAM: 512 MB,  Μνήμη Αποθήκευσης: 4
-    GB,    Δίκτυο Σύνδεσης: 3.5G / 3G, Λειτουργικό Σύστημα: Android, Μπαταρία: 1400
-    mAh","manufacturer_id":4834,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://d.scdn.gr/images/sku_main_images/007905/7905033/medium_20151119151330_zte_blade_q2_4gb.jpeg","alternatives":["http://c.scdn.gr/images/sku_images/014876/14876375/20151119151433_592a7956.jpeg","http://c.scdn.gr/images/sku_images/014876/14876370/20151119151405_a10b1d0e.jpeg","http://a.scdn.gr/images/sku_images/014876/14876371/20151119151410_198f80f3.jpeg","http://c.scdn.gr/images/sku_images/014876/14876372/20151119151415_96631746.jpeg","http://a.scdn.gr/images/sku_images/014876/14876373/20151119151422_613ba686.jpeg","http://b.scdn.gr/images/sku_images/014876/14876369/20151119151358_ef90155b.jpeg","http://c.scdn.gr/images/sku_images/014876/14876376/20151119151450_762d67d9.jpeg"]},"web_uri":"http://skroutz.gr/s/7905033/ZTE-Blade-Q2-4GB.html"},{"id":5514157,"ean":"","pn":"5038D-2BALGR1\r
-    5038D-2FALGR1\r 5038D-2CALGR1","name":"OneTouch Pop D5 (4GB)","display_name":"Alcatel
-    OneTouch Pop D5 (4GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":92.4,"price_min":73.9,"reviewscore":3.11111,"shop_count":13,"plain_spec_summary":"SmartPhone,  Dual,
-    Οθόνη: 4.5\", CPU: 1300 MHz, Πυρήνες CPU: 4, RAM: 512 MB,  Μνήμη Αποθήκευσης:
-    4 GB,    Δίκτυο Σύνδεσης: 3.5G / 3G, Λειτουργικό Σύστημα: Android","manufacturer_id":417,"future":false,"reviews_count":9,"virtual":false,"images":{"main":"http://b.scdn.gr/images/sku_main_images/005514/5514157/medium_2014912151437_b.jpg","alternatives":["http://a.scdn.gr/images/sku_images/013751/13751510/6690c926e35f0813985008e98308.jpg","http://a.scdn.gr/images/sku_images/013751/13751511/alcatel-one-touch-pop-d5-53f5a96845cf0.jpg","http://a.scdn.gr/images/sku_images/013751/13751513/ALCATEL-One-Touch-Pop-D5-White-_White-Front_---_5038D_"]},"web_uri":"http://skroutz.gr/s/5514157/Alcatel-OneTouch-Pop-D5-4GB.html"},{"id":6933062,"ean":"","pn":"","name":"Ascend
-    Y360 Dual (4GB)","display_name":"Huawei Ascend Y360 Dual (4GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":99.63,"price_min":73.99,"reviewscore":0.0,"shop_count":21,"plain_spec_summary":"SmartPhone,  Dual,
-    Οθόνη: 4.0\", CPU: 1300 MHz, Πυρήνες CPU: 4, RAM: 512 MB,  Μνήμη Αποθήκευσης:
-    4 GB,    Δίκτυο Σύνδεσης: 3G, Λειτουργικό Σύστημα: Android","manufacturer_id":2159,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://b.scdn.gr/images/sku_main_images/006933/6933062/medium_20150604141845_huawei_ascend_y360_dual_4gb.jpeg","alternatives":["http://b.scdn.gr/images/sku_images/014813/14813218/20150604141847_cfe2dbb4.jpeg","http://d.scdn.gr/images/sku_images/014813/14813219/20150604141848_3225acc7.jpeg","http://b.scdn.gr/images/sku_images/014813/14813220/20150604141852_9cf97a39.jpeg","http://a.scdn.gr/images/sku_images/014813/14813221/20150604141854_6262a6a2.jpeg","http://b.scdn.gr/images/sku_images/014813/14813222/20150604141856_533b92a7.jpeg","http://d.scdn.gr/images/sku_images/014813/14813224/20150604141918_fa9ca584.jpeg","http://b.scdn.gr/images/sku_images/014813/14813228/20150604141940_27666a16.jpeg","http://c.scdn.gr/images/sku_images/014813/14813225/20150604141926_f507e5b6.jpeg","http://a.scdn.gr/images/sku_images/014813/14813227/20150604141937_9eef27c7.jpeg","http://a.scdn.gr/images/sku_images/014813/14813226/20150604141931_5bebc417.jpeg"]},"web_uri":"http://skroutz.gr/s/6933062/Huawei-Ascend-Y360-Dual-4GB.html"}],"meta":{"ordered_by":"price","pagination":{"total_results":275,"total_pages":69,"page":1,"per":4}}}'
-:created_at: 2015-12-09 13:46:35.235428383 +02:00
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    transfer-encoding: chunked
+    connection: close
+  :body: '{"skus":[{"id":9126201,"ean":"","pn":"C1-WH C1-BK","name":"C1 (4GB)","display_name":"Oukitel
+    C1 (4GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":49.9,"price_min":41.2,"reviewscore":0.0,"shop_count":11,"plain_spec_summary":"SmartPhone,
+    SIM: Dual, Οθόνη: 4\", 800 x 480 pixels, CPU: 1200 MHz, Πυρήνες CPU: 4, RAM: 514
+    MB, Μνήμη Αποθήκευσης: 4 GB, Δίκτυο: 3G, Κάμερα: 2 MP, Λειτουργικό: Android, Μπαταρία:
+    1500 mAh","manufacturer_id":26414,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"https://c.scdn.gr/images/sku_main_images/009126/9126201/medium_20160530143152_oukitel_c1_4gb.jpeg","alternatives":["https://c.scdn.gr/images/sku_images/014961/14961484/20160530143151_b9d4b5bb.jpeg","https://c.scdn.gr/images/sku_images/014961/14961482/20160530143150_3f60eae8.jpeg","https://d.scdn.gr/images/sku_images/014961/14961483/20160530143151_653ea04f.jpeg","https://a.scdn.gr/images/sku_images/014961/14961485/20160530143156_b8d713b9.jpeg","https://b.scdn.gr/images/sku_images/014961/14961487/20160530143159_e4e75000.jpeg","https://c.scdn.gr/images/sku_images/014961/14961486/20160530143159_79cf8029.jpeg"]},"web_uri":"http://skroutz.gr/s/9126201/Oukitel-C1-4GB.html","favorited":false},{"id":9542574,"ean":"","pn":"L110","name":"Blade
+    L110 (8GB)","display_name":"ZTE Blade L110 (8GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":65.0,"price_min":48.79,"reviewscore":4.0,"shop_count":8,"plain_spec_summary":"SmartPhone,
+    SIM: Dual, Οθόνη: 4\", 800 x 480 pixels, CPU: 1300 MHz, Πυρήνες CPU: 4, RAM: 1
+    GB, Μνήμη Αποθήκευσης: 8 GB, Δίκτυο: 3G, Κάμερα: 5 MP, Λειτουργικό: Android, Μπαταρία:
+    1400 mAh","manufacturer_id":4834,"future":false,"reviews_count":3,"virtual":false,"images":{"main":"https://c.scdn.gr/images/sku_main_images/009542/9542574/medium_20160804134631_zte_blade_l110_4gb.jpeg","alternatives":["https://b.scdn.gr/images/sku_images/015749/15749558/20160804134626_228fc52b.jpeg","https://d.scdn.gr/images/sku_images/015749/15749559/20160804134638_9e77f22e.jpeg"]},"web_uri":"http://skroutz.gr/s/9542574/ZTE-Blade-L110-8GB.html","favorited":false},{"id":9034860,"ean":"","pn":"","name":"Z1
+    (4GB)","display_name":"Leagoo Z1 (4GB)","category_id":40,"first_product_shop_info":"2612|Deltabox|deltabox","click_url":null,"price_max":49.99,"price_min":49.99,"reviewscore":5.0,"shop_count":1,"plain_spec_summary":"SmartPhone,
+    SIM: Dual, Οθόνη: 3.97\", 800 x 480 pixels, CPU: 1300 MHz, Πυρήνες CPU: 4, RAM:
+    512 MB, Μνήμη Αποθήκευσης: 4 GB, Δίκτυο: 3G, Κάμερα: 3 MP, Λειτουργικό: Android,
+    Μπαταρία: 1400 mAh","manufacturer_id":17153,"future":false,"reviews_count":1,"virtual":false,"images":{"main":"https://d.scdn.gr/images/sku_main_images/009034/9034860/medium_20160517113226_leagoo_z1_4gb.jpeg","alternatives":["https://c.scdn.gr/images/sku_images/014954/14954727/20160517113228_5d5bcfca.jpeg","https://b.scdn.gr/images/sku_images/014954/14954728/20160517113230_d5b80619.jpeg","https://a.scdn.gr/images/sku_images/014954/14954729/20160517113235_edeb1a9c.jpeg","https://a.scdn.gr/images/sku_images/014954/14954731/20160517113236_8c6a65db.jpeg","https://d.scdn.gr/images/sku_images/014954/14954730/20160517113235_34657f6b.jpeg","https://a.scdn.gr/images/sku_images/014954/14954732/20160517113240_d6d93c04.jpeg"]},"web_uri":"http://skroutz.gr/s/9034860/Leagoo-Z1-4GB.html","favorited":false},{"id":9981614,"ean":"","pn":"4034D","name":"OneTouch
+    Pixi 4 (4) (4GB)","display_name":"Alcatel OneTouch Pixi 4 (4) (4GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":54.0,"price_min":52.9,"reviewscore":0.0,"shop_count":2,"plain_spec_summary":"SmartPhone,
+    SIM: Dual, Οθόνη: 4.0\", 800 x 480 pixels, CPU: 1300 MHz, Πυρήνες CPU: 4, RAM:
+    512 MB, Μνήμη Αποθήκευσης: 4 GB, Δίκτυο: 3G, Κάμερα: 2.0 MP, Λειτουργικό: Android,
+    Μπαταρία: 1500 mAh","manufacturer_id":417,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"https://a.scdn.gr/images/sku_main_images/009981/9981614/medium_20160929115001_alcatel_onetouch_pixi_4_4_4gb.jpeg","alternatives":["https://a.scdn.gr/images/sku_images/016044/16044945/20160929115004_43e75a87.jpeg","https://b.scdn.gr/images/sku_images/016044/16044943/20160929115003_7e7f1c19.jpeg","https://c.scdn.gr/images/sku_images/016044/16044944/20160929115003_5e9954a5.jpeg","https://c.scdn.gr/images/sku_images/016044/16044946/20160929115004_3972360b.jpeg","https://a.scdn.gr/images/sku_images/016044/16044947/20160929115005_fac3c512.jpeg"]},"web_uri":"http://skroutz.gr/s/9981614/Alcatel-OneTouch-Pixi-4-4-4GB.html","favorited":false}],"meta":{"ordered_by":"price","pagination":{"total_results":317,"total_pages":80,"page":1,"per":4}}}'
+:created_at: 2016-10-05 16:59:54.080497802 +03:00
 :meta:
   :description: Lists skus filtered given filters.

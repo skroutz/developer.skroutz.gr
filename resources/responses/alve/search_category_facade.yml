@@ -1,9 +1,9 @@
 ---
 :request:
-  :url: https://api.alve.com/search?q=iphone
+  :url: http://api.alve.com/search?q=iphone
   :headers:
-    :accept: application/vnd.alve+json; version=3
-    :authorization: Bearer 5Iq6FpP5ygw3M/ajGUZ34X4vsUprjIan8Dypsni6eEuJ0987ERkjw7APTTgyRk58KbqtrgGSnb46w3/dmew==
+    :accept: application/vnd.alve+json; version=3.1
+    :authorization: Bearer Ei3DkEzs/gQSMk8EW8mPBJEyYPCliK7bvq1KhuNcnkrnbMd2TrbOfdvf1PpyWJ8nqQEorWau0Aq0xppWe4gdzg==
   :params:
     :page: 1
     :per: 2
@@ -12,34 +12,34 @@
   :status: 200
   :headers:
     server: nginx
+    date: Wed, 05 Oct 2016 14:33:33 GMT
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '93'
-    x-ratelimit-reset: '1449665580'
-    status: 200 OK
+    x-ratelimit-remaining: '74'
+    x-ratelimit-reset: '1475678040'
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
     link: <http://api.alve.com/search?page=17&per=2&q=iphone>; rel="last", <http://api.alve.com/search?page=2&per=2&q=iphone>;
       rel="next"
-    etag: W/"4340d3cb9b11915274e53459435a54f6"
+    etag: W/"3f9320f00daa596b2addb20850d6612f"
     cache-control: max-age=0, private, must-revalidate
-    x-request-id: '287473313'
-    x-runtime: '0.057885'
+    x-request-id: '58035848'
+    x-runtime: '0.063699'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
     x-app: as1
-    content-length: '404'
-    accept-ranges: bytes
-    date: Wed, 09 Dec 2015 12:52:09 GMT
-    x-varnish: '287473313'
+    x-varnish: '58035847'
     age: '0'
-    via: 1.1 varnish
-    connection: close
+    via: 1.1 varnish-v4
     x-origin: lb2
     x-cache: MISS
-  :body: '{"categories":[{"id":33,"name":"Cep Telefonu","children_count":0,"image_url":"http://alve-c.scdn.gr/images/categories/large/20150622142746_9efad8e8.jpg","parent_id":32,"fashion":false,"layout_mode":"list","web_uri":"http://alve.com/c/33/cep-telefonu.html","path":"1,2,12,32,33","show_specifications":true,"manufacturer_title":"Markalar","match_count":15},{"id":34,"name":"Cep
-    Telefonu Kılıfı","children_count":0,"image_url":"http://alve-a.scdn.gr/images/categories/large/34.jpg","parent_id":32,"fashion":false,"layout_mode":"tiles","web_uri":"http://alve.com/c/34/cep-telefonu-kilifi.html","path":"1,2,12,32,34","show_specifications":false,"manufacturer_title":"Markalar","match_count":5457}],"meta":{"q":"iphone","alternatives":[],"strong_matches":{},"pagination":{"total_results":33,"total_pages":17,"page":1,"per":2}}}'
-:created_at: 2015-12-09 14:51:38.742455763 +02:00
+    x-cached: alve miss(0)
+    accept-ranges: bytes
+    content-length: '419'
+    connection: close
+  :body: '{"categories":[{"id":33,"name":"Cep Telefonu","children_count":0,"image_url":"https://alve-b.scdn.gr/ds/categories/33/20150622142746_9efad8e8.jpg","parent_id":32,"fashion":false,"layout_mode":"list","web_uri":"http://alve.com/c/33/cep-telefonu.html","code":"mobile","path":"1,2,12,32,33","show_specifications":true,"manufacturer_title":"Markalar","match_count":19},{"id":34,"name":"Cep
+    Telefonu Kılıfı","children_count":0,"image_url":"https://alve-d.scdn.gr/ds/categories/34/34.jpg","parent_id":32,"fashion":false,"layout_mode":"tiles","web_uri":"http://alve.com/c/34/cep-telefonu-kilifi.html","code":"cep-telefonu-kiliflari","path":"1,2,12,32,34","show_specifications":false,"manufacturer_title":"Markalar","match_count":22077}],"meta":{"q":"iphone","alternatives":[],"strong_matches":{},"pagination":{"total_results":33,"total_pages":17,"page":1,"per":2}}}'
+:created_at: 2016-10-05 17:33:33.229895023 +03:00

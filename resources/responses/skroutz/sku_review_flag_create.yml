@@ -1,27 +1,39 @@
 ---
 :request:
   :verb: :post
-  :url: http://api.skroutz.gr/api/skus/3444904/reviews/58338/flags
+  :url: http://api.skroutz.gr/skus/3982592/reviews/17407/flags
   :headers:
-    :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer X/80oEL7Z0pN58Ci3y6fA3Tf6wwZAp5QT363rgqjXaRVcR2qkGfL0eJ1N2WQpu8Qw4WV4xepGZvTDJZd8BIg==
+    :accept: application/vnd.skroutz+json; version=3.1
+    :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
   :params:
     :flag[reason]: spam
 :response:
   :status: 201
   :headers:
     server: nginx
-    date: Tue, 02 Feb 2016 15:32:43 GMT
-    content-type: application/json
-    transfer-encoding: chunked
-    connection: close
-    status: 201 Created
+    date: Wed, 05 Oct 2016 13:59:54 GMT
+    content-type: application/json; charset=utf-8
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '44'
+    x-ratelimit-reset: '1475676000'
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
-    cache-control: no-cache
-    x-request-id: 91fd3ddb-9a20-4c5e-a608-e3d39e66a026
-    x-runtime: '0.131543'
+    etag: W/"2908bada6e5c4c3c036f1f528acf0138"
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '688080390'
+    x-runtime: '0.043351'
     x-dns-prefetch-control: 'off'
-  :body: ''
-:created_at: 2016-02-02 17:32:15.720285939 +02:00
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: rontok
+    x-varnish: '688080389'
+    age: '0'
+    via: 1.1 varnish-v4
+    x-origin: lb1
+    x-cache: MISS
+    x-cached: skroutz miss(0)
+    content-length: '176'
+    connection: close
+  :body: '{"id":3393,"flaggable_id":17407,"flaggable_type":"SkuReview","user_id":334941,"reason":"spam","created_at":"2016-10-05T16:59:54+03:00","updated_at":"2016-10-05T16:59:54+03:00"}'
+:created_at: 2016-10-05 16:59:54.615218592 +03:00

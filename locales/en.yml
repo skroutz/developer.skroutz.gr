@@ -1,7 +1,7 @@
 en:
   titles:
     index: "%{flavor} Documentation"
-    apiv3: 'API v3'
+    apiv3: 'API v3.1'
     apiv2: 'API v2'
     feedspec: 'XML Feed'
     csvspec: 'CSV Feed'
@@ -97,6 +97,9 @@ en:
     language: 'Language'
     engineering_blog: 'Engineering Blog'
     feed_validator: 'XML Feed Validator'
+
+  version:
+    v3: '3.1'
 
   index:
     cover:

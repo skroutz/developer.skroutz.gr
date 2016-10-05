@@ -1,39 +1,39 @@
 ---
 :request:
-  :url: https://api.skroutz.gr/shops/11/products/search?shop_uid=2209985
+  :url: http://api.skroutz.gr/shops/452/products/search?shop_uid=95F
   :headers:
-    :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer xhmv836m775MpD0w0ZjgcjqMGucgVS5gJ/HNQRVXalGSFZ0GZbcIJohshjsFjo/C6uPKdH20gEytP9k0T90Qw==
-  :verb: GET
+    :accept: application/vnd.skroutz+json; version=3.1
+    :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
+  :verb: :get
 :response:
   :status: 200
   :headers:
     server: nginx
+    date: Wed, 05 Oct 2016 13:59:53 GMT
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '97'
-    x-ratelimit-reset: '1429778160'
-    status: 200 OK
-    x-ua-compatible: IE=Edge,chrome=1
+    x-ratelimit-remaining: '64'
+    x-ratelimit-reset: '1475676000'
+    x-frame-options: SAMEORIGIN
+    x-xss-protection: 1; mode=block
+    x-content-type-options: nosniff
+    etag: W/"4913812ba640e176eb998db5e3a31657"
     cache-control: max-age=0, private, must-revalidate
-    x-request-id: '3107775849'
-    x-runtime: '0.018259'
+    x-request-id: '688303668'
+    x-runtime: '0.021457'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
-    x-app: frankie_ssl
-    content-length: '384'
-    accept-ranges: bytes
-    date: Thu, 23 Apr 2015 08:35:22 GMT
-    x-varnish: '3107775849'
+    x-app: rontok
+    x-varnish: '688303667'
     age: '0'
-    via: 1.1 varnish
-    connection: close
-    x-origin: lb2
+    via: 1.1 varnish-v4
+    x-origin: lb1
     x-cache: MISS
-  :body: '{"products":[{"id":16514043,"name":"Apple - Macbook Pro Retina MGXA2GR/A
-    (i7-4770HQ/16GB/256 SSD/Intel Iris Pro) (24 \u03ac\u03c4\u03bf\u03ba\u03b5\u03c2
-    \u03b4\u03cc\u03c3\u03b5\u03b9\u03c2)","sku_id":5265267,"shop_id":11,"category_id":25,"availability":"\u03a3\u03b5
-    \u03b1\u03c0\u03cc\u03b8\u03b5\u03bc\u03b1","click_url":"https://www.skroutz.gr/products/show/16514043?client_id=RO6HMDnulVMcaQwxts3xw%3D%3D&from=api","shop_uid":"2209985","expenses":null,"price":2449.0}],"meta":{"pagination":{"total_results":1,"total_pages":1,"page":1,"per":25}}}'
-:created_at: 2015-04-23 11:31:11.497699116 +03:00
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    content-length: '93'
+    connection: close
+  :body: '{"products":[],"meta":{"pagination":{"total_results":0,"total_pages":0,"page":1,"per":25}}}'
+:created_at: 2016-10-05 16:59:53.485759127 +03:00

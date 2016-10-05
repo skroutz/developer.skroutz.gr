@@ -1,28 +1,40 @@
 ---
 :request:
-  :url: http://api.skroutz.gr/api/flags
+  :url: http://api.skroutz.gr/flags
   :headers:
-    :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer X/80oEL7Z0pN58Ci3y6fA3Tf6wwZAp5QT363rgqjXaRVcR2qkGfL0eJ1N2WQpu8Qw4WV4xepGZvTDJZd8BIg==
+    :accept: application/vnd.skroutz+json; version=3.1
+    :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
   :verb: :get
 :response:
   :status: 200
   :headers:
     server: nginx
-    date: Tue, 02 Feb 2016 15:25:05 GMT
+    date: Wed, 05 Oct 2016 13:59:54 GMT
     content-type: application/json; charset=utf-8
-    transfer-encoding: chunked
-    connection: close
     vary: Accept-Encoding
-    status: 200 OK
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '38'
+    x-ratelimit-reset: '1475676000'
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
     cache-control: max-age=300, private
     etag: W/"01c170c061b2344c9c197a490f6cee7b"
-    x-request-id: 10e74231-a6b7-4cb7-a149-640eb65a367a
-    x-runtime: '0.047734'
+    x-request-id: '684447206'
+    x-runtime: '0.015034'
     x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: rontok
+    x-varnish: '684447205'
+    age: '0'
+    via: 1.1 varnish-v4
+    x-origin: lb1
+    x-cache: MISS
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    content-length: '201'
+    connection: close
   :body: '{"flags":[{"reason":"bad_language","description":"Περιέχει απρεπείς εκφράσεις"},{"reason":"wrong_section","description":"Περιέχει
     ερώτηση/συζήτηση"},{"reason":"spam","description":"Περιέχει παραπλανητικές πληροφορίες"}]}'
-:created_at: 2016-02-02 17:24:38.007447223 +02:00
+:created_at: 2016-10-05 16:59:54.858118423 +03:00

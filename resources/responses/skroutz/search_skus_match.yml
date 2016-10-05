@@ -2,8 +2,8 @@
 :request:
   :url: http://api.skroutz.gr/search?q=samsung+galaxy+s5+16GB
   :headers:
-    :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer kWLUrsbkbjINPooZsHU/yFg52OKirqL6OSohB8VIciKAYzIsXt5DKsX3W9wr0FpsV/edY1ezldqqx1H6aQY2Eg==
+    :accept: application/vnd.skroutz+json; version=3.1
+    :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
   :params:
     :page: 1
     :per: 2
@@ -12,32 +12,32 @@
   :status: 200
   :headers:
     server: nginx
+    date: Wed, 05 Oct 2016 13:59:52 GMT
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '94'
-    x-ratelimit-reset: '1446476460'
-    status: 200 OK
+    x-ratelimit-remaining: '72'
+    x-ratelimit-reset: '1475676000'
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
-    etag: W/"ef62827b8e9132f702d5235d12ee5c93"
+    etag: W/"45015e89dde55f930e7625bb1435a905"
     cache-control: max-age=0, private, must-revalidate
-    x-request-id: '1219113828'
-    x-runtime: '0.216358'
+    x-request-id: '729451216'
+    x-runtime: '0.136088'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
     x-app: rontok
-    content-length: '399'
-    accept-ranges: bytes
-    date: Mon, 02 Nov 2015 15:00:59 GMT
-    x-varnish: '1219113828'
+    x-varnish: '729451215'
     age: '0'
-    via: 1.1 varnish
-    connection: close
+    via: 1.1 varnish-v4
     x-origin: lb2
     x-cache: MISS
-  :body: '{"categories":[{"id":40,"name":"Κινητά Τηλέφωνα","children_count":0,"image_url":"http://a.scdn.gr/images/categories/large/20150508124644_bd07441b.jpg","parent_id":86,"fashion":false,"layout_mode":"list","web_uri":"http://api.skroutz.gr/c/40/kinhta-thlefwna.html","path":"76,1269,86,40","show_specifications":true,"manufacturer_title":"Κατασκευαστές"}],"meta":{"q":"samsung
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    content-length: '401'
+    connection: close
+  :body: '{"categories":[{"id":40,"name":"Κινητά Τηλέφωνα","children_count":0,"image_url":"https://d.scdn.gr/ds/categories/40/20150508124644_bd07441b.jpg","parent_id":86,"fashion":false,"layout_mode":"list","web_uri":"http://skroutz.gr/c/40/kinhta-thlefwna.html","code":"mobile","path":"76,1269,86,40","show_specifications":true,"manufacturer_title":"Κατασκευαστές"}],"meta":{"q":"samsung
     galaxy s5 16GB","alternatives":[],"strong_matches":{},"pagination":{"total_results":1,"total_pages":1,"page":1,"per":2}}}'
-:created_at: 2015-11-02 17:01:17.606002000 +02:00
+:created_at: 2016-10-05 16:59:52.669095938 +03:00

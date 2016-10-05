@@ -1,41 +1,41 @@
 ---
 :request:
-  :url: https://api.skroutz.gr/notifications/3642082
+  :url: http://api.skroutz.gr/notifications/314233664
   :headers:
-    :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer wMhTHaBmxiju/WzM3XR6j7m9Z1Wmu8Qb2kM9DQ0R2gshoObCr3YsJZRu9PYZrdHCsKLLTK8H9rdaGkw4mWjpQ==
-  :verb: GET
+    :accept: application/vnd.skroutz+json; version=3.1
+    :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
+  :verb: :get
 :response:
   :status: 200
   :headers:
     server: nginx
+    date: Wed, 05 Oct 2016 13:59:54 GMT
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '99'
-    x-ratelimit-reset: '1423668300'
-    status: 200 OK
-    x-ua-compatible: IE=Edge,chrome=1
+    x-ratelimit-remaining: '50'
+    x-ratelimit-reset: '1475676000'
+    x-frame-options: SAMEORIGIN
+    x-xss-protection: 1; mode=block
+    x-content-type-options: nosniff
+    etag: W/"cc49ff36633ad51380dbe7fa6c906916"
     cache-control: max-age=0, private, must-revalidate
-    x-request-id: '2371025718'
-    x-runtime: '0.050121'
+    x-request-id: '688947966'
+    x-runtime: '0.022344'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
-    x-app: frankie_ssl
-    content-length: '350'
-    accept-ranges: bytes
-    date: Wed, 11 Feb 2015 15:24:23 GMT
-    x-varnish: '2371025718'
+    x-app: rontok
+    x-varnish: '688947965'
     age: '0'
-    via: 1.1 varnish
-    connection: close
-    x-origin: lb2
+    via: 1.1 varnish-v4
+    x-origin: lb1
     x-cache: MISS
-  :body: '{"notification":{"id":3642082,"etype":"generic","eventable_id":37,"eventable_type":"UserSkuAd","eventable_name":"\u0386\u03b3\u03bd\u03c9\u03c3\u03c4\u03bf","eventable_url":"http://www.skroutz.gr/account/inactive_ads","event_text":"\u0397
-    \u03b1\u03b3\u03b3\u03b5\u03bb\u03af\u03b1 \u03c3\u03b1\u03c2 \"Logitech M185\"
-    \u03bc\u03b5 \u03c4\u03b9\u03bc\u03ae 8,99 \u20ac \u03ad\u03bb\u03b7\u03be\u03b5
-    \u03c3\u03c4\u03b9\u03c2 26/04/2013 00:44","snapshot":{"event_text":"\u0397 \u03b1\u03b3\u03b3\u03b5\u03bb\u03af\u03b1
-    \u03c3\u03b1\u03c2 \"Logitech M185\" \u03bc\u03b5 \u03c4\u03b9\u03bc\u03ae 8,99
-    \u20ac \u03ad\u03bb\u03b7\u03be\u03b5 \u03c3\u03c4\u03b9\u03c2 26/04/2013 00:44","eventable_path":"/account/inactive_ads"},"is_viewed":true,"aggregated":false,"created_at":"2013-04-26T01:00:09+03:00","updated_at":"2013-04-30T10:35:46+03:00"}}'
-:created_at: 2015-02-11 17:21:49.356005922 +02:00
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    content-length: '481'
+    connection: close
+  :body: '{"notification":{"id":314233664,"etype":"price_drop","eventable_id":4672057,"eventable_type":"Sku","eventable_name":"Omron
+    M6 HEM-7321","eventable_url":"http://api.skroutz.gr/s/4672057/Omron-M6-HEM-7321.html?from=account_notifications","event_text":null,"snapshot":{"price_min":56.19,"latest_price":56.89,"change_rate":0.012,"from_threshold":false},"is_viewed":true,"aggregated":false,"created_at":"2016-10-05T16:16:29+03:00","updated_at":"2016-10-05T16:46:32+03:00","sku":{"id":4672057,"category_id":1339,"display_name":"Omron
+    M6 HEM-7321","images":{"main":"https://d.scdn.gr/images/sku_main_images/004672/4672057/medium_14967045-orig.jpg","alternatives":[]},"click_url":null,"virtual":false,"future":false,"first_product_shop_info":null},"category_name":"Πιεσόμετρα"}}'
+:created_at: 2016-10-05 16:59:54.320479924 +03:00

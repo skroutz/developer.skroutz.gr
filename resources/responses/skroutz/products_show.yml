@@ -1,37 +1,40 @@
 ---
 :request:
-  :url: https://api.skroutz.gr/products/12176638
+  :url: http://api.skroutz.gr/products/12176638
   :headers:
-    :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer xhmv836m775MpD0w0ZjgcjqMGucgVS5gJ/HNQRVXalGSFZ0GZbcIJohshjsFjo/C6uPKdH20gEytP9k0T90Qw==
-  :verb: GET
+    :accept: application/vnd.skroutz+json; version=3.1
+    :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
+  :verb: :get
 :response:
   :status: 200
   :headers:
     server: nginx
+    date: Wed, 05 Oct 2016 13:59:53 GMT
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '98'
-    x-ratelimit-reset: '1429778160'
-    status: 200 OK
+    x-ratelimit-remaining: '65'
+    x-ratelimit-reset: '1475676000'
+    x-frame-options: SAMEORIGIN
+    x-xss-protection: 1; mode=block
+    x-content-type-options: nosniff
     cache-control: max-age=300, private
-    x-ua-compatible: IE=Edge,chrome=1
-    x-request-id: '3070218343'
-    x-runtime: '0.014197'
+    etag: W/"94cd9b9fcf2eeb1c5945c18f35aa7757"
+    x-request-id: '688303665'
+    x-runtime: '0.019708'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
-    x-app: frankie_ssl
-    content-length: '271'
-    accept-ranges: bytes
-    date: Thu, 23 Apr 2015 08:35:22 GMT
-    x-varnish: '3070218343'
+    x-app: rontok
+    x-varnish: '688303664'
     age: '0'
-    via: 1.1 varnish
-    connection: close
+    via: 1.1 varnish-v4
     x-origin: lb1
     x-cache: MISS
-  :body: '{"product":{"id":12176638,"name":"SAMSUNG E1200 ENG","sku_id":2119391,"shop_id":670,"category_id":40,"availability":"1
-    \u03ad\u03c9\u03c2 3 \u03b7\u03bc\u03ad\u03c1\u03b5\u03c2","click_url":"https://www.skroutz.gr/products/show/12176638?client_id=RO6HMDnulVMcaQwxts3xw%3D%3D&from=api","shop_uid":"220004386","expenses":null,"price":16.58}}'
-:created_at: 2015-04-23 11:31:11.460423687 +03:00
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    transfer-encoding: chunked
+    connection: close
+  :body: '{"product":{"id":12176638,"name":"SAMSUNG E1200 ENG","sku_id":2119391,"shop_id":670,"category_id":40,"availability":"Παράδοση
+    1 έως 3 ημέρες","click_url":"https://www.skroutz.gr/products/show/12176638?client_id=NtTjLhJl3LuJf4CCp6yiyw%3D%3D\u0026from=api","shop_uid":"220004386","expenses":null,"web_uri":"http://skroutz.gr/products/show/12176638","sizes":[],"price":16.8,"immediate_pickup":false}}'
+:created_at: 2016-10-05 16:59:53.456993500 +03:00

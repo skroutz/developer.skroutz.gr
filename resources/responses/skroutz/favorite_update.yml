@@ -1,34 +1,41 @@
 ---
 :request:
-  :verb: PUT
-  :url: https://api.skroutz.gr/favorites/340676
+  :verb: :put
+  :url: http://api.skroutz.gr/favorites/5896665
   :headers:
-    :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer Qgq1ofejerxdYPnpOYaT1GRhwRPczj2AnkZFtNi1jrVgchHJib5xL4QkQPJYNWElNoPiOp5VBqsmoq6HgMiEA==
+    :accept: application/vnd.skroutz+json; version=3.1
+    :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
   :params:
     :favorite[have_it]: true
 :response:
   :status: 200
   :headers:
-    !binary "c2VydmVy": nginx
-    !binary "Y29udGVudC10eXBl": application/json; charset=utf-8
-    !binary "dmFyeQ==": Accept-Encoding
-    !binary "c3RhdHVz": 200 OK
-    !binary "eC11YS1jb21wYXRpYmxl": IE=Edge,chrome=1
-    etag: ! '"b68ffdd89bd160774e60536d342b7248"'
-    !binary "Y2FjaGUtY29udHJvbA==": max-age=0, private, must-revalidate
-    !binary "eC1yZXF1ZXN0LWlk": '578822803'
-    !binary "eC1ydW50aW1l": '0.068931'
-    !binary "eC1kbnMtcHJlZmV0Y2gtY29udHJvbA==": 'off'
-    !binary "eC1hcHA=": lunkwill_ssl
-    !binary "Y29udGVudC1sZW5ndGg=": '174'
-    !binary "YWNjZXB0LXJhbmdlcw==": bytes
-    !binary "ZGF0ZQ==": Mon, 25 Aug 2014 14:44:37 GMT
-    !binary "eC12YXJuaXNo": '578822803'
-    !binary "YWdl": '0'
-    !binary "dmlh": 1.1 varnish
-    !binary "Y29ubmVjdGlvbg==": close
-    !binary "eC1vcmlnaW4=": varnish1
-    !binary "eC1jYWNoZQ==": MISS
-  :body: ! '{"favorite":{"id":340676,"have_it":true,"user_id":132950,"user_notes":null,"sku_id":299755,"created_at":"2013-08-29T13:02:24+03:00","updated_at":"2013-08-29T13:02:59+03:00"}}'
-:created_at: 2014-08-25 17:44:37.048497219 +03:00
+    server: nginx
+    date: Wed, 05 Oct 2016 13:59:53 GMT
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '60'
+    x-ratelimit-reset: '1475676000'
+    x-frame-options: SAMEORIGIN
+    x-xss-protection: 1; mode=block
+    x-content-type-options: nosniff
+    etag: W/"3daa161a28c0b0ce7a44c15e830bad93"
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '686678810'
+    x-runtime: '0.028942'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: rontok
+    x-varnish: '686678809'
+    age: '0'
+    via: 1.1 varnish-v4
+    x-origin: lb1
+    x-cache: MISS
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    transfer-encoding: chunked
+    connection: close
+  :body: '{"favorite":{"id":5896665,"have_it":true,"user_id":334941,"user_notes":null,"sku_id":89645,"created_at":"2016-10-05T16:55:07+03:00","updated_at":"2016-10-05T16:59:53+03:00","get_absolute_threshold":null}}'
+:created_at: 2016-10-05 16:59:53.692344486 +03:00

@@ -2,44 +2,40 @@
 :request:
   :url: http://api.skroutz.gr/search?q=nikon+1+j2
   :headers:
-    :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer kWLUrsbkbjINPooZsHU/yFg52OKirqL6OSohB8VIciKAYzIsXt5DKsX3W9wr0FpsV/edY1ezldqqx1H6aQY2Eg==
+    :accept: application/vnd.skroutz+json; version=3.1
+    :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
   :verb: :get
 :response:
   :status: 200
   :headers:
     server: nginx
+    date: Wed, 05 Oct 2016 13:59:52 GMT
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '95'
-    x-ratelimit-reset: '1446476460'
-    status: 200 OK
+    x-ratelimit-remaining: '73'
+    x-ratelimit-reset: '1475676000'
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
-    etag: W/"379cea22944b68e83ed1b994e02d8369"
+    etag: W/"a1cb2dd0740f22ccf4bef964495e4f88"
     cache-control: max-age=0, private, must-revalidate
-    x-request-id: '1219113790'
-    x-runtime: '0.175770'
+    x-request-id: '729032987'
+    x-runtime: '0.097061'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
     x-app: rontok
-    content-length: '905'
-    accept-ranges: bytes
-    date: Mon, 02 Nov 2015 15:00:59 GMT
-    x-varnish: '1219113790'
+    x-varnish: '729032986'
     age: '0'
-    via: 1.1 varnish
-    connection: close
+    via: 1.1 varnish-v4
     x-origin: lb2
     x-cache: MISS
-  :body: '{"categories":[{"id":1914,"name":"Mirrorless","children_count":0,"image_url":"http://d.scdn.gr/images/categories/large/20150511152352_1251c347.jpeg","parent_id":1670,"fashion":false,"layout_mode":"list","web_uri":"http://api.skroutz.gr/c/1914/Mirrorless.html","path":"76,1269,5,231,1670,1914","show_specifications":true,"manufacturer_title":"Κατασκευαστές"}],"meta":{"q":"nikon
-    1 j2","alternatives":[],"strong_matches":{"sku":{"id":2287737,"ean":"","pn":"VVA166K001
-    VVA165K001 VVA166K005 VVA165K005 VVA164K005 VVA161K005 VVA161K003 VVA163K001 VVA162K001
-    VVA161K001 VVA164K001 VVA163K005 VVA162K005","name":"1 J2 Kit","display_name":"Nikon
-    1 J2 Kit","category_id":1914,"first_product_shop_info":"266|EasyBuyWorld|ebwstore","click_url":null,"price_max":375.0,"price_min":375.0,"reviewscore":5.0,"shop_count":1,"plain_spec_summary":"Mirrorless
-    Kit, Ανάλυση: 10.1 MP, Αισθητήρας: CMOS, Οθόνη: 3.0 inches, Ανάλυση Photo: 3872
-    x 2592 pixels","manufacturer_id":156,"future":false,"reviews_count":1,"virtual":false,"images":{"main":"http://c.scdn.gr/images/sku_main_images/002287/2287737/medium_27572_Nikon_1_J2_left.png","alternatives":["http://d.scdn.gr/images/sku_images/002916/2916078/27574_Nikon_1_J2_left.png","http://a.scdn.gr/images/sku_images/002916/2916079/27575_Nikon_1_J2_left.png","http://d.scdn.gr/images/sku_images/002916/2916080/27576_Nikon_1_J2_left.png","http://a.scdn.gr/images/sku_images/002916/2916081/27577_Nikon_1_J2_left.png","http://d.scdn.gr/images/sku_images/002916/2916090/27573_Nikon_1_J2_left.png","http://a.scdn.gr/images/sku_images/002916/2916092/Nikon_1_J2_BK_front.jpg","http://b.scdn.gr/images/sku_images/002916/2916094/27572_Nikon_1_J2_back.png","http://d.scdn.gr/images/sku_images/002916/2916095/nikon_10-30mm-front-103286.jpg","http://d.scdn.gr/images/sku_images/002916/2916096/1532262.jpg","http://a.scdn.gr/images/sku_images/002916/2916097/5627_nikon_1_30-110mm_black.jpg"]},"web_uri":"http://www.skroutz.gr/s/2287737/1%20J2%20Kit.html"}},"pagination":{"total_results":1,"total_pages":1,"page":1,"per":25}}}'
-:created_at: 2015-11-02 17:01:17.365134000 +02:00
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    content-length: '176'
+    connection: close
+  :body: '{"categories":[],"meta":{"q":"nikon 1 j2","alternatives":[{"term":"nikon
+    1","count":477,"drop":[{"token":"nikon","dropped":false},{"token":"1","dropped":false},{"token":"j2","dropped":true}],"important":false},{"term":"1
+    j2","count":25,"drop":[{"token":"nikon","dropped":true},{"token":"1","dropped":false},{"token":"j2","dropped":false}],"important":false}],"strong_matches":{}}}'
+:created_at: 2016-10-05 16:59:52.518853794 +03:00

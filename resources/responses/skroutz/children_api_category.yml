@@ -1,42 +1,41 @@
 ---
 :request:
-  :url: http://api.skroutz.gr/categories/73/children
+  :url: http://api.skroutz.gr/categories/252/children
   :headers:
-    :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer kWLUrsbkbjINPooZsHU/yFg52OKirqL6OSohB8VIciKAYzIsXt5DKsX3W9wr0FpsV/edY1ezldqqx1H6aQY2Eg==
+    :accept: application/vnd.skroutz+json; version=3.1
+    :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
   :verb: :get
 :response:
   :status: 200
   :headers:
     server: nginx
+    date: Wed, 05 Oct 2016 13:59:51 GMT
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '99'
-    x-ratelimit-reset: '1449665460'
-    status: 200 OK
+    x-ratelimit-remaining: '96'
+    x-ratelimit-reset: '1475676000'
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
     cache-control: max-age=300, private
-    etag: W/"728a7b24e85b19bb28f45ed44ee69a00"
-    x-request-id: '2013296154'
-    x-runtime: '0.023148'
+    etag: W/"6fe42cb65debe7e2c20665dcb3472a2e"
+    x-request-id: '727456942'
+    x-runtime: '0.019814'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
-    x-app: kavula
-    content-length: '474'
-    accept-ranges: bytes
-    date: Wed, 09 Dec 2015 12:50:20 GMT
-    x-varnish: '2013296154'
+    x-app: rontok
+    x-varnish: '727456941'
     age: '0'
-    via: 1.1 varnish
-    connection: close
-    x-origin: lb1
+    via: 1.1 varnish-v4
+    x-origin: lb2
     x-cache: MISS
-  :body: '{"categories":[{"id":365,"name":"Διάφορες Υπηρεσίες","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/365.jpg","parent_id":73,"fashion":false,"layout_mode":"list","web_uri":"http://skroutz.gr/c/365/varrious_services.html","path":"76,1269,22,73,365","show_specifications":false,"manufacturer_title":"Κατασκευαστές"},{"id":106,"name":"Συνδέσεις
-    Internet","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/106.jpg","parent_id":73,"fashion":false,"layout_mode":"list","web_uri":"http://skroutz.gr/c/106/syndeseis-internet.html","path":"76,1269,22,73,106","show_specifications":false,"manufacturer_title":"Κατασκευαστές"},{"id":107,"name":"Επεκτάσεις
-    Εγγύησης","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/107.jpg","parent_id":73,"fashion":false,"layout_mode":"list","web_uri":"http://skroutz.gr/c/107/guarantee.html","path":"76,1269,22,73,107","show_specifications":false,"manufacturer_title":"Κατασκευαστές"},{"id":364,"name":"Υπηρεσίες
-    Internet","children_count":0,"image_url":"http://c.scdn.gr/images/categories/large/364.jpg","parent_id":73,"fashion":false,"layout_mode":"list","web_uri":"http://skroutz.gr/c/364/internet_services.html","path":"76,1269,22,73,364","show_specifications":false,"manufacturer_title":"Κατασκευαστές"}],"meta":{"pagination":{"total_results":4,"total_pages":1,"page":1,"per":25}}}'
-:created_at: 2015-12-09 14:49:49.419571634 +02:00
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    transfer-encoding: chunked
+    connection: close
+  :body: '{"categories":[{"id":372,"name":"Γυναικεία Παπούτσια","children_count":18,"image_url":"https://d.scdn.gr/ds/categories/372/372.jpg","parent_id":252,"fashion":false,"layout_mode":"tiles","web_uri":"http://skroutz.gr/c/372/gynaikeia-ypodhmata.html","code":"gynaikeia-ypodhmata","path":"76,274,252,372","show_specifications":false,"manufacturer_title":"Brands"},{"id":283,"name":"Γυναικεία
+    Ρούχα","children_count":23,"image_url":"https://a.scdn.gr/ds/categories/283/283.jpg","parent_id":252,"fashion":false,"layout_mode":"list","web_uri":"http://skroutz.gr/c/283/gynaikeia-rouxa.html","code":"gynaikeia-endysh","path":"76,274,252,283","show_specifications":false,"manufacturer_title":"Κατασκευαστές"},{"id":281,"name":"Γυναικεία
+    Αξεσουάρ","children_count":3,"image_url":"https://c.scdn.gr/ds/categories/281/281.jpg","parent_id":252,"fashion":false,"layout_mode":"list","web_uri":"http://skroutz.gr/c/281/gynakeia-aksesouar-endyshs-ypo.html","code":"gynakeia-aksesouar-endyshs-ypo","path":"76,274,252,281","show_specifications":false,"manufacturer_title":"Κατασκευαστές"}],"meta":{"pagination":{"total_results":3,"total_pages":1,"page":1,"per":25}}}'
+:created_at: 2016-10-05 16:59:51.113648154 +03:00

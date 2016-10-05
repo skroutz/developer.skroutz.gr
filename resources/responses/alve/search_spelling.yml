@@ -1,9 +1,9 @@
 ---
 :request:
-  :url: https://api.alve.com/search?q=ipone
+  :url: http://api.alve.com/search?q=ipone
   :headers:
-    :accept: application/vnd.alve+json; version=3
-    :authorization: Bearer 5Iq6FpP5ygw3M/ajGUZ34X4vsUprjIan8Dypsni6eEuJ0987ERkjw7APTTgyRk58KbqtrgGSnb46w3/dmew==
+    :accept: application/vnd.alve+json; version=3.1
+    :authorization: Bearer Ei3DkEzs/gQSMk8EW8mPBJEyYPCliK7bvq1KhuNcnkrnbMd2TrbOfdvf1PpyWJ8nqQEorWau0Aq0xppWe4gdzg==
   :params:
     :page: 1
     :per: 2
@@ -12,32 +12,34 @@
   :status: 200
   :headers:
     server: nginx
+    date: Wed, 05 Oct 2016 14:33:32 GMT
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '97'
-    x-ratelimit-reset: '1446479520'
-    status: 200 OK
+    x-ratelimit-remaining: '77'
+    x-ratelimit-reset: '1475678040'
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
-    etag: W/"dfe31f04b31e716df8d441861ad81fd7"
+    link: <http://api.alve.com/search?page=2&per=2&q=ipone>; rel="last", <http://api.alve.com/search?page=2&per=2&q=ipone>;
+      rel="next"
+    etag: W/"1d0bb3ab8df318d5e11ddf561212ab81"
     cache-control: max-age=0, private, must-revalidate
-    x-request-id: '278775901'
-    x-runtime: '0.034658'
+    x-request-id: '57564540'
+    x-runtime: '0.061918'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
-    x-app: as3_ssl
-    content-length: '402'
-    accept-ranges: bytes
-    date: Mon, 02 Nov 2015 15:51:17 GMT
-    x-varnish: '278775901'
+    x-app: as1
+    x-varnish: '57564539'
     age: '0'
-    via: 1.1 varnish
-    connection: close
+    via: 1.1 varnish-v4
     x-origin: lb2
     x-cache: MISS
-  :body: '{"categories":[{"id":34,"name":"Cep Telefonu Kılıfı","children_count":0,"image_url":"http://alve-a.scdn.gr/images/categories/large/34.jpg","parent_id":32,"fashion":false,"layout_mode":"tiles","web_uri":"https://api.alve.com/c/34/cep-telefonu-kilifi.html","path":"1,2,12,32,34","show_specifications":false,"manufacturer_title":"Markalar","match_count":1},{"id":352,"name":"Araba
-    Yağı","children_count":0,"image_url":"http://alve-a.scdn.gr/images/categories/large/352.jpg","parent_id":142,"fashion":false,"layout_mode":"list","web_uri":"https://api.alve.com/c/352/araba-yagi.html","path":"1,7,135,142,352","show_specifications":false,"manufacturer_title":"Markalar","match_count":8}],"meta":{"q":"ipone","alternatives":[],"strong_matches":{},"pagination":{"total_results":2,"total_pages":1,"page":1,"per":2}}}'
-:created_at: 2015-11-02 17:51:35.186931000 +02:00
+    x-cached: alve miss(0)
+    accept-ranges: bytes
+    content-length: '416'
+    connection: close
+  :body: '{"categories":[{"id":518,"name":"Fiş - Adaptör","children_count":0,"image_url":"https://alve-d.scdn.gr/ds/categories/518/518.jpg","parent_id":512,"fashion":false,"layout_mode":"list","web_uri":"http://alve.com/c/518/fis-adaptor.html","code":"fis_adaptorler","path":"1,2,512,518","show_specifications":false,"manufacturer_title":"Markalar","match_count":4},{"id":34,"name":"Cep
+    Telefonu Kılıfı","children_count":0,"image_url":"https://alve-d.scdn.gr/ds/categories/34/34.jpg","parent_id":32,"fashion":false,"layout_mode":"tiles","web_uri":"http://alve.com/c/34/cep-telefonu-kilifi.html","code":"cep-telefonu-kiliflari","path":"1,2,12,32,34","show_specifications":false,"manufacturer_title":"Markalar","match_count":2}],"meta":{"q":"ipone","alternatives":[],"strong_matches":{},"pagination":{"total_results":3,"total_pages":2,"page":1,"per":2}}}'
+:created_at: 2016-10-05 17:33:32.863955462 +03:00

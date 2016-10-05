@@ -2,26 +2,38 @@
 :request:
   :url: http://api.skroutz.gr/user
   :headers:
-    :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer Nx15rS4gBVpAlj4UMLAvRwaTcoaGFJmhsf8UfYSGdM9De0RQoAHfb83IN8HGMFarS2P2AC0ixk1R1axhjJ5A5A==
+    :accept: application/vnd.skroutz+json; version=3.1
+    :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
   :verb: :get
 :response:
   :status: 200
   :headers:
     server: nginx
-    date: Wed, 17 Feb 2016 09:41:54 GMT
+    date: Wed, 05 Oct 2016 13:59:54 GMT
     content-type: application/json; charset=utf-8
-    transfer-encoding: chunked
-    connection: close
     vary: Accept-Encoding
-    status: 200 OK
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '37'
+    x-ratelimit-reset: '1475676000'
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
-    etag: W/"253bef850c344c7d63026ea79e86286c"
+    etag: W/"3ea4c32d9bd5b2dcc28d4cf5b49624df"
     cache-control: max-age=0, private, must-revalidate
-    x-request-id: 35478899-bf76-4292-9b69-f49afbe1a960
-    x-runtime: '0.013557'
+    x-request-id: '686742799'
+    x-runtime: '0.012658'
     x-dns-prefetch-control: 'off'
-  :body: '{"user":{"id":725,"username":"zorbash","name":"Dimitris","sex": "male","avatar":"http://a.scdn.gr/images/avatars/000132/132950/tall_20150913155949_zorbash.jpeg"}}'
-:created_at: 2016-02-17 11:41:27.896575774 +02:00
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: rontok
+    x-varnish: '686742798'
+    age: '0'
+    via: 1.1 varnish-v4
+    x-origin: lb1
+    x-cache: MISS
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    content-length: '130'
+    connection: close
+  :body: '{"user":{"id":334941,"username":"skroutztester","sex":"female","avatar":"https://a.scdn.gr/assets/helmet/avatar_female.png","type":"google"}}'
+:created_at: 2016-10-05 16:59:54.878660227 +03:00

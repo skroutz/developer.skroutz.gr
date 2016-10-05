@@ -2,8 +2,8 @@
 :request:
   :url: http://api.skroutz.gr/categories/40/skus
   :headers:
-    :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer 9bBb/SfslzfXVoyFdulvm0kWf5aBa1P6oQEknj2BCvEFK0D9fQTlrALG3lWogTNaEmdSGFs1eCqyBVAbIFHJVw==
+    :accept: application/vnd.skroutz+json; version=3.1
+    :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
   :params:
     :page: 1
     :per: 3
@@ -12,42 +12,42 @@
   :status: 200
   :headers:
     server: nginx
+    date: Wed, 05 Oct 2016 13:59:51 GMT
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '99'
-    x-ratelimit-reset: '1449661620'
-    status: 200 OK
+    x-ratelimit-remaining: '94'
+    x-ratelimit-reset: '1475676000'
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
-    etag: W/"2d8129a11d448a6482a8352e464afac4"
+    etag: W/"fcc922e8efb705921457beefe0504402"
     cache-control: max-age=0, private, must-revalidate
-    x-request-id: '1648993559'
-    x-runtime: '0.066070'
+    x-request-id: '726167165'
+    x-runtime: '0.063056'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
-    x-app: kavula
-    content-length: '965'
-    accept-ranges: bytes
-    date: Wed, 09 Dec 2015 11:46:54 GMT
-    x-varnish: '1648993559'
+    x-app: rontok
+    x-varnish: '726167164'
     age: '0'
-    via: 1.1 varnish
-    connection: close
+    via: 1.1 varnish-v4
     x-origin: lb2
     x-cache: MISS
-  :body: '{"skus":[{"id":6535417,"ean":"5907377863427","pn":"MS1701","name":"MS1701","display_name":"Manta
-    MS1701","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":25.0,"price_min":14.8,"reviewscore":1.0,"shop_count":8,"plain_spec_summary":"Feature
-    Phone,  Dual, Οθόνη: 1.77\", Πυρήνες CPU: 1,       Δίκτυο Σύνδεσης: 2G, Λειτουργικό
-    Σύστημα: Κατασκευαστή","manufacturer_id":3285,"future":false,"reviews_count":1,"virtual":false,"images":{"main":"http://b.scdn.gr/images/sku_main_images/006535/6535417/medium_20150409101904_manta_ms1701.jpeg","alternatives":["http://b.scdn.gr/images/sku_images/014796/14796241/20150409101904_ca68be5d.jpeg","http://d.scdn.gr/images/sku_images/014796/14796242/20150409101906_31e8517e.jpeg"]},"web_uri":"http://skroutz.gr/s/6535417/Manta-MS1701.html"},{"id":7904356,"ean":"","pn":"1016D-3AALGR1","name":"OneTouch
-    1016D","display_name":"Alcatel OneTouch 1016D","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":28.0,"price_min":15.5,"reviewscore":0.0,"shop_count":8,"plain_spec_summary":"Feature
-    Phone,  Dual, Οθόνη: 1.8\", RAM: 4 MB,      Δίκτυο Σύνδεσης: 2G, Λειτουργικό Σύστημα:
-    Κατασκευαστή, Μπαταρία: 400 mAh","manufacturer_id":417,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://a.scdn.gr/images/sku_main_images/007904/7904356/medium_20151119135310_alcatel_onetouch_1016d.jpeg","alternatives":["http://a.scdn.gr/images/sku_images/014876/14876270/20151119135313_4523f4ea.jpeg","http://d.scdn.gr/images/sku_images/014876/14876271/20151119135313_c7b8c845.jpeg","http://d.scdn.gr/images/sku_images/014876/14876272/20151119135316_cdbde627.jpeg"]},"web_uri":"http://skroutz.gr/s/7904356/Alcatel-OneTouch-1016D.html"},{"id":7562852,"ean":"","pn":"1013X","name":"OneTouch
-    1013X","display_name":"Alcatel OneTouch 1013X","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":23.0,"price_min":17.0,"reviewscore":0.0,"shop_count":2,"plain_spec_summary":"Feature
-    Phone,  Single, Οθόνη: 1.5\",       Δίκτυο Σύνδεσης: 2G, Λειτουργικό Σύστημα:
-    Κατασκευαστή","manufacturer_id":417,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"http://a.scdn.gr/images/sku_main_images/007562/7562852/medium_20151001094845_alcatel_one_touch_1013x.jpeg","alternatives":["http://b.scdn.gr/images/sku_images/014856/14856621/20151001094850_7561711f.jpeg","http://a.scdn.gr/images/sku_images/014856/14856620/20151001094850_cd5ba85c.jpeg","http://b.scdn.gr/images/sku_images/014856/14856619/20151001094849_f732bfc0.jpeg","http://b.scdn.gr/images/sku_images/014856/14856618/20151001094848_18c489e2.jpeg"]},"web_uri":"http://skroutz.gr/s/7562852/Alcatel-OneTouch-1013X.html"}],"meta":{"ordered_by":"price","pagination":{"total_results":640,"total_pages":214,"page":1,"per":3}}}'
-:created_at: 2015-12-09 13:46:23.910675173 +02:00
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    transfer-encoding: chunked
+    connection: close
+  :body: '{"skus":[{"id":7904356,"ean":"","pn":"1016D-3AALGR1 1016D-3AALDE1","name":"OneTouch
+    1016D","display_name":"Alcatel OneTouch 1016D","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":28.0,"price_min":14.57,"reviewscore":3.5,"shop_count":18,"plain_spec_summary":"Feature
+    Phone, SIM: Dual, Οθόνη: 1.8\", 160 x 128 pixels, RAM: 4 MB, Δίκτυο: 2G, Λειτουργικό:
+    Κατασκευαστή, Μπαταρία: 400 mAh","manufacturer_id":417,"future":false,"reviews_count":2,"virtual":false,"images":{"main":"https://a.scdn.gr/images/sku_main_images/007904/7904356/medium_20151119135310_alcatel_onetouch_1016d.jpeg","alternatives":["https://a.scdn.gr/images/sku_images/014876/14876270/20151119135313_4523f4ea.jpeg","https://d.scdn.gr/images/sku_images/014876/14876271/20151119135313_c7b8c845.jpeg","https://d.scdn.gr/images/sku_images/014876/14876272/20151119135316_cdbde627.jpeg"]},"web_uri":"http://skroutz.gr/s/7904356/Alcatel-OneTouch-1016D.html","favorited":true},{"id":10001441,"ean":"","pn":"","name":"OneTouch
+    1016G","display_name":"Alcatel OneTouch 1016G","category_id":40,"first_product_shop_info":"1153|Mobilephones|mobilephones","click_url":null,"price_max":16.12,"price_min":16.12,"reviewscore":0.0,"shop_count":1,"plain_spec_summary":"Feature
+    Phone, SIM: Single, Οθόνη: 1.8\", 160 x 128 pixels, RAM: 4 MB, Δίκτυο: 2G, Λειτουργικό:
+    Κατασκευαστή, Μπαταρία: 400 mAh","manufacturer_id":417,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"https://d.scdn.gr/images/sku_main_images/010001/10001441/medium_20160930152314_alcatel_onetouch_1016g.jpeg","alternatives":["https://a.scdn.gr/images/sku_images/016057/16057711/20160930152314_d6cf040e.jpeg","https://c.scdn.gr/images/sku_images/016057/16057712/20160930152315_84c03bdb.jpeg","https://a.scdn.gr/images/sku_images/016057/16057713/20160930152316_1a18ede8.jpeg"]},"web_uri":"http://skroutz.gr/s/10001441/Alcatel-OneTouch-1016G.html","favorited":false},{"id":6999182,"ean":"","pn":"LFB24300A1-02","name":"Life
+    B2","display_name":"Kazam Life B2","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":19.9,"price_min":16.35,"reviewscore":2.0,"shop_count":6,"plain_spec_summary":"Feature
+    Phone, SIM: Dual, Οθόνη: 1.8\", 128x160 pixels, Δίκτυο: 2G, Κάμερα: 0.3 MP, Λειτουργικό:
+    Κατασκευαστή, Μπαταρία: 800 mAh","manufacturer_id":17914,"future":false,"reviews_count":1,"virtual":false,"images":{"main":"https://a.scdn.gr/images/sku_main_images/006999/6999182/medium_20150615111529_kazam_life_b2.jpeg","alternatives":["https://b.scdn.gr/images/sku_images/014815/14815446/20150615111529_a104c0d3.jpeg","https://d.scdn.gr/images/sku_images/014815/14815445/20150615111528_fb4b12f6.jpeg"]},"web_uri":"http://skroutz.gr/s/6999182/Kazam-Life-B2.html","favorited":false}],"meta":{"ordered_by":"price","pagination":{"total_results":727,"total_pages":243,"page":1,"per":3}}}'
+:created_at: 2016-10-05 16:59:51.211989028 +03:00
 :meta:
   :description: Lists only skus belonging to category specified in path

@@ -2,8 +2,8 @@
 :request:
   :url: http://api.skroutz.gr/search?q=Tablets
   :headers:
-    :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer kWLUrsbkbjINPooZsHU/yFg52OKirqL6OSohB8VIciKAYzIsXt5DKsX3W9wr0FpsV/edY1ezldqqx1H6aQY2Eg==
+    :accept: application/vnd.skroutz+json; version=3.1
+    :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
   :params:
     :page: 1
     :per: 2
@@ -12,34 +12,34 @@
   :status: 200
   :headers:
     server: nginx
+    date: Wed, 05 Oct 2016 13:59:51 GMT
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '94'
-    x-ratelimit-reset: '1449665460'
-    status: 200 OK
+    x-ratelimit-remaining: '80'
+    x-ratelimit-reset: '1475676000'
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
-    link: <http://api.skroutz.gr/search?page=55&per=2&q=Tablets>; rel="last", <http://api.skroutz.gr/search?page=2&per=2&q=Tablets>;
+    link: <http://api.skroutz.gr/search?page=58&per=2&q=Tablets>; rel="last", <http://api.skroutz.gr/search?page=2&per=2&q=Tablets>;
       rel="next"
-    etag: W/"fa7a29ba9422824326df9f7a10135fa0"
+    etag: W/"7c48be32da9c7f96e395a17e356714a7"
     cache-control: max-age=0, private, must-revalidate
-    x-request-id: '1649755823'
-    x-runtime: '0.070233'
+    x-request-id: '720328800'
+    x-runtime: '0.084726'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
-    x-app: kavula
-    content-length: '428'
-    accept-ranges: bytes
-    date: Wed, 09 Dec 2015 12:50:24 GMT
-    x-varnish: '1649755823'
+    x-app: rontok
+    x-varnish: '720328799'
     age: '0'
-    via: 1.1 varnish
-    connection: close
+    via: 1.1 varnish-v4
     x-origin: lb2
     x-cache: MISS
-  :body: '{"categories":[{"id":1105,"name":"Tablets","children_count":0,"image_url":"http://b.scdn.gr/images/categories/large/20150127170004_1105.jpg","parent_id":1612,"fashion":false,"layout_mode":"list","web_uri":"http://skroutz.gr/c/1105/tablet.html","path":"76,1269,1612,1105","show_specifications":true,"manufacturer_title":"Κατασκευαστές","match_count":662},{"id":1608,"name":"Θήκες
-    Tablet","children_count":0,"image_url":"http://d.scdn.gr/images/categories/large/1608.jpg","parent_id":1612,"fashion":false,"layout_mode":"tiles","web_uri":"http://skroutz.gr/c/1608/thikes-tablet.html","path":"76,1269,1612,1608","show_specifications":true,"manufacturer_title":"Κατασκευαστές","match_count":5826}],"meta":{"q":"Tablets","alternatives":[],"strong_matches":{"category":{"id":1105,"name":"Tablets","children_count":0,"image_url":"http://b.scdn.gr/images/categories/large/20150127170004_1105.jpg","parent_id":1612,"fashion":false,"layout_mode":"list","web_uri":"http://skroutz.gr/c/1105/tablet.html","path":"76,1269,1612,1105","show_specifications":true,"manufacturer_title":"Κατασκευαστές"}},"pagination":{"total_results":110,"total_pages":55,"page":1,"per":2}}}'
-:created_at: 2015-12-09 14:49:53.898786095 +02:00
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    content-length: '442'
+    connection: close
+  :body: '{"categories":[{"id":1105,"name":"Tablets","children_count":0,"image_url":"https://a.scdn.gr/ds/categories/1105/20150127170004_1105.jpg","parent_id":1612,"fashion":false,"layout_mode":"list","web_uri":"http://skroutz.gr/c/1105/tablet.html","code":"tablet","path":"76,1269,1612,1105","show_specifications":true,"manufacturer_title":"Κατασκευαστές","match_count":601},{"id":1608,"name":"Θήκες
+    Tablet","children_count":0,"image_url":"https://c.scdn.gr/ds/categories/1608/1608.jpg","parent_id":1612,"fashion":false,"layout_mode":"tiles","web_uri":"http://skroutz.gr/c/1608/thikes-tablet.html","code":"tablet-cases","path":"76,1269,1612,1608","show_specifications":true,"manufacturer_title":"Κατασκευαστές","match_count":6149}],"meta":{"q":"Tablets","alternatives":[],"strong_matches":{"category":{"id":1105,"name":"Tablets","children_count":0,"image_url":"https://a.scdn.gr/ds/categories/1105/20150127170004_1105.jpg","parent_id":1612,"fashion":false,"layout_mode":"list","web_uri":"http://skroutz.gr/c/1105/tablet.html","code":"tablet","path":"76,1269,1612,1105","show_specifications":true,"manufacturer_title":"Κατασκευαστές"}},"pagination":{"total_results":115,"total_pages":58,"page":1,"per":2}}}'
+:created_at: 2016-10-05 16:59:51.977063444 +03:00

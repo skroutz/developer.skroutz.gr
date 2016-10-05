@@ -2,8 +2,8 @@
 :request:
   :url: http://api.skroutz.gr/categories/279/skus?include_meta=available_filters
   :headers:
-    :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer 9bBb/SfslzfXVoyFdulvm0kWf5aBa1P6oQEknj2BCvEFK0D9fQTlrALG3lWogTNaEmdSGFs1eCqyBVAbIFHJVw==
+    :accept: application/vnd.skroutz+json; version=3.1
+    :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
   :params:
     :per: 1
   :verb: :get
@@ -11,33 +11,33 @@
   :status: 200
   :headers:
     server: nginx
+    date: Wed, 05 Oct 2016 13:59:54 GMT
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '92'
-    x-ratelimit-reset: '1449661680'
-    status: 200 OK
+    x-ratelimit-remaining: '53'
+    x-ratelimit-reset: '1475676000'
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
-    etag: W/"fbef4a3f1c3a07e7fa5a774bad2bd8ed"
+    etag: W/"30ee0c6d87feed99562bc442865cc557"
     cache-control: max-age=0, private, must-revalidate
-    x-request-id: '1648995958'
-    x-runtime: '0.045718'
+    x-request-id: '725316926'
+    x-runtime: '0.055445'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
-    x-app: kavula
-    content-length: '734'
-    accept-ranges: bytes
-    date: Wed, 09 Dec 2015 11:47:06 GMT
-    x-varnish: '1648995958'
+    x-app: rontok
+    x-varnish: '725316925'
     age: '0'
-    via: 1.1 varnish
-    connection: close
+    via: 1.1 varnish-v4
     x-origin: lb2
     x-cache: MISS
-  :body: '{"skus":[{"id":5542126,"ean":"","pn":"","name":"Προσκλητήριο Γάμου","display_name":"Προσκλητήριο
-    Γάμου","category_id":279,"first_product_shop_info":"2724|Matiakis|matiakis","click_url":"http://www.skroutz.gr/products/show/17170280","price_max":0.3,"price_min":0.3,"reviewscore":0.0,"shop_count":1,"plain_spec_summary":"Είδος:
-    Προσκλητήρια","manufacturer_id":254,"future":false,"reviews_count":0,"virtual":true,"images":{"main":"http://b.scdn.gr/images/sku_main_images/005542/5542126/medium_17170280-orig.jpg","alternatives":[]},"web_uri":"http://skroutz.gr/s/5542126/%CE%A0%CF%81%CE%BF%CF%83%CE%BA%CE%BB%CE%B7%CF%84%CE%AE%CF%81%CE%B9%CE%BF-%CE%93%CE%AC%CE%BC%CE%BF%CF%85.html"}],"meta":{"ordered_by":"popularity","available_filters":{"filters":{"342829":1155,"342830":1006,"342834":578,"483953":274,"342833":194,"531601":182,"342831":82,"342832":28,"531602":6,"342828":4,"584282":1352,"584281":908,"584284":692,"584283":607},"manufacturers":{"254":194,"10179":92,"1649":50,"10654":45,"16346":34,"12219":24,"10646":21,"7998":20,"11867":13,"11866":11,"10645":10,"10181":8,"13454":8,"10647":7,"12144":5,"18289":3,"1299":2,"2510":2,"9375":2,"14823":2,"1318":1,"7625":1,"10180":1}},"pagination":{"total_results":3529,"total_pages":3529,"page":1,"per":1}}}'
-:created_at: 2015-12-09 13:46:36.099107393 +02:00
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    transfer-encoding: chunked
+    connection: close
+  :body: '{"skus":[{"id":6377791,"ean":"","pn":"","name":"Σετ γάμου CANVAS SHELL -
+    ΕΙΔΙΚΗ ΠΡΟΣΦΟΡΑ","display_name":"Σετ γάμου CANVAS SHELL - ΕΙΔΙΚΗ ΠΡΟΣΦΟΡΑ","category_id":279,"first_product_shop_info":"2138|E-Silvercorner|esilvercorner","click_url":"http://www.skroutz.gr/products/show/18685400","price_max":210.0,"price_min":210.0,"reviewscore":0.0,"shop_count":1,"plain_spec_summary":"Είδος:
+    Δίσκοι - Καράφες - Ποτήρια","manufacturer_id":null,"future":false,"reviews_count":0,"virtual":true,"images":{"main":"https://a.scdn.gr/images/sku_main_images/006377/6377791/medium_20150730161258_set_gamou_me_stefana_eidiki_prosfora_csc505_ln.jpeg","alternatives":[]},"web_uri":"http://skroutz.gr/s/6377791/%CE%A3%CE%B5%CF%84-%CE%B3%CE%AC%CE%BC%CE%BF%CF%85-CANVAS-SHELL-%CE%95%CE%99%CE%94%CE%99%CE%9A%CE%97-%CE%A0%CE%A1%CE%9F%CE%A3%CE%A6%CE%9F%CE%A1%CE%91.html","favorited":false}],"meta":{"ordered_by":"popularity","available_filters":{"filters":{"342834":664,"531601":387,"342832":49,"342828":29,"665423":480,"665424":270,"665425":231,"665426":160},"manufacturers":{"254":89,"7564":1,"10179":1}},"pagination":{"total_results":1129,"total_pages":1129,"page":1,"per":1}}}'
+:created_at: 2016-10-05 16:59:54.146258546 +03:00

@@ -2,8 +2,8 @@
 :request:
   :url: http://api.skroutz.gr/categories/40/skus?include_meta=applied_filters&filter_ids[]=6282&manufacturer_ids[]=28
   :headers:
-    :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer 9bBb/SfslzfXVoyFdulvm0kWf5aBa1P6oQEknj2BCvEFK0D9fQTlrALG3lWogTNaEmdSGFs1eCqyBVAbIFHJVw==
+    :accept: application/vnd.skroutz+json; version=3.1
+    :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
   :params:
     :per: 1
   :verb: :get
@@ -11,34 +11,35 @@
   :status: 200
   :headers:
     server: nginx
+    date: Wed, 05 Oct 2016 13:59:54 GMT
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '91'
-    x-ratelimit-reset: '1449661680'
-    status: 200 OK
+    x-ratelimit-remaining: '52'
+    x-ratelimit-reset: '1475676000'
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
-    etag: W/"656664d9eb00623436ef859785e5aca9"
+    etag: W/"920b67e43017aeb46ae9185000dd0a50"
     cache-control: max-age=0, private, must-revalidate
-    x-request-id: '1648996121'
-    x-runtime: '0.059580'
+    x-request-id: '725252523'
+    x-runtime: '0.074386'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
-    x-app: kavula
-    content-length: '684'
-    accept-ranges: bytes
-    date: Wed, 09 Dec 2015 11:47:07 GMT
-    x-varnish: '1648996121'
+    x-app: rontok
+    x-varnish: '725252522'
     age: '0'
-    via: 1.1 varnish
-    connection: close
+    via: 1.1 varnish-v4
     x-origin: lb2
     x-cache: MISS
-  :body: '{"skus":[{"id":5699813,"ean":"","pn":"SM-G110H","name":"Galaxy Pocket 2","display_name":"Samsung
-    Galaxy Pocket 2","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":69.0,"price_min":68.8,"reviewscore":2.30769,"shop_count":5,"plain_spec_summary":"SmartPhone,  Single,
-    Οθόνη: 3.3\", CPU: 1000 MHz, Πυρήνες CPU: 1, RAM: 512 MB,  Μνήμη Αποθήκευσης:
-    4.0 GB,    Δίκτυο Σύνδεσης: 3G, Λειτουργικό Σύστημα: Android","manufacturer_id":28,"future":false,"reviews_count":13,"virtual":false,"images":{"main":"http://d.scdn.gr/images/sku_main_images/005699/5699813/medium_image_8133.jpg","alternatives":["http://b.scdn.gr/images/sku_images/014023/14023143/dien-thoai-samsung-galaxy-pocket-2-sm-g110h-3.jpg","http://b.scdn.gr/images/sku_images/014023/14023147/1.jpg","http://a.scdn.gr/images/sku_images/014023/14023153/dien-thoai-samsung-galaxy-pocket-2-sm-g110h-1.jpg"]},"web_uri":"http://skroutz.gr/s/5699813/Samsung-Galaxy-Pocket-2.html"}],"meta":{"ordered_by":"price","applied_filters":{"filters":[6282],"manufacturers":[28]},"pagination":{"total_results":63,"total_pages":63,"page":1,"per":1}}}'
-:created_at: 2015-12-09 13:46:37.001077252 +02:00
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    transfer-encoding: chunked
+    connection: close
+  :body: '{"skus":[{"id":7219275,"ean":"8806086817202 8806086817172","pn":"SM-G318H","name":"Galaxy
+    Trend 2 Lite (4GB)","display_name":"Samsung Galaxy Trend 2 Lite (4GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":108.0,"price_min":90.4,"reviewscore":3.3,"shop_count":12,"plain_spec_summary":"SmartPhone,
+    SIM: Single, Οθόνη: 4\", 800 x 480 pixels, CPU: 1200 MHz, Πυρήνες CPU: 2, RAM:
+    512 MB, Μνήμη Αποθήκευσης: 4 GB, Δίκτυο: 3G, Κάμερα: 3.0 MP, Λειτουργικό: Android,
+    Μπαταρία: 1500 mAh","manufacturer_id":28,"future":false,"reviews_count":10,"virtual":false,"images":{"main":"https://b.scdn.gr/images/sku_main_images/007219/7219275/medium_20150907140133_samsung_galaxy_trend_2_lite_4gb.jpeg","alternatives":["https://c.scdn.gr/images/sku_images/014845/14845259/20150907140228_b6fbad51.jpeg","https://b.scdn.gr/images/sku_images/014845/14845260/20150907140230_586e5603.jpeg","https://c.scdn.gr/images/sku_images/014829/14829070/20150723125027_89ede1e7.jpeg","https://a.scdn.gr/images/sku_images/014829/14829071/20150723125027_2b67aef1.jpeg","https://c.scdn.gr/images/sku_images/014845/14845253/20150907140131_ac610cd0.jpeg","https://d.scdn.gr/images/sku_images/014845/14845254/20150907140146_2e4aeb76.jpeg","https://c.scdn.gr/images/sku_images/014845/14845255/20150907140158_f224ca26.jpeg","https://d.scdn.gr/images/sku_images/014829/14829075/20150723125030_f7ff0327.jpeg","https://b.scdn.gr/images/sku_images/014829/14829076/20150723125031_c196ec65.jpeg"]},"web_uri":"http://skroutz.gr/s/7219275/Samsung-Galaxy-Trend-2-Lite-4GB.html","favorited":false}],"meta":{"ordered_by":"price","applied_filters":{"filters":[6282],"manufacturers":[28]},"pagination":{"total_results":62,"total_pages":62,"page":1,"per":1}}}'
+:created_at: 2016-10-05 16:59:54.229774950 +03:00

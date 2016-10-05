@@ -2,45 +2,59 @@
 :request:
   :url: http://api.alve.com/skus/2312522/reviews
   :headers:
-    :accept: application/vnd.alve+json; version=3
-    :authorization: Bearer 0M5YA455aLcLIpjqNvIqsCiEOyOGhvQJ/RC/RpLlYb/whhW3zaZXfA5kXDydYmTBALlvrfIW8oIV/5Sx/tCA6w==
+    :accept: application/vnd.alve+json; version=3.1
+    :authorization: Bearer Ei3DkEzs/gQSMk8EW8mPBJEyYPCliK7bvq1KhuNcnkrnbMd2TrbOfdvf1PpyWJ8nqQEorWau0Aq0xppWe4gdzg==
   :verb: :get
 :response:
   :status: 200
   :headers:
     server: nginx
+    date: Wed, 05 Oct 2016 14:33:33 GMT
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '99'
-    x-ratelimit-reset: '1453383120'
-    status: 200 OK
+    x-ratelimit-remaining: '70'
+    x-ratelimit-reset: '1475678040'
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
     cache-control: max-age=300, private
-    etag: W/"1e603de8b7cf67f132ebf6599f589160"
-    x-request-id: '299653143'
-    x-runtime: '0.125202'
+    etag: W/"88b85bf6e3184e82b725d40ad33418b1"
+    x-request-id: '58035851'
+    x-runtime: '0.091965'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
     x-app: as1
-    content-length: '526'
-    accept-ranges: bytes
-    date: Thu, 21 Jan 2016 13:31:15 GMT
-    x-varnish: '299653143'
+    x-varnish: '58035850'
     age: '0'
-    via: 1.1 varnish
-    connection: close
+    via: 1.1 varnish-v4
     x-origin: lb2
     x-cache: MISS
-  :body: '{"reviews":[{"id":222,"user_id":1437,"review":"Performans yönünden LG G3
-    den biraz daha iyi olmasına rağmen , kamera kalitesi olarak çok fark yaratmış
-    diyebilirim.Herhalde bu telefonu diğerlerinden ayıran kamerası olacaktır.Ayrıca
+    x-cached: alve miss(0)
+    accept-ranges: bytes
+    content-length: '1311'
+    connection: close
+  :body: '{"reviews":[{"id":435,"user_id":12065,"review":"Mükemmel beğeni verdim,bu
+    sizi yanıltmasın.Burada fiyat-performans açısından değerlendirdim ve SINIFINDAKİLER
+    arasında gerçekten de mükemmel...\r\nKamerası (çekimi) kendi ekranında mükemmel
+    görüntü veriyor .Yani ekranı da,Piksel yoğunluğu olarak güzel.\r\nBire-bir lg
+    g3 , apple 6s ,samsung j2-j5-j7 ile sınadım;eniyisi lg g4...\r\nRam 3 gb...\r\nÇekirdek
+    sayıları da zaten lg g5 te de aynı ama performans açısından lg g4 oyun vb de çabuk
+    ısınıyor...\r\nKorkulacak birşey değil.\r\nSadece pil ömrü kısa gibi ve SERVİS
+    ile ilgili ŞİKÂYET VAR...Çok ilgisiz,sallayan vb. diye bahsediliyor ki BENCE;\r\nSERVİS
+    HİZMETİ DE SAĞLAM BİR TELEFON KADAR ÖNEMLİDİR.BEN O YORUMLAR SEBEBİYLE LG TEL.
+    ALMIYORUM DESEM YALAN OLMAZ.\r\nyOKSA AMİRAL GEMİSİ SAYILABİLECEK LG V20 meselâ
+    fiyatı yüksek olmayacak olsa sınıfının hatırı sayılırlarından olacak..Enazından
+    2017''nin ilk yarısına kadar imzası aşağıda olacaktır...\r\nO da pek beklenen
+    gibi değil ama başka bir zaman,sırası geldiğinde yazarım...\r\nPeki tâvsiye eder
+    misin derseniz;\"SERVİS İLE CEBELLEŞİRİM...\",diyorsanız,özellikle çözünürlüğü
+    ve fiyatı için sınıfında İLK SIRADA TÂVSİYEM''dir...","rating":5,"created_at":"2016-09-18T18:10:29+03:00","demoted":false,"votes_count":0,"helpful_votes_count":0,"voted":false,"flagged":false,"helpful":false},{"id":222,"user_id":1437,"review":"Performans
+    yönünden LG G3 den biraz daha iyi olmasına rağmen , kamera kalitesi olarak çok
+    fark yaratmış diyebilirim.Herhalde bu telefonu diğerlerinden ayıran kamerası olacaktır.Ayrıca
     tasarım olarak telefon hafif eğimli bu da ele daha iyi oturmasını sağlıyor.Ses
     olarak da fena değil ve 3000 mAh lık batarya da sizi bir gün boyunca rahat götürebilir
     ama telefonu ne kadar kurcaladığınıza da bağlı tabi :) Parmak izi okuyucusu ve
     suya dayanıklılık özellikleri de olsaydı , tadından yenmezdi gerçekten de . .
-    .","rating":4,"created_at":"2015-10-20T15:02:33+03:00","demoted":false,"votes_count":0,"helpful_votes_count":0,"voted":false}],"meta":{"pagination":{"total_results":1,"total_pages":1,"page":1,"per":25}}}'
-:created_at: 2016-01-21 15:30:47.832418326 +02:00
+    .","rating":4,"created_at":"2015-10-20T15:02:33+03:00","demoted":false,"votes_count":1,"helpful_votes_count":1,"voted":false,"flagged":false,"helpful":false}],"meta":{"pagination":{"total_results":2,"total_pages":1,"page":1,"per":25}}}'
+:created_at: 2016-10-05 17:33:33.763001291 +03:00

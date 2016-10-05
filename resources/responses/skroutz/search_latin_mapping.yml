@@ -1,39 +1,42 @@
 ---
 :request:
-  :url: https://api.skroutz.gr/search?q=%CE%B9%CF%80%CE%B7%CE%BF%CE%BD%CE%B5
+  :url: http://api.skroutz.gr/search?q=%CE%B9%CF%80%CE%B7%CE%BF%CE%BD%CE%B5
   :headers:
-    :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer UN9JvnNINxxoVM79dRYtcBxYeYrz31DPi2JS1QdAiNJryBJNj7Q8eadkpwZ5wfqG5vZVYXC0A2pnE0doYv2GA==
+    :accept: application/vnd.skroutz+json; version=3.1
+    :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
   :params:
     :page: 1
     :per: 2
-  :verb: GET
+  :verb: :get
 :response:
   :status: 200
   :headers:
     server: nginx
+    date: Wed, 05 Oct 2016 13:59:52 GMT
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '79'
-    x-ratelimit-reset: '1417707300'
-    status: 200 OK
-    x-ua-compatible: IE=Edge,chrome=1
+    x-ratelimit-remaining: '78'
+    x-ratelimit-reset: '1475676000'
+    x-frame-options: SAMEORIGIN
+    x-xss-protection: 1; mode=block
+    x-content-type-options: nosniff
+    etag: W/"50e5b5062bc27343dd3979c2025aef98"
     cache-control: max-age=0, private, must-revalidate
-    x-request-id: '1630392734'
-    x-runtime: '0.354549'
+    x-request-id: '729385965'
+    x-runtime: '0.040721'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
-    x-app: lunkwill_ssl
-    content-length: '128'
-    accept-ranges: bytes
-    date: Thu, 04 Dec 2014 15:34:11 GMT
-    x-varnish: '1630392734'
+    x-app: rontok
+    x-varnish: '729385964'
     age: '0'
-    via: 1.1 varnish
-    connection: close
-    x-origin: lb1
+    via: 1.1 varnish-v4
+    x-origin: lb2
     x-cache: MISS
-  :body: '{"categories":[],"meta":{"q":"\u03b9\u03c0\u03b7\u03bf\u03bd\u03b5","alternatives":[{"term":"iphone","important":true}],"strong_matches":{}}}'
-:created_at: 2014-12-04 17:33:13.789501594 +02:00
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    content-length: '125'
+    connection: close
+  :body: '{"categories":[],"meta":{"q":"ιπηονε","alternatives":[{"term":"iphone","important":true}],"strong_matches":{}}}'
+:created_at: 2016-10-05 16:59:52.130609680 +03:00

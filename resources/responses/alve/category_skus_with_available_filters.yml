@@ -2,8 +2,8 @@
 :request:
   :url: http://api.alve.com/categories/33/skus?include_meta=available_filters
   :headers:
-    :accept: application/vnd.alve+json; version=3
-    :authorization: Bearer XsWUwEUOwk8OHBcwxIKVzLxJQVPsb6xXtim5MltaRcg8zbrh9qcdU2keW/pI/Bw9Vz9YPVWmWlT3llbzI54yTQ==
+    :accept: application/vnd.alve+json; version=3.1
+    :authorization: Bearer Ei3DkEzs/gQSMk8EW8mPBJEyYPCliK7bvq1KhuNcnkrnbMd2TrbOfdvf1PpyWJ8nqQEorWau0Aq0xppWe4gdzg==
   :params:
     :per: 1
   :verb: :get
@@ -11,35 +11,34 @@
   :status: 200
   :headers:
     server: nginx
+    date: Wed, 05 Oct 2016 14:33:35 GMT
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '86'
-    x-ratelimit-reset: '1449661980'
-    status: 200 OK
+    x-ratelimit-remaining: '53'
+    x-ratelimit-reset: '1475678040'
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
-    etag: W/"551ae27308921c91267c718bc7d8f5a7"
+    etag: W/"9432c395d99892e5c6c002d4f087b673"
     cache-control: max-age=0, private, must-revalidate
-    x-request-id: '287459677'
-    x-runtime: '0.060647'
+    x-request-id: '58035878'
+    x-runtime: '0.120060'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
     x-app: as1
-    content-length: '1048'
-    accept-ranges: bytes
-    date: Wed, 09 Dec 2015 11:52:24 GMT
-    x-varnish: '287459677'
+    x-varnish: '58035877'
     age: '0'
-    via: 1.1 varnish
-    connection: close
+    via: 1.1 varnish-v4
     x-origin: lb2
     x-cache: MISS
-  :body: '{"skus":[{"id":3155889,"ean":"","pn":"","name":"Galaxy J7","display_name":"Samsung
-    Galaxy J7","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":1199.0,"price_min":869.0,"reviewscore":5.0,"shop_count":15,"plain_spec_summary":"SIM:
-    Çift, Ağ Bağlantısı: 2G / 3.5G / 3G / 4G, Kamera: 13 MP,  1280 x 720 piksel Dokunmatik
-    Ekran (Touchscreen),  Dahili Hafıza: 16 GB,  İşletim Sistemi: Android, Çıkış Tarihi:
-    2015, SmartPhone, 3000 mAh, Ekran Boyutu: Büyük (5.5\" ve üzeri)","manufacturer_id":36,"future":false,"reviews_count":1,"virtual":false,"images":{"main":"http://alve-a.scdn.gr/images/sku_main_images/003155/3155889/medium_20150817165332_samsung_galaxy_j7.jpeg","alternatives":["http://alve-d.scdn.gr/images/sku_images/002392/2392523/20150817165336_8c5afb37.jpeg","http://alve-a.scdn.gr/images/sku_images/002392/2392524/20150817165337_d3cbc980.jpeg","http://alve-c.scdn.gr/images/sku_images/002392/2392525/20150817165338_0db4e525.jpeg","http://alve-b.scdn.gr/images/sku_images/002392/2392526/20150817165340_81dcfd5a.jpeg","http://alve-b.scdn.gr/images/sku_images/002392/2392527/20150817165342_b5fa3a1c.jpeg","http://alve-d.scdn.gr/images/sku_images/002392/2392528/20150817165343_6ace81fb.jpeg"]},"web_uri":"http://alve.com/s/3155889/Samsung-Galaxy-J7.html"}],"meta":{"ordered_by":"popularity","available_filters":{"filters":{"4828":209,"4829":172,"4830":101,"4832":98,"4833":37,"71830":37,"7994":213,"7995":120,"4801":180,"4802":15,"4805":14,"4808":110,"4809":62,"4806":39,"73211":105,"7997":68,"7991":15,"4836":1,"8012":67,"8013":44,"74860":92,"74859":74,"74861":44,"74862":23,"37653":190,"37654":123,"57147":11,"54888":90,"37656":82,"37655":32,"73208":75,"73207":40,"73209":11,"73210":4},"manufacturers":{"36":50,"178":21,"53":19,"30":18,"179":18,"28":15,"12":10,"183":9,"39":8,"91":8,"3":7,"169":6,"601":4,"103":3,"111":3,"2702":3,"44":2,"50":2,"92":2,"95":2,"279":2,"1139":2,"1380":2,"1520":2,"2996":2,"3053":2,"83":1,"153":1,"233":1,"1417":1,"1566":1,"2006":1,"2239":1,"5875":1,"5876":1,"5877":1,"5878":1}},"pagination":{"total_results":233,"total_pages":233,"page":1,"per":1}}}'
-:created_at: 2015-12-09 13:51:53.555080770 +02:00
+    x-cached: alve miss(0)
+    accept-ranges: bytes
+    transfer-encoding: chunked
+    connection: close
+  :body: '{"skus":[{"id":5452491,"ean":"","pn":"","name":"iPhone 7 32GB","display_name":"Apple
+    iPhone 7 32GB","category_id":33,"first_product_shop_info":null,"click_url":null,"price_max":3499.0,"price_min":3299.0,"reviewscore":0.0,"shop_count":4,"plain_spec_summary":"Ağ
+    Bağlantısı: 2G / 3G / 4G, Kamera: 12 MP, Ekran: 4.7 inç, 1334x750 piksel, Dahili
+    Hafıza: 32 GB, İşletim Sistemi: iOS, 1960 mAh, Akıllı telefon","manufacturer_id":28,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"https://alve-b.scdn.gr/images/sku_main_images/005452/5452491/medium_20160919090156_apple_iphone_7_32gb.jpeg","alternatives":["https://alve-d.scdn.gr/images/sku_images/002765/2765848/20160919090224_84e6ff15.jpeg","https://alve-a.scdn.gr/images/sku_images/002765/2765849/20160919090235_91a57386.jpeg","https://alve-a.scdn.gr/images/sku_images/002765/2765850/20160919090248_6aece0db.jpeg","https://alve-a.scdn.gr/images/sku_images/002763/2763402/20160908095314_0c499426.jpeg","https://alve-d.scdn.gr/images/sku_images/002763/2763045/20160907230231_fe0f9787.jpeg","https://alve-d.scdn.gr/images/sku_images/002763/2763037/20160907225631_0af4f8b0.jpeg","https://alve-b.scdn.gr/images/sku_images/002763/2763040/20160907225715_bb46677f.jpeg","https://alve-b.scdn.gr/images/sku_images/002763/2763041/20160907225740_4cce5ad3.jpeg","https://alve-a.scdn.gr/images/sku_images/002763/2763044/20160907225827_2a3bcc70.jpeg","https://alve-c.scdn.gr/images/sku_images/002763/2763042/20160907225801_5034eda8.jpeg","https://alve-c.scdn.gr/images/sku_images/002763/2763043/20160907225812_8c5db93b.jpeg","https://alve-b.scdn.gr/images/sku_images/002763/2763404/20160908095539_8fc43d73.jpeg","https://alve-a.scdn.gr/images/sku_images/002763/2763403/20160908095325_eea28042.jpeg","https://alve-c.scdn.gr/images/sku_images/002764/2764734/20160909102552_4840e594.jpeg","https://alve-d.scdn.gr/images/sku_images/002763/2763399/20160908095252_1acdac3c.jpeg","https://alve-c.scdn.gr/images/sku_images/002763/2763401/20160908095308_4cfede24.jpeg","https://alve-b.scdn.gr/images/sku_images/002763/2763400/20160908095300_f1bcafd5.jpeg"]},"web_uri":"http://alve.com/s/5452491/Apple-iPhone-7-32GB.html","favorited":true}],"meta":{"ordered_by":"popularity","available_filters":{"filters":{"4828":302,"4829":264,"4830":169,"4832":135,"71830":79,"4833":33,"7994":310,"7995":215,"4801":267,"4802":19,"4805":14,"4808":161,"4809":98,"4806":45,"73211":131,"7997":125,"7991":17,"8012":108,"8013":98,"84952":275,"84953":173,"84954":73,"84956":178,"84955":80,"84957":39,"100527":115,"100526":95,"100528":66,"100529":46,"37653":283,"37654":218,"94778":84,"57147":24,"54888":128,"84951":88,"73208":141,"73207":40,"73209":38,"73210":6},"manufacturers":{"36":65,"178":26,"53":24,"12":21,"183":20,"28":19,"179":19,"30":15,"91":11,"3":10,"169":10,"39":9,"111":7,"1029":6,"44":5,"50":5,"103":5,"153":4,"279":4,"1380":3,"1417":3,"3053":3,"5875":3,"48":2,"456":2,"601":2,"2006":2,"2702":2,"4502":2,"5876":2,"7065":2,"7423":2,"95":1,"299":1,"1513":1,"1520":1,"2996":1,"7578":1,"7581":1}},"pagination":{"total_results":322,"total_pages":322,"page":1,"per":1}}}'
+:created_at: 2016-10-05 17:33:35.809967136 +03:00

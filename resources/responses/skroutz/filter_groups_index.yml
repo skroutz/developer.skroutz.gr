@@ -1,42 +1,44 @@
 ---
 :request:
-  :url: https://api.skroutz.gr/categories/40/filter_groups
+  :url: http://api.skroutz.gr/categories/40/filter_groups
   :headers:
-    :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer pmsd31J5K8wsRcvtWfLwLGoky5gprNECGZ5KyewHrjGRX5zVSguZeRoe3Ou1d2H01tbs7BP9bmgVnthmMkhPw==
+    :accept: application/vnd.skroutz+json; version=3.1
+    :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
   :params:
     :per: 2
-  :verb: GET
+  :verb: :get
 :response:
   :status: 200
   :headers:
     server: nginx
+    date: Wed, 05 Oct 2016 13:59:53 GMT
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '99'
-    x-ratelimit-reset: '1418724720'
-    status: 200 OK
-    link: <https://api.skroutz.gr/categories/40/filter_groups?page=6&per=2>; rel="last",
-      <https://api.skroutz.gr/categories/40/filter_groups?page=2&per=2>; rel="next"
+    x-ratelimit-remaining: '57'
+    x-ratelimit-reset: '1475676000'
+    x-frame-options: SAMEORIGIN
+    x-xss-protection: 1; mode=block
+    x-content-type-options: nosniff
+    link: <http://api.skroutz.gr/categories/40/filter_groups?page=7&per=2>; rel="last",
+      <http://api.skroutz.gr/categories/40/filter_groups?page=2&per=2>; rel="next"
     cache-control: max-age=300, private
-    x-ua-compatible: IE=Edge,chrome=1
-    x-request-id: '1868024788'
-    x-runtime: '0.240589'
+    etag: W/"df599e673991487502eedec915f25575"
+    x-request-id: '688916160'
+    x-runtime: '0.044991'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
-    x-app: prefect_ssl
-    content-length: '286'
-    accept-ranges: bytes
-    date: Tue, 16 Dec 2014 10:11:20 GMT
-    x-varnish: '1868024788'
+    x-app: rontok
+    x-varnish: '688916159'
     age: '0'
-    via: 1.1 varnish
-    connection: close
-    x-origin: lb2
+    via: 1.1 varnish-v4
+    x-origin: lb1
     x-cache: MISS
-  :body: '{"filter_groups":[{"id":48636,"name":"\u039c\u03ad\u03b3\u03b5\u03b8\u03bf\u03c2
-    \u039f\u03b8\u03cc\u03bd\u03b7\u03c2","active":true,"category_id":40,"created_at":null,"updated_at":"2014-12-15T22:33:11+02:00","hint":"","combined":false,"filter_type":2},{"id":968,"name":"\u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03cc
-    \u03a3\u03cd\u03c3\u03c4\u03b7\u03bc\u03b1","active":true,"category_id":40,"created_at":null,"updated_at":"2014-12-15T22:33:12+02:00","hint":"","combined":false,"filter_type":2}],"meta":{"pagination":{"total_results":11,"total_pages":6,"page":1,"per":2}}}'
-:created_at: 2014-12-16 12:10:00.268950663 +02:00
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    content-length: '292'
+    connection: close
+  :body: '{"filter_groups":[{"id":48636,"name":"Μέγεθος Οθόνης","active":true,"category_id":40,"created_at":null,"updated_at":"2016-10-04T22:30:54+03:00","hint":"","combined":false,"filter_type":2},{"id":75300,"name":"Μέγεθος
+    Μνήμης RAM","active":true,"category_id":40,"created_at":"2014-12-24T19:40:50+02:00","updated_at":"2016-10-04T22:30:54+03:00","hint":"","combined":false,"filter_type":2}],"meta":{"pagination":{"total_results":13,"total_pages":7,"page":1,"per":2}}}'
+:created_at: 2016-10-05 16:59:53.837208031 +03:00

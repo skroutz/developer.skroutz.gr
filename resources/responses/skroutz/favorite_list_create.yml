@@ -1,37 +1,35 @@
 ---
 :request:
-  :verb: POST
-  :url: https://api.skroutz.gr/favorite_lists
+  :verb: :post
+  :url: http://api.skroutz.gr/favorite_lists
   :headers:
-    :accept: application/vnd.skroutz+json; version=3
-    :authorization: Bearer IvriY9deJCTrAnJbD2eKILHJxQL4aOV8674B65CLAZRjOiAeqAB8hNUHlSd9CYY/gaNdXLO5l0xn7DAVv3CNg==
+    :accept: application/vnd.skroutz+json; version=3.1
+    :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
   :params:
     :favorite_list[name]: a new list name
 :response:
-  :status: 200
+  :status: 422
   :headers:
     server: nginx
+    date: Wed, 05 Oct 2016 13:59:53 GMT
     content-type: application/json; charset=utf-8
-    vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '99'
-    x-ratelimit-reset: '1410183540'
-    status: 200 OK
-    x-ua-compatible: IE=Edge,chrome=1
-    etag: ! '"9bc99238936aaa7000324a8ee472cff5"'
-    cache-control: max-age=0, private, must-revalidate
-    x-request-id: '723375734'
-    x-runtime: '0.079276'
-    x-dns-prefetch-control: 'off'
-    x-app: frankie_ssl
-    content-length: '75'
-    accept-ranges: bytes
-    date: Mon, 08 Sep 2014 13:38:01 GMT
-    x-varnish: '723375734'
+    x-ratelimit-remaining: '58'
+    x-ratelimit-reset: '1475676000'
+    x-frame-options: SAMEORIGIN
+    x-xss-protection: 1; mode=block
+    x-content-type-options: nosniff
+    cache-control: no-cache
+    x-request-id: '725252502'
+    x-runtime: '0.027974'
+    x-app: rontok
+    x-varnish: '725252501'
     age: '0'
-    via: 1.1 varnish
-    connection: close
-    x-origin: varnish1
+    via: 1.1 varnish-v4
+    x-origin: lb2
     x-cache: MISS
-  :body: ! '{"favorite_list":{"id":278181,"category_id":null,"name":"a new list name"}}'
-:created_at: 2014-09-08 16:38:01.440916000 +03:00
+    x-cached: skroutz miss(0)
+    transfer-encoding: chunked
+    connection: close
+  :body: '{"errors":[{"code":"name","messages":["Έχεις ήδη μια λίστα με αυτό το όνομα"]}]}'
+:created_at: 2016-10-05 16:59:53.774159151 +03:00

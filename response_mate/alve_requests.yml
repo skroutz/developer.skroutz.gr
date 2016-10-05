@@ -1,5 +1,5 @@
 default_headers: &default_headers
-  accept: 'application/vnd.alve+json; version=3'
+  accept: 'application/vnd.alve+json; version=3.1'
   authorization: "Bearer {{oauth_token}}"
 
 name: apiv3
@@ -248,7 +248,7 @@ requests:
   -
     key: sku_favorite
     request:
-      url: '{{base_url}}/skus/146414/favorite'
+      url: '{{base_url}}/skus/5452491/favorite'
       headers:
         <<: *default_headers
   -
@@ -272,7 +272,7 @@ requests:
   -
     key: favorites_show
     request:
-      url: '{{base_url}}/favorites/1028'
+      url: '{{base_url}}/favorites/13173'
       headers:
         <<: *default_headers
   -
@@ -283,12 +283,12 @@ requests:
       headers:
         <<: *default_headers
       params:
-        favorite[sku_id]: 387159
+        favorite[sku_id]: 5452491
   -
     key: favorite_update
     request:
       verb: PUT
-      url: '{{base_url}}/favorites/1028'
+      url: '{{base_url}}/favorites/13173'
       headers:
         <<: *default_headers
       params:
@@ -391,10 +391,16 @@ requests:
       headers:
         <<: *default_headers
   -
+    key: sku_reviews_with_rating_breakdown
+    request:
+      url: '{{base_url}}/skus/808273/reviews?include_meta=sku_rating_breakdown'
+      headers:
+        <<: *default_headers
+  -
     key: sku_review_vote_create
     request:
       verb: POST
-      url: '{{base_url}}/skus/808273/reviews/146/votes'
+      url: '{{base_url}}/skus/3253124/reviews/403/votes'
       headers:
         <<: *default_headers
       params:
@@ -403,7 +409,7 @@ requests:
     key: sku_review_vote_create_embed_sku_review
     request:
       verb: POST
-      url: '{{base_url}}/skus/808273/reviews/265/votes?embed=sku_review'
+      url: '{{base_url}}/skus/2312522/reviews/435/votes?embed=sku_review'
       headers:
         <<: *default_headers
       params:
@@ -412,7 +418,7 @@ requests:
     key: sku_review_flag_create
     request:
       verb: POST
-      url: '{{base_url}}/skus/808273/reviews/146/flags'
+      url: '{{base_url}}/skus/2312522/reviews/222/flags'
       headers:
         <<: *default_headers
       params:
@@ -433,6 +439,14 @@ requests:
     key: shop_reviews
     request:
       url: '{{base_url}}/shops/42/reviews'
+      headers:
+        <<: *default_headers
+      params:
+        per: 3
+  -
+    key: shop_reviews
+    request:
+      url: '{{base_url}}/shops/138/reviews?include_meta=shop_rating_breakdown'
       headers:
         <<: *default_headers
       params:
