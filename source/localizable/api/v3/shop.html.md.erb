@@ -28,6 +28,19 @@ title: shop
 
 <%= render_recording :shop_reviews %>
 
+<% if flavor == 'skroutz' %>
+
+### Meta
+You may choose to include extra meta information using the following parameter:
+
+`shop_rating_breakdown`
+: Review stats. Contains the impression (positive or negative), the total count
+for that impression and a percentage to help the client draw a rating bar.
+
+<%= render_recording :shop_reviews_with_rating_breakdown %>
+
+<% end %>
+
 ## List shop locations
 
 #### Linked resources

@@ -21,10 +21,16 @@ section.
 section.
 
 
-Expose attribute `favorited` in <%= link_to 'Sku',
-                                            '/api/v3/sku' %>.
+Expose attribute `favorited` in <%= link_to 'Category Skus',
+                                            '/api/v3/sku'
+                                            anchor: 'list-skus-of-specific-category' %>.
 
 : This attribute signifies whether the user has favorited the SKU (available for user authenticated requests).
+
+Expose attribute `immediate_pickup` in <%= link_to 'Product',
+                                                   '/api/v3/product' %>.
+
+: Boolean value that's set to true when product has immediate availability.
 
 ## 2016-10-4 - v3.0.23
 
