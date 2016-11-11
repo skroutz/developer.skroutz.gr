@@ -66,8 +66,10 @@ be used to fetch them with ascending order.
 
 #### Linked Resources
 
+Favorites contain the following linked resources:
+
 * <%= link_to 'Linked Resources', '/api/v3' %>
-* <%= link_to 'SKU', '/api/v3/sku' %>
+  * <%= link_to 'SKU', '/api/v3/sku' %>
 
 <pre class="terminal">
   GET /favorites
@@ -82,6 +84,8 @@ The response contains only favorites belonging to the specified favorite list.
 <pre class="terminal">
   GET /favorite_lists/:id/favorites
 </pre>
+
+<%= render_recording :favorite_list_favorites %>
 
 ## Retrieve a single favorite
 

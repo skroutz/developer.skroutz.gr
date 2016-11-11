@@ -68,6 +68,18 @@ requests:
       headers:
         <<: *default_headers
   -
+    key: category_specifications
+    request:
+      url: '{{base_url}}/categories/33/specifications'
+      headers:
+        <<: *default_headers
+  -
+    key: category_specifications_with_group
+    request:
+      url: '{{base_url}}/categories/33/specifications?include=group'
+      headers:
+        <<: *default_headers
+  -
     key: shops_show
     request:
       url: '{{base_url}}/shops/42'
@@ -444,7 +456,7 @@ requests:
       params:
         per: 3
   -
-    key: shop_reviews
+    key: shop_reviews_with_rating_breakdown
     request:
       url: '{{base_url}}/shops/138/reviews?include_meta=shop_rating_breakdown'
       headers:

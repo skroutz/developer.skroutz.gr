@@ -53,6 +53,23 @@ Leaf categories have `children_count` equal to <mark>0</mark>.
 
 <%= render_recording :children_api_category %>
 
+## List a category's specifications
+
+<pre class="terminal">
+  GET /categories/:id/specifications
+</pre>
+
+<%= render_recording :category_specifications %>
+
+The specification group can be included / embedded using the `group` value.
+Groups represent a logical grouping of specifications.
+
+<pre class="terminal">
+  GET /categories/:id/specifications?include=group
+</pre>
+
+<%= render_recording :category_specifications_with_group %>
+
 ## List a category's manufacturers
 
 <pre class="terminal">

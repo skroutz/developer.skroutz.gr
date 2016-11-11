@@ -1,0 +1,39 @@
+---
+:request:
+  :url: http://api.skroutz.gr/favorite_lists/861839/favorites
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3.1
+    :authorization: Bearer KABWqibhopx2bF7ClzS17cbIPTEUtxTbf4iC5BdMxCLOGiEhaNFUKdzgkfqRjYR0/NI/0k9Gw==
+  :verb: :get
+:response:
+  :status: 200
+  :headers:
+    server: nginx
+    date: Fri, 11 Nov 2016 13:15:05 GMT
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '99'
+    x-ratelimit-reset: '1478870160'
+    x-frame-options: SAMEORIGIN
+    x-xss-protection: 1; mode=block
+    x-content-type-options: nosniff
+    etag: W/"c66fe8a25e3768b21aabeb2a16971667"
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '784435274'
+    x-runtime: '0.055050'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: rontok
+    x-varnish: '784435273'
+    age: '0'
+    via: 1.1 varnish-v4
+    x-origin: lb2
+    x-cache: MISS
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    transfer-encoding: chunked
+    connection: close
+  :body: '{"favorites":[{"id":3423493,"have_it":false,"user_id":334941,"user_notes":null,"sku_id":7423345,"created_at":"2016-02-25T16:21:11+02:00","updated_at":"2016-11-08T20:08:21+02:00","get_absolute_threshold":null},{"id":6194024,"have_it":false,"user_id":334941,"user_notes":null,"sku_id":10001441,"created_at":"2016-10-25T12:24:06+03:00","updated_at":"2016-10-25T12:24:06+03:00","get_absolute_threshold":null},{"id":6194026,"have_it":false,"user_id":334941,"user_notes":null,"sku_id":6999182,"created_at":"2016-10-25T12:24:11+03:00","updated_at":"2016-10-25T12:24:11+03:00","get_absolute_threshold":null},{"id":6194028,"have_it":false,"user_id":334941,"user_notes":null,"sku_id":6535417,"created_at":"2016-10-25T12:24:14+03:00","updated_at":"2016-10-25T12:24:14+03:00","get_absolute_threshold":null}],"meta":{"pagination":{"total_results":4,"total_pages":1,"page":1,"per":25}}}'
+:created_at: 2016-11-11 15:15:05.716523753 +02:00

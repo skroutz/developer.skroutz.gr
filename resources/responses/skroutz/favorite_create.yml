@@ -4,32 +4,36 @@
   :url: http://api.skroutz.gr/favorites
   :headers:
     :accept: application/vnd.skroutz+json; version=3.1
-    :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
+    :authorization: Bearer KABWqibhopx2KClzS17cbIPTEUtxMxCLOGiEhaNRFUzgrkfOqfRHjRYR0/NI/0k9Gw==
   :params:
-    :favorite[sku_id]: 89645
+    :favorite[sku_id]: 7957675
 :response:
-  :status: 422
+  :status: 201
   :headers:
     server: nginx
-    date: Wed, 05 Oct 2016 13:59:53 GMT
+    date: Fri, 11 Nov 2016 13:22:32 GMT
     content-type: application/json; charset=utf-8
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '61'
-    x-ratelimit-reset: '1475676000'
+    x-ratelimit-remaining: '99'
+    x-ratelimit-reset: '1478870580'
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
-    cache-control: no-cache
-    x-request-id: '688595052'
-    x-runtime: '0.034265'
+    etag: W/"a5f75622e3a5b8d9b0b0ecede553a4e8"
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '574695293'
+    x-runtime: '0.063105'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
     x-app: rontok
-    x-varnish: '688595051'
+    x-varnish: '574695292'
     age: '0'
     via: 1.1 varnish-v4
     x-origin: lb1
     x-cache: MISS
     x-cached: skroutz miss(0)
-    content-length: '104'
+    content-length: '207'
     connection: close
-  :body: '{"errors":[{"code":"sku_id","messages":["Βρίσκεται ήδη στα αγαπημένα σου"]}]}'
-:created_at: 2016-10-05 16:59:53.655848322 +03:00
+  :body: '{"favorite":{"id":6453090,"have_it":false,"user_id":334941,"user_notes":null,"sku_id":7957675,"created_at":"2016-11-11T15:22:32+02:00","updated_at":"2016-11-11T15:22:32+02:00","get_absolute_threshold":null}}'
+:created_at: 2016-11-11 15:22:32.474908485 +02:00
