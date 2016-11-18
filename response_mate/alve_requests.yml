@@ -276,6 +276,30 @@ requests:
       headers:
         <<: *default_headers
   -
+    key: fieldsets_product_with_shop
+    request:
+      url: '{{base_url}}/products/19394406?embed=shop'
+      headers:
+        <<: *default_headers
+  -
+    key: fieldsets_product_with_shop_and_root_fields
+    request:
+      url: '{{base_url}}/products/19394406?embed=shop&fields[root]=id,name'
+      headers:
+        <<: *default_headers
+  -
+    key: fieldsets_product_with_shop_and_association_fields
+    request:
+      url: '{{base_url}}/products/19394406?embed=shop&fields[root]=id,name&fields[shop]=review_score'
+      headers:
+        <<: *default_headers
+  -
+    key: fieldsets_product_with_shop_and_exclude_fields
+    request:
+      url: '{{base_url}}/products/19394406?embed=shop&fields_except[root]=sizes&fields[shop]=id,name'
+      headers:
+        <<: *default_headers
+  -
     key: favorites_index
     request:
       url: '{{base_url}}/favorites'

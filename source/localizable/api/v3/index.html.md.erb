@@ -388,3 +388,31 @@ Internal Server Error. Something is broken and we are notified.
 ##### Status Code: 501
 
 Not Implemented. The requested action is not implemented.
+
+## Sparse fieldsets
+
+Sparse fieldsets are a way for clients to request specific json fields from the server response.  
+The response is reduced, saving bandwidth and CPU time on both ends. Everybody wins, so use them when you get the chance!  
+We follow the [JSON API Sparse Fieldsets](http://jsonapi.org/format/#fetching-sparse-fieldsets) format, using **`root`** as a special value to denote the main resource (top object) returned by the server.
+
+Here is an example response from a product with an embedded shop:
+
+<%= render_recording :fieldsets_product_with_shop %>
+
+Let's say we only wanted `id` & `name` from the product.
+We can use `?fields[root]=id,name` to get just those two fields (along with the association).  
+
+<%= render_recording :fieldsets_product_with_shop_and_root_fields %>
+
+If we want to filter fields from the association, we can use the association name we used in the embed/include parameter (which is `shop` in this example).  
+So in order to fetch the `review_score` only from the `shop` we can use the following parameters `fields[root]=id,name&fields[shop]=review_score`.
+
+<%= render_recording :fieldsets_product_with_shop_and_association_fields %>
+
+Up until now, we only specified the fields we wanted, but we can go the opposite way as well and exclude fields instead.  
+Here's how we could fetch just the `id` & `name` from the `shop` embedded resource, while excluding `sizes` from products: `fields_except[root]=sizes&fields[shop]=id,name`
+
+<%= render_recording :fieldsets_product_with_shop_and_exclude_fields %>
+
+> ##### Note
+> Combining `fields` & `fields_except` in the same resource (root or association) will exclude fields after the inclusion has been applied.

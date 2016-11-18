@@ -1,0 +1,40 @@
+---
+:request:
+  :url: http://api.alve.com/products/19394406?embed=shop&fields[root]=id,name&fields[shop]=review_score
+  :headers:
+    :accept: application/vnd.alve+json; version=3.1
+    :authorization: Bearer WBSwuHdGfR8jll30RnDJRcY/iusyn3rgiRI1VaJyJPt5gFwkkc5QngH4U9CuzqsHuDlfeO0QSFECTn0rABYvg==
+  :verb: :get
+:response:
+  :status: 200
+  :headers:
+    server: nginx
+    date: Fri, 18 Nov 2016 11:58:03 GMT
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '99'
+    x-ratelimit-reset: '1479470340'
+    x-frame-options: SAMEORIGIN
+    x-xss-protection: 1; mode=block
+    x-content-type-options: nosniff
+    cache-control: max-age=300, private
+    etag: W/"406522e28a45f0a57cf868c4ba8b0136"
+    x-request-id: '89074906'
+    x-runtime: '0.086086'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: as1
+    x-varnish: '89074905'
+    age: '0'
+    via: 1.1 varnish-v4
+    x-origin: lb1
+    x-cache: MISS
+    x-cached: alve miss(0)
+    accept-ranges: bytes
+    content-length: '137'
+    connection: close
+  :body: '{"product":{"id":19394406,"name":"Huawei P9 Plus 64 Gb (İthalatçı Garantili)
+    - Altın","shop":{"review_score":0.0}}}'
+:created_at: 2016-11-18 13:58:03.254376047 +02:00

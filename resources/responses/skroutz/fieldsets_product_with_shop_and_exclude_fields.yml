@@ -1,0 +1,40 @@
+---
+:request:
+  :url: http://api.skroutz.gr/products/25809770?embed=shop&fields_except[root]=sizes&fields[shop]=id,name
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3.1
+    :authorization: Bearer 3PAD5Sq7P139JUstkf7SYd5gfw9TzgvXJMa6/zH3DgWNVd0xbQ75W7lTv72KlH5qKPzNxshsS5aFjQ==
+  :verb: :get
+:response:
+  :status: 200
+  :headers:
+    server: nginx
+    date: Fri, 18 Nov 2016 11:42:09 GMT
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '99'
+    x-ratelimit-reset: '1479469380'
+    x-frame-options: SAMEORIGIN
+    x-xss-protection: 1; mode=block
+    x-content-type-options: nosniff
+    cache-control: max-age=300, private
+    etag: W/"4ed240c2400e4a28728b0e72202a849b"
+    x-request-id: '55694203'
+    x-runtime: '0.022507'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: rontok
+    x-varnish: '55694202'
+    age: '0'
+    via: 1.1 varnish-v4
+    x-origin: lb1
+    x-cache: MISS
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    content-length: '377'
+    connection: close
+  :body: '{"product":{"id":25809770,"name":"ALCATEL One Touch 1016G Grey EU","sku_id":10001441,"shop_id":1153,"category_id":40,"availability":"Άμεση
+    παραλαβή / Παράδοση 1 έως 3 ημέρες","click_url":"https://www.skroutz.gr/products/show/25809770?client_id=SbhE4wYENGn8ulFiBaXhDw%3D%3D\u0026from=api","shop_uid":"4909","expenses":null,"web_uri":"http://skroutz.gr/products/show/25809770","price":16.12,"immediate_pickup":true,"shop":{"id":1153,"name":"Mobilephones"}}}'
+:created_at: 2016-11-18 13:42:09.308428386 +02:00
