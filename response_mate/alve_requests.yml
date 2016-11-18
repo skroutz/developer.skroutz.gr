@@ -68,6 +68,18 @@ requests:
       headers:
         <<: *default_headers
   -
+    key: category_specifications
+    request:
+      url: '{{base_url}}/categories/33/specifications'
+      headers:
+        <<: *default_headers
+  -
+    key: category_specifications_with_group
+    request:
+      url: '{{base_url}}/categories/33/specifications?include=group'
+      headers:
+        <<: *default_headers
+  -
     key: shops_show
     request:
       url: '{{base_url}}/shops/42'
@@ -264,6 +276,30 @@ requests:
       headers:
         <<: *default_headers
   -
+    key: fieldsets_product_with_shop
+    request:
+      url: '{{base_url}}/products/19394406?embed=shop'
+      headers:
+        <<: *default_headers
+  -
+    key: fieldsets_product_with_shop_and_root_fields
+    request:
+      url: '{{base_url}}/products/19394406?embed=shop&fields[root]=id,name'
+      headers:
+        <<: *default_headers
+  -
+    key: fieldsets_product_with_shop_and_association_fields
+    request:
+      url: '{{base_url}}/products/19394406?embed=shop&fields[root]=id,name&fields[shop]=review_score'
+      headers:
+        <<: *default_headers
+  -
+    key: fieldsets_product_with_shop_and_exclude_fields
+    request:
+      url: '{{base_url}}/products/19394406?embed=shop&fields_except[root]=sizes&fields[shop]=id,name'
+      headers:
+        <<: *default_headers
+  -
     key: favorites_index
     request:
       url: '{{base_url}}/favorites'
@@ -444,7 +480,7 @@ requests:
       params:
         per: 3
   -
-    key: shop_reviews
+    key: shop_reviews_with_rating_breakdown
     request:
       url: '{{base_url}}/shops/138/reviews?include_meta=shop_rating_breakdown'
       headers:

@@ -5,6 +5,29 @@ title: changelog
 
 # Changelog <%= edit_link %>
 
+## 2016-11-18 - v3.1.1
+
+### Introducing sparse fieldsets!
+
+You can read more about it in our <%= link_to 'Sparse fieldsets',
+                                              '/api/v3',
+                                              anchor: 'sparse-fieldsets' %>
+section.
+
+New endpoint, `GET` `/api/categories/{category_id}/specifications/`
+: List category specifications.
+<%= link_to 'Read more', '/api/v3/category', anchor: 'list-a-categorys-specifications' %>
+
+Expose attribute `comparable` <%= link_to 'SKU',
+                                          '/api/v3/sku' %>.
+
+: Boolean attribute. True when the SKU can be used in a comparison.
+
+Expose attribute `shipping_cost_enabled` <%= link_to 'Shop',
+                                                     '/api/v3/shop' %>.
+
+: Boolean attribute. True when Shop has added shipping rules.
+
 ## 2016-10-5 - v3.1.0
 
 ### Introducing API minor version support!

@@ -68,6 +68,18 @@ requests:
       headers:
         <<: *default_headers
   -
+    key: category_specifications
+    request:
+      url: '{{base_url}}/categories/40/specifications'
+      headers:
+        <<: *default_headers
+  -
+    key: category_specifications_with_group
+    request:
+      url: '{{base_url}}/categories/40/specifications?include=group'
+      headers:
+        <<: *default_headers
+  -
     key: shops_show
     request:
       url: '{{base_url}}/shops/452'
@@ -264,6 +276,30 @@ requests:
       headers:
         <<: *default_headers
   -
+    key: fieldsets_product_with_shop
+    request:
+      url: '{{base_url}}/products/25809770?embed=shop'
+      headers:
+        <<: *default_headers
+  -
+    key: fieldsets_product_with_shop_and_root_fields
+    request:
+      url: '{{base_url}}/products/25809770?embed=shop&fields[root]=id,name'
+      headers:
+        <<: *default_headers
+  -
+    key: fieldsets_product_with_shop_and_association_fields
+    request:
+      url: '{{base_url}}/products/25809770?embed=shop&fields[root]=id,name&fields[shop]=review_score'
+      headers:
+        <<: *default_headers
+  -
+    key: fieldsets_product_with_shop_and_exclude_fields
+    request:
+      url: '{{base_url}}/products/25809770?embed=shop&fields_except[root]=sizes&fields[shop]=id,name'
+      headers:
+        <<: *default_headers
+  -
     key: favorites_index
     request:
       url: '{{base_url}}/favorites'
@@ -283,7 +319,7 @@ requests:
       headers:
         <<: *default_headers
       params:
-        favorite[sku_id]: 89645
+        favorite[sku_id]: 7957675
   -
     key: favorite_update
     request:
@@ -307,7 +343,13 @@ requests:
       headers:
         <<: *default_headers
       params:
-        favorite_list[name]: a new list name
+        favorite_list[name]: test name
+  -
+    key: favorite_list_favorites
+    request:
+      url: '{{base_url}}/favorite_lists/861839/favorites'
+      headers:
+        <<: *default_headers
   -
     key: filter_groups_index
     request:

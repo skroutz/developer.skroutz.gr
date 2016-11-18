@@ -4,32 +4,36 @@
   :url: http://api.skroutz.gr/favorite_lists
   :headers:
     :accept: application/vnd.skroutz+json; version=3.1
-    :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
+    :authorization: Bearer KAWihopx2bFI7KClzS17cbPTEUtxTfviC/5BMCGihNFUPdzrfOqfRHjRYR0/NI/0k9Gw==
   :params:
-    :favorite_list[name]: a new list name
+    :favorite_list[name]: test name
 :response:
-  :status: 422
+  :status: 201
   :headers:
     server: nginx
-    date: Wed, 05 Oct 2016 13:59:53 GMT
+    date: Fri, 11 Nov 2016 13:21:03 GMT
     content-type: application/json; charset=utf-8
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '58'
-    x-ratelimit-reset: '1475676000'
+    x-ratelimit-remaining: '99'
+    x-ratelimit-reset: '1478870520'
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
-    cache-control: no-cache
-    x-request-id: '725252502'
-    x-runtime: '0.027974'
+    etag: W/"2467daa881e4a41ddce73e8a49445b91"
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '783948963'
+    x-runtime: '0.032568'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
     x-app: rontok
-    x-varnish: '725252501'
+    x-varnish: '783948962'
     age: '0'
     via: 1.1 varnish-v4
     x-origin: lb2
     x-cache: MISS
     x-cached: skroutz miss(0)
-    transfer-encoding: chunked
+    content-length: '69'
     connection: close
-  :body: '{"errors":[{"code":"name","messages":["Έχεις ήδη μια λίστα με αυτό το όνομα"]}]}'
-:created_at: 2016-10-05 16:59:53.774159151 +03:00
+  :body: '{"favorite_list":{"id":886070,"name":"test name","category_id":null}}'
+:created_at: 2016-11-11 15:21:03.299897260 +02:00
