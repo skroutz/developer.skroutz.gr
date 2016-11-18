@@ -346,6 +346,12 @@ requests:
         favorite_list[name]: a new list name
 
   -
+    key: favorite_list_favorites
+    request:
+      url: '{{base_url}}/favorite_lists/2845/favorites'
+      headers:
+        <<: *default_headers
+  -
     key: filter_groups_index
     request:
       url: '{{base_url}}/categories/33/filter_groups'
