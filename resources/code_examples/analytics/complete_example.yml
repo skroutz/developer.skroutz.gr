@@ -9,7 +9,7 @@
       tax:      '1014.79'  // Total Tax.
     }));
   </script>
-  
+
   <!-- Send the Item data for each item in the shopping cart -->
   <script>
     sa('ecommerce', 'addItem', JSON.stringify({
@@ -19,7 +19,7 @@
       price:      '654.90',                                    // Price per Unit. Required.
       quantity:   '4'                                          // Quantity of Items. Required.
     }));
-  
+
     sa('ecommerce', 'addItem', JSON.stringify({
       order_id:   '123456',
       product_id: '303404',
@@ -27,7 +27,7 @@
       price:      '590.99',
       quantity:   '1'
     }));
-  
+
     sa('ecommerce', 'addItem', JSON.stringify({
       order_id:   '123456',
       product_id: '121234',
