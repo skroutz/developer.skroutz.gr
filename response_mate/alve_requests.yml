@@ -219,15 +219,6 @@ requests:
       headers:
         <<: *default_headers
   -
-    key: search_skus_match
-    request:
-      url: '{{base_url}}/search?q=samsung+galaxy+s5+16GB'
-      headers:
-        <<: *default_headers
-      params:
-        page: 1
-        per: 2
-  -
     key: skus_show
     request:
       url: '{{base_url}}/skus/146414'
@@ -426,12 +417,6 @@ requests:
         <<: *default_headers
       params:
         ids: [42478, 45030]
-  -
-    key: sku_reviews
-    request:
-      url: '{{base_url}}/skus/808273/reviews'
-      headers:
-        <<: *default_headers
   -
     key: sku_reviews_with_rating_breakdown
     request:

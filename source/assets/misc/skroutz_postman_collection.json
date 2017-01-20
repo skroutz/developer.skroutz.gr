@@ -1,11 +1,11 @@
 {
-  "id": "3669f49d-c819-438a-a669-dd891b2c2081",
+  "id": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
   "name": "apiv3",
   "description": "",
   "requests": [
     {
-      "id": "8cf6cba6-109a-4d7a-9d52-4581bbf12820",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "efe65123-e049-4bf5-bfd2-46c31ea917a1",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -21,8 +21,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "2dd50a2e-035f-40e1-8fb1-262c3f11f556",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "96518125-8295-4cf9-a7d6-082e45e3e65e",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -38,8 +38,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "bcaa9954-eeda-4c95-a3ff-4238c1902d71",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "445e1c71-d644-48ca-8182-5d032c3004e6",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -55,8 +55,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "1e68542f-e064-4525-84fc-fd0693c50988",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "57b743fa-e20b-4191-bb5c-2144bfc1ed2d",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -72,8 +72,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "f77dca3a-2f81-4667-8894-9783308c6b8e",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "9659dfdc-33ed-4f22-9282-769223b48983",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -89,8 +89,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "74289c40-f248-4a82-84d7-80e314caab24",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "13a9d820-3919-47eb-8f56-30aa605897ee",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -106,8 +106,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "7c34e61c-b32c-433c-803a-c1d38a9d6ab9",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "aab4c4ad-cc5a-4242-ac91-65339a3444e0",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -123,8 +123,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "d93c88cf-823e-4472-a3d5-d0787e1d4bd7",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "ad99454f-9f5b-46de-8e10-11f31074758b",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -140,8 +140,42 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "cf6a041b-220f-4dfc-8a97-8bb01a36ad9f",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "2cacb54b-50bf-4246-8fe7-4630386ca160",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "get",
+      "name": "category_specifications",
+      "url": "{{base_url}}/categories/40/specifications",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "700f225b-c14d-4dd4-b95b-8e6ed78b13d1",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "get",
+      "name": "category_specifications_with_group",
+      "url": "{{base_url}}/categories/40/specifications?include=group",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "53925406-0a1a-40b0-adb6-265368f46a7b",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -157,8 +191,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "4eb3e15c-174c-4920-bf2b-d87f99203bc5",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "a3cd7418-e13c-426c-a5ff-5fd3a28c01ce",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -174,8 +208,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "af59beb1-437a-49d8-aee3-fa859c25c176",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "e4a14d7c-c574-40c4-a5eb-7977f3591989",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -191,8 +225,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "ddc8fff9-8518-4bfb-a457-c272826e05f6",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "718820a8-a384-4cb6-9802-fcd406fcb7c4",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -208,8 +242,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "6ed23603-d58a-4628-b690-fd4ad0ee6ed4",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "07db6ed5-d201-4c01-8908-d76c153813f6",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -225,8 +259,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "39fd672f-341c-486d-9954-e4cbc127d053",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "47114b1a-9c2a-4165-ad68-7e23b801cc56",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -242,8 +276,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "812611fc-7146-46b9-acd1-11eb21d3aa0a",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "775850ce-8d88-45d7-a835-7ed609017161",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -259,8 +293,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "5f30cb54-2a53-42b1-927f-dd69e958c3c6",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "66381471-db30-4670-b8bd-b62ae50abd76",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -276,8 +310,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "0952806d-9207-49c3-b710-d65b2d2bccdd",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "cfd3b868-aa34-47bf-8bba-2a15435d9021",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -293,8 +327,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "2ca984d0-3dfc-407a-9143-9c7b8f6bc948",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "17c3804e-03f0-4387-be79-6ce6d811e4f4",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -310,8 +344,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "51e852ec-2cc4-4404-98b8-f8d25e02bf4b",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "ecf7edcf-f559-4dbb-9a7f-138594cf3624",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -327,8 +361,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "0d6a1147-7785-47f2-8911-6777c3d9dfa4",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "cb615ab8-57c5-47d1-ab8c-f11701327bec",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -344,8 +378,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "1b0ec601-ed95-4d06-99f5-5b1c933f9bc7",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "a109c86c-c7b9-474e-ad6e-ef0abc34f2d6",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -361,8 +395,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "485a140f-77e5-4ab1-9171-fb312f3fb210",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "f84f72b6-1fc7-49c4-bc1d-7c6d6a96249d",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -378,8 +412,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "f5307325-a63f-4218-a825-4cb82b0e3ac3",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "bf43fa0a-9de3-4ea5-9a7b-1020ae05c75e",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -395,8 +429,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "6e6a70fb-f971-41bd-b2d6-c05fc61f86b9",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "ec4d8d2b-552a-4d23-ae74-f6c045e71ec6",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -412,8 +446,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "92196e26-2cf8-4b02-bf3a-62d8f9dceb24",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "da5c8920-af8f-4786-95ba-791b2b9d15f8",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -429,8 +463,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "9d2767b3-60d5-4ba4-baee-6f8b644f0a7b",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "f4aebfb3-beb6-421a-b5c1-e00cd2b79998",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -446,8 +480,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "3e22838b-c3b0-456f-add6-9f9b40d7d2cc",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "96fa5f92-961f-490c-a845-3cf1985d730d",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -463,25 +497,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "d579a5a0-9783-4c3c-bc06-19aed601ce0c",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
-      "data": [
-
-      ],
-      "description": "",
-      "method": "get",
-      "name": "search_skus_match",
-      "url": "{{base_url}}/search?q=samsung+galaxy+s5+16GB",
-      "version": 2,
-      "responses": [
-
-      ],
-      "dataMode": "params",
-      "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
-    },
-    {
-      "id": "3361d828-460b-4d6e-b76e-64bd04ed7540",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "476ce267-6617-45e0-b59b-aea8c7b2b5f0",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -497,8 +514,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "c15142c1-daa4-42bd-8057-29941cc4ee0d",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "61182be0-740f-4246-94df-1deab5205103",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -514,8 +531,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "0c624d7f-79b5-4b95-ba4e-784574ece61b",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "dd5d2a22-a826-4878-8cfd-f9d158c08cd9",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -531,8 +548,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "3126a6b3-0d6a-435a-88f5-c18dfb880c11",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "7aedac83-8548-402e-89c8-c9bc066810fc",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -548,8 +565,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "6abf9876-6f9f-4f0c-8678-e24de39a234f",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "fd86af9e-36ab-4939-aaa8-7858e1dba33b",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -565,8 +582,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "61ddbd49-42c0-416d-ba14-70c8ca51fc7b",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "88eafa89-ceda-4ca5-88e7-5525a5adb3de",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -582,8 +599,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "e9a4ab71-a68d-463c-9522-90220a110122",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "b98220c7-bc55-4135-a6be-fdc8c70bba43",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -599,8 +616,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "c3e6e939-ed5e-415d-bd48-6f984235742d",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "f535186b-5d08-480f-b91d-e2478c512816",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -616,8 +633,76 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "3718bde4-e13f-46d6-9aba-400f5f54f686",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "dba23415-8799-4c70-a4e5-5af33974f33f",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "get",
+      "name": "fieldsets_product_with_shop",
+      "url": "{{base_url}}/products/25809770?embed=shop",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "d5badf0a-e147-434f-bd51-90c3ca1ac111",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "get",
+      "name": "fieldsets_product_with_shop_and_root_fields",
+      "url": "{{base_url}}/products/25809770?embed=shop&fields[root]=id,name",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "ddee5327-e950-4711-9fe4-67003ff40183",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "get",
+      "name": "fieldsets_product_with_shop_and_association_fields",
+      "url": "{{base_url}}/products/25809770?embed=shop&fields[root]=id,name&fields[shop]=review_score",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "a3f9b0d5-d1b4-46fe-b63e-83151bbc89b3",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "get",
+      "name": "fieldsets_product_with_shop_and_exclude_fields",
+      "url": "{{base_url}}/products/25809770?embed=shop&fields_except[root]=sizes&fields[shop]=id,name",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "501e73a8-0c34-47e6-8e48-84f9d859af75",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -633,8 +718,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "820af481-ed67-47a3-ba3d-b7d193c56456",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "bd02ef49-f466-4bd8-8571-c4d28acc7a62",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -650,8 +735,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "a5b09c6b-fc11-4734-9d5a-0458bea76e7c",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "5cb36638-2685-4151-a165-9728d90a434c",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -667,8 +752,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "4cf93769-1239-4ee0-af50-e21eb749a53f",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "50c9af60-534a-4249-a950-6b9d3cda699c",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -684,8 +769,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "3aa1738a-9a1a-42df-83fd-2282805662de",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "4f833183-eaec-4421-9899-00581b6d3468",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -701,8 +786,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "7223d34c-7e74-4844-9a74-1cd2998110bb",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "036f52b3-1e71-473b-abd8-99352a844a8e",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -718,8 +803,25 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "aa5691fd-d3db-476c-a2a8-7b73239cfa8e",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "0fc9665c-99ba-4062-b4ac-924e4515c68a",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "get",
+      "name": "favorite_list_favorites",
+      "url": "{{base_url}}/favorite_lists/861839/favorites",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "8668d4aa-31f8-4bd2-90a9-198170cf69af",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -735,8 +837,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "76a6ac5f-5931-48f1-90b8-ef02a6b7e54a",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "32a989c0-035d-4188-987e-f968ea83ceda",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -752,8 +854,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "9ffc73dc-15cd-4e59-945c-5ec5c57453ad",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "5a934c5a-1d72-4664-a580-26a35b6c1f48",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -769,8 +871,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "79a38102-7760-4df2-b241-d85a0c8b3a0b",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "97ea9788-72e6-4c10-aaa9-25e040ef4737",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -786,8 +888,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "2e20ffc1-8026-4ebd-8f4d-61bcc2a5961d",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "f1ab96d4-0407-4dfa-8582-2674844c33a3",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -803,8 +905,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "d56c2bc0-4bd4-45e9-b5c1-210148055441",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "9a456ce5-121c-46f6-a25d-d85fbedc12e5",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -820,8 +922,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "cb6ca14e-56fe-4671-9da4-5e049372d3c1",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "8fb70fcd-23ad-4f69-9a84-e96d2a9abc73",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -837,8 +939,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "b21446a8-0b25-4549-82a9-9433aa998f12",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "557411fa-36e7-4f2b-aa7f-33947f380813",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -854,8 +956,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "11febc9c-5fca-46d1-ac38-27cadd0c2937",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "f1038edd-2b35-4baa-b59b-15c3dd792a77",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -871,25 +973,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "2bea2a17-81f3-4960-b642-1b3de638582c",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
-      "data": [
-
-      ],
-      "description": "",
-      "method": "get",
-      "name": "sku_reviews",
-      "url": "{{base_url}}/skus/355766/reviews",
-      "version": 2,
-      "responses": [
-
-      ],
-      "dataMode": "params",
-      "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
-    },
-    {
-      "id": "fb59398b-25ed-44c4-8783-aac9dc9f8699",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "1dc071bb-9c30-4d0d-8b2d-99cb620aa19d",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -905,8 +990,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "be3a0ebb-e6fb-4368-afd9-c436ffd474e2",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "b638521c-f6f0-47b4-9d6e-00b09722620d",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -922,8 +1007,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "b0197849-ef0e-4cdc-8448-36680700a8a2",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "972101c9-27c6-4f0a-98a9-5bb358458d0d",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -939,8 +1024,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "994ff39b-88b7-4999-afd4-43cdb97ccef5",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "a301d509-5319-448a-abd7-0485fd48c43e",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -956,8 +1041,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "2d591845-1acf-4bc0-9e2f-6cf17b8478b1",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "09e4dd5a-f25c-4c0c-8cce-bbb1226bdc71",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -973,8 +1058,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "80d41ce2-da9f-4804-8617-ec826a965375",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "5fed8aa7-f350-411f-bac5-108c474e3268",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -990,8 +1075,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "850e6fb2-69a7-4f02-8b3c-265e5c681fd4",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "e96a12c2-1d42-401e-8880-ae4002c7ab29",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -1007,8 +1092,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "8eddc3ca-8b09-439b-89e0-574bd9d9a466",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "f707ea6b-bfa9-4f64-b468-2f397f73831e",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -1024,8 +1109,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "b8b24d4e-c945-45e9-be01-e2e3a5a7f61a",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "f1b5f421-78c9-43a3-913d-158f2207d8b0",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -1041,8 +1126,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "cabfb9f5-6083-491d-b3ae-7c7227ec1eff",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "87e4e755-1c0a-4652-ae2b-1ebf88ccdc05",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -1058,8 +1143,8 @@
       "headers": "accept: application/vnd.skroutz+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "d182b6dd-dfcf-4758-a9e7-c1899ecdd4fc",
-      "collectionId": "3669f49d-c819-438a-a669-dd891b2c2081",
+      "id": "6000d788-0b82-40f9-a099-c81c3612b559",
+      "collectionId": "da7e86dd-1654-4d97-8e9a-82cba37c1878",
       "data": [
 
       ],
@@ -1076,69 +1161,74 @@
     }
   ],
   "order": [
-    "8cf6cba6-109a-4d7a-9d52-4581bbf12820",
-    "2dd50a2e-035f-40e1-8fb1-262c3f11f556",
-    "bcaa9954-eeda-4c95-a3ff-4238c1902d71",
-    "1e68542f-e064-4525-84fc-fd0693c50988",
-    "f77dca3a-2f81-4667-8894-9783308c6b8e",
-    "74289c40-f248-4a82-84d7-80e314caab24",
-    "7c34e61c-b32c-433c-803a-c1d38a9d6ab9",
-    "d93c88cf-823e-4472-a3d5-d0787e1d4bd7",
-    "cf6a041b-220f-4dfc-8a97-8bb01a36ad9f",
-    "4eb3e15c-174c-4920-bf2b-d87f99203bc5",
-    "af59beb1-437a-49d8-aee3-fa859c25c176",
-    "ddc8fff9-8518-4bfb-a457-c272826e05f6",
-    "6ed23603-d58a-4628-b690-fd4ad0ee6ed4",
-    "39fd672f-341c-486d-9954-e4cbc127d053",
-    "812611fc-7146-46b9-acd1-11eb21d3aa0a",
-    "5f30cb54-2a53-42b1-927f-dd69e958c3c6",
-    "0952806d-9207-49c3-b710-d65b2d2bccdd",
-    "2ca984d0-3dfc-407a-9143-9c7b8f6bc948",
-    "51e852ec-2cc4-4404-98b8-f8d25e02bf4b",
-    "0d6a1147-7785-47f2-8911-6777c3d9dfa4",
-    "1b0ec601-ed95-4d06-99f5-5b1c933f9bc7",
-    "485a140f-77e5-4ab1-9171-fb312f3fb210",
-    "f5307325-a63f-4218-a825-4cb82b0e3ac3",
-    "6e6a70fb-f971-41bd-b2d6-c05fc61f86b9",
-    "92196e26-2cf8-4b02-bf3a-62d8f9dceb24",
-    "9d2767b3-60d5-4ba4-baee-6f8b644f0a7b",
-    "3e22838b-c3b0-456f-add6-9f9b40d7d2cc",
-    "d579a5a0-9783-4c3c-bc06-19aed601ce0c",
-    "3361d828-460b-4d6e-b76e-64bd04ed7540",
-    "c15142c1-daa4-42bd-8057-29941cc4ee0d",
-    "0c624d7f-79b5-4b95-ba4e-784574ece61b",
-    "3126a6b3-0d6a-435a-88f5-c18dfb880c11",
-    "6abf9876-6f9f-4f0c-8678-e24de39a234f",
-    "61ddbd49-42c0-416d-ba14-70c8ca51fc7b",
-    "e9a4ab71-a68d-463c-9522-90220a110122",
-    "c3e6e939-ed5e-415d-bd48-6f984235742d",
-    "3718bde4-e13f-46d6-9aba-400f5f54f686",
-    "820af481-ed67-47a3-ba3d-b7d193c56456",
-    "a5b09c6b-fc11-4734-9d5a-0458bea76e7c",
-    "4cf93769-1239-4ee0-af50-e21eb749a53f",
-    "3aa1738a-9a1a-42df-83fd-2282805662de",
-    "7223d34c-7e74-4844-9a74-1cd2998110bb",
-    "aa5691fd-d3db-476c-a2a8-7b73239cfa8e",
-    "76a6ac5f-5931-48f1-90b8-ef02a6b7e54a",
-    "9ffc73dc-15cd-4e59-945c-5ec5c57453ad",
-    "79a38102-7760-4df2-b241-d85a0c8b3a0b",
-    "2e20ffc1-8026-4ebd-8f4d-61bcc2a5961d",
-    "d56c2bc0-4bd4-45e9-b5c1-210148055441",
-    "cb6ca14e-56fe-4671-9da4-5e049372d3c1",
-    "b21446a8-0b25-4549-82a9-9433aa998f12",
-    "11febc9c-5fca-46d1-ac38-27cadd0c2937",
-    "2bea2a17-81f3-4960-b642-1b3de638582c",
-    "fb59398b-25ed-44c4-8783-aac9dc9f8699",
-    "be3a0ebb-e6fb-4368-afd9-c436ffd474e2",
-    "b0197849-ef0e-4cdc-8448-36680700a8a2",
-    "994ff39b-88b7-4999-afd4-43cdb97ccef5",
-    "2d591845-1acf-4bc0-9e2f-6cf17b8478b1",
-    "80d41ce2-da9f-4804-8617-ec826a965375",
-    "850e6fb2-69a7-4f02-8b3c-265e5c681fd4",
-    "8eddc3ca-8b09-439b-89e0-574bd9d9a466",
-    "b8b24d4e-c945-45e9-be01-e2e3a5a7f61a",
-    "cabfb9f5-6083-491d-b3ae-7c7227ec1eff",
-    "d182b6dd-dfcf-4758-a9e7-c1899ecdd4fc"
+    "efe65123-e049-4bf5-bfd2-46c31ea917a1",
+    "96518125-8295-4cf9-a7d6-082e45e3e65e",
+    "445e1c71-d644-48ca-8182-5d032c3004e6",
+    "57b743fa-e20b-4191-bb5c-2144bfc1ed2d",
+    "9659dfdc-33ed-4f22-9282-769223b48983",
+    "13a9d820-3919-47eb-8f56-30aa605897ee",
+    "aab4c4ad-cc5a-4242-ac91-65339a3444e0",
+    "ad99454f-9f5b-46de-8e10-11f31074758b",
+    "2cacb54b-50bf-4246-8fe7-4630386ca160",
+    "700f225b-c14d-4dd4-b95b-8e6ed78b13d1",
+    "53925406-0a1a-40b0-adb6-265368f46a7b",
+    "a3cd7418-e13c-426c-a5ff-5fd3a28c01ce",
+    "e4a14d7c-c574-40c4-a5eb-7977f3591989",
+    "718820a8-a384-4cb6-9802-fcd406fcb7c4",
+    "07db6ed5-d201-4c01-8908-d76c153813f6",
+    "47114b1a-9c2a-4165-ad68-7e23b801cc56",
+    "775850ce-8d88-45d7-a835-7ed609017161",
+    "66381471-db30-4670-b8bd-b62ae50abd76",
+    "cfd3b868-aa34-47bf-8bba-2a15435d9021",
+    "17c3804e-03f0-4387-be79-6ce6d811e4f4",
+    "ecf7edcf-f559-4dbb-9a7f-138594cf3624",
+    "cb615ab8-57c5-47d1-ab8c-f11701327bec",
+    "a109c86c-c7b9-474e-ad6e-ef0abc34f2d6",
+    "f84f72b6-1fc7-49c4-bc1d-7c6d6a96249d",
+    "bf43fa0a-9de3-4ea5-9a7b-1020ae05c75e",
+    "ec4d8d2b-552a-4d23-ae74-f6c045e71ec6",
+    "da5c8920-af8f-4786-95ba-791b2b9d15f8",
+    "f4aebfb3-beb6-421a-b5c1-e00cd2b79998",
+    "96fa5f92-961f-490c-a845-3cf1985d730d",
+    "476ce267-6617-45e0-b59b-aea8c7b2b5f0",
+    "61182be0-740f-4246-94df-1deab5205103",
+    "dd5d2a22-a826-4878-8cfd-f9d158c08cd9",
+    "7aedac83-8548-402e-89c8-c9bc066810fc",
+    "fd86af9e-36ab-4939-aaa8-7858e1dba33b",
+    "88eafa89-ceda-4ca5-88e7-5525a5adb3de",
+    "b98220c7-bc55-4135-a6be-fdc8c70bba43",
+    "f535186b-5d08-480f-b91d-e2478c512816",
+    "dba23415-8799-4c70-a4e5-5af33974f33f",
+    "d5badf0a-e147-434f-bd51-90c3ca1ac111",
+    "ddee5327-e950-4711-9fe4-67003ff40183",
+    "a3f9b0d5-d1b4-46fe-b63e-83151bbc89b3",
+    "501e73a8-0c34-47e6-8e48-84f9d859af75",
+    "bd02ef49-f466-4bd8-8571-c4d28acc7a62",
+    "5cb36638-2685-4151-a165-9728d90a434c",
+    "50c9af60-534a-4249-a950-6b9d3cda699c",
+    "4f833183-eaec-4421-9899-00581b6d3468",
+    "036f52b3-1e71-473b-abd8-99352a844a8e",
+    "0fc9665c-99ba-4062-b4ac-924e4515c68a",
+    "8668d4aa-31f8-4bd2-90a9-198170cf69af",
+    "32a989c0-035d-4188-987e-f968ea83ceda",
+    "5a934c5a-1d72-4664-a580-26a35b6c1f48",
+    "97ea9788-72e6-4c10-aaa9-25e040ef4737",
+    "f1ab96d4-0407-4dfa-8582-2674844c33a3",
+    "9a456ce5-121c-46f6-a25d-d85fbedc12e5",
+    "8fb70fcd-23ad-4f69-9a84-e96d2a9abc73",
+    "557411fa-36e7-4f2b-aa7f-33947f380813",
+    "f1038edd-2b35-4baa-b59b-15c3dd792a77",
+    "1dc071bb-9c30-4d0d-8b2d-99cb620aa19d",
+    "b638521c-f6f0-47b4-9d6e-00b09722620d",
+    "972101c9-27c6-4f0a-98a9-5bb358458d0d",
+    "a301d509-5319-448a-abd7-0485fd48c43e",
+    "09e4dd5a-f25c-4c0c-8cce-bbb1226bdc71",
+    "5fed8aa7-f350-411f-bac5-108c474e3268",
+    "e96a12c2-1d42-401e-8880-ae4002c7ab29",
+    "f707ea6b-bfa9-4f64-b468-2f397f73831e",
+    "f1b5f421-78c9-43a3-913d-158f2207d8b0",
+    "87e4e755-1c0a-4652-ae2b-1ebf88ccdc05",
+    "6000d788-0b82-40f9-a099-c81c3612b559"
   ],
-  "timestamp": 1475678982
+  "timestamp": 1484927708
 }

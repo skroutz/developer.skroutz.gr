@@ -1,11 +1,11 @@
 {
-  "id": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+  "id": "78636657-6588-43ae-8eee-b6dd3a15ce54",
   "name": "apiv3",
   "description": "",
   "requests": [
     {
-      "id": "5882efb8-e2a3-4fa1-9c58-2767ff8e6869",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "7b122641-9021-4b5c-a452-83232cb2373a",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -21,8 +21,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "08204811-e865-446d-a7cf-982c7af7e2e9",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "a5deeda1-bc37-4b3f-a57f-da1ecc14a46e",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -38,8 +38,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "f43813e6-6d21-45f5-a885-cdf2346e663b",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "1e4a2d26-bbcd-4748-befc-fd9e4cb1f302",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -55,8 +55,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "dec9a336-0464-49b5-a502-8ba3f67cb85a",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "360edafa-ed60-4451-b849-2b2f1ec38dad",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -72,8 +72,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "f820526a-8e46-48cd-9ec6-fec3a5502089",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "16f39370-cf69-49ab-9f46-506275042f62",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -89,8 +89,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "aa9c5296-edcf-48fc-a372-9622ac63e0db",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "1cba7def-382e-4def-8b86-4258fc40ed4d",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -106,8 +106,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "a7cbcc36-f9c2-4a45-8077-d417b71c854e",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "1447419a-4d5a-4a2a-9062-a1c176b5b0de",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -123,8 +123,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "a30d3c8f-4321-4842-9f70-0196d69188b5",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "e6ed71f6-2f8a-4e8e-a107-a458474ce43e",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -140,8 +140,42 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "bb5253e8-f962-4243-8bcb-45f44f10565f",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "720d5860-8096-4f81-90f5-e452706f5a3d",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "get",
+      "name": "category_specifications",
+      "url": "{{base_url}}/categories/33/specifications",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "d222bcab-7ed3-47c9-9337-740a8bbeee38",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "get",
+      "name": "category_specifications_with_group",
+      "url": "{{base_url}}/categories/33/specifications?include=group",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "e3777bdb-83a2-4c30-bc9f-378f6d3d7555",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -157,8 +191,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "76fb8fe0-f184-4bda-b928-04268bd6b9bd",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "b2f5faed-8bce-4064-bea5-141b79cdf6a0",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -174,8 +208,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "29f25d9b-f0f2-4671-985e-82febb65821f",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "a0426418-d34f-4ad0-80bf-ae63a997cf5c",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -191,8 +225,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "e99d0ea0-030e-4ac4-8bf2-4b70dbc7ff14",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "59a2f3fc-ddd6-44f1-a18e-87c15c3ccb9e",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -208,8 +242,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "d8d5519f-5a4d-433a-a447-7af60ada010c",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "be0fdf01-a54c-4f54-ae8a-efa55cbf3da2",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -225,8 +259,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "7b46be32-7643-4223-913a-239dde3d5e6b",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "a86119fb-8fb1-408a-8161-fbf41bd03d40",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -242,8 +276,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "72029791-f1bf-4c14-b8b7-4e497ca35202",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "071d7355-6a18-4c9c-a604-932b45eec865",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -259,8 +293,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "f13ba059-0b68-49b9-887e-32c8e4829d25",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "b40b06fb-148a-4476-a3ea-a46363edd2bd",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -276,8 +310,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "1075868c-083c-4358-8d3f-cb677fa9e48e",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "0af940b7-6b5b-43ed-adf8-65103f2beb9b",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -293,8 +327,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "b43d9a1e-872a-4a66-82ef-ff9604ea010b",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "31345678-950e-485e-a3bc-66476138dfae",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -310,8 +344,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "061c7475-0522-47ea-a25e-b7aed19a5ed5",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "a5e7a027-8e23-46c6-802a-269843ad92a7",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -327,8 +361,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "741aa7fb-c239-4e9a-976e-561d1d242f19",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "6442d787-d563-415d-b8fb-fb6c96d239ce",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -344,8 +378,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "76b4376c-fd0b-4e38-abd4-7ba0722a4e35",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "2bc01cba-4c95-4d1e-ac46-304919d6c279",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -361,8 +395,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "96fd6cb3-3b38-4dec-8c3c-bceeb07d1767",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "8505af7f-1a13-40ad-b33d-574f46bb7558",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -378,8 +412,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "8705fb92-1115-4321-b357-cf4340631073",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "c2de986c-ccb3-46d8-851c-0e762d090d0e",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -395,8 +429,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "10feae91-c051-48da-8b9a-2cbf8bda1a98",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "f974ce04-08df-4b63-aedb-ab1e5e5eac02",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -412,8 +446,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "506ee4df-54ba-473c-87e0-8f10928deea7",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "db6a93a1-4e34-4a8c-90fa-2b28d2c2ded6",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -429,8 +463,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "66b58f8f-a7d2-4bfd-9d88-7f4a89dc03c3",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "e8565dc4-baf1-4486-b61a-c98b8e05f6d5",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -446,8 +480,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "7c51cdd8-67e1-4778-8c59-ba313f4c98d8",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "b4634164-1fca-45b3-9f68-863d2d3ee95c",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -463,25 +497,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "13f5bc93-aea1-4751-8ee9-5a053da25385",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
-      "data": [
-
-      ],
-      "description": "",
-      "method": "get",
-      "name": "search_skus_match",
-      "url": "{{base_url}}/search?q=samsung+galaxy+s5+16GB",
-      "version": 2,
-      "responses": [
-
-      ],
-      "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
-    },
-    {
-      "id": "80a1bb5e-e352-4b95-bc20-20f5ef9f5f27",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "29572f16-7393-4914-b859-32079f5d09e9",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -497,8 +514,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "9e052262-bea2-4a2c-bbd4-7396521367f7",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "ff66a531-8f8d-4db8-92a9-735d7b37228d",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -514,8 +531,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "68ce491e-19a8-47fb-824f-e11f904399a1",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "88b71ee1-473f-42c8-86ec-4e65ca50d0b1",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -531,8 +548,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "9a15b63b-8521-496b-845d-02fd8c41ce10",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "5afeb7b1-f99a-44f5-8480-090a7b93b3d0",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -548,8 +565,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "caf2ffdc-d6ec-4ba1-b4db-571f8a849d7f",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "ab1ae076-ba1d-4d6e-a746-a9867d5aee6d",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -565,8 +582,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "5244fab2-4390-428b-a701-9ad1c05c8a55",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "098271c7-06ed-42f5-bc2e-27bd528721b2",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -582,8 +599,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "df7baa17-b449-4844-afc6-faa0c35a0e3f",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "e7d24e09-1476-402d-96f9-d7b2c4a6beb8",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -599,8 +616,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "f057ab76-0a4a-4bf9-acf4-dfc5a12481d9",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "0927be29-111c-4265-9de4-0defd947af94",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -616,8 +633,76 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "87964afe-4ffb-4b4d-baf2-d6ad10cdfeb8",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "c2709c6f-6d18-4898-91dd-6db892b1d551",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "get",
+      "name": "fieldsets_product_with_shop",
+      "url": "{{base_url}}/products/19394406?embed=shop",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "1e65049c-da7b-4853-8359-17a91862814d",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "get",
+      "name": "fieldsets_product_with_shop_and_root_fields",
+      "url": "{{base_url}}/products/19394406?embed=shop&fields[root]=id,name",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "5ddc76c1-15eb-412a-8026-89bd1fffcfee",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "get",
+      "name": "fieldsets_product_with_shop_and_association_fields",
+      "url": "{{base_url}}/products/19394406?embed=shop&fields[root]=id,name&fields[shop]=review_score",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "e725bf36-5b15-44a6-b8a3-b6862e2d3fa9",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "get",
+      "name": "fieldsets_product_with_shop_and_exclude_fields",
+      "url": "{{base_url}}/products/19394406?embed=shop&fields_except[root]=sizes&fields[shop]=id,name",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "9c022f4d-3e4f-44bf-9d78-5971171454ef",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -633,8 +718,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "65236c38-85b0-4948-912b-6401e746a6ae",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "30174698-3b25-411f-920b-33f9c25540b2",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -650,8 +735,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "e52c09dd-bd2f-4c16-9661-08a4fe0f45c1",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "0441cb3a-cc70-407f-9702-6ef197b2e40a",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -667,8 +752,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "e9fb037c-aacd-49d8-a7df-f47608ce1051",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "6f84e94b-f996-490b-b229-9e24ff566f49",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -684,8 +769,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "baf92861-c57a-4a97-9c8f-6ac2b70dd08a",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "da2d6113-d8b5-4784-9e7d-c143b6a80c78",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -701,8 +786,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "c43dfbfb-e619-4e20-bce8-6a81149aecb3",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "16c26431-d62b-48b5-a0a4-8c77db847d83",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -718,8 +803,25 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "bb9d12be-ca57-466f-beba-fd6b7e79448e",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "727faf22-95f4-4051-92f9-e816c17647e6",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "get",
+      "name": "favorite_list_favorites",
+      "url": "{{base_url}}/favorite_lists/2845/favorites",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "ef96dc28-d833-401b-a3f5-7cb706ad43ba",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -735,8 +837,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "17dd04d8-c617-47b1-ba12-98bd194d081f",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "a17473d9-b27c-49b0-aeca-4d7374782c71",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -752,8 +854,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "c9969311-a661-45ec-bddc-decbc8dea1d6",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "1527139b-6b3d-47d7-a224-53963528d7c0",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -769,8 +871,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "7219f994-6c9b-4b34-be21-1d874f2b32ed",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "482d8e6d-d524-4284-878b-7f29eca9637e",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -786,8 +888,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "57bf63fa-d17f-461b-aa2b-37daba967253",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "002361c5-5494-4a9c-a29d-3c6a65e01d40",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -803,8 +905,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "01dff6ee-a811-40c2-a766-9971df9c8180",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "90fb9bfb-aef7-41b0-a542-b33c91a1da69",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -820,8 +922,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "b79c3053-266f-4b53-a144-e6a92efbadbd",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "d6e61849-8895-4cf4-8378-b1304077ad37",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -837,8 +939,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "7299fa01-4705-4965-bdab-ccb66a0bc659",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "39e98c49-845e-4cf0-9091-d309ae3c0e5f",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -854,8 +956,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "1fd47ab6-4734-472a-bf91-fd4d76018e7e",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "e25fcd45-2cc7-4060-9678-45f1c45b7956",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -871,25 +973,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "e02ea86d-7492-44e3-84fa-f3fe2ae1209f",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
-      "data": [
-
-      ],
-      "description": "",
-      "method": "get",
-      "name": "sku_reviews",
-      "url": "{{base_url}}/skus/808273/reviews",
-      "version": 2,
-      "responses": [
-
-      ],
-      "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
-    },
-    {
-      "id": "37f9757e-512a-4c79-963e-1ec8ea60bd73",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "fd96de8b-e3cb-42bc-94fd-cfbe3adb8f1c",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -905,8 +990,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "ee9db4d0-1b90-42ad-af3a-7c1ac3756af9",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "687c41d8-28b6-4042-a89d-7a8ed5b2032f",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -922,8 +1007,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "8661d213-86a5-4e30-bd73-c062142ccb57",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "404f1846-1ecd-42e0-94bf-e006627f2fc1",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -939,8 +1024,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "2cfa91cf-f57f-4878-993d-9edff2837d1e",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "c51d34c3-3b34-47f2-8737-6ce42f13a0d2",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -956,8 +1041,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "4d2c0d3c-f270-40c3-a150-29196fa4777d",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "afba4b4a-0485-40d5-ae0f-8ab6a0417799",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -973,8 +1058,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "311ee3fc-25f3-44b1-a864-efe543de066e",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "b03cf2f0-2a77-439b-820c-64f68db72300",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -990,8 +1075,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "42509f44-b5df-4812-8472-0a87a14d0b82",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "d5cce8c6-fc88-467b-b070-0784ce60f078",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -1007,14 +1092,14 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "a6b87190-50e0-484c-a964-5cb920bfba9b",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "f58a85f8-8da6-4a9f-b175-ca7162938c02",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
       "description": "",
       "method": "get",
-      "name": "shop_reviews",
+      "name": "shop_reviews_with_rating_breakdown",
       "url": "{{base_url}}/shops/138/reviews?include_meta=shop_rating_breakdown",
       "version": 2,
       "responses": [
@@ -1024,8 +1109,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "f99280b2-a1fd-44ba-b5f6-f2e6291fc5e0",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "9d302a02-5761-435a-92e7-938eceb0e3f4",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -1041,8 +1126,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "62ee97a1-782c-4d40-8580-c005e050b721",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "c455f94f-e2db-47ce-bc9a-763a7e2668b3",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -1058,8 +1143,8 @@
       "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "783654f8-aea3-4928-b37f-b6f7fcf69df1",
-      "collectionId": "bef22d16-01a3-490a-a7b7-21ef6eb02599",
+      "id": "bed8541b-67cb-4592-9d23-dd56ce938004",
+      "collectionId": "78636657-6588-43ae-8eee-b6dd3a15ce54",
       "data": [
 
       ],
@@ -1076,69 +1161,74 @@
     }
   ],
   "order": [
-    "5882efb8-e2a3-4fa1-9c58-2767ff8e6869",
-    "08204811-e865-446d-a7cf-982c7af7e2e9",
-    "f43813e6-6d21-45f5-a885-cdf2346e663b",
-    "dec9a336-0464-49b5-a502-8ba3f67cb85a",
-    "f820526a-8e46-48cd-9ec6-fec3a5502089",
-    "aa9c5296-edcf-48fc-a372-9622ac63e0db",
-    "a7cbcc36-f9c2-4a45-8077-d417b71c854e",
-    "a30d3c8f-4321-4842-9f70-0196d69188b5",
-    "bb5253e8-f962-4243-8bcb-45f44f10565f",
-    "76fb8fe0-f184-4bda-b928-04268bd6b9bd",
-    "29f25d9b-f0f2-4671-985e-82febb65821f",
-    "e99d0ea0-030e-4ac4-8bf2-4b70dbc7ff14",
-    "d8d5519f-5a4d-433a-a447-7af60ada010c",
-    "7b46be32-7643-4223-913a-239dde3d5e6b",
-    "72029791-f1bf-4c14-b8b7-4e497ca35202",
-    "f13ba059-0b68-49b9-887e-32c8e4829d25",
-    "1075868c-083c-4358-8d3f-cb677fa9e48e",
-    "b43d9a1e-872a-4a66-82ef-ff9604ea010b",
-    "061c7475-0522-47ea-a25e-b7aed19a5ed5",
-    "741aa7fb-c239-4e9a-976e-561d1d242f19",
-    "76b4376c-fd0b-4e38-abd4-7ba0722a4e35",
-    "96fd6cb3-3b38-4dec-8c3c-bceeb07d1767",
-    "8705fb92-1115-4321-b357-cf4340631073",
-    "10feae91-c051-48da-8b9a-2cbf8bda1a98",
-    "506ee4df-54ba-473c-87e0-8f10928deea7",
-    "66b58f8f-a7d2-4bfd-9d88-7f4a89dc03c3",
-    "7c51cdd8-67e1-4778-8c59-ba313f4c98d8",
-    "13f5bc93-aea1-4751-8ee9-5a053da25385",
-    "80a1bb5e-e352-4b95-bc20-20f5ef9f5f27",
-    "9e052262-bea2-4a2c-bbd4-7396521367f7",
-    "68ce491e-19a8-47fb-824f-e11f904399a1",
-    "9a15b63b-8521-496b-845d-02fd8c41ce10",
-    "caf2ffdc-d6ec-4ba1-b4db-571f8a849d7f",
-    "5244fab2-4390-428b-a701-9ad1c05c8a55",
-    "df7baa17-b449-4844-afc6-faa0c35a0e3f",
-    "f057ab76-0a4a-4bf9-acf4-dfc5a12481d9",
-    "87964afe-4ffb-4b4d-baf2-d6ad10cdfeb8",
-    "65236c38-85b0-4948-912b-6401e746a6ae",
-    "e52c09dd-bd2f-4c16-9661-08a4fe0f45c1",
-    "e9fb037c-aacd-49d8-a7df-f47608ce1051",
-    "baf92861-c57a-4a97-9c8f-6ac2b70dd08a",
-    "c43dfbfb-e619-4e20-bce8-6a81149aecb3",
-    "bb9d12be-ca57-466f-beba-fd6b7e79448e",
-    "17dd04d8-c617-47b1-ba12-98bd194d081f",
-    "c9969311-a661-45ec-bddc-decbc8dea1d6",
-    "7219f994-6c9b-4b34-be21-1d874f2b32ed",
-    "57bf63fa-d17f-461b-aa2b-37daba967253",
-    "01dff6ee-a811-40c2-a766-9971df9c8180",
-    "b79c3053-266f-4b53-a144-e6a92efbadbd",
-    "7299fa01-4705-4965-bdab-ccb66a0bc659",
-    "1fd47ab6-4734-472a-bf91-fd4d76018e7e",
-    "e02ea86d-7492-44e3-84fa-f3fe2ae1209f",
-    "37f9757e-512a-4c79-963e-1ec8ea60bd73",
-    "ee9db4d0-1b90-42ad-af3a-7c1ac3756af9",
-    "8661d213-86a5-4e30-bd73-c062142ccb57",
-    "2cfa91cf-f57f-4878-993d-9edff2837d1e",
-    "4d2c0d3c-f270-40c3-a150-29196fa4777d",
-    "311ee3fc-25f3-44b1-a864-efe543de066e",
-    "42509f44-b5df-4812-8472-0a87a14d0b82",
-    "a6b87190-50e0-484c-a964-5cb920bfba9b",
-    "f99280b2-a1fd-44ba-b5f6-f2e6291fc5e0",
-    "62ee97a1-782c-4d40-8580-c005e050b721",
-    "783654f8-aea3-4928-b37f-b6f7fcf69df1"
+    "7b122641-9021-4b5c-a452-83232cb2373a",
+    "a5deeda1-bc37-4b3f-a57f-da1ecc14a46e",
+    "1e4a2d26-bbcd-4748-befc-fd9e4cb1f302",
+    "360edafa-ed60-4451-b849-2b2f1ec38dad",
+    "16f39370-cf69-49ab-9f46-506275042f62",
+    "1cba7def-382e-4def-8b86-4258fc40ed4d",
+    "1447419a-4d5a-4a2a-9062-a1c176b5b0de",
+    "e6ed71f6-2f8a-4e8e-a107-a458474ce43e",
+    "720d5860-8096-4f81-90f5-e452706f5a3d",
+    "d222bcab-7ed3-47c9-9337-740a8bbeee38",
+    "e3777bdb-83a2-4c30-bc9f-378f6d3d7555",
+    "b2f5faed-8bce-4064-bea5-141b79cdf6a0",
+    "a0426418-d34f-4ad0-80bf-ae63a997cf5c",
+    "59a2f3fc-ddd6-44f1-a18e-87c15c3ccb9e",
+    "be0fdf01-a54c-4f54-ae8a-efa55cbf3da2",
+    "a86119fb-8fb1-408a-8161-fbf41bd03d40",
+    "071d7355-6a18-4c9c-a604-932b45eec865",
+    "b40b06fb-148a-4476-a3ea-a46363edd2bd",
+    "0af940b7-6b5b-43ed-adf8-65103f2beb9b",
+    "31345678-950e-485e-a3bc-66476138dfae",
+    "a5e7a027-8e23-46c6-802a-269843ad92a7",
+    "6442d787-d563-415d-b8fb-fb6c96d239ce",
+    "2bc01cba-4c95-4d1e-ac46-304919d6c279",
+    "8505af7f-1a13-40ad-b33d-574f46bb7558",
+    "c2de986c-ccb3-46d8-851c-0e762d090d0e",
+    "f974ce04-08df-4b63-aedb-ab1e5e5eac02",
+    "db6a93a1-4e34-4a8c-90fa-2b28d2c2ded6",
+    "e8565dc4-baf1-4486-b61a-c98b8e05f6d5",
+    "b4634164-1fca-45b3-9f68-863d2d3ee95c",
+    "29572f16-7393-4914-b859-32079f5d09e9",
+    "ff66a531-8f8d-4db8-92a9-735d7b37228d",
+    "88b71ee1-473f-42c8-86ec-4e65ca50d0b1",
+    "5afeb7b1-f99a-44f5-8480-090a7b93b3d0",
+    "ab1ae076-ba1d-4d6e-a746-a9867d5aee6d",
+    "098271c7-06ed-42f5-bc2e-27bd528721b2",
+    "e7d24e09-1476-402d-96f9-d7b2c4a6beb8",
+    "0927be29-111c-4265-9de4-0defd947af94",
+    "c2709c6f-6d18-4898-91dd-6db892b1d551",
+    "1e65049c-da7b-4853-8359-17a91862814d",
+    "5ddc76c1-15eb-412a-8026-89bd1fffcfee",
+    "e725bf36-5b15-44a6-b8a3-b6862e2d3fa9",
+    "9c022f4d-3e4f-44bf-9d78-5971171454ef",
+    "30174698-3b25-411f-920b-33f9c25540b2",
+    "0441cb3a-cc70-407f-9702-6ef197b2e40a",
+    "6f84e94b-f996-490b-b229-9e24ff566f49",
+    "da2d6113-d8b5-4784-9e7d-c143b6a80c78",
+    "16c26431-d62b-48b5-a0a4-8c77db847d83",
+    "727faf22-95f4-4051-92f9-e816c17647e6",
+    "ef96dc28-d833-401b-a3f5-7cb706ad43ba",
+    "a17473d9-b27c-49b0-aeca-4d7374782c71",
+    "1527139b-6b3d-47d7-a224-53963528d7c0",
+    "482d8e6d-d524-4284-878b-7f29eca9637e",
+    "002361c5-5494-4a9c-a29d-3c6a65e01d40",
+    "90fb9bfb-aef7-41b0-a542-b33c91a1da69",
+    "d6e61849-8895-4cf4-8378-b1304077ad37",
+    "39e98c49-845e-4cf0-9091-d309ae3c0e5f",
+    "e25fcd45-2cc7-4060-9678-45f1c45b7956",
+    "fd96de8b-e3cb-42bc-94fd-cfbe3adb8f1c",
+    "687c41d8-28b6-4042-a89d-7a8ed5b2032f",
+    "404f1846-1ecd-42e0-94bf-e006627f2fc1",
+    "c51d34c3-3b34-47f2-8737-6ce42f13a0d2",
+    "afba4b4a-0485-40d5-ae0f-8ab6a0417799",
+    "b03cf2f0-2a77-439b-820c-64f68db72300",
+    "d5cce8c6-fc88-467b-b070-0784ce60f078",
+    "f58a85f8-8da6-4a9f-b175-ca7162938c02",
+    "9d302a02-5761-435a-92e7-938eceb0e3f4",
+    "c455f94f-e2db-47ce-bc9a-763a7e2668b3",
+    "bed8541b-67cb-4592-9d23-dd56ce938004"
   ],
-  "timestamp": 1475678962
+  "timestamp": 1484927695
 }
