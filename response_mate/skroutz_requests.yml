@@ -215,7 +215,7 @@ requests:
   -
     key: search_sku_match
     request:
-      url: '{{base_url}}/search?q=nikon+1+j2'
+      url: '{{base_url}}/search?q=samsung+s7+edge+duos'
       headers:
         <<: *default_headers
   -
