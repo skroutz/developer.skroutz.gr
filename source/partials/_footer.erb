@@ -8,7 +8,11 @@
       </div>
 
       <div class="col-xs-12 col-sm-6 col-sm-pull-6 text-center-xs">
-        <%= link_to t('footer.terms'), "http://#{settings.domain}/faq" %>
+        <%= link_to t('footer.terms'), "http://#{settings.domain}/faq",
+            target: "_blank" %> -
+        <%= link_to settings.domain.capitalize,
+            "https://www.#{settings.domain}",
+            title: settings.domain.capitalize, target: "_blank" %>
       </div>
 
     </div>
