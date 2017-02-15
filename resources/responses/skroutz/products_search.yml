@@ -1,39 +1,40 @@
 ---
 :request:
-  :url: http://api.skroutz.gr/shops/452/products/search?shop_uid=95F
+  :url: http://api.skroutz.gr/shops/452/products/search?shop_uid=062276
   :headers:
     :accept: application/vnd.skroutz+json; version=3.1
-    :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
+    :authorization: Bearer h1HJE3BS1xKQIAbM9e1HZMtI8AK1ryidNuh7T8PBBkhYn0TgYZdSwjlVTnpIpV7tw==
   :verb: :get
 :response:
   :status: 200
   :headers:
     server: nginx
-    date: Wed, 05 Oct 2016 13:59:53 GMT
+    date: Wed, 15 Feb 2017 17:20:45 GMT
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '64'
-    x-ratelimit-reset: '1475676000'
+    x-ratelimit-remaining: '98'
+    x-ratelimit-reset: '1487179260'
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
-    etag: W/"4913812ba640e176eb998db5e3a31657"
+    etag: W/"6c0defcaeb9b8f516860b33ce53e9996"
     cache-control: max-age=0, private, must-revalidate
-    x-request-id: '688303668'
-    x-runtime: '0.021457'
+    x-request-id: '73118612'
+    x-runtime: '0.021276'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
     x-app: rontok
-    x-varnish: '688303667'
+    x-varnish: '73118611'
     age: '0'
     via: 1.1 varnish-v4
     x-origin: lb1
     x-cache: MISS
     x-cached: skroutz miss(0)
     accept-ranges: bytes
-    content-length: '93'
+    transfer-encoding: chunked
     connection: close
-  :body: '{"products":[],"meta":{"pagination":{"total_results":0,"total_pages":0,"page":1,"per":25}}}'
-:created_at: 2016-10-05 16:59:53.485759127 +03:00
+  :body: '{"products":[{"id":2542077,"name":"Verbatim DVD+R 25PK Spindle 16x","sku_id":4843381,"shop_id":452,"category_id":472,"availability":"Άμεση
+    παραλαβή / Παράδοση 1 έως 3 ημέρες","click_url":"https://www.skroutz.gr/products/show/2542077?client_id=NsgROlpU9757wHtXZPmbzA%3D%3D\u0026from=api","shop_uid":"062276","expenses":null,"web_uri":"http://skroutz.gr/products/show/2542077","sizes":[],"price":8.99,"immediate_pickup":true}],"meta":{"pagination":{"total_results":1,"total_pages":1,"page":1,"per":25}}}'
+:created_at: 2017-02-15 19:20:45.602627933 +02:00

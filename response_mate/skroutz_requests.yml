@@ -251,7 +251,7 @@ requests:
   -
     key: sku_favorite
     request:
-      url: '{{base_url}}/skus/345333/favorite'
+      url: '{{base_url}}/skus/8333136/favorite'
       headers:
         <<: *default_headers
   -
@@ -263,7 +263,7 @@ requests:
   -
     key: products_search
     request:
-      url: '{{base_url}}/shops/452/products/search?shop_uid=95F'
+      url: '{{base_url}}/shops/452/products/search?shop_uid=062276'
       headers:
         <<: *default_headers
   -

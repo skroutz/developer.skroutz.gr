@@ -1,39 +1,39 @@
 ---
 :request:
-  :url: http://api.skroutz.gr/skus/345333/favorite
+  :url: http://api.skroutz.gr/skus/8333136/favorite
   :headers:
     :accept: application/vnd.skroutz+json; version=3.1
-    :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
+    :authorization: Bearer hL1HJ3BS1xKQIArbiM91HZMtI8AK1h7TPBBkhYn0TgYZSzwjlVn-ki74tw==
   :verb: :get
 :response:
   :status: 200
   :headers:
     server: nginx
-    date: Wed, 05 Oct 2016 13:59:53 GMT
+    date: Wed, 15 Feb 2017 17:20:26 GMT
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '66'
-    x-ratelimit-reset: '1475676000'
+    x-ratelimit-remaining: '99'
+    x-ratelimit-reset: '1487179260'
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
-    etag: W/"cb867fba2b8a729ab4d6ed82d25b397e"
+    etag: W/"2740593b95ce5d07cc7658700b173ac9"
     cache-control: max-age=0, private, must-revalidate
-    x-request-id: '685962539'
-    x-runtime: '0.018617'
+    x-request-id: '72077605'
+    x-runtime: '0.016155'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
     x-app: rontok
-    x-varnish: '685962538'
+    x-varnish: '72077604'
     age: '0'
     via: 1.1 varnish-v4
     x-origin: lb1
     x-cache: MISS
     x-cached: skroutz miss(0)
     accept-ranges: bytes
-    content-length: '36'
+    content-length: '160'
     connection: close
-  :body: '{"favorites":[]}'
-:created_at: 2016-10-05 16:59:53.429597461 +03:00
+  :body: '{"favorites":[{"id":7927460,"have_it":false,"user_id":334941,"user_notes":null,"sku_id":8333136,"created_at":"2017-02-01T13:15:07+02:00","updated_at":"2017-02-01T13:15:07+02:00","get_absolute_threshold":null}]}'
+:created_at: 2017-02-15 19:20:26.180750938 +02:00
