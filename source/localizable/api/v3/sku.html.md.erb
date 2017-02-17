@@ -130,13 +130,19 @@ add the `manufacturer_ids` parameter which is an array parameter of manufacturer
 <%= render_recording :skus_reviews %>
 
 ### Meta
-You may choose to include extra meta information using the following parameter:
+You may choose to include extra meta information using the following parameters:
 
 `sku_rating_breakdown`
 : Review stats. Each entry contains the star, number of votes and a
 percentage to help the client draw a rating bar.
 
 <%= render_recording :sku_reviews_with_rating_breakdown %>
+
+`sku_reviews_aggregation`
+: Reviews aggregation. Each entry contains the label, score and
+style to help the client choose the color for the bar.
+
+<%= render_recording :sku_reviews_with_aggregation %>
 
 ## Vote a SKU's review
 

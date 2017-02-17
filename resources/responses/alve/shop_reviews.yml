@@ -3,7 +3,7 @@
   :url: http://api.alve.com/shops/42/reviews
   :headers:
     :accept: application/vnd.alve+json; version=3.1
-    :authorization: Bearer WBSwuHdGfR8jll30RnDJR/iusyn3rgiRI1VaJyJPt5gwk5ngH4U9CuzqsHuDlfeO0QSFECTn0rABYvg==
+    :authorization: Bearer B0spCwl1qMp3RHM15pFuu6OAhtUEleuR4z_njfIT7l7qdKLGC6L6fir4Uw==
   :params:
     :per: 3
   :verb: :get
@@ -11,35 +11,37 @@
   :status: 200
   :headers:
     server: nginx
-    date: Fri, 11 Nov 2016 14:57:37 GMT
+    date: Fri, 17 Feb 2017 11:33:10 GMT
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '99'
-    x-ratelimit-reset: '1478876280'
+    x-ratelimit-remaining: '98'
+    x-ratelimit-reset: '1487331240'
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
     cache-control: max-age=300, private
-    etag: W/"60850deb7d16ddcb34a76783b22fc30e"
-    x-request-id: '36476926'
-    x-runtime: '0.125353'
+    etag: W/"1007060cc710232bee8049e831bd9376"
+    x-request-id: '181209164'
+    x-runtime: '0.073623'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
     x-app: as1
-    x-varnish: '36476925'
+    x-varnish: '181209163'
     age: '0'
     via: 1.1 varnish-v4
     x-origin: lb2
     x-cache: MISS
     x-cached: alve miss(0)
     accept-ranges: bytes
-    content-length: '475'
+    content-length: '478'
     connection: close
   :body: '{"reviews":[{"id":79,"user_id":9138,"review":"Hem uygun fiyat hem de hızlı
-    kargo. Ürünü siparişimden bir gün sonra teslim ettiler, çok memnun kaldım.","rating":5.0,"shop_reply":null,"created_at":"2016-10-13T15:35:39+03:00","negative":false,"reasons":["ontime"]},{"id":77,"user_id":1437,"review":"Saat
-    siparişi verdim , 1 gün sonra elime geçti.Gerçekten çok hızlı bir kargo süreci
-    oldu.Ayrıca en uygun fiyata da satın alma şansım oldu.Fatura ile birlikte ürün
-    sorunsuz elime ulaştı.Tekrar sipariş verirsem bu mağaza aklımda olucak.","rating":5.0,"shop_reply":null,"created_at":"2016-10-11T14:42:39+03:00","negative":false,"reasons":["order_status_present","ontime","good_packaging"]}],"meta":{"pagination":{"total_results":2,"total_pages":1,"page":1,"per":3}}}'
-:created_at: 2016-11-11 16:57:37.135310113 +02:00
+    kargo. Ürünü siparişimden bir gün sonra teslim ettiler, çok memnun kaldım.","rating":5.0,"shop_reply":null,"created_at":"2016-10-13T15:35:39+03:00","negative":false,"reasons":["Zamanında
+    teslim"]},{"id":77,"user_id":1437,"review":"Saat siparişi verdim , 1 gün sonra
+    elime geçti.Gerçekten çok hızlı bir kargo süreci oldu.Ayrıca en uygun fiyata da
+    satın alma şansım oldu.Fatura ile birlikte ürün sorunsuz elime ulaştı.Tekrar sipariş
+    verirsem bu mağaza aklımda olucak.","rating":5.0,"shop_reply":null,"created_at":"2016-10-11T14:42:39+03:00","negative":false,"reasons":["Sipariş
+    takibi","Zamanında teslim","Genel değerlendirme"]}],"meta":{"pagination":{"total_results":2,"total_pages":1,"page":1,"per":3}}}'
+:created_at: 2017-02-17 13:33:10.722672849 +02:00

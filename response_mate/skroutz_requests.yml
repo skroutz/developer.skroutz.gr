@@ -227,9 +227,11 @@ requests:
   -
     key: skus_reviews
     request:
-      url: '{{base_url}}/skus/3690169/reviews'
+      url: '{{base_url}}/skus/3783654/reviews'
       headers:
         <<: *default_headers
+      params:
+        per: 3
   -
     key: skus_products
     request:
@@ -422,6 +424,16 @@ requests:
       url: '{{base_url}}/skus/3982592/reviews?include_meta=sku_rating_breakdown'
       headers:
         <<: *default_headers
+      params:
+        per: 3
+  -
+    key: sku_reviews_with_aggregation
+    request:
+      url: '{{base_url}}/skus/8864706/reviews?include_meta=sku_reviews_aggregation'
+      headers:
+        <<: *default_headers
+      params:
+        per: 3
   -
     key: sku_review_vote_create
     request:

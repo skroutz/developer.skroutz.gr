@@ -5,6 +5,35 @@ title: changelog
 
 # Changelog <%= edit_link %>
 
+## 2017-02-17 - v3.1.3
+
+Expose optional attribute `skus_reviews_aggregation` in <%= link_to 'Sku reviews',
+                                                                    '/api/v3/sku',
+                                                                    anchor: 'retrieve-an-skus-reviews' %>.
+
+: This is an aggregation of the good / bad / so-so key points selected for that SKU.
+
+Expose attribute `sentiments` in <%= link_to 'Sku reviews',
+                                             '/api/v3/sku',
+                                             anchor: 'retrieve-an-skus-reviews' %>.
+
+: Hash with the positive / mediocre / negative key points selected for that SKU.
+
+
+Allow sorting SKU reviews by `most_helpful` <%= link_to 'Sku reviews',
+                                                        '/api/v3/sku',
+                                                        anchor: 'retrieve-an-skus-reviews' %>.
+
+: The default sorting method remains `most_recent`.
+
+Expose `own_review` field for logged on users in <%= link_to 'Sku reviews',
+                                                             '/api/v3/sku',
+                                                             anchor: 'retrieve-an-skus-reviews' %>.
+
+: `own_review` can be fetched without the need to paginate all reviews in order to find it.
+
+
+
 ## 2016-11-24 - v3.1.2
 
 Expose attribute `family_id` in <%= link_to 'Category', '/api/v3/category' %>.
