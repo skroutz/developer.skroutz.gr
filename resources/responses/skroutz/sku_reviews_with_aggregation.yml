@@ -1,0 +1,54 @@
+---
+:request:
+  :url: http://api.skroutz.gr/skus/8864706/reviews?include_meta=sku_reviews_aggregation
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3.1
+    :authorization: Bearer 248t0h0tju209jeijfi2jg0294tu20jei==
+  :params:
+    :per: 3
+  :verb: :get
+:response:
+  :status: 200
+  :headers:
+    server: nginx
+    date: Fri, 17 Feb 2017 10:37:52 GMT
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '98'
+    x-ratelimit-reset: '1487327880'
+    x-frame-options: SAMEORIGIN
+    x-xss-protection: 1; mode=block
+    x-content-type-options: nosniff
+    link: <http://api.skroutz.gr/skus/8864706/reviews?include_meta=sku_reviews_aggregation&page=85&per=3>;
+      rel="last", <http://api.skroutz.gr/skus/8864706/reviews?include_meta=sku_reviews_aggregation&page=2&per=3>;
+      rel="next"
+    cache-control: max-age=300, private
+    etag: W/"e2f0c08dab47887d5ad59eebfbeb42c6"
+    x-request-id: '785696760'
+    x-runtime: '0.061443'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: rontok
+    x-varnish: '785696759'
+    age: '0'
+    via: 1.1 varnish-v4
+    x-origin: lb2
+    x-cache: MISS
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    transfer-encoding: chunked
+    connection: close
+  :body: '{"reviews":[{"id":157637,"user_id":514694,"review":"Το κινητό είναι πολύ
+    αξιόπιστο για τα λεφτά του είναι πολύ γρήγορο στις λειτουργίες του.Επίσης οι κάμερες
+    του είναι πολύ καλές και οι δύο μάλιστα η selfie έχει flash.Το προτείνω ανεπιφύλακτα!!!!!!","rating":5,"created_at":"2017-02-16T18:01:56+02:00","demoted":false,"votes_count":0,"helpful_votes_count":0,"voted":false,"flagged":false,"helpful":false,"sentiments":{"positive":["Ποιότητα
+    κλήσης","Φωτογραφίες","Καταγραφή Video","Μουσική","GPS","Ταχύτητα","Σχέση ποιότητας
+    τιμής","Ανάλυση οθόνης"]}},{"id":157450,"user_id":536848,"review":"","rating":5,"created_at":"2017-02-15T18:23:30+02:00","demoted":false,"votes_count":0,"helpful_votes_count":0,"voted":false,"flagged":false,"helpful":false,"sentiments":{"positive":["Ποιότητα
+    κλήσης","Φωτογραφίες","Καταγραφή Video","Μουσική","GPS","Ταχύτητα","Σχέση ποιότητας
+    τιμής","Ανάλυση οθόνης"]}},{"id":157306,"user_id":650818,"review":"","rating":5,"created_at":"2017-02-15T00:54:31+02:00","demoted":false,"votes_count":0,"helpful_votes_count":0,"voted":false,"flagged":false,"helpful":false,"sentiments":{"positive":["Ποιότητα
+    κλήσης","Φωτογραφίες","GPS","Ταχύτητα","Σχέση ποιότητας τιμής","Ανάλυση οθόνης"],"mediocre":["Μουσική"]}}],"meta":{"sku_reviews_aggregation":[{"label":"Ανάλυση
+    οθόνης","score":100,"style":"good"},{"label":"Ποιότητα κλήσης","score":100,"style":"good"},{"label":"Φωτογραφίες","score":100,"style":"good"},{"label":"Σχέση
+    ποιότητας τιμής","score":100,"style":"good"},{"label":"Ταχύτητα","score":100,"style":"good"},{"label":"GPS","score":90,"style":"good"},{"label":"Καταγραφή
+    Video","score":90,"style":"good"},{"label":"Μουσική","score":80,"style":"good"}],"pagination":{"total_results":253,"total_pages":85,"page":1,"per":3}}}'
+:created_at: 2017-02-17 12:37:52.025146323 +02:00

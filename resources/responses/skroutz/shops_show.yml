@@ -3,40 +3,41 @@
   :url: http://api.skroutz.gr/shops/452
   :headers:
     :accept: application/vnd.skroutz+json; version=3.1
-    :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
+    :authorization: Bearer sdfsdjiou238904u2093thj2i2jklgejklhjdk==
   :verb: :get
 :response:
   :status: 200
   :headers:
     server: nginx
-    date: Wed, 05 Oct 2016 13:59:51 GMT
+    date: Fri, 17 Feb 2017 10:34:00 GMT
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '91'
-    x-ratelimit-reset: '1475676000'
+    x-ratelimit-remaining: '99'
+    x-ratelimit-reset: '1487327700'
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
     cache-control: max-age=300, private
-    etag: W/"97014f64e0dc207b8ae88527d26043a1"
-    x-request-id: '683285232'
-    x-runtime: '0.050001'
+    etag: W/"abebef559dc58ef9e97ba7ccdd63ed5b"
+    x-request-id: '134655195'
+    x-runtime: '0.034674'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
     x-app: rontok
-    x-varnish: '683285231'
+    x-varnish: '134655194'
     age: '0'
     via: 1.1 varnish-v4
     x-origin: lb1
     x-cache: MISS
     x-cached: skroutz miss(0)
     accept-ranges: bytes
-    transfer-encoding: chunked
+    content-length: '664'
     connection: close
-  :body: '{"shop":{"id":452,"name":"Kotsovolos","link":"http://www.kotsovolos.gr","phone":"2102899999","image_url":"https://b.scdn.gr/ds/shops/logos/452/mid_20160829183952_bfbba903.jpeg","thumbshot_url":"https://d.scdn.gr/ds/shops/screenshots/452/20150731105054_75756119.png","reviews_count":417,"latest_reviews_count":102,"review_score":4.3,"payment_methods":{"credit_card":true,"paypal":false,"bank":true,"spot_cash":true,"installments":"Εώς
+  :body: '{"shop":{"id":452,"name":"Kotsovolos","link":"http://www.kotsovolos.gr","phone":"2102899999","image_url":"https://b.scdn.gr/ds/shops/logos/452/mid_20160829183952_bfbba903.jpeg","thumbshot_url":"https://d.scdn.gr/ds/shops/screenshots/452/20150731105054_75756119.png","reviews_count":492,"latest_reviews_count":127,"review_score":4.3,"payment_methods":{"credit_card":true,"paypal":false,"bank":true,"spot_cash":true,"installments":"Εώς
     12 άτοκες δόσεις μέσω πιστωτικής κάρτας για αγορές άνω των 60 Ευρω.\r\nΕώς 48
-    δόσεις μέσω δανειοδότησης Κωτσόβολου."},"shipping":{"free":true,"free_from":85,"free_from_info":"","min_price":"3.99"},"web_uri":"http://skroutz.gr/m/452/Kotsovolos","extra_info":{"time_on_platform":"3+
-    χρόνια","orders_per_week":"500+"},"top_positive_reasons":["good_packaging","friendly"]}}'
-:created_at: 2016-10-05 16:59:51.422768022 +03:00
+    δόσεις μέσω δανειοδότησης Κωτσόβολου."},"shipping":{"free":true,"free_from":85,"free_from_info":"","min_price":"3.99","shipping_cost_enabled":true},"web_uri":"http://skroutz.gr/m/452/Kotsovolos","extra_info":{"time_on_platform":"3+
+    χρόνια","orders_per_week":"500+"},"top_positive_reasons":["Καταρτισμένο προσωπικό","Προσεγμένη
+    συσκευασία προϊόντων","Φιλική εξυπηρέτηση"]}}'
+:created_at: 2017-02-17 12:34:00.260265851 +02:00
