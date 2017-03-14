@@ -49,6 +49,49 @@ Alternatively, <%= link_to "validate your XML feed",
 
 ## Technical Specifications
 
+### <%= settings.site_name.capitalize %>Bot
+
+<%= settings.site_name.capitalize %> uses a web crawler to download XML feeds.
+It is identified with the HTTP header "User-Agent: <%= settings.site_name.capitalize %>Bot".
+Although we call it a bot, it does not comply to the standard definition
+(<%= link_to "www.robotstxt.org", "http://www.robotstxt.org/" %>).
+
+<%= settings.site_name.capitalize %>Bot does not crawl the whole shop's site but
+only the following URLs:
+
+* the feed URL
+* the feed file images URLs: <%= settings.site_name.capitalize %> downloads all products' images
+* the feed file products URLs: <%= settings.site_name.capitalize %> downloads a sample of
+  the products for quality control
+
+<%= settings.site_name.capitalize %>Bot originates from the follοwing IPs:
+
+  * **IPv6: 2a03:e40::/32**
+  * **IPv4: 185.6.76.0/22**
+
+Make sure that the <%= settings.site_name.capitalize %>Bot IPs have always access
+to the aforementioned URLs, without any rate limit.
+
+> ##### Note
+> It might be necessary to whitelist <%= settings.site_name.capitalize %>Bot’s
+> URLs on some rate-limiting tools like BitNinja, Cloudflare etc.
+>
+><%= settings.site_name.capitalize %>Bot will maintain a reasonable rate of requests.
+
+<%= settings.site_name.capitalize %>Bot does not do basic HTTP authentication or
+any other kind of authentication.
+The preferred method is to use IP access control lists.
+
+<%= settings.site_name.capitalize %>Bot does not send an `Accept-Encoding` header
+but it can handle gzip and zip compression. The shop's server should not deny access
+to <%= settings.site_name.capitalize %>Bot if it uses exclusively gzip or zip compression.
+
+> ##### Note
+> An easy way to emulate the <%= settings.site_name.capitalize %>Bot is to use
+> the linux program curl, for example: `curl -A <%= settings.site_name.capitalize %>Bot -i -L`
+
+### Data Feed
+
 For a Data Feed to be accepted all required attributes must be included
 according to the standards described below.
 
