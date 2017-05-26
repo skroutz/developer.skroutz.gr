@@ -204,27 +204,23 @@ X-RateLimit-Reset: 1377013266
 }
 </pre>
 
-
-### Staying within the rate limit
-
-If you are exceeding your rate limit, you can likely fix the issue by caching API responses
-and using [conditional requests](#conditional-requests).
-
-If you're using conditional requests and still exceeding your rate
-limit, please <%= link_to 'contact us', '/support' %> to request a higher rate limit for your application.
+### Daily limit
+Besides the above limit, there is also a daily limit which at the time of this writting
+it is set to **<%= t('docs.apiv3.daily_limit') %>** calls.  
+If this limit is exceeded, all oauth2 tokens associated with that client will be expired and
+the creation of new ones will be disabled until the beginning of the following day.
 
 ## Conditional Requests
 
-Most responses return `Last-Modified` and `ETag` headers. You can use the values
-of these headers to make subsequent requests to those resources using the
-`If-Modified-Since` and `If-None-Match` headers, respectively. If the resource
-has not changed, the server will return a `304 Not Modified`.
+Most responses return `ETag` headers. You can use the value of the `ETag`
+header to make subsequent requests to those resources using the
+`If-None-Match` header.If the resource has not changed, the server will return a `304 Not Modified`.
 
 > ##### Note
-> Making a conditional request and receiving a `304` HTTP response **does not count** against your
-  [Rate Limit](#rate-limiting).
+> Making a conditional request and receiving a `304` HTTP response **still counts** against your
+  [Rate Limit](#rate-limiting). It only saves on bandwidth.
 
-###### Case: Request without `If-Modified-Since` nor `If-None-Match` headers
+###### Case: Request without `If-None-Match` header
 
 <pre class="terminal">
 $ curl -i https://<%= settings.api_domain %>/categories/1440 \
@@ -234,29 +230,10 @@ $ curl -i https://<%= settings.api_domain %>/categories/1440 \
 HTTP/1.1 200 OK
 Cache-Control: private, max-age=60
 ETag: "644b5b0155e6404a9cc4bd9d8b1ae730"
-Last-Modified: Thu, 05 Jul 2012 15:31:30 GMT
 Status: 200 OK
 Vary: Accept, Authorization, Cookie
-X-RateLimit-Limit: 5000
-X-RateLimit-Remaining: 4996
-X-RateLimit-Reset: 1372700873
-</pre>
-
-###### Case: Request with `If-Modified-Since` header
-
-<pre class="terminal">
-$ curl -i https://<%= settings.api_domain %>/categories/1440  \
-  -H "If-Modified-Since: Thu, 05 Jul 2012 15:31:30 GMT" \
-  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=<%= t("version.v3") %>' \
-  -H 'Authorization: Bearer your_access_token_here'
-
-HTTP/1.1 304 Not Modified
-Cache-Control: private, max-age=60
-Last-Modified: Thu, 05 Jul 2012 15:31:30 GMT
-Status: 304 Not Modified
-Vary: Accept, Authorization, Cookie
-X-RateLimit-Limit: 5000
-X-RateLimit-Remaining: 4996
+X-RateLimit-Limit: 100
+X-RateLimit-Remaining: 99
 X-RateLimit-Reset: 1372700873
 </pre>
 
@@ -271,11 +248,10 @@ $ curl -i https://<%= settings.api_domain %>/categories/1440 \
 HTTP/1.1 304 Not Modified
 Cache-Control: private, max-age=60
 ETag: "644b5b0155e6404a9cc4bd9d8b1ae730"
-Last-Modified: Thu, 05 Jul 2012 15:31:30 GMT
 Status: 304 Not Modified
 Vary: Accept, Authorization, Cookie
-X-RateLimit-Limit: 5000
-X-RateLimit-Remaining: 4996
+X-RateLimit-Limit: 100
+X-RateLimit-Remaining: 98
 X-RateLimit-Reset: 1372700873
 </pre>
 

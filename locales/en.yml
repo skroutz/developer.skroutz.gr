@@ -36,6 +36,7 @@ en:
       favorites: 'User Favorites'
       notifications: 'User Notifications'
       troubleshooting: 'Troubleshooting'
+      daily_limit: 1000
     apiv2:
       short_description: 'Oldie but still goldie. API v2 is deprecated and should not be used for new applications.'
       overview: 'Overview'
