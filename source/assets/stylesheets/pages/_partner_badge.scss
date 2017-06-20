@@ -1,0 +1,22 @@
+// Partner Badge Page
+// --------------------------------------------------
+
+.partner_badge {
+  img.partner-badge-preview {
+    width: 100%;
+    max-width: 640px;
+  }
+
+  .partner-badge-themes-preview {
+    display: inline-block;
+
+    margin-bottom: 20px;
+    padding: 15px;
+
+    background-color: $app-clr-white;
+
+    img {
+      margin: 5px 10px;
+    }
+  }
+}

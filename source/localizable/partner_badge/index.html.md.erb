@@ -1,0 +1,113 @@
+---
+title: partner_badge
+---
+
+<%= partial 'partials/page_locales' %>
+
+# Partner Badge <%= edit_link %>
+
+"Partner Badge" acts as mark of trust and a quality indicator powered by <%= settings.site_name.capitalize %>.
+
+<%= partial 'partials/toc' %>
+
+## How It Looks
+
+### Floating
+
+##### Available Themes
+
+<div class="partner-badge-themes-preview floating-badge-themes-preview">
+  <%= image_tag "/assets/images/#{flavor}/partner_badge/floating_black.png" %>
+  <%= image_tag "/assets/images/#{flavor}/partner_badge/floating_orange.png" %>
+  <%= image_tag "/assets/images/#{flavor}/partner_badge/floating_white.png" %>
+</div>
+
+##### Preview
+
+<%= image_tag "/assets/images/#{flavor}/partner_badge/floating_preview.gif", class: 'partner-badge-preview' %>
+
+### Embedded
+
+##### Available Themes
+
+<div class="partner-badge-themes-preview embedded-badge-themes-preview">
+  <%= image_tag "/assets/images/#{flavor}/partner_badge/embedded_black.png" %>
+  <%= image_tag "/assets/images/#{flavor}/partner_badge/embedded_white.png" %>
+</div>
+
+##### Preview
+
+<%= image_tag "/assets/images/#{flavor}/partner_badge/embedded_preview.gif", class: 'partner-badge-preview' %>
+
+## How It Works
+
+The "<%= settings.site_name.capitalize %> Partner Badge" is displayed on your website, providing shop-related
+<%= settings.site_name.capitalize %> content upon click.
+
+- Acts as a **mark of trust** provided by <%= settings.site_name.capitalize %>, further increasing the shop's
+credibility.
+- Users will have **direct access** to shop-related <%= settings.site_name.capitalize %> content,
+such as rating, strong points, and user reviews.
+
+#### Partner Badge comes in two flavors:
+
+##### Floating
+
+"Partner Badge" is placed on a fixed position on the screen.
+
+##### Embedded
+
+"Partner Badge" is placed on a static position of your choice and has the following dimensions: `width: 150px, height: 65px`
+
+## Integration
+
+"Partner Badge" requires to have [Analytics](/analytics/overview) integrated into your store properly.
+
+**Additionally**, *embedded* "Partner Badge" requires the presence of the following HTML element on your e-shop's pages:
+
+~~~ html
+<div id="sa-badge-embedded-plugin"></div>
+~~~
+
+
+### Technical Requirements
+
+Badge Display Type | [Analytics Integration](/analytics/overview) | Extra HTML element required
+------------------ | -------------------------------------------- | ---------------------------
+*Embedded*         |  <i class="fa fa-check"></i>                 | <i class="fa fa-check"></i> `<div id="sa-badge-embedded-plugin"></div>`
+*Floating*         |  <i class="fa fa-check"></i>                 | <i class="fa fa-times"></i>
+
+#### When Badge is displayed
+
+"<%= settings.site_name.capitalize %> Partner Badge" is displayed on every
+[Analytics tracker object initialization](/analytics/settings/#connect).
+
+## Settings
+
+"<%= settings.site_name.capitalize %> Partner Badge" service's configuration is **only** available through
+[Merchants control panel](https://<%= settings.merchants_domain %>/services/partner_badge/).
+
+> ##### Note
+> In order to configure "Partner Badge" service you need to have access to
+  [Merchants control panel](https://<%= settings.merchants_domain %>).
+>
+> **Please contact the shop owner in order to change the configuration.**
+
+##### Available Settings
+
+Name          | Default      | Available Options          | Description
+------------- | ------------ | -------------------------- | -----------
+`display`     | Floating     | Floating, Embedded         | Badge type of display
+
+##### Display: Floating
+
+Name          | Default      | Available Options          | Description
+------------- | ------------ | -------------------------- | -----------
+`position`    | Bottom Right | Bottom Left, Bottom Right  | Badge position on screen
+`theme`       | Black        | Black, Orange, White       | Badge Theme
+
+##### Display: Embedded
+
+Name          | Default      | Available Options          | Description
+------------- | ------------ | -------------------------- | -----------
+`theme`       | Black        | Black, White               | Badge Theme
