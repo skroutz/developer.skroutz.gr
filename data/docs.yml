@@ -66,6 +66,11 @@ analytics:
     - { title: 'examples' }
     - { title: 'faq' }
 
+order_stash:
+  base: '/order_stash/'
+  featured: true
+  icon: 'fa-shopping-basket'
+
 widgets:
   base: '/widgets/'
   featured: true

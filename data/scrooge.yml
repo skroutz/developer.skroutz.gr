@@ -8,6 +8,7 @@ apiv2_domain: 'apiv2.scrooge.co.uk'
 developer_domain: 'developer.scrooge.co.uk'
 engineering_blog_domain: ''
 feed_validator_domain: ''
+merchants_domain: 'merchants.scrooge.co.uk'
 
 api_email: 'api@scrooge.co.uk'
 analytics_email: 'analytics@scrooge.co.uk'
