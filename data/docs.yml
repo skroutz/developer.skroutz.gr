@@ -78,7 +78,7 @@ partner_badge:
 
 widgets:
   base: '/widgets/'
-  featured: true
+  featured: false
   icon: 'fa-cubes'
   flavors:
     - skroutz
