@@ -37,8 +37,8 @@ GEM
     faraday_middleware (0.11.0.1)
       faraday (>= 0.7.4, < 1.0)
     ffi (1.9.3)
-    font-awesome-middleman (4.1.1)
-      middleman-core (>= 3.0.0)
+    font-awesome-middleman (4.5.0)
+      middleman-core (~> 3.0)
     fssm (0.2.10)
     haml (4.0.5)
       tilt
@@ -168,7 +168,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.2.0.0)
   capistrano (~> 3.2.1)
   colored
-  font-awesome-middleman (~> 4.1.1)
+  font-awesome-middleman (~> 4.5.0)
   jquery-middleman (~> 3.0.4)
   json (~> 1.8.6)
   middleman (~> 3.3)

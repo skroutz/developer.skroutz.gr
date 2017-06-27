@@ -7,6 +7,8 @@ en:
     csvspec: 'CSV Feed'
     authorization: 'Authorization'
     analytics: 'Analytics'
+    order_stash: 'Save Your Order'
+    partner_badge: 'Partner Badge'
     widgets: 'Widgets'
     docs: 'Developer Documentation'
     guides: 'Guides'

@@ -66,9 +66,19 @@ analytics:
     - { title: 'examples' }
     - { title: 'faq' }
 
+order_stash:
+  base: '/order_stash/'
+  featured: true
+  icon: 'fa-shopping-basket'
+
+partner_badge:
+  base: '/partner_badge/'
+  featured: true
+  icon: 'fa-trophy'
+
 widgets:
   base: '/widgets/'
-  featured: true
+  featured: false
   icon: 'fa-cubes'
   flavors:
     - skroutz

@@ -8,6 +8,7 @@ apiv2_domain: 'apiv2.alve.com'
 developer_domain: 'developer.alve.com'
 engineering_blog_domain: ''
 feed_validator_domain: ''
+merchants_domain: 'merchants.alve.com'
 
 api_email: 'api@alve.com'
 analytics_email: 'analytics@alve.com'
