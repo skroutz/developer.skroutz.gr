@@ -1,6 +1,6 @@
 ---
 :request:
-  :url: http://api.skroutz.gr/shops/452/products/search?shop_uid=062276
+  :url: https://api.skroutz.gr/shops/452/products/search?shop_uid=062276
   :headers:
     :accept: application/vnd.skroutz+json; version=3.1
     :authorization: Bearer h1HJE3BS1xKQIAbM9e1HZMtI8AK1ryidNuh7T8PBBkhYn0TgYZdSwjlVTnpIpV7tw==
@@ -36,5 +36,5 @@
     transfer-encoding: chunked
     connection: close
   :body: '{"products":[{"id":2542077,"name":"Verbatim DVD+R 25PK Spindle 16x","sku_id":4843381,"shop_id":452,"category_id":472,"availability":"Άμεση
-    παραλαβή / Παράδοση 1 έως 3 ημέρες","click_url":"https://www.skroutz.gr/products/show/2542077?client_id=NsgROlpU9757wHtXZPmbzA%3D%3D\u0026from=api","shop_uid":"062276","expenses":null,"web_uri":"http://skroutz.gr/products/show/2542077","sizes":[],"price":8.99,"immediate_pickup":true}],"meta":{"pagination":{"total_results":1,"total_pages":1,"page":1,"per":25}}}'
+    παραλαβή / Παράδοση 1 έως 3 ημέρες","click_url":"https://www.skroutz.gr/products/show/2542077?client_id=NsgROlpU9757wHtXZPmbzA%3D%3D\u0026from=api","shop_uid":"062276","expenses":null,"web_uri":"https://www.skroutz.gr/products/show/2542077","sizes":[],"price":8.99,"immediate_pickup":true}],"meta":{"pagination":{"total_results":1,"total_pages":1,"page":1,"per":25}}}'
 :created_at: 2017-02-15 19:20:45.602627933 +02:00

@@ -1,6 +1,6 @@
 ---
 :request:
-  :url: http://api.alve.com/favorite_lists/2845/favorites
+  :url: https://api.alve.com/favorite_lists/2845/favorites
   :headers:
     :accept: application/vnd.alve+json; version=3.1
     :authorization: Bearer qp4qHH5/z3hGO0d7xeQ/IcZQZA8b1jyLp0uH3rgLjuiiM2sR1T20V27mFEd7fe6XIFQ6Q==

@@ -1,6 +1,6 @@
 ---
 :request:
-  :url: http://api.skroutz.gr/products/25809770?embed=shop&fields[root]=id,name&fields[shop]=review_score
+  :url: https://api.skroutz.gr/products/25809770?embed=shop&fields[root]=id,name&fields[shop]=review_score
   :headers:
     :accept: application/vnd.skroutz+json; version=3.1
     :authorization: Bearer 3PA5Sq7P1C39JUstkf7TYd5gfw9TzgfXJMa6/zHz3DgWVd0xbQ775W7Tv72IKlH5qKPzxshslS5aFjQ==

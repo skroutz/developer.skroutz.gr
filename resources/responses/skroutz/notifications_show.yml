@@ -1,6 +1,6 @@
 ---
 :request:
-  :url: http://api.skroutz.gr/notifications/314233664
+  :url: https://api.skroutz.gr/notifications/314233664
   :headers:
     :accept: application/vnd.skroutz+json; version=3.1
     :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
@@ -36,6 +36,6 @@
     content-length: '481'
     connection: close
   :body: '{"notification":{"id":314233664,"etype":"price_drop","eventable_id":4672057,"eventable_type":"Sku","eventable_name":"Omron
-    M6 HEM-7321","eventable_url":"http://api.skroutz.gr/s/4672057/Omron-M6-HEM-7321.html?from=account_notifications","event_text":null,"snapshot":{"price_min":56.19,"latest_price":56.89,"change_rate":0.012,"from_threshold":false},"is_viewed":true,"aggregated":false,"created_at":"2016-10-05T16:16:29+03:00","updated_at":"2016-10-05T16:46:32+03:00","sku":{"id":4672057,"category_id":1339,"display_name":"Omron
+    M6 HEM-7321","eventable_url":"https://api.skroutz.gr/s/4672057/Omron-M6-HEM-7321.html?from=account_notifications","event_text":null,"snapshot":{"price_min":56.19,"latest_price":56.89,"change_rate":0.012,"from_threshold":false},"is_viewed":true,"aggregated":false,"created_at":"2016-10-05T16:16:29+03:00","updated_at":"2016-10-05T16:46:32+03:00","sku":{"id":4672057,"category_id":1339,"display_name":"Omron
     M6 HEM-7321","images":{"main":"https://d.scdn.gr/images/sku_main_images/004672/4672057/medium_14967045-orig.jpg","alternatives":[]},"click_url":null,"virtual":false,"future":false,"first_product_shop_info":null},"category_name":"Πιεσόμετρα"}}'
 :created_at: 2016-10-05 16:59:54.320479924 +03:00

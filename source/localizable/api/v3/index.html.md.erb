@@ -19,7 +19,7 @@ A list of all the example requests in this documentation as a [Postman](http://w
 collection can be found <%= link_to 'here', "/assets/misc/#{flavor}_postman_collection.json" %>.
 
 <pre class="terminal">
-curl -XGET http://<%= settings.api_domain %>/categories/999999999 \
+curl -XGET https://<%= settings.api_domain %>/categories/999999999 \
   -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=<%= t("version.v3") %>' \
   -H 'Authorization: Bearer your_access_token_here'
 

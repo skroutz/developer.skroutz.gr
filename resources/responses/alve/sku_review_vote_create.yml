@@ -1,7 +1,7 @@
 ---
 :request:
   :verb: :post
-  :url: http://api.alve.com/skus/3253124/reviews/403/votes
+  :url: https://api.alve.com/skus/3253124/reviews/403/votes
   :headers:
     :accept: application/vnd.alve+json; version=3.1
     :authorization: Bearer Ei3DkEzs/gQSMk8EW8mPBJEyYPCliK7bvq1KhuNcnkrnbMd2TrbOfdvf1PpyWJ8nqQEorWau0Aq0xppWe4gdzg==

@@ -1,6 +1,6 @@
 ---
 :request:
-  :url: http://api.skroutz.gr/categories/279/skus?include_meta=available_filters
+  :url: https://api.skroutz.gr/categories/279/skus?include_meta=available_filters
   :headers:
     :accept: application/vnd.skroutz+json; version=3.1
     :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
@@ -38,6 +38,6 @@
     transfer-encoding: chunked
     connection: close
   :body: '{"skus":[{"id":6377791,"ean":"","pn":"","name":"Σετ γάμου CANVAS SHELL -
-    ΕΙΔΙΚΗ ΠΡΟΣΦΟΡΑ","display_name":"Σετ γάμου CANVAS SHELL - ΕΙΔΙΚΗ ΠΡΟΣΦΟΡΑ","category_id":279,"first_product_shop_info":"2138|E-Silvercorner|esilvercorner","click_url":"http://www.skroutz.gr/products/show/18685400","price_max":210.0,"price_min":210.0,"reviewscore":0.0,"shop_count":1,"plain_spec_summary":"Είδος:
-    Δίσκοι - Καράφες - Ποτήρια","manufacturer_id":null,"future":false,"reviews_count":0,"virtual":true,"images":{"main":"https://a.scdn.gr/images/sku_main_images/006377/6377791/medium_20150730161258_set_gamou_me_stefana_eidiki_prosfora_csc505_ln.jpeg","alternatives":[]},"web_uri":"http://skroutz.gr/s/6377791/%CE%A3%CE%B5%CF%84-%CE%B3%CE%AC%CE%BC%CE%BF%CF%85-CANVAS-SHELL-%CE%95%CE%99%CE%94%CE%99%CE%9A%CE%97-%CE%A0%CE%A1%CE%9F%CE%A3%CE%A6%CE%9F%CE%A1%CE%91.html","favorited":false}],"meta":{"ordered_by":"popularity","available_filters":{"filters":{"342834":664,"531601":387,"342832":49,"342828":29,"665423":480,"665424":270,"665425":231,"665426":160},"manufacturers":{"254":89,"7564":1,"10179":1}},"pagination":{"total_results":1129,"total_pages":1129,"page":1,"per":1}}}'
+    ΕΙΔΙΚΗ ΠΡΟΣΦΟΡΑ","display_name":"Σετ γάμου CANVAS SHELL - ΕΙΔΙΚΗ ΠΡΟΣΦΟΡΑ","category_id":279,"first_product_shop_info":"2138|E-Silvercorner|esilvercorner","click_url":"https://www.skroutz.gr/products/show/18685400","price_max":210.0,"price_min":210.0,"reviewscore":0.0,"shop_count":1,"plain_spec_summary":"Είδος:
+    Δίσκοι - Καράφες - Ποτήρια","manufacturer_id":null,"future":false,"reviews_count":0,"virtual":true,"images":{"main":"https://a.scdn.gr/images/sku_main_images/006377/6377791/medium_20150730161258_set_gamou_me_stefana_eidiki_prosfora_csc505_ln.jpeg","alternatives":[]},"web_uri":"https://www.skroutz.gr/s/6377791/%CE%A3%CE%B5%CF%84-%CE%B3%CE%AC%CE%BC%CE%BF%CF%85-CANVAS-SHELL-%CE%95%CE%99%CE%94%CE%99%CE%9A%CE%97-%CE%A0%CE%A1%CE%9F%CE%A3%CE%A6%CE%9F%CE%A1%CE%91.html","favorited":false}],"meta":{"ordered_by":"popularity","available_filters":{"filters":{"342834":664,"531601":387,"342832":49,"342828":29,"665423":480,"665424":270,"665425":231,"665426":160},"manufacturers":{"254":89,"7564":1,"10179":1}},"pagination":{"total_results":1129,"total_pages":1129,"page":1,"per":1}}}'
 :created_at: 2016-10-05 16:59:54.146258546 +03:00

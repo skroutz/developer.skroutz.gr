@@ -1,6 +1,6 @@
 ---
 :request:
-  :url: http://api.skroutz.gr/manufacturers/356/categories
+  :url: https://api.skroutz.gr/manufacturers/356/categories
   :headers:
     :accept: application/vnd.skroutz+json; version=3.1
     :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
@@ -20,8 +20,8 @@
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
-    link: <http://api.skroutz.gr/manufacturers/356/categories?page=32&per=2>; rel="last",
-      <http://api.skroutz.gr/manufacturers/356/categories?page=2&per=2>; rel="next"
+    link: <https://api.skroutz.gr/manufacturers/356/categories?page=32&per=2>; rel="last",
+      <https://api.skroutz.gr/manufacturers/356/categories?page=2&per=2>; rel="next"
     etag: W/"9390a4d52231a83693ed858fd1dcb810"
     cache-control: max-age=0, private, must-revalidate
     x-request-id: '718881998'
@@ -39,5 +39,5 @@
     accept-ranges: bytes
     content-length: '439'
     connection: close
-  :body: '{"categories":[{"id":40,"name":"Κινητά Τηλέφωνα","children_count":0,"image_url":"https://d.scdn.gr/ds/categories/40/20150508124644_bd07441b.jpg","parent_id":86,"fashion":false,"layout_mode":"list","web_uri":"http://skroutz.gr/c/40/kinhta-thlefwna.html","code":"mobile","path":"76,1269,86,40","show_specifications":true,"manufacturer_title":"Κατασκευαστές"},{"id":1705,"name":"Smartwatches","children_count":0,"image_url":"https://a.scdn.gr/ds/categories/1705/20150508163903_9d5810ce.jpg","parent_id":1912,"fashion":false,"layout_mode":"tiles","web_uri":"http://skroutz.gr/c/1705/Smartwatches.html","code":"smartwatch","path":"76,1269,1912,1705","show_specifications":true,"manufacturer_title":"Κατασκευαστές"}],"meta":{"pagination":{"total_results":63,"total_pages":32,"page":1,"per":2}}}'
+  :body: '{"categories":[{"id":40,"name":"Κινητά Τηλέφωνα","children_count":0,"image_url":"https://d.scdn.gr/ds/categories/40/20150508124644_bd07441b.jpg","parent_id":86,"fashion":false,"layout_mode":"list","web_uri":"https://www.skroutz.gr/c/40/kinhta-thlefwna.html","code":"mobile","path":"76,1269,86,40","show_specifications":true,"manufacturer_title":"Κατασκευαστές"},{"id":1705,"name":"Smartwatches","children_count":0,"image_url":"https://a.scdn.gr/ds/categories/1705/20150508163903_9d5810ce.jpg","parent_id":1912,"fashion":false,"layout_mode":"tiles","web_uri":"https://www.skroutz.gr/c/1705/Smartwatches.html","code":"smartwatch","path":"76,1269,1912,1705","show_specifications":true,"manufacturer_title":"Κατασκευαστές"}],"meta":{"pagination":{"total_results":63,"total_pages":32,"page":1,"per":2}}}'
 :created_at: 2016-10-05 16:59:51.745989381 +03:00

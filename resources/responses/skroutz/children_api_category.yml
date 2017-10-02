@@ -1,6 +1,6 @@
 ---
 :request:
-  :url: http://api.skroutz.gr/categories/252/children
+  :url: https://api.skroutz.gr/categories/252/children
   :headers:
     :accept: application/vnd.skroutz+json; version=3.1
     :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
@@ -35,7 +35,7 @@
     accept-ranges: bytes
     transfer-encoding: chunked
     connection: close
-  :body: '{"categories":[{"id":372,"name":"Γυναικεία Παπούτσια","children_count":18,"image_url":"https://d.scdn.gr/ds/categories/372/372.jpg","parent_id":252,"fashion":false,"layout_mode":"tiles","web_uri":"http://skroutz.gr/c/372/gynaikeia-ypodhmata.html","code":"gynaikeia-ypodhmata","path":"76,274,252,372","show_specifications":false,"manufacturer_title":"Brands"},{"id":283,"name":"Γυναικεία
-    Ρούχα","children_count":23,"image_url":"https://a.scdn.gr/ds/categories/283/283.jpg","parent_id":252,"fashion":false,"layout_mode":"list","web_uri":"http://skroutz.gr/c/283/gynaikeia-rouxa.html","code":"gynaikeia-endysh","path":"76,274,252,283","show_specifications":false,"manufacturer_title":"Κατασκευαστές"},{"id":281,"name":"Γυναικεία
-    Αξεσουάρ","children_count":3,"image_url":"https://c.scdn.gr/ds/categories/281/281.jpg","parent_id":252,"fashion":false,"layout_mode":"list","web_uri":"http://skroutz.gr/c/281/gynakeia-aksesouar-endyshs-ypo.html","code":"gynakeia-aksesouar-endyshs-ypo","path":"76,274,252,281","show_specifications":false,"manufacturer_title":"Κατασκευαστές"}],"meta":{"pagination":{"total_results":3,"total_pages":1,"page":1,"per":25}}}'
+  :body: '{"categories":[{"id":372,"name":"Γυναικεία Παπούτσια","children_count":18,"image_url":"https://d.scdn.gr/ds/categories/372/372.jpg","parent_id":252,"fashion":false,"layout_mode":"tiles","web_uri":"https://www.skroutz.gr/c/372/gynaikeia-ypodhmata.html","code":"gynaikeia-ypodhmata","path":"76,274,252,372","show_specifications":false,"manufacturer_title":"Brands"},{"id":283,"name":"Γυναικεία
+    Ρούχα","children_count":23,"image_url":"https://a.scdn.gr/ds/categories/283/283.jpg","parent_id":252,"fashion":false,"layout_mode":"list","web_uri":"https://www.skroutz.gr/c/283/gynaikeia-rouxa.html","code":"gynaikeia-endysh","path":"76,274,252,283","show_specifications":false,"manufacturer_title":"Κατασκευαστές"},{"id":281,"name":"Γυναικεία
+    Αξεσουάρ","children_count":3,"image_url":"https://c.scdn.gr/ds/categories/281/281.jpg","parent_id":252,"fashion":false,"layout_mode":"list","web_uri":"https://www.skroutz.gr/c/281/gynakeia-aksesouar-endyshs-ypo.html","code":"gynakeia-aksesouar-endyshs-ypo","path":"76,274,252,281","show_specifications":false,"manufacturer_title":"Κατασκευαστές"}],"meta":{"pagination":{"total_results":3,"total_pages":1,"page":1,"per":25}}}'
 :created_at: 2016-10-05 16:59:51.113648154 +03:00

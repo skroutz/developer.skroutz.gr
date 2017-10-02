@@ -1,6 +1,6 @@
 ---
 :request:
-  :url: http://api.skroutz.gr/skus/8864706/reviews?include_meta=sku_reviews_aggregation
+  :url: https://api.skroutz.gr/skus/8864706/reviews?include_meta=sku_reviews_aggregation
   :headers:
     :accept: application/vnd.skroutz+json; version=3.1
     :authorization: Bearer 248t0h0tju209jeijfi2jg0294tu20jei==
@@ -20,8 +20,8 @@
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
-    link: <http://api.skroutz.gr/skus/8864706/reviews?include_meta=sku_reviews_aggregation&page=85&per=3>;
-      rel="last", <http://api.skroutz.gr/skus/8864706/reviews?include_meta=sku_reviews_aggregation&page=2&per=3>;
+    link: <https://api.skroutz.gr/skus/8864706/reviews?include_meta=sku_reviews_aggregation&page=85&per=3>;
+      rel="last", <https://api.skroutz.gr/skus/8864706/reviews?include_meta=sku_reviews_aggregation&page=2&per=3>;
       rel="next"
     cache-control: max-age=300, private
     etag: W/"e2f0c08dab47887d5ad59eebfbeb42c6"

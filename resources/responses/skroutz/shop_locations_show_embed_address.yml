@@ -1,6 +1,6 @@
 ---
 :request:
-  :url: http://api.skroutz.gr/shops/452/locations/2500?embed=address
+  :url: https://api.skroutz.gr/shops/452/locations/2500?embed=address
   :headers:
     :accept: application/vnd.skroutz+json; version=3.1
     :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==

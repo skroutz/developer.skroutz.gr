@@ -1,6 +1,6 @@
 ---
 :request:
-  :url: http://api.skroutz.gr/categories/1442/parent
+  :url: https://api.skroutz.gr/categories/1442/parent
   :headers:
     :accept: application/vnd.skroutz+json; version=3.1
     :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
@@ -35,5 +35,5 @@
     accept-ranges: bytes
     content-length: '322'
     connection: close
-  :body: '{"category":{"id":1434,"name":"Έπιπλα Κήπου \u0026 Βεράντας","children_count":14,"image_url":"https://a.scdn.gr/ds/categories/1434/1434.jpg","parent_id":1052,"fashion":false,"layout_mode":"tiles","web_uri":"http://skroutz.gr/c/1434/epipla-kipou-verantas.html","code":"garden-furniture","path":"76,11,1052,1434","show_specifications":false,"manufacturer_title":"Κατασκευαστές"}}'
+  :body: '{"category":{"id":1434,"name":"Έπιπλα Κήπου \u0026 Βεράντας","children_count":14,"image_url":"https://a.scdn.gr/ds/categories/1434/1434.jpg","parent_id":1052,"fashion":false,"layout_mode":"tiles","web_uri":"https://www.skroutz.gr/c/1434/epipla-kipou-verantas.html","code":"garden-furniture","path":"76,11,1052,1434","show_specifications":false,"manufacturer_title":"Κατασκευαστές"}}'
 :created_at: 2016-10-05 16:59:51.241337190 +03:00

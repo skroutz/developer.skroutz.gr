@@ -1,6 +1,6 @@
 ---
 :request:
-  :url: http://api.skroutz.gr/search?q=%CE%B9%CF%80%CE%B7%CE%BF%CE%BD%CE%B5
+  :url: https://api.skroutz.gr/search?q=%CE%B9%CF%80%CE%B7%CE%BF%CE%BD%CE%B5
   :headers:
     :accept: application/vnd.skroutz+json; version=3.1
     :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==

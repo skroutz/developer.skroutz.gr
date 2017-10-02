@@ -1,6 +1,6 @@
 ---
 :request:
-  :url: http://api.skroutz.gr/categories/1442
+  :url: https://api.skroutz.gr/categories/1442
   :headers:
     :accept: application/vnd.skroutz+json; version=3.1
     :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
@@ -35,5 +35,5 @@
     accept-ranges: bytes
     content-length: '329'
     connection: close
-  :body: '{"category":{"id":1442,"name":"Ξαπλώστρες Κήπου \u0026 Βεράντας","children_count":0,"image_url":"https://a.scdn.gr/ds/categories/1442/1442.jpg","parent_id":1434,"fashion":false,"layout_mode":"tiles","web_uri":"http://skroutz.gr/c/1442/xaplostres-kipou-verantas.html","code":"xaplostres-kipou-verantas","path":"76,11,1052,1434,1442","show_specifications":false,"manufacturer_title":"Κατασκευαστές"}}'
+  :body: '{"category":{"id":1442,"name":"Ξαπλώστρες Κήπου \u0026 Βεράντας","children_count":0,"image_url":"https://a.scdn.gr/ds/categories/1442/1442.jpg","parent_id":1434,"fashion":false,"layout_mode":"tiles","web_uri":"https://www.skroutz.gr/c/1442/xaplostres-kipou-verantas.html","code":"xaplostres-kipou-verantas","path":"76,11,1052,1434,1442","show_specifications":false,"manufacturer_title":"Κατασκευαστές"}}'
 :created_at: 2016-10-05 16:59:51.086716584 +03:00

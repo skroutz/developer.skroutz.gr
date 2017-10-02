@@ -1,6 +1,6 @@
 ---
 :request:
-  :url: http://api.skroutz.gr/favorite_lists/861839/favorites
+  :url: https://api.skroutz.gr/favorite_lists/861839/favorites
   :headers:
     :accept: application/vnd.skroutz+json; version=3.1
     :authorization: Bearer KABWqibhopx2bF7ClzS17cbIPTEUtxTbf4iC5BdMxCLOGiEhaNFUKdzgkfqRjYR0/NI/0k9Gw==

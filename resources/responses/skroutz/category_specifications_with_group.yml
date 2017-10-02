@@ -1,6 +1,6 @@
 ---
 :request:
-  :url: http://api.skroutz.gr/categories/40/specifications?include=group
+  :url: https://api.skroutz.gr/categories/40/specifications?include=group
   :headers:
     :accept: application/vnd.skroutz+json; version=3.1
     :authorization: Bearer 3PAD5Sq7P13JUstkf7STYd5gfw9zfvXJMa/H3DWVd0xbQ775W7lTv72KHqKzxhslS5aFjQ==
