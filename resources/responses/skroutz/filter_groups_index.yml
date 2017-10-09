@@ -1,6 +1,6 @@
 ---
 :request:
-  :url: http://api.skroutz.gr/categories/40/filter_groups
+  :url: https://api.skroutz.gr/categories/40/filter_groups
   :headers:
     :accept: application/vnd.skroutz+json; version=3.1
     :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
@@ -20,8 +20,8 @@
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
-    link: <http://api.skroutz.gr/categories/40/filter_groups?page=7&per=2>; rel="last",
-      <http://api.skroutz.gr/categories/40/filter_groups?page=2&per=2>; rel="next"
+    link: <https://api.skroutz.gr/categories/40/filter_groups?page=7&per=2>; rel="last",
+      <https://api.skroutz.gr/categories/40/filter_groups?page=2&per=2>; rel="next"
     cache-control: max-age=300, private
     etag: W/"df599e673991487502eedec915f25575"
     x-request-id: '688916160'

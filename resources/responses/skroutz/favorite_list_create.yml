@@ -1,7 +1,7 @@
 ---
 :request:
   :verb: :post
-  :url: http://api.skroutz.gr/favorite_lists
+  :url: https://api.skroutz.gr/favorite_lists
   :headers:
     :accept: application/vnd.skroutz+json; version=3.1
     :authorization: Bearer KAWihopx2bFI7KClzS17cbPTEUtxTfviC/5BMCGihNFUPdzrfOqfRHjRYR0/NI/0k9Gw==

@@ -1,6 +1,6 @@
 ---
 :request:
-  :url: http://api.alve.com/categories/33
+  :url: https://api.alve.com/categories/33
   :headers:
     :accept: application/vnd.alve+json; version=3.1
     :authorization: Bearer Ei3DkEzs/gQSMk8EW8mPBJEyYPCliK7bvq1KhuNcnkrnbMd2TrbOfdvf1PpyWJ8nqQEorWau0Aq0xppWe4gdzg==
@@ -35,5 +35,5 @@
     accept-ranges: bytes
     content-length: '263'
     connection: close
-  :body: '{"category":{"id":33,"name":"Cep Telefonu","children_count":0,"image_url":"https://alve-b.scdn.gr/ds/categories/33/20150622142746_9efad8e8.jpg","parent_id":32,"fashion":false,"layout_mode":"list","web_uri":"http://alve.com/c/33/cep-telefonu.html","code":"mobile","path":"1,2,12,32,33","show_specifications":true,"manufacturer_title":"Markalar"}}'
+  :body: '{"category":{"id":33,"name":"Cep Telefonu","children_count":0,"image_url":"https://alve-b.scdn.gr/ds/categories/33/20150622142746_9efad8e8.jpg","parent_id":32,"fashion":false,"layout_mode":"list","web_uri":"https://www.alve.com/c/33/cep-telefonu.html","code":"mobile","path":"1,2,12,32,33","show_specifications":true,"manufacturer_title":"Markalar"}}'
 :created_at: 2016-10-05 17:33:30.250381573 +03:00

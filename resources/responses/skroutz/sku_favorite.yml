@@ -1,6 +1,6 @@
 ---
 :request:
-  :url: http://api.skroutz.gr/skus/8333136/favorite
+  :url: https://api.skroutz.gr/skus/8333136/favorite
   :headers:
     :accept: application/vnd.skroutz+json; version=3.1
     :authorization: Bearer hL1HJ3BS1xKQIArbiM91HZMtI8AK1h7TPBBkhYn0TgYZSzwjlVn-ki74tw==

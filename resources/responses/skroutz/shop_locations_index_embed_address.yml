@@ -1,6 +1,6 @@
 ---
 :request:
-  :url: http://api.skroutz.gr/shops/452/locations?embed=address
+  :url: https://api.skroutz.gr/shops/452/locations?embed=address
   :headers:
     :accept: application/vnd.skroutz+json; version=3.1
     :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
@@ -20,8 +20,8 @@
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
-    link: <http://api.skroutz.gr/shops/452/locations?embed=address&page=35&per=2>;
-      rel="last", <http://api.skroutz.gr/shops/452/locations?embed=address&page=2&per=2>;
+    link: <https://api.skroutz.gr/shops/452/locations?embed=address&page=35&per=2>;
+      rel="last", <https://api.skroutz.gr/shops/452/locations?embed=address&page=2&per=2>;
       rel="next"
     cache-control: max-age=300, private
     etag: W/"66ac7f959e99fad8172c71faf6e4b428"

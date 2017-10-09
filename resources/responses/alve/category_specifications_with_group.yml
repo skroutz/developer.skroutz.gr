@@ -1,6 +1,6 @@
 ---
 :request:
-  :url: http://api.alve.com/categories/33/specifications?include=group
+  :url: https://api.alve.com/categories/33/specifications?include=group
   :headers:
     :accept: application/vnd.alve+json; version=3.1
     :authorization: Bearer WBSwuHdGfR8jl30RnDJRcY/iusyn3gRIayJtgFkc5nHUCusHuDlfeO0QSFECTn0rABYvg==

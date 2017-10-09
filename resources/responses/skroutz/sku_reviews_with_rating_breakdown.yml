@@ -1,6 +1,6 @@
 ---
 :request:
-  :url: http://api.skroutz.gr/skus/3982592/reviews?include_meta=sku_rating_breakdown
+  :url: https://api.skroutz.gr/skus/3982592/reviews?include_meta=sku_rating_breakdown
   :headers:
     :accept: application/vnd.skroutz+json; version=3.1
     :authorization: Bearer jewklfjwef90jf230f28j289fj23f8jffh==
@@ -20,8 +20,8 @@
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
-    link: <http://api.skroutz.gr/skus/3982592/reviews?include_meta=sku_rating_breakdown&page=4&per=3>;
-      rel="last", <http://api.skroutz.gr/skus/3982592/reviews?include_meta=sku_rating_breakdown&page=2&per=3>;
+    link: <https://api.skroutz.gr/skus/3982592/reviews?include_meta=sku_rating_breakdown&page=4&per=3>;
+      rel="last", <https://api.skroutz.gr/skus/3982592/reviews?include_meta=sku_rating_breakdown&page=2&per=3>;
       rel="next"
     cache-control: max-age=300, private
     etag: W/"80cebf90de062eaf06dfa4e530062e09"

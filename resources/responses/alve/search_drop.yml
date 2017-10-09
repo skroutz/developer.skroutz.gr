@@ -1,6 +1,6 @@
 ---
 :request:
-  :url: http://api.alve.com/search?q=wrong+iphone
+  :url: https://api.alve.com/search?q=wrong+iphone
   :headers:
     :accept: application/vnd.alve+json; version=3.1
     :authorization: Bearer Ei3DkEzs/gQSMk8EW8mPBJEyYPCliK7bvq1KhuNcnkrnbMd2TrbOfdvf1PpyWJ8nqQEorWau0Aq0xppWe4gdzg==

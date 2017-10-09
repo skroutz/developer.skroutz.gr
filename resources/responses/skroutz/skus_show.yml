@@ -1,6 +1,6 @@
 ---
 :request:
-  :url: http://api.skroutz.gr/skus/3690169
+  :url: https://api.skroutz.gr/skus/3690169
   :headers:
     :accept: application/vnd.skroutz+json; version=3.1
     :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
@@ -39,5 +39,5 @@
     G2 (16GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":245.0,"price_min":245.0,"reviewscore":4.62115,"shop_count":0,"plain_spec_summary":"SmartPhone,
     SIM: Single, Οθόνη: 5.2\", 1920 x 1080 pixels, CPU: 2260 MHz, Πυρήνες CPU: 4,
     RAM: 2 GB, Μνήμη Αποθήκευσης: 16 GB, Δίκτυο: 4G, Κάμερα: 13 MP, Λειτουργικό: Android,
-    Μπαταρία: 3000 mAh","manufacturer_id":30,"future":false,"reviews_count":454,"virtual":false,"images":{"main":"https://b.scdn.gr/images/sku_main_images/003690/3690169/medium_LGG2_Front.jpg","alternatives":["https://a.scdn.gr/images/sku_images/011093/11093658/LGG2_Side.jpg","https://a.scdn.gr/images/sku_images/011093/11093662/thum_gallery3.png","https://a.scdn.gr/images/sku_images/011093/11093663/thum_gallery6.png","https://b.scdn.gr/images/sku_images/011093/11093667/LGG2.jpg","https://a.scdn.gr/images/sku_images/011093/11093669/thum_gallery4.png"]},"web_uri":"http://skroutz.gr/s/3690169/LG-G2-16GB.html"}}'
+    Μπαταρία: 3000 mAh","manufacturer_id":30,"future":false,"reviews_count":454,"virtual":false,"images":{"main":"https://b.scdn.gr/images/sku_main_images/003690/3690169/medium_LGG2_Front.jpg","alternatives":["https://a.scdn.gr/images/sku_images/011093/11093658/LGG2_Side.jpg","https://a.scdn.gr/images/sku_images/011093/11093662/thum_gallery3.png","https://a.scdn.gr/images/sku_images/011093/11093663/thum_gallery6.png","https://b.scdn.gr/images/sku_images/011093/11093667/LGG2.jpg","https://a.scdn.gr/images/sku_images/011093/11093669/thum_gallery4.png"]},"web_uri":"https://www.skroutz.gr/s/3690169/LG-G2-16GB.html"}}'
 :created_at: 2016-10-05 16:59:52.704879361 +03:00

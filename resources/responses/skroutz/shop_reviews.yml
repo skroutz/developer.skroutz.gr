@@ -1,6 +1,6 @@
 ---
 :request:
-  :url: http://api.skroutz.gr/shops/452/reviews
+  :url: https://api.skroutz.gr/shops/452/reviews
   :headers:
     :accept: application/vnd.skroutz+json; version=3.1
     :authorization: Bearer sdfjskljio823yu4892y3892yt892h389t28h==
@@ -20,7 +20,7 @@
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
-    link: <http://api.skroutz.gr/shops/452/reviews?page=164&per=3>; rel="last", <http://api.skroutz.gr/shops/452/reviews?page=2&per=3>;
+    link: <https://api.skroutz.gr/shops/452/reviews?page=164&per=3>; rel="last", <https://api.skroutz.gr/shops/452/reviews?page=2&per=3>;
       rel="next"
     cache-control: max-age=300, private
     etag: W/"5a935b1d2d58ba3294523518e4c368cd"

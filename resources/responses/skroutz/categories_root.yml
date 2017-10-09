@@ -1,6 +1,6 @@
 ---
 :request:
-  :url: http://api.skroutz.gr/categories/root
+  :url: https://api.skroutz.gr/categories/root
   :headers:
     :accept: application/vnd.skroutz+json; version=3.1
     :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
@@ -35,5 +35,5 @@
     accept-ranges: bytes
     content-length: '245'
     connection: close
-  :body: '{"category":{"id":76,"name":"Skroutz","children_count":7,"image_url":"https://a.scdn.gr/ds/categories/76/76.jpg","parent_id":0,"fashion":false,"layout_mode":"list","web_uri":"http://skroutz.gr/c/76/skroutz.html","code":"skroutz","path":"76","show_specifications":false,"manufacturer_title":"Κατασκευαστές"}}'
+  :body: '{"category":{"id":76,"name":"Skroutz","children_count":7,"image_url":"https://a.scdn.gr/ds/categories/76/76.jpg","parent_id":0,"fashion":false,"layout_mode":"list","web_uri":"https://www.skroutz.gr/c/76/skroutz.html","code":"skroutz","path":"76","show_specifications":false,"manufacturer_title":"Κατασκευαστές"}}'
 :created_at: 2016-10-05 16:59:51.062012294 +03:00

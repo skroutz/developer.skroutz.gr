@@ -1,6 +1,6 @@
 ---
 :request:
-  :url: http://api.alve.com/categories/33/manufacturers
+  :url: https://api.alve.com/categories/33/manufacturers
   :headers:
     :accept: application/vnd.alve+json; version=3.1
     :authorization: Bearer Ei3DkEzs/gQSMk8EW8mPBJEyYPCliK7bvq1KhuNcnkrnbMd2TrbOfdvf1PpyWJ8nqQEorWau0Aq0xppWe4gdzg==
@@ -22,8 +22,8 @@
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
-    link: <http://api.alve.com/categories/33/manufacturers?order_by=popularity&order_dir=desc&page=20&per=2>;
-      rel="last", <http://api.alve.com/categories/33/manufacturers?order_by=popularity&order_dir=desc&page=2&per=2>;
+    link: <https://api.alve.com/categories/33/manufacturers?order_by=popularity&order_dir=desc&page=20&per=2>;
+      rel="last", <https://api.alve.com/categories/33/manufacturers?order_by=popularity&order_dir=desc&page=2&per=2>;
       rel="next"
     cache-control: max-age=300, private
     etag: W/"d160e3255c06e25665fcab1eac587f1f"

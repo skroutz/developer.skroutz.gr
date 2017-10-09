@@ -1,6 +1,6 @@
 ---
 :request:
-  :url: http://api.skroutz.gr/categories/40/favorites
+  :url: https://api.skroutz.gr/categories/40/favorites
   :headers:
     :accept: application/vnd.skroutz+json; version=3.1
     :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
@@ -18,7 +18,7 @@
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
-    link: <http://api.skroutz.gr/categories/40/favorites?page=2>; rel="last", <http://api.skroutz.gr/categories/40/favorites?page=2>;
+    link: <https://api.skroutz.gr/categories/40/favorites?page=2>; rel="last", <https://api.skroutz.gr/categories/40/favorites?page=2>;
       rel="next"
     etag: W/"945ead734b1cdbb7837bc09020f9185e"
     cache-control: max-age=0, private, must-revalidate

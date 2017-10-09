@@ -1,6 +1,6 @@
 ---
 :request:
-  :url: http://api.skroutz.gr/categories/25/manufacturers
+  :url: https://api.skroutz.gr/categories/25/manufacturers
   :headers:
     :accept: application/vnd.skroutz+json; version=3.1
     :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
@@ -22,8 +22,8 @@
     x-frame-options: SAMEORIGIN
     x-xss-protection: 1; mode=block
     x-content-type-options: nosniff
-    link: <http://api.skroutz.gr/categories/25/manufacturers?order_by=popularity&order_dir=desc&page=7&per=2>;
-      rel="last", <http://api.skroutz.gr/categories/25/manufacturers?order_by=popularity&order_dir=desc&page=2&per=2>;
+    link: <https://api.skroutz.gr/categories/25/manufacturers?order_by=popularity&order_dir=desc&page=7&per=2>;
+      rel="last", <https://api.skroutz.gr/categories/25/manufacturers?order_by=popularity&order_dir=desc&page=2&per=2>;
       rel="next"
     cache-control: max-age=300, private
     etag: W/"30c2aa122b38566e2023f76723809e95"
