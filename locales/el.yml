@@ -58,6 +58,10 @@ el:
       libraries: 'Libraries'
       examples: 'Examples'
       faq: 'FAQ'
+    order_stash:
+      short_description: 'Increase your Shop Reviews in %{flavor}.'
+    partner_badge:
+      short_description: 'A mark of trust and a quality indicator powered by %{flavor}.'
     widgets:
       short_description: 'Display live product information in your website using our widgets.'
       overview: ''
