@@ -26,6 +26,6 @@ end
 desc 'Copy static html'
 task :copy do
   run_locally do
-    execute "scp -r #{fetch(:build_dir)}/* #{fetch(:user)}@#{fetch(:deploy_server)}:#{fetch(:deploy_to)}"
+    execute "rsync --delete-after -a #{fetch(:build_dir)}/ #{fetch(:user)}@#{fetch(:deploy_server)}:#{fetch(:deploy_to)}"
   end
 end
