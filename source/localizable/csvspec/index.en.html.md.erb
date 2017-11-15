@@ -83,7 +83,7 @@ Name                                                   | Type    | Length       
 [Name](#name)                                          | String  | <span class="mono">300</span>  | Yes      | `Samsung Galaxy S4 16GB`
 [Product Link](#product-link)                          | String  | <span class="mono">1000</span> | Yes      | `http://www.someurl.co.uk/products/322.html`
 [Image Link](#image-link)                              | String  | <span class="mono">400</span>  | Yes      | `http://www.someurl.co.uk/images/322.jpg`
-[Additional Image Link](#additional-image-link)        | String  | <span class="mono">400</span>  | No       | `http://www.someurl.co.uk/images/322/front_view.jpg`
+[Additional Image Link](#additional-image-link)        | String  | <span class="mono">400</span>  | No*       | `http://www.someurl.co.uk/images/322/front_view.jpg`
 [Category Name](#category-name)                        | String  | <span class="mono">250</span>  | Yes      | `Mobile phones`
 [Price](#price)                                        | Decimal | <span class="mono">-</span>    | Yes      | `23.22`
 [Availability](#availability)                          | String  | <span class="mono">60</span>   | Yes      | `In 2 days`
@@ -96,7 +96,7 @@ Name                                                   | Type    | Length       
 [Shipping Costs](#shipping-costs)                      | Decimal | <span class="mono">-</span>    | No       | `3.22`
 [Color](#color)                                        | String  | <span class="mono">100</span>  | No**     | `Black`
 
-<small>* Required by all fashion items with sizes</small><br />
+<small>* Required by all fashion items with sizes, additional images</small><br />
 <small>** Required by all fashion items</small>
 
 
@@ -206,9 +206,10 @@ photos of the same product from different angles or with a different
 presentation or combinations of the above add value to the presentation
 of the product in <%= settings.site_name.capitalize %>.
 
-This field is optional but recommended. It can occur multiple times
+This field is optional but recommended, except for fashion categories
+where additional images are required. It can occur multiple times
 in the feed, once for each different photograph. It has the same
-limitations as [Image Link](#image-link)
+limitations as [Image Link](#image-link).
 
 ##### Example
 
