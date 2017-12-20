@@ -19,19 +19,6 @@ apiv3:
     - { title: 'favorites' }
     - { title: 'notifications' }
 
-apiv2:
-  base: '/api/v2/'
-  deprecated: true
-  icon: 'fa-archive'
-  flavors:
-    - skroutz
-  pages:
-    - { title: 'overview', url: '/api/v2/' }
-    - { title: 'data_model' }
-    - { title: 'product' }
-    - { title: 'book' }
-    - { title: 'user' }
-
 feedspec:
   base: '/feedspec/'
   featured: true

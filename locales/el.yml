@@ -2,7 +2,6 @@ el:
   titles:
     index: "%{flavor} Documentation"
     apiv3: 'API v3.1'
-    apiv2: 'API v2'
     feedspec: 'XML Feed'
     authorization: 'Authorization'
     analytics: 'Analytics'
@@ -35,13 +34,6 @@ el:
       favorites: 'User Favorites'
       notifications: 'User Notifications'
       troubleshooting: 'Troubleshooting'
-    apiv2:
-      short_description: 'Oldie but still goldie. API v2 is deprecated and should not be used for new applications.'
-      overview: 'Overview'
-      data_model: 'Data Model'
-      product: 'Product'
-      book: 'Book'
-      user: 'User'
     feedspec:
       short_description: 'Integrate your eshop with %{flavor} and reach millions of consumers.'
     authorization:
