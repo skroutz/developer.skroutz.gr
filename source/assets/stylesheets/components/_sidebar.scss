@@ -21,11 +21,12 @@
   bottom: 0;
   left: 0;
   z-index: $app-zindex-sidebar;
+  max-width: 300px;
   height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
 
-  @media (max-width: $screen-xs-max) {
+  @media (max-width: $screen-sm-max) {
     @include offcanvas-out();
     position: fixed;
     top: $app-h-navbar;
@@ -177,19 +178,25 @@
       }
     }
 
+    > a {
+      &:focus,
+      &:hover {
+        background-color: $brand-primary;
+      }
+    }
+
     a {
       font-size: .85em;
       color: $app-clr-greyLight;
 
-      &:hover {
-        background-color: $brand-primary;
-      }
-
+      &:active,
       &.active {
         color: $brand-primary;
-      }
-      &.active:hover {
-        color: $app-clr-greyLight;
+
+        &:hover {
+          color: $app-clr-greyLight;
+          background-color: $brand-primary;
+        }
       }
     }
 
@@ -282,7 +289,7 @@
     @include transition(all ease-in-out .125s);
   }
 
-  @media (min-width: $screen-sm-min) {
+  @media (min-width: $screen-md-min) {
     display: none;
   }
 }
