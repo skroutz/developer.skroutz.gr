@@ -3,8 +3,6 @@
 //
 // Main customizations:
 //  - Default font-size set to 16px
-//  - Sans-serif font set to 'Ubuntu'
-//  - Monospace font set to 'Ubuntu Mono'
 //  - Brand primary color set to orange color
 
 //
@@ -17,10 +15,6 @@ $font-size-xlarge:      ceil(($app-font-size * 1.5)) !default; // ~18px
 
 //** Open Sans Font
 $app-font-open:         'Open Sans' !default;
-
-//** Ubuntu Font
-$app-font-ubuntu:       'Ubuntu' !default;
-$app-font-ubuntu-mono:  'Ubuntu Mono' !default;
 
 $line-height-xlarge:    1.25 !default;
 
@@ -93,7 +87,7 @@ $link-hover-color:      darken($link-color, 15%) !default;
 $font-family-sans-serif:  $app-font-open, "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
-$font-family-monospace:   $app-font-ubuntu-mono, Menlo, Monaco, Consolas, "DejaVu Sans Mono", "Courier New", monospace !default;
+$font-family-monospace:   monospace !default;
 $font-family-base:        $font-family-sans-serif !default;
 
 $font-size-base:          $app-font-size !default;

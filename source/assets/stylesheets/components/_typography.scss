@@ -64,7 +64,6 @@ h1 {
   @include title-strong();
   margin-bottom: 30px;
   border-bottom: 1px solid darken($app-clr-greyLight, 12%);
-  font-family: $app-font-ubuntu;
   font-weight: 300;
   font-size: 34px;
   padding-bottom: 10px;
