@@ -3,7 +3,8 @@
 // --------------------------------------------------
 
 // Core variables and mixins
-//@import 'variables';                      // Load local variables
+@import 'variables';                      // Load local variables
+@import 'bootstrap/variables';
 @import 'bootstrap/mixins';
 
 // Reset and dependencies
