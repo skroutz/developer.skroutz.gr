@@ -62,10 +62,3 @@ partner_badge:
   base: '/partner_badge/'
   featured: true
   icon: 'fa-trophy'
-
-widgets:
-  base: '/widgets/'
-  featured: false
-  icon: 'fa-cubes'
-  flavors:
-    - skroutz

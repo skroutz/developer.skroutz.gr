@@ -8,7 +8,6 @@ en:
     analytics: 'Analytics'
     order_stash: 'Save Your Order'
     partner_badge: 'Partner Badge'
-    widgets: 'Widgets'
     docs: 'Developer Documentation'
     guides: 'Guides'
     contribute: 'Contributing'
@@ -60,9 +59,6 @@ en:
       short_description: 'Increase your Shop Reviews in %{flavor}.'
     partner_badge:
       short_description: 'A mark of trust and a quality indicator powered by %{flavor}.'
-    widgets:
-      short_description: 'Display live product information in your website using our widgets.'
-      overview: ''
 
   contribute:
     getting_started: 'Getting Started'
@@ -109,7 +105,6 @@ en:
       products_and_app: "Create products and applications built on top of %{flavor}"
       analyze_data: 'Explore market trends by analyzing data'
       integrate_eshop: "Integrate your eshop with %{flavor}"
-      find_widgets: 'Embed widgets in your website'
     oss:
       encourage: 'Many components of %{flavor} are built with Open Source Software. We %{heart} OSS and try to give back as much as we can.'
       github: '%{flavor} on GitHub'
