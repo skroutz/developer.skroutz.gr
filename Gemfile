@@ -16,8 +16,9 @@ gem 'response_mate', '~> 0.4.1'
 gem 'capistrano', '~> 3.2.1', require: false
 gem 'therubyracer', '~> 0.12.3'
 
-# Debug Tools
-gem 'awesome_print'
-gem 'colored'
-gem 'pry'
-gem 'pry-doc'
+group :development do
+  gem 'awesome_print'
+  gem 'colored'
+  gem 'pry'
+  gem 'pry-doc'
+end
