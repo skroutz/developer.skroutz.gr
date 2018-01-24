@@ -257,6 +257,84 @@ requests:
       headers:
         <<: *default_headers
   -
+    key: books_show
+    request:
+      url: '{{base_url}}/books/242327'
+      headers:
+        <<: *default_headers
+  -
+    key: books_details
+    request:
+      url: '{{base_url}}/books/242327/details'
+      headers:
+        <<: *default_headers
+  -
+    key: books_similar_by_author
+    request:
+      url: '{{base_url}}/books/242327/similar_by_author'
+      headers:
+        <<: *default_headers
+  -
+    key: author
+    request:
+      url: '{{base_url}}/author/385'
+      headers:
+        <<: *default_headers
+  -
+    key: author_books
+    request:
+      url: '{{base_url}}/author/385/books'
+      headers:
+        <<: *default_headers
+  -
+    key: publisher
+    request:
+      url: '{{base_url}}/publisher/78'
+      headers:
+        <<: *default_headers
+  -
+    key: publisher_books
+    request:
+      url: '{{base_url}}/publisher/78/books'
+      headers:
+        <<: *default_headers
+  -
+    key: book_categories
+    request:
+      url: '{{base_url}}/book_categories'
+      headers:
+        <<: *default_headers
+  -
+    key: book_categories_show
+    request:
+      url: '{{base_url}}/book_categories/1857'
+      headers:
+        <<: *default_headers
+  -
+    key: book_categories_filters
+    request:
+      url: '{{base_url}}/book_categories/1857/filters'
+      headers:
+        <<: *default_headers
+  -
+    key: book_categories_books
+    request:
+      url: '{{base_url}}/book_categories/1857/books'
+      headers:
+        <<: *default_headers
+  -
+    key: books_search
+    request:
+      url: '{{base_url}}/books/search?q=harry'
+      headers:
+        <<: *default_headers
+  -
+    key: book_categories_filters_query
+    request:
+      url: '{{base_url}}/book_categories/filters?q=harry'
+      headers:
+        <<: *default_headers
+  -
     key: products_show
     request:
       url: '{{base_url}}/products/12176638'

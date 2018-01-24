@@ -1,0 +1,78 @@
+---
+:request:
+  :url: https://api.skroutz.gr/publisher/78/books
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3.1
+    :authorization: Bearer Z13VcwTwQ8X4lPZpMZXm_zG3HXXMuY8iGemu4I3LSpmksSsgEwIT-5rZ_CHN1K98IRsJgJ-4rWfIJJaroW8tRA==
+  :verb: :get
+:response:
+  :status: 200
+  :headers:
+    date: Mon, 08 Jan 2018 15:03:35 GMT
+    connection: close
+    server: h2o (Debian)
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '97'
+    x-ratelimit-reset: '1515423840'
+    link: <https://api.skroutz.gr/publisher/78/books?page=174>; rel="last", <https://api.skroutz.gr/publisher/78/books?page=2>;
+      rel="next"
+    content-security-policy-report-only: 'default-src https: data: gsa: wss://ws.inspectlet.com;
+      script-src https: data: asset: about: ''unsafe-inline'' ''unsafe-eval''; style-src
+      https: ''unsafe-inline''; child-src *; report-uri https://f30d08e43da6ef6d7fb9c3dd5486561c.report-uri.io/r/default/csp/reportOnly'
+    etag: W/"8cfacac45f06b65f97203bc44a1e9e12"
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '529830480'
+    x-runtime: '0.217913'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: rontok_ssl
+    x-varnish: '529830479'
+    age: '0'
+    via: 1.1 varnish (Varnish/5.0)
+    x-origin: lb1
+    x-cache: MISS
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    transfer-encoding: chunked
+  :body: '{"books":[{"id":13532586,"name":"Piece of cake","main_author_id":111086,"main_author":"Άκης
+    Πετρετζίκης","images":{"main":"https://b.scdn.gr/images/sku_main_images/013532/13532586/medium_20171208011554_piece_of_cake.jpeg"},"price_min":21.0,"price_max":35.0,"shop_count":13,"reviewscore":0.0,"reviews_count":0,"favorited":false,"first_product_shop_info":null},{"id":242327,"name":"Ο
+    Χάρι Πότερ και η φιλοσοφική λίθος","main_author_id":385,"main_author":"1965- J.
+    K. Rowling","images":{"main":"https://d.scdn.gr/images/sku_main_images/000242/242327/medium_20160722014855_o_chari_poter_kai_i_filosofiki_lithos.jpeg"},"price_min":6.82,"price_max":15.79,"shop_count":13,"reviewscore":5.0,"reviews_count":2,"favorited":true,"first_product_shop_info":null},{"id":13469406,"name":"Origin
+    (e-book)","main_author_id":50290,"main_author":"Dan Brown","images":{"main":"https://a.scdn.gr/images/sku_main_images/013469/13469406/medium_20171201011302_origin.jpeg"},"price_min":14.99,"price_max":14.99,"shop_count":2,"reviewscore":0.0,"reviews_count":0,"favorited":false,"first_product_shop_info":null},{"id":13469407,"name":"Origin","main_author_id":50290,"main_author":"Dan
+    Brown","images":{"main":"https://a.scdn.gr/images/sku_main_images/013469/13469407/medium_20171201011302_origin.jpeg"},"price_min":16.65,"price_max":18.8,"shop_count":14,"reviewscore":0.0,"reviews_count":0,"favorited":false,"first_product_shop_info":null},{"id":5866460,"name":"Αυτό
+    πρέπει να το δοκιμάσεις","main_author_id":111086,"main_author":"Άκης Πετρετζίκης","images":{"main":"https://b.scdn.gr/images/sku_main_images/005866/5866460/medium_20160723140250_ayto_prepei_na_to_dokimaseis.jpeg"},"price_min":21.0,"price_max":35.0,"shop_count":12,"reviewscore":0.0,"reviews_count":0,"favorited":false,"first_product_shop_info":null},{"id":145771,"name":"Ο
+    Χάρι Πότερ και ο ημίαιμος πρίγκιψ","main_author_id":385,"main_author":"1965- J.
+    K. Rowling","images":{"main":"https://a.scdn.gr/images/sku_main_images/000145/145771/medium_20160720135644_o_chari_poter_kai_o_imiaimos_prigips.jpeg"},"price_min":9.9,"price_max":25.48,"shop_count":13,"reviewscore":0.0,"reviews_count":0,"favorited":true,"first_product_shop_info":null},{"id":228697,"name":"Ο
+    Χάρι Πότερ και ο αιχμάλωτος του Αζκαμπάν","main_author_id":385,"main_author":"1965-
+    J. K. Rowling","images":{"main":"https://b.scdn.gr/images/sku_main_images/000228/228697/medium_20160721212828_o_chari_poter_kai_o_aichmalotos_tou_azkampan.jpeg"},"price_min":10.68,"price_max":19.16,"shop_count":13,"reviewscore":0.0,"reviews_count":0,"favorited":false,"first_product_shop_info":null},{"id":11906815,"name":"Γράμμα
+    από χρυσό","main_author_id":39020,"main_author":"Λένα Μαντά","images":{"main":"https://d.scdn.gr/images/sku_main_images/011906/11906815/medium_20170513010552_gramma_apo_chryso.jpeg"},"price_min":14.16,"price_max":17.7,"shop_count":20,"reviewscore":0.0,"reviews_count":0,"favorited":false,"first_product_shop_info":null},{"id":242082,"name":"Ο
+    Χάρι Πότερ και η κάμαρα με τα μυστικά","main_author_id":385,"main_author":"1965-
+    J. K. Rowling","images":{"main":"https://c.scdn.gr/images/sku_main_images/000242/242082/medium_20160722014135_o_chari_poter_kai_i_kamara_me_ta_mystika.jpeg"},"price_min":9.92,"price_max":15.79,"shop_count":14,"reviewscore":0.0,"reviews_count":0,"favorited":false,"first_product_shop_info":null},{"id":13390113,"name":"Πίτες
+    από χέρι","main_author_id":119311,"main_author":"Κωστής Κωστάκης","images":{"main":"https://b.scdn.gr/assets/schwartz/books/no-cover-big.png"},"price_min":14.34,"price_max":19.98,"shop_count":10,"reviewscore":0.0,"reviews_count":0,"favorited":false,"first_product_shop_info":null},{"id":121274,"name":"Ο
+    Χάρι Πότερ και οι κλήροι του θανάτου","main_author_id":385,"main_author":"1965-
+    J. K. Rowling","images":{"main":"https://a.scdn.gr/images/sku_main_images/000121/121274/medium_20160720003521_o_chari_poter_kai_oi_kliroi_tou_thanatou.jpeg"},"price_min":10.69,"price_max":28.02,"shop_count":14,"reviewscore":0.0,"reviews_count":0,"favorited":true,"first_product_shop_info":null},{"id":109433,"name":"Η
+    κλέφτρα των βιβλίων","main_author_id":78541,"main_author":"Markus Zusak","images":{"main":"https://a.scdn.gr/images/sku_main_images/000109/109433/medium_20160719185022_i_kleftra_ton_vivlion.jpeg"},"price_min":11.44,"price_max":18.26,"shop_count":13,"reviewscore":0.0,"reviews_count":0,"favorited":false,"first_product_shop_info":null},{"id":199084,"name":"Ο
+    Χάρι Πότερ και το κύπελλο της φωτιάς","main_author_id":385,"main_author":"1965-
+    J. K. Rowling","images":{"main":"https://b.scdn.gr/images/sku_main_images/000199/199084/medium_20160721133819_o_chari_poter_kai_to_kypello_tis_fotias.jpeg"},"price_min":10.68,"price_max":22.53,"shop_count":13,"reviewscore":0.0,"reviews_count":0,"favorited":false,"first_product_shop_info":null},{"id":13292162,"name":"Το
+    ημερολόγιο ενός σπασίκλα: Η απόδραση","main_author_id":78520,"main_author":"Jeff
+    Kinney","images":{"main":"https://a.scdn.gr/images/sku_main_images/013292/13292162/medium_20171111010459_to_imerologio_enos_spasikla_i_apodrasi.jpeg"},"price_min":7.6,"price_max":11.1,"shop_count":13,"reviewscore":0.0,"reviews_count":0,"favorited":false,"first_product_shop_info":null},{"id":10915165,"name":"Η
+    εγκυκλοπαίδεια της εγκυμοσύνης","main_author_id":7912,"main_author":"Συλλογικό
+    έργο","images":{"main":"https://d.scdn.gr/images/sku_main_images/010915/10915165/medium_20170129010602_i_egyklopaideia_tis_egymosynis.jpeg"},"price_min":19.2,"price_max":29.9,"shop_count":9,"reviewscore":0.0,"reviews_count":0,"favorited":false,"first_product_shop_info":null},{"id":9815018,"name":"Ο
+    Χάρι Πότερ και το καταραμένο παιδί","main_author_id":385,"main_author":"1965-
+    J. K. Rowling","images":{"main":"https://d.scdn.gr/images/sku_main_images/009815/9815018/medium_20160910011920_o_chari_poter_kai_to_katarameno_paidi.jpeg"},"price_min":10.72,"price_max":16.6,"shop_count":13,"reviewscore":5.0,"reviews_count":1,"favorited":false,"first_product_shop_info":null},{"id":314592,"name":"Είμαι
+    ένα κοριτσάκι!","main_author_id":90277,"main_author":"Πένυ Ψυχογιού","images":{"main":"https://d.scdn.gr/images/sku_main_images/000314/314592/medium_20160722095615_eimai_ena_koritsaki.jpeg"},"price_min":11.59,"price_max":12.5,"shop_count":4,"reviewscore":0.0,"reviews_count":0,"favorited":false,"first_product_shop_info":null},{"id":402384,"name":"Το
+    μωράκι μου","main_author_id":null,"main_author":null,"images":{"main":"https://c.scdn.gr/images/sku_main_images/000402/402384/medium_20160722162634_to_moraki_mou.jpeg"},"price_min":12.9,"price_max":16.92,"shop_count":4,"reviewscore":0.0,"reviews_count":0,"favorited":false,"first_product_shop_info":null},{"id":314613,"name":"Είμαι
+    ένα αγοράκι!","main_author_id":90277,"main_author":"Πένυ Ψυχογιού","images":{"main":"https://d.scdn.gr/images/sku_main_images/000314/314613/medium_20160722095648_eimai_ena_agoraki.jpeg"},"price_min":11.39,"price_max":14.95,"shop_count":4,"reviewscore":0.0,"reviews_count":0,"favorited":false,"first_product_shop_info":null},{"id":3368808,"name":"Inferno","main_author_id":50290,"main_author":"Dan
+    Brown","images":{"main":"https://a.scdn.gr/images/sku_main_images/003368/3368808/medium_20160723081955_inferno.jpeg"},"price_min":10.63,"price_max":18.8,"shop_count":18,"reviewscore":0.0,"reviews_count":0,"favorited":false,"first_product_shop_info":null},{"id":109730,"name":"Το
+    ημερολόγιο ενός σπασίκλα: Τα χρονικά του Γκρεγκ Χέφλι","main_author_id":78520,"main_author":"Jeff
+    Kinney","images":{"main":"https://b.scdn.gr/images/sku_main_images/000109/109730/medium_20160719185834_to_imerologio_enos_spasikla_ta_chronika_tou_greg_chefli.jpeg"},"price_min":7.49,"price_max":11.21,"shop_count":17,"reviewscore":5.0,"reviews_count":1,"favorited":false,"first_product_shop_info":null},{"id":320499,"name":"Το
+    ημερολόγιο μιας ξενέρωτης: Ιστορίες ενός όχι και τόσο δημοφιλές πάρτι γκερλ","main_author_id":88191,"main_author":"Renée
+    Rachel Russell","images":{"main":"https://a.scdn.gr/images/sku_main_images/000320/320499/medium_20160722104349_to_imerologio_mias_xenerotis_istories_enos_ochi_kai_toso_dimofiles_parti_gerl.jpeg"},"price_min":7.58,"price_max":11.1,"shop_count":17,"reviewscore":0.0,"reviews_count":0,"favorited":false,"first_product_shop_info":null},{"id":163443,"name":"Ο
+    Χάρι Πότερ και το τάγμα του Φοίνικα","main_author_id":385,"main_author":"1965-
+    J. K. Rowling","images":{"main":"https://a.scdn.gr/images/sku_main_images/000163/163443/medium_20160720234149_o_chari_poter_kai_to_tagma_tou_foinika.jpeg"},"price_min":11.44,"price_max":16.6,"shop_count":14,"reviewscore":0.0,"reviews_count":0,"favorited":true,"first_product_shop_info":null},{"id":124907,"name":"Το
+    σπίτι δίπλα στο ποτάμι","main_author_id":39020,"main_author":"Λένα Μαντά","images":{"main":"https://a.scdn.gr/images/sku_main_images/000124/124907/medium_20160720025148_to_spiti_dipla_sto_potami.jpeg"},"price_min":12.14,"price_max":17.7,"shop_count":17,"reviewscore":4.5,"reviews_count":2,"favorited":false,"first_product_shop_info":null},{"id":6130631,"name":"Τα
+    μυστικά του καφέ","main_author_id":111560,"main_author":"Anette Moldvaer","images":{"main":"https://c.scdn.gr/images/sku_main_images/006130/6130631/medium_20160723145821_ta_mystika_tou_kafe.jpeg"},"price_min":13.65,"price_max":15.92,"shop_count":3,"reviewscore":0.0,"reviews_count":0,"favorited":false,"first_product_shop_info":null}],"meta":{"pagination":{"total_results":4342,"total_pages":174,"page":1,"per":25}}}'
+:created_at: 2018-01-08 17:03:35.806435226 +02:00

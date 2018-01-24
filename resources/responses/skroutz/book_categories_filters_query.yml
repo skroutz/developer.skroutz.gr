@@ -1,0 +1,63 @@
+---
+:request:
+  :url: https://api.skroutz.gr/book_categories/filters?q=harry
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3.1
+    :authorization: Bearer Z13VcwTwQ8X4lPZpMZXm_zG3HXXMuY8iGemu4I3LSpmksSsgEwIT-5rZ_CHN1K98IRsJgJ-4rWfIJJaroW8tRA==
+  :verb: :get
+:response:
+  :status: 200
+  :headers:
+    date: Mon, 08 Jan 2018 15:02:06 GMT
+    connection: close
+    server: h2o (Debian)
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '99'
+    x-ratelimit-reset: '1515423780'
+    content-security-policy-report-only: 'default-src https: data: gsa: wss://ws.inspectlet.com;
+      script-src https: data: asset: about: ''unsafe-inline'' ''unsafe-eval''; style-src
+      https: ''unsafe-inline''; child-src *; report-uri https://f30d08e43da6ef6d7fb9c3dd5486561c.report-uri.io/r/default/csp/reportOnly'
+    etag: W/"5b23c2de81510c2f47fb1bff7933192f"
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '432180925'
+    x-runtime: '0.058568'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: rontok_ssl
+    x-varnish: '432180924'
+    age: '0'
+    via: 1.1 varnish (Varnish/5.0)
+    x-origin: lb2
+    x-cache: MISS
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    transfer-encoding: chunked
+  :body: '{"categories":[{"id":3574,"name":"Φανταστική λογοτεχνία","match_count":8},{"id":4068,"name":"Κινηματογραφικές
+    ταινίες","match_count":8},{"id":175,"name":"Ολλανδική πεζογραφία - Μυθιστόρημα","match_count":5},{"id":2456,"name":"Παιδικά
+    βιβλία, Μεταφρασμένα","match_count":4},{"id":678,"name":"Επιτυχία και προσωπικότητα","match_count":3},{"id":734,"name":"Μάρκετινγκ","match_count":2},{"id":760,"name":"Συμβουλευτική","match_count":2},{"id":1801,"name":"Συγγραφείς","match_count":2},{"id":1947,"name":"Συνεντεύξεις","match_count":2},{"id":2746,"name":"Ασθένειες","match_count":2},{"id":3116,"name":"Κίνα
+    - Ιστορία","match_count":2},{"id":3411,"name":"Αστυνομική λογοτεχνία","match_count":2},{"id":7844,"name":"Γαλλόφωνη
+    πεζογραφία (Ελβετία) - Μυθιστόρημα","match_count":2},{"id":35,"name":"Αμερικανική
+    πεζογραφία - Μυθιστόρημα","match_count":1},{"id":44,"name":"Κοινωνιολογία","match_count":1},{"id":63,"name":"Οίνοι
+    και οινοποιία","match_count":1},{"id":211,"name":"Θεραπείες","match_count":1},{"id":225,"name":"Ηλεκτρονική","match_count":1},{"id":243,"name":"Ναρκωτικά","match_count":1},{"id":298,"name":"Αγγλική
+    πεζογραφία - Μυθιστόρημα","match_count":1},{"id":366,"name":"Σοσιαλισμός","match_count":1},{"id":396,"name":"Προσωπικές
+    αφηγήσεις - Μαρτυρίες","match_count":1},{"id":426,"name":"Μοριακή βιολογία ","match_count":1},{"id":484,"name":"Στατιστική","match_count":1},{"id":735,"name":"Ευρώπη
+    - Ιστορία ","match_count":1},{"id":792,"name":"Επενδύσεις ","match_count":1},{"id":807,"name":"Υπολογιστική
+    ","match_count":1},{"id":837,"name":"Ηλεκτρονικοί υπολογιστές - Γλώσσες προγραμματισμού","match_count":1},{"id":848,"name":"Καπιταλισμός
+    ","match_count":1},{"id":877,"name":"Κινηματογράφος - Σκηνοθέτες και παραγωγοί","match_count":1},{"id":890,"name":"Τράπεζες
+    και τραπεζικές εργασίες ","match_count":1},{"id":895,"name":"Οικονομία - Βαλκάνια","match_count":1},{"id":1002,"name":"Φυσικοχημεία","match_count":1},{"id":1163,"name":"Αυτοπραγμάτωση","match_count":1},{"id":1166,"name":"Παιδιά
+    - Ανάπτυξη","match_count":1},{"id":1218,"name":"Μαρξισμός - Λόγοι, δοκίμια, διαλέξεις","match_count":1},{"id":1362,"name":"Οικονομική
+    πολιτική","match_count":1},{"id":1390,"name":"Ειδική αγωγή","match_count":1},{"id":1698,"name":"Φιλοσοφία
+    - Ιστορία ","match_count":1},{"id":1713,"name":"Οικονομία - Ελλάς","match_count":1},{"id":1865,"name":"Λογοτεχνία
+    - Ερμηνεία και κριτική","match_count":1},{"id":2039,"name":"Κατασκευές","match_count":1},{"id":2060,"name":"Μαγεία","match_count":1},{"id":2166,"name":"Μαρξιστική
+    φιλοσοφία","match_count":1},{"id":2315,"name":"Παιχνίδια","match_count":1},{"id":2398,"name":"Επιστήμη","match_count":1},{"id":2450,"name":"Αμερικανικό
+    δοκίμιο","match_count":1},{"id":2528,"name":"Νοημοσύνη","match_count":1},{"id":3056,"name":"Κινηματογραφία","match_count":1},{"id":3057,"name":"Κινηματογράφος,
+    Ελληνικός","match_count":1},{"id":3205,"name":"Σουηδική ποίηση - Συλλογές","match_count":1},{"id":3215,"name":"Επιστημονική
+    φαντασία","match_count":1},{"id":3515,"name":"Μαρξιστική οικονομική","match_count":1},{"id":4079,"name":"Φύλο","match_count":1},{"id":4110,"name":"Σκηνοθέτες
+    (θέατρο)","match_count":1},{"id":4157,"name":"Μικροοικονομική - Σπουδή και διδασκαλία","match_count":1},{"id":4252,"name":"Βρέφη
+    - Ψυχολογία","match_count":1},{"id":7916,"name":"Πολιτική - Ιστορία - Ευρώπη","match_count":1},{"id":8178,"name":"Ολλανδική
+    πεζογραφία - Διήγημα","match_count":1},{"id":8380,"name":"Κινηματογράφος, Ελληνικός
+    - Ερμηνεία και κριτική","match_count":1}],"meta":{"ancestor":{"id":34,"name":"Βιβλία"}}}'
+:created_at: 2018-01-08 17:02:06.103326705 +02:00

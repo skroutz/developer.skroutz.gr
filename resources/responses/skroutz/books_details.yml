@@ -1,0 +1,53 @@
+---
+:request:
+  :url: https://api.skroutz.gr/books/242327/details
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3.1
+    :authorization: Bearer Z13VcwTwQ8X4lPZpMZXm_zG3HXXMuY8iGemu4I3LSpmksSsgEwIT-5rZ_CHN1K98IRsJgJ-4rWfIJJaroW8tRA==
+  :verb: :get
+:response:
+  :status: 200
+  :headers:
+    date: Mon, 08 Jan 2018 15:02:39 GMT
+    connection: close
+    server: h2o (Debian)
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '97'
+    x-ratelimit-reset: '1515423780'
+    cache-control: max-age=300, private
+    content-security-policy-report-only: 'default-src https: data: gsa: wss://ws.inspectlet.com;
+      script-src https: data: asset: about: ''unsafe-inline'' ''unsafe-eval''; style-src
+      https: ''unsafe-inline''; child-src *; report-uri https://f30d08e43da6ef6d7fb9c3dd5486561c.report-uri.io/r/default/csp/reportOnly'
+    etag: W/"c1620ea51f782aa44df534917d8a4821"
+    x-request-id: '420687992'
+    x-runtime: '0.023551'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: rontok_ssl
+    x-varnish: '420687991'
+    age: '0'
+    via: 1.1 varnish (Varnish/5.0)
+    x-origin: lb2
+    x-cache: MISS
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    transfer-encoding: chunked
+  :body: '{"book_details":{"series":"","cover":"Μαλακό εξώφυλλο","pubyear":2001,"pages":349,"isbn":"9602743484","shape":"21×14","volume":null,"ages":null,"description":"Ο
+    Χάρι Πότερ είναι ένα αξιαγάπητο μικρό αγόρι που η μοίρα του επιφυλάσσει μια ζωή
+    διαφορετική από των άλλων παιδιών της ηλικίας του. Χάνει τους γονείς του και αναγκάζεται
+    να μείνει με το θείο, τη θεία του και τον κακομαθημένο ξάδελφό του. Καθώς τα χρόνια
+    περνούν και ο Χάρι συνεχίζει να υποφέρει κοντά στους συγγενείς του, λαμβάνει μια
+    επιστολή, με την οποία τον καλούν να παρουσιαστεί στη Σχολή Χόγκουαρτς, μια σχολή
+    αλλιώτικη από τις άλλες, σ'' έναν κόσμο αλλιώτικο. Έτσι, αρχίζουν οι περιπέτειες
+    του μικρού Χάρι. Μαζί του, παρακολουθούμε κι εμείς μαθήματα ασυνήθιστα, διασκεδαστικά
+    παιχνίδια, πολύτιμες σχέσεις φιλίας και αλληλοϋποστήριξης, καθώς ο Χάρι προσπαθεί
+    να προστατέψει τον κόσμο από τον κίνδυνο που τον απειλεί. Η Αγγλίδα συγγραφέας
+    μάς χαρίζει ένα ευφάνταστο, ξεκαρδιστικό, απολαυστικό, αστείο, πρωτότυπο βιβλίο
+    για όλες τις ηλικίες. Μεγάλοι και μικροί θα μαγευτούν από τις περιπέτειες του
+    Χάρι Πότερ. Οι διάλογοι είναι έξυπνοι και διασκεδαστικοί, οι ήρωες κατεργάρηδες
+    αλλά αξιαγάπητοι. Πρόκειται για ένα συναρπαστικό βιβλίο που θα λατρέψουν όλοι
+    οι αναγνώστες."}}'
+:created_at: 2018-01-08 17:02:39.322132626 +02:00

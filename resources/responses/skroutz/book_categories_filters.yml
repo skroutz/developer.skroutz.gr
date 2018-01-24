@@ -1,0 +1,42 @@
+---
+:request:
+  :url: https://api.skroutz.gr/book_categories/1857/filters
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3.1
+    :authorization: Bearer Z13VcwTwQ8X4lPZpMZXm_zG3HXXMuY8iGemu4I3LSpmksSsgEwIT-5rZ_CHN1K98IRsJgJ-4rWfIJJaroW8tRA==
+  :verb: :get
+:response:
+  :status: 200
+  :headers:
+    date: Mon, 08 Jan 2018 15:01:59 GMT
+    connection: close
+    content-length: '308'
+    server: h2o (Debian)
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '94'
+    x-ratelimit-reset: '1515423720'
+    content-security-policy-report-only: 'default-src https: data: gsa: wss://ws.inspectlet.com;
+      script-src https: data: asset: about: ''unsafe-inline'' ''unsafe-eval''; style-src
+      https: ''unsafe-inline''; child-src *; report-uri https://f30d08e43da6ef6d7fb9c3dd5486561c.report-uri.io/r/default/csp/reportOnly'
+    etag: W/"8b1f1742b5f7931736f1366056a9ea0b"
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '434868179'
+    x-runtime: '0.037447'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: rontok_ssl
+    x-varnish: '434868178'
+    age: '0'
+    via: 1.1 varnish (Varnish/5.0)
+    x-origin: lb2
+    x-cache: MISS
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+  :body: '{"categories":[{"id":805,"name":"Γνώση"},{"id":978,"name":"Ηθική"},{"id":1599,"name":"Λογική"},{"id":234,"name":"Μεταφυσική"},{"id":2686,"name":"Παραφυσικά
+    φαινόμενα"},{"id":8340,"name":"Φιλοσοφία - Γενικά έργα"},{"id":1926,"name":"Φιλοσοφία,
+    Αρχαία"},{"id":860,"name":"Φιλοσοφία, Νεότερη"},{"id":291,"name":"Φιλοσοφικά συστήματα
+    και διδασκαλίες"},{"id":502,"name":"Ψυχολογία"}],"meta":{"ancestor":{"id":1857,"name":"Φιλοσοφία"}}}'
+:created_at: 2018-01-08 17:01:59.428235192 +02:00

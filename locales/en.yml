@@ -26,6 +26,7 @@ en:
       category: 'Category'
       filter: 'Filter'
       sku: 'SKU'
+      book: 'Book'
       product: 'Product'
       shop: 'Shop'
       manufacturer: 'Manufacturer'

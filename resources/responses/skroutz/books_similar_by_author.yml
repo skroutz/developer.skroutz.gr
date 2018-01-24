@@ -1,0 +1,67 @@
+---
+:request:
+  :url: https://api.skroutz.gr/books/242327/similar_by_author
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3.1
+    :authorization: Bearer Z13VcwTwQ8X4lPZpMZXm_zG3HXXMuY8iGemu4I3LSpmksSsgEwIT-5rZ_CHN1K98IRsJgJ-4rWfIJJaroW8tRA==
+  :verb: :get
+:response:
+  :status: 200
+  :headers:
+    date: Mon, 08 Jan 2018 15:03:13 GMT
+    connection: close
+    server: h2o (Debian)
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '99'
+    x-ratelimit-reset: '1515423840'
+    cache-control: max-age=300, private
+    content-security-policy-report-only: 'default-src https: data: gsa: wss://ws.inspectlet.com;
+      script-src https: data: asset: about: ''unsafe-inline'' ''unsafe-eval''; style-src
+      https: ''unsafe-inline''; child-src *; report-uri https://f30d08e43da6ef6d7fb9c3dd5486561c.report-uri.io/r/default/csp/reportOnly'
+    etag: W/"b2ef816eb51132c4ceec940a859aa9d3"
+    x-request-id: '510440475'
+    x-runtime: '0.043053'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: rontok_ssl
+    x-varnish: '510440474'
+    age: '0'
+    via: 1.1 varnish (Varnish/5.0)
+    x-origin: lb1
+    x-cache: MISS
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    transfer-encoding: chunked
+  :body: '{"books":[{"id":107865,"name":"Οι ιστορίες του Μπιντλ του Βάρδου","main_author_id":385,"main_author":"1965-
+    J. K. Rowling","images":{"main":"https://d.scdn.gr/images/sku_main_images/000107/107865/medium_20160719175022_oi_istories_tou_mpintl_tou_vardou.jpeg"},"price_min":6.73,"price_max":12.44,"shop_count":10,"reviewscore":0.0,"reviews_count":0,"first_product_shop_info":null},{"id":120332,"name":"Ο
+    Χάρι Πότερ και οι κλήροι του θανάτου","main_author_id":385,"main_author":"1965-
+    J. K. Rowling","images":{"main":"https://d.scdn.gr/images/sku_main_images/000120/120332/medium_20160720001248_o_chari_poter_kai_oi_kliroi_tou_thanatou.jpeg"},"price_min":19.9,"price_max":19.9,"shop_count":0,"reviewscore":0.0,"reviews_count":0,"first_product_shop_info":null},{"id":120625,"name":"Ο
+    Χάρι Πότερ και οι κλήροι του θανάτου","main_author_id":385,"main_author":"1965-
+    J. K. Rowling","images":{"main":"https://c.scdn.gr/images/sku_main_images/000120/120625/medium_20160720002139_o_chari_poter_kai_oi_kliroi_tou_thanatou.jpeg"},"price_min":10.79,"price_max":10.79,"shop_count":1,"reviewscore":0.0,"reviews_count":0,"first_product_shop_info":"2508|Bibliotopia|bibliotopia"},{"id":121274,"name":"Ο
+    Χάρι Πότερ και οι κλήροι του θανάτου","main_author_id":385,"main_author":"1965-
+    J. K. Rowling","images":{"main":"https://a.scdn.gr/images/sku_main_images/000121/121274/medium_20160720003521_o_chari_poter_kai_oi_kliroi_tou_thanatou.jpeg"},"price_min":10.69,"price_max":28.02,"shop_count":14,"reviewscore":0.0,"reviews_count":0,"first_product_shop_info":null},{"id":145771,"name":"Ο
+    Χάρι Πότερ και ο ημίαιμος πρίγκιψ","main_author_id":385,"main_author":"1965- J.
+    K. Rowling","images":{"main":"https://a.scdn.gr/images/sku_main_images/000145/145771/medium_20160720135644_o_chari_poter_kai_o_imiaimos_prigips.jpeg"},"price_min":9.9,"price_max":25.48,"shop_count":13,"reviewscore":0.0,"reviews_count":0,"first_product_shop_info":null},{"id":163443,"name":"Ο
+    Χάρι Πότερ και το τάγμα του Φοίνικα","main_author_id":385,"main_author":"1965-
+    J. K. Rowling","images":{"main":"https://a.scdn.gr/images/sku_main_images/000163/163443/medium_20160720234149_o_chari_poter_kai_to_tagma_tou_foinika.jpeg"},"price_min":11.44,"price_max":16.6,"shop_count":14,"reviewscore":0.0,"reviews_count":0,"first_product_shop_info":null},{"id":199084,"name":"Ο
+    Χάρι Πότερ και το κύπελλο της φωτιάς","main_author_id":385,"main_author":"1965-
+    J. K. Rowling","images":{"main":"https://b.scdn.gr/images/sku_main_images/000199/199084/medium_20160721133819_o_chari_poter_kai_to_kypello_tis_fotias.jpeg"},"price_min":10.68,"price_max":22.53,"shop_count":13,"reviewscore":0.0,"reviews_count":0,"first_product_shop_info":null},{"id":228697,"name":"Ο
+    Χάρι Πότερ και ο αιχμάλωτος του Αζκαμπάν","main_author_id":385,"main_author":"1965-
+    J. K. Rowling","images":{"main":"https://b.scdn.gr/images/sku_main_images/000228/228697/medium_20160721212828_o_chari_poter_kai_o_aichmalotos_tou_azkampan.jpeg"},"price_min":10.68,"price_max":19.16,"shop_count":13,"reviewscore":0.0,"reviews_count":0,"first_product_shop_info":null},{"id":242082,"name":"Ο
+    Χάρι Πότερ και η κάμαρα με τα μυστικά","main_author_id":385,"main_author":"1965-
+    J. K. Rowling","images":{"main":"https://c.scdn.gr/images/sku_main_images/000242/242082/medium_20160722014135_o_chari_poter_kai_i_kamara_me_ta_mystika.jpeg"},"price_min":9.92,"price_max":15.79,"shop_count":14,"reviewscore":0.0,"reviews_count":0,"first_product_shop_info":null},{"id":2473861,"name":"Ένας
+    ξαφνικός θάνατος","main_author_id":385,"main_author":"1965- J. K. Rowling","images":{"main":"https://c.scdn.gr/images/sku_main_images/002473/2473861/medium_20160723050112_enas_xafnikos_thanatos.jpeg"},"price_min":5.8,"price_max":17.91,"shop_count":14,"reviewscore":0.0,"reviews_count":0,"first_product_shop_info":null},{"id":2767055,"name":"Ένας
+    ξαφνικός θάνατος (e-book)","main_author_id":385,"main_author":"1965- J. K. Rowling","images":{"main":"https://b.scdn.gr/images/sku_main_images/002767/2767055/medium_20160723061527_enas_xafnikos_thanatos.jpeg"},"price_min":7.99,"price_max":15.99,"shop_count":2,"reviewscore":0.0,"reviews_count":0,"first_product_shop_info":null},{"id":4174813,"name":"Το
+    Κουίντιτς ανά τους αιώνες","main_author_id":385,"main_author":"1965- J. K. Rowling","images":{"main":"https://b.scdn.gr/images/sku_main_images/004174/4174813/medium_20160723103814_to_kouintits_ana_tous_aiones.jpeg"},"price_min":7.33,"price_max":9.9,"shop_count":7,"reviewscore":0.0,"reviews_count":0,"first_product_shop_info":null},{"id":4174816,"name":"Φανταστικά
+    ζώα και πού βρίσκονται","main_author_id":385,"main_author":"1965- J. K. Rowling","images":{"main":"https://c.scdn.gr/images/sku_main_images/004174/4174816/medium_20160723103818_fantastika_zoa_kai_poy_vriskontai.jpeg"},"price_min":7.9,"price_max":8.91,"shop_count":3,"reviewscore":0.0,"reviews_count":0,"first_product_shop_info":null},{"id":9815018,"name":"Ο
+    Χάρι Πότερ και το καταραμένο παιδί","main_author_id":385,"main_author":"1965-
+    J. K. Rowling","images":{"main":"https://d.scdn.gr/images/sku_main_images/009815/9815018/medium_20160910011920_o_chari_poter_kai_to_katarameno_paidi.jpeg"},"price_min":10.72,"price_max":16.6,"shop_count":13,"reviewscore":5.0,"reviews_count":1,"first_product_shop_info":null},{"id":11097723,"name":"Φανταστικά
+    ζώα και βρίσκονται","main_author_id":385,"main_author":"1965- J. K. Rowling","images":{"main":"https://c.scdn.gr/images/sku_main_images/011097/11097723/medium_20170219010109_fantastika_zoa_kai_vriskontai.jpeg"},"price_min":10.63,"price_max":15.5,"shop_count":12,"reviewscore":5.0,"reviews_count":1,"first_product_shop_info":null},{"id":12029211,"name":"Φανταστικά
+    ζώα και που βρίσκονται","main_author_id":385,"main_author":"1965- J. K. Rowling","images":{"main":"https://c.scdn.gr/images/sku_main_images/012029/12029211/medium_20170528010633_fantastika_zoa_kai_pou_vriskontai.jpeg"},"price_min":6.79,"price_max":9.9,"shop_count":7,"reviewscore":0.0,"reviews_count":0,"first_product_shop_info":null},{"id":12029212,"name":"Οι
+    ιστορίες του Μπιντλ του Βάρδου","main_author_id":385,"main_author":"1965- J. K.
+    Rowling","images":{"main":"https://d.scdn.gr/images/sku_main_images/012029/12029212/medium_20170528010633_oi_istories_tou_mpintl_tou_vardou.jpeg"},"price_min":6.79,"price_max":9.9,"shop_count":8,"reviewscore":0.0,"reviews_count":0,"first_product_shop_info":null},{"id":12029215,"name":"Το
+    Κουίντιτς ανά τους αιώνες","main_author_id":385,"main_author":"1965- J. K. Rowling","images":{"main":"https://d.scdn.gr/images/sku_main_images/012029/12029215/medium_20170528010633_to_kouintits_ana_tous_aiones.jpeg"},"price_min":6.79,"price_max":9.9,"shop_count":8,"reviewscore":0.0,"reviews_count":0,"first_product_shop_info":null}],"meta":{"pagination":{"total_results":18,"total_pages":1,"page":1,"per":25}}}'
+:created_at: 2018-01-08 17:03:13.867191352 +02:00

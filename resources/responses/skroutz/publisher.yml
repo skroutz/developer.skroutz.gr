@@ -1,0 +1,40 @@
+---
+:request:
+  :url: https://api.skroutz.gr/publisher/78
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3.1
+    :authorization: Bearer Z13VcwTwQ8X4lPZpMZXm_zG3HXXMuY8iGemu4I3LSpmksSsgEwIT-5rZ_CHN1K98IRsJgJ-4rWfIJJaroW8tRA==
+  :verb: :get
+:response:
+  :status: 200
+  :headers:
+    date: Mon, 08 Jan 2018 15:03:29 GMT
+    connection: close
+    content-length: '196'
+    server: h2o (Debian)
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '98'
+    x-ratelimit-reset: '1515423840'
+    cache-control: max-age=300, private
+    content-security-policy-report-only: 'default-src https: data: gsa: wss://ws.inspectlet.com;
+      script-src https: data: asset: about: ''unsafe-inline'' ''unsafe-eval''; style-src
+      https: ''unsafe-inline''; child-src *; report-uri https://f30d08e43da6ef6d7fb9c3dd5486561c.report-uri.io/r/default/csp/reportOnly'
+    etag: W/"57d40da3a465df6ef02dbc2bc3c830cf"
+    x-request-id: '433559296'
+    x-runtime: '0.035210'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: rontok_ssl
+    x-varnish: '433559295'
+    age: '0'
+    via: 1.1 varnish (Varnish/5.0)
+    x-origin: lb2
+    x-cache: MISS
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+  :body: '{"publisher":{"id":78,"name":"Ψυχογιός","address":"Τατοΐου 121 144 52 Μεταμόρφωση","email":"info@psichogios.gr","website":"www.psichogios.gr","fax":"210
+    2819550","phone":"210 2804800"}}'
+:created_at: 2018-01-08 17:03:29.578360607 +02:00

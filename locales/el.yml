@@ -23,6 +23,7 @@ el:
       changelog: 'Changelog'
       category: 'Category'
       sku: 'SKU'
+      book: 'Book'
       product: 'Product'
       shop: 'Shop'
       manufacturer: 'Manufacturer'
