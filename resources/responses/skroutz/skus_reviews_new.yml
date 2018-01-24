@@ -1,0 +1,51 @@
+---
+:request:
+  :url: https://api.skroutz.gr/skus/3783654/reviews/new
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3.1
+    :authorization: Bearer FyE9_5gMYbysydkfuf1x_eA36EuHQvq6I7tIVFANathNmnAeFR68Ku-f0cAH34LXIH1AlpYSG4fju9lLZiXvIw==
+  :verb: :get
+:response:
+  :status: 200
+  :headers:
+    date: Wed, 24 Jan 2018 12:55:46 GMT
+    connection: close
+    server: h2o (Debian)
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '99'
+    x-ratelimit-reset: '1516798560'
+    cache-control: max-age=300, private
+    content-security-policy-report-only: 'default-src https: data: gsa: wss://ws.inspectlet.com;
+      script-src https: data: asset: about: ''unsafe-inline'' ''unsafe-eval''; style-src
+      https: ''unsafe-inline''; child-src *; report-uri https://f30d08e43da6ef6d7fb9c3dd5486561c.report-uri.io/r/default/csp/reportOnly'
+    etag: W/"8c7f921813514ef4b4473804db6d1468"
+    x-request-id: '644774391'
+    x-runtime: '0.025275'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: rontok_ssl
+    x-varnish: '644774390'
+    age: '0'
+    via: 1.1 varnish (Varnish/5.0)
+    x-origin: lb2
+    x-cache: MISS
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    transfer-encoding: chunked
+  :body: '{"review_form":{"requires_body":false,"questions":[{"text":"Πως χρησιμοποιείς
+    το κινητό σου τηλέφωνο;","type":"profiling_multiple","answers":[{"id":546,"text":"Κλήσεις"},{"id":547,"text":"Social
+    Media"},{"id":548,"text":"Φωτογραφίες - Video"},{"id":549,"text":"Browsing"},{"id":550,"text":"Παιχνίδια"},{"id":551,"text":"Μουσική"}]},{"text":"Μιλάς
+    και ακούγεσαι καθαρά κατά την κλήση;","type":"eval_sentiment","answers":[{"id":504,"text":"Ναι"},{"id":505,"text":"Έτσι
+    κι έτσι"},{"id":506,"text":"Όχι"}]},{"text":"Βγάζει καλές φωτογραφίες;","type":"eval_sentiment","answers":[{"id":507,"text":"Ναι"},{"id":508,"text":"Έτσι
+    κι έτσι"},{"id":509,"text":"Όχι"}]},{"text":"Τραβάει καλής ποιότητας video;","type":"eval_sentiment","answers":[{"id":510,"text":"Ναι"},{"id":511,"text":"Έτσι
+    κι έτσι"},{"id":512,"text":"Όχι"}]},{"text":"To ηχείο έχει καλή ποιότητα για μουσική;","type":"eval_sentiment","answers":[{"id":537,"text":"Ναι"},{"id":538,"text":"Έτσι
+    κι έτσι"},{"id":539,"text":"Όχι"}]},{"text":"Συντονίζεται άμεσα το GPS;","type":"eval_sentiment","answers":[{"id":552,"text":"Ναι"},{"id":553,"text":"Έτσι
+    κι έτσι"},{"id":554,"text":"Όχι"}]},{"text":"Είναι γρήγορο κατά τη λειτουργία
+    του;","type":"eval_sentiment","answers":[{"id":555,"text":"Ναι"},{"id":556,"text":"Έτσι
+    κι έτσι"},{"id":557,"text":"Όχι"}]},{"text":"Αξίζει τα χρήματά του;","type":"eval_sentiment","answers":[{"id":561,"text":"Ναι"},{"id":562,"text":"Έτσι
+    κι έτσι"},{"id":563,"text":"Όχι"}]},{"text":"Η οθόνη του έχει καλή ανάλυση;","type":"eval_sentiment","answers":[{"id":3944,"text":"Ναι"},{"id":3945,"text":"Έτσι
+    κι έτσι"},{"id":3946,"text":"Όχι"}]}]}}'
+:created_at: 2018-01-24 14:55:46.395866801 +02:00

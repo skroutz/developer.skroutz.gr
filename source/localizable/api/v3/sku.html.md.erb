@@ -121,7 +121,7 @@ add the `manufacturer_ids` parameter which is an array parameter of manufacturer
 
 <%= render_recording :skus_products %>
 
-## Retrieve an SKU's reviews
+## Retrieve a SKU's reviews
 
 <pre class="terminal">
   GET /skus/:id/reviews
@@ -181,6 +181,46 @@ Returns empty body, unless an error occurs.
 </pre>
 
 <%= render_recording :sku_review_flag_create %>
+
+## Retrieve a SKU review form
+
+<pre class="terminal">
+  GET /skus/:id/reviews/new
+</pre>
+
+<%= render_recording :skus_reviews_new %>
+
+## Create a new SKU review
+
+<pre class="terminal">
+  POST /skus/:id/reviews
+</pre>
+
+<%= render_recording :skus_reviews_create %>
+
+## Retrieve a SKU review form and it's selected answers
+
+<pre class="terminal">
+  GET /skus/:id/reviews/:id/edit
+</pre>
+
+<%= render_recording :skus_reviews_edit %>
+
+## Update an existing SKU review
+
+<pre class="terminal">
+  PUT /skus/:id/reviews/:id
+</pre>
+
+<%= render_recording :skus_reviews_update %>
+
+## Delete a SKU review
+
+<pre class="terminal">
+  DELETE /skus/:id/reviews/:id
+</pre>
+
+<%= render_recording :skus_reviews_destroy %>
 
 ## Retrieve an SKU's specifications
 

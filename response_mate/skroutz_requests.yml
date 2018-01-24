@@ -233,6 +233,47 @@ requests:
       params:
         per: 3
   -
+    key: skus_reviews_new
+    request:
+      url: '{{base_url}}/skus/3783654/reviews/new'
+      headers:
+        <<: *default_headers
+  -
+    key: skus_reviews_create
+    request:
+      verb: POST
+      url: '{{base_url}}/skus/3783654/reviews'
+      headers:
+        <<: *default_headers
+      params:
+        review[rating]: 5
+        review[answer_ids]: [561, 3944]
+        review[review]: 'Δοκιμαστικο SKU review κείμενο'
+
+  -
+    key: skus_reviews_edit
+    request:
+      url: '{{base_url}}/skus/3783654/reviews/249471/edit'
+      headers:
+        <<: *default_headers
+  -
+    key: skus_reviews_update
+    request:
+      verb: PUT
+      url: '{{base_url}}/skus/3783654/reviews/249471'
+      headers:
+        <<: *default_headers
+      params:
+        review[rating]: 4
+  -
+    key: skus_reviews_destroy
+    request:
+      verb: DELETE
+      url: '{{base_url}}/skus/3783654/reviews/249471'
+      headers:
+        <<: *default_headers
+
+  -
     key: skus_products
     request:
       url: '{{base_url}}/skus/3783654/products'
