@@ -26,3 +26,43 @@ Field         | Type   | Description
 </pre>
 
 <%= render_recording :user %>
+
+## Retrieve user addresses
+
+<pre class="terminal">
+  GET /user/addresses
+</pre>
+
+<%= render_recording :user_addresses %>
+
+## Retrieve user address form
+
+<pre class="terminal">
+  GET /user/addresses/new
+</pre>
+
+<%= render_recording :user_addresses_new %>
+
+## Create a new user address
+
+<pre class="terminal">
+  POST /user/addresses
+</pre>
+
+<%= render_recording :user_addresses_create %>
+
+## Update an existing user address
+
+<pre class="terminal">
+  PUT /user/addresses/48937
+</pre>
+
+<%= render_recording :user_addresses_update %>
+
+## Delete an existing user address
+
+<pre class="terminal">
+  DELETE /user/addresses/48937
+</pre>
+
+<%= render_recording :user_addresses_destroy %>

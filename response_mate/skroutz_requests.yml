@@ -626,3 +626,47 @@ requests:
       url: '{{base_url}}/user'
       headers:
         <<: *default_headers
+  -
+    key: user_addresses
+    request:
+      url: '{{base_url}}/user/addresses'
+      headers:
+        <<: *default_headers
+  -
+    key: user_addresses_new
+    request:
+      url: '{{base_url}}/user/addresses/new'
+      headers:
+        <<: *default_headers
+  -
+    key: user_addresses_create
+    request:
+      verb: POST
+      url: '{{base_url}}/user/addresses'
+      headers:
+        <<: *default_headers
+      params:
+        label: 'home'
+        first_name: 'bill'
+        last_name: 'Testopoulos'
+        street_name: 'Panagouli'
+        street_number: '61'
+        city: 'Nea Ionia'
+        zip: 14123
+        region_id: 5
+  -
+    key: user_addresses_update
+    request:
+      verb: PUT
+      url: '{{base_url}}/user/addresses/48937'
+      headers:
+        <<: *default_headers
+      params:
+        street_number: '62'
+  -
+    key: user_addresses_destroy
+    request:
+      verb: DELETE
+      url: '{{base_url}}/user/addresses/48937'
+      headers:
+        <<: *default_headers
