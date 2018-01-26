@@ -1,0 +1,25 @@
+---
+:request:
+  :url: https://api.skroutz.gr/personalization
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3.1
+    :authorization: Bearer 3D41-2x3B8Oxh05DKD-sdLrpUKDs_q6bgmwhn5n6uWznwED1-9UpjoIqLAvDPe9XTY3JH8pvmFnOQ-SS2jgJBA==
+  :verb: :get
+:response:
+  :status: 200
+  :headers:
+    access-control-allow-origin: "*"
+    access-control-request-method: "*"
+    content-type: application/json; charset=utf-8
+    etag: W/"405a125772773abf2f92b1a19f626b42"
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '09c1748c-5adf-42c5-ab12-6ccd24843fe6'
+    x-runtime: '0.052830'
+    server: WEBrick/1.3.1 (Ruby/2.3.3/2016-11-21)
+    date: Fri, 26 Jan 2018 16:37:47 GMT
+    content-length: '228'
+    connection: close
+    set-cookie: locale=el_GR; path=/
+  :body: '{"personalization":{"location":{"address_id":25522,"label":"Αλέκου Παναγούλη
+    91, Νέα Ιωνία","lat":"38.043322","lng":"23.760006","type":"address","country_code":"GR"},"payment_method":{"type":"spot_cash"}}}'
+:created_at: 2018-01-26 18:37:47.688748400 +02:00

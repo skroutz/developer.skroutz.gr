@@ -378,7 +378,7 @@ requests:
   -
     key: products_show
     request:
-      url: '{{base_url}}/products/12176638'
+      url: '{{base_url}}/products/29878439'
       headers:
         <<: *default_headers
   -
@@ -668,5 +668,20 @@ requests:
     request:
       verb: DELETE
       url: '{{base_url}}/user/addresses/48937'
+      headers:
+        <<: *default_headers
+  -
+    key: personalization_update
+    request:
+      verb: PUT
+      url: '{{base_url}}/personalization'
+      headers:
+        <<: *default_headers
+      params:
+          personalization[location][address_id]: 25522
+  -
+    key: personalization_show
+    request:
+      url: '{{base_url}}/personalization'
       headers:
         <<: *default_headers

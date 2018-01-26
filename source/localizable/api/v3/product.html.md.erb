@@ -15,6 +15,26 @@ title: product
 
 <%= render_recording :products_show %>
 
+## Show Personalization info
+
+<pre class="terminal">
+GET /personalization
+</pre>
+
+<%= render_recording :personalization_show %>
+
+Show the address that is used to calculate shipping & payment_method costs.
+
+## Update Personalization info
+
+<pre class="terminal">
+PUT /personalization
+</pre>
+
+<%= render_recording :personalization_update %>
+
+Select a different <%= link_to 'User Address', '/api/v3/user', anchor: 'retrieve-user-addresses' %>.
+
 ## Search for products
 
 <pre class="terminal">
