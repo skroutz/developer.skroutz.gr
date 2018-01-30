@@ -26,6 +26,30 @@ Expose attribute `blp` in <%= link_to 'Product', '/api/v3/product' %>.
 : This attribute contains the shipping, payment_method and total cost of the product according
 to the <%= link_to 'Personalization', '/api/v3/product', anchor: 'show-personalization-info' %> info.
 
+Expose attributes `reviewable, adult, onclick_behavior, show_spec_summary, unit_price_label` in <%= link_to 'Category', '/api/v3/category' %>.
+
+: 
+
+Expose attributes `reviewable, name_source, unit_price` in <%= link_to 'Sku', '/api/v3/sku' %>.
+
+: 
+
+Do not return price history data for too new SKUs in <%= link_to 'Sku Price History', '/api/v3/sku', anchor: 'retrieve-a-skus-price-history' %>.
+
+: 
+
+Do not return OEM Manufacturers for categories with tiles layout in <%= link_to 'Category Manufacturers', '/api/v3/category', anchor: 'list-a-categorys-manufacturers' %>.
+
+: 
+
+Expose attributes `created_at, email, birthyear, mobile, stats, email_notifications` in <%= link_to 'User', '/api/v3/user' %>.
+
+: 
+
+Add endpoints to update User profile information in <%= link_to 'User', '/api/v3/user' %>.
+
+: 
+
 ## 2017-02-17 - v3.1.3
 
 Expose optional attribute `skus_reviews_aggregation` in <%= link_to 'Sku reviews',

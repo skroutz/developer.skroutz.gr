@@ -25,7 +25,7 @@ requests:
   -
     key: categories_show
     request:
-      url: '{{base_url}}/categories/1442'
+      url: '{{base_url}}/categories/88'
       headers:
         <<: *default_headers
   -
@@ -221,7 +221,7 @@ requests:
   -
     key: skus_show
     request:
-      url: '{{base_url}}/skus/3690169'
+      url: '{{base_url}}/skus/9527729'
       headers:
         <<: *default_headers
   -
@@ -626,6 +626,22 @@ requests:
       url: '{{base_url}}/user'
       headers:
         <<: *default_headers
+  -
+    key: user_avatars
+    request:
+      url: '{{base_url}}/user/avatars'
+      headers:
+        <<: *default_headers
+  -
+    key: user_update
+    request:
+      verb: PATCH
+      url: '{{base_url}}/user'
+      headers:
+        <<: *default_headers
+      params:
+        sex: 'male'
+        birthyear: 1980
   -
     key: user_addresses
     request:

@@ -1,43 +1,27 @@
 ---
 :request:
-  :url: https://api.skroutz.gr/skus/3690169
+  :url: https://api.skroutz.gr/skus/9527729
   :headers:
     :accept: application/vnd.skroutz+json; version=3.1
-    :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
+    :authorization: Bearer 3D41-2x3B8Oxh05DKD-sdLrpUKDs_q6bgmwhn5n6uWznwED1-9UpjoIqLAvDPe9XTY3JH8pvmFnOQ-SS2jgJBA==
   :verb: :get
 :response:
   :status: 200
   :headers:
-    server: nginx
-    date: Wed, 05 Oct 2016 13:59:52 GMT
-    content-type: application/json; charset=utf-8
-    vary: Accept-Encoding
-    x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '71'
-    x-ratelimit-reset: '1475676000'
-    x-frame-options: SAMEORIGIN
-    x-xss-protection: 1; mode=block
-    x-content-type-options: nosniff
-    cache-control: max-age=300, private
-    etag: W/"12c02708e58784709c123651fb4d29b0"
-    x-request-id: '676251893'
-    x-runtime: '0.027589'
-    x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
-    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
-    x-app: rontok
-    x-varnish: '676251892'
-    age: '0'
-    via: 1.1 varnish-v4
-    x-origin: lb1
-    x-cache: MISS
-    x-cached: skroutz miss(0)
-    accept-ranges: bytes
-    content-length: '629'
+    access-control-request-method: "*"
+    date: Mon, 29 Jan 2018 14:01:10 GMT
+    content-type: application/json; charset=utf-8
+    cache-control: max-age=300, private
+    etag: W/"ae8173af71053c23e57a2d5ab5310f68"
+    x-request-id: 84905455-792f-43c3-9ea4-fdd6d4dc69c7
+    x-runtime: '0.151826'
+    server: WEBrick/1.3.1 (Ruby/2.3.3/2016-11-21)
+    content-length: '930'
     connection: close
-  :body: '{"sku":{"id":3690169,"ean":"","pn":"D802 16GB","name":"G2 (16GB)","display_name":"LG
-    G2 (16GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":245.0,"price_min":245.0,"reviewscore":4.62115,"shop_count":0,"plain_spec_summary":"SmartPhone,
-    SIM: Single, Οθόνη: 5.2\", 1920 x 1080 pixels, CPU: 2260 MHz, Πυρήνες CPU: 4,
-    RAM: 2 GB, Μνήμη Αποθήκευσης: 16 GB, Δίκτυο: 4G, Κάμερα: 13 MP, Λειτουργικό: Android,
-    Μπαταρία: 3000 mAh","manufacturer_id":30,"future":false,"reviews_count":454,"virtual":false,"images":{"main":"https://b.scdn.gr/images/sku_main_images/003690/3690169/medium_LGG2_Front.jpg","alternatives":["https://a.scdn.gr/images/sku_images/011093/11093658/LGG2_Side.jpg","https://a.scdn.gr/images/sku_images/011093/11093662/thum_gallery3.png","https://a.scdn.gr/images/sku_images/011093/11093663/thum_gallery6.png","https://b.scdn.gr/images/sku_images/011093/11093667/LGG2.jpg","https://a.scdn.gr/images/sku_images/011093/11093669/thum_gallery4.png"]},"web_uri":"https://www.skroutz.gr/s/3690169/LG-G2-16GB.html"}}'
-:created_at: 2016-10-05 16:59:52.704879361 +03:00
+    set-cookie: locale=el_GR; path=/
+  :body: '{"sku":{"id":9527729,"ean":"","pn":"CT525MX300SSD1","name":"MX300 525GB","display_name":"Crucial
+    MX300 525GB","category_id":88,"first_product_shop_info":null,"click_url":null,"price_max":209.99,"price_min":133.88,"reviewscore":5.0,"shop_count":27,"plain_spec_summary":"Χωρητικότητα:
+    525GB, Μέγεθος: 2.5'''', Πρωτόκολλο Επικοινωνίας: SATA III (6 Gbit/s), Ταχύτητα
+    Ανάγνωσης: 530MB/s, Ταχύτητα Εγγραφής: 510MB/s","manufacturer_id":744,"future":false,"reviews_count":10,"virtual":false,"images":{"main":"http://a.scdn.gr/images/sku_main_images/009527/9527729/medium_20160802140403_crucial_mx300_525gb.jpeg","alternatives":["http://c.scdn.gr/images/sku_images/015736/15736292/20160802140403_1f55be13.jpeg"]},"web_uri":"http://skroutz.gr:3000/s/9527729/Crucial-MX300-525GB.html","comparable":true,"reviewable":true,"unit_price":0.26,"name_source":"display_name"}}'
+:created_at: 2018-01-29 16:01:10.648433757 +02:00

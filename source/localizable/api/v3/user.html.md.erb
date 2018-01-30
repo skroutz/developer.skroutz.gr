@@ -11,13 +11,19 @@ Provides information about Users.
 
 # Field Guide
 
-Field         | Type   | Description
-------------- | ------ | ------------
-`id`          | Number | The unique identifier reference to the resouce
-`username`    | String | The username of the user
-`type`        | String | The type of the account. Possible values: `"skroutz"`, `"open_id"`, `"twitter"`, `"facebook"`, `"google"`
-`sex`         | String | `"male"` or `"female"` or `null`
-`avatar`      | String | URI of the avatar image of the user
+Field                 | Type   | Description
+-------------         | ------ | ------------
+`id`                  | Number | The unique identifier reference to the resource
+`username`            | String | The username of the user
+`type`                | String | The type of the account. Possible values: `"skroutz"`, `"open_id"`, `"twitter"`, `"facebook"`, `"google"`
+`sex`                 | String | `"male"` or `"female"` or `null`
+`avatar`              | String | URI of the avatar image of the user
+`created_at`          | String | Account creation date
+`email`               | String | The email of the user
+`birthyear`           | Number | The birthyear of the user
+`mobile`              | String | The mobile number of the user
+`stats`               | Hash   | Review / comment related stats
+`email_notifications` | Array  | Available email preferences and their status
 
 ## Retrieve the profile of the authenticated user
 
@@ -26,6 +32,30 @@ Field         | Type   | Description
 </pre>
 
 <%= render_recording :user %>
+
+## Update profile information
+
+<pre class="terminal">
+  PATCH /user
+</pre>
+
+<%= render_recording :user_update %>
+
+The avatar can be changed with the following 2 ways
+
+`avatar_preset`: Filename from the avatar selection returned in the <%= link_to 'Avatars', '/api/v3/user', anchor: 'retrieve-the-selection-of-predefined-avatars' %> endpoint (ex: "avatar100.png").  
+`avatar`: Base64 form of an avatar image
+
+> ##### Note
+> You should not add the URI format preamble in the base64 version. (ex: data:image/gif;base64,)
+
+## Retrieve the selection of predefined avatars
+
+<pre class="terminal">
+  GET /user/avatars
+</pre>
+
+<%= render_recording :user_avatars %>
 
 ## Retrieve user addresses
 
