@@ -1,0 +1,42 @@
+---
+:request:
+  :url: http://api.skroutz.gr/api/user/saved_orders
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3.1
+    :authorization: Bearer h2GTSZPqbSc7bKiyYS1j3gNd_1PoNDBLNQzdCgnBonNmTZ9r8eRMBMe-SvM8waex8TRa5kFU_Wn5bffjEZwQew==
+  :verb: :get
+:response:
+  :status: 200
+  :headers:
+    date: Tue, 30 Jan 2018 11:26:08 GMT
+    connection: close
+    content-length: '582'
+    server: h2o (Debian)
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '99'
+    x-ratelimit-reset: '1517311620'
+    content-security-policy-report-only: 'default-src https: data: gsa: wss://ws.inspectlet.com;
+      script-src https: data: asset: about: ''unsafe-inline'' ''unsafe-eval''; style-src
+      https: ''unsafe-inline''; child-src *; report-uri https://f30d08e43da6ef6d7fb9c3dd5486561c.report-uri.io/r/default/csp/reportOnly'
+    etag: W/"3b486e05fc155f1be74ee726056cb11b"
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '64921300'
+    x-runtime: '0.062217'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: rontok_ssl
+    x-varnish: '64921299'
+    age: '0'
+    via: 1.1 varnish (Varnish/5.0)
+    x-origin: lb2
+    x-cache: MISS
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+  :body: '{"saved_orders":[{"date":"2017-10-06T11:37:36+00:00","products_cost":21.0,"shipping_cost":5.0,"total_cost":26.0,"line_items":[{"name":"Φίμωτρο
+    Flex Σιλικόνης XL Trixie 39cm","quantity":1,"price":21.0,"image":"https://d.scdn.gr/images/sku_main_images/012831/12831032/medium_20170920075526_fimotro_flex_silikonis_xl_trixie_39cm.jpeg","sku_id":12831032,"product_id":31088776,"category_id":1665}],"shop_id":4163,"order_code":"935812"},{"date":"2017-06-16T08:20:33+00:00","products_cost":441.2,"shipping_cost":0.0,"total_cost":441.2,"line_items":[{"name":"HUAWEI
+    P10 64GB GRAPHITE BLACK EU","quantity":1,"price":433.2,"image":"https://b.scdn.gr/images/sku_main_images/011407/11407671/medium_20170711142032_huawei_p10_64gb.jpeg","sku_id":11407671,"product_id":28419471,"category_id":40},{"name":"Θήκη
+    για Huawei P10 TPU Clear","quantity":1,"price":8.0,"image":null,"sku_id":null,"product_id":null,"category_id":null}],"shop_id":1521,"order_code":"229100"}],"meta":{"pagination":{"total_results":2,"total_pages":1,"page":1,"per":25}}}'
+:created_at: 2018-01-30 13:26:08.920570309 +02:00

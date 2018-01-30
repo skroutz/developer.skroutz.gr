@@ -114,6 +114,15 @@ requests:
       headers:
         <<: *default_headers
   -
+    key: shop_locations_find
+    request:
+      url: '{{base_url}}/locations/find'
+      headers:
+        <<: *default_headers
+      params:
+        lat: '40.6008359591154'
+        lng: '22.95681734949468'
+  -
     key: manufacturers_show
     request:
       url: '{{base_url}}/manufacturers/12907'
@@ -583,7 +592,7 @@ requests:
   -
     key: sku_specifications
     request:
-      url: '{{base_url}}/skus/2588170/specifications'
+      url: '{{base_url}}/skus/3443837/specifications'
       headers:
         <<: *default_headers
   -
@@ -642,6 +651,19 @@ requests:
       params:
         sex: 'male'
         birthyear: 1980
+  -
+    key: user_logout
+    request:
+      verb: DELETE
+      url: '{{base_url}}/user/logout'
+      headers:
+        <<: *default_headers
+  -
+    key: user_saved_orders
+    request:
+      url: '{{base_url}}/user/saved_orders'
+      headers:
+        <<: *default_headers
   -
     key: user_addresses
     request:

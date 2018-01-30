@@ -1,39 +1,53 @@
 ---
 :request:
-  :url: https://api.skroutz.gr/skus/2588170/specifications
+  :url: http://api.skroutz.gr/api/skus/3443837/specifications
   :headers:
     :accept: application/vnd.skroutz+json; version=3.1
-    :authorization: Bearer VSkzjtrNKLUAkOUFNBHv5vRrDjMowQXQ0uqKElVEds3GCcE5oBn/lqWKIkwkHONY57MbbB/rSzFVr/sDjGyN5w==
+    :authorization: Bearer h2GTSZPqbSc7bKiyYS1j3gNd_1PoNDBLNQzdCgnBonNmTZ9r8eRMBMe-SvM8waex8TRa5kFU_Wn5bffjEZwQew==
   :verb: :get
 :response:
   :status: 200
   :headers:
-    server: nginx
-    date: Wed, 05 Oct 2016 13:59:54 GMT
+    date: Tue, 30 Jan 2018 14:47:26 GMT
+    connection: close
+    server: h2o (Debian)
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '43'
-    x-ratelimit-reset: '1475676000'
-    x-frame-options: SAMEORIGIN
-    x-xss-protection: 1; mode=block
-    x-content-type-options: nosniff
+    x-ratelimit-remaining: '99'
+    x-ratelimit-reset: '1517323680'
     cache-control: max-age=300, private
-    etag: W/"a8d68753a7353a3f2fda170062ff0933"
-    x-request-id: '688757600'
-    x-runtime: '0.022264'
+    content-security-policy-report-only: 'default-src https: data: gsa: wss://ws.inspectlet.com;
+      script-src https: data: asset: about: ''unsafe-inline'' ''unsafe-eval''; style-src
+      https: ''unsafe-inline''; child-src *; report-uri https://f30d08e43da6ef6d7fb9c3dd5486561c.report-uri.io/r/default/csp/reportOnly'
+    etag: W/"bd396f706344cc9951f88fb87d95d6fb"
+    x-request-id: '456365965'
+    x-runtime: '0.034381'
+    strict-transport-security: max-age=300
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
-    x-app: rontok
-    x-varnish: '688757599'
+    x-app: rontok_ssl
+    x-varnish: '456365964'
     age: '0'
-    via: 1.1 varnish-v4
+    via: 1.1 varnish (Varnish/5.0)
     x-origin: lb1
     x-cache: MISS
     x-cached: skroutz miss(0)
     accept-ranges: bytes
-    content-length: '167'
-    connection: close
-  :body: '{"specifications":[{"id":868,"name":"Υλικό","values":["Καουτσούκ/Πλαστικό"],"order":10,"unit":""},{"id":869,"name":"Τύπος","values":["Αναλογικό"],"order":15,"unit":""}]}'
-:created_at: 2016-10-05 16:59:54.645357017 +03:00
+    transfer-encoding: chunked
+  :body: '{"specifications":[{"id":3723,"name":"Τύπος Επιδερμίδας","values":["Ξηρή"],"order":0,"unit":""},{"id":3724,"name":"Είδος","values":["24ωρη"],"order":0,"unit":""},{"id":5171,"name":"Χρώμα","values":["Κρέμα
+    Χωρίς Χρώμα"],"order":0,"unit":""},{"id":919,"name":"Περιοχή Χρήσης","values":["Πρoσώπου"],"order":5,"unit":""},{"id":992,"name":"Δράση","values":["Ενυδάτωση"],"order":6,"unit":""}],"meta":{"full_description":"Πλούσια
+    και απαλή κρέμα για το πρόσωπο και το λαιμό, για την καθημερινή ενυδατική περιποίηση
+    της νέας γυναίκας (30+), που προσφέρει δυναμική και σε βάθος ενυδάτωση στο ξηρό
+    και μέτρια αφυδατωμένο δέρμα, χάρη στο σύμπλεγμα 3 τύπων υαλουρονικού οξέος, τα
+    φυτικά εκχυλίσματα και τα ενεργά συστατικά σύκου που περιέχει. Μια πραγματική
+    πηγή ενυδάτωσης για τη διψασμένη επιδερμίδα σας που προστατεύει το DNA του δέρματος
+    από το οξειδωτικό stress. \r\n\r\nΣυστατικά \u0026 Οφέλη\r\n\r\n\r\n\r\nΠροσφέρει
+    112% αύξηση της σύνθεσης κολλαγόνου, δυναμική και σε βάθος ενυδάτωση και στα 3
+    επίπεδα της επιδερμίδας, καθώς περιέχει  3 τύπους υαλουρονικού οξέος διαφορετικού
+    βάρους και διαδερμικής διαβατότητας, φυτικά εκχυλίσματα και ενεργά συστατικά σύκου
+    τα οποία: Ενεργοποιούν τους μηχανισμούς της γονιδιακής έκφρασης του δέρματοςΑυξάνουν
+    την παραγωγή ινών κολλαγόνου και ελαστίνης, με αποτέλεσμα οι πρώτες λεπτές γραμμές
+    να μειώνονταιΚάνουν την επιδερμίδα σφριγηλή \u0026 ελαστική"}}'
+:created_at: 2018-01-30 16:47:26.696749571 +02:00

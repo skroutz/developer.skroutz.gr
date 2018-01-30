@@ -96,3 +96,21 @@ The avatar can be changed with the following 2 ways
 </pre>
 
 <%= render_recording :user_addresses_destroy %>
+
+## User saved orders
+
+<pre class="terminal">
+  DELETE /user/saved_orders
+</pre>
+
+<%= render_recording :user_saved_orders %>
+
+## User logout
+
+<pre class="terminal">
+  DELETE /user/logout
+</pre>
+
+<%= render_recording :user_logout %>
+
+Lets the server gracefully handle the logout process.
