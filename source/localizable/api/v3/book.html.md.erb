@@ -93,6 +93,16 @@ title: book
 
 <%= render_recording :book_categories_books %>
 
+### Ordering
+
+`order_by_methods` returns the available order methods and their human name.  
+`ordered_by` returns the currenty selected order method.
+
+Name        | Type   | Value                                                                   |
+----------- | ------ | ----------------------------------------------------------------------- |
+`order_by`  | String | Any of the available methods returned by `order_by_methods`. Ex: `rank` |
+`order_dir` | String | `asc`, `desc`                                                           |
+
 ## Retrieve Book Category's filters
 
 <pre class="terminal">
