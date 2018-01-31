@@ -5,13 +5,14 @@ module ResponseMateHelper
     recording = ResponseMate::Tape.load(recording_key)
 
     if !options[:only]
-      options[:only] = [:request, :description, :status, :body, :headers]
+      options[:only] = [:request, :description, :status, :body, :headers, :params]
     end
 
     result = '<div class="example">'
     result << format_request(recording)     if options[:only].include?(:request)
     result << add_toggler
     result << format_description(recording) if options[:only].include?(:description)
+    result << format_params(recording) if options[:only].include?(:params)
     result << format_response(recording, options)
     result << '</div>'
 
@@ -50,6 +51,22 @@ module ResponseMateHelper
     description = recording[:meta][:description]
 
     %(<div class="request-description"> Description: #{description}</div>)
+  end
+
+  def format_params(recording)
+    params = recording[:request][:params]
+    return '' unless params
+
+    begin
+      content = JSON.pretty_generate(params)
+    rescue JSON::ParserError
+      content = params
+    end
+
+    %(
+      <span class="params">Params</span>
+      #{Middleman::Syntax::Highlighter.highlight(content, 'json')}
+     )
   end
 
   def format_response(recording, options)

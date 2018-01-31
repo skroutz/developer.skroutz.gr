@@ -44,7 +44,7 @@ It trying to create a custom list with the same name as an existing custom
 list you will be presented with an error message.
 
 <pre class="terminal">
-  POST /favorite_lists?favorite_list[name]=a+new+list+name
+  POST /favorite_lists
 </pre>
 
 <%= render_recording :favorite_list_create %>
@@ -98,7 +98,7 @@ The response contains only favorites belonging to the specified favorite list.
 ## Create a new favorite
 
 <pre class="terminal">
-  POST /favorites?favorite[sku_id]=89645
+  POST /favorites
 </pre>
 
 <%= render_recording :favorite_create %>

@@ -4,29 +4,30 @@
   :url: https://api.skroutz.gr/skus/3783654/reviews
   :headers:
     :accept: application/vnd.skroutz+json; version=3.1
-    :authorization: Bearer 3D41-2x3B8Oxh05DKD-sdLrpUKDs_q6bgmwhn5n6uWznwED1-9UpjoIqLAvDPe9XTY3JH8pvmFnOQ-SS2jgJBA==
+    :authorization: Bearer x-1V4ZTmEKCfj4Cq3j1N7F32LtzSwChnTJnmC65NmeNfMjhcSWPidx2yS4vT8qe6aAqPO-7vsImL0qrqlk5deg==
   :params:
-    :review[rating]: 5
-    :review[answer_ids]:
-    - 561
-    - 3944
-    :review[review]: Δοκιμαστικο SKU review κείμενο
+    :review:
+      :rating: 5
+      :answer_ids:
+      - 561
+      - 3944
+      :review: Δοκιμαστικό SKU review κείμενο
 :response:
   :status: 201
   :headers:
     access-control-allow-origin: "*"
     access-control-request-method: "*"
     content-type: application/json; charset=utf-8
-    etag: W/"9511d065530c22303eb53537a6aa5224"
+    etag: W/"3bbba2c5982a10ab4e5129c3149fad18"
     cache-control: max-age=0, private, must-revalidate
-    x-request-id: 8630d9c2-953f-48e2-9fba-96e66cb88d0b
-    x-runtime: '0.273372'
+    x-request-id: ca6656ae-aa3b-4469-88b0-ef720a0864ac
+    x-runtime: '1.157276'
     server: WEBrick/1.3.1 (Ruby/2.3.3/2016-11-21)
-    date: Wed, 24 Jan 2018 14:55:40 GMT
+    date: Wed, 31 Jan 2018 10:33:18 GMT
     content-length: '331'
     connection: close
     set-cookie: locale=el_GR; path=/
-  :body: '{"sku_review":{"id":249471,"sku_id":3783654,"user_id":389640,"review":"Δοκιμαστικο
-    SKU review κείμενο","rating":5,"created_at":"2018-01-24T16:55:40+02:00","demoted":false,"votes_count":0,"helpful_votes_count":0,"sentiments":{"positive":["Σχέση
+  :body: '{"sku_review":{"id":249474,"sku_id":3783654,"user_id":334941,"review":"Δοκιμαστικό
+    SKU review κείμενο","rating":5,"created_at":"2018-01-31T12:33:17+02:00","demoted":false,"votes_count":0,"helpful_votes_count":0,"sentiments":{"positive":["Σχέση
     ποιότητας τιμής","Ανάλυση οθόνης"]}}}'
-:created_at: 2018-01-24 16:55:40.817896740 +02:00
+:created_at: 2018-01-31 12:33:18.498476830 +02:00

@@ -255,9 +255,10 @@ requests:
       headers:
         <<: *default_headers
       params:
-        review[rating]: 5
-        review[answer_ids]: [561, 3944]
-        review[review]: 'Δοκιμαστικο SKU review κείμενο'
+        review:
+          rating: 5
+          answer_ids: [561, 3944]
+          review: 'Δοκιμαστικό SKU review κείμενο'
 
   -
     key: skus_reviews_edit
@@ -269,11 +270,12 @@ requests:
     key: skus_reviews_update
     request:
       verb: PUT
-      url: '{{base_url}}/skus/3783654/reviews/249471'
+      url: '{{base_url}}/skus/3783654/reviews/249474'
       headers:
         <<: *default_headers
       params:
-        review[rating]: 4
+        review:
+          rating: 4
   -
     key: skus_reviews_destroy
     request:
@@ -440,16 +442,18 @@ requests:
       headers:
         <<: *default_headers
       params:
-        favorite[sku_id]: 7957675
+        favorite:
+          sku_id: 7957675
   -
     key: favorite_update
     request:
       verb: PUT
-      url: '{{base_url}}/favorites/5896665'
+      url: '{{base_url}}/favorites/17832353'
       headers:
         <<: *default_headers
       params:
-        favorite[have_it]: true
+        favorite:
+          have_it: true
   -
     key: favorite_lists_index
     request:
@@ -464,7 +468,8 @@ requests:
       headers:
         <<: *default_headers
       params:
-        favorite_list[name]: test name
+        favorite_list:
+          name: 'test name'
   -
     key: favorite_list_favorites
     request:
@@ -570,7 +575,8 @@ requests:
       headers:
         <<: *default_headers
       params:
-        vote[helpful]: true
+        vote:
+          helpful: true
   -
     key: sku_review_vote_create_embed_sku_review
     request:
@@ -579,16 +585,18 @@ requests:
       headers:
         <<: *default_headers
       params:
-        vote[helpful]: false
+        vote:
+          helpful: false
   -
     key: sku_review_flag_create
     request:
       verb: POST
-      url: '{{base_url}}/skus/3982592/reviews/17407/flags'
+      url: '{{base_url}}/skus/9783213/reviews/240896/flags'
       headers:
         <<: *default_headers
       params:
-        flag[reason]: spam
+        flag:
+          reason: 'spam'
   -
     key: sku_specifications
     request:
@@ -716,7 +724,9 @@ requests:
       headers:
         <<: *default_headers
       params:
-          personalization[location][address_id]: 25522
+        personalization:
+          location:
+            address_id: 38572
   -
     key: personalization_show
     request:
