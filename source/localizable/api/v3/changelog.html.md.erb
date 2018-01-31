@@ -5,7 +5,7 @@ title: changelog
 
 # Changelog <%= edit_link %>
 
-## 2017-02-17 - v3.1.4
+## 2018-02-01 - v3.2.0
 
 <% if flavor == 'skroutz' %>
 New Book resource. Explore all the endpoints in the <%= link_to 'Books', '/api/v3/book' %> section.
@@ -65,6 +65,14 @@ Expose attribute `full_description` in <%= link_to 'SKU Specifications', '/api/v
 Return a dynamic list of order_by methods in <%= link_to 'Category SKUS', '/api/v3/sku', anchor: 'list-skus-of-specific-category' %>.
 
 : 
+
+Show adult content in <%= link_to 'Category', '/api/v3/Category' %> and <%= link_to 'Search', '/api/v3/search' %>.
+
+: 
+
+<%= link_to 'List favorites', '/api/v3/favorites', anchor: 'list-favorites' %> and <%= link_to 'List favorites belonging to list', '/api/v3/favorites', anchor: 'list-favorites-belonging-to-list' %> do not return `owned` favorites.
+
+: To fetch them, use `?owned=true`
 
 ## 2017-02-17 - v3.1.3
 

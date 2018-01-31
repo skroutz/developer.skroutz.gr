@@ -1,7 +1,7 @@
 en:
   titles:
     index: "%{flavor} Documentation"
-    apiv3: 'API v3.1'
+    apiv3: 'API v3.2'
     feedspec: 'XML Feed'
     csvspec: 'CSV Feed'
     authorization: 'Authorization'
