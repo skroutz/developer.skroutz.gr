@@ -77,6 +77,7 @@ expanded versions of the `full_address` field.
 
 <%= render_recording :shop_locations_show_embed_address %>
 
+<% if flavor == 'skroutz' %>
 ## Find shop locations with geolocation
 
 <pre class="terminal">
@@ -84,6 +85,7 @@ expanded versions of the `full_address` field.
 </pre>
 
 <%= render_recording :shop_locations_find %>
+<% end %>
 
 ## Search for shops
 

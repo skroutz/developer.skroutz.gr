@@ -225,12 +225,6 @@ requests:
       headers:
         <<: *default_headers
   -
-    key: skus_reviews
-    request:
-      url: '{{base_url}}/skus/2312522/reviews'
-      headers:
-        <<: *default_headers
-  -
     key: skus_products
     request:
       url: '{{base_url}}/skus/146414/products'
@@ -246,6 +240,55 @@ requests:
     key: skus_price_history
     request:
       url: '{{base_url}}/skus/146414/similar'
+      headers:
+        <<: *default_headers
+  -
+    key: skus_reviews
+    request:
+      url: '{{base_url}}/skus/5452491/reviews'
+      headers:
+        <<: *default_headers
+      params:
+        per: 3
+  -
+    key: skus_reviews_new
+    request:
+      url: '{{base_url}}/skus/5452491/reviews/new'
+      headers:
+        <<: *default_headers
+  -
+    key: skus_reviews_create
+    request:
+      verb: POST
+      url: '{{base_url}}/skus/5452491/reviews'
+      headers:
+        <<: *default_headers
+      params:
+        review:
+          rating: 5
+          answer_ids: [31, 37]
+          review: 'örnek sku inceleme metni'
+  -
+    key: skus_reviews_edit
+    request:
+      url: '{{base_url}}/skus/5452491/reviews/31545/edit'
+      headers:
+        <<: *default_headers
+  -
+    key: skus_reviews_update
+    request:
+      verb: PUT
+      url: '{{base_url}}/skus/5452491/reviews/31545'
+      headers:
+        <<: *default_headers
+      params:
+        review:
+          rating: 4
+  -
+    key: skus_reviews_destroy
+    request:
+      verb: DELETE
+      url: '{{base_url}}/skus/5452491/reviews/31545'
       headers:
         <<: *default_headers
   -
@@ -310,16 +353,18 @@ requests:
       headers:
         <<: *default_headers
       params:
-        favorite[sku_id]: 5452491
+        favorite:
+          sku_id: 11140286
   -
     key: favorite_update
     request:
       verb: PUT
-      url: '{{base_url}}/favorites/13173'
+      url: '{{base_url}}/favorites/17832355'
       headers:
         <<: *default_headers
       params:
-        favorite[have_it]: true
+        favorite:
+          have_it: true
   -
     key: favorite_lists_index
     request:
@@ -334,7 +379,8 @@ requests:
       headers:
         <<: *default_headers
       params:
-        favorite_list[name]: a new list name
+        favorite_list:
+          name: 'a new list name'
 
   -
     key: favorite_list_favorites
@@ -441,7 +487,8 @@ requests:
       headers:
         <<: *default_headers
       params:
-        vote[helpful]: true
+        vote:
+          helpful: true
   -
     key: sku_review_vote_create_embed_sku_review
     request:
@@ -450,7 +497,8 @@ requests:
       headers:
         <<: *default_headers
       params:
-        vote[helpful]: true
+        vote:
+          helpful: true
   -
     key: sku_review_flag_create
     request:
@@ -459,7 +507,8 @@ requests:
       headers:
         <<: *default_headers
       params:
-        flag[reason]: spam
+        flag:
+          reason: 'spam'
   -
     key: sku_specifications
     request:
@@ -506,3 +555,88 @@ requests:
       url: '{{base_url}}/user'
       headers:
         <<: *default_headers
+  -
+    key: user_avatars
+    request:
+      url: '{{base_url}}/user/avatars'
+      headers:
+        <<: *default_headers
+  -
+    key: user_update
+    request:
+      verb: PATCH
+      url: '{{base_url}}/user'
+      headers:
+        <<: *default_headers
+      params:
+        sex: 'male'
+        birthyear: 1980
+  -
+    key: user_logout
+    request:
+      verb: DELETE
+      url: '{{base_url}}/user/logout'
+      headers:
+        <<: *default_headers
+  -
+    key: user_saved_orders
+    request:
+      url: '{{base_url}}/user/saved_orders'
+      headers:
+        <<: *default_headers
+  -
+    key: user_addresses
+    request:
+      url: '{{base_url}}/user/addresses'
+      headers:
+        <<: *default_headers
+  -
+    key: user_addresses_new
+    request:
+      url: '{{base_url}}/user/addresses/new'
+      headers:
+        <<: *default_headers
+  -
+    key: user_addresses_create
+    request:
+      verb: POST
+      url: '{{base_url}}/user/addresses'
+      headers:
+        <<: *default_headers
+      params:
+        label: 'Divan Apartman'
+        full: 'Ulus Mahalle  1463 Sok. No. 3 Kat 5 D:13'
+  -
+    key: user_addresses_update
+    request:
+      verb: PUT
+      url: '{{base_url}}/user/addresses/116'
+      headers:
+        <<: *default_headers
+      params:
+        full: 'Kılıçali Paşa Mahallesi, İstanbul Modern Sanat Müzesi, 34433 Beyoğlu/İstanbul, Türkiye'
+  -
+    key: user_addresses_destroy
+    request:
+      verb: DELETE
+      url: '{{base_url}}/user/addresses/116'
+      headers:
+        <<: *default_headers
+  -
+    key: personalization_update
+    request:
+      verb: PUT
+      url: '{{base_url}}/personalization'
+      headers:
+        <<: *default_headers
+      params:
+        personalization:
+          location:
+            address_id: 116
+  -
+    key: personalization_show
+    request:
+      url: '{{base_url}}/personalization'
+      headers:
+        <<: *default_headers
+

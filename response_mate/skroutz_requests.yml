@@ -283,7 +283,6 @@ requests:
       url: '{{base_url}}/skus/3783654/reviews/249471'
       headers:
         <<: *default_headers
-
   -
     key: skus_products
     request:
