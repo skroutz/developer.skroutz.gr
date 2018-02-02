@@ -1,11 +1,11 @@
 {
-  "id": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+  "id": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
   "name": "apiv3",
   "description": "",
   "requests": [
     {
-      "id": "48e3dbb9-6c71-41ad-bd21-bb271b633707",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "e627cf0b-ef8f-4844-84ea-00a71b1cacf9",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -18,11 +18,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "e3cfd660-db92-4839-9167-69058c6b657b",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "27918a3d-8471-436d-9218-104935fcfa86",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -35,11 +35,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "574d5a79-f69e-4aec-8d43-ccf742c0e2bf",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "4338f219-1053-49bc-a7cb-8ed31e9eed1c",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -52,11 +52,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "c68fe7e4-5d35-43d8-a813-a62bd7ab1a7c",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "2740767a-e71b-4f2c-8021-e1e01bd98db2",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -69,11 +69,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "cd534677-9f8d-4f7b-90ca-843afea95761",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "522797a7-3e26-4bf4-9f2d-0ee99aeea0ee",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -86,11 +86,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "2d0cd182-157f-4410-9a3e-4117ee64e79a",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "a96c5fa6-24c0-43a3-ac18-823cf60e3114",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -103,11 +103,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "d070557f-bc50-44ef-bbd2-6400643388e1",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "381bd18e-c403-4073-bf96-84bc7fdcf0b7",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -120,11 +120,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "1383a9bc-b047-487d-b16a-d5840950155e",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "2ff376d1-2d29-46c7-ad32-35a0b2ce00e2",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -137,11 +137,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "7af38a79-e52e-4d68-8e02-543f2deb5370",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "8444a83d-3b27-4350-bc67-0c21d7d5f775",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -154,11 +154,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "555e7981-f6d9-4c26-9639-3d34f3a67a3f",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "7cad61f9-5d4e-4c2d-b5ea-a4ae2728893a",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -171,11 +171,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "1a190565-8db8-4e0d-9110-86f5030a44fd",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "12ed915b-a1e4-4964-a442-88f2862e61bf",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -188,11 +188,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "5055aa20-178b-48bd-add0-7c35667608b0",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "0b633d95-0378-4556-8242-64aede93f6de",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -205,11 +205,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "83660b80-a1e6-4b3c-898d-e29dd0b83dd0",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "9c1d5243-65eb-41e9-bba2-7052d6ed9217",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -222,11 +222,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "4320c71a-909c-4ca5-b1e4-12300c62e4b4",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "f08755d0-92f9-41ff-80b8-09ec23bc3331",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -239,11 +239,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "43beec08-e4c4-4886-ab9e-d52002644dde",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "26c91fb5-52ce-4d23-a7cd-75e003118179",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -256,11 +256,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "738a4d5a-4c8f-4027-a6fb-8fc70acc0a25",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "cc9a429f-93fa-45fa-98d6-4fa10dec9136",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -273,11 +273,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "693e6169-48fb-408d-9857-8ac7be834c89",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "87771af5-26a7-4bc3-ad5c-aed42551903e",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -290,11 +290,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "6fbb1966-7ec5-409e-903c-e8e4ad24ea78",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "ff7d1993-9178-49db-bcd8-fd8eea31dc56",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -307,11 +307,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "7d63ca5e-7134-439f-bde7-a60c04fbee44",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "fc9765a1-1f8a-4bb9-82e6-8c7318ab74db",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -324,11 +324,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "50fca203-ba95-4eca-bc27-a6c8916f867f",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "14e2bf79-5bce-4b3e-b57d-89cbf744d73d",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -341,11 +341,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "ff8c0192-ccbd-4808-a98f-678b7e58ca5e",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "09b05be3-0b91-4b1b-8a78-5f64a8f4d32c",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -358,11 +358,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "979bd323-0592-4143-9d0a-ba1edc576913",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "7b9087be-0add-47de-86f9-a1c2aaefba1a",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -375,11 +375,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "605356d4-4306-4c81-97ff-a7119024a52b",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "9ea495e2-50e5-4e92-aa6d-42988b1674b5",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -392,11 +392,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "e6174ce1-ac1a-42cc-9877-d2d54c6005e1",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "4b1a7c64-888b-4e52-baed-3d8cb4916e34",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -409,11 +409,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "f7ca4639-229e-446d-bf6c-466f333fae8d",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "07643db0-763e-4a1d-abce-35efd36fd8ff",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -426,11 +426,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "a656ffa1-6325-4dcc-821c-95c680d3fc9b",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "ddfdb979-bf4c-4d68-8a12-567a5cdb13dc",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -443,11 +443,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "0e2ce386-2716-4bcb-b2fe-9284d9edb049",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "453fb0c5-53ea-4932-883c-13531b2f38ac",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -460,11 +460,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "055f5680-b4e6-43e3-8126-f9c13b36d6bc",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "c7a6bc40-cebe-46f6-94ef-ceaee6544f53",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -477,11 +477,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "f2fa6fd8-ade3-4851-ad3c-e79b9c3dbb46",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "10a88791-a1ff-4ea4-9ba6-e28c1e6cc91c",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -494,11 +494,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "e6aa7993-03f2-41d4-ae27-28aaa9683fb2",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "8efba08c-df4d-47d7-a384-ad6af95886a5",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -511,28 +511,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "dcb4835f-3b9d-46ca-9e58-279890499359",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
-      "data": [
-
-      ],
-      "description": "",
-      "method": "get",
-      "name": "skus_reviews",
-      "url": "{{base_url}}/skus/2312522/reviews",
-      "version": 2,
-      "responses": [
-
-      ],
-      "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
-    },
-    {
-      "id": "07083797-092d-48e2-b692-56f29fb5bf52",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "47ad3d89-de54-4704-9ff3-1fad6c794460",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -545,11 +528,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "e0254292-ad81-43ca-b078-06245a07c63f",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "70ff76ca-8e79-4d67-928a-9ab808c875f7",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -562,11 +545,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "d7f7204c-7dca-4965-b863-e3f40957db4d",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "5fc7de72-5271-414f-b116-a949749a6f58",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -579,11 +562,113 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "e4142d6d-620f-471f-a47f-95e000d5ff06",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "d96e7ed7-db8f-4770-bcd5-2a5a56d45ba0",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "get",
+      "name": "skus_reviews",
+      "url": "{{base_url}}/skus/5452491/reviews",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "2ccfce64-2e25-44ef-ba06-4a7e275d9ce9",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "get",
+      "name": "skus_reviews_new",
+      "url": "{{base_url}}/skus/5452491/reviews/new",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "60399e7c-43f7-4472-90f5-89fe15096255",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "post",
+      "name": "skus_reviews_create",
+      "url": "{{base_url}}/skus/5452491/reviews",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "092ccdd8-ec39-4c20-beed-fe1d8e18f941",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "get",
+      "name": "skus_reviews_edit",
+      "url": "{{base_url}}/skus/5452491/reviews/31545/edit",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "9beb875a-f70c-4fc6-af0a-23e304daffb0",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "put",
+      "name": "skus_reviews_update",
+      "url": "{{base_url}}/skus/5452491/reviews/31545",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "5feddb49-59b8-427e-a48c-431184af66da",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "delete",
+      "name": "skus_reviews_destroy",
+      "url": "{{base_url}}/skus/5452491/reviews/31545",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "e062da19-20b7-495f-87b1-49e95554ac32",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -596,11 +681,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "a6a4bce1-946e-4821-9fe2-3edda73cffc6",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "9957073f-56bc-4a60-9449-61e7ca5fe2bc",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -613,11 +698,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "758d0af1-19ea-4c78-8431-51619bd568a0",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "641bbb84-3c20-4f26-998e-58cd1f6e0960",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -630,11 +715,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "41910158-317a-4b47-8078-1de774d2edcc",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "27323c91-5eac-422c-bb0e-681ffaa6a964",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -647,11 +732,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "f1116556-091e-4f99-8de9-b932f49045ef",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "39989566-6613-495e-9f30-0074f7ce91a8",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -664,11 +749,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "ce2e63fb-a638-4b70-b09e-fd3898774096",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "15c20cef-cdf0-446d-9104-ec8b6947e84e",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -681,11 +766,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "79817dff-4807-4c35-bf8e-3d1b7e360d07",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "c8e9ece6-f1a3-4837-a305-71d205c7deba",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -698,11 +783,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "608794ed-0a44-447d-abd0-5c92c1fe8fb8",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "cbd78c7e-22a3-49b8-a6e2-2bcfb2356ecd",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -715,11 +800,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "ee41d450-b8db-4a7b-8aaf-8e3734187a2f",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "b94673ed-75f8-46da-a1a5-d7d0e51e7823",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -732,11 +817,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "f83e5fca-9f1c-4a7e-b8b5-296c026c170c",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "8a69a27b-1496-4dc8-bad6-1b58a7729a11",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -749,28 +834,28 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "b7cbdbf3-3682-4d9e-9a92-04833e80829c",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "1aaffaa3-b541-4ea1-bfe0-3589a88c8c2a",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
       "description": "",
       "method": "put",
       "name": "favorite_update",
-      "url": "{{base_url}}/favorites/13173",
+      "url": "{{base_url}}/favorites/17832355",
       "version": 2,
       "responses": [
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "1cb7ab46-fb73-4f47-a9d1-225de3049fce",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "5305fd1c-774e-405c-8b91-3fe10ad2b2e7",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -783,11 +868,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "922e135d-753c-4f64-bc26-764d0c2c78f2",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "cc7c1dc5-5e85-436f-a596-7e680f383690",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -800,11 +885,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "ac906b8e-c414-4537-ad73-14247ebf44d6",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "dae3291d-979e-4ebf-a539-1d74aa713e8c",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -817,11 +902,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "93303e45-5236-4000-a2c2-3dda0889bb21",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "fa38012b-8ff2-428d-a78b-7a14d4ed9548",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -834,11 +919,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "73f80b19-3a74-4d83-b4d4-99be52bd21fa",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "d8fd000a-ff6e-4251-8d6d-a73d783daeb2",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -851,11 +936,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "82b37f2e-b38c-4c0f-9347-cc4e2f5fa5b5",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "cee49fb4-5c2d-433f-8a38-ade5382fcd0d",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -868,11 +953,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "7974020e-d4e6-4363-997b-2eb836b7dd56",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "1232a388-e574-4b19-aa82-8036f1b4f3c2",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -885,11 +970,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "448893fd-72c1-474f-9cb6-e3282f7c7f81",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "f98a28b9-ba98-4982-8838-9d8a31b51fe8",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -902,11 +987,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "347d0097-4c46-4a73-a271-f4cd2ba8a7cb",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "6b4ee181-bea1-4e9b-8110-30b1c06e2381",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -919,11 +1004,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "a5666924-18c0-4d8c-9834-aa2bccb7eda5",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "650fa332-6077-47b0-9cf2-18cdaccafae0",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -936,11 +1021,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "566cf5dc-0b96-4b7b-b663-3e49362447f5",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "db77b745-3601-493a-b350-7e6bfffdad82",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -953,11 +1038,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "68ef6e44-9811-46c4-8937-23e620e97abf",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "2dfb6a79-c913-4f33-8254-f4d54b36a803",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -970,11 +1055,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "7aa0989d-dc69-4f6f-828c-e577d36e4bbc",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "15cae56c-7e52-42dd-9b89-3a7f5f6dd735",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -987,11 +1072,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "a046fc3e-9f98-42a8-8837-bfc29ed5c75f",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "5251e37d-c36a-4c4b-bf86-2ba97b1f6a9b",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -1004,11 +1089,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "4663de86-27fd-48e1-b21f-fbcb901a42b1",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "f7e18246-6b55-4044-bb60-77394e97acac",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -1021,11 +1106,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "df161482-d712-4f5a-bdac-eef28602d783",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "c735b7b4-56b4-4779-b6ab-fb983cbaa4a8",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -1038,11 +1123,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "43122641-1eb0-480b-b649-e6ace3899899",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "6eb5c99a-6ee3-43b3-9df7-cea2294b42d2",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -1055,11 +1140,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "b351dbf2-1a7b-4d1b-96bc-1edd9a7107fb",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "0b53f4bf-943a-45fa-ab58-b99a8efb319f",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -1072,11 +1157,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "46f56a4f-1467-4e4e-a44e-df29c9639343",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "a953f476-277b-445f-b782-bf24beee284b",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -1089,11 +1174,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "1b584787-307f-47c2-93eb-802d8ab8b65f",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "96fdf62b-c8fb-4b2a-8327-0319c5150e4a",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -1106,11 +1191,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "f00a013d-85cf-430b-8162-f7b8cbd98f10",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "e5b9d12b-4b64-4dd9-9c85-d29de3f408ca",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -1123,11 +1208,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "9ac14f9c-81fe-4051-9c47-473ba6c96c7b",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "0a159ae6-912e-499d-a07a-0e3315365ccf",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -1140,11 +1225,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "ad7359c6-0878-4b18-8b1d-a24fc558a7dd",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "2deb0100-a7d9-438f-81c7-7b3c3349a4eb",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -1157,11 +1242,11 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     },
     {
-      "id": "5d676adb-4817-4f7b-a6ba-fe731a478266",
-      "collectionId": "fb3f32f8-7b28-43a4-8e80-ae98ba35cf84",
+      "id": "5bf356e2-713f-4eb7-b368-830c02cfbf95",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
       "data": [
 
       ],
@@ -1174,79 +1259,282 @@
 
       ],
       "dataMode": "params",
-      "headers": "accept: application/vnd.alve+json; version=3.1\nauthorization: Bearer {{oauth_token}}"
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "a680dd31-49ed-4680-bdeb-2727ad0de5fa",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "get",
+      "name": "user_avatars",
+      "url": "{{base_url}}/user/avatars",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "94d11c62-c567-46eb-ac8d-f4c0f515437f",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "patch",
+      "name": "user_update",
+      "url": "{{base_url}}/user",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "5e48ea34-8fac-4bc4-b4f6-1ccd5ac5f6fd",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "delete",
+      "name": "user_logout",
+      "url": "{{base_url}}/user/logout",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "7353caeb-ef3d-42e0-885e-3dec4929f21c",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "get",
+      "name": "user_saved_orders",
+      "url": "{{base_url}}/user/saved_orders",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "e69289d7-7878-4884-844a-1932a2cca67d",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "get",
+      "name": "user_addresses",
+      "url": "{{base_url}}/user/addresses",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "8e8bbf56-7257-4965-9cc2-222cd7b70375",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "get",
+      "name": "user_addresses_new",
+      "url": "{{base_url}}/user/addresses/new",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "264c0e92-7ddc-4375-a691-1499bca09086",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "post",
+      "name": "user_addresses_create",
+      "url": "{{base_url}}/user/addresses",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "50c45160-5413-4528-9766-51f2c96b1df2",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "put",
+      "name": "user_addresses_update",
+      "url": "{{base_url}}/user/addresses/116",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "39ea8942-0221-4831-8ba1-8ad1123cbe15",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "delete",
+      "name": "user_addresses_destroy",
+      "url": "{{base_url}}/user/addresses/116",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "56c6c799-32af-433b-92b4-d23856f44bee",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "put",
+      "name": "personalization_update",
+      "url": "{{base_url}}/personalization",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
+    },
+    {
+      "id": "3e37686c-dee9-466a-909a-8c3716cb0f6d",
+      "collectionId": "786f2dbf-8920-42d3-bd36-91cc5874dff8",
+      "data": [
+
+      ],
+      "description": "",
+      "method": "get",
+      "name": "personalization_show",
+      "url": "{{base_url}}/personalization",
+      "version": 2,
+      "responses": [
+
+      ],
+      "dataMode": "params",
+      "headers": "accept: application/vnd.alve+json; version=3.2\nauthorization: Bearer {{oauth_token}}"
     }
   ],
   "order": [
-    "48e3dbb9-6c71-41ad-bd21-bb271b633707",
-    "e3cfd660-db92-4839-9167-69058c6b657b",
-    "574d5a79-f69e-4aec-8d43-ccf742c0e2bf",
-    "c68fe7e4-5d35-43d8-a813-a62bd7ab1a7c",
-    "cd534677-9f8d-4f7b-90ca-843afea95761",
-    "2d0cd182-157f-4410-9a3e-4117ee64e79a",
-    "d070557f-bc50-44ef-bbd2-6400643388e1",
-    "1383a9bc-b047-487d-b16a-d5840950155e",
-    "7af38a79-e52e-4d68-8e02-543f2deb5370",
-    "555e7981-f6d9-4c26-9639-3d34f3a67a3f",
-    "1a190565-8db8-4e0d-9110-86f5030a44fd",
-    "5055aa20-178b-48bd-add0-7c35667608b0",
-    "83660b80-a1e6-4b3c-898d-e29dd0b83dd0",
-    "4320c71a-909c-4ca5-b1e4-12300c62e4b4",
-    "43beec08-e4c4-4886-ab9e-d52002644dde",
-    "738a4d5a-4c8f-4027-a6fb-8fc70acc0a25",
-    "693e6169-48fb-408d-9857-8ac7be834c89",
-    "6fbb1966-7ec5-409e-903c-e8e4ad24ea78",
-    "7d63ca5e-7134-439f-bde7-a60c04fbee44",
-    "50fca203-ba95-4eca-bc27-a6c8916f867f",
-    "ff8c0192-ccbd-4808-a98f-678b7e58ca5e",
-    "979bd323-0592-4143-9d0a-ba1edc576913",
-    "605356d4-4306-4c81-97ff-a7119024a52b",
-    "e6174ce1-ac1a-42cc-9877-d2d54c6005e1",
-    "f7ca4639-229e-446d-bf6c-466f333fae8d",
-    "a656ffa1-6325-4dcc-821c-95c680d3fc9b",
-    "0e2ce386-2716-4bcb-b2fe-9284d9edb049",
-    "055f5680-b4e6-43e3-8126-f9c13b36d6bc",
-    "f2fa6fd8-ade3-4851-ad3c-e79b9c3dbb46",
-    "e6aa7993-03f2-41d4-ae27-28aaa9683fb2",
-    "dcb4835f-3b9d-46ca-9e58-279890499359",
-    "07083797-092d-48e2-b692-56f29fb5bf52",
-    "e0254292-ad81-43ca-b078-06245a07c63f",
-    "d7f7204c-7dca-4965-b863-e3f40957db4d",
-    "e4142d6d-620f-471f-a47f-95e000d5ff06",
-    "a6a4bce1-946e-4821-9fe2-3edda73cffc6",
-    "758d0af1-19ea-4c78-8431-51619bd568a0",
-    "41910158-317a-4b47-8078-1de774d2edcc",
-    "f1116556-091e-4f99-8de9-b932f49045ef",
-    "ce2e63fb-a638-4b70-b09e-fd3898774096",
-    "79817dff-4807-4c35-bf8e-3d1b7e360d07",
-    "608794ed-0a44-447d-abd0-5c92c1fe8fb8",
-    "ee41d450-b8db-4a7b-8aaf-8e3734187a2f",
-    "f83e5fca-9f1c-4a7e-b8b5-296c026c170c",
-    "b7cbdbf3-3682-4d9e-9a92-04833e80829c",
-    "1cb7ab46-fb73-4f47-a9d1-225de3049fce",
-    "922e135d-753c-4f64-bc26-764d0c2c78f2",
-    "ac906b8e-c414-4537-ad73-14247ebf44d6",
-    "93303e45-5236-4000-a2c2-3dda0889bb21",
-    "73f80b19-3a74-4d83-b4d4-99be52bd21fa",
-    "82b37f2e-b38c-4c0f-9347-cc4e2f5fa5b5",
-    "7974020e-d4e6-4363-997b-2eb836b7dd56",
-    "448893fd-72c1-474f-9cb6-e3282f7c7f81",
-    "347d0097-4c46-4a73-a271-f4cd2ba8a7cb",
-    "a5666924-18c0-4d8c-9834-aa2bccb7eda5",
-    "566cf5dc-0b96-4b7b-b663-3e49362447f5",
-    "68ef6e44-9811-46c4-8937-23e620e97abf",
-    "7aa0989d-dc69-4f6f-828c-e577d36e4bbc",
-    "a046fc3e-9f98-42a8-8837-bfc29ed5c75f",
-    "4663de86-27fd-48e1-b21f-fbcb901a42b1",
-    "df161482-d712-4f5a-bdac-eef28602d783",
-    "43122641-1eb0-480b-b649-e6ace3899899",
-    "b351dbf2-1a7b-4d1b-96bc-1edd9a7107fb",
-    "46f56a4f-1467-4e4e-a44e-df29c9639343",
-    "1b584787-307f-47c2-93eb-802d8ab8b65f",
-    "f00a013d-85cf-430b-8162-f7b8cbd98f10",
-    "9ac14f9c-81fe-4051-9c47-473ba6c96c7b",
-    "ad7359c6-0878-4b18-8b1d-a24fc558a7dd",
-    "5d676adb-4817-4f7b-a6ba-fe731a478266"
+    "e627cf0b-ef8f-4844-84ea-00a71b1cacf9",
+    "27918a3d-8471-436d-9218-104935fcfa86",
+    "4338f219-1053-49bc-a7cb-8ed31e9eed1c",
+    "2740767a-e71b-4f2c-8021-e1e01bd98db2",
+    "522797a7-3e26-4bf4-9f2d-0ee99aeea0ee",
+    "a96c5fa6-24c0-43a3-ac18-823cf60e3114",
+    "381bd18e-c403-4073-bf96-84bc7fdcf0b7",
+    "2ff376d1-2d29-46c7-ad32-35a0b2ce00e2",
+    "8444a83d-3b27-4350-bc67-0c21d7d5f775",
+    "7cad61f9-5d4e-4c2d-b5ea-a4ae2728893a",
+    "12ed915b-a1e4-4964-a442-88f2862e61bf",
+    "0b633d95-0378-4556-8242-64aede93f6de",
+    "9c1d5243-65eb-41e9-bba2-7052d6ed9217",
+    "f08755d0-92f9-41ff-80b8-09ec23bc3331",
+    "26c91fb5-52ce-4d23-a7cd-75e003118179",
+    "cc9a429f-93fa-45fa-98d6-4fa10dec9136",
+    "87771af5-26a7-4bc3-ad5c-aed42551903e",
+    "ff7d1993-9178-49db-bcd8-fd8eea31dc56",
+    "fc9765a1-1f8a-4bb9-82e6-8c7318ab74db",
+    "14e2bf79-5bce-4b3e-b57d-89cbf744d73d",
+    "09b05be3-0b91-4b1b-8a78-5f64a8f4d32c",
+    "7b9087be-0add-47de-86f9-a1c2aaefba1a",
+    "9ea495e2-50e5-4e92-aa6d-42988b1674b5",
+    "4b1a7c64-888b-4e52-baed-3d8cb4916e34",
+    "07643db0-763e-4a1d-abce-35efd36fd8ff",
+    "ddfdb979-bf4c-4d68-8a12-567a5cdb13dc",
+    "453fb0c5-53ea-4932-883c-13531b2f38ac",
+    "c7a6bc40-cebe-46f6-94ef-ceaee6544f53",
+    "10a88791-a1ff-4ea4-9ba6-e28c1e6cc91c",
+    "8efba08c-df4d-47d7-a384-ad6af95886a5",
+    "47ad3d89-de54-4704-9ff3-1fad6c794460",
+    "70ff76ca-8e79-4d67-928a-9ab808c875f7",
+    "5fc7de72-5271-414f-b116-a949749a6f58",
+    "d96e7ed7-db8f-4770-bcd5-2a5a56d45ba0",
+    "2ccfce64-2e25-44ef-ba06-4a7e275d9ce9",
+    "60399e7c-43f7-4472-90f5-89fe15096255",
+    "092ccdd8-ec39-4c20-beed-fe1d8e18f941",
+    "9beb875a-f70c-4fc6-af0a-23e304daffb0",
+    "5feddb49-59b8-427e-a48c-431184af66da",
+    "e062da19-20b7-495f-87b1-49e95554ac32",
+    "9957073f-56bc-4a60-9449-61e7ca5fe2bc",
+    "641bbb84-3c20-4f26-998e-58cd1f6e0960",
+    "27323c91-5eac-422c-bb0e-681ffaa6a964",
+    "39989566-6613-495e-9f30-0074f7ce91a8",
+    "15c20cef-cdf0-446d-9104-ec8b6947e84e",
+    "c8e9ece6-f1a3-4837-a305-71d205c7deba",
+    "cbd78c7e-22a3-49b8-a6e2-2bcfb2356ecd",
+    "b94673ed-75f8-46da-a1a5-d7d0e51e7823",
+    "8a69a27b-1496-4dc8-bad6-1b58a7729a11",
+    "1aaffaa3-b541-4ea1-bfe0-3589a88c8c2a",
+    "5305fd1c-774e-405c-8b91-3fe10ad2b2e7",
+    "cc7c1dc5-5e85-436f-a596-7e680f383690",
+    "dae3291d-979e-4ebf-a539-1d74aa713e8c",
+    "fa38012b-8ff2-428d-a78b-7a14d4ed9548",
+    "d8fd000a-ff6e-4251-8d6d-a73d783daeb2",
+    "cee49fb4-5c2d-433f-8a38-ade5382fcd0d",
+    "1232a388-e574-4b19-aa82-8036f1b4f3c2",
+    "f98a28b9-ba98-4982-8838-9d8a31b51fe8",
+    "6b4ee181-bea1-4e9b-8110-30b1c06e2381",
+    "650fa332-6077-47b0-9cf2-18cdaccafae0",
+    "db77b745-3601-493a-b350-7e6bfffdad82",
+    "2dfb6a79-c913-4f33-8254-f4d54b36a803",
+    "15cae56c-7e52-42dd-9b89-3a7f5f6dd735",
+    "5251e37d-c36a-4c4b-bf86-2ba97b1f6a9b",
+    "f7e18246-6b55-4044-bb60-77394e97acac",
+    "c735b7b4-56b4-4779-b6ab-fb983cbaa4a8",
+    "6eb5c99a-6ee3-43b3-9df7-cea2294b42d2",
+    "0b53f4bf-943a-45fa-ab58-b99a8efb319f",
+    "a953f476-277b-445f-b782-bf24beee284b",
+    "96fdf62b-c8fb-4b2a-8327-0319c5150e4a",
+    "e5b9d12b-4b64-4dd9-9c85-d29de3f408ca",
+    "0a159ae6-912e-499d-a07a-0e3315365ccf",
+    "2deb0100-a7d9-438f-81c7-7b3c3349a4eb",
+    "5bf356e2-713f-4eb7-b368-830c02cfbf95",
+    "a680dd31-49ed-4680-bdeb-2727ad0de5fa",
+    "94d11c62-c567-46eb-ac8d-f4c0f515437f",
+    "5e48ea34-8fac-4bc4-b4f6-1ccd5ac5f6fd",
+    "7353caeb-ef3d-42e0-885e-3dec4929f21c",
+    "e69289d7-7878-4884-844a-1932a2cca67d",
+    "8e8bbf56-7257-4965-9cc2-222cd7b70375",
+    "264c0e92-7ddc-4375-a691-1499bca09086",
+    "50c45160-5413-4528-9766-51f2c96b1df2",
+    "39ea8942-0221-4831-8ba1-8ad1123cbe15",
+    "56c6c799-32af-433b-92b4-d23856f44bee",
+    "3e37686c-dee9-466a-909a-8c3716cb0f6d"
   ],
-  "timestamp": 1487340733
+  "timestamp": 1517567355
 }
