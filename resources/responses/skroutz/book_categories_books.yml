@@ -1,0 +1,71 @@
+---
+:request:
+  :url: https://api.skroutz.gr/book_categories/1857/books
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3.1
+    :authorization: Bearer Z13VcwTwQ8X4lPZpMZXm_zG3HXXMuY8iGemu4I3LSpmksSsgEwIT-5rZ_CHN1K98IRsJgJ-4rWfIJJaroW8tRA==
+  :verb: :get
+:response:
+  :status: 200
+  :headers:
+    date: Mon, 08 Jan 2018 15:01:52 GMT
+    connection: close
+    server: h2o (Debian)
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '95'
+    x-ratelimit-reset: '1515423720'
+    content-security-policy-report-only: 'default-src https: data: gsa: wss://ws.inspectlet.com;
+      script-src https: data: asset: about: ''unsafe-inline'' ''unsafe-eval''; style-src
+      https: ''unsafe-inline''; child-src *; report-uri https://f30d08e43da6ef6d7fb9c3dd5486561c.report-uri.io/r/default/csp/reportOnly'
+    etag: W/"abb6e7fdf198cc6ed2ee44982ed69e2c"
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '525348728'
+    x-runtime: '0.079229'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: rontok_ssl
+    x-varnish: '525348727'
+    age: '0'
+    via: 1.1 varnish (Varnish/5.0)
+    x-origin: lb1
+    x-cache: MISS
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    transfer-encoding: chunked
+  :body: '{"books":[{"id":157828,"name":"Deste, η τράπουλα της Κατίνας","main_author_id":42560,"main_author":"Μάρα
+    Μεϊμαρίδη","images":{"main":"https://d.scdn.gr/images/sku_main_images/000157/157828/medium_20160720204803_deste_i_trapoula_tis_katinas.jpeg"},"price_min":11.45,"price_max":15.0,"shop_count":4,"reviewscore":0.0,"reviews_count":0,"favorited":false,"first_product_shop_info":null},{"id":350016,"name":"Channeling
+    2","main_author_id":87009,"main_author":"Αναστασία Βουλγαροπούλου","images":{"main":"https://d.scdn.gr/images/sku_main_images/000350/350016/medium_20160722133839_channeling_2.jpeg"},"price_min":15.33,"price_max":20.0,"shop_count":7,"reviewscore":0.0,"reviews_count":0,"favorited":false,"first_product_shop_info":null},{"id":5981528,"name":"Κάρτες
+    ταρώ","main_author_id":49976,"main_author":"Arthur E. Waite","images":{"main":"https://c.scdn.gr/images/sku_main_images/005981/5981528/medium_20160723143931_kartes_taro.jpeg"},"price_min":19.0,"price_max":23.0,"shop_count":3,"reviewscore":0.0,"reviews_count":0,"favorited":false,"first_product_shop_info":null},{"id":123194,"name":"Το
+    μυστικό","main_author_id":69398,"main_author":"Rhonda Byrne","images":{"main":"https://a.scdn.gr/images/sku_main_images/000123/123194/medium_20160720013841_to_mystiko.jpeg"},"price_min":10.3,"price_max":13.47,"shop_count":4,"reviewscore":0.0,"reviews_count":0,"favorited":false,"first_product_shop_info":null},{"id":8821467,"name":"Ο
+    νόμος της επιτυχίας","main_author_id":8136,"main_author":"Napoleon Hill","images":{"main":"https://c.scdn.gr/images/sku_main_images/008821/8821467/medium_20160723200725_o_nomos_tis_epitychias.jpeg"},"price_min":30.21,"price_max":39.06,"shop_count":7,"reviewscore":0.0,"reviews_count":0,"favorited":false,"first_product_shop_info":null},{"id":12830746,"name":"Ημερολόγιο
+    2018: Ζώδια","main_author_id":59868,"main_author":"Χριστίνα Θεοχάρη","images":{"main":"https://b.scdn.gr/images/sku_main_images/012830/12830746/medium_20170920010445_imerologio_2018_zodia.jpeg"},"price_min":7.2,"price_max":10.0,"shop_count":9,"reviewscore":0.0,"reviews_count":0,"favorited":false,"first_product_shop_info":null},{"id":184827,"name":"Πλάτωνος
+    Πολιτεία","main_author_id":33582,"main_author":"Χρήστος Γ. Χρηστίδης","images":{"main":"https://b.scdn.gr/images/sku_main_images/000184/184827/medium_20160721103435_platonos_politeia.jpeg"},"price_min":7.69,"price_max":9.23,"shop_count":5,"reviewscore":0.0,"reviews_count":0,"favorited":false,"first_product_shop_info":null},{"id":10737407,"name":"Ερωτικά
+    βοηθήματα","main_author_id":116342,"main_author":"Νεκταρία Φιολιτάκη","images":{"main":"https://b.scdn.gr/images/sku_main_images/010737/10737407/medium_20161230005809_erotika_voithimata.jpeg"},"price_min":8.4,"price_max":10.81,"shop_count":7,"reviewscore":0.0,"reviews_count":0,"favorited":false,"first_product_shop_info":null},{"id":136252,"name":"Το
+    απόλυτο βιβλίο για τη γλώσσα του σώματος","main_author_id":30245,"main_author":"Allan
+    Pease","images":{"main":"https://b.scdn.gr/images/sku_main_images/000136/136252/medium_20160720083318_to_apolyto_vivlio_gia_ti_glossa_tou_somatos.jpeg"},"price_min":12.95,"price_max":16.78,"shop_count":6,"reviewscore":0.0,"reviews_count":0,"favorited":false,"first_product_shop_info":null},{"id":13414248,"name":"Homo
+    Deus","main_author_id":113432,"main_author":"Yuval Noah Harari","images":{"main":"https://b.scdn.gr/assets/schwartz/books/no-cover-big.png"},"price_min":16.15,"price_max":25.0,"shop_count":7,"reviewscore":0.0,"reviews_count":0,"favorited":false,"first_product_shop_info":null},{"id":229870,"name":"Η
+    ερμηνεία των ονείρων","main_author_id":5650,"main_author":"1856-1939 Sigmund Freud","images":{"main":"https://d.scdn.gr/images/sku_main_images/000229/229870/medium_20160721215122_i_ermineia_ton_oneiron.jpeg"},"price_min":13.2,"price_max":31.0,"shop_count":5,"reviewscore":0.0,"reviews_count":0,"favorited":false,"first_product_shop_info":null},{"id":238154,"name":"Γίνετε
+    πλούσιοι","main_author_id":8136,"main_author":"Napoleon Hill","images":{"main":"https://a.scdn.gr/images/sku_main_images/000238/238154/medium_20160722001438_ginete_ploysioi.jpeg"},"price_min":12.24,"price_max":18.0,"shop_count":11,"reviewscore":5.0,"reviews_count":1,"favorited":false,"first_product_shop_info":null},{"id":6251558,"name":"Ξυπνήστε
+    το γίγαντα μέσα σας","main_author_id":44857,"main_author":"Anthony Robbins","images":{"main":"https://b.scdn.gr/images/sku_main_images/006251/6251558/medium_20160723151347_xypniste_to_giganta_mesa_sas.jpeg"},"price_min":13.47,"price_max":19.9,"shop_count":10,"reviewscore":0.0,"reviews_count":0,"favorited":false,"first_product_shop_info":null},{"id":10685865,"name":"Το
+    παιχνίδι","main_author_id":63074,"main_author":"Neil Strauss","images":{"main":"https://c.scdn.gr/images/sku_main_images/010685/10685865/medium_20161222005721_to_paichnidi.jpeg"},"price_min":13.76,"price_max":15.75,"shop_count":8,"reviewscore":0.0,"reviews_count":0,"favorited":false,"first_product_shop_info":null},{"id":211148,"name":"Οι
+    7 συνήθειες των εξαιρετικά αποτελεσματικών ανθρώπων","main_author_id":25526,"main_author":"Stephen
+    R. Covey","images":{"main":"https://a.scdn.gr/images/sku_main_images/000211/211148/medium_20160721170359_oi_7_synitheies_ton_exairetika_apotelesmatikon_anthropon.jpeg"},"price_min":15.31,"price_max":29.5,"shop_count":4,"reviewscore":0.0,"reviews_count":0,"favorited":false,"first_product_shop_info":null},{"id":239821,"name":"Μεταμορφώστε
+    τη ζωή σας","main_author_id":3253,"main_author":"Louise L. Hay","images":{"main":"https://a.scdn.gr/images/sku_main_images/000239/239821/medium_20160722010105_metamorfoste_ti_zoi_sas.jpeg"},"price_min":12.05,"price_max":17.6,"shop_count":10,"reviewscore":4.5,"reviews_count":2,"favorited":false,"first_product_shop_info":null},{"id":270799,"name":"Εξελικτική
+    ψυχολογία","main_author_id":88810,"main_author":"Robert S. Feldman","images":{"main":"https://b.scdn.gr/images/sku_main_images/000270/270799/medium_20160722055445_exeliktiki_psychologia.jpeg"},"price_min":50.22,"price_max":73.0,"shop_count":8,"reviewscore":0.0,"reviews_count":0,"favorited":false,"first_product_shop_info":null},{"id":285113,"name":"Το
+    βιβλίο των σκιών","main_author_id":91058,"main_author":"Gerald B. Gardner","images":{"main":"https://d.scdn.gr/images/sku_main_images/000285/285113/medium_20160722075905_to_vivlio_ton_skion.jpeg"},"price_min":11.4,"price_max":15.5,"shop_count":7,"reviewscore":0.0,"reviews_count":0,"favorited":false,"first_product_shop_info":null},{"id":238869,"name":"Τι
+    να περιμένεις όταν είσαι έγκυος","main_author_id":6206,"main_author":"Arlene Eisenberg","images":{"main":"https://c.scdn.gr/images/sku_main_images/000238/238869/medium_20160722003126_ti_na_perimeneis_otan_eisai_egyos.jpeg"},"price_min":24.14,"price_max":35.7,"shop_count":13,"reviewscore":5.0,"reviews_count":1,"favorited":false,"first_product_shop_info":null},{"id":234661,"name":"Η
+    δύναμη του υποσυνειδήτου","main_author_id":11328,"main_author":"Joseph Murphy","images":{"main":"https://d.scdn.gr/images/sku_main_images/000234/234661/medium_20160721231906_i_dynami_tou_yposyneiditou.jpeg"},"price_min":11.72,"price_max":17.32,"shop_count":11,"reviewscore":0.0,"reviews_count":0,"favorited":false,"first_product_shop_info":null},{"id":8633776,"name":"Πως
+    να μιλάτε στα παιδιά σας ώστε να σας ακούν και πως να τα ακούτε ώστε να σας μιλούν","main_author_id":70394,"main_author":"Adele
+    Faber","images":{"main":"https://a.scdn.gr/images/sku_main_images/008633/8633776/medium_20160723194828_pos_na_milate_sta_paidia_sas_oste_na_sas_akoyn_kai_pos_na_ta_akoyte_oste_na_sas_miloyn.jpeg"},"price_min":11.56,"price_max":17.9,"shop_count":12,"reviewscore":0.0,"reviews_count":0,"favorited":false,"first_product_shop_info":null},{"id":173996,"name":"Η
+    δύναμη του τώρα","main_author_id":43938,"main_author":"Eckhart Tolle","images":{"main":"https://c.scdn.gr/images/sku_main_images/000173/173996/medium_20160721054648_i_dynami_tou_tora.jpeg"},"price_min":12.79,"price_max":16.81,"shop_count":9,"reviewscore":5.0,"reviews_count":1,"favorited":false,"first_product_shop_info":null},{"id":10915165,"name":"Η
+    εγκυκλοπαίδεια της εγκυμοσύνης","main_author_id":7912,"main_author":"Συλλογικό
+    έργο","images":{"main":"https://d.scdn.gr/images/sku_main_images/010915/10915165/medium_20170129010602_i_egyklopaideia_tis_egymosynis.jpeg"},"price_min":19.2,"price_max":29.9,"shop_count":9,"reviewscore":0.0,"reviews_count":0,"favorited":false,"first_product_shop_info":null},{"id":99714,"name":"Πώς
+    να κερδίζεις φίλους και να επηρεάζεις τους ανθρώπους","main_author_id":21765,"main_author":"Dale
+    Carnegie","images":{"main":"https://d.scdn.gr/images/sku_main_images/000099/99714/medium_20160719131655_pos_na_kerdizeis_filous_kai_na_epireazeis_tous_anthropous.jpeg"},"price_min":13.22,"price_max":19.0,"shop_count":11,"reviewscore":0.0,"reviews_count":0,"favorited":false,"first_product_shop_info":null},{"id":10114760,"name":"Τα
+    μυστικά του αποτελεσματικού γονέα","main_author_id":84350,"main_author":"1918-2002
+    Thomas Gordon","images":{"main":"https://a.scdn.gr/images/sku_main_images/010114/10114760/medium_20161014010558_ta_mystika_tou_apotelesmatikoy_gonea.jpeg"},"price_min":16.22,"price_max":23.32,"shop_count":8,"reviewscore":0.0,"reviews_count":0,"favorited":false,"first_product_shop_info":null}],"meta":{"pagination":{"total_results":9066,"total_pages":363,"page":1,"per":25},"ordered_by":"popularity","order_by_methods":{"pricevat":"Αύξουσα
+    τιμή","popularity":"Δημοτικότητα","created_on":"Αύξουσα ημ/νία έκδοσης"}}}'
+:created_at: 2018-01-08 17:01:52.771206993 +02:00

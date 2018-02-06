@@ -9,6 +9,7 @@ apiv3:
     - { title: 'changelog' }
     - { title: 'category' }
     - { title: 'sku' }
+    - { title: 'book', skip_flavors: ['alve', 'scrooge'] }
     - { title: 'product' }
     - { title: 'shop' }
     - { title: 'manufacturer' }

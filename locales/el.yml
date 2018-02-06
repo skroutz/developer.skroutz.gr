@@ -1,7 +1,7 @@
 el:
   titles:
     index: "%{flavor} Documentation"
-    apiv3: 'API v3.1'
+    apiv3: 'API v3.2'
     feedspec: 'XML Feed'
     authorization: 'Authorization'
     analytics: 'Analytics'
@@ -23,6 +23,7 @@ el:
       changelog: 'Changelog'
       category: 'Category'
       sku: 'SKU'
+      book: 'Book'
       product: 'Product'
       shop: 'Shop'
       manufacturer: 'Manufacturer'

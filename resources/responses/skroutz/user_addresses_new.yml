@@ -1,0 +1,27 @@
+---
+:request:
+  :url: https://api.skroutz.gr/user/addresses/new
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3.1
+    :authorization: Bearer 3D41-2x3B8Oxh05DKD-sdLrpUKDs_q6bgmwhn5n6uWznwED1-9UpjoIqLAvDPe9XTY3JH8pvmFnOQ-SS2jgJBA==
+  :verb: :get
+:response:
+  :status: 200
+  :headers:
+    access-control-allow-origin: "*"
+    access-control-request-method: "*"
+    date: Thu, 25 Jan 2018 10:34:45 GMT
+    content-type: application/json; charset=utf-8
+    cache-control: max-age=300, private
+    etag: W/"265693ae8bef18976085260b86306488"
+    x-request-id: f29a776a-cde5-40b5-a9b9-7e9caed301dc
+    x-runtime: '0.040076'
+    server: WEBrick/1.3.1 (Ruby/2.3.3/2016-11-21)
+    content-length: '1494'
+    connection: close
+    set-cookie: locale=el_GR; path=/
+  :body: '{"address_form":{"required":["label","first_name","last_name","street_name","street_number","city","zip","region_id"],"optional":["phone","mobile"],"regions":{"Αιτωλοακαρνανίας":1,"Αργολίδας":2,"Αρκαδίας":3,"Άρτας":4,"Αττικής":5,"Αχαΐας":6,"Βοιωτίας":7,"Γρεβενών":8,"Δράμας":9,"Δωδεκανήσου":10,"Έβρου":11,"Έβρου
+    (Σαμοθράκη)":53,"Εύβοιας":13,"Εύβοιας (Σκύρος)":52,"Ευρυτανίας":12,"Ζακύνθου":14,"Ηλείας":15,"Ημαθίας":16,"Ηρακλείου":17,"Θεσπρωτίας":18,"Θεσσαλονίκης":19,"Ιωαννίνων":20,"Καβάλας":21,"Καβάλας
+    (Θάσος)":57,"Καρδίτσας":22,"Καστοριάς":23,"Κέρκυρας":24,"Κεφαλληνιάς":25,"Κιλκίς":26,"Κοζάνης":27,"Κορινθίας":28,"Κυκλάδων":29,"Λακωνίας":30,"Λάρισας":31,"Λασιθίου":32,"Λέσβου":33,"Λευκάδας":34,"Μαγνησίας":35,"Μαγνησίας
+    (Αλόννησος)":56,"Μαγνησίας (Σκιάθος)":55,"Μαγνησίας (Σκόπελος)":54,"Μεσσηνίας":36,"Ξάνθης":37,"Πέλλας":38,"Πιερίας":39,"Πρέβεζας":40,"Ρεθύμνης":41,"Ροδόπης":42,"Σάμου":43,"Σερρών":44,"Τρικάλων":45,"Φθιώτιδας":46,"Φλώρινας":47,"Φωκίδας":48,"Χαλκιδικής":50,"Χανίων":51,"Χίου":49}}}'
+:created_at: 2018-01-25 12:34:45.772300197 +02:00

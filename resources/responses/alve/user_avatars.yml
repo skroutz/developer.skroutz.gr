@@ -1,0 +1,23 @@
+---
+:request:
+  :url: https://api.alve.com/user/avatars
+  :headers:
+    :accept: application/vnd.alve+json; version=3.2
+    :authorization: Bearer 58YcBTUPXVbXOkzyNcHXbsI90XzhLX5Q0SkDhe_F5g_EqC85bf99BLhJfIqqjeROrxtyA22VnlXVUn2BSDHKiA==
+  :verb: :get
+:response:
+  :status: 200
+  :headers:
+    server: nginx
+    date: Thu, 01 Feb 2018 16:02:48 GMT
+    content-type: application/json; charset=utf-8
+    transfer-encoding: chunked
+    connection: close
+    vary: Accept-Encoding
+    etag: W/"6fd5eee6d4be7a9c9cc4acd64137e50b"
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: 609849e4-1417-47f1-ab05-66f1b9a8eb2f
+    x-runtime: '0.048773'
+    x-dns-prefetch-control: 'off'
+  :body: '{"avatars":["https://alve.com/images/avatars/default/avatar34.jpg","https://alve.com/images/avatars/default/avatar17.jpg","https://alve.com/images/avatars/default/avatar3.jpg","https://alve.com/images/avatars/default/avatar7.jpg","https://alve.com/images/avatars/default/avatar31.jpg","https://alve.com/images/avatars/default/avatar16.jpg","https://alve.com/images/avatars/default/avatar27.jpg","https://alve.com/images/avatars/default/avatar2.jpg","https://alve.com/images/avatars/default/avatar26.jpg","https://alve.com/images/avatars/default/avatar5.jpg","https://alve.com/images/avatars/default/avatar15.jpg","https://alve.com/images/avatars/default/avatar24.jpg","https://alve.com/images/avatars/default/avatar4.jpg","https://alve.com/images/avatars/default/avatar8.jpg","https://alve.com/images/avatars/default/avatar19.jpg","https://alve.com/images/avatars/default/avatar18.jpg","https://alve.com/images/avatars/default/avatar1.jpg","https://alve.com/images/avatars/default/avatar30.jpg","https://alve.com/images/avatars/default/avatar28.jpg","https://alve.com/images/avatars/default/avatar33.jpg","https://alve.com/images/avatars/default/avatar29.jpg","https://alve.com/images/avatars/default/avatar35.jpg","https://alve.com/images/avatars/default/avatar22.jpg","https://alve.com/images/avatars/default/avatar32.jpg","https://alve.com/images/avatars/default/avatar11.jpg","https://alve.com/images/avatars/default/avatar20.jpg","https://alve.com/images/avatars/default/avatar21.jpg","https://alve.com/images/avatars/default/avatar13.jpg","https://alve.com/images/avatars/default/avatar12.jpg","https://alve.com/images/avatars/default/avatar9.jpg","https://alve.com/images/avatars/default/avatar23.jpg","https://alve.com/images/avatars/default/avatar10.jpg","https://alve.com/images/avatars/default/avatar14.jpg","https://alve.com/images/avatars/default/avatar25.jpg","https://alve.com/images/avatars/default/avatar6.jpg"]}'
+:created_at: 2018-02-01 18:02:48.456840484 +02:00

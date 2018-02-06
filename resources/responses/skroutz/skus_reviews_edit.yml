@@ -1,0 +1,36 @@
+---
+:request:
+  :url: https://api.skroutz.gr/skus/3783654/reviews/249471/edit
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3.1
+    :authorization: Bearer 3D41-2x3B8Oxh05DKD-sdLrpUKDs_q6bgmwhn5n6uWznwED1-9UpjoIqLAvDPe9XTY3JH8pvmFnOQ-SS2jgJBA==
+  :verb: :get
+:response:
+  :status: 200
+  :headers:
+    access-control-allow-origin: "*"
+    access-control-request-method: "*"
+    content-type: application/json; charset=utf-8
+    etag: W/"d6d5b42c469ee0d450ba06857aa82016"
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: cc2f1d2d-7f40-453c-a686-97a07d7ef953
+    x-runtime: '0.075011'
+    server: WEBrick/1.3.1 (Ruby/2.3.3/2016-11-21)
+    date: Wed, 24 Jan 2018 14:57:15 GMT
+    content-length: '2122'
+    connection: close
+    set-cookie: locale=el_GR; path=/
+  :body: '{"review_form":{"requires_body":false,"rating":5,"review":"Δοκιμαστικο SKU
+    review κείμενο","questions":[{"text":"Πως χρησιμοποιείς το κινητό σου τηλέφωνο;","type":"profiling_multiple","answers":[{"id":546,"text":"Κλήσεις"},{"id":547,"text":"Social
+    Media"},{"id":548,"text":"Φωτογραφίες - Video"},{"id":549,"text":"Browsing"},{"id":550,"text":"Παιχνίδια"},{"id":551,"text":"Μουσική"}]},{"text":"Μιλάς
+    και ακούγεσαι καθαρά κατά την κλήση;","type":"eval_sentiment","answers":[{"id":504,"text":"Ναι"},{"id":505,"text":"Έτσι
+    κι έτσι"},{"id":506,"text":"Όχι"}]},{"text":"Βγάζει καλές φωτογραφίες;","type":"eval_sentiment","answers":[{"id":507,"text":"Ναι"},{"id":508,"text":"Έτσι
+    κι έτσι"},{"id":509,"text":"Όχι"}]},{"text":"Τραβάει καλής ποιότητας video;","type":"eval_sentiment","answers":[{"id":510,"text":"Ναι"},{"id":511,"text":"Έτσι
+    κι έτσι"},{"id":512,"text":"Όχι"}]},{"text":"To ηχείο έχει καλή ποιότητα για μουσική;","type":"eval_sentiment","answers":[{"id":537,"text":"Ναι"},{"id":538,"text":"Έτσι
+    κι έτσι"},{"id":539,"text":"Όχι"}]},{"text":"Συντονίζεται άμεσα το GPS;","type":"eval_sentiment","answers":[{"id":552,"text":"Ναι"},{"id":553,"text":"Έτσι
+    κι έτσι"},{"id":554,"text":"Όχι"}]},{"text":"Είναι γρήγορο κατά τη λειτουργία
+    του;","type":"eval_sentiment","answers":[{"id":555,"text":"Ναι"},{"id":556,"text":"Έτσι
+    κι έτσι"},{"id":557,"text":"Όχι"}]},{"text":"Αξίζει τα χρήματά του;","type":"eval_sentiment","answers":[{"id":561,"text":"Ναι","selected":true},{"id":562,"text":"Έτσι
+    κι έτσι"},{"id":563,"text":"Όχι"}]},{"text":"Η οθόνη του έχει καλή ανάλυση;","type":"eval_sentiment","answers":[{"id":3944,"text":"Ναι","selected":true},{"id":3945,"text":"Έτσι
+    κι έτσι"},{"id":3946,"text":"Όχι"}]}]}}'
+:created_at: 2018-01-24 16:57:15.970898392 +02:00

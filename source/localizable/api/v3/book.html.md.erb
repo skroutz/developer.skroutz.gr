@@ -1,0 +1,128 @@
+---
+parent: apiv3
+title: book
+---
+
+# Book <%= edit_link %>
+
+<%= partial 'partials/toc' %>
+
+## Linked Resources
+
+* <%= link_to 'Linked Resources', '/api/v3#linked-resources' %>
+  * <%= link_to 'Author', '/api/v3/book#retrieve-book-author' %>
+  * <%= link_to 'Publisher', '/api/v3/book#retrieve-book-publisher' %>
+
+## Retrieve a single Book
+
+<pre class="terminal">
+  GET /books/:id
+</pre>
+
+<%= render_recording :books_show %>
+
+## Retrieve Book details
+
+<pre class="terminal">
+  GET /books/:id/details
+</pre>
+
+<%= render_recording :books_details %>
+
+## Retrieve Book Author
+
+<pre class="terminal">
+  GET /author/:id/
+</pre>
+
+<%= render_recording :author %>
+
+## Retrieve Author Books
+
+<pre class="terminal">
+  GET /author/:id/books
+</pre>
+
+<%= render_recording :author_books %>
+
+## Retrieve similar Books by Author
+
+<pre class="terminal">
+  GET /books/:id/similar_by_author
+</pre>
+
+<%= render_recording :books_similar_by_author %>
+
+## Retrieve Book Publisher
+
+<pre class="terminal">
+  GET /publisher/:id/
+</pre>
+
+<%= render_recording :publisher %>
+
+## Retrieve Publisher Books
+
+<pre class="terminal">
+  GET /publisher/:id/books
+</pre>
+
+<%= render_recording :publisher_books %>
+
+## Retrieve Book Categories
+
+<pre class="terminal">
+  GET /book_categories
+</pre>
+
+<%= render_recording :book_categories %>
+
+## Retrieve Book Category
+
+<pre class="terminal">
+  GET /book_categories/1857
+</pre>
+
+<%= render_recording :book_categories_show %>
+
+## Retrieve Book Category's Books
+
+<pre class="terminal">
+  GET /book_categories/1857/books
+</pre>
+
+<%= render_recording :book_categories_books %>
+
+### Ordering
+
+`order_by_methods` returns the available order methods and their human name.  
+`ordered_by` returns the currenty selected order method.
+
+Name        | Type   | Value                                                                   |
+----------- | ------ | ----------------------------------------------------------------------- |
+`order_by`  | String | Any of the available methods returned by `order_by_methods`. Ex: `rank` |
+`order_dir` | String | `asc`, `desc`                                                           |
+
+## Retrieve Book Category's filters
+
+<pre class="terminal">
+  GET /book_categories/1857/filters
+</pre>
+
+<%= render_recording :book_categories_filters %>
+
+## Search for Books
+
+<pre class="terminal">
+  GET /books/search
+</pre>
+
+<%= render_recording :books_search %>
+
+## Retrieve Book Category's filters (with query)
+
+<pre class="terminal">
+  GET /book_categories/filters
+</pre>
+
+<%= render_recording :book_categories_filters_query %>

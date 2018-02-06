@@ -1,5 +1,5 @@
 default_headers: &default_headers
-  accept: 'application/vnd.skroutz+json; version=3.1'
+  accept: 'application/vnd.skroutz+json; version=3.2'
   authorization: "Bearer {{oauth_token}}"
 
 name: apiv3
@@ -25,7 +25,7 @@ requests:
   -
     key: categories_show
     request:
-      url: '{{base_url}}/categories/1442'
+      url: '{{base_url}}/categories/88'
       headers:
         <<: *default_headers
   -
@@ -113,6 +113,15 @@ requests:
       url: '{{base_url}}/shops/452/locations/2500?embed=address'
       headers:
         <<: *default_headers
+  -
+    key: shop_locations_find
+    request:
+      url: '{{base_url}}/locations/find'
+      headers:
+        <<: *default_headers
+      params:
+        lat: '40.6008359591154'
+        lng: '22.95681734949468'
   -
     key: manufacturers_show
     request:
@@ -221,7 +230,7 @@ requests:
   -
     key: skus_show
     request:
-      url: '{{base_url}}/skus/3690169'
+      url: '{{base_url}}/skus/9527729'
       headers:
         <<: *default_headers
   -
@@ -232,6 +241,48 @@ requests:
         <<: *default_headers
       params:
         per: 3
+  -
+    key: skus_reviews_new
+    request:
+      url: '{{base_url}}/skus/3783654/reviews/new'
+      headers:
+        <<: *default_headers
+  -
+    key: skus_reviews_create
+    request:
+      verb: POST
+      url: '{{base_url}}/skus/3783654/reviews'
+      headers:
+        <<: *default_headers
+      params:
+        review:
+          rating: 5
+          answer_ids: [561, 3944]
+          review: 'Δοκιμαστικό SKU review κείμενο'
+
+  -
+    key: skus_reviews_edit
+    request:
+      url: '{{base_url}}/skus/3783654/reviews/249471/edit'
+      headers:
+        <<: *default_headers
+  -
+    key: skus_reviews_update
+    request:
+      verb: PUT
+      url: '{{base_url}}/skus/3783654/reviews/249474'
+      headers:
+        <<: *default_headers
+      params:
+        review:
+          rating: 4
+  -
+    key: skus_reviews_destroy
+    request:
+      verb: DELETE
+      url: '{{base_url}}/skus/3783654/reviews/249471'
+      headers:
+        <<: *default_headers
   -
     key: skus_products
     request:
@@ -257,9 +308,87 @@ requests:
       headers:
         <<: *default_headers
   -
+    key: books_show
+    request:
+      url: '{{base_url}}/books/242327'
+      headers:
+        <<: *default_headers
+  -
+    key: books_details
+    request:
+      url: '{{base_url}}/books/242327/details'
+      headers:
+        <<: *default_headers
+  -
+    key: books_similar_by_author
+    request:
+      url: '{{base_url}}/books/242327/similar_by_author'
+      headers:
+        <<: *default_headers
+  -
+    key: author
+    request:
+      url: '{{base_url}}/author/385'
+      headers:
+        <<: *default_headers
+  -
+    key: author_books
+    request:
+      url: '{{base_url}}/author/385/books'
+      headers:
+        <<: *default_headers
+  -
+    key: publisher
+    request:
+      url: '{{base_url}}/publisher/78'
+      headers:
+        <<: *default_headers
+  -
+    key: publisher_books
+    request:
+      url: '{{base_url}}/publisher/78/books'
+      headers:
+        <<: *default_headers
+  -
+    key: book_categories
+    request:
+      url: '{{base_url}}/book_categories'
+      headers:
+        <<: *default_headers
+  -
+    key: book_categories_show
+    request:
+      url: '{{base_url}}/book_categories/1857'
+      headers:
+        <<: *default_headers
+  -
+    key: book_categories_filters
+    request:
+      url: '{{base_url}}/book_categories/1857/filters'
+      headers:
+        <<: *default_headers
+  -
+    key: book_categories_books
+    request:
+      url: '{{base_url}}/book_categories/1857/books'
+      headers:
+        <<: *default_headers
+  -
+    key: books_search
+    request:
+      url: '{{base_url}}/books/search?q=harry'
+      headers:
+        <<: *default_headers
+  -
+    key: book_categories_filters_query
+    request:
+      url: '{{base_url}}/book_categories/filters?q=harry'
+      headers:
+        <<: *default_headers
+  -
     key: products_show
     request:
-      url: '{{base_url}}/products/12176638'
+      url: '{{base_url}}/products/29878439'
       headers:
         <<: *default_headers
   -
@@ -312,16 +441,18 @@ requests:
       headers:
         <<: *default_headers
       params:
-        favorite[sku_id]: 7957675
+        favorite:
+          sku_id: 7957675
   -
     key: favorite_update
     request:
       verb: PUT
-      url: '{{base_url}}/favorites/5896665'
+      url: '{{base_url}}/favorites/17832353'
       headers:
         <<: *default_headers
       params:
-        favorite[have_it]: true
+        favorite:
+          have_it: true
   -
     key: favorite_lists_index
     request:
@@ -336,7 +467,8 @@ requests:
       headers:
         <<: *default_headers
       params:
-        favorite_list[name]: test name
+        favorite_list:
+          name: 'test name'
   -
     key: favorite_list_favorites
     request:
@@ -442,7 +574,8 @@ requests:
       headers:
         <<: *default_headers
       params:
-        vote[helpful]: true
+        vote:
+          helpful: true
   -
     key: sku_review_vote_create_embed_sku_review
     request:
@@ -451,20 +584,22 @@ requests:
       headers:
         <<: *default_headers
       params:
-        vote[helpful]: false
+        vote:
+          helpful: false
   -
     key: sku_review_flag_create
     request:
       verb: POST
-      url: '{{base_url}}/skus/3982592/reviews/17407/flags'
+      url: '{{base_url}}/skus/9783213/reviews/240896/flags'
       headers:
         <<: *default_headers
       params:
-        flag[reason]: spam
+        flag:
+          reason: 'spam'
   -
     key: sku_specifications
     request:
-      url: '{{base_url}}/skus/2588170/specifications'
+      url: '{{base_url}}/skus/3443837/specifications'
       headers:
         <<: *default_headers
   -
@@ -505,5 +640,95 @@ requests:
     key: user
     request:
       url: '{{base_url}}/user'
+      headers:
+        <<: *default_headers
+  -
+    key: user_avatars
+    request:
+      url: '{{base_url}}/user/avatars'
+      headers:
+        <<: *default_headers
+  -
+    key: user_update
+    request:
+      verb: PATCH
+      url: '{{base_url}}/user'
+      headers:
+        <<: *default_headers
+      params:
+        sex: 'male'
+        birthyear: 1980
+  -
+    key: user_logout
+    request:
+      verb: DELETE
+      url: '{{base_url}}/user/logout'
+      headers:
+        <<: *default_headers
+  -
+    key: user_saved_orders
+    request:
+      url: '{{base_url}}/user/saved_orders'
+      headers:
+        <<: *default_headers
+  -
+    key: user_addresses
+    request:
+      url: '{{base_url}}/user/addresses'
+      headers:
+        <<: *default_headers
+  -
+    key: user_addresses_new
+    request:
+      url: '{{base_url}}/user/addresses/new'
+      headers:
+        <<: *default_headers
+  -
+    key: user_addresses_create
+    request:
+      verb: POST
+      url: '{{base_url}}/user/addresses'
+      headers:
+        <<: *default_headers
+      params:
+        label: 'home'
+        first_name: 'bill'
+        last_name: 'Testopoulos'
+        street_name: 'Panagouli'
+        street_number: '61'
+        city: 'Nea Ionia'
+        zip: 14123
+        region_id: 5
+  -
+    key: user_addresses_update
+    request:
+      verb: PUT
+      url: '{{base_url}}/user/addresses/48937'
+      headers:
+        <<: *default_headers
+      params:
+        street_number: '62'
+  -
+    key: user_addresses_destroy
+    request:
+      verb: DELETE
+      url: '{{base_url}}/user/addresses/48937'
+      headers:
+        <<: *default_headers
+  -
+    key: personalization_update
+    request:
+      verb: PUT
+      url: '{{base_url}}/personalization'
+      headers:
+        <<: *default_headers
+      params:
+        personalization:
+          location:
+            address_id: 38572
+  -
+    key: personalization_show
+    request:
+      url: '{{base_url}}/personalization'
       headers:
         <<: *default_headers

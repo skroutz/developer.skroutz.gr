@@ -1,0 +1,57 @@
+---
+:request:
+  :url: https://api.skroutz.gr/author/385
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3.1
+    :authorization: Bearer Z13VcwTwQ8X4lPZpMZXm_zG3HXXMuY8iGemu4I3LSpmksSsgEwIT-5rZ_CHN1K98IRsJgJ-4rWfIJJaroW8tRA==
+  :verb: :get
+:response:
+  :status: 200
+  :headers:
+    date: Mon, 08 Jan 2018 15:01:26 GMT
+    connection: close
+    server: h2o (Debian)
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '98'
+    x-ratelimit-reset: '1515423720'
+    cache-control: max-age=300, private
+    content-security-policy-report-only: 'default-src https: data: gsa: wss://ws.inspectlet.com;
+      script-src https: data: asset: about: ''unsafe-inline'' ''unsafe-eval''; style-src
+      https: ''unsafe-inline''; child-src *; report-uri https://f30d08e43da6ef6d7fb9c3dd5486561c.report-uri.io/r/default/csp/reportOnly'
+    etag: W/"3411a066a372257ae92aac01fe1689fb"
+    x-request-id: '432082467'
+    x-runtime: '0.049961'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: rontok_ssl
+    x-varnish: '432082466'
+    age: '0'
+    via: 1.1 varnish (Varnish/5.0)
+    x-origin: lb2
+    x-cache: MISS
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    transfer-encoding: chunked
+  :body: '{"author":{"id":385,"name":"1965- J. K. Rowling","bio":"Η Joanne K. Rowling
+    (Τζόαν Ρόουλινγκ) γεννήθηκε στο Μπρίστολ το 1965. Άρχισε να γράφει την ιστορία
+    του \"Χάρι Πότερ\" σε ώρες πολύ δύσκολες. Ο \"Χάρι Πότερ\" εξελίχθηκε σε βιβλίο-φαινόμενο.
+    Τα δικαιώματα μετάφρασης πουλήθηκαν σε ολόκληρο τον κόσμο και τα βραβεία ακολούθησαν
+    το ένα το άλλο: τρία βραβεία Νεστλέ-Σμάρτις, Γκάρντιαν, Σέφιλντ, ΑΒΒΥ, Whitbread,
+    Locus, Hugo, κ.ά., ενώ η συγγραφέας ανακηρύχτηκε Βρετανίδα Συγγραφέας της Χρονιάς
+    το 2000 και τιμήθηκε για το σύνολο του έργου της το 2008. Οι ταινίες με ήρωα τον
+    \"Χάρι Πότερ\" έκαναν επίσης ρεκόρ εισιτηρίων όπου προβλήθηκαν. Τα βιβλία του
+    \"Χάρι Πότερ\" πούλησαν περισσότερα από 250 εκατομμύρια αντίτυπα σε όλο τον κόσμο,
+    έχοντας μεταφραστεί σε 60 γλώσσες. H επιτυχία, μάλιστα, τη συνοδεύει, μετά την
+    ολοκλήρωση της σειράς, και στο πρώτο της μυθιστόρημα για ενηλίκους, με τίτλο \"The
+    Casual Vacancy\", 2012 (ελλ. έκδ. \"Ένας ξαφνικός θάνατος\"), καθώς και στο πρώτο
+    της αστυνομικό μυθιστόρημα με ήρωα τον ντετέκτιβ Κόρμοραν Στράικ, \"The Cuckoo''s
+    Calling\" (\"Το κάλεσμα του κούκου\", 2013), που εξέδωσε με το ψευδώνυμο Ρόμπερτ
+    Γκαλμπρέιθ. Στηρίζει πολλούς φιλανθρωπικούς σκοπούς μέσω του Φιλανθρωπικού Καταπιστεύματος
+    Volant και έχει ιδρύσει το Lumos, που στόχο έχει να βελτιώσει τη ζωή των απόρων
+    -και όχι μόνο- παιδιών. Για περισσότερες πληροφορίες μπορείτε να επισκεφθείτε
+    την προσωπική ιστοσελίδα της συγγραφέως: www.jkrowling.com, καθώς και την ιστοσελίδα:
+    www.volanttrust.com","image":"https://d.scdn.gr/ds/books/authors/385/20160721172728_1f8fd6c7.jpeg"}}'
+:created_at: 2018-01-08 17:01:26.178688641 +02:00

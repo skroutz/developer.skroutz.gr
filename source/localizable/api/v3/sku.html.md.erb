@@ -25,13 +25,16 @@ A SKU (Stock Keeping Unit) is an aggregation of products.
 
 ### Ordering
 
-Name        | Type   | Value                                                                  | Description
------------ | ------ | ---------------------------------------------------------------------- | ------------
-`order_by`  | String | `pricevat` <small class="mark">default</small>, `popularity`, `rating` | Order by price or popularity
-`order_dir` | String | `asc` <small class="mark">default</small>, `desc`                      | Order ascending or descending
+`order_by_methods` returns the available order methods and their human name.  
+`ordered_by` returns the currenty selected order method.
+
+Name        | Type   | Value                                                                   |
+----------- | ------ | ----------------------------------------------------------------------- |
+`order_by`  | String | Any of the available methods returned by `order_by_methods`. Ex: `rank` |
+`order_dir` | String | `asc`, `desc`                                                           |
 
 > ##### Note
-> The default `order_by` value may differ across categories but in most cases it's `pricevat`.
+> The default `order_by` & `order_dir` differs across categories
 
 ### Filtering
 
@@ -121,7 +124,12 @@ add the `manufacturer_ids` parameter which is an array parameter of manufacturer
 
 <%= render_recording :skus_products %>
 
-## Retrieve an SKU's reviews
+### Ordering
+
+`order_by`
+: The following ordering methods are supported: `net_price` & `final_price` (includes shipping & payment_method cost).
+
+## Retrieve a SKU's reviews
 
 <pre class="terminal">
   GET /skus/:id/reviews
@@ -182,6 +190,46 @@ Returns empty body, unless an error occurs.
 
 <%= render_recording :sku_review_flag_create %>
 
+## Retrieve a SKU review form
+
+<pre class="terminal">
+  GET /skus/:id/reviews/new
+</pre>
+
+<%= render_recording :skus_reviews_new %>
+
+## Create a new SKU review
+
+<pre class="terminal">
+  POST /skus/:id/reviews
+</pre>
+
+<%= render_recording :skus_reviews_create %>
+
+## Retrieve a SKU review form and it's selected answers
+
+<pre class="terminal">
+  GET /skus/:id/reviews/:id/edit
+</pre>
+
+<%= render_recording :skus_reviews_edit %>
+
+## Update an existing SKU review
+
+<pre class="terminal">
+  PUT /skus/:id/reviews/:id
+</pre>
+
+<%= render_recording :skus_reviews_update %>
+
+## Delete a SKU review
+
+<pre class="terminal">
+  DELETE /skus/:id/reviews/:id
+</pre>
+
+<%= render_recording :skus_reviews_destroy %>
+
 ## Retrieve an SKU's specifications
 
 SKU specifications can be retrieved with the following request.
@@ -207,7 +255,7 @@ Groups represent a logical grouping of specifications.
 ## Retrieve a SKU's price history
 
 > ##### Note
-> Currently this endpoint responds with any available data for the last 6 months
+> Currently this endpoint responds with any available data for the last 6 months, but will not return data for too new SKUs.
 
 <pre class="terminal">
   GET /skus/:id/price_history

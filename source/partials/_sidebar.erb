@@ -41,6 +41,7 @@
 
           <div id="<%= "nav-sidebar-#{key}" %>" class="nav-menu-sidebar collapse <%= active_parent_link(doc) %>">
             <% doc.pages.each do |page| %>
+              <% next if page.skip_flavors&.include?(flavor) %>
               <%= sidebar_child_link(key, doc, page) %>
             <% end %>
           </div>

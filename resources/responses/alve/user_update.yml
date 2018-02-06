@@ -1,0 +1,35 @@
+---
+:request:
+  :verb: :patch
+  :url: https://api.alve.com/user
+  :headers:
+    :accept: application/vnd.alve+json; version=3.2
+    :authorization: Bearer bmxYfBYJ2wEKFn6eNWNo9n_g0QcTiWgOhCY046LklaCxpdnw_pgEExSH46QjvHDRjDsqO_HTsKt3SplexAR1Ng==
+  :params:
+    :sex: male
+    :birthyear: 1980
+:response:
+  :status: 200
+  :headers:
+    server: nginx
+    date: Thu, 01 Feb 2018 15:58:14 GMT
+    content-type: application/json; charset=utf-8
+    transfer-encoding: chunked
+    connection: close
+    vary: Accept-Encoding
+    etag: W/"0c47779a328ea592935d6518851ade08"
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: fac94722-e413-4d10-a838-cfe348cfe976
+    x-runtime: '0.134493'
+    x-dns-prefetch-control: 'off'
+  :body: '{"user":{"id":17619,"username":"android_alve","avatar":"https://assets.ux-alve.st.skroutz.gr/assets/helmet/avatar_male.png","sex":"male","created_at":"2017-11-09T13:42:40+03:00","email":"android@alve.com","birthyear":1980,"mobile":null,"type":"skroutz","stats":{"sku_review_count":0,"shop_review_count":0,"sku_comment_count":0,"received_votes":0},"email_notifications":[{"field":"notifications","label":"Genel
+    duyurular","description":"Her ay en fazla bir e-mail ile Alve haberleri hakkında
+    bilgilendirme alın.","enabled":true},{"field":"mail_events","label":"Fiyat düşüşleri","description":"Haftada
+    birkaç e-mail ile favori ürünlerinizdeki önemli fiyat düşüşleri hakkında bilgilendirme
+    alın.","enabled":true},{"field":"sku_review_email","label":"Ürün değerlendirmesi","description":"Ayda
+    en fazla bir kere alacağınız e-mail ile sahip olduğunuz ürünlere ilişkin değerlendirme
+    yaparak diğer kullanıcılara satın alma aşamalarında yardımcı olun.","enabled":true},{"field":"shop_review_email","label":"Mağaza
+    değerlendirmeleri","description":"Haftada en fazla bir kere alacağınız e-mail
+    ile sahip olduğunuz mağazalara ilişkin değerlendirme yaparak diğer kullanıcılara
+    satın alma aşamalarında yardımcı olun.","enabled":true}],"resend_verification_email":true}}'
+:created_at: 2018-02-01 17:58:14.480350433 +02:00

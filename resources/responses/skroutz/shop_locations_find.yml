@@ -1,0 +1,45 @@
+---
+:request:
+  :url: http://api.skroutz.gr/api/locations/find
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3.1
+    :authorization: Bearer h2GTSZPqbSc7bKiyYS1j3gNd_1PoNDBLNQzdCgnBonNmTZ9r8eRMBMe-SvM8waex8TRa5kFU_Wn5bffjEZwQew==
+  :params:
+    :lat: '40.6008359591154'
+    :lng: '22.95681734949468'
+  :verb: :get
+:response:
+  :status: 200
+  :headers:
+    date: Tue, 30 Jan 2018 14:40:17 GMT
+    connection: close
+    content-length: '335'
+    server: h2o (Debian)
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '99'
+    x-ratelimit-reset: '1517323260'
+    content-security-policy-report-only: 'default-src https: data: gsa: wss://ws.inspectlet.com;
+      script-src https: data: asset: about: ''unsafe-inline'' ''unsafe-eval''; style-src
+      https: ''unsafe-inline''; child-src *; report-uri https://f30d08e43da6ef6d7fb9c3dd5486561c.report-uri.io/r/default/csp/reportOnly'
+    etag: W/"59c7b8fabb946d1fbee759d76ad5c286"
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '447756193'
+    x-runtime: '0.068146'
+    strict-transport-security: max-age=300
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: rontok_ssl
+    x-varnish: '447756192'
+    age: '0'
+    via: 1.1 varnish (Varnish/5.0)
+    x-origin: lb1
+    x-cache: MISS
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+  :body: '{"locations":[{"id":5729,"headquarter":true,"phones":["2310457486"],"pickup_point":true,"store":true,"full_address":"25ΗΣ
+    ΜΑΡΤΙΟΥ 44, Τ.Κ. 54248, Θεσσαλονίκη, Θεσσαλονίκης","format":"structured","lat":"40.60031","lng":"22.957736","info":"","distance":87.0},{"id":4972,"headquarter":true,"phones":["2311242775","2311242776"],"pickup_point":true,"store":true,"full_address":"25ΗΣ
+    ΜΑΡΤΙΟΥ 31, Τ.Κ. 54645, Θεσσαλονίκη, Θεσσαλονίκης","format":"structured","lat":"40.599921","lng":"22.955776","info":"","distance":125.0}],"meta":{"pagination":{"total_results":2,"total_pages":1,"page":1,"per":25}}}'
+:created_at: 2018-01-30 16:40:17.774513566 +02:00
