@@ -80,6 +80,14 @@ To παρόν έχει σαν σκοπό να περιγράψει την δομ
 >
 >Το <%= settings.site_name.capitalize %>Bot θα διατηρήσει έναν λογικό ρυθμό requests.
 
+To <%= settings.site_name.capitalize %>Bot αποδέχεται https links, αλλά μόνο εκείνα
+τα οποία έχουν ένα intermediate certificate που είναι signed από ένα root certificate
+ενός CA(Certificate Authority).
+
+Μπορείτε να επιβεβαιώσετε την ορθότητα του certificate σας
+<%= link_to "εδώ", "https://www.ssllabs.com/ssltest/analyze" %> ή
+<%= link_to "εδώ", "https://whatsmychaincert.com/" %>.
+
 To <%= settings.site_name.capitalize %>Bot δεν κάνει HTTP ή άλλης μορφής authentication.
 Η προτεινόμενη λύση είναι η εξαίρεση συγκεκριμένων IPs και η προσθήκη τους στις
 έμπιστες IPs (whitelist).

@@ -78,6 +78,13 @@ to the aforementioned URLs, without any rate limit.
 >
 ><%= settings.site_name.capitalize %>Bot will maintain a reasonable rate of requests.
 
+<%= settings.site_name.capitalize %>Bot accepts https links, but only those that
+have an intermediate certificate signed by a CA(Certificate Authority) root certificate.
+
+You can verify your certificate
+<%= link_to "here", "https://www.ssllabs.com/ssltest/analyze" %> or
+<%= link_to "here", "https://whatsmychaincert.com/" %>.
+
 <%= settings.site_name.capitalize %>Bot does not do basic HTTP authentication or
 any other kind of authentication.
 The preferred method is to use IP access control lists.
