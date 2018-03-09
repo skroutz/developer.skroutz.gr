@@ -53,6 +53,9 @@ analytics:
     - { title: 'libraries' }
     - { title: 'examples' }
     - { title: 'faq' }
+  flavors:
+    - skroutz
+    - alve
 
 order_stash:
   base: '/order_stash/'
