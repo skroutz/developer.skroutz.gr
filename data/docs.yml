@@ -69,3 +69,6 @@ partner_badge:
   base: '/partner_badge/'
   featured: true
   icon: 'fa-trophy'
+  flavors:
+    - skroutz
+    - alve
