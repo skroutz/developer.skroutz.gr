@@ -231,6 +231,12 @@ requests:
       headers:
         <<: *default_headers
   -
+    key: skus_product_cards
+    request:
+      url: '{{base_url}}/skus/5452491/product_cards'
+      headers:
+        <<: *default_headers
+  -
     key: skus_similar
     request:
       url: '{{base_url}}/skus/146414/similar'
