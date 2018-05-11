@@ -230,7 +230,7 @@ requests:
   -
     key: skus_show
     request:
-      url: '{{base_url}}/skus/9527729'
+      url: '{{base_url}}/skus/3443837'
       headers:
         <<: *default_headers
   -
@@ -287,6 +287,12 @@ requests:
     key: skus_products
     request:
       url: '{{base_url}}/skus/3783654/products'
+      headers:
+        <<: *default_headers
+  -
+    key: skus_product_cards
+    request:
+      url: '{{base_url}}/skus/3783654/product_cards'
       headers:
         <<: *default_headers
   -
@@ -514,7 +520,7 @@ requests:
   -
     key: category_skus_with_available_filters
     request:
-      url: '{{base_url}}/categories/279/skus?include_meta=available_filters'
+      url: '{{base_url}}/categories/260/skus?include_meta=available_filters'
       headers:
         <<: *default_headers
       params:

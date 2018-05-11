@@ -36,10 +36,49 @@ Name        | Type   | Value                                                    
 > ##### Note
 > The default `order_by` & `order_dir` differs across categories
 
+### Meta
+You may choose to include extra meta information using the following parameters:
+
+Name           | Type  | Description
+-------------- | ----- | -----------
+`include_meta` | Array | Extra meta info to be included in the response
+
+Meta that can be included are:
+
+`available_filters`
+: Filters that can be applied
+
+`applied_filters`
+: Filters currently applied
+
+<%= render_recording :category_skus_with_available_filters %>  
+
+As you can see in the response above the `available_filters` object
+contains three objects (<mark>filters</mark>, <mark>manufacturers</mark> and <mark>shops</mark>)
+each of which has as keys the ids of the filters that can be applied
+and as values the number of SKUs that match the filter.
+
+To retrieve SKUs matching a set of <mark>filters</mark> you have to 
+add the `filter_ids` parameter which is an array parameter of filter ids, e.g.
+`filter_ids[]=1&filter_ids[]=2`.
+
+To retrieve SKUs matching a set of <mark>manufacturers</mark> you have to
+add the `manufacturer_ids` parameter which is an array parameter of manufacturer ids, e.g.
+`manufacturer_ids[]=1&manufacturer_ids[]=2`.
+
+To retrieve SKUs matching a set of <mark>shops</mark> you have to
+add the `shop_ids` parameter which is an array parameter of shop ids, e.g.
+`shop_ids[]=1&shop_ids[]=2`.
+
+There also 2 additional objects that can be returned with a slightly different format than the above.
+These are <mark>availabilities</mark> and <mark>distances</mark>
+
+To retrieve SKUs within a 2km distance you have to add the `distance` parameter which is the integer value found in the `id` key. e.g. `distance=2`
+
+To retrieve SKUs with immediate availability you have to add the `availability` parameter which is the integer value found in the `id` key. e.g. `availability=2`
+
 ### Filtering
 
-You may supply the optional parameter `include_meta[]=available_filters`
-to get meta information about the filters that can be applied.
 
 #### By search keyword
 
@@ -65,38 +104,6 @@ Name         | Type  | Description
 
 <%= render_recording :category_skus_filters %>
 
-### Meta
-You may choose to include extra meta information using the following parameters:
-
-Name           | Type  | Description
--------------- | ----- | -----------
-`include_meta` | Array | Extra meta info to be included in the response
-
-Meta that can be included are:
-
-`available_filters`
-: Filters that can be applied
-
-`applied_filters`
-: Filters currently applied
-
-`show_in_tiles`
-: Whether the skus should be rendered in a tile view
-
-<%= render_recording :category_skus_with_available_filters %>  
-
-As you can see in the response above the `available_filters` object
-contains two objects (<mark>filters</mark> and <mark>manufacturers</mark>)
-each of which has as keys the ids of the filters that can be applied
-and as values the number of SKUs that match the filter.
-
-To retrieve SKUs matching a set of <mark>filters</mark> you have to 
-add the `filter_ids` parameter which is an array parameter of filter ids, e.g.
-`filter_ids[]=1&filter_ids[]=2`.
-
-To retrieve SKUs matching a set of <mark>manufacturers</mark> you have to
-add the `manufacturer_ids` parameter which is an array parameter of manufacturer ids, e.g.
-`manufacturer_ids[]=1&manufacturer_ids[]=2`.
 
 <%= render_recording :category_skus_with_applied_filters %>
 
@@ -115,19 +122,6 @@ add the `manufacturer_ids` parameter which is an array parameter of manufacturer
 </pre>
 
 <%= render_recording :skus_similar %>
-
-## Retrieve an SKU's products
-
-<pre class="terminal">
-  GET /skus/:id/products
-</pre>
-
-<%= render_recording :skus_products %>
-
-### Ordering
-
-`order_by`
-: The following ordering methods are supported: `net_price` & `final_price` (includes shipping & payment_method cost).
 
 ## Retrieve a SKU's reviews
 

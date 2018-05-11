@@ -5,6 +5,28 @@ title: changelog
 
 # Changelog <%= edit_link %>
 
+## 2018-02-01 - v3.2.1
+
+Enable filtering by `shop_id`, `distance` and `availability` in <%= link_to 'SKU listing', '/api/v3/sku', anchor: 'list-skus-of-specific-category' %>.
+
+: 
+
+Enable filtering by `size`, `distance`, `availability` and `zero_installments` in <%= link_to 'SKU products', '/api/v3/product', anchor: 'filtering' %>.
+
+: 
+
+Expose attributes `web_url` & `reviewable` in <%= link_to 'Books', '/api/v3/book' %>.
+
+: 
+
+Expose attribute `is_staff` in <%= link_to 'User', '/api/v3/user' %>.
+
+: 
+
+Expose attributes `description` & `sizes` in <%= link_to 'Sku', '/api/v3/sku' %>.
+
+: This is a truncated version. The full version can be found in <%= link_to 'Sku specifications', '/api/v3/sku', anchor: 'retrieve-an-skus-specifications' %> meta.
+
 ## 2018-02-01 - v3.2.0
 
 <% if flavor == 'skroutz' %>

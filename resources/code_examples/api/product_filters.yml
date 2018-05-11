@@ -1,0 +1,34 @@
+:language: json
+:code: |
+ {
+   "filters": {
+       "distance_ranges": {
+           "2": "2km",
+           "5": "5km",
+           "10": "10km"
+       },
+       "availability_wordings": {
+           "0": "Άμεση Παραλαβή",
+           "1": "1-3 μέρες",
+           "2": "Όλα"
+       },
+       "size_filter": [
+           "36",
+           "37",
+           "38",
+           "39",
+           "40",
+           "41",
+           "42",
+           "43",
+           "44",
+           "45",
+           "46",
+           "47",
+           "48",
+           "49",
+           "50"
+       ],
+       "zero_commission_installments": true
+   }
+ }

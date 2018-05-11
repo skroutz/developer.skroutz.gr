@@ -2,39 +2,40 @@
 :request:
   :url: https://api.skroutz.gr/books/242327
   :headers:
-    :accept: application/vnd.skroutz+json; version=3.1
-    :authorization: Bearer Z13VcwTwQ8X4lPZpMZXm_zG3HXXMuY8iGemu4I3LSpmksSsgEwIT-5rZ_CHN1K98IRsJgJ-4rWfIJJaroW8tRA==
+    :accept: application/vnd.skroutz+json; version=3.2
+    :authorization: Bearer xWmjOaQmNgLt3dVIYBGkWVWhbrcg44XfYqS3Jb1dMVHvGIBJcPuzVQYjH-XKenxsZgFW8DSgc9f2fI_MBVBHNw==
   :verb: :get
 :response:
   :status: 200
   :headers:
-    date: Mon, 08 Jan 2018 15:02:59 GMT
+    date: Fri, 11 May 2018 12:30:54 GMT
     connection: close
-    content-length: '328'
+    content-length: '446'
     server: h2o (Debian)
     content-type: application/json; charset=utf-8
     vary: Accept-Encoding
     x-ratelimit-limit: '100'
-    x-ratelimit-remaining: '95'
-    x-ratelimit-reset: '1515423780'
+    x-ratelimit-remaining: '99'
+    x-ratelimit-reset: '1526041860'
     cache-control: max-age=300, private
     content-security-policy-report-only: 'default-src https: data: gsa: wss://ws.inspectlet.com;
       script-src https: data: asset: about: ''unsafe-inline'' ''unsafe-eval''; style-src
       https: ''unsafe-inline''; child-src *; report-uri https://f30d08e43da6ef6d7fb9c3dd5486561c.report-uri.io/r/default/csp/reportOnly'
-    etag: W/"e6726ec76a50a0efc28f79dd10cf3c66"
-    x-request-id: '533466499'
-    x-runtime: '0.029271'
+    etag: W/"730e6acdfd2902236cb8fb1744932200"
+    x-request-id: '516985813'
+    x-runtime: '0.041946'
     x-dns-prefetch-control: 'off'
     access-control-allow-origin: "*"
     access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
     x-app: rontok_ssl
-    x-varnish: '533466498'
+    x-varnish: '516985812'
     age: '0'
     via: 1.1 varnish (Varnish/5.0)
     x-origin: lb1
     x-cache: MISS
     x-cached: skroutz miss(0)
     accept-ranges: bytes
+    strict-transport-security: max-age=15768000;
   :body: '{"book":{"id":242327,"name":"Ο Χάρι Πότερ και η φιλοσοφική λίθος","main_author_id":385,"main_author":"1965-
-    J. K. Rowling","images":{"main":"https://d.scdn.gr/images/sku_main_images/000242/242327/medium_20160722014855_o_chari_poter_kai_i_filosofiki_lithos.jpeg"},"price_min":6.82,"price_max":15.79,"shop_count":13,"reviewscore":5.0,"reviews_count":2,"first_product_shop_info":null}}'
-:created_at: 2018-01-08 17:02:59.517069362 +02:00
+    J. K. Rowling","images":{"main":"https://d.scdn.gr/images/sku_main_images/000242/242327/medium_20160722014855_o_chari_poter_kai_i_filosofiki_lithos.jpeg"},"price_min":6.63,"price_max":12.96,"shop_count":15,"reviewscore":5.0,"reviews_count":2,"first_product_shop_info":null,"web_uri":"https://www.skroutz.gr/books/242327.%CE%9F%20%CE%A7%CE%AC%CF%81%CE%B9%20%CE%A0%CF%8C%CF%84%CE%B5%CF%81%20%CE%BA%CE%B1%CE%B9%20%CE%B7%20%CF%86%CE%B9%CE%BB%CE%BF%CF%83%CE%BF%CF%86%CE%B9%CE%BA%CE%AE%20%CE%BB%CE%AF%CE%B8%CE%BF%CF%82.html","reviewable":true}}'
+:created_at: 2018-05-11 15:30:54.779603007 +03:00
