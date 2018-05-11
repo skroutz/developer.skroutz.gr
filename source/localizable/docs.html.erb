@@ -21,10 +21,6 @@ title: docs
           </h3>
          <p class="description"><%= t("docs.#{key}.short_description", flavor: settings.site_name.titleize) %></p>
          <%= link_to t('docs.index.view_doc'), doc.base, class: 'goto' %>
-         <% if doc.request_form %>
-           ::
-           <%= link_to t('docs.index.request_access'), settings.api_access_form, class: 'goto' %>
-         <% end %>
         </div>
       </div>
     </div>
