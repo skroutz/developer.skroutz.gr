@@ -53,6 +53,7 @@ analytics:
     - { title: 'libraries' }
     - { title: 'examples' }
     - { title: 'faq' }
+    - { title: 'privacy_policy', skip_flavors: ['alve', 'scrooge'] }
   flavors:
     - skroutz
     - alve
