@@ -48,6 +48,7 @@ tr:
       libraries: 'Libraries'
       examples: 'Examples'
       faq: 'FAQ'
+      privacy_policy: 'Privacy Policy'
     order_stash:
       short_description: 'Increase your Shop Reviews in %{flavor}.'
     partner_badge:
