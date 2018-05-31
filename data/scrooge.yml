@@ -2,15 +2,10 @@ site_name: 'scrooge'
 domain: 'scrooge.co.uk'
 full_company_name: 'Scrooge S.A.'
 
-analytics_domain: 'analytics.scrooge.co.uk'
 api_domain: 'api.scrooge.co.uk'
 developer_domain: 'developer.scrooge.co.uk'
-engineering_blog_domain: ''
-feed_validator_domain: ''
-merchants_domain: 'merchants.scrooge.co.uk'
 
 api_email: 'api@scrooge.co.uk'
-analytics_email: 'analytics@scrooge.co.uk'
 
 github_profile: 'https://github.com/skroutz'
 

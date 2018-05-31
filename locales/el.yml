@@ -2,11 +2,7 @@ el:
   titles:
     index: "%{flavor} Documentation"
     apiv3: 'API v3.2'
-    feedspec: 'XML Feed'
     authorization: 'Authorization'
-    analytics: 'Analytics'
-    order_stash: 'Save Your Order'
-    partner_badge: 'Partner Badge'
     docs: 'Developer Documentation'
     guides: 'Guides'
     extra: 'Looking for something else?'
@@ -33,27 +29,11 @@ el:
       favorites: 'User Favorites'
       notifications: 'User Notifications'
       troubleshooting: 'Troubleshooting'
-    feedspec:
-      short_description: 'Integrate your eshop with %{flavor} and reach millions of consumers.'
     authorization:
       short_description: 'Learn how to ask for authorization and access user data using OAuth 2.0.'
       overview: 'Overview'
       permissions: 'Permissions'
       flows: 'Flows'
-    analytics:
-      short_description: 'Integrate %{flavor} analytics and find out powerful insights about your eshop.'
-      overview: 'Overview'
-      how_it_works: 'How It Works'
-      settings: 'Settings'
-      ecommerce: 'Ecommerce'
-      libraries: 'Libraries'
-      examples: 'Examples'
-      faq: 'FAQ'
-      privacy_policy: 'Privacy Policy'
-    order_stash:
-      short_description: 'Increase your Shop Reviews in %{flavor}.'
-    partner_badge:
-      short_description: 'A mark of trust and a quality indicator powered by %{flavor}.'
 
   lang:
     el: 'Ελληνικά'
@@ -81,7 +61,6 @@ el:
     search: 'Search'
     language: 'Language'
     engineering_blog: 'Engineering Blog'
-    feed_validator: 'XML Feed Validator'
 
   version:
     v3: '3.1'
@@ -93,8 +72,6 @@ el:
     intro:
       what_can_you_do: 'What can you do with %{flavor}?'
       products_and_app: "Create products and applications built on top of %{flavor}"
-      analyze_data: 'Explore market trends by analyzing data'
-      integrate_eshop: "Integrate your eshop with %{flavor}"
     oss:
       encourage: 'Many components of %{flavor} are built with Open Source Software. We %{heart} OSS and try to give back as much as we can.'
       github: '%{flavor} on GitHub'

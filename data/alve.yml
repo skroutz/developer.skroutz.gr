@@ -2,15 +2,10 @@ site_name: 'alve'
 domain: 'alve.com'
 full_company_name: 'Alve Ltd.'
 
-analytics_domain: 'analytics.alve.com'
 api_domain: 'api.alve.com'
 developer_domain: 'developer.alve.com'
-engineering_blog_domain: ''
-feed_validator_domain: ''
-merchants_domain: 'merchants.alve.com'
 
 api_email: 'api@alve.com'
-analytics_email: 'analytics@alve.com'
 
 github_profile: 'https://github.com/skroutz'
 

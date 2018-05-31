@@ -20,18 +20,6 @@ apiv3:
     - { title: 'favorites' }
     - { title: 'notifications' }
 
-feedspec:
-  base: '/feedspec/'
-  featured: true
-  icon: 'fa-file-text-o'
-
-csvspec:
-  base: '/csvspec/'
-  featured: true
-  icon: 'fa-file-text-o'
-  flavors:
-    - scrooge
-
 authorization:
   base: '/authorization/'
   featured: true
@@ -40,36 +28,3 @@ authorization:
     - { title: 'overview', url: '/authorization/' }
     - { title: 'permissions' }
     - { title: 'flows' }
-
-analytics:
-  base: '/analytics/'
-  featured: true
-  icon: 'fa-bar-chart-o'
-  pages:
-    - { title: 'overview', url: '/analytics/' }
-    - { title: 'how_it_works' }
-    - { title: 'settings' }
-    - { title: 'ecommerce' }
-    - { title: 'libraries' }
-    - { title: 'examples' }
-    - { title: 'faq' }
-    - { title: 'privacy_policy', skip_flavors: ['alve', 'scrooge'] }
-  flavors:
-    - skroutz
-    - alve
-
-order_stash:
-  base: '/order_stash/'
-  featured: true
-  icon: 'fa-shopping-basket'
-  flavors:
-    - skroutz
-    - alve
-
-partner_badge:
-  base: '/partner_badge/'
-  featured: true
-  icon: 'fa-trophy'
-  flavors:
-    - skroutz
-    - alve
