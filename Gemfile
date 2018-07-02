@@ -16,6 +16,9 @@ gem 'response_mate', '~> 0.4.1'
 gem 'capistrano', '~> 3.2.1', require: false
 gem 'therubyracer', '~> 0.12.3'
 
+# [CVE-2018-3760] Path Traversal in Sprockets
+gem 'sprockets', '~> 2.12.5'
+
 group :development do
   gem 'awesome_print'
   gem 'colored'

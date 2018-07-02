@@ -130,7 +130,7 @@ GEM
       thor (~> 0.19)
     rouge (1.5.1)
     sass (3.2.19)
-    sprockets (2.12.4)
+    sprockets (2.12.5)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
@@ -175,6 +175,7 @@ DEPENDENCIES
   pry-doc
   rack (~> 1.5.4)
   response_mate (~> 0.4.1)
+  sprockets (~> 2.12.5)
   therubyracer (~> 0.12.3)
 
 BUNDLED WITH
