@@ -1,0 +1,43 @@
+$top-notification-height: 24px;
+
+#top-notification {
+  z-index: 1030;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: $top-notification-height;
+  line-height: $top-notification-height;
+
+  font-size: 14px;
+  text-align: center;
+  color: $state-warning-text;
+  background-color: $state-warning-bg;
+
+  ~ header .navbar-fixed-top {
+    top: $top-notification-height;
+  }
+
+  ~ #sidebar,
+  ~ .container-fluid #sidebar {
+    top: calc(#{$top-notification-height} + 52px);
+  }
+
+  ~ #main {
+    padding-top: $top-notification-height;
+  }
+
+  ~ .container-fluid #main {
+    padding-top: calc(#{$top-notification-height} + 70px);
+  }
+}
+
+@media (max-width: $screen-sm-min) {
+  #top-notification {
+    ~ #sidebar,
+    ~ .container-fluid #sidebar {
+      top: calc(#{$top-notification-height} + 50px);
+    }
+  }
+}
