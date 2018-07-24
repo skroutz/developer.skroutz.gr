@@ -738,3 +738,15 @@ requests:
       url: '{{base_url}}/personalization'
       headers:
         <<: *default_headers
+  -
+    key: orders_index
+    request:
+      url: '{{base_url}}/ecommerce/orders'
+      headers:
+        <<: *default_headers
+  -
+    key: orders_show
+    request:
+      url: '{{base_url}}/ecommerce/orders/419879'
+      headers:
+        <<: *default_headers

@@ -1,0 +1,36 @@
+---
+:request:
+  :url: http://skroutz.gr/api/ecommerce/orders
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3.2
+    :authorization: Bearer OFP-YOtikMu8qyEJ1rgdzlkBgJPYNMbNCbJo3cmWQGdZq0TiKd0t2-7GnpUtuebSPwerLf42Qs6cwI_OjoJVQw==
+  :verb: :get
+:response:
+  :status: 200
+  :headers:
+    date: Tue, 24 Jul 2018 11:09:27 GMT
+    connection: close
+    server: h2o (Debian)
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-meta-session-id: ''
+    x-meta-user-id: '343932'
+    etag: W/"cdf44b495bb6c6257771ca3e259e97e2"
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '254902338'
+    x-runtime: '0.249828'
+    x-dns-prefetch-control: 'off'
+    x-app: rontok_ssl
+    x-varnish: '254902337'
+    age: '0'
+    via: 1.1 varnish (Varnish/5.0)
+    x-origin: lb1
+    x-cache: MISS
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    strict-transport-security: max-age=15768000;
+    transfer-encoding: chunked
+  :body: '{"orders":[{"id":419879,"code":"180723-8288004","address":"ΑΛΕΚΟΥ ΠΑΝΑΓΟΥΛΗ  91,
+    ΝΕΑ ΙΩΝΙΑ, Νομός Αττικής, 14234","items_count":11,"status_color":"000000","preview_sku_images":["https://b.scdn.gr/images/sku_main_images/008170/8170482/medium_20160113163058_durex_play_massage_2in1_aloe_vera_200ml.jpeg","https://c.scdn.gr/images/sku_main_images/008170/8170399/medium_20160113162507_durex_play_classic_50ml.jpeg","https://c.scdn.gr/images/sku_main_images/003607/3607679/medium_20160308144350_eubos_red_solid_washing_bar_125gr.jpeg"],"shipping_cost_transaction_pending":true,"shipping_cost_transaction_pdf":null,"paid_at":"2018-07-23T12:56:51+03:00","credit_card_number":"************6005","deliveries":2,"loyalty_points":6496,"loyalty_points_status":"pending","loyalty_points_color":"000000","promo_campaign":null,"status":"Προς
+    αποστολή"}],"meta":{"pagination":{"total_results":14,"total_pages":1,"page":1,"per":25}}}'
+:created_at: 2018-07-24 14:09:27.407291251 +03:00

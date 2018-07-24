@@ -1,0 +1,44 @@
+---
+:request:
+  :url: http://skroutz.gr/api/ecommerce/orders/419879
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3.2
+    :authorization: Bearer OFP-YOtikMu8qyEJ1rgdzlkBgJPYNMbNCbJo3cmWQGdZq0TiKd0t2-7GnpUtuebSPwerLf42Qs6cwI_OjoJVQw==
+  :verb: :get
+:response:
+  :status: 200
+  :headers:
+    date: Tue, 24 Jul 2018 11:13:12 GMT
+    connection: close
+    content-length: '1500'
+    server: h2o (Debian)
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-meta-session-id: ''
+    x-meta-user-id: '343932'
+    etag: W/"48ff3f844166039f67adfcff1c9c6522"
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '1020447826'
+    x-runtime: '0.233788'
+    x-dns-prefetch-control: 'off'
+    x-app: rontok_ssl
+    x-varnish: '1020447825'
+    age: '0'
+    via: 1.1 varnish (Varnish/5.0)
+    x-origin: lb2
+    x-cache: MISS
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    strict-transport-security: max-age=15768000;
+  :body: '{"order":{"id":419879,"code":"180723-8288004","address":"ΑΛΕΚΟΥ ΠΑΝΑΓΟΥΛΗ  91,
+    ΝΕΑ ΙΩΝΙΑ, Νομός Αττικής, 14234","items_count":11,"status_color":"000000","preview_sku_images":["https://b.scdn.gr/images/sku_main_images/008170/8170482/medium_20160113163058_durex_play_massage_2in1_aloe_vera_200ml.jpeg","https://c.scdn.gr/images/sku_main_images/008170/8170399/medium_20160113162507_durex_play_classic_50ml.jpeg","https://c.scdn.gr/images/sku_main_images/003607/3607679/medium_20160308144350_eubos_red_solid_washing_bar_125gr.jpeg"],"shipping_cost_transaction_pending":true,"shipping_cost_transaction_pdf":null,"paid_at":"2018-07-23T12:56:51+03:00","credit_card_number":"************6005","deliveries":2,"loyalty_points":6496,"loyalty_points_status":"pending","loyalty_points_color":"000000","promo_campaign":null,"status":"Προς
+    αποστολή","payment_summary":{"initial_product_cost":61.66,"shipping_cost":3.3,"free_shipping_amount":2.3,"loyalty_discount_amount":0.0,"effective_coupon_discount":0.0,"promo_discount_amount":0.0,"total_charged":64.96,"total_refunds":0.0,"total_after_refunds":64.96},"suborders":[{"shop_id":3738,"shop_name":"HomePharmacy","line_items":[{"sku_id":8170482,"product_name":"DUREX
+    - Play Massage 2 in 1 Aloe Vera Διεγερτικό | 200ml","quantity":1,"unit_price":7.97,"sku_image":"https://b.scdn.gr/images/sku_main_images/008170/8170482/medium_20160113163058_durex_play_massage_2in1_aloe_vera_200ml.jpeg"},{"sku_id":8170399,"product_name":"DUREX
+    - Play Classic Λιπαντικό | 50ml","quantity":1,"unit_price":4.23,"sku_image":"https://c.scdn.gr/images/sku_main_images/008170/8170399/medium_20160113162507_durex_play_classic_50ml.jpeg"},{"sku_id":3607679,"product_name":"EUBOS
+    - Solid Red | 125gr","quantity":2,"unit_price":3.71,"sku_image":"https://c.scdn.gr/images/sku_main_images/003607/3607679/medium_20160308144350_eubos_red_solid_washing_bar_125gr.jpeg"},{"sku_id":3616382,"product_name":"DUREX
+    - Total Contact | 6 τμχ","quantity":4,"unit_price":4.94,"sku_image":"https://c.scdn.gr/images/sku_main_images/003616/3616382/medium_20171218133449_durex_total_contact_6tmch.jpeg"},{"sku_id":11605628,"product_name":"SOLENE
+    - Suncare Face Cream SPF50 (50ml) \u0026 ΔΩΡΟ Ultra Satin Face Cream SPF30 (50ml)","quantity":1,"unit_price":9.71,"sku_image":"https://d.scdn.gr/images/sku_main_images/011605/11605628/medium_20170407143335_solene_antiiliaki_krema_prosopou_gia_fotoeyaisthites_epidermides_spf50_50ml_antiiliako_galaktoma_spray_spf30_150ml.jpeg"}],"status_color":"000000","tracking_info":{"tracking_url":"https://www.acscourier.net/el/web/greece/track-and-trace?action=getTracking\u0026cid=2%CE%92%CE%9E45143\u0026generalCode=5208534660\u0026p_p_id=ACSCustomersAreaTrackTrace_WAR_ACSCustomersAreaportlet\u0026stop_mobile=yes","tracking_number":"5208534660","courier_name":"ACS"},"status":"Απεστάλη"},{"shop_id":2698,"shop_name":"PharmaPlus","line_items":[{"sku_id":7425459,"product_name":"ΑΝΤΑΛΛΑΚΤΙΚΑ
+    VITALITY PRECISION CLEAN 2+1 PROMO","quantity":1,"unit_price":9.17,"sku_image":"https://a.scdn.gr/images/sku_main_images/007425/7425459/medium_20170828162418_oral_b_precision_clean_2_1tmch.jpeg"},{"sku_id":11884676,"product_name":"ΚΑΤΑ
+    ΤΡΙΧΟΠΤΩΣΗΣ 360ML","quantity":1,"unit_price":3.4,"sku_image":"https://c.scdn.gr/images/sku_main_images/011884/11884676/medium_20170510142406_head_shoulders_men_ultra_anti_hair_fall_360ml.jpeg"}],"status_color":"000000","tracking_info":{"tracking_url":"https://www.acscourier.net/el/web/greece/track-and-trace?action=getTracking\u0026cid=2%CE%92%CE%9E45143\u0026generalCode=5208700965\u0026p_p_id=ACSCustomersAreaTrackTrace_WAR_ACSCustomersAreaportlet\u0026stop_mobile=yes","tracking_number":"5208700965","courier_name":"ACS"},"status":"Προς
+    αποστολή"}]}}'
+:created_at: 2018-07-24 14:13:12.656960645 +03:00
