@@ -750,3 +750,15 @@ requests:
       url: '{{base_url}}/ecommerce/orders/419879'
       headers:
         <<: *default_headers
+  -
+    key: free_shipping_tiers
+    request:
+      url: '{{base_url}}/ecommerce/promos/free_shipping_tiers'
+      headers:
+        <<: *default_headers
+  -
+    key: loyalty_tiers
+    request:
+      url: '{{base_url}}/ecommerce/promos/loyalty_tiers'
+      headers:
+        <<: *default_headers

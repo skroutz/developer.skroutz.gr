@@ -1,0 +1,34 @@
+---
+:request:
+  :url: http://skroutz.gr/api/ecommerce/promos/free_shipping_tiers
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3.2
+    :authorization: Bearer IdhDG_g79Jw6BL1P8aB6FqG9nIzgYwuASH6NWAAOCcfKwDV0LXNXbCR8LdJ9O9jFzRptFDRawxVGDbysFujMGw==
+  :verb: :get
+:response:
+  :status: 200
+  :headers:
+    date: Wed, 25 Jul 2018 09:52:06 GMT
+    connection: close
+    content-length: '103'
+    server: h2o (Debian)
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    cache-control: max-age=3600, private
+    x-meta-session-id: ''
+    x-meta-user-id: '343932'
+    etag: W/"4280605298e601a5d42bb712e0cdd559"
+    x-request-id: '32474000'
+    x-runtime: '0.042325'
+    x-dns-prefetch-control: 'off'
+    x-app: rontok_ssl
+    x-varnish: '32473999'
+    age: '0'
+    via: 1.1 varnish (Varnish/5.0)
+    x-origin: lb2
+    x-cache: MISS
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    strict-transport-security: max-age=15768000;
+  :body: '{"tiers":[{"lower_bound":50.0,"upper_bound":79.99,"free_deliveries_count":1},{"lower_bound":80.0,"upper_bound":null,"free_deliveries_count":2}]}'
+:created_at: 2018-07-25 12:52:06.544134117 +03:00

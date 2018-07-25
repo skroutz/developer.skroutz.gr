@@ -1,0 +1,34 @@
+---
+:request:
+  :url: http://skroutz.gr/api/ecommerce/promos/loyalty_tiers
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3.2
+    :authorization: Bearer IdhDG_g79Jw6BL1P8aB6FqG9nIzgYwuASH6NWAAOCcfKwDV0LXNXbCR8LdJ9O9jFzRptFDRawxVGDbysFujMGw==
+  :verb: :get
+:response:
+  :status: 200
+  :headers:
+    date: Wed, 25 Jul 2018 09:52:06 GMT
+    connection: close
+    content-length: '162'
+    server: h2o (Debian)
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    cache-control: max-age=3600, private
+    x-meta-session-id: ''
+    x-meta-user-id: '343932'
+    etag: W/"4c41199b87dd9b6e095995bc96dc866b"
+    x-request-id: '360816755'
+    x-runtime: '0.045716'
+    x-dns-prefetch-control: 'off'
+    x-app: rontok_ssl
+    x-varnish: '360816754'
+    age: '0'
+    via: 1.1 varnish (Varnish/5.0)
+    x-origin: lb1
+    x-cache: MISS
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    strict-transport-security: max-age=15768000;
+  :body: '{"loyalty_tiers":[{"id":1,"name":"Basic","level":1,"lower_bound":0,"upper_bound":9999,"discount_percentage":0},{"id":2,"name":"Pro","level":2,"lower_bound":10000,"upper_bound":24999,"discount_percentage":3},{"id":3,"name":"Elite","level":3,"lower_bound":25000,"upper_bound":null,"discount_percentage":6}]}'
+:created_at: 2018-07-25 12:52:06.621036028 +03:00
