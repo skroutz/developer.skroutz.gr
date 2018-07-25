@@ -1,0 +1,41 @@
+---
+:request:
+  :verb: :post
+  :url: https://api.skroutz.gr/ecommerce/cart/unclaim_coupon
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3.2
+    :authorization: Bearer IdhDG_g79Jw6BL1P8aB6FqG9nIzgYwuASH6NWAAOCcfKwDV0LXNXbCR8LdJ9O9jFzRptFDRawxVGDbysFujMGw==
+  :params:
+    :coupon_code: YK3MB4BB
+:response:
+  :status: 200
+  :headers:
+    date: Wed, 25 Jul 2018 15:15:25 GMT
+    connection: close
+    content-length: '360'
+    server: h2o (Debian)
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '99'
+    x-ratelimit-reset: '1532531760'
+    etag: W/"edaf63d9675962d20d8c095857e4c302"
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '71441428'
+    x-runtime: '0.089679'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: rontok_ssl
+    x-varnish: '71441427'
+    age: '0'
+    via: 1.1 varnish (Varnish/5.0)
+    x-origin: lb2
+    x-cache: MISS
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    strict-transport-security: max-age=15768000;
+  :body: '{"message":"Το κουπόνι αφαιρέθηκε","summary":{"minimum_shops":{"exists":true,"product_cost":23.42,"shipping_cost":2.3,"total_cost":25.72,"coupon_applied":false,"shop_count":1,"loyalty_points":2572,"free_shipping_applied":false,"free_shipping_prompt":"Απομένουν
+    26.58 για να κερδίσεις το κόστος μίας αποστολής!"},"multiple_shops":{"exists":true,"product_cost":17.87,"shipping_cost":4.6,"total_cost":22.47,"coupon_applied":false,"shop_count":2,"loyalty_points":2247,"extra_cost":3.25,"cost_diff_class":"cheaper","free_shipping_applied":false,"free_shipping_prompt":"Απομένουν
+    32.13 για να κερδίσεις το κόστος μίας αποστολής!"}}}'
+:created_at: 2018-07-25 18:15:25.205302951 +03:00

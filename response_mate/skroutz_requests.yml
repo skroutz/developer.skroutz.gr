@@ -762,3 +762,85 @@ requests:
       url: '{{base_url}}/ecommerce/promos/loyalty_tiers'
       headers:
         <<: *default_headers
+  -
+    key: cart_show
+    request:
+      url: '{{base_url}}/ecommerce/cart'
+      headers:
+        <<: *default_headers
+      params:
+        proposal_type: 'minimum_shops'
+  -
+    key: add_to_cart
+    request:
+      verb: POST
+      url: '{{base_url}}/ecommerce/cart/add/4647047'
+      headers:
+        <<: *default_headers
+      params:
+        quantity: '2'
+  -
+    key: change_line_item_quantity_in_cart
+    request:
+      verb: PUT
+      url: '{{base_url}}/ecommerce/cart/change_line_item_quantity_in_cart/1722608'
+      headers:
+        <<: *default_headers
+      params:
+        quantity: '2'
+        proposal_type: 'minimum_shops'
+  -
+    key: change_line_item_quantity
+    request:
+      verb: PUT
+      url: '{{base_url}}/ecommerce/cart/change_line_item_quantity_in_cart/1722608'
+      headers:
+        <<: *default_headers
+      params:
+        quantity: '3'
+  -
+    key: remove_line_item_in_cart
+    request:
+      verb: DELETE
+      url: '{{base_url}}/ecommerce/cart/remove_line_item_in_cart/1722608'
+      headers:
+        <<: *default_headers
+      params:
+        proposal_type: 'minimum_shops'
+  -
+    key: remove_line_item
+    request:
+      verb: DELETE
+      url: '{{base_url}}/ecommerce/cart/remove_line_item/1722742'
+      headers:
+        <<: *default_headers
+  -
+    key: claim_coupon
+    request:
+      verb: POST
+      url: '{{base_url}}/ecommerce/cart/claim_coupon'
+      headers:
+        <<: *default_headers
+      params:
+        coupon_code: "YK3MB4BB"
+  -
+    key: unclaim_coupon
+    request:
+      verb: POST
+      url: '{{base_url}}/ecommerce/cart/unclaim_coupon'
+      headers:
+        <<: *default_headers
+      params:
+        coupon_code: "YK3MB4BB"
+  -
+    key: checkout_parameters
+    request:
+      url: '{{base_url}}/ecommerce/cart/checkout_params'
+      headers:
+        <<: *default_headers
+  -
+    key: check_for_sku
+    request:
+      url: '{{base_url}}/ecommerce/cart/check_for_sku/4647047'
+      headers:
+        <<: *default_headers

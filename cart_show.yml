@@ -1,0 +1,41 @@
+---
+:request:
+  :url: http://skroutz.gr/api/ecommerce/cart
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3.2
+    :authorization: Bearer IdhDG_g79Jw6BL1P8aB6FqG9nIzgYwuASH6NWAAOCcfKwDV0LXNXbCR8LdJ9O9jFzRptFDRawxVGDbysFujMGw==
+  :params:
+    :proposal_type: minimum_shops
+  :verb: :get
+:response:
+  :status: 200
+  :headers:
+    date: Wed, 25 Jul 2018 14:13:06 GMT
+    connection: close
+    server: h2o (Debian)
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-meta-session-id: ''
+    x-meta-user-id: '343932'
+    etag: W/"1753fedcff95bf45c220f670cb1e98b9"
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '60164253'
+    x-runtime: '0.107253'
+    x-dns-prefetch-control: 'off'
+    x-app: rontok_ssl
+    x-varnish: '60164252'
+    age: '0'
+    via: 1.1 varnish (Varnish/5.0)
+    x-origin: lb2
+    x-cache: MISS
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    strict-transport-security: max-age=15768000;
+    transfer-encoding: chunked
+  :body: '{"ecommerce_cart":{"products_grouped_by_shop":[{"shop_id":1867,"shop_name":"Pharmacyonlineshop","item_count":4,"items":[{"id":1722608,"quantity":3,"sku_id":4647047,"sku_image":"https://b.scdn.gr/images/sku_main_images/004647/4647047/medium_14474487-orig.jpg","family_id":2606,"name":"Head
+    \u0026 Shoulders Σαμπουάν 2 σε 1 κατά της Ξηροδερμίας με Almond Oil 360ml","total_cost":17.46},{"id":1722610,"quantity":1,"sku_id":10913118,"sku_image":"https://d.scdn.gr/images/sku_main_images/010913/10913118/medium_20170127153052_apivita_malaktiki_krema_enydatosis_gia_olous_tous_typous_mallion_me_yalouroniko_oxy_aloi_150ml.jpeg","family_id":2606,"name":"Apivita
+    Μαλακτική Κρέμα Ενυδάτωσης για Όλους τους Τύπους Μαλλιών με Υαλουρονικό Οξύ \u0026
+    Αλόη 150ml","total_cost":12.8}]}],"summary":{"minimum_shops":{"exists":true,"product_cost":30.26,"shipping_cost":2.8,"total_cost":33.06,"coupon_applied":false,"shop_count":1,"loyalty_points":3306,"free_shipping_applied":false,"free_shipping_prompt":"Απομένουν
+    19.74 για να κερδίσεις το κόστος μίας αποστολής!"},"multiple_shops":{"exists":true,"product_cost":24.03,"shipping_cost":4.6,"total_cost":28.63,"coupon_applied":false,"shop_count":2,"loyalty_points":2863,"extra_cost":4.43,"cost_diff_class":"cheaper","free_shipping_applied":false,"free_shipping_prompt":"Απομένουν
+    25.97 για να κερδίσεις το κόστος μίας αποστολής!"}},"proposal_type":"minimum_shops","loyalty_points":3306},"meta":{"total_items_count":4}}'
+:created_at: 2018-07-25 17:13:06.934244630 +03:00

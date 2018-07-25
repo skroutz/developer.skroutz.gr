@@ -1,0 +1,44 @@
+---
+:request:
+  :verb: :delete
+  :url: https://api.skroutz.gr/ecommerce/cart/remove_line_item_in_cart/1722608
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3.2
+    :authorization: Bearer IdhDG_g79Jw6BL1P8aB6FqG9nIzgYwuASH6NWAAOCcfKwDV0LXNXbCR8LdJ9O9jFzRptFDRawxVGDbysFujMGw==
+  :params:
+    :proposal_type: minimum_shops
+:response:
+  :status: 200
+  :headers:
+    date: Wed, 25 Jul 2018 15:01:02 GMT
+    connection: close
+    content-length: '801'
+    server: h2o (Debian)
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '99'
+    x-ratelimit-reset: '1532530920'
+    etag: W/"211e711df33d548c9cc791c91d5d9ff8"
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '407541672'
+    x-runtime: '0.333973'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: rontok_ssl
+    x-varnish: '407541671'
+    age: '0'
+    via: 1.1 varnish (Varnish/5.0)
+    x-origin: lb1
+    x-cache: MISS
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    strict-transport-security: max-age=15768000;
+  :body: '{"ecommerce_cart":{"products_grouped_by_shop":[{"shop_id":3319,"shop_name":"Onpharm","item_count":3,"items":[{"id":1722610,"quantity":1,"sku_id":10913118,"sku_image":"https://d.scdn.gr/images/sku_main_images/010913/10913118/medium_20170127153052_apivita_malaktiki_krema_enydatosis_gia_olous_tous_typous_mallion_me_yalouroniko_oxy_aloi_150ml.jpeg","family_id":2606,"name":"Apivita
+    Μαλακτική Κρέμα Ενυδάτωσης για Όλους τους Τύπους Μαλλιών με Υαλουρονικό Οξύ \u0026
+    Αλόη 150ml","total_cost":8.32},{"id":1722688,"quantity":2,"sku_id":8170482,"sku_image":"https://b.scdn.gr/images/sku_main_images/008170/8170482/medium_20160113163058_durex_play_massage_2in1_aloe_vera_200ml.jpeg","family_id":2606,"name":"Durex
+    Play Massage 2in1 Aloe Vera 200ml","total_cost":15.1}]}],"summary":{"minimum_shops":{"exists":true,"product_cost":23.42,"shipping_cost":2.3,"total_cost":25.72,"coupon_applied":false,"shop_count":1,"loyalty_points":2572,"free_shipping_applied":false,"free_shipping_prompt":"Απομένουν
+    26.58 για να κερδίσεις το κόστος μίας αποστολής!"},"multiple_shops":{"exists":true,"product_cost":17.87,"shipping_cost":4.6,"total_cost":22.47,"coupon_applied":false,"shop_count":2,"loyalty_points":2247,"extra_cost":3.25,"cost_diff_class":"cheaper","free_shipping_applied":false,"free_shipping_prompt":"Απομένουν
+    32.13 για να κερδίσεις το κόστος μίας αποστολής!"}},"proposal_type":"minimum_shops","loyalty_points":2572},"meta":{"total_items_count":3}}'
+:created_at: 2018-07-25 18:01:02.718257395 +03:00

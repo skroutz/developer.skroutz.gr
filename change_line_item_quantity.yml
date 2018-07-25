@@ -1,0 +1,45 @@
+---
+:request:
+  :verb: :put
+  :url: https://api.skroutz.gr/ecommerce/cart/change_line_item_quantity_in_cart/1722608
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3.2
+    :authorization: Bearer IdhDG_g79Jw6BL1P8aB6FqG9nIzgYwuASH6NWAAOCcfKwDV0LXNXbCR8LdJ9O9jFzRptFDRawxVGDbysFujMGw==
+  :params:
+    :quantity: '3'
+:response:
+  :status: 200
+  :headers:
+    date: Wed, 25 Jul 2018 15:00:07 GMT
+    connection: close
+    server: h2o (Debian)
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '99'
+    x-ratelimit-reset: '1532530860'
+    etag: W/"fa0278a5f5ec79705e0cb04bcdd02948"
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '423075221'
+    x-runtime: '0.223543'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: rontok_ssl
+    x-varnish: '423075220'
+    age: '0'
+    via: 1.1 varnish (Varnish/5.0)
+    x-origin: lb1
+    x-cache: MISS
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    strict-transport-security: max-age=15768000;
+    transfer-encoding: chunked
+  :body: '{"ecommerce_cart":{"products_grouped_by_shop":[{"shop_id":1867,"shop_name":"Pharmacyonlineshop","item_count":6,"items":[{"id":1722608,"quantity":3,"sku_id":4647047,"sku_image":"https://b.scdn.gr/images/sku_main_images/004647/4647047/medium_14474487-orig.jpg","family_id":2606,"name":"Head
+    \u0026 Shoulders Σαμπουάν 2 σε 1 κατά της Ξηροδερμίας με Almond Oil 360ml","total_cost":17.46},{"id":1722610,"quantity":1,"sku_id":10913118,"sku_image":"https://d.scdn.gr/images/sku_main_images/010913/10913118/medium_20170127153052_apivita_malaktiki_krema_enydatosis_gia_olous_tous_typous_mallion_me_yalouroniko_oxy_aloi_150ml.jpeg","family_id":2606,"name":"Apivita
+    Μαλακτική Κρέμα Ενυδάτωσης για Όλους τους Τύπους Μαλλιών με Υαλουρονικό Οξύ \u0026
+    Αλόη 150ml","total_cost":12.8},{"id":1722688,"quantity":2,"sku_id":8170482,"sku_image":"https://b.scdn.gr/images/sku_main_images/008170/8170482/medium_20160113163058_durex_play_massage_2in1_aloe_vera_200ml.jpeg","family_id":2606,"name":"Durex
+    Play Massage 2in1 Aloe Vera 200ml","total_cost":20.02}]}],"summary":{"minimum_shops":{"exists":true,"product_cost":50.28,"shipping_cost":2.8,"total_cost":50.78,"coupon_applied":false,"shop_count":1,"loyalty_points":5078,"free_shipping_applied":true,"zero_shipping_cost":false,"shipping_cost_after_discount":0.5,"free_shipping_prompt":"Απομένουν
+    29.72 για να κερδίσεις το κόστος μίας επιπλέον αποστολής!"},"multiple_shops":{"exists":true,"product_cost":35.33,"shipping_cost":6.9,"total_cost":42.23,"coupon_applied":false,"shop_count":3,"loyalty_points":4223,"extra_cost":8.55,"cost_diff_class":"cheaper","free_shipping_applied":false,"free_shipping_prompt":"Απομένουν
+    14.67 για να κερδίσεις το κόστος μίας επιπλέον αποστολής!"}},"proposal_type":"minimum_shops","loyalty_points":5078},"meta":{"total_items_count":6}}'
+:created_at: 2018-07-25 18:00:07.479057622 +03:00

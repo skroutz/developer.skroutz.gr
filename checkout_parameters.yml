@@ -1,0 +1,37 @@
+---
+:request:
+  :url: https://api.skroutz.gr/ecommerce/cart/checkout_params
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3.2
+    :authorization: Bearer IdhDG_g79Jw6BL1P8aB6FqG9nIzgYwuASH6NWAAOCcfKwDV0LXNXbCR8LdJ9O9jFzRptFDRawxVGDbysFujMGw==
+  :verb: :get
+:response:
+  :status: 200
+  :headers:
+    date: Wed, 25 Jul 2018 15:17:24 GMT
+    connection: close
+    content-length: '155'
+    server: h2o (Debian)
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '99'
+    x-ratelimit-reset: '1532531880'
+    etag: W/"96ab2ea4d6006028dd0e510d10db4233"
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '423966961'
+    x-runtime: '0.046682'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: rontok_ssl
+    x-varnish: '423966960'
+    age: '0'
+    via: 1.1 varnish (Varnish/5.0)
+    x-origin: lb1
+    x-cache: MISS
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    strict-transport-security: max-age=15768000;
+  :body: '{"checkout_url":"https://www.skroutz.gr/cart/proceed_to_checkout_for_api","web_login_code":"1d8890162ec6ac6623a4c62c4108e2d6","ecommerce_cart":{"cart_type":"minimum_shops"}}'
+:created_at: 2018-07-25 18:17:24.179848417 +03:00
