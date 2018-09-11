@@ -844,3 +844,9 @@ requests:
       url: '{{base_url}}/ecommerce/cart/check_for_sku/4647047'
       headers:
         <<: *default_headers
+  -
+    key: suggested_categories
+    request:
+      url: '{{base_url}}/ecommerce/cart/suggested_categories'
+      headers:
+        <<: *default_headers

@@ -1,0 +1,40 @@
+---
+:request:
+  :url: https://api.skroutz.gr/ecommerce/cart/suggested_categories
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3.2
+    :authorization: Bearer 2iChL9RQwjxAexvzegHWot0erEEMTIsyqgJhz9gvRhXlpxUSca3OSvFCGDUgqFZlUox4gnA1i4xxjFIs76ORaA==
+  :verb: :get
+:response:
+  :status: 200
+  :headers:
+    date: Tue, 11 Sep 2018 14:56:34 GMT
+    connection: close
+    server: h2o (Debian)
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '99'
+    x-ratelimit-reset: '1536677820'
+    etag: W/"9fd67d38a3319edc00c28906f5a4623c"
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '94116780'
+    x-runtime: '0.047911'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: rontok_ssl
+    x-varnish: '94116779'
+    age: '0'
+    via: 1.1 varnish (Varnish/5.0)
+    x-origin: lb2
+    x-cache: MISS
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    strict-transport-security: max-age=15768000;
+    transfer-encoding: chunked
+  :body: '{"categories":[{"id":2444,"name":"Επιθέματα Ποδιών","children_count":0,"image_url":"https://c.scdn.gr/ds/categories/2444/20171113121916_07bbc2ba.jpeg","parent_id":2418,"fashion":true,"layout_mode":"list","web_uri":"https://skroutz.gr/c/2444/Epithemata-Podion.html","code":"Epithemata-Podion","family_id":2606,"show_manufacturers_filter":true,"adult":false,"onclick_behaviour":"onclick_to_sku_page","show_spec_summary":false,"unit_price_label":"επίθεμα","reviewable":true,"comparable":false,"ecommerce_enabled":true,"path":"76,2606,2418,2444","show_specifications":false,"manufacturer_title":"Κατασκευαστές"},{"id":1514,"name":"Βούρτσες
+    Μαλλιών","children_count":0,"image_url":"https://d.scdn.gr/ds/categories/1514/20171113121440_0c956571.jpeg","parent_id":2634,"fashion":true,"layout_mode":"list","web_uri":"https://skroutz.gr/c/1514/voyrtses-malion.html","code":"voyrtses-chtenes","family_id":2606,"show_manufacturers_filter":true,"adult":false,"onclick_behaviour":"onclick_to_sku_page","show_spec_summary":false,"reviewable":true,"comparable":false,"ecommerce_enabled":true,"path":"76,2606,1780,1781,2634,1514","show_specifications":false,"manufacturer_title":"Brands"},{"id":2518,"name":"Ένζυμα","children_count":0,"image_url":"https://a.scdn.gr/ds/categories/2518/20171113121939_2f366950.jpeg","parent_id":1405,"fashion":true,"layout_mode":"list","web_uri":"https://skroutz.gr/c/2518/enzyma.html","code":"enzyma","family_id":2606,"show_manufacturers_filter":true,"adult":false,"onclick_behaviour":"onclick_to_sku_page","show_spec_summary":false,"reviewable":true,"comparable":false,"ecommerce_enabled":true,"path":"76,2606,1405,2518","show_specifications":false,"manufacturer_title":"Κατασκευαστές"},{"id":2447,"name":"Θερμοφόρες
+    \u0026 Παγοκύστες","children_count":0,"image_url":"https://a.scdn.gr/ds/categories/2447/20171113121917_c91c1ab5.jpeg","parent_id":2418,"fashion":true,"layout_mode":"list","web_uri":"https://skroutz.gr/c/2447/Thermofores-Pagokystes.html","code":"THermofores-Pagokystes","family_id":2606,"show_manufacturers_filter":true,"adult":false,"onclick_behaviour":"onclick_to_sku_page","show_spec_summary":false,"reviewable":true,"comparable":false,"ecommerce_enabled":true,"path":"76,2606,2418,2447","show_specifications":false,"manufacturer_title":"Κατασκευαστές"},{"id":975,"name":"Προϊόντα
+    Καθαρισμού Προσώπου","children_count":0,"image_url":"https://d.scdn.gr/ds/categories/975/20171113121227_e5194933.jpeg","parent_id":298,"fashion":true,"layout_mode":"list","web_uri":"https://skroutz.gr/c/975/proionta-katharismou-prosopou.html","code":"katharismos-demakup","family_id":2606,"show_manufacturers_filter":true,"adult":false,"onclick_behaviour":"onclick_to_sku_page","show_spec_summary":false,"reviewable":true,"comparable":false,"ecommerce_enabled":true,"path":"76,2606,1780,298,975","show_specifications":false,"manufacturer_title":"Brands"},{"id":832,"name":"Σαμπουάν","children_count":0,"image_url":"https://a.scdn.gr/ds/categories/832/20171113121153_370e05b9.jpeg","parent_id":1781,"fashion":true,"layout_mode":"list","web_uri":"https://skroutz.gr/c/832/sampouan.html","code":"sampouan","family_id":2606,"show_manufacturers_filter":true,"adult":false,"onclick_behaviour":"onclick_to_sku_page","show_spec_summary":false,"reviewable":true,"comparable":false,"ecommerce_enabled":true,"path":"76,2606,1780,1781,832","show_specifications":false,"manufacturer_title":"Brands"}]}'
+:created_at: 2018-09-11 17:56:34.414310222 +03:00

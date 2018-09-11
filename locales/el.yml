@@ -23,6 +23,7 @@ el:
       shop: 'Shop'
       manufacturer: 'Manufacturer'
       search: 'Search'
+      ecommerce: 'Ecommerce'
       flag: 'Flag'
       filter_groups: 'Filter Groups'
       user: 'User Profile'

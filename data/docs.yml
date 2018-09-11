@@ -14,6 +14,7 @@ apiv3:
     - { title: 'shop' }
     - { title: 'manufacturer' }
     - { title: 'search' }
+    - { title: 'ecommerce', skip_flavors: ['alve', 'scrooge'] }
     - { title: 'flag' }
     - { title: 'filter_groups' }
     - { title: 'user' }

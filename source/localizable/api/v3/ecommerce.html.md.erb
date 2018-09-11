@@ -1,0 +1,131 @@
+---
+parent: apiv3
+title: ecommerce
+---
+
+<% if flavor == 'skroutz' %>
+
+# Ecommerce <%= edit_link %>
+
+<%= partial 'partials/toc' %>
+
+## Add to cart
+
+<pre class="terminal">
+  POST /ecommerce/cart/add/:sku_id
+</pre>
+
+<%= render_recording :add_to_cart %>
+
+## Retrieve cart
+
+<pre class="terminal">
+  GET /ecommerce/cart
+</pre>
+
+<%= render_recording :add_to_cart %>
+
+## Change Line Item Quantity
+
+<pre class="terminal">
+  PUT /ecommerce/cart/change_line_item_quantity/:line_item_id
+</pre>
+
+<%= render_recording :change_line_item_quantity %>
+
+## Change Line Item Quantity In Cart
+
+<pre class="terminal">
+  PUT /ecommerce/cart/change_line_item_quantity_in_cart/:line_item_id
+</pre>
+
+<%= render_recording :change_line_item_quantity_in_cart %>
+
+## Remove Line Item
+
+<pre class="terminal">
+  PUT /ecommerce/cart/remove_line_item/:line_item_id
+</pre>
+
+<%= render_recording :remove_line_item %>
+
+## Remove Line Item In Cart
+
+<pre class="terminal">
+  PUT /ecommerce/cart/remove_line_item_in_cart/:line_item_id
+</pre>
+
+<%= render_recording :remove_line_item_in_cart %>
+
+## Check For Sku
+
+<pre class="terminal">
+  GET /ecommerce/cart/check_for_sku/:sku_id
+</pre>
+
+<%= render_recording :check_for_sku %>
+
+## Checkout Parameters
+
+<pre class="terminal">
+  GET /ecommerce/cart/checkout_params
+</pre>
+
+<%= render_recording :checkout_parameters %>
+
+## Claim Coupon
+
+<pre class="terminal">
+  POST /ecommerce/cart/claim_coupon
+</pre>
+
+<%= render_recording :claim_coupon %>
+
+## Unclaim Coupon
+
+<pre class="terminal">
+  POST /ecommerce/cart/unclain_coupon
+</pre>
+
+<%= render_recording :unclaim_coupon %>
+
+## Suggested Categories
+
+<pre class="terminal">
+  GET /ecommerce/cart/suggested_categories
+</pre>
+
+<%= render_recording :suggested_categories %>
+
+## Orders Index
+
+<pre class="terminal">
+  GET /ecommerce/orders
+</pre>
+
+<%= render_recording :orders_index %>
+
+## Order Show
+
+<pre class="terminal">
+  GET /ecommerce/order/:id
+</pre>
+
+<%= render_recording :orders_show %>
+
+## Promos Loyalty Tier
+
+<pre class="terminal">
+  GET /ecommerce/promos/loyalty_tier
+</pre>
+
+<%= render_recording :loyalty_tiers %>
+
+## Promos Free Shipping Tier
+
+<pre class="terminal">
+  GET /ecommerce/promos/free_shipping_tiers
+</pre>
+
+<%= render_recording :free_shipping_tiers %>
+<% end %>
