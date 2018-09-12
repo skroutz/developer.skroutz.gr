@@ -6,9 +6,9 @@ module PageNavigationHelper
   # @return [String] the relative url to the Doc page
   def url_to_doc_page(doc_base_url, page)
     if page.url.nil?
-      "#{doc_base_url}#{page.title}/"
+      "#{site_url}/#{doc_base_url}#{page.title}/"
     else
-      page.url
+      "#{site_url}#{page.url}"
     end
   end
 

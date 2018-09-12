@@ -19,6 +19,8 @@ activate :directory_indexes
 # Relative URLs
 set :relative_links, true
 
+set :site_url, ""
+
 # Syntax Highlight
 activate :syntax, line_numbers: false
 
@@ -57,6 +59,8 @@ configure :build do
 
   # GZip
   activate :gzip
+
+  set :site_url, "/skroutz/internal_docs"
 end
 
 # Helpers
@@ -127,4 +131,10 @@ end
 # Set API responses output directory per flavor
 ResponseMate.setup do |config|
   config.output_dir = "./resources/responses/#{flavor}"
+end
+
+activate :deploy do |deploy|
+  deploy.method = :git
+  deploy.branch = 'master'
+  deploy.build_before = true
 end
