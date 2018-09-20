@@ -1,6 +1,0 @@
-:language: bash
-:code: |
-  curl -XGET https://api.alve.com/api/search\?\
-    q\=apple\&\
-    oauth_token=your_access_token_here \
-    -H 'Accept: application/vnd.alve+json; version=3'

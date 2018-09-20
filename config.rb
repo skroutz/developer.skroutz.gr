@@ -9,9 +9,6 @@ page 'index.html', layout: false
 page '404.html', layout: false
 
 
-# Localization
-activate :i18n, langs: [:en, :el, :tr]
-I18n.enforce_available_locales = false  # Silence I18n deprecation warnings
 
 # Pretty URLs
 activate :directory_indexes
@@ -41,13 +38,6 @@ set :fonts_dir, 'assets/fonts'
 
 # Build Configuration
 configure :build do
-  # Ignore assets from other flavors
-  %w(skroutz alve scrooge).each do |f|
-    next if f == flavor
-
-    ignore "assets/images/#{f}/*"
-    ignore "assets/stylesheets/flavors/#{f}.*"
-  end
 
   # Use Relative Assets
   activate :relative_assets
@@ -74,33 +64,16 @@ helpers PageNavigationHelper
 helpers DocumentHelper
 
 helpers do
-  # Returns the current environment flavor
-  #
-  # @example Run Middleman for Skroutz
-  #   FLAVOR=skroutz bundle exec middleman server
-  #   flavor #=> 'skroutz'
-  #
-  # @example Build website for Alve
-  #   FLAVOR=alve bundle exec middleman build
-  #   flavor #=> 'alve'
-  #
-  # @return [String] the current flavor
-  def flavor
-    ENV['FLAVOR'] || (req.present? && req.params['flavor']) || 'skroutz'
-  end
-
-  # Shorthand for data[flavor]
-  #
   # @return [String] Data of the current flavor
   def settings
-    data[flavor]
+    data.info
   end
 
   # Returns the default Page title of the site
   #
   # @return [String] the default Page title
   def site_title
-    "#{settings.site_name} #{t('titles.docs')}".titleize
+    "Api Internal Documentation"
   end
 
   # Builds the Page title of the current page
@@ -113,17 +86,12 @@ helpers do
   def page_title(page)
     return site_title if page.title.nil? || page.title.empty?
 
-    title = t("titles.#{page.title}",
-              flavor: settings.site_name.capitalize,
-              default: ["docs.#{page.parent}.#{page.title}".to_sym,
-                        page.title.to_s.titleize])
+    title = "#{page.title.to_s.titleize}"
 
     if page.parent.nil?
       parent_title = site_title
     else
-      parent_title = t("titles.#{page.parent}",
-                       flavor: settings.site_name.capitalize,
-                       default: site_title)
+      parent_title = "#{page.parent}"
     end
 
     "#{title} | #{parent_title}"
@@ -132,9 +100,9 @@ end
 
 # Initializers
 
-# Set API responses output directory per flavor
+# Set API responses output directory
 ResponseMate.setup do |config|
-  config.output_dir = "./resources/responses/#{flavor}"
+  config.output_dir = "./resources/responses"
 end
 
 activate :deploy do |deploy|

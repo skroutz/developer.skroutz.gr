@@ -20,3 +20,6 @@
 # Ignore deploy files
 /config/deploy.rb
 /config/deploy/*.rb
+
+# Ignore response mate enviroment
+/response_mate/environment.yml

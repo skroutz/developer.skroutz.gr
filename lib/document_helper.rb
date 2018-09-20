@@ -11,13 +11,9 @@ module DocumentHelper
     doc.featured == true
   end
 
-  def flavored?(doc)
-    doc.flavors.blank? || (doc.flavors.present? && doc.flavors.include?(flavor))
-  end
-
   def featured
     data.docs.select do |_, doc|
-      featured?(doc) && !deprecated?(doc) && flavored?(doc)
+      featured?(doc) && !deprecated?(doc)
     end
   end
 
@@ -26,9 +22,5 @@ module DocumentHelper
     md = size > 6 ? 0 : 6 - size
 
     "col-sm-offset-#{sm} col-md-offset-#{md}"
-  end
-
-  def localized?(page)
-    !page.data.locale.nil? && !page.data.locale[flavor].nil?
   end
 end

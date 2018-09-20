@@ -1,5 +1,6 @@
 apiv3:
   base: 'api/v3/'
+  title: 'API v3.2'
   featured: true
   icon: 'fa-code'
   pages:
@@ -8,12 +9,12 @@ apiv3:
     - { title: 'changelog' }
     - { title: 'category' }
     - { title: 'sku' }
-    - { title: 'book', skip_flavors: ['alve', 'scrooge'] }
+    - { title: 'book' }
     - { title: 'product' }
     - { title: 'shop' }
     - { title: 'manufacturer' }
     - { title: 'search' }
-    - { title: 'ecommerce', skip_flavors: ['alve', 'scrooge'] }
+    - { title: 'ecommerce' }
     - { title: 'flag' }
     - { title: 'filter_groups' }
     - { title: 'user' }
@@ -22,6 +23,7 @@ apiv3:
 
 authorization:
   base: 'authorization/'
+  title: 'Authorization'
   featured: true
   icon: 'fa-lock'
   pages:

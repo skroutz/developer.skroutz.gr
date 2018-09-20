@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= site_title %></title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <%= favicon_tag 'favicon.ico' %>
+
+    <%= stylesheet_link_tag 'style', media: 'all' %>
+    <%= stylesheet_link_tag 'layouts/one_col' %>
+    <%= stylesheet_link_tag "flavors/#{flavor}" %>
+
+    <%= javascript_include_tag  'application' %>
+
+    <%# HTML5 support for IE8 %>
+    <!--[if lt IE 9]>
+    <%= javascript_include_tag 'http://html5shiv.googlecode.com/svn/trunk/html5.js' %>
+    <![endif]-->
+  </head>
+
+  <body class="error-page <%= page_classes %>">
+    <div id="page">
+
+      <%# Header %>
+      <%= partial 'partials/header' %>
+
+      <%# Sidebar %>
+      <%= partial 'partials/sidebar' %>
+
+      <div id="main">
+        <div class="container-fluid container-cover cover-light">
+          <div class="container">
+            <div class="row">
+              <div class="container-error">
+                <div class="error-brand"></div>
+                <h1 class="error-code">404</h1>
+                <p class="error-message text-center-sm">Sorry, the page you requested does not exist.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="container clearfix"/>
+
+    <%# Footer %>
+    <%= partial 'partials/footer' %>
+
+    <%# Back To Top %>
+    <%= partial 'partials/back_to_top' %>
+
+    <%# Google Analytics %>
+    <%= partial 'partials/google_analytics' %>
+  </body>
+</html>

@@ -1,0 +1,470 @@
+---
+parent: apiv3
+title: changelog
+---
+
+# Changelog <%= edit_link %>
+
+## 2018-02-01 - v3.2.1
+
+Enable filtering by `shop_id`, `distance` and `availability` in <%= link_to 'SKU listing', '/api/v3/sku', anchor: 'list-skus-of-specific-category' %>.
+
+:
+
+Enable filtering by `size`, `distance`, `availability` and `zero_installments` in <%= link_to 'SKU products', '/api/v3/product', anchor: 'filtering' %>.
+
+:
+
+Expose attributes `web_url` & `reviewable` in <%= link_to 'Books', '/api/v3/book' %>.
+
+:
+
+Expose attribute `is_staff` in <%= link_to 'User', '/api/v3/user' %>.
+
+:
+
+Expose attributes `description` & `sizes` in <%= link_to 'Sku', '/api/v3/sku' %>.
+
+: This is a truncated version. The full version can be found in <%= link_to 'Sku specifications', '/api/v3/sku', anchor: 'retrieve-an-skus-specifications' %> meta.
+
+## 2018-02-01 - v3.2.0
+
+New Book resource. Explore all the endpoints in the <%= link_to 'Books', '/api/v3/book' %> section.
+
+:
+
+Add endpoint to find shop locations based on geolocation in <%= link_to 'Shop', '/api/v3/shop', anchor: 'find-shop-locations-with-geolocation' %>.
+
+:
+
+New endpoints to create / update / delete SKU reviews. <%= link_to 'SKU reviews', '/api/v3/sku', anchor: 'retrieve-a-sku-review-form' %>
+
+:
+
+New endpoints to create / update / delete User addresses. <%= link_to 'User addresses', '/api/v3/user', anchor: 'retrieve-user-addresses' %>
+
+:
+
+Expose attribute `blp` in <%= link_to 'Product', '/api/v3/product' %>.
+
+: This attribute contains the shipping, payment_method and total cost of the product according
+to the <%= link_to 'Personalization', '/api/v3/product', anchor: 'show-personalization-info' %> info.
+
+Expose attributes `reviewable, adult, onclick_behavior, show_spec_summary, unit_price_label` in <%= link_to 'Category', '/api/v3/category' %>.
+
+:
+
+Expose attributes `reviewable, name_source, unit_price` in <%= link_to 'Sku', '/api/v3/sku' %>.
+
+:
+
+Do not return price history data for too new SKUs in <%= link_to 'Sku Price History', '/api/v3/sku', anchor: 'retrieve-a-skus-price-history' %>.
+
+:
+
+Do not return OEM Manufacturers for categories with tiles layout in <%= link_to 'Category Manufacturers', '/api/v3/category', anchor: 'list-a-categorys-manufacturers' %>.
+
+:
+
+Expose attributes `created_at, email, birthyear, mobile, stats, email_notifications` in <%= link_to 'User', '/api/v3/user' %>.
+
+:
+
+Add endpoint to update User profile information in <%= link_to 'User', '/api/v3/user', anchor: 'update-profile-information' %>.
+
+:
+
+Add endpoint to list User saved orders in <%= link_to 'User', '/api/v3/user', anchor: 'user-saved-orders' %>.
+
+:
+
+Expose attribute `full_description` in <%= link_to 'SKU Specifications', '/api/v3/sku', anchor: 'retrieve-an-skus-specifications' %> meta if present.
+
+:
+
+Return a dynamic list of order_by methods in <%= link_to 'Category SKUS', '/api/v3/sku', anchor: 'list-skus-of-specific-category' %>.
+
+:
+
+Show adult content in <%= link_to 'Category', '/api/v3/Category' %> and <%= link_to 'Search', '/api/v3/search' %>.
+
+:
+
+<%= link_to 'List favorites', '/api/v3/favorites', anchor: 'list-favorites' %> and <%= link_to 'List favorites belonging to list', '/api/v3/favorites', anchor: 'list-favorites-belonging-to-list' %> do not return `owned` favorites.
+
+: To fetch them, use `?owned=true`
+
+## 2017-02-17 - v3.1.3
+
+Expose optional attribute `skus_reviews_aggregation` in <%= link_to 'Sku reviews',
+                                                                    '/api/v3/sku',
+                                                                    anchor: 'retrieve-an-skus-reviews' %>.
+
+: This is an aggregation of the good / bad / so-so key points selected for that SKU.
+
+Expose attribute `sentiments` in <%= link_to 'Sku reviews',
+                                             '/api/v3/sku',
+                                             anchor: 'retrieve-an-skus-reviews' %>.
+
+: Hash with the positive / mediocre / negative key points selected for that SKU.
+
+
+Allow sorting SKU reviews by `most_helpful` <%= link_to 'Sku reviews',
+                                                        '/api/v3/sku',
+                                                        anchor: 'retrieve-an-skus-reviews' %>.
+
+: The default sorting method remains `most_recent`.
+
+Expose `own_review` field for logged on users in <%= link_to 'Sku reviews',
+                                                             '/api/v3/sku',
+                                                             anchor: 'retrieve-an-skus-reviews' %>.
+
+: `own_review` can be fetched without the need to paginate all reviews in order to find it.
+
+
+
+## 2016-11-24 - v3.1.2
+
+Expose attribute `family_id` in <%= link_to 'Category', '/api/v3/category' %>.
+
+: Contains the family id of the category (do not confuse with parent id).
+
+
+## 2016-11-18 - v3.1.1
+
+### Introducing sparse fieldsets
+
+You can read more about it in our <%= link_to 'Sparse fieldsets',
+                                              '/api/v3',
+                                              anchor: 'sparse-fieldsets' %>
+section.
+
+New endpoint, `GET` `/api/categories/{category_id}/specifications/`
+: List category specifications.
+<%= link_to 'Read more', '/api/v3/category', anchor: 'list-a-categorys-specifications' %>
+
+Expose attribute `comparable` in <%= link_to 'SKU', '/api/v3/sku' %>.
+
+: Boolean attribute. True when the SKU can be used in a comparison.
+
+Expose attribute `shipping_cost_enabled` in <%= link_to 'Shop', '/api/v3/shop' %>.
+
+: Boolean attribute. True when Shop has added shipping rules.
+
+## 2016-10-5 - v3.1.0
+
+### Introducing API minor version support
+
+You can read more about it in our <%= link_to 'Versioning',
+                                              '/api/v3',
+                                              anchor: 'versioning' %>
+section.
+
+* Error responses are normalized into a common format. Read more about it in the
+<%= link_to 'Error Handling',
+            '/api/v3',
+            anchor: 'error-handling' %>
+section.
+
+
+Expose attribute `favorited` in <%= link_to 'Category Skus',
+                                            '/api/v3/sku',
+                                            anchor: 'list-skus-of-specific-category' %>.
+
+: This attribute signifies whether the user has favorited the SKU (available for user authenticated requests).
+
+Expose attribute `immediate_pickup` in <%= link_to 'Product',
+                                                   '/api/v3/product' %>.
+
+: Boolean value that's set to true when product has immediate availability.
+
+## 2016-10-4 - v3.0.23
+
+* Shop `review_score` is now rounded to 1 decimal point in <%= link_to 'Shop',
+                                                                       '/api/v3/shop',
+                                                                       anchor: 'retrieve-a-single-shop' %>.
+
+Expose attribute `i` in <%= link_to 'Search Autocomplete',
+                                    '/api/v3/search',
+                                    anchor: 'autocomplete' %>.
+
+: This attribute is an index that can be used as the starting point from where the keyphrase should be highlighted.
+
+Expose attribute `order` in <%= link_to 'Sku specification',
+                                        '/api/v3/sku',
+                                        anchor: 'retrieve-an-skus-specifications' %>.
+
+: Clients can use this field to ensure the specifications are in the correct order.
+Additionally the specifications are now returned in the correct order to begin with.
+
+Expose attribute `sizes` in <%= link_to 'Products',
+                                        '/api/v3/product',
+                                        anchor: 'retrieve-a-single-product' %>.
+
+: A mapping to other sizes is also provided.
+
+Remove attribute `name`  in <%= link_to 'User',
+                                        '/api/v3/user' %>.
+
+: The `name` attribute was not used and it was always returning 'null'.
+
+Expose attribute `type` in <%= link_to 'User',
+                                       '/api/v3/user' %>.
+
+: A user can register through skroutz or by choosing a 3rd provider like Facebook or Google.
+The `type` attribute contains this info.
+
+Expose optional attribute `sku_rating_breakdown` in <%= link_to 'Sku reviews',
+                                                                '/api/v3/sku',
+                                                                anchor: 'retrieve-an-skus-reviews' %>.
+
+: This is a summary of sku reviews. Contains the total amount of votes for each star.
+
+Expose attribute `extra_info` in <%= link_to 'Shop',
+                                             '/api/v3/shop',
+                                             anchor: 'retrieve-a-single-shop' %>.
+
+: The attribute is a hash containing 2 fields: `time_on_platform` & `orders_per_week`.
+
+#### Shop review changes
+
+&nbsp;&nbsp; Due to shop reviews changing from a 5 star rating system to a binary system (positive / negative)
+&nbsp;&nbsp; and moving to a more structured approach, the following changes are made:
+
+Expose attribute `negative` in <%= link_to 'Shop review',
+                                           '/api/v3/shop',
+                                           anchor: 'retrieve-a-shops-reviews' %>.
+Expose attribute `reasons` in <%= link_to 'Shop review',
+                                          '/api/v3/shop',
+                                          anchor: 'retrieve-a-shops-reviews' %>.
+
+: An array list of reasons the user selected. The `negative` field above tells if the reasons are negative or positive.
+
+Expose optional attribute `shop_rating_breakdown` in <%= link_to 'Shop review',
+                                                                 '/api/v3/shop',
+                                                                 anchor: 'retrieve-a-shops-reviews' %>.
+
+: This is a summary of shop reviews. Contains the total amount of votes for each impression (positive / negative).
+
+Expose attribute `to_positive_reasons` in <%= link_to 'Shop',
+                                                      '/api/v3/shop',
+                                                      anchor: 'retrieve-a-single-shop' %>.
+
+: An array list of positive reasons for the shop aggregated by all reviews.
+
+## 2016-04-19 - v3.0.22
+
+* Add optional sku review linked resource in <%= link_to 'SKU Review Vote',
+                                                         '/api/v3/sku',
+                                                         anchor: 'vote-a-skus-review' %>.
+
+Expose attribute `helpful` in <%= link_to 'SKU Review',
+                                           '/api/v3/sku',
+                                           anchor: 'retrieve-an-skus-reviews' %>.
+
+: This attribute signifies whether the user has voted the review as helpful or not (available for user authenticated requests).
+
+## 2016-02-02 - v3.0.21
+
+* Add <%= link_to 'Flag', '/api/v3/flag' %> resource.
+* Add SKU Review <%= link_to 'flagging endpoint',
+                             '/api/v3/sku/',
+                             anchor: 'flag-a-skus-review' %>.
+
+Expose new attribute `flagged` in <%= link_to 'SKU', '/api/v3/sku/' %>.
+: Signifies whether the user has flagged the review (available for user authenticated requests).
+
+## 2016-01-22 - v3.0.20
+
+Add `latest_reviews_count` info to <%= link_to 'Shop', '/api/v3/shop' %>.
+: This attribute denotes the number of reviews taken into account for review score calculation.
+
+## 2016-01-21 - v3.0.19
+
+Expose attribute `votes_count` <%= link_to 'SKU Review',
+                                           '/api/v3/sku',
+                                           anchor: 'retrieve-an-skus-reviews' %>.
+
+: This attribute signifies the total number of users who have voted for this review.
+
+## 2015-10-31 - v3.0.18
+
+Expose new attribute `layout_mode` in <%= link_to 'Category', '/api/v3/category/' %>.
+: The layout_mode attribute is now present in the representation of categories.
+This attribute indicates how a category is going to be displayed.
+
+* `list` value is used for categories where the title and specs are more important than the image.
+* `tiles` value is used for categories where the title, specs and image are equally important.
+* `wide_tiles` value is used for categories where the image is more important than the title and specs.
+
+This new attribute is a replacement for `fashion` and `show_in_tiles` attributes which were semantically misleading.
+
+## 2015-08-05 - v3.0.17
+
+New endpoint, `POST` `/api/skus/{sku_id}/reviews/{review_id}/votes{?vote}`
+: SKU review votes can now be placed (requires `publish_sku_review_actions` permission). <%= link_to 'Read more', '/api/v3/sku', anchor: 'vote-a-skus-review' %>
+
+Expose attribute `helpful_votes_count` <%= link_to 'SKU Review',
+                                                   '/api/v3/sku',
+                                                   anchor: 'retrieve-an-skus-reviews' %>.
+
+: This attribute signifies the number of users who have voted the review as helpful.
+
+
+Expose attribute `voted` in <%= link_to 'SKU Review',
+                                        '/api/v3/sku',
+                                        anchor: 'retrieve-an-skus-reviews' %>.
+: The attribute is present only for requests with authorized user. Provides information
+on whether the user has voted the review or not.
+
+New OAuth2.0 permission added <%= link_to 'publish_sku_review_actions',
+                                          '/authorization/permissions/',
+                                          anchor: 'obtainable-permissions' %>.
+: Required to perform review actions (currently: voting).
+
+## 2015-07-13 - v3.0.16
+Expose attribute `format` in <%= link_to 'Location', '/api/v3/shop/', anchor: 'list-shop-locations' %>.
+: The location format attribute is now present in the representation of locations.
+This attribute states whether the locations' address is `structured` or `unstructured`.
+If the format is `structured` then the specific address fields can be retrieved when
+<%= link_to 'embedding the address', '/api/v3/shop', anchor: 'retrieve-a-single-shop-location' %>.
+If the format is `unstructured` then the relevant address fields will be `null`.
+
+## 2015-05-06 - v3.0.15
+New endpoint, `GET` `/skus/{id}/price_history`
+: Provides historical data about the average and lowest price for a <%= link_to 'Sku', '/api/v3/sku/' %>.
+<%= link_to 'Read more', '/api/v3/sku', anchor: 'retrieve-a-skus-price-history' %>
+
+## 2014-04-23 - v3.0.14
+Expose attribute `expenses` in <%= link_to 'Product', '/api/v3/product' %>.
+: The product expenses attribute is now present in the representation of products.
+This attribute states the exact shipping cost for a specific product if set by the shop (otherwise null).
+
+## 2014-03-27 - v3.0.13
+Add `shipping` info to <%= link_to 'Shop', '/api/v3/shop' %>.
+
+## 2014-03-19 - v3.0.12
+Add `review_rating` to `sku_review` <%= link_to 'Notifications', '/api/v3/notifications' %>.
+: When the `etype` of a `Notification` is `sku_review` the `review_rating` attribute will be present.
+
+## 2014-03-16 - v3.0.11
+New endpoint, `POST` `/notifications/view{?ids[]}`
+: Marking notifications as viewed can now be performed.
+<%= link_to 'Read more', '/api/v3/notifications', anchor: 'mark-notifications-as-viewed' %>.
+
+## 2014-03-16 - v3.0.10
+Include associations of <%= link_to 'Notification', '/api/v3/notifications/' %>
+: The included associations are the following:
+
+When the <%= link_to 'Notification', '/api/v3/notifications/' %> type is:
+
+* `price_up`
+* `price_drop`
+* `sku_review`
+* `availability_true`
+* `availability_false`
+
+Then a <%= link_to 'Sku', '/api/v3/sku/' %> is embedded in the
+<%= link_to 'Notification', '/api/v3/notifications/' %> having only the following fields:
+
+~~~
++ id
++ display_name
++ images
++ click_url
++ virtual
++ future
+~~~
+
+---
+
+When the <%= link_to 'Notification', '/api/v3/notifications/' %> type is:
+
+* `price_up`
+* `price_drop`
+
+Then we add a `category_name` attribute mirroring the `name` attribute of the
+<%= link_to 'Category', '/api/v3/category/' %> to which the associated
+<%= link_to 'Sku', '/api/v3/sku/' %> belongs.
+
+---
+
+When the <%= link_to 'Notification', '/api/v3/notifications/' %> type is:
+
+* `sku_review`
+
+Then the User who created the review is embedded in the
+<%= link_to 'Notification', '/api/v3/notifications/' %> having only the following fields:
+
+~~~
++ id
++ username
++ avatar
+~~~
+
+Also a `review_text` attribute is added for non-aggregated (aggregated: false) `sku_review` notifications.
+
+## 2014-02-11 - v3.0.9
+Change the representation of <%= link_to 'Notification', '/api/v3/notifications/' %>
+: The changes in fields are the following:
+
+### Added
+\+ eventable_name
+\+ eventable_url
+\+ event_text
+
+### Removed
+
+\- user_notified
+\- user_id
+\- subscription_id
+\- mail_event
+
+## 2014-01-28 - v3.0.8
+Allow ordering by 'rating' of <%= link_to 'SKUs', '/api/v3/sku/', anchor: 'list-skus-of-specific-category' %>
+: The new ordering option enables ordering of SKUs based on User provided reviews.
+
+## 2014-12-24 - v3.0.7
+
+Expose attribute path in <%= link_to 'Category', '/api/v3/category', anchor: 'list-all-categories' %>
+: The category path attribute is now present in the representation of categories.
+The path is a comma separated string of category IDs, from the root up to the
+category id which resembles a category path in the categories tree structure.
+
+## 2014-12-16 - v3.0.6
+
+Remove attribute filter_type from <%= link_to 'Filter', '/api/v3/filters' %>
+: Filter type information can now be accessed from the parent <%= link_to 'Filter Group', '/api/v3/filter_groups' %>.
+
+Expose attribute filter_type in <%= link_to 'Filter Groups', '/api/v3/filter_groups', anchor: 'list-filtergroups' %>
+: The filter type attribute is now present in the representation of filter groups.
+
+## 2014-12-08 - v3.0.5
+
+Hide products of future <%= link_to 'SKUs', '/api/v3/sku/', anchor: 'retrieve-an-skus-products' %>, `GET /api/sku/:sku_id/products`
+: SKUs marked as "future" now respond with an empty list of Products.
+
+## 2014-12-04 - v3.0.4
+
+Add `q` metadata to <%= link_to 'Search', '/api/v3/search' %>, `GET /api/search`
+: The applied search query is reflected in the `q` key of the metadata.
+
+## 2014-10-08 - v3.0.3
+
+Cache <%= link_to 'Filter Groups', '/api/v3/filter_groups', anchor: 'list-filtergroups' %>, `GET /api/categories/:category_id/filter_groups`
+: Default cache now is 5 minutes via `cache-control: max-age=300, private`.
+
+## 2014-10-08 - v3.0.2
+
+Review sorting is changed in <%= link_to 'SKU reviews', '/api/v3/sku', anchor: 'retrieve-an-skus-reviews' %>, `GET /api/sku/:sku_id/reviews`
+: Most recent non-demoted reviews are now returned first.
+
+## 2014-09-15 - v3.0.1
+
+New endpoint, `GET` `/shops/:shop_id/products/search{?shop_uid}`
+: Search is now provided for products of a specified shop by shop_uid,
+<%= link_to 'Read more', '/api/v3/product', anchor: 'search-for-products' %>.
+
+New attribute for <%= link_to 'Product', '/api/v3/product' %>
+: Product representation now contains `shop_uid` attribute, which stands for the
+product identifier as the associated shop specifies it the <%= link_to 'xml feed', '/feedspec', anchor: 'unique-id' %>.

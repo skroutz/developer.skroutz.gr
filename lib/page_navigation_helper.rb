@@ -37,9 +37,8 @@ module PageNavigationHelper
     html = "<a class='collapse-btn #{active_parent_link(doc)}' "
     html << "data-toggle='collapse' data-parent='.nav-sidebar' "
     html << "href='#nav-sidebar-#{key}'>"
-    html << t("titles.#{key}",
-              flavor: settings.site_name.capitalize)
-    html << "<span class='label label-default pull-right'>#{t('common.deprecated')}</span>" if deprecated?(doc)
+    html << "#{doc.title}"
+    html << "<span class='label label-default pull-right'>deprecated</span>" if deprecated?(doc)
     html << "</a>"
 
     html
@@ -56,8 +55,7 @@ module PageNavigationHelper
 
     html = "<a class='navbar-link #{active_child_link(page_url)}' "
     html << "href='#{page_url}'>"
-    html << t("docs.#{doc_key}.#{page.title}",
-              flavor: settings.site_name.capitalize)
+    html << "#{page.title.capitalize}"
     html << "</a>"
 
     html
@@ -70,8 +68,8 @@ module PageNavigationHelper
     url = current_page.source_file.sub(/^(.*)\/source/,
       "#{settings.github_profile}/developer.skroutz.gr/blob/master/source")
 
-    link_to "<span>#{t('common.edit_on_github')}</span>", url,
-      title: t('common.edit_on_github'), class: 'btn-edit-github'
+    link_to "<span>Edit the file on GitHub</span>", url,
+            title: "Edit the file on GitHub", class: 'btn-edit-github'
   end
 
   # Builds a Bootstrap List component for a given list of items.
@@ -119,42 +117,5 @@ module PageNavigationHelper
 
     html << '</ul></li></ul>'
     html
-  end
-
-  # Builds an array of hashes with the available locales for a given page.
-  #
-  # @param [Hash] page the page to build the array for
-  # @return [Array] the array list
-  def locale_links(page)
-    return [] unless localized?(page)
-
-    list_items = Array.new
-
-    page.data.locale[flavor].each do |lang|
-      active = (lang == I18n.locale.to_s)
-
-      if lang == I18n.default_locale.to_s
-        if lang == I18n.locale.to_s
-          url = page.url
-        else
-          url = page.url.gsub("/#{I18n.locale}/", '/')
-        end
-      else
-        if I18n.locale == I18n.default_locale
-          url = "/#{lang}#{page.url}"
-        else
-          url = page.url.gsub("/#{I18n.locale}/", "/#{lang}/")
-        end
-      end
-
-      html = "<a class='nav-link' href='#{url}'>"
-      html << "<span class='lang-code'>#{lang}</span>"
-      html << "<span class='lang-name'>#{t('lang.'+lang)}</span>"
-      html << '</a>'
-
-      list_items << { html: html, active: active }
-    end
-
-    list_items
   end
 end

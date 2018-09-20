@@ -3,35 +3,22 @@
 
     <%# Sidebar Search - check JavaScript %>
     <h5 class="hidden heading visible-xs-hidden">
-      <i class="fa-search"></i>
-      <%= t('sidebar.search') %>
+      <i class="fa-search"></i>"Search"
     </h5>
     <div data-ui-scope="swiftypeSidebar"></div>
 
-    <%# Available locales %>
-    <% unless current_page.data.locale.nil? %>
-      <h5 class="heading visible-xs-block">
-        <i class="fa-globe"></i>
-        <%= t('sidebar.language') %>
-      </h5>
-      <%= bs_list(locale_links(current_page), 'nav-lang') %>
-    <% end %>
 
     <%# Docs %>
     <h5 class="heading">
       <i class="fa-graduation-cap"></i>
-      <%= t('titles.docs') %>
+      Developers Documentation
     </h5>
     <ul class="nav nav-sidebar">
     <% data.docs.each do |key, doc| %>
-
-      <%# Skip Doc if not supported for current flavor %>
-      <% next if doc.flavors.present? && !doc.flavors.include?(flavor) %>
-
       <li>
         <%# without sub-menu %>
         <% if doc.pages.nil? %>
-          <%= link_to t("titles.#{key}", flavor: flavor),
+          <%= link_to "#{key}",
                       doc.base,
                       class: "nav-link #{active_parent_link(doc)}" %>
 
@@ -41,7 +28,6 @@
 
           <div id="<%= "nav-sidebar-#{key}" %>" class="nav-menu-sidebar collapse <%= active_parent_link(doc) %>">
             <% doc.pages.each do |page| %>
-              <% next if page.skip_flavors&.include?(flavor) %>
               <%= sidebar_child_link(key, doc, page) %>
             <% end %>
           </div>
@@ -49,52 +35,6 @@
       </li>
 
     <% end %>
-    </ul>
-
-    <%# Extras %>
-    <h5 class="heading">
-      <i class="fa-question"></i>
-      <%= t('titles.extra') %>
-    </h5>
-    <ul class="nav nav-sidebar">
-      <li>
-        <%= link_to t('titles.support'),
-                    '/support/',
-                    class: "nav-link #{active_parent_link({ base: 'support' })}" %>
-      </li>
-      <li>
-        <%= link_to t('titles.contribute'),
-                    '#nav-sidebar-contribution',
-                    class: "collapse-btn #{active_parent_link({ base: 'contribution' })}",
-                    'data-toggle' => 'collapse',
-                    'data-parent' => '.nav-sidebar' %>
-
-        <div id="nav-sidebar-contribution" class="nav-menu-sidebar collapse <%= active_parent_link({ base: 'contribution' }) %>">
-          <%= link_to t('contribute.getting_started'),
-                      '/contribution/',
-                      class: "navbar-link #{active_child_link('/contribution/')}" %>
-          <%= link_to t('contribute.new'),
-                      '/contribution/new',
-                      class: "navbar-link #{active_child_link('/contribution/new/')}" %>
-          <%= link_to t('contribute.style'),
-                      '/contribution/style',
-                      class: "navbar-link #{active_child_link('/contribution/style/')}" %>
-        </div>
-      </li>
-      <li>
-        <%= link_to t('index.oss.github',
-                    flavor: settings.site_name.titleize),
-                    settings.github_profile,
-                    class: 'nav-link' %>
-      </li>
-      <% if settings.engineering_blog_domain.present? %>
-        <li>
-          <%= link_to t('sidebar.engineering_blog',
-                      flavor: settings.site_name.titleize),
-                      "http://#{settings.engineering_blog_domain}",
-                      class: 'nav-link' %>
-        </li>
-      <% end %>
     </ul>
 
     <%# Footer %>
