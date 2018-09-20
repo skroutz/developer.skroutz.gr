@@ -19,11 +19,15 @@ activate :directory_indexes
 # Relative URLs
 set :relative_links, true
 
-set :site_url, ""
 
 # Syntax Highlight
 activate :syntax, line_numbers: false
 
+configure :development do
+  activate :livereload
+  set :debug_assets, true
+  set :site_url, ""
+end
 
 # MarkDown
 set :markdown_engine, :kramdown

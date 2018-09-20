@@ -9,6 +9,7 @@ gem 'middleman-syntax', '~> 2.0.0'
 gem 'json', '~> 1.8.6'
 gem 'rack', '~> 1.5.4'
 gem 'middleman-deploy', '~> 1.0'
+gem 'middleman-livereload', '~> 3.4.3'
 
 # API Helpers
 gem 'response_mate', '~> 0.4.1'
