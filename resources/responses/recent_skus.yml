@@ -1,0 +1,63 @@
+---
+:request:
+  :url: https://api.skroutz.gr/profile/recent_skus
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3.2
+    :authorization: Bearer o6OWRZU0-Nk-DX8t7n0tHOoAxnaF9UPp6oN4dbDU6qPAAacmSlnQnr3xxFoOo8a2eZtI7QhizVTp-dqRwzVrzA==
+  :verb: :get
+:response:
+  :status: 200
+  :headers:
+    date: Thu, 20 Sep 2018 14:20:50 GMT
+    connection: close
+    server: h2o (Debian)
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '98'
+    x-ratelimit-reset: '1537453260'
+    etag: W/"2b402c621b20f9ee7ad94d12363ab098"
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '206668472'
+    x-runtime: '0.188646'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: rontok_ssl
+    x-varnish: '206668471'
+    age: '0'
+    via: 1.1 varnish (Varnish/5.0)
+    x-origin: lb2
+    x-cache: MISS
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    strict-transport-security: max-age=15768000;
+    transfer-encoding: chunked
+  :body: '{"skus":[{"id":14158514,"ean":"","pn":"","name":"Airflite Krom Red","display_name":"Icon
+    Airflite Krom Red","category_id":573,"first_product_shop_info":"1290|Lyris|lyris","click_url":null,"price_max":303.7,"price_min":303.7,"reviewscore":0.0,"shop_count":1,"plain_spec_summary":"Full
+    Face, Sun Visor / Πλήρως Αφαιρούμενο Εσωτερικό","manufacturer_id":12073,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"https://d.scdn.gr/images/sku_main_images/014158/14158514/medium_20180227120915_icon_airflite_krom_red.jpeg","alternatives":[]},"web_uri":"https://www.skroutz.gr/s/14158514/Icon-Airflite-Krom-Red.html","comparable":true,"reviewable":true,"name_source":"display_name","sizes":null,"ecommerce_enabled":false,"show_specifications":true,"show_spec_summary":true},{"id":11540245,"ean":"","pn":"","name":"ALFA
+    GOLD LIGHT ΠΑΡΑΦΙΝΕΛΑΙΟ 1L","display_name":"ALFA GOLD LIGHT ΠΑΡΑΦΙΝΕΛΑΙΟ 1L","category_id":2927,"first_product_shop_info":"2245|Agora-zw|agorazw","click_url":"http://www.skroutz.gr/products/show/28427073","price_max":1.7,"price_min":1.7,"reviewscore":0.0,"shop_count":1,"plain_spec_summary":"","manufacturer_id":null,"future":false,"reviews_count":0,"virtual":true,"images":{"main":"https://b.scdn.gr/images/sku_main_images/011540/11540245/medium_20180802100247_alfa_gold_light_parafinelaio_1l.jpeg","alternatives":[]},"web_uri":"https://www.skroutz.gr/c/2927/ekklisiastika-eidi/sku/11540245","comparable":false,"reviewable":false,"name_source":"display_name","sizes":null,"ecommerce_enabled":false,"show_specifications":false,"show_spec_summary":false},{"id":8385087,"ean":"","pn":"","name":"-
+    ΣΤΑΥΡΟΣ ΛΑΙΜΟΥ ΞΥΛΙΝΟΣ ΔΥΟ ΟΨΕΩΝ no.12","display_name":"- ΣΤΑΥΡΟΣ ΛΑΙΜΟΥ ΞΥΛΙΝΟΣ
+    ΔΥΟ ΟΨΕΩΝ no.12","category_id":2927,"first_product_shop_info":"2575|Iconostasi|iconostasi","click_url":"http://www.skroutz.gr/products/show/22401234","price_max":5.0,"price_min":5.0,"reviewscore":0.0,"shop_count":1,"plain_spec_summary":"","manufacturer_id":null,"future":false,"reviews_count":0,"virtual":true,"images":{"main":"https://c.scdn.gr/images/sku_main_images/008385/8385087/medium_20180809150454_stayros_laimou_xylinos_dyo_opseon_no_12.jpeg","alternatives":[]},"web_uri":"https://www.skroutz.gr/c/2927/ekklisiastika-eidi/sku/8385087","comparable":false,"reviewable":false,"name_source":"display_name","sizes":null,"ecommerce_enabled":false,"show_specifications":false,"show_spec_summary":false},{"id":8133892,"ean":"","pn":"","name":"Σετ
+    μνημοσύνου Νο1 (τσάντα χάρτινη χούφτα, σακουλάκι opallina, κουβέρ με μεγάλο κουτάλι)","display_name":"Σετ
+    μνημοσύνου Νο1 (τσάντα χάρτινη χούφτα, σακουλάκι opallina, κουβέρ με μεγάλο κουτάλι)","category_id":2927,"first_product_shop_info":"3366|Efodiastiki|efodiastiki","click_url":"http://www.skroutz.gr/products/show/22331633","price_max":0.25,"price_min":0.25,"reviewscore":0.0,"shop_count":1,"plain_spec_summary":"","manufacturer_id":null,"future":false,"reviews_count":0,"virtual":true,"images":{"main":"https://c.scdn.gr/images/sku_main_images/008133/8133892/medium_20180801110910_set_mnimosynou_no1_tsanta_chartini_choufta_sakoulaki_opallina_kouver_me_megalo_koutali.jpeg","alternatives":[]},"web_uri":"https://www.skroutz.gr/c/2927/ekklisiastika-eidi/sku/8133892","comparable":false,"reviewable":false,"name_source":"display_name","sizes":null,"ecommerce_enabled":false,"show_specifications":false,"show_spec_summary":false},{"id":15538676,"ean":"","pn":"","name":"Mi
+    A2 (64GB)","display_name":"Xiaomi Mi A2 (64GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":364.56,"price_min":217.95,"reviewscore":4.71429,"shop_count":51,"plain_spec_summary":"Οθόνη:
+    5.99\", RAM: 4GB, Μνήμη: 64GB, Κάμερα: 12MP + 20MP, Selfie: 20MP, Πυρήνες CPU:
+    4+4","manufacturer_id":15053,"future":false,"reviews_count":35,"virtual":false,"images":{"main":"https://b.scdn.gr/images/sku_main_images/015538/15538676/medium_20180802094443_xiaomi_mi_a2_64gb.jpeg","alternatives":["https://a.scdn.gr/images/sku_images/021644/21644283/20180802094449_dabcf980.jpeg","https://d.scdn.gr/images/sku_images/021644/21644284/20180802094454_6b81a064.jpeg"]},"web_uri":"https://www.skroutz.gr/s/15538676/Xiaomi-Mi-A2-64GB.html","comparable":true,"reviewable":true,"name_source":"display_name","sizes":null,"ecommerce_enabled":false,"show_specifications":true,"show_spec_summary":true},{"id":9758149,"ean":"4719512052129
+    4719512052266 4719512052112","pn":"SGK-4080-KKCM1-US SGK-4080-KKCL1-US SGK-4080-KKCR1-US","name":"Masterkeys
+    Pro M White","display_name":"CoolerMaster Masterkeys Pro M White","category_id":1866,"first_product_shop_info":null,"click_url":null,"price_max":98.3,"price_min":69.9,"reviewscore":4.7,"shop_count":4,"plain_spec_summary":"Μηχανικό
+    Πληκτρολόγιο, Φωτιζόμενα Πλήκτρα","manufacturer_id":797,"future":false,"reviews_count":10,"virtual":false,"images":{"main":"https://d.scdn.gr/images/sku_main_images/009758/9758149/medium_20161107115254_coolermaster_masterkeys_pro_m_white.jpeg","alternatives":["https://c.scdn.gr/images/sku_images/016282/16282980/20161107115235_b869fa10.jpeg","https://a.scdn.gr/images/sku_images/016282/16282982/20161107115243_04efd67c.jpeg","https://c.scdn.gr/images/sku_images/016282/16282989/20161107115249_97668de3.jpeg"]},"web_uri":"https://www.skroutz.gr/s/9758149/CoolerMaster-Masterkeys-Pro-M-White.html","comparable":true,"reviewable":true,"name_source":"display_name","sizes":null,"ecommerce_enabled":false,"show_specifications":true,"show_spec_summary":true},{"id":12427386,"ean":"","pn":"SGK-4090-KKCM1
+    SGK-4090-KKCL1 SGK-4090-KKCR1-US SGK-4090-KKCS1-US","name":"Masterkeys Pro S White
+    Leds","display_name":"CoolerMaster Masterkeys Pro S White Leds","category_id":1866,"first_product_shop_info":null,"click_url":null,"price_max":74.9,"price_min":74.9,"reviewscore":5.0,"shop_count":0,"plain_spec_summary":"Tenkeyless,
+    Μηχανικό Πληκτρολόγιο, Φωτιζόμενα Πλήκτρα","manufacturer_id":797,"future":false,"reviews_count":3,"virtual":false,"images":{"main":"https://c.scdn.gr/images/sku_main_images/012427/12427386/medium_20180216150735_coolermaster_masterkeys_pro_s_white_leds.jpeg","alternatives":["https://d.scdn.gr/images/sku_images/019437/19437391/20180216150720_62b1f0b7.jpeg","https://b.scdn.gr/images/sku_images/019437/19437392/20180216150721_b327abb5.jpeg","https://b.scdn.gr/images/sku_images/019437/19437393/20180216150724_b7b846e1.jpeg","https://a.scdn.gr/images/sku_images/019437/19437394/20180216150727_3e71dc9c.jpeg","https://a.scdn.gr/images/sku_images/019437/19437395/20180216150729_d7f68023.jpeg"]},"web_uri":"https://www.skroutz.gr/s/12427386/CoolerMaster-Masterkeys-Pro-S-White-Leds.html","comparable":true,"reviewable":true,"name_source":"display_name","sizes":null,"ecommerce_enabled":false,"show_specifications":true,"show_spec_summary":true},{"id":14060808,"ean":"","pn":"","name":"ΡΟΔΑ
+    ΑΝΤΑΛΛΑΚΤΙΚΗ ΓΙΑ ΚΑΡΟΤΣΙΑ ΟΙΚΟΔΟΜΙΚΑ - ΚΗΠΟΥ BAX (RUDP3M)","display_name":"ΡΟΔΑ
+    ΑΝΤΑΛΛΑΚΤΙΚΗ ΓΙΑ ΚΑΡΟΤΣΙΑ ΟΙΚΟΔΟΜΙΚΑ - ΚΗΠΟΥ BAX (RUDP3M)","category_id":1179,"first_product_shop_info":"4816|Dealstore|dealstore","click_url":"http://www.skroutz.gr/products/show/33669786","price_max":14.0,"price_min":14.0,"reviewscore":0.0,"shop_count":1,"plain_spec_summary":"","manufacturer_id":15008,"future":false,"reviews_count":0,"virtual":true,"images":{"main":"https://b.scdn.gr/images/sku_main_images/014060/14060808/medium_20180731213509_roda_antallaktiki_gia_karotsia_oikodomika_kipou_bax_rudp3m.jpeg","alternatives":[]},"web_uri":"https://www.skroutz.gr/products/show/33669786","comparable":false,"reviewable":false,"name_source":"display_name","sizes":null,"ecommerce_enabled":false,"show_specifications":false,"show_spec_summary":false},{"id":8435188,"ean":"5210029038464
+    694921442287","pn":"5210029038464 694921442287","name":"Yihao YH-228","display_name":"OEM
+    Yihao YH-228","category_id":1862,"first_product_shop_info":null,"click_url":null,"price_max":14.99,"price_min":9.99,"reviewscore":0.0,"shop_count":9,"plain_spec_summary":"","manufacturer_id":254,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"https://d.scdn.gr/images/sku_main_images/008435/8435188/medium_20160909134508_oem_yihao_yh_228.jpeg","alternatives":["https://d.scdn.gr/images/sku_images/015955/15955088/20160909134458_2324187f.jpeg","https://d.scdn.gr/images/sku_images/015955/15955089/20160909134504_707b0d65.jpeg","https://a.scdn.gr/images/sku_images/015955/15955090/20160909134505_bfd2fc2c.jpeg","https://a.scdn.gr/images/sku_images/015955/15955091/20160909134505_384bc68b.jpeg"]},"web_uri":"https://www.skroutz.gr/s/8435188/OEM-Yihao-YH-228.html","comparable":true,"reviewable":true,"name_source":"display_name","sizes":null,"ecommerce_enabled":false,"show_specifications":true,"show_spec_summary":false},{"id":14037867,"ean":"","pn":"","name":"Redmi
+    Note 5 (64GB)","display_name":"Xiaomi Redmi Note 5 (64GB)","category_id":40,"first_product_shop_info":null,"click_url":null,"price_max":323.64,"price_min":173.0,"reviewscore":4.80574,"shop_count":70,"plain_spec_summary":"Οθόνη:
+    5.99\", RAM: 4GB, Μνήμη: 64GB, Κάμερα: 12MP + 5MP, Selfie: 13MP, Πυρήνες CPU:
+    8","manufacturer_id":15053,"future":false,"reviews_count":453,"virtual":false,"images":{"main":"https://d.scdn.gr/images/sku_main_images/014037/14037867/medium_20180514105413_xiaomi_redmi_note_5_4gb_64gb.jpeg","alternatives":["https://b.scdn.gr/images/sku_images/020543/20543742/20180514105413_2c743953.jpeg","https://a.scdn.gr/images/sku_images/020543/20543743/20180514105420_e42e3fcd.jpeg","https://b.scdn.gr/images/sku_images/020543/20543744/20180514105425_dc03671a.jpeg"]},"web_uri":"https://www.skroutz.gr/s/14037867/Xiaomi-Redmi-Note-5-64GB.html","comparable":true,"reviewable":true,"name_source":"display_name","sizes":null,"ecommerce_enabled":false,"show_specifications":true,"show_spec_summary":true},{"id":11171782,"ean":"","pn":"573CS21143","name":"Liquid
+    Air Armor Μαύρο (Galaxy A5 2017)","display_name":"Spigen Liquid Air Armor Μαύρο
+    (Galaxy A5 2017)","category_id":579,"first_product_shop_info":null,"click_url":null,"price_max":18.9,"price_min":8.9,"reviewscore":5.0,"shop_count":17,"plain_spec_summary":"","manufacturer_id":11647,"future":false,"reviews_count":25,"virtual":false,"images":{"main":"https://a.scdn.gr/images/sku_main_images/011171/11171782/medium_20170524143601_spigen_liquid_air_armor_mayro_galaxy_a5_2017.jpeg","alternatives":[]},"web_uri":"https://www.skroutz.gr/s/11171782/Spigen-Liquid-Air-Armor-%CE%9C%CE%B1%CF%8D%CF%81%CE%BF-Galaxy-A5-2017.html","comparable":false,"reviewable":true,"name_source":"display_name","sizes":null,"ecommerce_enabled":false,"show_specifications":false,"show_spec_summary":false},{"id":14446133,"ean":"","pn":"EX001-22","name":"Rubber
+    Band 22mm EX001-22","display_name":"Optimum Rubber Band 22mm EX001-22","category_id":1330,"first_product_shop_info":"1103|Optimumsport|optimumsports","click_url":null,"price_max":8.9,"price_min":8.9,"reviewscore":0.0,"shop_count":1,"plain_spec_summary":"","manufacturer_id":3121,"future":false,"reviews_count":0,"virtual":false,"images":{"main":"https://d.scdn.gr/images/sku_main_images/014446/14446133/medium_20180327142748_optimum_rubber_band_22mm_ex001_22.jpeg","alternatives":[]},"web_uri":"https://www.skroutz.gr/s/14446133/Optimum-Rubber-Band-22mm-EX001-22.html","comparable":false,"reviewable":true,"name_source":"display_name","sizes":null,"ecommerce_enabled":false,"show_specifications":false,"show_spec_summary":false}]}'
+:created_at: 2018-09-20 17:20:50.065612080 +03:00

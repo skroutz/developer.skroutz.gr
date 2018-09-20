@@ -20,6 +20,7 @@ apiv3:
     - { title: 'user' }
     - { title: 'favorites' }
     - { title: 'notifications' }
+    - { title: 'profile' }
 
 authorization:
   base: 'authorization/'

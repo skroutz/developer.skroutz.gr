@@ -1,0 +1,37 @@
+---
+:request:
+  :url: https://api.skroutz.gr/profile/recent_keyphrases
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3.2
+    :authorization: Bearer o6OWRZU0-Nk-DX8t7n0tHOoAxnaF9UPp6oN4dbDU6qPAAacmSlnQnr3xxFoOo8a2eZtI7QhizVTp-dqRwzVrzA==
+  :verb: :get
+:response:
+  :status: 200
+  :headers:
+    date: Thu, 20 Sep 2018 14:28:15 GMT
+    connection: close
+    content-length: '49'
+    server: h2o (Debian)
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '99'
+    x-ratelimit-reset: '1537453740'
+    etag: W/"66916902169d7925bc69bcba3f7bf071"
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '390134172'
+    x-runtime: '0.033261'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: rontok_ssl
+    x-varnish: '390134171'
+    age: '0'
+    via: 1.1 varnish (Varnish/5.0)
+    x-origin: lb1
+    x-cache: MISS
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    strict-transport-security: max-age=15768000;
+  :body: '{"keyphrases":["oink","boo"]}'
+:created_at: 2018-09-20 17:28:15.385054292 +03:00

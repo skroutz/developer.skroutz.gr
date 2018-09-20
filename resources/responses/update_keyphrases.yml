@@ -1,0 +1,40 @@
+---
+:request:
+  :verb: :put
+  :url: https://api.skroutz.gr/profile/update_keyphrases
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3.2
+    :authorization: Bearer o6OWRZU0-Nk-DX8t7n0tHOoAxnaF9UPp6oN4dbDU6qPAAacmSlnQnr3xxFoOo8a2eZtI7QhizVTp-dqRwzVrzA==
+  :params:
+    :keyphrases:
+    - oink
+    - boo
+:response:
+  :status: 200
+  :headers:
+    date: Thu, 20 Sep 2018 14:20:31 GMT
+    connection: close
+    content-length: '20'
+    server: h2o (Debian)
+    content-type: text/html; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '99'
+    x-ratelimit-reset: '1537453260'
+    cache-control: no-cache
+    x-request-id: '392175559'
+    x-runtime: '0.043512'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: rontok_ssl
+    x-varnish: '392175558'
+    age: '0'
+    via: 1.1 varnish (Varnish/5.0)
+    x-origin: lb1
+    x-cache: MISS
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    strict-transport-security: max-age=15768000;
+  :body: ''
+:created_at: 2018-09-20 17:20:31.691802903 +03:00

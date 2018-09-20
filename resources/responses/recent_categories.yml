@@ -1,0 +1,44 @@
+---
+:request:
+  :url: https://api.skroutz.gr/profile/recent_categories
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3.2
+    :authorization: Bearer o6OWRZU0-Nk-DX8t7n0tHOoAxnaF9UPp6oN4dbDU6qPAAacmSlnQnr3xxFoOo8a2eZtI7QhizVTp-dqRwzVrzA==
+  :verb: :get
+:response:
+  :status: 200
+  :headers:
+    date: Thu, 20 Sep 2018 14:22:33 GMT
+    connection: close
+    content-length: '1055'
+    server: h2o (Debian)
+    content-type: application/json; charset=utf-8
+    vary: Accept-Encoding
+    x-ratelimit-limit: '100'
+    x-ratelimit-remaining: '98'
+    x-ratelimit-reset: '1537453380'
+    etag: W/"8cfe4471ee6036bb8c3d7f3ae6b389dc"
+    cache-control: max-age=0, private, must-revalidate
+    x-request-id: '210050742'
+    x-runtime: '0.049454'
+    x-dns-prefetch-control: 'off'
+    access-control-allow-origin: "*"
+    access-control-allow-methods: HEAD, GET, POST, PUT, DELETE
+    x-app: rontok_ssl
+    x-varnish: '210050741'
+    age: '0'
+    via: 1.1 varnish (Varnish/5.0)
+    x-origin: lb2
+    x-cache: MISS
+    x-cached: skroutz miss(0)
+    accept-ranges: bytes
+    strict-transport-security: max-age=15768000;
+  :body: '{"categories":[{"id":573,"name":"Κράνη Μηχανής","children_count":0,"image_url":"https://d.scdn.gr/ds/categories/573/20171113121102_42d88fd0.jpeg","parent_id":574,"fashion":true,"layout_mode":"list","web_uri":"https://skroutz.gr/c/573/krani-mhxanhs.html","code":"kranh-mhxanwn","family_id":33,"show_manufacturers_filter":true,"adult":false,"onclick_behaviour":"onclick_to_sku_page","show_spec_summary":false,"reviewable":true,"comparable":true,"ecommerce_enabled":false,"path":"76,33,382,574,573","show_specifications":true,"manufacturer_title":"Κατασκευαστές"},{"id":2927,"name":"Εκκλησιαστικά
+    Είδη","children_count":0,"image_url":"https://b.scdn.gr/ds/categories/2927/20180508164942_7357005a.jpeg","parent_id":277,"fashion":true,"layout_mode":"tiles","web_uri":"https://skroutz.gr/c/2927/ekklisiastika-eidi.html","code":"ekklisiastika-eidi","family_id":11,"show_manufacturers_filter":false,"adult":false,"onclick_behaviour":"onclick_to_modal","show_spec_summary":false,"reviewable":false,"comparable":false,"ecommerce_enabled":false,"path":"76,11,261,277,2927","show_specifications":false,"manufacturer_title":"Κατασκευαστές"},{"id":1251,"name":"Ανταλλακτικά
+    Moto","children_count":0,"image_url":"https://d.scdn.gr/ds/categories/1251/20171113121330_5ec2e039.jpeg","parent_id":382,"fashion":false,"layout_mode":"list","web_uri":"https://skroutz.gr/c/1251/antalaktika-moto.html","code":"moto_part","family_id":33,"show_manufacturers_filter":true,"adult":false,"onclick_behaviour":"onclick_to_shop","show_spec_summary":false,"reviewable":false,"comparable":false,"ecommerce_enabled":false,"path":"76,33,382,1251","show_specifications":false,"manufacturer_title":"Κατασκευαστές"},{"id":40,"name":"Κινητά
+    Τηλέφωνα","children_count":0,"image_url":"https://b.scdn.gr/ds/categories/40/20180525094054_5c0fb47b.jpeg","parent_id":86,"fashion":false,"layout_mode":"list","web_uri":"https://skroutz.gr/c/40/kinhta-thlefwna.html","code":"mobile","family_id":1269,"show_manufacturers_filter":true,"adult":false,"onclick_behaviour":"onclick_to_sku_page","show_spec_summary":true,"reviewable":true,"comparable":true,"ecommerce_enabled":false,"path":"76,1269,86,40","show_specifications":true,"manufacturer_title":"Κατασκευαστές"},{"id":1866,"name":"Gaming
+    Πληκτρολόγια","children_count":0,"image_url":"https://d.scdn.gr/ds/categories/1866/20171113121624_f27df5d6.jpeg","parent_id":1867,"fashion":false,"layout_mode":"list","web_uri":"https://skroutz.gr/c/1866/Gaming_pliktrologia.html","code":"Gaming_pliktrologia","family_id":1269,"show_manufacturers_filter":true,"adult":false,"onclick_behaviour":"onclick_to_sku_page","show_spec_summary":true,"reviewable":true,"comparable":true,"ecommerce_enabled":false,"path":"76,1269,1864,1867,1866","show_specifications":true,"manufacturer_title":"Κατασκευαστές"},{"id":260,"name":"Διάφορα
+    Παιχνίδια","children_count":0,"image_url":"https://b.scdn.gr/ds/categories/260/20171113120946_61de3d79.jpeg","parent_id":792,"fashion":true,"layout_mode":"list","web_uri":"https://skroutz.gr/c/260/paixnidia-mh-hlektronika.html","code":"paixnidia-mh-hlektronika","family_id":417,"show_manufacturers_filter":true,"adult":false,"onclick_behaviour":"onclick_to_shop","show_spec_summary":false,"reviewable":false,"comparable":false,"ecommerce_enabled":false,"path":"76,417,1982,792,260","show_specifications":false,"manufacturer_title":"Κατασκευαστές"},{"id":1179,"name":"Διάφορα
+    Δομικά Υλικά","children_count":0,"image_url":"https://d.scdn.gr/ds/categories/1179/20171113121312_7b8e7353.jpeg","parent_id":1888,"fashion":true,"layout_mode":"list","web_uri":"https://skroutz.gr/c/1179/diafora_domika_ylika.html","code":"domika","family_id":11,"show_manufacturers_filter":false,"adult":false,"onclick_behaviour":"onclick_to_shop","show_spec_summary":false,"reviewable":false,"comparable":false,"ecommerce_enabled":false,"path":"76,11,927,1888,1179","show_specifications":false,"manufacturer_title":"Κατασκευαστές"},{"id":1206,"name":"Μπουφάν
+    Μηχανής","children_count":0,"image_url":"https://a.scdn.gr/ds/categories/1206/20171113121318_f3c8381b.jpeg","parent_id":574,"fashion":true,"layout_mode":"list","web_uri":"https://skroutz.gr/c/1206/mpoufan-mhxanhs.html","code":"moto_coats","family_id":33,"show_manufacturers_filter":true,"adult":false,"onclick_behaviour":"onclick_to_sku_page","show_spec_summary":false,"reviewable":true,"comparable":true,"ecommerce_enabled":false,"path":"76,33,382,574,1206","show_specifications":true,"manufacturer_title":"Κατασκευαστές"}]}'
+:created_at: 2018-09-20 17:22:33.235266214 +03:00

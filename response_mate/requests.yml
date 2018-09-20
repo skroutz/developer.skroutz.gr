@@ -850,3 +850,48 @@ requests:
       url: '{{base_url}}/ecommerce/cart/suggested_categories'
       headers:
         <<: *default_headers
+  -
+    key: recent_keyphrases
+    request:
+      url: '{{base_url}}/profile/recent_keyphrases'
+      headers:
+        <<: *default_headers
+  -
+    key: update_keyphrases
+    request:
+      verb: PUT
+      url: '{{base_url}}/profile/update_keyphrases'
+      headers:
+        <<: *default_headers
+      params:
+        keyphrases: ["oink","boo"]
+  -
+    key: recent_skus
+    request:
+      url: '{{base_url}}/profile/recent_skus'
+      headers:
+        <<: *default_headers
+  -
+    key: viewed_sku
+    request:
+      verb: POST
+      url: '{{base_url}}/profile/viewed_sku'
+      headers:
+        <<: *default_headers
+      params:
+        sku_id: 531236
+  -
+    key: update_recently_viewed_skus
+    request:
+      verb: PUT
+      url: '{{base_url}}/profile/update_rvs'
+      headers:
+        <<: *default_headers
+      params:
+        rvs: [342,432432,4324]
+  -
+    key: recent_categories
+    request:
+      url: '{{base_url}}/profile/recent_categories'
+      headers:
+        <<: *default_headers
