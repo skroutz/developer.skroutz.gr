@@ -12,10 +12,10 @@ title: how_it_works
 > The source of the tracking script is hosted on
 [GitHub](https://www.github.com/skroutz/analytics.js).
 
-The tracking script, registers a new global function named `sa`, and then
+The tracking script, registers a new global function named `<%= "#{flavor}_analytics" %>`, and then
 asynchronously loads the `analytics.js` library onto the page.
 
-The `sa` global function is the main way you interact with the Analytics library.
+The `<%= "#{flavor}_analytics" %>` global function is the main way you interact with the Analytics library.
 It accepts a sequence of parameters, that represent:
 
 Category

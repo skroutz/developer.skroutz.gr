@@ -41,7 +41,7 @@ your Account.
 
 #### Tracking Code JS Snippet
 
-<%= render_code_from_file "analytics/#{flavor}/js_snippet" %>
+<%= render_code_from_file 'analytics/js_snippet' %>
 
 > ##### Note
 > You **have to** replace the `'SA-XXXX-YYYY'` property with the actual
@@ -73,20 +73,7 @@ Use the <%= link_to 'ecommerce:addItem', 'ecommerce/#additem' %> command to trac
 
 #### Complete Example
 
-<% tracking_script = YAML.load_file(File.expand_path(File.join('./resources',
-                                                               'code_examples',
-                                                               "analytics/#{flavor}/js_snippet.yml"))) %>
-<% complete_example = YAML.load_file(File.expand_path(File.join('./resources',
-                                                               'code_examples',
-                                                               "analytics/complete_example.yml"))) %>
-
-
-~~~ html
-<!-- Add the Tracking Script and Connect to your Account -->
-<%= tracking_script[:code] -%>
-
-<%= complete_example[:code] -%>
-~~~
+<%= render_code_from_file 'analytics/complete_example' %>
 
 Visit the <%= link_to 'examples', 'examples' %> to view complete implementation examples
 for different programming languages.

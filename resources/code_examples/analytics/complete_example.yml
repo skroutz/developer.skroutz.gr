@@ -1,8 +1,18 @@
 :language: html
 :code: |
+  <!-- Add the Tracking Script and Connect to your Account -->
+  <script>
+    (function(a,b,c,d,e,f,g){a['<%=flavor.capitalize%>AnalyticsObject']=e;a[e]= a[e] || function(){
+      (a[e].q = a[e].q || []).push(arguments);};f=b.createElement(c);f.async=true;
+      f.src=d;g=b.getElementsByTagName(c)[0];g.parentNode.insertBefore(f,g);
+    })(window,document,'script','https://<%=settings.analytics_domain%>/analytics.min.js','<%=flavor%>_analytics');
+
+    <%=flavor%>_analytics('session', 'connect', 'SA-XXXX-YYYY');  // Connect your Account.
+  </script>
+
   <!-- Send the Order data -->
   <script>
-    sa('ecommerce', 'addOrder', JSON.stringify({
+    <%=flavor%>_analytics('ecommerce', 'addOrder', JSON.stringify({
       order_id: '123456',  // Order ID. Required.
       revenue:  '4417.58', // Grand Total. Includes Tax and Shipping. Does not include payment costs.
       shipping: '5.45',    // Total Shipping Cost. Does not include payment costs.
@@ -12,7 +22,7 @@
 
   <!-- Send the Item data for each item in the shopping cart -->
   <script>
-    sa('ecommerce', 'addItem', JSON.stringify({
+    <%=flavor%>_analytics('ecommerce', 'addItem', JSON.stringify({
       order_id:   '123456',                                    // Order ID. Required.
       product_id: '111222',                                    // Product ID. Required.
       name:       'Apple IPhone 6 Plus (16GB) Space Gray EU',  // Product Name. Required.
@@ -20,7 +30,7 @@
       quantity:   '4'                                          // Quantity of Items. Required.
     }));
 
-    sa('ecommerce', 'addItem', JSON.stringify({
+    <%=flavor%>_analytics('ecommerce', 'addItem', JSON.stringify({
       order_id:   '123456',
       product_id: '303404',
       name:       'Motorola Nexus 6 (64GB) EU Light Gray',
@@ -28,7 +38,7 @@
       quantity:   '1'
     }));
 
-    sa('ecommerce', 'addItem', JSON.stringify({
+    <%=flavor%>_analytics('ecommerce', 'addItem', JSON.stringify({
       order_id:   '123456',
       product_id: '121234',
       name:       'LG G4 (64GB) EU Leather',
