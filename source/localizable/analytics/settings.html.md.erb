@@ -25,3 +25,27 @@ Name              | Type   | Required | Description
 ~~~ javascript
 <%= "#{flavor}_analytics" %>('session', 'connect', 'SA-0001-0001');
 ~~~
+
+## Renaming the `<%= "#{flavor}_analytics" %>` object
+
+It is possible that you'd like to add the Analytics tracking code to your page, but the `<%= "#{flavor}_analytics" %>`
+variable is already being used for something else. To deal with this, analytics.js provides a mechanism for renaming
+the global `<%= "#{flavor}_analytics" %>` object.
+
+The Analytics tracking snippet allows you to rename the global `<%= "#{flavor}_analytics" %>` object by changing
+the final parameter passed to the minified function. You'll also need to update all invocations of the command
+queue from `<%= "#{flavor}_analytics" %>()` to whatever name you choose.
+
+##### Example
+
+~~~ javascript
+(function(a,b,c,d,e,f,g){a['<%=flavor.camelize%>AnalyticsObject']=e;a[e]= a[e] || function(){
+  (a[e].q = a[e].q || []).push(arguments);};f=b.createElement(c);f.async=true;
+  f.src=d;g=b.getElementsByTagName(c)[0];g.parentNode.insertBefore(f,g);
+})(window,document,'script','https://analytics.skroutz.gr/analytics.min.js','custom_analytics_name');
+
+custom_analytics_name('session', 'connect', 'SA-0001-0001');
+~~~
+
+> ##### Note
+> Make sure to use the same method name to <%= link_to 'Ecommerce commands', '/analytics/ecommerce#ecommerce' %> too.
