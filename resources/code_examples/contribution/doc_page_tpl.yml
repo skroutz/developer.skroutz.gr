@@ -5,12 +5,12 @@
   title: documentation_page_title
   ---
 
-  # [H1] Page Title <%= edit_link %>
+  # [H1] Page Title <%%= edit_link %>
 
   It would be nice to write a short description of the current page.
 
 
-  <%= partial 'partials/toc' %>
+  <%%= partial 'partials/toc' %>
 
 
   ## [H2] Page Section
@@ -24,7 +24,7 @@
 
   ### [H3] Sub section
 
-  Espresso beans for the <%= settings.site_name.capitalize %> can be found in
+  Espresso beans for the <%%= settings.site_name.capitalize %> can be found in
   many places. Here is a list of available places with a short description:
 
   Place 1
@@ -61,7 +61,7 @@
 
   Here is an extended code block:
 
-  <%= render_code_from_file "analytics/#{flavor}/code_snippet" %>
+  <%%= render_code_from_file "analytics/#{flavor}/code_snippet" %>
 
   ##### Attributes
 
@@ -85,4 +85,4 @@
 
   Here is the result of the above example:
 
-  <%= render_recording :shop_locations_show %>
+  <%%= render_recording :shop_locations_show %>
