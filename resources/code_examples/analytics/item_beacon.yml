@@ -1,7 +1,7 @@
 :language: html
 :code: |
   <script>
-    sa('ecommerce', 'addItem', JSON.stringify({
+    <%=flavor%>_analytics('ecommerce', 'addItem', JSON.stringify({
       order_id:   '123456',                                    // Order ID. Required.
       product_id: '111222',                                    // Product ID. Required.
       name:       'Apple IPhone 6 Plus (16GB) Space Gray EU',  // Product Name. Required.

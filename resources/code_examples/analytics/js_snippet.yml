@@ -1,0 +1,11 @@
+:language: html
+:code: |
+  <!-- Add the Tracking Script and Connect to your Account -->
+  <script>
+    (function(a,b,c,d,e,f,g){a['<%=flavor.capitalize%>AnalyticsObject']=e;a[e]= a[e] || function(){
+      (a[e].q = a[e].q || []).push(arguments);};f=b.createElement(c);f.async=true;
+      f.src=d;g=b.getElementsByTagName(c)[0];g.parentNode.insertBefore(f,g);
+    })(window,document,'script','https://<%=settings.analytics_domain%>/analytics.min.js','<%=flavor%>_analytics');
+
+    <%=flavor%>_analytics('session', 'connect', 'SA-XXXX-YYYY');  // Connect your Account.
+  </script>

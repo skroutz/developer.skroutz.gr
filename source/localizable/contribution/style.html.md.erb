@@ -182,18 +182,18 @@ resources/
 The `js_snippet.yml` file has the following syntax:
 
 ~~~ yaml
-<%= File.read("resources/code_examples/analytics/#{settings.site_name}/js_snippet.yml") %>
+<%= File.read("resources/code_examples/analytics/js_snippet.yml") %>
 ~~~
 
 Embed the flavored `js_snippet.yml` of the *Analytics* project:
 
 ~~~ erb
-<%%= render_code_from_file "analytics/#{settings.site_name}/js_snippet" %>
+<%%= render_code_from_file 'analytics/js_snippet' %>
 ~~~
 
 ##### Result
 
-<%= render_code_from_file "analytics/#{flavor}/js_snippet" %>
+<%= render_code_from_file 'analytics/js_snippet' %>
 
 ### Terminal commands
 

@@ -39,7 +39,7 @@ Hesabınızdaki takip kodunu aktif hale getirmek için <%= link_to 'session:conn
 
 #### Tracking Code JS Snippet
 
-<%= render_code_from_file "analytics/#{flavor}/js_snippet" %>
+<%= render_code_from_file 'analytics/js_snippet' %>
 
 > ##### Not
 > Alve kontrol panelinizden bulabileceğiniz *mağaza ID’sini* kodda bulunan `'SA-XXXX-YYYY'` bölümü ile değiştirin.
@@ -69,20 +69,7 @@ Sipariş ve ürün datasını <%= link_to 'e-ticaret', 'ecommerce/' %> komutlar�
 
 #### Örnek
 
-<% tracking_script = YAML.load_file(File.expand_path(File.join('./resources',
-                                                               'code_examples',
-                                                               "analytics/#{flavor}/js_snippet.yml"))) %>
-<% complete_example = YAML.load_file(File.expand_path(File.join('./resources',
-                                                               'code_examples',
-                                                               "analytics/complete_example.yml"))) %>
-
-
-~~~ html
-<!-- Add the Tracking Script and Connect to your Account -->
-<%= tracking_script[:code] -%>
-
-<%= complete_example[:code] -%>
-~~~
+<%= render_code_from_file 'analytics/complete_example' %>
 
 <%= link_to 'Örneklere', 'examples' %> tıklayarak farklı programlama dillerindeki uygulamaları bulabilirsiniz.
 
