@@ -1,0 +1,130 @@
+---
+parent: analytics
+title: new_analytics_tracking_script_migration_guide
+---
+
+# New Analytics Tracking Script Migration Guide <%= edit_link %>
+
+Google Analytics' javascript library ([analytics.js](https://www.google-analytics.com/analytics.js)) introduced a bug,
+which pollutes the global namespace (`window`) with an unexpected variable named `'sa'`.  
+For more info you can check the [bug report](https://issuetracker.google.com/issues/116182847)
+in Google's issue tracker.
+
+The problem is that `window.sa` is also being used by many ecommerce sites with <%= flavor.capitalize %> Analytics
+which use the old Analytics Tracking Script.
+
+In order to avoid conflicts with Google Analytics' code, it is necessary to perform the following changes.
+
+#### Migration Steps
+
+**If you have already successfully integrated** the <%= flavor.capitalize %> Analytics to your webpage
+you should follow the steps below in order to ensure that the service will continue to run normally:
+
+1. Use the new <%= link_to 'Analytics Tracking Script', '/analytics', anchor: 'tracking-code-js-snippet' %>
+1. Replace `sa()` command queue with `<%= "#{flavor}_analytics()" %>`
+
+#### WooCommerce Skroutz Analytics plugin
+
+If your site's platform is built on [WooCommerce](https://wordpress.org/plugins/woocommerce/)
+and you are using [WooCommerce Skroutz Analytics](https://wordpress.org/plugins/skroutz-analytics-woocommerce/)
+plugin, you can just update the plugin and skip current migration guide's steps.
+
+<%= partial 'partials/toc' %>
+
+## Step 1: Use the new Analytics Tracking Script
+
+Replace your old Analytics Tracking Script with the new one.
+
+#### New <%= link_to 'Analytics Tracking Script', '/analytics', anchor: 'tracking-code-js-snippet' %>
+
+<%= render_code_from_file 'analytics/js_snippet' %>
+
+> ##### Note
+> You **have to** replace the `'SA-XXXX-YYYY'` property with the actual
+> *Shop Account ID* you received from us.
+
+#### [Deprecated] Old Analytics Tracking Script
+
+~~~html
+<script>
+  (function(a,b,c,d,e,f,g){a[e]= a[e] || function(){
+    (a[e].q = a[e].q || []).push(arguments);};f=b.createElement(c);f.async=true;
+    f.src=d;g=b.getElementsByTagName(c)[0];g.parentNode.insertBefore(f,g);
+  })(window,document,'script','https://<%=settings.analytics_domain%>/analytics.min.js','sa');
+
+  sa('session', 'connect', 'SA-XXXX-YYYY');  // Connect your Account.
+</script>
+~~~
+
+#### Differences between Old and New <%= link_to 'Analytics Tracking Script', '/analytics', anchor: 'tracking-code-js-snippet' %>
+
+<pre>
+(function(a,b,c,d,e,f,g){<span style="color: red; font-weight: bold">a['<%=flavor.capitalize%>AnalyticsObject']=e;</span>a[e]= a[e] || function(){
+  (a[e].q = a[e].q || []).push(arguments);};f=b.createElement(c);f.async=true;
+  f.src=d;g=b.getElementsByTagName(c)[0];g.parentNode.insertBefore(f,g);
+})(window,document,'script','https://<%=settings.analytics_domain%>/analytics.min.js','<span style="color: red; font-weight: bold"><%=flavor%>_analytics</span>');
+
+<span style="color: red; font-weight: bold"><%=flavor%>_analytics</span>('session', 'connect', 'SA-XXXX-YYYY');  // Connect your Account.
+</pre>
+
+## Step 2: Replace `sa()` command queue with `<%= "#{flavor}_analytics()" %>`
+
+If you have completed the [Step 1](#step-1-use-the-new-analytics-tracking-script) you will have to replace all
+references to `sa()` with `<%=flavor%>_analytics()`.
+
+### Ecommerce Commands
+
+This change affects all [Ecommerce Tracking](/analytics/ecommerce/#ecommerce) commands you have
+already added to website's "thank you" page.
+
+#### addOrder
+
+old addOrder commands such as:
+
+~~~html
+<script>
+  sa('ecommerce', 'addOrder', JSON.stringify({
+    // order's data
+  }));
+</script>
+~~~
+
+**should be changed to:**
+
+~~~html
+<script>
+  <%= "#{flavor}_analytics" %>('ecommerce', 'addOrder', JSON.stringify({
+    // order's data
+  }));
+</script>
+~~~
+
+#### addItem
+
+old addItem commands such as:
+
+~~~html
+<script>
+  sa('ecommerce', 'addItem', JSON.stringify({
+    // line item's data
+  }));
+</script>
+~~~
+
+**should be changed to:**
+
+~~~html
+<script>
+  <%= "#{flavor}_analytics" %>('ecommerce', 'addItem', JSON.stringify({
+    // line item's data
+  }));
+</script>
+~~~
+
+## Complete Example
+
+If you have followed [Step 1](#step-1-use-the-new-analytics-tracking-script)
+and [Step 2](#step-2-replace-sa-command-queue-with-skroutzanalytics), code
+in website's "thank you" page will look similar to the completed example below:
+
+<%= render_code_from_file 'analytics/complete_example' %>
