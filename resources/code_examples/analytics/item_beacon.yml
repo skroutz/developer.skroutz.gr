@@ -1,11 +1,11 @@
 :language: html
 :code: |
   <script>
-    <%=flavor%>_analytics('ecommerce', 'addItem', JSON.stringify({
+    <%=flavor%>_analytics('ecommerce', 'addItem', {
       order_id:   '123456',                                    // Order ID. Required.
       product_id: '111222',                                    // Product ID. Required.
       name:       'Apple IPhone 6 Plus (16GB) Space Gray EU',  // Product Name. Required.
       price:      '654.90',                                    // Price per Unit. Required.
       quantity:   '2'                                          // Quantity of Items. Required.
-    }));
+    });
   </script>
