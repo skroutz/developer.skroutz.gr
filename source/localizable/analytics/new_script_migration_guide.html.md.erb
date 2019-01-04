@@ -93,9 +93,9 @@ old addOrder commands such as:
 
 ~~~html
 <script>
-  <%= "#{flavor}_analytics" %>('ecommerce', 'addOrder', JSON.stringify({
+  <%= "#{flavor}_analytics" %>('ecommerce', 'addOrder', {
     // order's data
-  }));
+  });
 </script>
 ~~~
 
@@ -115,9 +115,9 @@ old addItem commands such as:
 
 ~~~html
 <script>
-  <%= "#{flavor}_analytics" %>('ecommerce', 'addItem', JSON.stringify({
+  <%= "#{flavor}_analytics" %>('ecommerce', 'addItem', {
     // line item's data
-  }));
+  });
 </script>
 ~~~
 

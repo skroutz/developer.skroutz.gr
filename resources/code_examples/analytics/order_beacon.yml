@@ -1,10 +1,10 @@
 :language: html
 :code: |
   <script>
-    <%=flavor%>_analytics('ecommerce', 'addOrder', JSON.stringify({
+    <%=flavor%>_analytics('ecommerce', 'addOrder', {
       order_id: '123456',   // Order ID. Required.
       revenue:  '1315.25',  // Grand Total. Includes Tax and Shipping. Does not include payment costs.
       shipping: '5.45',     // Total Shipping Cost. Does not include payment costs.
       tax:      '301.25'    // Total Tax.
-    }));
+    });
   </script>
