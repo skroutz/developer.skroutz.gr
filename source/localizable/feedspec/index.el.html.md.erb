@@ -101,6 +101,21 @@ To <%= settings.site_name.capitalize %>Bot δεν κάνει HTTP ή άλλης 
 > Ένας εύκολος τρόπος για να προσομοιώσετε το <%= settings.site_name.capitalize %>Bot είναι να
 > χρησιμοποιήσετε την εντολή `curl -A "<%= settings.site_name.capitalize %>Bot v1.0" -i -L`
 
+#### <%= settings.site_name.capitalize %> ImageBot
+
+Το Skroutz χρησιμοποιεί bot για να κατεβάζει τις εικόνες των προϊόντων και μπορεί
+να αναγνωριστεί από το HTTP header "User-Agent: <%= settings.site_name.capitalize %>
+ImageBot v1".
+
+Για να έχει πάντα πρόσβαση στις εικόνες, βεβαιωθείτε πως έχετε προσθέσει το
+"<%= settings.site_name.capitalize %> ImageBot" στη λίστα εμπιστοσύνης bots
+(whitelist).
+
+> ##### ΣΗΜΕΙΩΣΗ
+> Ένας εύκολος τρόπος για να προσομοιώσετε το <%= settings.site_name.capitalize %>
+> ImageBot είναι να χρησιμοποιήσετε την εντολή
+> `curl -I -A "Skroutz ImageBot v1" <image_url>`.
+
 ### Data Feed
 
 Για να μπορεί να γίνει δεκτό το Data Feed θα πρέπει να περιέχει όλα τα

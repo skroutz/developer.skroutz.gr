@@ -97,6 +97,19 @@ to <%= settings.site_name.capitalize %>Bot if it uses exclusively gzip or zip co
 > An easy way to emulate the <%= settings.site_name.capitalize %>Bot is to use
 > the linux program curl, for example: `curl -A "<%= settings.site_name.capitalize %>Bot v1.0" -i -L`
 
+#### <%= settings.site_name.capitalize %> ImageBot
+
+Skroutz uses a bot to download the product images. It is identified with the HTTP
+header "User-Agent: <%= settings.site_name.capitalize %> ImageBot v1".
+
+Make sure to whitelist the "<%= settings.site_name.capitalize %> ImageBot" to ensure
+permanent access to product images.
+
+> ##### Note
+> An easy way to emulate the <%= settings.site_name.capitalize %> ImageBot
+> is to use the linux program curl, for example:
+> `curl -I -A "Skroutz ImageBot v1" <image_url>`.
+
 ### Data Feed
 
 For a Data Feed to be accepted all required attributes must be included
