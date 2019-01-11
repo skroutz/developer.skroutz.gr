@@ -10,7 +10,7 @@
   function addOrderAction(&$order) {
     $order_data = json_encode($order);
 
-    return "<%=flavor%>_analytics('ecommerce', 'addOrder', $order_data));";
+    return "<%=flavor%>_analytics('ecommerce', 'addOrder', $order_data);";
   }
 
   /**
@@ -29,6 +29,6 @@
       'quantity'    => $item['quantity']
     ));
 
-    return "<%=flavor%>_analytics('ecommerce', 'addItem', $item_data));";
+    return "<%=flavor%>_analytics('ecommerce', 'addItem', $item_data);";
   }
   ?>
