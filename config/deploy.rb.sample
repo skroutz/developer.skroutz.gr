@@ -1,7 +1,7 @@
 lock '3.2.1'
 
 set :user, 'example_user'
-set :deploy_to, '/var/www/sites/developer.skroutz.gr'
+set :deploy_to, '/var/sites/developer.skroutz.gr'
 set :deploy_server, 'example.com'
 set :build_dir, 'build'
 set :flavor, 'skroutz'
