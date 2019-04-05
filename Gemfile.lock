@@ -9,9 +9,12 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.5.1)
       public_suffix (~> 2.0, >= 2.0.2)
+    autoprefixer-rails (9.5.0)
+      execjs
     awesome_print (1.2.0)
-    bootstrap-sass (3.2.0.0)
-      sass (~> 3.2)
+    bootstrap-sass (3.4.1)
+      autoprefixer-rails (>= 5.2.1)
+      sassc (>= 2.0.0)
     capistrano (3.2.1)
       i18n
       rake (>= 10.0.0)
@@ -36,7 +39,7 @@ GEM
       multipart-post (>= 1.2, < 3)
     faraday_middleware (0.11.0.1)
       faraday (>= 0.7.4, < 1.0)
-    ffi (1.9.3)
+    ffi (1.10.0)
     font-awesome-middleman (4.5.0)
       middleman-core (~> 3.0)
     fssm (0.2.10)
@@ -108,7 +111,7 @@ GEM
       pry (~> 0.9)
       yard (~> 0.9)
     public_suffix (2.0.5)
-    rack (1.5.5)
+    rack (1.6.11)
     rack-test (0.6.2)
       rack (>= 1.0)
     rake (10.3.2)
@@ -130,6 +133,9 @@ GEM
       thor (~> 0.19)
     rouge (1.5.1)
     sass (3.2.19)
+    sassc (2.0.1)
+      ffi (~> 1.9)
+      rake
     sprockets (2.12.5)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -163,7 +169,7 @@ PLATFORMS
 
 DEPENDENCIES
   awesome_print
-  bootstrap-sass (~> 3.2.0.0)
+  bootstrap-sass (~> 3.4.1)
   capistrano (~> 3.2.1)
   colored
   font-awesome-middleman (~> 4.5.0)
@@ -173,7 +179,7 @@ DEPENDENCIES
   middleman-syntax (~> 2.0.0)
   pry
   pry-doc
-  rack (~> 1.5.4)
+  rack (~> 1.6.11)
   response_mate (~> 0.4.1)
   sprockets (~> 2.12.5)
   therubyracer (~> 0.12.3)
