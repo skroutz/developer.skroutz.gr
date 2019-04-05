@@ -7,7 +7,7 @@ gem 'jquery-middleman', '~> 3.0.4'
 gem 'middleman', '~> 3.3'
 gem 'middleman-syntax', '~> 2.0.0'
 gem 'json', '~> 1.8.6'
-gem 'rack', '~> 1.5.4'
+gem 'rack', '~> 1.6.11'
 
 # API Helpers
 gem 'response_mate', '~> 0.4.1'
