@@ -39,7 +39,7 @@ GEM
       multipart-post (>= 1.2, < 3)
     faraday_middleware (0.11.0.1)
       faraday (>= 0.7.4, < 1.0)
-    ffi (1.9.3)
+    ffi (1.10.0)
     font-awesome-middleman (4.5.0)
       middleman-core (~> 3.0)
     fssm (0.2.10)
