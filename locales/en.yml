@@ -8,6 +8,7 @@ en:
     analytics: 'Analytics'
     order_stash: 'Save Your Order'
     partner_badge: 'Partner Badge'
+    partner_sku_reviews: '%{flavor} Product Reviews'
     docs: 'Developer Documentation'
     guides: 'Guides'
     contribute: 'Contributing'
@@ -60,6 +61,8 @@ en:
       short_description: 'Increase your Shop Reviews in %{flavor}.'
     partner_badge:
       short_description: 'A mark of trust and a quality indicator powered by %{flavor}.'
+    partner_sku_reviews:
+      short_description: 'Display product-related %{flavor} content in your website, such as user reviews and ratings.'
 
   contribute:
     getting_started: 'Getting Started'
