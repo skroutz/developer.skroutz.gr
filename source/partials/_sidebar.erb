@@ -31,7 +31,7 @@
       <li>
         <%# without sub-menu %>
         <% if doc.pages.nil? %>
-          <%= link_to t("titles.#{key}", flavor: flavor),
+          <%= link_to t("titles.#{key}", flavor: flavor.capitalize),
                       doc.base,
                       class: "nav-link #{active_parent_link(doc)}" %>
 
