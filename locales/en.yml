@@ -47,7 +47,7 @@ en:
       permissions: 'Permissions'
       flows: 'Flows'
     analytics:
-      short_description: 'Integrate %{flavor} analytics and find out powerful insights about your eshop.'
+      short_description: 'Integrate %{flavor} Analytics and find out powerful insights about your eshop.'
       overview: 'Overview'
       how_it_works: 'How It Works'
       settings: 'Settings'
