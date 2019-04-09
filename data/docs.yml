@@ -34,7 +34,7 @@ csvspec:
 
 authorization:
   base: '/authorization/'
-  featured: true
+  featured: false
   icon: 'fa-lock'
   pages:
     - { title: 'overview', url: '/authorization/' }
