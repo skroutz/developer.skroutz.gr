@@ -7,6 +7,7 @@ el:
     analytics: 'Analytics'
     order_stash: 'Save Your Order'
     partner_badge: 'Partner Badge'
+    partner_sku_reviews: '%{flavor} Product Reviews'
     docs: 'Developer Documentation'
     guides: 'Guides'
     extra: 'Looking for something else?'
@@ -41,7 +42,7 @@ el:
       permissions: 'Permissions'
       flows: 'Flows'
     analytics:
-      short_description: 'Integrate %{flavor} analytics and find out powerful insights about your eshop.'
+      short_description: 'Integrate %{flavor} Analytics and find out powerful insights about your eshop.'
       overview: 'Overview'
       how_it_works: 'How It Works'
       settings: 'Settings'
@@ -54,6 +55,8 @@ el:
       short_description: 'Increase your Shop Reviews in %{flavor}.'
     partner_badge:
       short_description: 'A mark of trust and a quality indicator powered by %{flavor}.'
+    partner_sku_reviews:
+      short_description: 'Display product-related %{flavor} content in your website, such as user reviews and ratings.'
 
   lang:
     el: 'Ελληνικά'

@@ -34,7 +34,7 @@ csvspec:
 
 authorization:
   base: '/authorization/'
-  featured: true
+  featured: false
   icon: 'fa-lock'
   pages:
     - { title: 'overview', url: '/authorization/' }
@@ -73,3 +73,10 @@ partner_badge:
   flavors:
     - skroutz
     - alve
+
+partner_sku_reviews:
+  base: '/partner_sku_reviews/'
+  featured: true
+  icon: 'fa-comments'
+  flavors:
+    - skroutz

@@ -1,0 +1,22 @@
+// Partner Sku Reviews Page
+// --------------------------------------------------
+
+.partner_sku_reviews {
+  img.partner-sku-reviews-preview {
+    width: 100%;
+    max-width: 640px;
+  }
+
+  .partner-sku-reviews-themes-preview {
+    display: inline-block;
+
+    margin-bottom: 20px;
+    padding: 15px;
+
+    background-color: $app-clr-white;
+
+    img {
+      margin: 5px 10px;
+    }
+  }
+}
