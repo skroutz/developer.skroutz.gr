@@ -80,3 +80,6 @@ partner_sku_reviews:
   icon: 'fa-comments'
   flavors:
     - skroutz
+  pages:
+    - { title: 'overview', url: '/partner_sku_reviews/' }
+    - { title: 'wordpress_widgets' }

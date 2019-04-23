@@ -57,6 +57,8 @@ el:
       short_description: 'A mark of trust and a quality indicator powered by %{flavor}.'
     partner_sku_reviews:
       short_description: 'Display product-related %{flavor} content in your website, such as user reviews and ratings.'
+      overview: 'Overview'
+      wordpress_widgets: 'Wordpress Widgets'
 
   lang:
     el: 'Ελληνικά'
