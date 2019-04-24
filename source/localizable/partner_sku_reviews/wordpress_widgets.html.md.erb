@@ -1,0 +1,121 @@
+---
+title: wordpress_widgets
+---
+
+<%= partial 'partials/page_locales' %>
+
+# <%= settings.site_name.capitalize %> Product Reviews - WordPress Widgets <%= edit_link %>
+
+Integrate the [<%= settings.site_name.capitalize %> Product Reviews](/partner_sku_reviews)
+on your WordPress / WooCommerce shop.
+
+> ##### NOTE
+You must have installed the
+<a href="https://wordpress.org/plugins/skroutz-analytics-woocommerce/" target="_blank">Skroutz Analytics WooCommerce plugin</a>
+(version >= 1.4.0)
+
+<%= partial 'partials/toc' %>
+
+## Introduction
+
+The plugin provides two WordPress Widgets, that you can easily add:
+
+* [Product Reviews Inline Widget](/partner_sku_reviews/#inline-widget)
+* [Product Reviews Extended Widget](/partner_sku_reviews/#extended-widget)
+
+> ##### Note
+The widgets are displayed only on product pages and if there is at least one review for the product.
+
+## Add Widgets from UI
+
+You can add the widgets in any available
+<a href="https://codex.wordpress.org/Glossary#Widget_Area" target="_blank">widget area</a>
+your theme supports.
+
+### Theme customizer
+
+If your theme supports it, you can use the theme customizer.
+
+* Make sure you are logged in the admin panel and your user has a role that can edit the theme.
+* Navigate to a product page in the front.
+* In the upper left menu you should see a `Customize` button.
+* Select the `Widgets` in the customizer menu on the left.
+* A list with the available widget areas should appear.
+* Select the area that you want the product reviews widget to be displayed and then select `Add a Widget` (as shown in the image below).
+* The two <%= settings.site_name.capitalize %> product reviews widgets should appear in
+  the list with the available widgets.
+* Finally select the widget and click `Publish`.
+
+<%= image_tag "/assets/images/#{flavor}/partner_sku_reviews/wc_theme_customizer_example.png", class: 'partner-sku-reviews-wc-example' %>
+
+### Admin panel
+
+Alternatively you can always manage the widgets from the admin panel.
+
+* Make sure you are logged in the admin panel and your user has a role that can edit the theme.
+* Navigate to `Appearance` and select `Widgets`.
+* A list with the available widget should appear on the left and the available widget areas on the right.
+* Drag and drop the widget from the left list to the widget area of your choice to the right.
+
+<%= image_tag "/assets/images/#{flavor}/partner_sku_reviews/wc_widget_admin_example.png", class: 'partner-sku-reviews-wc-example' %>
+
+## Add Widgets programmatically
+
+You can also add the widgets programmatically in any template by using the WordPress provided
+<a href="https://codex.wordpress.org/Function_Reference/the_widget" target="_blank">widget template tag</a>.
+
+### Templates
+
+You could add the widgets in your
+<a href="https://developer.wordpress.org/themes/advanced-topics/child-themes/" target="_blank">child theme's template</a>
+for the single product: `wp-content/themes/your child theme/woocommerce/content-single-product.php`. Create `woocommerce`
+directory if it doesn't exist in your child theme.
+
+#### Template tag for inline widget
+
+~~~php
+<?php the_widget( 'WC_Skroutz_Analytics_Product_Reviews_Inline_Widget' ); ?>
+~~~
+
+#### Template tag for extended widget
+
+~~~php
+<?php the_widget( 'WC_Skroutz_Analytics_Product_Reviews_Extended_Widget' ); ?>
+~~~
+
+### Ηοοks
+
+Instead of inserting the widget directly in the template you can use a
+<a href="https://docs.woocommerce.com/wc-apidocs/hook-docs.html" target="_blank">WooCommerce hook</a>
+in your
+<a href="https://developer.wordpress.org/themes/advanced-topics/child-themes/" target="_blank">child theme's</a>
+functions.php: `wp-content/themes/your child theme/functions.php`
+
+#### Hook for the inline widget
+
+Hook to display the inline widget after the add to cart button.
+
+_Adjust hook priority, 35 in this example, according to your theme's needs._
+
+~~~php
+<?php
+function show_skroutz_reviews_inline_widget() {
+    the_widget( 'WC_Skroutz_Analytics_Product_Reviews_Inline_Widget' );
+}
+add_action( 'woocommerce_single_product_summary', 'show_skroutz_reviews_inline_widget', 35 );
+~~~
+
+#### Hook for the extended widget
+
+Hook to display the extended widget after the product summary and before the up sell section.
+
+_Adjust hook priority, 10 in this example, according to your theme's needs._
+
+~~~php
+<?php
+function show_skroutz_reviews_extended_widget() {
+    the_widget( 'WC_Skroutz_Analytics_Product_Reviews_Extended_Widget' );
+}
+add_action( 'woocommerce_after_single_product_summary', 'show_skroutz_reviews_extended_widget', 10 );
+~~~
+
