@@ -164,9 +164,9 @@ ImageBot v1".
 ------------------------------------------------------ | ---------------------------------------- | ----------- | -------------------------------------------------
 [Unique ID](#unique-id)                                | String  | <span class="mono">200</span>  | Ναι         | `322`
 [Name](#name)                                          | String  | <span class="mono">300</span>  | Ναι         | `Samsung Galaxy S4 16GB`
-[Product Link](#product-link)                          | String  | <span class="mono">1000</span> | Ναι         | `http://www.someurl.com/products/322.html`
-[Image Link](#image-link)                              | String  | <span class="mono">400</span>  | Ναι         | `http://www.someurl.com/images/322.jpg`
-[Additional Image Link](#additional-image-link)        | String  | <span class="mono">400</span>  | Όχι*         | `http://www.someurl.com/images/322/front_view.jpg`
+[Product Link](#product-link)                          | String  | <span class="mono">1000</span> | Ναι         | `https://www.someurl.com/products/322.html`
+[Image Link](#image-link)                              | String  | <span class="mono">400</span>  | Ναι         | `https://www.someurl.com/images/322.jpg`
+[Additional Image Link](#additional-image-link)        | String  | <span class="mono">400</span>  | Όχι*         | `https://www.someurl.com/images/322/front_view.jpg`
 [Category Name](#category-name)                        | String  | <span class="mono">250</span>  | Ναι         | `Κινητά τηλέφωνα`
 [Price](#price)                                        | Decimal | <span class="mono">- (έως 2 δεκαδικά ψηφία)</span>    | Ναι         | `23.22`
 [Availability](#availability)                          | String  | <span class="mono">60</span>   | Ναι         | `Σε 2 μέρες`
@@ -239,7 +239,7 @@ To πεδίο αυτό είναι το **μοναδικό** αναγνωριστ
 #### Product Link
 
 Είναι ο σύνδεσμος που οδηγεί στη σελίδα του καταστήματός σας για το συγκεκριμένο
-προϊόν. Θα πρέπει να είναι έγκυρος σύνδεσμος και να ξεκινάει με `http` ή `https`.
+προϊόν. Θα πρέπει να είναι έγκυρος σύνδεσμος και να ξεκινάει με `https`.
 
 > Τα links **ΔΕΝ** πρέπει να είναι URL-encoded.
 
@@ -252,29 +252,29 @@ To πεδίο αυτό είναι το **μοναδικό** αναγνωριστ
 ###### Λάθος (περιέχει session id)
 
 ~~~
-<url>http://www.mydomain.com/products/product.php?itemid=1&amp;osCsid=77777d01474f6df1e9d0775900409ddd&amp;page=1</url>
+<url>https://www.mydomain.com/products/product.php?itemid=1&amp;osCsid=77777d01474f6df1e9d0775900409ddd&amp;page=1</url>
 ~~~
 
 ###### Σωστό (το session id έχει αφαιρεθεί)
 
 ~~~
-<url>http://www.mydomain.com/products/product.php?itemid=1&amp;page=1</url>
+<url>https://www.mydomain.com/products/product.php?itemid=1&amp;page=1</url>
 ~~~
 
 ##### Παράδειγμα
 
 ~~~ xml
-<link>http://www.mydomain.com/products/1</link>
-<url>http://www.mydomain.com/products/product.php?itemid=1</url>
-<url><![CDATA[http://www.mydomain.com/products/product.php?itemid=1&amp;somevar=3]]></url>
-<url>http://www.mydomain.com/products/product.php?itemid=1&amp;amp;somevar=3</url>
+<link>https://www.mydomain.com/products/1</link>
+<url>https://www.mydomain.com/products/product.php?itemid=1</url>
+<url><![CDATA[https://www.mydomain.com/products/product.php?itemid=1&amp;somevar=3]]></url>
+<url>https://www.mydomain.com/products/product.php?itemid=1&amp;amp;somevar=3</url>
 ~~~
 
 
 #### Image Link
 
 Είναι η εικόνα (φωτογραφία) του προϊόντος. Πρέπει να είναι σύνδεσμος σε εικόνα
-και να ξεκινάει με `http`. Scripts που παράγουν εικόνες υπάρχει πιθανότητα να μη
+και να ξεκινάει με `https`. Scripts που παράγουν εικόνες υπάρχει πιθανότητα να μη
 λειτουργούν σωστά, γι' αυτό και είναι προτιμητέο ο σύνδεσμος να οδηγεί στο
 πραγματικό αρχείο.
 
@@ -305,9 +305,9 @@ thumbnail.
 ##### Παράδειγμα
 
 ~~~ xml
-<image>http://www.mydomain.com/photos/1.jpg</image>
-<imageurl>http://www.mydomain.com/photos/b&amp;amp;b.jpg</imageurl>
-<url><![CDATA[http://www.mydomain.com/photos/b&amp;b.jpg]]></url>
+<image>https://www.mydomain.com/photos/1.jpg</image>
+<imageurl>https://www.mydomain.com/photos/b&amp;amp;b.jpg</imageurl>
+<url><![CDATA[https://www.mydomain.com/photos/b&amp;b.jpg]]></url>
 ~~~
 
 
@@ -331,12 +331,12 @@ thumbnail.
 ##### Παράδειγμα
 
 ~~~ xml
-<image>http://www.mydomain.com/photos/1.jpg</image>
-<imageurl>http://www.mydomain.com/photos/b&amp;amp;b.jpg</imageurl>
-<additional_imageurl>http://www.mydomain.com/photos/product1/front.jpg</additional_imageurl>
-<additional_imageurl>http://www.mydomain.com/photos/product1/sides.jpg</additional_imageurl>
-<additional_imageurl>http://www.mydomain.com/photos/product1/packaged.jpg</additional_imageurl>
-<url><![CDATA[http://www.mydomain.com/photos/b&amp;b.jpg]]></url>
+<image>https://www.mydomain.com/photos/1.jpg</image>
+<imageurl>https://www.mydomain.com/photos/b&amp;amp;b.jpg</imageurl>
+<additional_imageurl>https://www.mydomain.com/photos/product1/front.jpg</additional_imageurl>
+<additional_imageurl>https://www.mydomain.com/photos/product1/sides.jpg</additional_imageurl>
+<additional_imageurl>https://www.mydomain.com/photos/product1/packaged.jpg</additional_imageurl>
+<url><![CDATA[https://www.mydomain.com/photos/b&amp;b.jpg]]></url>
 ~~~
 
 
@@ -596,9 +596,9 @@ To χρώμα του προϊόντος. Το πεδίο χρώματος λει
       <product>
         <id>322233</id>
         <name><![CDATA[MadBiker 600]]></name>
-        <link><![CDATA[http://www.mywebstore.gr/product/322233]]></link>
-        <image><![CDATA[http://www.mywebstore.gr/product/322233.jpg]]></image>
-        <additionalimage><![CDATA[http://www.mywebstore.gr/product/322233/front.jpg]]></additionalimage>
+        <link><![CDATA[https://www.mywebstore.gr/product/322233]]></link>
+        <image><![CDATA[https://www.mywebstore.gr/product/322233.jpg]]></image>
+        <additionalimage><![CDATA[https://www.mywebstore.gr/product/322233/front.jpg]]></additionalimage>
         <category><![CDATA[Αθλητικά > Extreme Sports]]></category>
         <price_with_vat>322.33</price_with_vat>
         <manufacturer><![CDATA[SuperGlasses]]></manufacturer>
@@ -621,7 +621,7 @@ To χρώμα του προϊόντος. Το πεδίο χρώματος λει
 
 ~~~ xml
 <?xml version="2.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:xs="https://www.w3.org/2001/XMLSchema">
 
   <!-- required elements -->
   <!-- created at -->
