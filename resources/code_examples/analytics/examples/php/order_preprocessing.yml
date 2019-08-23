@@ -23,7 +23,7 @@
   function addItemAction(&$order, &$item) {
     $item_data = json_encode(array(
       'order_id'    => $order['order_id'],
-      'product_id'  => $item['id'],
+      'product_id'  => $item['product_id'],
       'name'        => $item['name'],
       'price'       => $item['price'],
       'quantity'    => $item['quantity']
