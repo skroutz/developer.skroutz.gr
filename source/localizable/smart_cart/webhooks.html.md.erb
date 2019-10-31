@@ -1,0 +1,180 @@
+---
+parent: smart_cart
+title: webhooks
+---
+
+<%= partial 'partials/page_locales' %>
+
+# Webhooks <%= edit_link %>
+
+Smart Cart webhooks allow Skroutz merchants to automatically integrate their
+Smart Cart orders with their internal tools.
+
+You may find a high level overview of the service and descriptive guides for its activation in the
+[merchant support guidelines](https://<%= settings.merchants_domain %>/merchants/support/guidelines/smart_cart_webhooks).
+
+<%= partial 'partials/toc' %>
+
+## Setup
+
+In order to be able to use the webhooks service, a **webhook URL** should be registered
+by the merchant from within
+[Smart Cart settings](https://<%= settings.merchants_domain %>/merchants/account/shop/ecommerce_details)
+page in merchant's panel (Merchants > Υπηρεσίες > [Έξυπνο Καλάθι](https://<%= settings.merchants_domain %>/merchants/account/shop/ecommerce_details)).
+
+> <i class="fa fa-exclamation-triangle"></i>
+> The **webhook URL should match the shop's domain** and it should follow secure **HTTP (HTTPS)**
+
+##### Webhook URL example
+
+Shop URL | Webhook URL
+-------- | ----------
+`https://shop.gr` | `https://shop.gr/smart_cart_orders`
+
+## Webhook requests
+
+An HTTP `POST` request is sent to the predefined webhook URL once an event has been triggered.
+
+### Handling failures / retries
+
+Any failed request (including server timeouts or non -`200` responses) would be **retried automatically**
+within the next 15 minutes. There is a retry limit of 3 requests in total for every order/event.
+
+The merchant can also trigger sending (or retrying) a **new order webhook request** at anytime from within
+the order page.
+
+The expected request payload would be the same in both scenarios.
+
+### The anatomy of a request
+
+##### Request
+<pre class="terminal">
+POST {webhook_url}
+</pre>
+
+##### Request headers
+
+Header         | Value
+-------------- | -----
+`Content-Type` | `application/json: charset=utf-8`
+`User-Agent`   | `Skroutz OrderNotifier v1`
+
+##### Expected request response
+
+<pre class="terminal">
+200
+</pre>
+
+## Webhook events
+
+As of right now, there is a single webhook event available, regading the a **new order**.
+
+### New order
+
+A **new order** webhook request is triggered upon the placement of a new order.
+
+#### Request payload
+
+Name           | Type   | Value | Description
+:------------: | :----: | :---: | :----------------:
+`event_type`   | String | `"new_order"` | Order event type
+`order`        | Object |            | [Order details](#order-object)
+
+#### Order object
+
+Name         | Type   | Description
+:------------: | :-------: | :---------------:
+`code`       | String | Order code
+`comments`   | String | Order comments
+`line_items` | Array | [Order line items (products)](#order-line-items-array)
+`created_at` | Date String in format<br> `YYYY-MM-DDTHH:MM:SS+HH:M` | Order creation date
+`expires_at` | Date String in format<br> `YYYY-MM-DDTHH:MM:SS+HH:M` | Order expiration date
+`dispatch_until` | Date String in format<br> `YYYY-MM-DDTHH:MM:SS+HH:M` | Order maximum dispatch date
+
+#### Order line items array
+
+Name                              | Type      | Description
+:-------------------------------: | :-------: | :----------------------------------------------:
+`line_items[_].shop_uid`        | String  | Item id in shop
+`line_items[_].product_name`    | String  | Item product name
+`line_items[_].quantity`        | Integer | Item quantity
+`line_items[_].size`            | Object  | [Item size values (optional)](#line-item-size)
+`line_items[_].unit_price`      | Double  | Price per item in euros (VAT-included)
+`line_items[_].total_price`     | Double  | Total item price in euros: `unit_price` * `quantity`
+
+#### Line item size
+
+Name                              | Type   | Value | Description
+:-------------------------------: | :----: | :---: | :------------------------------------------:
+`line_items[_].size.label`        | String | `"Νούμερο"` / `"Μέγεθος"` / `"Ηλικία"` |Item size label
+`line_items[_].size.value`        | String |    |Item size value
+`line_items[_].size.shop_value`   | String |    |Item original size as provided by the shop
+
+##### Payload Examples
+
+#### Example 1
+
+~~~ json
+{
+  "event_type": "new_order",
+  "order": {
+    "code": "191029-5130474",
+    "comments": "Παράδοση στο γραφείο",
+    "line_items": [
+      {
+        "shop_uid": "100",
+        "product_name": "L'Oreal Professionel Salon Steam Pod V2 White",
+        "quantity": 2,
+        "unit_price": 10.40,
+        "total_price": 20.80
+      },
+      {
+        "shop_uid": "10",
+        "product_name": "Paul Mitchell Ultimate Color Repair 200ml",
+        "quantity": 1,
+        "unit_price": 25,
+        "total_price": 25
+      }
+    ],
+    "created_at": "2019-10-29T10:39:23+02:00",
+    "expires_at": "2019-10-29T16:39:23+02:00",
+    "dispatch_until": "2019-10-30T15:00:00+02:00"
+  }
+}
+~~~
+
+#### Example 2 (with size-related fields)
+
+~~~ json
+{
+  "event_type": "new_order",
+  "order": {
+      "code": "191025-0111363",
+      "comments": "",
+      "line_items": [
+        {
+          "shop_uid": "405753",
+          "product_name": "adidas Perormance Badge of Sport Swimsuit PS/GS ( DQ3375 )",
+          "quantity": 2,
+          "size": {
+              "label": "Ηλικία",
+              "value": "14 χρονών",
+              "shop_value": "12-14"
+          },
+          "unit_price": 17.99,
+          "total_price": 35.98
+        },
+        {
+          "shop_uid": "10",
+          "product_name": "Paul Mitchell Ultimate Color Repair 200ml",
+          "quantity": 1,
+          "unit_price": 25,
+          "total_price": 25
+        }
+      ],
+      "created_at": "2019-10-25T12:25:22+03:00",
+      "expires_at": "2019-10-29T09:25:22+02:00",
+      "dispatch_until": "2019-10-29T18:00:00+02:00"
+  }
+}
+~~~
