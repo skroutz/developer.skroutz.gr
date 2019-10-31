@@ -5,6 +5,7 @@ el:
     feedspec: 'XML Feed'
     authorization: 'Authorization'
     analytics: 'Analytics'
+    smart_cart: 'Smart Cart'
     order_stash: 'Save Your Order'
     partner_badge: 'Partner Badge'
     partner_sku_reviews: '%{flavor} Product Reviews'
@@ -51,6 +52,9 @@ el:
       examples: 'Examples'
       faq: 'FAQ'
       privacy_policy: 'Privacy Policy'
+    smart_cart:
+      short_description: 'Services for merchants integrations with %{flavor} Smart Cart orders.'
+      webhooks: 'Webhooks'
     order_stash:
       short_description: 'Increase your Shop Reviews in %{flavor}.'
     partner_badge:
