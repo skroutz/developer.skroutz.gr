@@ -58,6 +58,15 @@ analytics:
     - skroutz
     - alve
 
+smart_cart:
+  base: '/smart_cart/'
+  featured: false
+  icon: 'fa-shopping-cart'
+  pages:
+    - { title: 'webhooks'}
+  flavors:
+    - skroutz
+
 order_stash:
   base: '/order_stash/'
   featured: true
