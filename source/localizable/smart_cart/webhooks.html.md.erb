@@ -40,7 +40,7 @@ An HTTP `POST` request is sent to the predefined webhook URL once an event has b
 Any failed request (including server timeouts or non -`200` responses) would be **retried automatically**
 within the next 15 minutes. There is a retry limit of 3 requests in total for every order/event.
 
-The merchant can also trigger sending (or retrying) a **new order webhook request** at anytime from within
+The merchant can also trigger sending (or retrying the latest) an **order webhook request** at any time from within
 the order page.
 
 The expected request payload would be the same in both scenarios.
@@ -67,29 +67,46 @@ Header         | Value
 
 ## Webhook events
 
-As of right now, there is a single webhook event available, regading the a **new order**.
+The available webhook events for which a request is performed are:
+
+* **new order** events
+* **order update** events
 
 ### New order
 
 A **new order** webhook request is triggered upon the placement of a new order.
 
+### Order updates
+
+An **order update** event is triggered upon the update of an order. As of right now, an update
+event notification is sent on order **cancellation**.
+
 #### Request payload
 
 Name           | Type   | Value | Description
 :------------: | :----: | :---: | :----------------:
-`event_type`   | String | `"new_order"` | Order event type
+`event_type`   | String | `"new_order"` / `"order_updated"`| Order event type
+`event_time`   | Date String in format<br> `YYYY-MM-DDTHH:MM:SS+HH:M` | | Event creation time
 `order`        | Object |            | [Order details](#order-object)
+`changes` | Object |  | [Order changes with old and new values (optional)](#order-changes-object)
+
+#### Order changes object
+
+Name           | Type   | Value | Description
+:------------: | :----: | :---: | :-----------:
+`state` | Object | `{ "old": "open", "new": "cancelled" }` | The state changed values
 
 #### Order object
 
-Name         | Type   | Description
-:------------: | :-------: | :---------------:
-`code`       | String | Order code
-`comments`   | String | Order comments
-`line_items` | Array | [Order line items (products)](#order-line-items-array)
-`created_at` | Date String in format<br> `YYYY-MM-DDTHH:MM:SS+HH:M` | Order creation date
-`expires_at` | Date String in format<br> `YYYY-MM-DDTHH:MM:SS+HH:M` | Order expiration date
-`dispatch_until` | Date String in format<br> `YYYY-MM-DDTHH:MM:SS+HH:M` | Order maximum dispatch date
+Name         | Type   | Value | Description
+:------------: | :-------: |  | :---------------:
+`code`       | String | | Order code
+`state`      | String | `"open"` / `"cancelled"`| Order state
+`comments`   | String | | Order comments
+`line_items` | Array |  | [Order line items (products)](#order-line-items-array)
+`created_at` | Date String in format<br> `YYYY-MM-DDTHH:MM:SS+HH:M` | | Order creation date
+`expires_at` | Date String in format<br> `YYYY-MM-DDTHH:MM:SS+HH:M` | | Order expiration date
+`dispatch_until` | Date String in format<br> `YYYY-MM-DDTHH:MM:SS+HH:M` | | Order maximum dispatch date
 
 #### Order line items array
 
@@ -117,8 +134,10 @@ Name                              | Type   | Value | Description
 ~~~ json
 {
   "event_type": "new_order",
+  "event_time": "2019-10-29T10:39:23+02:00",
   "order": {
     "code": "191029-5130474",
+    "state": "open",
     "comments": "Παράδοση στο γραφείο",
     "line_items": [
       {
@@ -148,8 +167,10 @@ Name                              | Type   | Value | Description
 ~~~ json
 {
   "event_type": "new_order",
+  "event_time": "2019-10-29T10:39:23+02:00",
   "order": {
       "code": "191025-0111363",
+      "state": "open",
       "comments": "",
       "line_items": [
         {
@@ -175,6 +196,45 @@ Name                              | Type   | Value | Description
       "created_at": "2019-10-25T12:25:22+03:00",
       "expires_at": "2019-10-29T09:25:22+02:00",
       "dispatch_until": "2019-10-29T18:00:00+02:00"
+  }
+}
+~~~
+
+#### Example 3
+
+~~~ json
+{
+  "event_type": "order_updated",
+  "event_time": "2019-10-29T10:39:23+02:00",
+  "order": {
+    "code": "191029-5130474",
+    "state": "cancelled",
+    "comments": "Παράδοση στο γραφείο",
+    "line_items": [
+      {
+        "shop_uid": "100",
+        "product_name": "L'Oreal Professionel Salon Steam Pod V2 White",
+        "quantity": 2,
+        "unit_price": 10.40,
+        "total_price": 20.80
+      },
+      {
+        "shop_uid": "10",
+        "product_name": "Paul Mitchell Ultimate Color Repair 200ml",
+        "quantity": 1,
+        "unit_price": 25,
+        "total_price": 25
+      }
+    ],
+    "created_at": "2019-10-29T10:39:23+02:00",
+    "expires_at": "2019-10-29T16:39:23+02:00",
+    "dispatch_until": "2019-10-30T15:00:00+02:00"
+  },
+  "changes": {
+    "state": {
+      "old": "open",
+      "new": "cancelled"
+    }
   }
 }
 ~~~
