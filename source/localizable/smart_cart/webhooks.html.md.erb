@@ -79,7 +79,10 @@ A **new order** webhook request is triggered upon the placement of a new order.
 ### Order updates
 
 An **order update** event is triggered upon the update of an order. As of right now, an update
-event notification is sent on order **cancellation**.
+event notification is sent for the following cases:
+
+* When an order is **cancelled** (either by the user or our support team).
+* When an order is **extended** (allowing more time to handle the order).
 
 #### Request payload
 
@@ -94,7 +97,9 @@ Name           | Type   | Value | Description
 
 Name           | Type   | Value | Description
 :------------: | :----: | :---: | :-----------:
-`state` | Object | `{ "old": "open", "new": "cancelled" }` | The state changed values
+`state` | Object | `{ "old": "open", "new": "cancelled" }` | The state changed values (optional)
+`expires_at` | Object | `{ "old": "2019-11-02T13:15:43+02:00", "new": "2019-11-04T13:15:00+02:00" }` | The order's current expiration time changes (optional)
+`dispatch_until` | Object | `{ "old": "2019-11-03T12:00:00+02:00", "new": "2019-11-04T18:00:00+02:00" }` | The order's current time until dispatching changes (optional)
 
 #### Order object
 
@@ -234,6 +239,49 @@ Name                              | Type   | Value | Description
     "state": {
       "old": "open",
       "new": "cancelled"
+    }
+  }
+}
+~~~
+
+#### Example 4 (extension)
+
+~~~ json
+{
+  "event_type": "order_updated",
+  "event_time": "2019-10-29T10:39:23+02:00",
+  "order": {
+    "code": "191029-5130474",
+    "state": "open",
+    "comments": "Παράδοση στο γραφείο",
+    "line_items": [
+      {
+        "shop_uid": "100",
+        "product_name": "L'Oreal Professionel Salon Steam Pod V2 White",
+        "quantity": 2,
+        "unit_price": 10.40,
+        "total_price": 20.80
+      },
+      {
+        "shop_uid": "10",
+        "product_name": "Paul Mitchell Ultimate Color Repair 200ml",
+        "quantity": 1,
+        "unit_price": 25,
+        "total_price": 25
+      }
+    ],
+    "created_at": "2019-10-29T10:39:23+02:00",
+    "expires_at": "2019-10-29T16:39:23+02:00",
+    "dispatch_until": "2019-10-30T15:00:00+02:00"
+  },
+  "changes": {
+    "expires_at": {
+      "old": "2019-11-02T13:15:43+02:00",
+      "new": "2019-11-04T13:15:00+02:00"
+    },
+    "dispatch_until": {
+      "old": "2019-11-03T12:00:00+02:00",
+      "new": "2019-11-04T18:00:00+02:00"
     }
   }
 }
