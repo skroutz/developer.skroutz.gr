@@ -1,0 +1,30 @@
+#### Order object
+
+Name         | Type   | Value | Description
+:------------: | :-------: |  | :---------------:
+`code`       | String | | Order code
+`state`      | String | `"open"` / `"cancelled"`| Order state
+`comments`   | String | | Order comments
+`line_items` | Array |  | [Order line items (products)](#order-line-items-array)
+`created_at` | Date String in format<br> `YYYY-MM-DDTHH:MM:SS+HH:M` | | Order creation date
+`expires_at` | Date String in format<br> `YYYY-MM-DDTHH:MM:SS+HH:M` | | Order expiration date
+`dispatch_until` | Date String in format<br> `YYYY-MM-DDTHH:MM:SS+HH:M` | | Order maximum dispatch date
+
+#### Order line items array
+
+Name                              | Type      | Description
+:-------------------------------: | :-------: | :----------------------------------------------:
+`line_items[_].shop_uid`        | String  | Item id in shop
+`line_items[_].product_name`    | String  | Item product name
+`line_items[_].quantity`        | Integer | Item quantity
+`line_items[_].size`            | Object  | [Item size values (optional)](#line-item-size)
+`line_items[_].unit_price`      | Double  | Price per item in euros (VAT-included)
+`line_items[_].total_price`     | Double  | Total item price in euros: `unit_price` * `quantity`
+
+#### Line item size
+
+Name                              | Type   | Value | Description
+:-------------------------------: | :----: | :---: | :------------------------------------------:
+`line_items[_].size.label`        | String | `"Νούμερο"` / `"Μέγεθος"` / `"Ηλικία"` |Item size label
+`line_items[_].size.value`        | String |    |Item size value
+`line_items[_].size.shop_value`   | String |    |Item original size as provided by the shop
