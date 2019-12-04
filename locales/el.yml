@@ -56,7 +56,7 @@ el:
       short_description: 'Services for merchants integrations with %{flavor} Smart Cart orders.'
       overview: 'Overview'
       orders_api: 'Orders API'
-      webhooks: 'Webhooks'
+      webhook: 'Webhook'
     order_stash:
       short_description: 'Increase your Shop Reviews in %{flavor}.'
     partner_badge:

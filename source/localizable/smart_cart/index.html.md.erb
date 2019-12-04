@@ -7,7 +7,7 @@ title: overview
 
 There are currently two tools for Merchants that can be used to integrate Smart Cart orders
 into their existing system, the [Orders API](/smart_cart/orders_api) and
-[Webhooks](/smart_cart/webhooks).
+[Webhook](/smart_cart/webhook).
 
 <%= partial 'partials/toc' %>
 
@@ -18,18 +18,18 @@ such as accepting or rejecting an order.
 
 [Orders API documentation](/smart_cart/orders_api)
 
-## Webhooks
+## Webhook
 
 Webhook allows Skroutz Merchants to automatically receive order details to their
 platform when a new Smart Cart order is placed or an existing one is updated.
 
-[Webhooks documentation](/smart_cart/webhooks)
+[Webhook documentation](/smart_cart/webhook)
 
 ## Use cases
 
-Both [Webhooks](/smart_cart/webhooks) and [Orders API](/smart_cart/orders_api) can be enabled and
+Both [Webhook](/smart_cart/webhook) and [Orders API](/smart_cart/orders_api) can be enabled and
 used separately. For a full orders integration though, it would require to implement both services,
-since Webhooks can be utilized to get notified about new orders (or order updates) and the Orders
+since Webhook can be utilized to get notified about new orders (or order updates) and the Orders
 API can be used to interact with that orders later on.
 
 An order coming through a Webhook event has a unique `code`. You can use this code to
