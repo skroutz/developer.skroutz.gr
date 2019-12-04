@@ -1,0 +1,120 @@
+---
+parent: smart_cart
+title: orders_api
+---
+
+<%= partial 'partials/page_locales' %>
+
+# Orders API <%= edit_link %>
+
+Orders API allows Skroutz Merchants to perform actions on their Smart Cart orders,
+such as accepting or rejecting an order.
+
+You may find a high level overview of the service and descriptive guides for its activation in the
+[merchant support guidelines](https://<%= settings.merchants_domain %>/merchants/support/guidelines/smart_cart_integration).
+
+<%= partial 'partials/toc' %>
+
+## Setup
+
+### Obtaining an API token
+
+In order to be able to use the API, you need to generate an **API token** from within Smart Cart settings
+page in merchant's panel (Merchants > Υπηρεσίες > Έξυπνο Καλάθι).
+
+> <i class="fa fa-exclamation-triangle"></i>
+> There can only be one active **API key** per shop at a certain time.
+> Creating a new API key will expire any previous one.
+
+### Authorization
+
+Pass in a valid **API token** in the `Authorization` header, prefixed with `Bearer `
+as in the following curl example.
+
+A specific `Accept` header is also required. For more information on API requests check the [API overview](/api/v3/).
+
+<pre class="terminal">
+curl -X GET https://<%= settings.api_domain %>/merchants/ecommerce/orders/191128-1234567 \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Authorization: Bearer your_access_token_here'
+</pre>
+
+## Endpoints
+
+All endpoints require the order `code` as a URL parameter. This is available in all incoming order
+[Webhook](/smart_cart/webhook) events, as well as the merchants' panel.
+
+### Retrieve a single order
+
+When an order is in a state that can be accepted or rejected, `accept_options` and `reject_options`
+attributes are included in the response, providing all the available options for
+issuing "accept" or "reject" requests for the order, respectively.
+
+<pre class="terminal">
+  GET /merchants/ecommerce/orders/:code
+</pre>
+
+<%= render_recording :merchants_ecommerce_orders_show %>
+
+### Accept a single order
+
+The available param values used are provided in `accept_options` when retrieving a single order.
+
+<pre class="terminal">
+  POST /merchants/ecommerce/orders/:code/accept
+</pre>
+
+<%= render_recording :merchants_ecommerce_orders_accept %>
+
+### Reject a single order
+
+#### Reject specific line items with reasons
+
+To reject specific line items you need to provide a `line_items` params which would hold an
+array of line items. Each line items should have the line item `id` and the rejection
+`reason_id`. In case the rejection reason `requires_available_quantity`,
+an `available_quantity` attribute is also required.
+
+The available rejection reason IDs are provided in `reject_options` when retrieving a single order.
+
+<pre class="terminal">
+  POST /merchants/ecommerce/orders/:code/reject
+</pre>
+
+<%= render_recording :merchants_ecommerce_orders_reject %>
+
+#### Reject whole order with "other" reason
+
+<pre class="terminal">
+  POST /merchants/ecommerce/orders/:code/reject
+</pre>
+
+<%= render_recording :merchants_ecommerce_orders_reject_other %>
+
+## Error handling
+
+In case of errors, the response will have a representative HTTP status code
+in the `4xx` or `5xx` range. The body would contain an array of `errors`.
+
+For example, if you try to reject an order that is already rejected, you will
+get a `422` HTTP status code (Unprocessable Entity), with the following body:
+
+<%= render_code '{
+  "errors": [
+      {
+          "code": "order_status",
+          "messages": [
+              "Order already rejected."
+          ]
+      }
+  ]
+}', 'javascript' %>
+
+[More on API error handling](/api/v3/#error-handling)
+
+## Order object attributes appendix
+
+> The order object returned retrieving a single order via the API is the same as
+> in [webhook events](/smart_cart/webhook) about a new/updated order.
+
+<%= partial 'localizable/smart_cart/order_object' %>

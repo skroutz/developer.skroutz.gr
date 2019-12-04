@@ -1,0 +1,58 @@
+---
+parent: smart_cart
+title: overview
+---
+
+# Overview <%= edit_link %>
+
+There are currently two tools for Merchants that can be used to integrate Smart Cart orders
+into their existing system, the [Orders API](/smart_cart/orders_api) and
+[Webhooks](/smart_cart/webhooks).
+
+<%= partial 'partials/toc' %>
+
+## Orders API
+
+Orders API allows Skroutz Merchants to perform actions on their Smart Cart orders,
+such as accepting or rejecting an order.
+
+[Orders API documentation](/smart_cart/orders_api)
+
+## Webhooks
+
+Webhook allows Skroutz Merchants to automatically receive order details to their
+platform when a new Smart Cart order is placed or an existing one is updated.
+
+[Webhooks documentation](/smart_cart/webhooks)
+
+## Use cases
+
+Both [Webhooks](/smart_cart/webhooks) and [Orders API](/smart_cart/orders_api) can be enabled and
+used separately. For a full orders integration though, it would require to implement both services,
+since Webhooks can be utilized to get notified about new orders (or order updates) and the Orders
+API can be used to interact with that orders later on.
+
+An order coming through a Webhook event has a unique `code`. You can use this code to
+perform the API requests for that specific order.
+
+#### Rejecting orders
+
+<pre>
+— User places an order on Skroutz
+→ [Webhook] Your website gets a "new_order" payload, including the available options to accept or reject the order
+  — The stock of the product is checked, and there is limited stock for an item
+  ← [Orders API] Your website issues a "reject" request, indicating the line item and the available stock
+    — Skroutz reprocesses the order (your website could receive a new order for the available items)
+</pre>
+
+#### Accepting orders
+
+<pre>
+— User places an order on Skroutz
+→ [Webhook] Your website gets a "new_order" payload, including the available options to accept or reject the order
+  - The stock of the product is checked, and the order can be processed
+  ← [Orders API] Your website issues an "accept" request to the to accept the order
+    — Skroutz processes the order and creates the courier voucher
+      → [Webhook] Your website gets an "order_updated" payload, including the courier voucher (PDF)
+      — The courier voucher gets printed
+</pre>

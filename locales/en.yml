@@ -60,6 +60,8 @@ en:
       privacy_policy: 'Privacy Policy'
     smart_cart:
       short_description: 'Services for merchants integrations with %{flavor} Smart Cart orders.'
+      overview: 'Overview'
+      orders_api: 'Orders API'
       webhooks: 'Webhooks'
     order_stash:
       short_description: 'Increase your Shop Reviews in %{flavor}.'
