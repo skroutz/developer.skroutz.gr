@@ -92,14 +92,16 @@ To <%= settings.site_name.capitalize %>Bot δεν κάνει HTTP ή άλλης 
 Η προτεινόμενη λύση είναι η εξαίρεση συγκεκριμένων IPs και η προσθήκη τους στις
 έμπιστες IPs (whitelist).
 
-Επιπλέον, το <%= settings.site_name.capitalize %>Bot δεν στέλνει `Accept-Encoding`header,
-αλλά μπορεί να διαχειριστεί συμπιεσμένα αρχεία σε gzip και zip. Ο server του
+Τέλος, το <%= settings.site_name.capitalize %>Bot στέλνει `Accept-Encoding` header,
+και μπορεί να διαχειριστεί συμπιεσμένα αρχεία σε μορφή gzip ή zip. Ο server του
 καταστήματος δεν πρέπει να απαγορεύει την πρόσβαση στο
 <%= settings.site_name.capitalize %>Bot εάν χρησιμοποιεί συμπίεση gzip ή zip.
 
 > ##### ΣΗΜΕΙΩΣΗ
 > Ένας εύκολος τρόπος για να προσομοιώσετε το <%= settings.site_name.capitalize %>Bot είναι να
-> χρησιμοποιήσετε την εντολή `curl -A "<%= settings.site_name.capitalize %>Bot v1.0" -i -L`
+> χρησιμοποιήσετε την εντολή:<br><br>
+> `curl -H 'user-agent: <%= settings.site_name.capitalize %>Bot v1.0' -H 'accept: application/xml,application/gzip,text/csv,application/xhtml+xml;q=0.9,*/*;q=0.8' -H 'accept-encoding: gzip' --compressed <feed_file_url>`
+
 
 #### <%= settings.site_name.capitalize %> ImageBot
 

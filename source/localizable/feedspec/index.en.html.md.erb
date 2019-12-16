@@ -89,13 +89,15 @@ You can verify your certificate
 any other kind of authentication.
 The preferred method is to use IP access control lists.
 
-<%= settings.site_name.capitalize %>Bot does not send an `Accept-Encoding` header
-but it can handle gzip and zip compression. The shop's server should not deny access
+<%= settings.site_name.capitalize %>Bot sends an `Accept-Encoding` header
+and it can handle gzip and zip compression. The shop's server should not deny access
 to <%= settings.site_name.capitalize %>Bot if it uses exclusively gzip or zip compression.
 
 > ##### Note
 > An easy way to emulate the <%= settings.site_name.capitalize %>Bot is to use
-> the linux program curl, for example: `curl -A "<%= settings.site_name.capitalize %>Bot v1.0" -i -L`
+> the linux program curl, for example:<br><br>
+> `curl -H 'user-agent: <%= settings.site_name.capitalize %>Bot v1.0' -H 'accept: application/xml,application/gzip,text/csv,application/xhtml+xml;q=0.9,*/*;q=0.8' -H 'accept-encoding: gzip' --compressed <feed_file_url>`
+
 
 #### <%= settings.site_name.capitalize %> ImageBot
 
