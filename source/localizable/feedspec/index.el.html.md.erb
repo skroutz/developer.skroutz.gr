@@ -100,7 +100,7 @@ To <%= settings.site_name.capitalize %>Bot δεν κάνει HTTP ή άλλης 
 > ##### ΣΗΜΕΙΩΣΗ
 > Ένας εύκολος τρόπος για να προσομοιώσετε το <%= settings.site_name.capitalize %>Bot είναι να
 > χρησιμοποιήσετε την εντολή:<br><br>
-> `curl -H 'user-agent: <%= settings.site_name.capitalize %>Bot v1.0' -H 'accept: application/xml,application/gzip,text/csv,application/xhtml+xml;q=0.9,*/*;q=0.8' -H 'accept-encoding: gzip' --compressed <feed_file_url>`
+> `curl -H 'user-agent: <%= settings.site_name.capitalize %>Bot v1.0' -H 'accept: application/xml,application/gzip,text/csv,application/xhtml+xml;q=0.9,*/*;q=0.8' -H 'accept-encoding: gzip' -i -L --compressed <feed_file_url>`
 
 
 #### <%= settings.site_name.capitalize %> ImageBot
