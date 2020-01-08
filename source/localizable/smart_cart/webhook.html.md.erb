@@ -83,6 +83,7 @@ event notification is sent for the following cases:
 
 * When an order is **cancelled** (either by the user or our support team).
 * When an order is **extended** (allowing more time to handle the order).
+* When an order's courier voucher is **created** (for the associated shipment).
 
 #### Request payload
 
@@ -100,6 +101,7 @@ Name           | Type   | Value | Description
 `state` | Object | `{ "old": "open", "new": "cancelled" }` | The state changed values (optional)
 `expires_at` | Object | `{ "old": "2019-11-02T13:15:43+02:00", "new": "2019-11-04T13:15:00+02:00" }` | The order's current expiration time changes (optional)
 `dispatch_until` | Object | `{ "old": "2019-11-03T12:00:00+02:00", "new": "2019-11-04T18:00:00+02:00" }` | The order's current time until dispatching changes (optional)
+`courier_voucher` | Object | `{ "old": null, "new": "https://b.scdn.gr/path-to/voucher.pdf" }` | The order's shipment courier voucher URL (optional)
 
 > The order object included in webhook payload is the sames as the one when
 > retrieving a single order via the [orders API](/smart_cart/orders_api).
@@ -118,6 +120,7 @@ Name           | Type   | Value | Description
     "code": "191029-5130474",
     "state": "open",
     "comments": "Παράδοση στο γραφείο",
+    "courier_voucher": null,
     "line_items": [
       {
         "shop_uid": "100",
@@ -151,6 +154,7 @@ Name           | Type   | Value | Description
       "code": "191025-0111363",
       "state": "open",
       "comments": "",
+      "courier_voucher": null,
       "line_items": [
         {
           "shop_uid": "405753",
@@ -189,6 +193,7 @@ Name           | Type   | Value | Description
     "code": "191029-5130474",
     "state": "cancelled",
     "comments": "Παράδοση στο γραφείο",
+    "courier_voucher": null,
     "line_items": [
       {
         "shop_uid": "100",
@@ -228,6 +233,7 @@ Name           | Type   | Value | Description
     "code": "191029-5130474",
     "state": "open",
     "comments": "Παράδοση στο γραφείο",
+    "courier_voucher": null,
     "line_items": [
       {
         "shop_uid": "100",
@@ -256,6 +262,46 @@ Name           | Type   | Value | Description
     "dispatch_until": {
       "old": "2019-11-03T12:00:00+02:00",
       "new": "2019-11-04T18:00:00+02:00"
+    }
+  }
+}
+~~~
+
+#### Example 5 (courier voucher creation)
+
+~~~ json
+{
+  "event_type": "order_updated",
+  "event_time": "2019-10-29T10:39:23+02:00",
+  "order": {
+    "code": "191029-5130474",
+    "state": "open",
+    "comments": "Παράδοση στο γραφείο",
+    "courier_voucher": "https://b.scdn.gr/path-to/voucher.pdf",
+    "line_items": [
+      {
+        "shop_uid": "100",
+        "product_name": "L'Oreal Professionel Salon Steam Pod V2 White",
+        "quantity": 2,
+        "unit_price": 10.40,
+        "total_price": 20.80
+      },
+      {
+        "shop_uid": "10",
+        "product_name": "Paul Mitchell Ultimate Color Repair 200ml",
+        "quantity": 1,
+        "unit_price": 25,
+        "total_price": 25
+      }
+    ],
+    "created_at": "2019-10-29T10:39:23+02:00",
+    "expires_at": "2019-10-29T16:39:23+02:00",
+    "dispatch_until": "2019-10-30T15:00:00+02:00"
+  },
+  "changes": {
+    "courier_voucher": {
+      "old": null,
+      "new": "https://b.scdn.gr/path-to/voucher.pdf"
     }
   }
 }
