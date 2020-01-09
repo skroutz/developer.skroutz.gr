@@ -63,7 +63,9 @@ smart_cart:
   featured: false
   icon: 'fa-shopping-cart'
   pages:
-    - { title: 'webhooks'}
+    - { title: 'overview', url: '/smart_cart/' }
+    - { title: 'orders_api'}
+    - { title: 'webhook'}
   flavors:
     - skroutz
 

@@ -1,0 +1,44 @@
+---
+:request:
+  :url: https://api.skroutz.gr/merchants/ecommerce/orders/191128-1234567
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3.0
+    :authorization: Bearer xWmjOaQmNgLt3dVIYBGkWVWhbrcdg4XfYqS3Jb1dMVHvGIBJcPuzVQYjH-XKenxsZgFW8DSgc9f2fI_MBVBHNw==
+  :verb: :get
+:response:
+  :status: 200
+  :headers:
+    Date: Thu, 19 Nov 2019 15:01:26 GMT
+    Connection: keep-alive
+    Content-Length: 6400
+    Server: h2o (Debian)
+    Content-Type: application/json; charset=utf-8
+    X-Meta-Client-Id: 27951bdf06a65ea4
+    Cache-Control: no-cache
+    X-Request-Id: 989369834
+    X-Runtime: 0.021923
+    X-App: as103_ssl
+    X-Varnish: 989369834
+    Age: 0
+    Via: 1.1 varnish (Varnish/5.0)
+    X-Origin: lb2
+    X-Cache: MISS
+    X-Cached: skroutz miss(0)
+  :body: '{"order":{"code":"191128-1234567","state":"open","comments":"User comments here",
+"courier_voucher":null,"line_items":[{"id":"opaoe8M3pZ","shop_uid":"12456",
+"product_name":"Champion Hooded Sweatshirt M (212077-KK001)","quantity":1,
+"size":{"label":"Μέγεθος","value":"L","shop_value":"L"},"unit_price":23.99,
+"total_price":23.99}],"created_at":"2019-11-28T13:24:37+02:00",
+"expires_at":"2019-12-04T10:24:00+02:00","dispatch_until":"2019-12-04T18:00:00+02:00",
+"accept_options":{"number_of_parcels":[1],"pickup_location":[
+  {"id":"YlpD0KROym","label":"Πανεπιστημίου 2, Τ.Κ. 12345, Αθήνα, Αττική"},
+{"id":"onpL6DXG4l","label":"Σταδίου 1, Τ.Κ. 12345, Αθήνα, Αττική"},
+{"id":"wgO1N22OaQ","label":"Κρήτης 50, Τ.Κ. 73100, Χανιά, Χανιά"}],"pickup_window":[
+  {"id":1,"label":"15:00 - 18:00, Τρί 03/12/19"}, {"id":2,"label":"10:00 - 12:00, Τετ 04/12/19"},
+{"id":3,"label":"12:00 - 15:00, Τετ 04/12/19"}, {"id":4,"label":"15:00 - 18:00, Τετ 04/12/19"}]},
+"reject_options":{"line_item_rejection_reasons":[{"id":1,
+"label":"Εκτός αποθέματος στο κατάστημα ή στον προμηθευτή","requires_available_quantity":false},
+{"id":2,"label":"Λάθος καταχωρημένη τιμή(ες)","requires_available_quantity":false},
+{"id":4,"label":"Περιορισμένα τεμάχια","requires_available_quantity":true},
+{"id":5,"label":"To προϊόν καταργήθηκε","requires_available_quantity":false}]}}}'
+:created_at: 2019-11-28 15:45:53.285062331 +03:00

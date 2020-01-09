@@ -53,7 +53,9 @@ tr:
       privacy_policy: 'Privacy Policy'
     smart_cart:
       short_description: 'Services for merchant integrations with %{flavor} Smart Cart orders.'
-      webhooks: 'Webhooks'
+      overview: 'Overview'
+      orders_api: 'Orders API'
+      webhook: 'Webhook'
     order_stash:
       short_description: 'Increase your Shop Reviews in %{flavor}.'
     partner_badge:
