@@ -50,7 +50,7 @@ tr:
       libraries: 'Libraries'
       examples: 'Examples'
       faq: 'FAQ'
-      privacy_policy: 'Privacy Policy'
+      privacy_policy: 'Privacy Policy - Analytics'
     smart_cart:
       short_description: 'Services for merchant integrations with %{flavor} Smart Cart orders.'
       overview: 'Overview'
