@@ -53,6 +53,7 @@ el:
       faq: 'FAQ'
       privacy_policy: 'Privacy Policy - Analytics'
       cps_privacy_policy: 'Privacy Policy - CPS'
+      lawfulness_of_processing: 'Lawfulness of Processing'
     smart_cart:
       short_description: 'Services for merchants integrations with %{flavor} Smart Cart orders.'
       overview: 'Overview'
