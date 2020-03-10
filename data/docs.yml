@@ -54,6 +54,8 @@ analytics:
     - { title: 'examples' }
     - { title: 'faq' }
     - { title: 'privacy_policy', skip_flavors: ['alve', 'scrooge'] }
+    - { title: 'cps_privacy_policy', skip_flavors: ['alve', 'scrooge'] }
+    - { title: 'lawfulness_of_processing', skip_flavors: ['alve', 'scrooge'] }
   flavors:
     - skroutz
     - alve
