@@ -5,11 +5,19 @@ Name         | Type   | Value | Description
 `code`       | String | | Order code
 `state`      | String | `"open"` / `"cancelled"`| Order state
 `comments`   | String | | Order comments
+`customer`   | Object | | [Customer details](#customer-details)
 `courier_voucher` | String | | Order's shipment courier voucher URL
 `line_items` | Array |  | [Order line items (products)](#order-line-items-array)
 `created_at` | Date String in format<br> `YYYY-MM-DDTHH:MM:SS+HH:M` | | Order creation date
 `expires_at` | Date String in format<br> `YYYY-MM-DDTHH:MM:SS+HH:M` | | Order expiration date
 `dispatch_until` | Date String in format<br> `YYYY-MM-DDTHH:MM:SS+HH:M` | | Order maximum dispatch date
+
+#### Customer details
+
+Name                              | Type   | Description
+:-------------------------------: | :----: | :------------------------------------------:
+`customer.first_name`             | String |First name
+`customer.last_name`              | String |Last name
 
 #### Order line items array
 

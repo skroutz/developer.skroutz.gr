@@ -24,7 +24,9 @@
     X-Origin: lb2
     X-Cache: MISS
     X-Cached: skroutz miss(0)
-  :body: '{"order":{"code":"191128-1234567","state":"open","comments":"User comments here",
+  :body: '{"order":{"code":"191128-1234567","state":"open",
+"customer":{"first_name":"John","last_name": "Doe"},
+"comments":"User comments here",
 "courier_voucher":null,"line_items":[{"id":"opaoe8M3pZ","shop_uid":"12456",
 "product_name":"Champion Hooded Sweatshirt M (212077-KK001)","quantity":1,
 "size":{"label":"Μέγεθος","value":"L","shop_value":"L"},"unit_price":23.99,
