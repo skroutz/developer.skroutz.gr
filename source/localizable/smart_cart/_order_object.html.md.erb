@@ -3,7 +3,7 @@
 Name         | Type   | Value | Description
 :------------: | :-------: |  | :---------------:
 `code`       | String | | Order code
-`state`      | String | `"open"` / `"cancelled"`| Order state
+`state`      | String | `open`, `accepted`, `rejected`, `cancelled`, `expired`, `dispatched`, `delivered`, `partially_returned`, `returned` | Order state
 `comments`   | String | | Order comments
 `customer`   | Object | | [Customer details](#customer-details)
 `courier_voucher` | String | | Order's shipment courier voucher URL
@@ -11,6 +11,8 @@ Name         | Type   | Value | Description
 `created_at` | Date String in format<br> `YYYY-MM-DDTHH:MM:SS+HH:M` | | Order creation date
 `expires_at` | Date String in format<br> `YYYY-MM-DDTHH:MM:SS+HH:M` | | Order expiration date
 `dispatch_until` | Date String in format<br> `YYYY-MM-DDTHH:MM:SS+HH:M` | | Order maximum dispatch date
+`accept_options` | Object | | [Accept options](#accept-options) (available for orders with state `"open"`)
+`reject_options` | Object | | [Reject options](#reject-options) (available for orders with state `"open"`)
 
 #### Customer details
 
@@ -35,6 +37,60 @@ Name                              | Type      | Description
 
 Name                              | Type   | Value | Description
 :-------------------------------: | :----: | :---: | :------------------------------------------:
-`line_items[_].size.label`        | String | `"Νούμερο"` / `"Μέγεθος"` / `"Ηλικία"` |Item size label
+`line_items[_].size.label`        | String | `Νούμερο`, `Μέγεθος`, `Ηλικία` |Item size label
 `line_items[_].size.value`        | String |    |Item size value
 `line_items[_].size.shop_value`   | String |    |Item original size as provided by the shop
+
+#### Accept options
+
+These are valid values to POST to the corresponding keys when
+[accepting a single order](/smart_cart/orders_api/#accept-a-single-order)
+(only available for orders with state `"open"`).
+
+Name                              | Type   | Example     | Description
+:-------------------------------: | :----: | :---------: | :------------------------------------------------:
+`accept_options.number_of_parcels`| Array  | `[1, 2, 3]` | Valid values to post on `number_of_parcels`
+`accept_options.pickup_location`  | Array  |             | [Pickup location](#accept-option-pickup-location)
+`accept_options.pickup_window`    | Array  |             | [Pickup window](#accept-option-pickup-window)
+
+#### Accept option: Pickup location
+
+Valid pickup locations to post when
+[accepting a single order](/smart_cart/orders_api/#accept-a-single-order) (use `id`).
+
+Name                    | Type    | Description
+:---------------------: | :-----: | :-----------------------:
+`pickup_location.id`    | Integer | The location ID to use
+`pickup_location.label` | String  | A human readable address
+
+#### Accept option: Pickup window
+
+Valid pickup windows to post when
+[accepting a single order](/smart_cart/orders_api/#accept-a-single-order) (use `id`).
+
+Name                    | Type    | Description
+:---------------------: | :-----: | :--------------------------:
+`pickup_window.id`      | Integer | The pickup window ID to use
+`pickup_window.label`   | String  | A human readable time range
+
+
+#### Reject options
+
+These are possible values to POST to the corresponding keys when
+[rejecting a single order](/smart_cart/orders_api/#reject-a-single-order)
+(only available for orders with state `"open"`).
+
+Name                                         | Type   | Description
+:------------------------------------------: | :----: | :----------------------------------------------------------------------:
+`reject_options.line_item_rejection_reasons` | Array  | [Line item rejection reason](#reject-option-line-item-rejection-reason)
+
+#### Reject option: Line item rejection reason
+
+Available reasons to post along line_item ids when
+[rejecting a single order](/smart_cart/orders_api/#reject-a-single-order) (use `id`).
+
+Name                                                       | Type    | Description
+:--------------------------------------------------------: | :-----: | :----------------------------------------------:
+`line_item_rejection_reason.id`                            | Integer | The rejection reason ID to use
+`line_item_rejection_reason.label`                         | String  | A human readable label
+`line_item_rejection_reason.requires_available_quantity`   | Boolean | Whether or not `available_quantity` is required
