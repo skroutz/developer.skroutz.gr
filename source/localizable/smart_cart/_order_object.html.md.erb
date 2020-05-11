@@ -3,7 +3,7 @@
 Name         | Type   | Value | Description
 :------------: | :-------: |  | :---------------:
 `code`       | String | | Order code
-`state`      | String | `"open"` / `"cancelled"`| Order state
+`state`      | String | `open`, `accepted`, `rejected`, `cancelled`, `expired`, `dispatched`, `delivered`, `partially_returned`, `returned` | Order state
 `comments`   | String | | Order comments
 `customer`   | Object | | [Customer details](#customer-details)
 `courier_voucher` | String | | Order's shipment courier voucher URL
@@ -37,7 +37,7 @@ Name                              | Type      | Description
 
 Name                              | Type   | Value | Description
 :-------------------------------: | :----: | :---: | :------------------------------------------:
-`line_items[_].size.label`        | String | `"Νούμερο"` / `"Μέγεθος"` / `"Ηλικία"` |Item size label
+`line_items[_].size.label`        | String | `Νούμερο`, `Μέγεθος`, `Ηλικία` |Item size label
 `line_items[_].size.value`        | String |    |Item size value
 `line_items[_].size.shop_value`   | String |    |Item original size as provided by the shop
 
@@ -63,7 +63,7 @@ Name                    | Type    | Description
 `pickup_location.id`    | Integer | The location ID to use
 `pickup_location.label` | String  | A human readable address
 
-#### Accept option: Pickup windows
+#### Accept option: Pickup window
 
 Valid pickup windows to post when
 [accepting a single order](/smart_cart/orders_api/#accept-a-single-order) (use `id`).
