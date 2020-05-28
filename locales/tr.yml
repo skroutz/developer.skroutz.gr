@@ -51,7 +51,7 @@ tr:
       examples: 'Examples'
       faq: 'FAQ'
       privacy_policy: 'Privacy Policy - Analytics'
-      cps_privacy_policy: 'Privacy Policy - CPS'
+      cps_privacy_policy: 'Privacy Policy - CPC/CPS'
       lawfulness_of_processing: 'Lawfulness of Processing'
     smart_cart:
       short_description: 'Services for merchant integrations with %{flavor} Smart Cart orders.'
