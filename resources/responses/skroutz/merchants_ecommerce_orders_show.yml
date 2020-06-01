@@ -25,7 +25,7 @@
     X-Cache: MISS
     X-Cached: skroutz miss(0)
   :body: '{"order":{"code":"191128-1234567","state":"open",
-"customer":{"first_name":"John","last_name": "Doe"},
+  "customer":{"first_name":"John","last_name": "Doe","address":{"street_name":"Πανεπιστημίου","street_number":"4","zip":"12345","city":"Αθήνα","region":"Αττικής"}},
 "comments":"User comments here",
 "courier_voucher":null,"line_items":[{"id":"opaoe8M3pZ","shop_uid":"12456",
 "product_name":"Champion Hooded Sweatshirt M (212077-KK001)","quantity":1,
