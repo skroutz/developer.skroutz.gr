@@ -4,8 +4,10 @@ Name         | Type   | Value | Description
 :------------: | :-------: |  | :---------------:
 `code`       | String | | Order code
 `state`      | String | `open`, `accepted`, `rejected`, `cancelled`, `expired`, `dispatched`, `delivered`, `partially_returned`, `returned` | Order state
-`comments`   | String | | Order comments
 `customer`   | Object | | [Customer details](#customer-details)
+`invoice`        | Boolean | | Invoice requested
+`invoice_details` | Object | | [Invoice details](#invoice-details) (available when invoice is requested)
+`comments`   | String | | Order comments
 `courier_voucher` | String | | Order's shipment courier voucher URL
 `line_items` | Array |  | [Order line items (products)](#order-line-items-array)
 `created_at` | Date String in format<br> `YYYY-MM-DDTHH:MM:SS+HH:M` | | Order creation date
@@ -31,6 +33,38 @@ Name                              | Type   | Description
 `customer.address.zip`            | String | Address postal code
 `customer.address.city`           | String | Address city
 `customer.address.region`         | String | Address region
+
+#### Invoice details
+
+This attribute is present only when a user requests an invoice for the order.
+
+Name                                           | Type    | Description
+:--------------------------------------------: | :-----: | :----------------------------------------------:
+`invoice_details.company`                      | String  | Company's name
+`invoice_details.profession`                   | String  | Company's profession
+`invoice_details.vat_number`                   | String  | Company's VAT number
+`invoice_details.doy`                          | String  | Company's public economic service
+`invoice_details.address`                      | Object  | [Billing address](#billing-address)
+`invoice_details.vat_exclusion_requested`      | Boolean | VAT exclusion requested ([Υπηρεσία άρθρου 39α](https://www.aade.gr/epiheiriseis/forologikes-ypiresies/fpa/yperesia-arthroy-39a))
+`invoice_details.vat_exclusion_representative` | Object  | [39α representative details](#vat-exclusion-representative) (when VAT exclusion is requested)
+
+#### Billing address
+
+Name                                     | Type   | Description
+:--------------------------------------: | :----: | :------------------------------------------:
+`invoice_details.address.street_name`    | String | Address street
+`invoice_details.address.street_number`  | String | Address number
+`invoice_details.address.zip`            | String | Address postal code
+`invoice_details.address.city`           | String | Address city
+`invoice_details.address.region`         | String | Address region
+
+#### Vat exclusion representative
+
+Name                                                      | Type   | Description
+:-------------------------------------------------------: | :----: | :----------------------------------------------:
+`invoice_details.vat_exclusion_representative.id_type`    | String | Provided ID document type
+`invoice_details.vat_exclusion_representative.id_number`  | String | Provided ID document number (last 5 digits)
+`invoice_details.vat_exclusion_representative.otp`        | String | Provided representative one-time password
 
 #### Order line items array
 

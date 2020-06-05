@@ -26,6 +26,8 @@
     X-Cached: skroutz miss(0)
   :body: '{"order":{"code":"191128-1234567","state":"open",
   "customer":{"first_name":"John","last_name": "Doe","address":{"street_name":"Πανεπιστημίου","street_number":"4","zip":"12345","city":"Αθήνα","region":"Αττικής"}},
+"invoice": true,
+"invoice_details": {"company":"ACME","profession":"Internet Services","vat_number":"111119191","doy":"ΙΒ Αθηνών","address": {"street_name":"Πανεπιστημίου","street_number":"4","zip":"12345","city":"Αθήνα","region":"Αττικής"},"vat_exclusion_requested":true,"vat_exclusion_representative": {"id_type":"ΑΤ Αστυνομική Ταυτότητα","id_number":"12345","otp":"123456"}}},
 "comments":"User comments here",
 "courier_voucher":null,"line_items":[{"id":"opaoe8M3pZ","shop_uid":"12456",
 "product_name":"Champion Hooded Sweatshirt M (212077-KK001)","quantity":1,
@@ -42,5 +44,5 @@
 "label":"Εκτός αποθέματος στο κατάστημα ή στον προμηθευτή","requires_available_quantity":false},
 {"id":2,"label":"Λάθος καταχωρημένη τιμή(ες)","requires_available_quantity":false},
 {"id":4,"label":"Περιορισμένα τεμάχια","requires_available_quantity":true},
-{"id":5,"label":"To προϊόν καταργήθηκε","requires_available_quantity":false}]}}}'
+{"id":5,"label":"To προϊόν καταργήθηκε","requires_available_quantity":false}]}}'
 :created_at: 2019-11-28 15:45:53.285062331 +03:00
