@@ -108,7 +108,7 @@ Name           | Type   | Value | Description
 
 <%= partial 'localizable/smart_cart/order_object' %>
 
-##### Payload Examples
+## Payload Examples
 
 #### Example 1
 
@@ -121,8 +121,16 @@ Name           | Type   | Value | Description
     "state": "open",
     "customer": {
       "first_name": "John",
-      "last_name": "Doe"
+      "last_name": "Doe",
+      "address":{
+        "street_name":"Πανεπιστημίου",
+        "street_number":"4",
+        "zip":"12345",
+        "city":"Αθήνα",
+        "region":"Αττικής"
+      }
     },
+    "invoice": false,
     "comments": "Παράδοση στο γραφείο",
     "courier_voucher": null,
     "line_items": [
@@ -222,8 +230,16 @@ Name           | Type   | Value | Description
     "state": "open",
     "customer": {
       "first_name": "John",
-      "last_name": "Doe"
+      "last_name": "Doe",
+      "address":{
+        "street_name":"Πανεπιστημίου",
+        "street_number":"4",
+        "zip":"12345",
+        "city":"Αθήνα",
+        "region":"Αττικής"
+      }
     },
+    "invoice": false,
     "comments": "",
     "courier_voucher": null,
     "line_items": [
@@ -328,8 +344,16 @@ Name           | Type   | Value | Description
     "state": "cancelled",
     "customer": {
       "first_name": "John",
-      "last_name": "Doe"
+      "last_name": "Doe",
+      "address":{
+        "street_name":"Πανεπιστημίου",
+        "street_number":"4",
+        "zip":"12345",
+        "city":"Αθήνα",
+        "region":"Αττικής"
+      }
     },
+    "invoice": false,
     "comments": "Παράδοση στο γραφείο",
     "courier_voucher": null,
     "line_items": [
@@ -374,8 +398,16 @@ Name           | Type   | Value | Description
     "state": "open",
     "customer": {
       "first_name": "John",
-      "last_name": "Doe"
+      "last_name": "Doe",
+      "address":{
+        "street_name":"Πανεπιστημίου",
+        "street_number":"4",
+        "zip":"12345",
+        "city":"Αθήνα",
+        "region":"Αττικής"
+      }
     },
+    "invoice": false,
     "comments": "Παράδοση στο γραφείο",
     "courier_voucher": null,
     "line_items": [
@@ -485,8 +517,16 @@ Name           | Type   | Value | Description
     "state": "accepted",
     "customer": {
       "first_name": "John",
-      "last_name": "Doe"
+      "last_name": "Doe",
+      "address":{
+        "street_name":"Πανεπιστημίου",
+        "street_number":"4",
+        "zip":"12345",
+        "city":"Αθήνα",
+        "region":"Αττικής"
+      }
     },
+    "invoice": false,
     "comments": "Παράδοση στο γραφείο",
     "courier_voucher": "https://b.scdn.gr/path-to/voucher.pdf",
     "line_items": [
@@ -515,6 +555,257 @@ Name           | Type   | Value | Description
     "courier_voucher": {
       "old": null,
       "new": "https://b.scdn.gr/path-to/voucher.pdf"
+    }
+  }
+}
+~~~
+
+#### Example 6 (invoice requested, without VAT exclusion)
+
+~~~ json
+{
+  "event_type": "new_order",
+  "event_time": "2019-11-28T13:24:37+02:00",
+  "order": {
+    "code": "191029-5130474",
+    "state": "open",
+    "customer": {
+      "first_name": "John",
+      "last_name": "Doe",
+      "address":{
+        "street_name":"Πανεπιστημίου",
+        "street_number":"4",
+        "zip":"12345",
+        "city":"Αθήνα",
+        "region":"Αττικής"
+      }
+    },
+    "invoice": true,
+    "invoice_details": {
+      "company":"ACME",
+      "profession":"Internet Services",
+      "vat_number":"111119191",
+      "doy":"ΙΒ Αθηνών",
+      "address": {
+        "street_name":"Πανεπιστημίου",
+        "street_number":"4",
+        "zip":"12345",
+        "city":"Αθήνα",
+        "region":"Αττικής"
+      },
+      "vat_exclusion_requested":false
+    },
+    "comments": "Παράδοση στο γραφείο",
+    "courier_voucher": null,
+    "line_items": [
+      {
+        "id": "l39vKqxqwe",
+        "shop_uid": "100",
+        "product_name": "L'Oreal Professionel Salon Steam Pod V2 White",
+        "quantity": 2,
+        "unit_price": 10.40,
+        "total_price": 20.80
+      },
+      {
+        "id": "l39vKqxqh2",
+        "shop_uid": "10",
+        "product_name": "Paul Mitchell Ultimate Color Repair 200ml",
+        "quantity": 1,
+        "unit_price": 25,
+        "total_price": 25
+      }
+    ],
+    "created_at": "2019-11-28T13:24:37+02:00",
+    "expires_at": "2019-12-04T10:24:00+02:00",
+    "dispatch_until": "2019-12-04T18:00:00+02:00",
+    "accept_options": {
+      "number_of_parcels": [
+        1
+      ],
+      "pickup_location": [
+        {
+          "id": "YlpD0KROym",
+          "label": "Πανεπιστημίου 2, Τ.Κ. 12345, Αθήνα, Αττική"
+        },
+        {
+          "id": "onpL6DXG4l",
+          "label": "Σταδίου 1, Τ.Κ. 12345, Αθήνα, Αττική"
+        },
+        {
+          "id": "wgO1N22OaQ",
+          "label": "Κρήτης 50, Τ.Κ. 73100, Χανιά, Χανιά"
+        }
+      ],
+      "pickup_window": [
+        {
+          "id": 1,
+          "label": "15:00 - 18:00, Τρί 03/12/19"
+        },
+        {
+          "id": 2,
+          "label": "10:00 - 12:00, Τετ 04/12/19"
+        },
+        {
+          "id": 3,
+          "label": "12:00 - 15:00, Τετ 04/12/19"
+        },
+        {
+          "id": 4,
+          "label": "15:00 - 18:00, Τετ 04/12/19"
+        }
+      ]
+    },
+    "reject_options": {
+      "line_item_rejection_reasons": [
+        {
+          "id": 1,
+          "label": "Εκτός αποθέματος στο κατάστημα ή στον προμηθευτή",
+          "requires_available_quantity": false
+        },
+        {
+          "id": 2,
+          "label": "Λάθος καταχωρημένη τιμή(ες)",
+          "requires_available_quantity": false
+        },
+        {
+          "id": 4,
+          "label": "Περιορισμένα τεμάχια",
+          "requires_available_quantity": true
+        },
+        {
+          "id": 5,
+          "label": "To προϊόν καταργήθηκε",
+          "requires_available_quantity": false
+        }
+      ]
+    }
+  }
+}
+~~~
+
+#### Example 7 (invoice requested, with VAT exclusion)
+
+~~~ json
+{
+  "event_type": "new_order",
+  "event_time": "2019-11-28T13:24:37+02:00",
+  "order": {
+    "code": "191029-5130474",
+    "state": "open",
+    "customer": {
+      "first_name": "John",
+      "last_name": "Doe",
+      "address":{
+        "street_name":"Πανεπιστημίου",
+        "street_number":"4",
+        "zip":"12345",
+        "city":"Αθήνα",
+        "region":"Αττικής"
+      }
+    },
+    "invoice": true,
+    "invoice_details": {
+      "company":"ACME",
+      "profession":"Internet Services",
+      "vat_number":"111119191",
+      "doy":"ΙΒ Αθηνών",
+      "address": {
+        "street_name":"Πανεπιστημίου",
+        "street_number":"4",
+        "zip":"12345",
+        "city":"Αθήνα",
+        "region":"Αττικής"
+      },
+      "vat_exclusion_requested":true,
+      "vat_exclusion_representative": {
+        "id_type":"ΑΤ Αστυνομική Ταυτότητα",
+        "id_number":"12345",
+        "otp":"123456"
+      }
+    },
+    "comments": "Παράδοση στο γραφείο",
+    "courier_voucher": null,
+    "line_items": [
+      {
+        "id": "l39vKqxqwe",
+        "shop_uid": "100",
+        "product_name": "L'Oreal Professionel Salon Steam Pod V2 White",
+        "quantity": 2,
+        "unit_price": 10.40,
+        "total_price": 20.80
+      },
+      {
+        "id": "l39vKqxqh2",
+        "shop_uid": "10",
+        "product_name": "Paul Mitchell Ultimate Color Repair 200ml",
+        "quantity": 1,
+        "unit_price": 25,
+        "total_price": 25
+      }
+    ],
+    "created_at": "2019-11-28T13:24:37+02:00",
+    "expires_at": "2019-12-04T10:24:00+02:00",
+    "dispatch_until": "2019-12-04T18:00:00+02:00",
+    "accept_options": {
+      "number_of_parcels": [
+        1
+      ],
+      "pickup_location": [
+        {
+          "id": "YlpD0KROym",
+          "label": "Πανεπιστημίου 2, Τ.Κ. 12345, Αθήνα, Αττική"
+        },
+        {
+          "id": "onpL6DXG4l",
+          "label": "Σταδίου 1, Τ.Κ. 12345, Αθήνα, Αττική"
+        },
+        {
+          "id": "wgO1N22OaQ",
+          "label": "Κρήτης 50, Τ.Κ. 73100, Χανιά, Χανιά"
+        }
+      ],
+      "pickup_window": [
+        {
+          "id": 1,
+          "label": "15:00 - 18:00, Τρί 03/12/19"
+        },
+        {
+          "id": 2,
+          "label": "10:00 - 12:00, Τετ 04/12/19"
+        },
+        {
+          "id": 3,
+          "label": "12:00 - 15:00, Τετ 04/12/19"
+        },
+        {
+          "id": 4,
+          "label": "15:00 - 18:00, Τετ 04/12/19"
+        }
+      ]
+    },
+    "reject_options": {
+      "line_item_rejection_reasons": [
+        {
+          "id": 1,
+          "label": "Εκτός αποθέματος στο κατάστημα ή στον προμηθευτή",
+          "requires_available_quantity": false
+        },
+        {
+          "id": 2,
+          "label": "Λάθος καταχωρημένη τιμή(ες)",
+          "requires_available_quantity": false
+        },
+        {
+          "id": 4,
+          "label": "Περιορισμένα τεμάχια",
+          "requires_available_quantity": true
+        },
+        {
+          "id": 5,
+          "label": "To προϊόν καταργήθηκε",
+          "requires_available_quantity": false
+        }
+      ]
     }
   }
 }
