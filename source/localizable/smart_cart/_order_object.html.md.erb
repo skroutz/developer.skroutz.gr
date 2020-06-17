@@ -75,8 +75,9 @@ Name                              | Type      | Description
 `line_items[_].product_name`    | String  | Item product name
 `line_items[_].quantity`        | Integer | Item quantity
 `line_items[_].size`            | Object  | [Item size values (optional)](#line-item-size)
-`line_items[_].unit_price`      | Double  | Price per item in euros (VAT-included)
+`line_items[_].unit_price`      | Double  | Price per item in euros
 `line_items[_].total_price`     | Double  | Total item price in euros: `unit_price` * `quantity`
+`line_items[_].price_includes_vat` | Boolean  | Price includes VAT (could be `false` for [invoice](#invoice-details) with VAT exclusion)
 
 #### Line item size
 
