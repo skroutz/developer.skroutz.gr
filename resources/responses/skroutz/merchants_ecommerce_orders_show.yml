@@ -72,7 +72,8 @@
         "quantity": 2,
         "unit_price": 100,
         "total_price": 200,
-        "price_includes_vat": false
+        "price_includes_vat": false,
+        "ean": "1234567890123"
       },
       {
         "id": "l39vKqxqh2",
