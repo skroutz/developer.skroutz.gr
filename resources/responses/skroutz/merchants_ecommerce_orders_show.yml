@@ -36,7 +36,8 @@
         "street_number":"4",
         "zip":"12345",
         "city":"Αθήνα",
-        "region":"Αττικής"
+        "region":"Αττικής",
+        "pickup_from_collection_point": false
       }
     },
     "invoice": true,
