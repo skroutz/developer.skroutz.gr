@@ -21,19 +21,22 @@ Name         | Type   | Value | Description
 
 Name                              | Type   | Description
 :-------------------------------: | :----: | :------------------------------------------:
+`customer.id`                     | String |Unique customer id
 `customer.first_name`             | String |First name
 `customer.last_name`              | String |Last name
 `customer.address`                | Object |[Customer shipping address](#customer-shipping-address)
 
 #### Customer shipping address
 
-Name                              | Type   | Description
-:-------------------------------: | :----: | :------------------------------------------:
-`customer.address.street_name`    | String | Address street
-`customer.address.street_number`  | String | Address number
-`customer.address.zip`            | String | Address postal code
-`customer.address.city`           | String | Address city
-`customer.address.region`         | String | Address region
+Name                                            | Type    | Description
+:---------------------------------------------: | :-----: | :------------------------------------------:
+`customer.address.street_name`                  | String  | Address street
+`customer.address.street_number`                | String  | Address number
+`customer.address.zip`                          | String  | Address postal code
+`customer.address.city`                         | String  | Address city
+`customer.address.region`                       | String  | Address region
+`customer.address.pickup_from_collection_point` | Boolean | Pickup from collection point
+`customer.address.collection_point_address`     | String  | Collection point address (available when pickup address is a collection point)
 
 #### Invoice details
 
@@ -79,6 +82,7 @@ Name                              | Type      | Description
 `line_items[_].unit_price`      | Double  | Price per item in euros
 `line_items[_].total_price`     | Double  | Total item price in euros: `unit_price` * `quantity`
 `line_items[_].price_includes_vat` | Boolean  | Price includes VAT (could be `false` for [invoice](#invoice-details) with VAT exclusion)
+`line_items[_].ean`             | String  | EAN code of product (optional)
 
 #### Line item size
 

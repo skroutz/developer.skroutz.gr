@@ -29,6 +29,7 @@
     "code": "191029-5130474",
     "state": "open",
     "customer": {
+      "id": "PA4oqvpz8x",
       "first_name": "John",
       "last_name": "Doe",
       "address":{
@@ -36,7 +37,8 @@
         "street_number":"4",
         "zip":"12345",
         "city":"Αθήνα",
-        "region":"Αττικής"
+        "region":"Αττικής",
+        "pickup_from_collection_point": false
       }
     },
     "invoice": true,
@@ -70,7 +72,8 @@
         "quantity": 2,
         "unit_price": 100,
         "total_price": 200,
-        "price_includes_vat": false
+        "price_includes_vat": false,
+        "ean": "1234567890123"
       },
       {
         "id": "l39vKqxqh2",
