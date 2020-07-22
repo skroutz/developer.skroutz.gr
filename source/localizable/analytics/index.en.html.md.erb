@@ -26,7 +26,8 @@ To successfully report your sales insights you have to:
 
 1. Integrate the Analytics Tracking Script into your website
 2. Declare <%= link_to 'Ecommerce', 'ecommerce' %> actions to report your data
-3. Become GDPR Compliant
+3. Place test orders to validate your integration
+4. Become GDPR Compliant
 
 You can also check if there is a <%= link_to 'library', '/analytics/libraries' %> already available for you ecommerce platform.
 
@@ -84,7 +85,16 @@ Use the <%= link_to 'ecommerce:addItem', 'ecommerce/#additem' %> command to trac
 Visit the <%= link_to 'examples', 'examples' %> to view complete implementation examples
 for different programming languages.
 
-### Step 3: Become GDPR / e-Privacy Compliant
+### Step 3: Place Test Orders
+
+Place test orders using the link that is available through
+<%= link_to 'Merchants control panel', "https://#{settings.merchants_domain}/merchants/account/settings/analytics", target: :_blank %>,
+in order to validate that you report successfully your sales insights.
+
+> ##### Note
+> You have to place a test order with every available payment method (card, paypal, pay in store, etc.).
+
+### Step 4: Become GDPR / e-Privacy Compliant
 
 We suggest to include the necessary references about Skroutz Analytics and Skroutz CPC/CPS, in your website’s Cookie or Privacy Policy.
 
