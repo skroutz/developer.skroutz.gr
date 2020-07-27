@@ -2,9 +2,11 @@
 :code: |
   <script>
     <%=flavor%>_analytics('ecommerce', 'addOrder', {
-      order_id: '123456',   // Order ID. Required.
-      revenue:  '1315.25',  // Grand Total. Includes Tax and Shipping. Does not include payment costs.
-      shipping: '5.45',     // Total Shipping Cost. Does not include payment costs.
-      tax:      '301.25'    // Total Tax.
+      order_id:      '123456',               // Order ID. Required.
+      revenue:       '1315.25',              // Grand Total. Includes Tax and Shipping. Does not include payment costs.
+      shipping:      '5.45',                 // Total Shipping Cost. Does not include payment costs.
+      tax:           '301.25',               // Total Tax.
+      paid_by:       'example_paid_by',      // [Optional] Payment method type, e.g. bank_transfer.
+      paid_by_descr: 'Example paid_by_descr' // [Optional] Payment method description, e.g. Bank transfer.
     });
   </script>

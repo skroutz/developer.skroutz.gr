@@ -13,10 +13,12 @@
   <!-- Send the Order data -->
   <script>
     <%=flavor%>_analytics('ecommerce', 'addOrder', {
-      order_id: '123456',  // Order ID. Required.
-      revenue:  '4417.58', // Grand Total. Includes Tax and Shipping. Does not include payment costs.
-      shipping: '5.45',    // Total Shipping Cost. Does not include payment costs.
-      tax:      '1014.79'  // Total Tax.
+      order_id:      '123456',                // Order ID. Required.
+      revenue:       '4417.58',               // Grand Total. Includes Tax and Shipping. Does not include payment costs.
+      shipping:      '5.45',                  // Total Shipping Cost. Does not include payment costs.
+      tax:           '1014.79',               // Total Tax.
+      paid_by:       'example_paid_by',       // [Optional] Payment method type, e.g. bank_transfer.
+      paid_by_descr: 'Example paid_by_descr'  // [Optional] Payment method description, e.g. Bank transfer.
     });
   </script>
 
