@@ -38,6 +38,20 @@ Name            | Type   | Required | Description
 > ##### Note
 > Make sure **not** to include any cash on delivery (COD) costs in either `revenue` or `shipping`.
 
+##### Recommended Payment Method Types
+
+Type               | Description (Examples)
+----------------   | -----------
+`bank_transfer`    | Bank transfer
+`cash_on_delivery` | Cash on delivery
+`card`             | Credit/Debit card
+`paypal`           | PayPal
+`pay_in_store`     | Pay in Store
+`cryptocurrency`   | Bitcoin, Etherium, etc.
+
+> ##### Note
+> Analytics can also accept payment method types that are not defined above, but ***IT IS NOT*** recommended.
+
 ##### Example
 
 <%= render_code_from_file 'analytics/order_beacon' %>
