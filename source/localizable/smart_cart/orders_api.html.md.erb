@@ -58,6 +58,8 @@ issuing "accept" or "reject" requests for the order, respectively.
 
 ### Accept a single order
 
+To accept an order you need to provide the `pickup_location` and the `pickup_window` which are required. You can also specify `number_of_parcels` which is optional with a default value of `1` if missing.
+
 The available param values used are provided in `accept_options` when retrieving a single order.
 
 <pre class="terminal">
@@ -65,6 +67,15 @@ The available param values used are provided in `accept_options` when retrieving
 </pre>
 
 <%= render_recording :merchants_ecommerce_orders_accept %>
+
+#### Example
+<pre class="terminal">
+curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/orders/191128-1234567/accept \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Content-Type: application/json; charset=utf-8' \
+  -H 'Authorization: Bearer your_access_token_here' \
+  -d '{ "pickup_location": "YlpD0KROym", "pickup_window": 2, "number_of_parcels": 1 }'
+</pre>
 
 ### Reject a single order
 
@@ -83,6 +94,15 @@ The available rejection reason IDs are provided in `reject_options` when retriev
 
 <%= render_recording :merchants_ecommerce_orders_reject %>
 
+#### Example
+<pre class="terminal">
+curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/orders/191128-1234567/reject \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Content-Type: application/json; charset=utf-8' \
+  -H 'Authorization: Bearer your_access_token_here' \
+  -d '{ "line_items": [ { "id": "jn231kb12u", "reason_id": 2 }, { "id": "opaoe8M3pZ", "reason_id": 4, "available_quantity": 1 } ] }'
+</pre>
+
 #### Reject whole order with "other" reason
 
 <pre class="terminal">
@@ -91,13 +111,36 @@ The available rejection reason IDs are provided in `reject_options` when retriev
 
 <%= render_recording :merchants_ecommerce_orders_reject_other %>
 
+#### Example
+<pre class="terminal">
+curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/orders/191128-1234567/reject \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Content-Type: application/json; charset=utf-8' \
+  -H 'Authorization: Bearer your_access_token_here' \
+  -d '{ "rejection_reason_other": "Our store is closed for personal reasons" }'
+</pre>
+
 ## Error handling
 
 In case of errors, the response will have a representative HTTP status code
 in the `4xx` or `5xx` range. The body would contain an array of `errors`.
 
-For example, if you try to reject an order that is already rejected, you will
+For example, if you try to accept an order that is already accepted, you will
 get a `422` HTTP status code (Unprocessable Entity), with the following body:
+
+<%= render_code '{
+  "errors": [
+      {
+          "code": "order_status",
+          "messages": [
+              "Order already accepted."
+          ]
+      }
+  ]
+}', 'javascript' %>
+
+And if you try to reject an order that is already rejected, you will
+also get a `422` HTTP status code (Unprocessable Entity), with the following body:
 
 <%= render_code '{
   "errors": [
