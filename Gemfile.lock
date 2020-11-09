@@ -111,7 +111,7 @@ GEM
       pry (~> 0.9)
       yard (~> 0.9)
     public_suffix (2.0.5)
-    rack (1.6.11)
+    rack (1.6.13)
     rack-test (0.6.2)
       rack (>= 1.0)
     rake (10.3.2)
@@ -179,7 +179,7 @@ DEPENDENCIES
   middleman-syntax (~> 2.0.0)
   pry
   pry-doc
-  rack (~> 1.6.11)
+  rack (~> 1.6.13)
   response_mate (~> 0.4.1)
   sprockets (~> 2.12.5)
   therubyracer (~> 0.12.3)
