@@ -146,3 +146,12 @@ Name                                                       | Type    | Descripti
 `line_item_rejection_reason.id`                            | Integer | The rejection reason ID to use
 `line_item_rejection_reason.label`                         | String  | A human readable label
 `line_item_rejection_reason.requires_available_quantity`   | Boolean | Whether or not `available_quantity` is required
+
+Possible values
+
+ID    | Label                                               | Requires Available Quantity
+:---: | :-------------------------------------------------: | :--------------------------:
+`1`   | `Εκτός αποθέματος στο κατάστημα ή στον προμηθευτή`  | False
+`2`   | `Λάθος καταχωρημένη τιμή(ες)`                       | False
+`4`   | `Περιορισμένα τεμάχια`                              | True
+`5`   | `To προϊόν καταργήθηκε`                             | False
