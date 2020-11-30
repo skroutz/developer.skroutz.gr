@@ -84,6 +84,7 @@ Name                              | Type      | Description
 `line_items[_].total_price`     | Double  | Total item price in euros: `unit_price` * `quantity`
 `line_items[_].price_includes_vat` | Boolean  | Price includes VAT (could be `false` for [invoice](#invoice-details) with VAT exclusion)
 `line_items[_].ean`             | String  | EAN code of product (optional)
+`line_items[_].extra_info`      | String  | Additional information for item, eg. color preference or prescription details for contact lenses (optional) [webhook example](../webhook/#example-9-with-extrainfo-in-lineitems)
 
 #### Line item size
 

@@ -980,3 +980,110 @@ Name           | Type   | Value | Description
   }
 }
 ~~~
+
+#### Example 9 (with extra_info in line_items)
+
+~~~ json
+{
+  "event_type": "new_order",
+  "event_time": "2019-11-28T13:24:37+02:00",
+  "order": {
+    "code": "191029-5130474",
+    "state": "open",
+    "customer": {
+      "id": "PA4oqvpz8x",
+      "first_name": "John",
+      "last_name": "Doe",
+      "address":{
+        "street_name":"Πανεπιστημίου",
+        "street_number":"4",
+        "zip":"12345",
+        "city":"Αθήνα",
+        "region":"Αττικής",
+        "pickup_from_collection_point": false
+      }
+    },
+    "invoice": false,
+    "comments": "Παράδοση στο γραφείο",
+    "courier": "ACS",
+    "courier_voucher": null,
+    "courier_tracking_codes": [],
+    "line_items": [
+      {
+        "id": "RPJJ8gG5Pg",
+        "shop_uid": "768",
+        "product_name": "AIR OPTIX COLORS MHNIAIOI",
+        "quantity": 2,
+        "unit_price": 25.5,
+        "total_price": 51,
+        "price_includes_vat": true,
+        "extra_info": "Χρώμα: Πράσινο\nΒαθμοί SPH: -6.50"
+      }
+    ],
+    "created_at": "2019-11-28T13:24:37+02:00",
+    "expires_at": "2019-12-04T10:24:00+02:00",
+    "dispatch_until": "2019-12-04T18:00:00+02:00",
+    "accept_options": {
+      "number_of_parcels": [
+        1
+      ],
+      "pickup_location": [
+        {
+          "id": "YlpD0KROym",
+          "label": "Πανεπιστημίου 2, Τ.Κ. 12345, Αθήνα, Αττική"
+        },
+        {
+          "id": "onpL6DXG4l",
+          "label": "Σταδίου 1, Τ.Κ. 12345, Αθήνα, Αττική"
+        },
+        {
+          "id": "wgO1N22OaQ",
+          "label": "Κρήτης 50, Τ.Κ. 73100, Χανιά, Χανιά"
+        }
+      ],
+      "pickup_window": [
+        {
+          "id": 1,
+          "label": "15:00 - 18:00, Τρί 03/12/19"
+        },
+        {
+          "id": 2,
+          "label": "10:00 - 12:00, Τετ 04/12/19"
+        },
+        {
+          "id": 3,
+          "label": "12:00 - 15:00, Τετ 04/12/19"
+        },
+        {
+          "id": 4,
+          "label": "15:00 - 18:00, Τετ 04/12/19"
+        }
+      ]
+    },
+    "reject_options": {
+      "line_item_rejection_reasons": [
+        {
+          "id": 1,
+          "label": "Εκτός αποθέματος στο κατάστημα ή στον προμηθευτή",
+          "requires_available_quantity": false
+        },
+        {
+          "id": 2,
+          "label": "Λάθος καταχωρημένη τιμή(ες)",
+          "requires_available_quantity": false
+        },
+        {
+          "id": 4,
+          "label": "Περιορισμένα τεμάχια",
+          "requires_available_quantity": true
+        },
+        {
+          "id": 5,
+          "label": "To προϊόν καταργήθηκε",
+          "requires_available_quantity": false
+        }
+      ]
+    }
+  }
+}
+~~~
