@@ -1,7 +1,7 @@
 #### Order object
 
 Name         | Type   | Value | Description
-:------------: | :-------: |  | :---------------:
+------------ | ------ | ----- | -----------------
 `code`       | String | | Order code
 `state`      | String | `open`, `accepted`, `rejected`, `cancelled`, `expired`,<br> `dispatched`, `delivered`, `partially_returned`, `returned` | Order state
 `customer`   | Object | | [Customer details](#customer-details)
@@ -21,7 +21,7 @@ Name         | Type   | Value | Description
 #### Customer details
 
 Name                              | Type   | Description
-:-------------------------------: | :----: | :------------------------------------------:
+--------------------------------- | ------ | --------------------------------------------
 `customer.id`                     | String |Unique customer id
 `customer.first_name`             | String |First name
 `customer.last_name`              | String |Last name
@@ -30,7 +30,7 @@ Name                              | Type   | Description
 #### Customer shipping address
 
 Name                                            | Type    | Description
-:---------------------------------------------: | :-----: | :------------------------------------------:
+----------------------------------------------- | ------- | --------------------------------------------
 `customer.address.street_name`                  | String  | Address street
 `customer.address.street_number`                | String  | Address number
 `customer.address.zip`                          | String  | Address postal code
@@ -44,7 +44,7 @@ Name                                            | Type    | Description
 This attribute is present only when a user requests an invoice for the order.
 
 Name                                           | Type    | Description
-:--------------------------------------------: | :-----: | :----------------------------------------------:
+---------------------------------------------- | ------- | ------------------------------------------------
 `invoice_details.company`                      | String  | Company's name
 `invoice_details.profession`                   | String  | Company's profession
 `invoice_details.vat_number`                   | String  | Company's VAT number
@@ -56,7 +56,7 @@ Name                                           | Type    | Description
 #### Billing address
 
 Name                                     | Type   | Description
-:--------------------------------------: | :----: | :------------------------------------------:
+---------------------------------------- | ------ | --------------------------------------------
 `invoice_details.address.street_name`    | String | Address street
 `invoice_details.address.street_number`  | String | Address number
 `invoice_details.address.zip`            | String | Address postal code
@@ -66,7 +66,7 @@ Name                                     | Type   | Description
 #### Vat exclusion representative
 
 Name                                                      | Type   | Description
-:-------------------------------------------------------: | :----: | :----------------------------------------------:
+--------------------------------------------------------- | ------ | ------------------------------------------------
 `invoice_details.vat_exclusion_representative.id_type`    | String | Provided ID document type
 `invoice_details.vat_exclusion_representative.id_number`  | String | Provided ID document number (last 5 digits)
 `invoice_details.vat_exclusion_representative.otp`        | String | Provided representative one-time password
@@ -74,7 +74,7 @@ Name                                                      | Type   | Description
 #### Order line items array
 
 Name                              | Type      | Description
-:-------------------------------: | :-------: | :----------------------------------------------:
+--------------------------------- | --------- | ------------------------------------------------
 `line_items[_].id`              | String  | Unique item id
 `line_items[_].shop_uid`        | String  | Item id in shop
 `line_items[_].product_name`    | String  | Item product name
@@ -89,7 +89,7 @@ Name                              | Type      | Description
 #### Line item size
 
 Name                              | Type   | Value | Description
-:-------------------------------: | :----: | :---: | :------------------------------------------:
+--------------------------------- | ------ | ----- | --------------------------------------------
 `line_items[_].size.label`        | String | `Νούμερο`, `Μέγεθος`, `Ηλικία` |Item size label
 `line_items[_].size.value`        | String |    |Item size value
 `line_items[_].size.shop_value`   | String |    |Item original size as provided by the shop
@@ -101,7 +101,7 @@ These are valid values to POST to the corresponding keys when
 (only available for orders with state `"open"`).
 
 Name                              | Type   | Example     | Description
-:-------------------------------: | :----: | :---------: | :------------------------------------------------:
+--------------------------------- | ------ | ----------- | --------------------------------------------------
 `accept_options.number_of_parcels`| Array  | `[1, 2, 3]` | Valid values to post on `number_of_parcels`
 `accept_options.pickup_location`  | Array  |             | [Pickup location](#accept-option-pickup-location)
 `accept_options.pickup_window`    | Array  |             | [Pickup window](#accept-option-pickup-window)
@@ -112,7 +112,7 @@ Valid pickup locations to post when
 [accepting a single order](/smart_cart/orders_api/#accept-a-single-order) (use `id`).
 
 Name                    | Type    | Description
-:---------------------: | :-----: | :-----------------------:
+----------------------- | ------- | -------------------------
 `pickup_location.id`    | String  | The location ID to use
 `pickup_location.label` | String  | A human readable address
 
@@ -122,7 +122,7 @@ Valid pickup windows to post when
 [accepting a single order](/smart_cart/orders_api/#accept-a-single-order) (use `id`).
 
 Name                    | Type    | Description
-:---------------------: | :-----: | :--------------------------:
+----------------------- | ------- | ----------------------------
 `pickup_window.id`      | Integer | The pickup window ID to use
 `pickup_window.label`   | String  | A human readable time range
 
@@ -134,7 +134,7 @@ These are possible values to POST to the corresponding keys when
 (only available for orders with state `"open"`).
 
 Name                                         | Type   | Description
-:------------------------------------------: | :----: | :----------------------------------------------------------------------:
+-------------------------------------------- | ------ | ------------------------------------------------------------------------
 `reject_options.line_item_rejection_reasons` | Array  | [Line item rejection reason](#reject-option-line-item-rejection-reason)
 
 #### Reject option: Line item rejection reason
@@ -143,7 +143,7 @@ Available reasons to post along line_item ids when
 [rejecting a single order](/smart_cart/orders_api/#reject-a-single-order) (use `id`).
 
 Name                                                       | Type    | Description
-:--------------------------------------------------------: | :-----: | :----------------------------------------------:
+---------------------------------------------------------- | ------- | ------------------------------------------------
 `line_item_rejection_reason.id`                            | Integer | The rejection reason ID to use
 `line_item_rejection_reason.label`                         | String  | A human readable label
 `line_item_rejection_reason.requires_available_quantity`   | Boolean | Whether or not `available_quantity` is required
@@ -151,7 +151,7 @@ Name                                                       | Type    | Descripti
 Possible values
 
 ID    | Label                                               | Requires Available Quantity
-:---: | :-------------------------------------------------: | :--------------------------:
+----- | --------------------------------------------------- | ----------------------------
 `1`   | `Εκτός αποθέματος στο κατάστημα ή στον προμηθευτή`  | False
 `2`   | `Λάθος καταχωρημένη τιμή(ες)`                       | False
 `4`   | `Περιορισμένα τεμάχια`                              | True

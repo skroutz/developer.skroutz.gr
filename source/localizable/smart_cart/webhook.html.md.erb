@@ -88,7 +88,7 @@ event notification is sent for the following cases:
 #### Request payload
 
 Name           | Type   | Value | Description
-:------------: | :----: | :---: | :----------------:
+-------------- | ------ | ----- | ------------------
 `event_type`   | String | `new_order`, `order_updated`| Order event type
 `event_time`   | Date String in format<br> `YYYY-MM-DDTHH:MM:SS+HH:M` | | Event creation time
 `order`        | Object |            | [Order details](#order-object)
@@ -97,7 +97,7 @@ Name           | Type   | Value | Description
 #### Order changes object
 
 Name           | Type   | Value | Description
-:------------: | :----: | :---: | :-----------:
+-------------- | ------ | ----- | -------------
 `state` | Object | `{ "old": "open", "new": "cancelled" }` | The state changed values (optional)
 `expires_at` | Object | `{ "old": "2019-11-02T13:15:43+02:00", "new": "2019-11-04T13:15:00+02:00" }` | The order's current expiration time changes (optional)
 `dispatch_until` | Object | `{ "old": "2019-11-03T12:00:00+02:00", "new": "2019-11-04T18:00:00+02:00" }` | The order's current time until dispatching changes (optional)
