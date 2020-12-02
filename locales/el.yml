@@ -6,6 +6,7 @@ el:
     authorization: 'Authorization'
     analytics: 'Analytics'
     smart_cart: 'Smart Cart'
+    cps_orders_api: 'API CPS Παραγγελιών'
     order_stash: 'Save Your Order'
     partner_badge: 'Partner Badge'
     partner_sku_reviews: '%{flavor} Product Reviews'
@@ -59,6 +60,8 @@ el:
       overview: 'Overview'
       orders_api: 'Orders API'
       webhook: 'Webhook'
+    cps_orders_api:
+      short_description: 'The API to control your CPS orders in %{flavor}.'
     order_stash:
       short_description: 'Increase your Shop Reviews in %{flavor}.'
     partner_badge:

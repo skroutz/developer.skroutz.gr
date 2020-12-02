@@ -1,0 +1,49 @@
+#### Order object
+
+Name                     | Type    | Description
+------------------------ | ------- | -----------------
+`code`                   | String  | Order code
+`date`                   | Date String in format<br> `YYYY-MM-DDTHH:MM:SS+HH:M` | Order creation date
+`revenue`                | Double  | Total order price in euros
+`commission`             | Double  | Total order commission in euros
+`state`                  | String  | The current state of the order
+`rejection_reason`       | String  | The declined reason of the order, if it has been previously rejected
+`charged`                | Boolean | Whether the order has already been charged
+`charged_at`             | Date String in format<br> `YYYY-MM-DDTHH:MM:SS+HH:M` | Order charge date (if has been charged)
+`refunded_at`            | Date String in format<br> `YYYY-MM-DDTHH:MM:SS+HH:M` | Order refund date (if has been refunded)
+`line_items`             | Array   | [Order line items (products)](#order-line-items-array)
+`reject_options`         | Object  | [Reject options](#reject-options) (available for orders at a rejectable state)
+
+#### Order line items array
+
+Name                              | Type    | Description
+--------------------------------- | ------- | ------------------------------------------------
+`line_items[_].product_id`        | String  | Item id in shop
+`line_items[_].name`              | String  | Item product name
+`line_items[_].quantity`          | Integer | Item quantity
+`line_items[_].unit_price`        | Double  | Price per item unit in euros
+`line_items[_].commission_rate`   | Double  | Commission rate per item (from `0.0 - 100.0`)
+`line_items[_].commission`        | Double  | Commission per item in euros
+
+#### Reject options
+
+Available reject reasons to use when [rejecting an order](/cps_orders_api/#reject-a-single-order).
+These options are returned only when the order is at a rejectable state.
+
+Name                                           | Type    | Description
+---------------------------------------------- | ------- | ------------------------------------------------
+`reject_options.name`                          | String  | The rejection reason name to use
+`reject_options.description`                   | String  | A human readable label
+`reject_options.requires_additional_comment`   | Boolean | Whether or not `comment` is required
+
+Possible values
+
+Name                | Description                                         | Requires Additional Comment
+------------------- | --------------------------------------------------- | ----------------------------
+`user_cancel`       | `Ακύρωση παραγγελίας από τον πελάτη`                | False
+`user_return`       | `Υπαναχώρηση πελάτη`                                | False
+`undelivered`       | `Δεν κατέστη δυνατή η παράδοση της παραγγελίας`     | False
+`unpaid`            | `Δεν ολοκληρώθηκε η πληρωμή`                        | False
+`unavailable_items` | `Έλλειψη διαθεσιμότητας`                            | False
+`shop_staff_order`  | `Παραγγελία από προσωπικό του καταστήματος`         | False
+`other`             | `Άλλο`                                              | True

@@ -71,6 +71,13 @@ smart_cart:
   flavors:
     - skroutz
 
+cps_orders_api:
+  base: '/cps_orders_api/'
+  featured: false
+  icon: 'fa-shopping-bag'
+  flavors:
+    - skroutz
+
 order_stash:
   base: '/order_stash/'
   featured: true
