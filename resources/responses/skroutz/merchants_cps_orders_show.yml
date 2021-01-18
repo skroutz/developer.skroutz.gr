@@ -1,0 +1,93 @@
+---
+:request:
+  :url: https://api.skroutz.gr/merchants/cps/orders/1234567
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3.0
+    :authorization: Bearer xWmjOaQmNgLt3dVIYBGkWVWhbrcdg4XfYqS3Jb1dMVHvGIBJcPuzVQYjH-XKenxsZgFW8DSgc9f2fI_MBVBHNw==
+  :verb: :get
+:response:
+  :status: 200
+  :headers:
+    Date: Mon, 11 Jan 2021 09:03:59 GMT
+    Connection: keep-alive
+    Content-Length: 6400
+    Server: h2o (Debian)
+    Content-Type: application/json; charset=utf-8
+    X-Meta-Client-Id: 27951bdf06a65ea4
+    Cache-Control: no-cache
+    X-Request-Id: 989369834
+    X-Runtime: 0.021923
+    X-App: as103_ssl
+    X-Varnish: 989369834
+    Age: 0
+    Via: 1.1 varnish (Varnish/5.0)
+    X-Origin: lb2
+    X-Cache: MISS
+    X-Cached: skroutz miss(0)
+  :body: '{
+  "order": {
+    "code": "1234567",
+    "date": "2019-11-28T13:24:37+02:00",
+    "revenue": 46.61,
+    "commission": 4.66,
+    "state": "Προς χρέωση",
+    "charged": false,
+    "charged_at": null,
+    "refunded_at": null,
+    "line_items": [
+      {
+        "product_id": "BM7300LEA35-BLA",
+        "name": "GUESS ACCESSORIES-REVERSIBLE AND ADJUSTABLE BELT ΖΩΝΗ ΑΝΔΡΙΚΟ BM7300LEA35, ΜΑΥΡΟ, ΑΝΔΡΑΣ",
+        "quantity": 1,
+        "unit_price": 46.61,
+        "commission_rate": 0.1,
+        "commission": 4.66
+      },
+      {
+        "product_id": "BM7300LEA49-BLA",
+        "name": "BELT ΖΩΝΗ ΑΝΔΡΙΚΟ BM7300LEA49, ΚΑΦΕ, ΑΝΔΡΑΣ",
+        "quantity": 3,
+        "unit_price": 95.11,
+        "commission_rate": 0.18,
+        "commission": 17.12
+      }
+    ],
+    "reject_options": [
+      {
+        "name": "user_cancel",
+        "description": "Ακύρωση παραγγελίας από τον πελάτη",
+        "requires_additional_comment": false
+      },
+      {
+        "name": "user_return",
+        "description": "Υπαναχώρηση πελάτη",
+        "requires_additional_comment": false
+      },
+      {
+        "name": "undelivered",
+        "description": "Δεν κατέστη δυνατή η παράδοση της παραγγελίας",
+        "requires_additional_comment": false
+      },
+      {
+        "name": "unpaid",
+        "description": "Δεν ολοκληρώθηκε η πληρωμή",
+        "requires_additional_comment": false
+      },
+      {
+        "name": "unavailable_items",
+        "description": "Έλλειψη διαθεσιμότητας",
+        "requires_additional_comment": false
+      },
+      {
+        "name": "shop_staff_order",
+        "description": "Παραγγελία από προσωπικό του καταστήματος",
+        "requires_additional_comment": false
+      },
+      {
+        "name": "other",
+        "description": "Άλλο",
+        "requires_additional_comment": true
+      }
+    ]
+  }
+}'

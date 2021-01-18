@@ -1,0 +1,136 @@
+---
+title: cps_orders_api
+---
+
+<%= partial 'partials/page_locales' %>
+
+# CPS Orders API <%= edit_link %>
+
+CPS orders API allows Skroutz Merchants to retrieve information about their CPS orders as well as to reject 
+them without accessing Merchants Panel.
+
+<%= partial 'partials/toc' %>
+
+## Setup
+
+### Obtaining an API token
+
+In order to be able to use the API, you need to generate an **API token** from within CPS orders settings
+page in Merchants Panel (Merchants > Παραγγελίες καταστήματος > Αυτόματη διαχείριση).
+
+> <i class="fa fa-exclamation-triangle"></i>
+> There can only be one active **API key** per shop at a certain time.
+> Creating a new API key will expire any previous one.
+
+### Authorization
+
+Pass in a valid **API token** in the `Authorization` header, prefixed with `Bearer `
+as in the following curl example.
+
+A specific `Accept` header is also required. For more information on API requests check the [API overview](/api/v3/).
+
+<pre class="terminal">
+curl -X GET https://<%= settings.api_domain %>/merchants/cps/orders/1234567 \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Authorization: Bearer your_access_token_here'
+</pre>
+
+## Endpoints
+
+
+### Retrieve a single order
+
+To fetch a specific order, you have to provide the order `code` with which you have originally identified 
+your order in your shop, as a URL parameter.
+
+When an order is in a state that can be rejected, `reject_options` attribute is included in the
+response, providing all the available options for issuing "reject" requests for the order.
+
+<pre class="terminal">
+  GET /merchants/cps/orders/:code
+</pre>
+
+<%= render_recording :merchants_cps_orders_show %>
+
+##### Example
+<pre class="terminal">
+curl -X GET https://<%= settings.api_domain %>/merchants/cps/orders/1234567 \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Authorization: Bearer your_access_token_here'
+</pre>
+
+### Reject a single order
+
+In order to reject an order, you **must** include a reject reason.
+The reject reason can be either one of the predefined ones we support or it can be a custom one that the user wants to provide.
+
+#### Reject order with a predefined reason
+
+The [available](/cps_orders_api/#reject-options) predefined rejection reasons are provided in the `reject_options` 
+field when retrieving a single order.
+
+<pre class="terminal">
+  POST /merchants/cps/orders/:code/reject
+</pre>
+
+<%= render_recording :merchants_cps_orders_reject %>
+
+##### Example
+<pre class="terminal">
+curl -X POST https://<%= settings.api_domain %>/merchants/cps/orders/1234567/reject \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Content-Type: application/json; charset=utf-8' \
+  -H 'Authorization: Bearer your_access_token_here' \
+  -d '{ "reason": { "name": "user_cancel" } }'
+</pre>
+
+
+#### Reject order with custom reason
+
+In case you want to reject an order with a reject reason other than the ones provided in the `reject_options` field,
+then you have to use the reject option `other` and include also a `comment`, where you will explain 
+your rejection.
+
+> <i class="fa fa-exclamation-triangle"></i>
+> The `comment` attribute is mandatory when using the `other` reject option
+
+<pre class="terminal">
+  POST /merchants/cps/orders/:code/reject
+</pre>
+
+<%= render_recording :merchants_cps_orders_reject_other %>
+
+##### Example
+<pre class="terminal">
+curl -X POST https://<%= settings.api_domain %>/merchants/cps/orders/1234567/reject \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Content-Type: application/json; charset=utf-8' \
+  -H 'Authorization: Bearer your_access_token_here' \
+  -d '{ "reason": { "name": "other", "comment": "Our store is closed for personal reasons" } }'
+</pre>
+
+
+## Error handling
+
+In case of errors, the response will have a representative HTTP status code
+in the `4xx` or `5xx` range. The body would contain an array of `errors`.
+
+For example, if you try to reject an order that is already rejected, you will
+get a `422` HTTP status code (Unprocessable Entity), with the following body:
+
+<%= render_code '{
+  "errors": [
+      {
+          "code": "order_status",
+          "messages": [
+              "Order already rejected."
+          ]
+      }
+  ]
+}', 'javascript' %>
+
+[More on API error handling](/api/v3/#error-handling)
+
+## Order object attributes appendix
+
+<%= partial 'localizable/cps_orders_api/order_object' %>
