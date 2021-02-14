@@ -1,6 +1,6 @@
 ---
 :request:
-  :url: http://api.skroutz.gr/api/user/saved_orders
+  :url: https://api.skroutz.gr/user/saved_orders
   :headers:
     :accept: application/vnd.skroutz+json; version=3.1
     :authorization: Bearer h2GTSZPqbSc7bKiyYS1j3gNd_1PoNDBLNQzdCgnBonNmTZ9r8eRMBMe-SvM8waex8TRa5kFU_Wn5bffjEZwQew==
