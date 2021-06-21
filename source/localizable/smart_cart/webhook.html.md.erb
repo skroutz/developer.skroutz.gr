@@ -7,6 +7,9 @@ title: webhook
 
 # Webhook <%= edit_link %>
 
+> <i class="fa fa-exclamation-triangle"></i>
+> **Important update:** From 5/7/2021 onwards, more order state updates will be sent via Webhook requests. [Read more](/smart_cart/webhook#webhook-events)
+
 Smart Cart webhook allows Skroutz Merchants to automatically receive order details to their
 platform when a new Smart Cart order is placed or an existing one is updated.
 
@@ -84,6 +87,7 @@ event notification is sent for the following cases:
 * When an order is **cancelled** (either by the user or our support team).
 * When an order is **extended** (allowing more time to handle the order).
 * When an order's courier voucher is **created** (for the associated shipment).
+* **From 5/7/2021 onwards**: When an order's **[state](/smart_cart/orders_api#order-object-attributes-appendix) is changed** (either by user, our support team, or the merchant)
 
 #### Request payload
 
