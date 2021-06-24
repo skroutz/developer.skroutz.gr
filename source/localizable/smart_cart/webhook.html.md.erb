@@ -113,6 +113,66 @@ Name           | Type   | Value | Description
 
 <%= partial 'localizable/smart_cart/order_object' %>
 
+## Test requests (sandbox)
+
+For [demo orders](/smart_cart/orders_api/#test-requests-sandbox), separate **API endpoints** are available to **trigger different
+kinds of Webhook requests** for testing. In the following examples, `:code` should be replaced with one of the following values:
+
+- `DEMO-OPEN`
+- `DEMO-ACCEPTED`
+- `DEMO-REJECTED`
+- `DEMO-INVOICE`
+- `DEMO-INVOICE39A`
+
+An order creation or order update event should be received at the webhook url of the shop, depending on the request action.
+Sending any of the following requests should request in a successful response (`200 OK`):
+
+<pre class="terminal">
+  {
+    "success": true
+  }
+</pre>
+
+
+> Note: Demo webhook requests are not executed instantly, so they may take from a few seconds up to a few minutes to be processed and sent.
+> After getting a successful response (200 OK), you would just have to wait a bit, before trying another one.
+> All requests will be sent to the live Webhook URL that is already set-up in the Merchants panel for your shop.
+
+#### New order
+
+This sends a Webhook request payload just like if the order is new, with `"event_type": "new_order"`.
+
+<pre class="terminal">
+  POST /merchants/ecommerce/orders/:code/trigger_webhook_request/creation
+</pre>
+
+#### Courier voucher issued
+
+This sends a Webhook request payload just like if the order was updated with a PDF voucher
+file, with `"event_type": “order_updated”`.
+
+<pre class="terminal">
+  POST /merchants/ecommerce/orders/:code/trigger_webhook_request/voucher_update
+</pre>
+
+#### Order extended
+
+This sends a Webhook request payload just like if the order acceptance period was extended by Skroutz support,
+with `"event_type": “order_updated”`.
+
+<pre class="terminal">
+  POST /merchants/ecommerce/orders/:code/trigger_webhook_request/extension
+</pre>
+
+#### Order cancelled
+
+Would send a Webhook request payload just like if the order was cancelled by the user, with
+`"event_type": “order_updated”`.
+
+<pre class="terminal">
+  POST /merchants/ecommerce/orders/:code/trigger_webhook_request/cancellation
+</pre>
+
 ## Payload Examples
 
 #### Example 1

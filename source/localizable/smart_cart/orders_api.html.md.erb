@@ -158,6 +158,63 @@ also get a `422` HTTP status code (Unprocessable Entity), with the following bod
 
 [More on API error handling](/api/v3/#error-handling)
 
+## Test requests (sandbox)
+
+The following d​emo order codes​ are available on production for testing reasons and represent different order states.
+
+> It is safe to issue "accept" and "reject" API calls for the following demo order codes multiple times for testing,
+> since no actions on them would persist any data.
+
+#### DEMO-OPEN
+
+A new order that is not accepted yet, and has no courier voucher.
+
+<pre class="terminal">
+  GET /merchants/ecommerce/orders/DEMO-OPEN
+</pre>
+
+<%= render_recording :merchants_ecommerce_orders_demo_open %>
+
+#### DEMO-ACCEPTED
+
+An already-accepted order that also has a courier voucher. Trying to accept it would return an error.
+
+<pre class="terminal">
+  GET /merchants/ecommerce/orders/DEMO-ACCEPTED
+</pre>
+
+<%= render_recording :merchants_ecommerce_orders_demo_accepted %>
+
+#### DEMO-REJECTED
+
+An already-rejected order. Trying to reject it would return an error.
+
+<pre class="terminal">
+  GET /merchants/ecommerce/orders/DEMO-REJECTED
+</pre>
+
+<%= render_recording :merchants_ecommerce_orders_demo_rejected %>
+
+#### DEMO-INVOICE
+
+A new order, requesting an invoice.
+
+<pre class="terminal">
+  GET /merchants/ecommerce/orders/DEMO-INVOICE
+</pre>
+
+<%= render_recording :merchants_ecommerce_orders_demo_invoice %>
+
+#### DEMO-INVOICE39A
+
+A new order including an item with VAT exclusion based on “​Άρθρο 39α​”.
+
+<pre class="terminal">
+  GET /merchants/ecommerce/orders/DEMO-INVOICE39A
+</pre>
+
+<%= render_recording :merchants_ecommerce_orders_demo_invoice39a %>
+
 ## Order object attributes appendix
 
 > The order object returned retrieving a single order via the API is the same as

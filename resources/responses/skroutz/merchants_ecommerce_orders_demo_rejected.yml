@@ -1,0 +1,89 @@
+---
+:request:
+  :url: https://api.skroutz.gr/merchants/ecommerce/orders/DEMO-REJECTED
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3.0
+    :authorization: Bearer n4_92SD9EAEkwDfgiYZHiWwSdJlmA5q-_H3FQ6iYZ3jcMynhbpLEe3QvZxrvO0D-8ZYYD2n_wOBexdn9B0NYGQ==
+  :verb: :get
+:response:
+  :status: 200
+  :headers:
+    Date: Thu, 24 Jun 2021 15:01:26 GMT
+    Connection: keep-alive
+    Content-Length: 6400
+    Server: h2o (Debian)
+    Content-Type: application/json; charset=utf-8
+    X-Meta-Client-Id: 27951bdf06a65ea4
+    Cache-Control: no-cache
+    X-Request-Id: 989369834
+    X-Runtime: 0.021923
+    X-App: as103_ssl
+    X-Varnish: 989369834
+    Age: 0
+    Via: 1.1 varnish (Varnish/5.0)
+    X-Origin: lb2
+    X-Cache: MISS
+    X-Cached: skroutz miss(0)
+  :body: '{
+  "order": {
+    "code": "DEMO-REJECTED",
+    "state": "rejected",
+    "customer": {
+      "id": "user1234",
+      "first_name": "John",
+      "last_name": "Doe",
+      "address": {
+        "street_name": "Πανεπιστημίου",
+        "street_number": "4",
+        "zip": "12345",
+        "city": "Αθήνα",
+        "region": "Αττικής",
+        "pickup_from_collection_point": false
+      }
+    },
+    "invoice": false,
+    "comments": "Παράδοση στο γραφείο",
+    "courier": "CourierCenter",
+    "courier_voucher": null,
+    "courier_tracking_codes": [],
+    "line_items": [
+      {
+        "id": "Y5jVmgKmeX",
+        "shop_uid": "405753",
+        "product_name": "Adidas Perormance Badge of Sport Swimsuit PS/GS",
+        "quantity": 2,
+        "size": {
+          "label": "Ηλικία",
+          "value": "14 χρονών",
+          "shop_value": "12-14"
+        },
+        "unit_price": 17.99,
+        "total_price": 35.98,
+        "price_includes_vat": true,
+        "ean": "1234567890123"
+      },
+      {
+        "id": "3XlV8ebjxm",
+        "shop_uid": "10",
+        "product_name": "Smartphone 123",
+        "quantity": 2,
+        "unit_price": 100,
+        "total_price": 200,
+        "price_includes_vat": true
+      },
+      {
+        "id": "ZvEKMxbxr1",
+        "shop_uid": "768",
+        "product_name": "AIR OPTIX COLORS MHNIAIOI",
+        "quantity": 2,
+        "unit_price": 25.5,
+        "total_price": 51,
+        "price_includes_vat": true,
+        "extra_info": "Χρώμα: Πράσινο\\nΒαθμοί SPH: -6.50"
+      }
+    ],
+    "created_at": "2021-06-24T13:11:58+03:00",
+    "expires_at": "2021-06-25T13:11:58+03:00",
+    "dispatch_until": "2021-06-28T13:11:58+03:00"
+  }
+}'
