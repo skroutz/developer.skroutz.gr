@@ -41,7 +41,7 @@ An HTTP `POST` request is sent to the predefined webhook URL once an event has b
 ### Handling failures / retries
 
 Any failed request (including server timeouts or non -`200` responses) would be **retried automatically**
-within the next 15 minutes. There is a retry limit of 3 requests in total for every order/event.
+within the next 20 minutes. There is a retry limit of 4 requests in total for every order/event.
 
 The merchant can also trigger sending (or retrying the latest) an **order webhook request** at any time from within
 the order page.
