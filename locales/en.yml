@@ -58,6 +58,7 @@ en:
       libraries: 'Libraries'
       examples: 'Examples'
       faq: 'FAQ'
+      new_script_migration_guide: 'New Analytics Tracking Script Migration Guide'
       privacy_policy: 'Privacy Policy - Analytics'
       cps_privacy_policy: 'Privacy Policy - CPC/CPS'
       lawfulness_of_processing: 'Lawfulness of Processing'

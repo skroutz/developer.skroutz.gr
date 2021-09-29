@@ -53,6 +53,7 @@ analytics:
     - { title: 'libraries' }
     - { title: 'examples' }
     - { title: 'faq' }
+    - { title: 'new_script_migration_guide' }
     - { title: 'privacy_policy', skip_flavors: ['alve', 'scrooge'] }
     - { title: 'cps_privacy_policy', skip_flavors: ['alve', 'scrooge'] }
     - { title: 'lawfulness_of_processing', skip_flavors: ['alve', 'scrooge'] }
