@@ -20,6 +20,3 @@
 # Ignore deploy files
 /config/deploy.rb
 /config/deploy/*.rb
-
-# Ignore .ruby-version
-.ruby-version
