@@ -42,7 +42,7 @@ queue from `<%= "#{flavor}_analytics" %>()` to whatever name you choose.
 (function(a,b,c,d,e,f,g){a['<%=flavor.camelize%>AnalyticsObject']=e;a[e]= a[e] || function(){
   (a[e].q = a[e].q || []).push(arguments);};f=b.createElement(c);f.async=true;
   f.src=d;g=b.getElementsByTagName(c)[0];g.parentNode.insertBefore(f,g);
-})(window,document,'script','https://analytics.skroutz.gr/analytics.min.js','custom_analytics_name');
+})(window,document,'script','https://<%=settings.analytics_domain%>/skroutza.min.js','custom_analytics_name');
 
 custom_analytics_name('session', 'connect', 'SA-0001-0001');
 ~~~
