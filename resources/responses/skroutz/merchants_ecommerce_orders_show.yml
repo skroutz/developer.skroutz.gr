@@ -74,6 +74,7 @@
         "unit_price": 100,
         "total_price": 200,
         "price_includes_vat": false,
+        "island_vat_discount_applied": false,
         "ean": "1234567890123"
       },
       {
@@ -83,7 +84,8 @@
         "quantity": 1,
         "unit_price": 25,
         "total_price": 25,
-        "price_includes_vat": true
+        "price_includes_vat": true,
+        "island_vat_discount_applied": false
       }
     ],
     "created_at": "2019-11-28T13:24:37+02:00",

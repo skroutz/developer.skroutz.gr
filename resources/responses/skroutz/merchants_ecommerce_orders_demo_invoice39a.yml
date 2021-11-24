@@ -79,6 +79,7 @@
         "unit_price": 17.99,
         "total_price": 35.98,
         "price_includes_vat": true,
+        "island_vat_discount_applied": false,
         "ean": "1234567890123"
       },
       {
@@ -88,7 +89,8 @@
         "quantity": 2,
         "unit_price": 100,
         "total_price": 200,
-        "price_includes_vat": false
+        "price_includes_vat": false,
+        "island_vat_discount_applied": false
       },
       {
         "id": "ZvEKMxbxr1",
@@ -98,6 +100,7 @@
         "unit_price": 25.5,
         "total_price": 51,
         "price_includes_vat": true,
+        "island_vat_discount_applied": false,
         "extra_info": "Χρώμα: Πράσινο\\nΒαθμοί SPH: -6.50"
       }
     ],
