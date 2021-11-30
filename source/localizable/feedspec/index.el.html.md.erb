@@ -171,6 +171,7 @@ ImageBot v1".
 [Additional Image Link](#additional-image-link)        | String  | <span class="mono">400</span>  | Όχι<b><sup>1</sup></b>| `https://www.someurl.com/images/322/front_view.jpg`
 [Category Name](#category-name)                        | String  | <span class="mono">250</span>  | Ναι         | `Κινητά τηλέφωνα`
 [Price](#price)                                        | Decimal | <span class="mono">- (έως 2 δεκαδικά ψηφία)</span>    | Ναι         | `23.22`
+[VAT Rate](#vat-rate)                                  | Decimal | <span class="mono">- (έως 2 δεκαδικά ψηφία)</span>    | Όχι         | `24.00`
 [Availability](#availability)                          | String  | <span class="mono">60</span>   | Ναι         | `Σε 2 μέρες`
 [Manufacturer](#manufacturer)                          | String  | <span class="mono">100</span>  | Ναι         | `Samsung`
 [MPN / ISBN](#mpn--isbn)                               | String  | <span class="mono">80</span>   | Ναι         | `GF322234`
@@ -381,6 +382,22 @@ thumbnail.
   εφαρμογής.
 
 > Το πεδίο τιμής μπορεί να δεχτεί μέχρι 2 δεκαδικά ψηφία.
+
+#### VAT Rate
+
+Στο πεδίο αυτό μπορείτε να συμπληρώσετε τον συντελεστή Φ.Π.Α. του προϊόντος ως ποσοστό.
+
+> Αυτό το πεδίο δέχεται τιμές στο διάστημα μεταξύ του `1` και του `100`, ή ίση του `0`.
+
+> Το πεδίο συντελεστή Φ.Π.Α. μπορεί να δεχτεί μέχρι 2 δεκαδικά ψηφία.
+
+##### Example
+
+~~~ xml
+<name>Σετ 3 Βαλίτσες BENZI Μπλε BZ5581</name>
+<price>150.0</price>
+<vat>24.0</vat>
+~~~
 
 
 #### Availability
@@ -661,6 +678,7 @@ To χρώμα του προϊόντος. Το πεδίο χρώματος λει
         <additionalimage><![CDATA[https://www.mywebstore.gr/product/322233/front.jpg]]></additionalimage>
         <category><![CDATA[Αθλητικά > Sneakers]]></category>
         <price_with_vat>30.00</price_with_vat>
+        <vat>24.00</vat>
         <manufacturer><![CDATA[Converse]]></manufacturer>
         <mpn>M7652C</mpn>
         <ean>886952780692</ean>
@@ -742,6 +760,9 @@ To χρώμα του προϊόντος. Το πεδίο χρώματος λει
 
   <!-- price -->
   <xs:element name="price" type="xs:decimal" />
+
+  <!-- vat -->
+  <xs:element name="vat" type="xs:decimal" />
 
   <!-- category -->
   <xs:element name="category">
@@ -863,6 +884,7 @@ To χρώμα του προϊόντος. Το πεδίο χρώματος λει
                     </xs:element>
 
                     <!-- optional fields -->
+                    <xs:element ref="vat" minOccurs="0"/>
                     <xs:element ref="description"  minOccurs="0"/>
                     <xs:element ref="additional_image"  minOccurs="0"/>
                     <xs:element ref="ean"  minOccurs="0"/>

@@ -166,6 +166,7 @@ Name                                                   | Type    | Length       
 [Additional Image Link](#additional-image-link)        | String  | <span class="mono">400</span>  | No<b><sup>1</sup></b>| `https://www.someurl.co.uk/images/322/front_view.jpg`
 [Category Name](#category-name)                        | String  | <span class="mono">250</span>  | Yes      | `Mobile phones`
 [Price](#price)                                        | Decimal | <span class="mono">- (up to 2 decimal places)</span>    | Yes      | `23.22`
+[VAT Rate](#vat-rate)                                  | Decimal | <span class="mono">- (up to 2 decimal places)</span>    | No       | `24.00`
 [Availability](#availability)                          | String  | <span class="mono">60</span>   | Yes      | `In 2 days`
 [Manufacturer](#manufacturer)                          | String  | <span class="mono">100</span>  | Yes      | `Samsung`
 [MPN / ISBN](#mpn--isbn)                               | String  | <span class="mono">80</span>   | Yes      | `GF322234`
@@ -345,6 +346,22 @@ It's the products retail price **including V.A.T**.
 (e.g. offers, discounts pending on location etc).
 
 > The price field accepts up to 2 decimal places.
+
+#### VAT Rate
+
+It's the product's VAT rate.
+
+> This field accepts values within the range between `1` and` 100`, or equal to `0`.
+
+> The VAT rate field accepts up to 2 decimal places.
+
+##### Example
+
+~~~ xml
+<name>SAMSUNG Galaxy A70 4G Smartphone 6GB RAM 128GB ROM - Black</name>
+<price>150.0</price>
+<vat>24.0</vat>
+~~~
 
 #### Availability
 
@@ -620,6 +637,7 @@ The XML excerpt below is an example of a compatible XML data feed.
         <additionalimage><![CDATA[https://www.mywebstore.co.uk/product/322233/front.jpg]]></additionalimage>
         <category><![CDATA[Outdor > Sneakers]]></category>
         <price_with_vat>30.00</price_with_vat>
+        <vat>24.00</vat>
         <manufacturer><![CDATA[Converse]]></manufacturer>
         <mpn>M7652C</mpn>
         <ean>886952780692</ean>
@@ -701,6 +719,9 @@ The XML excerpt below is an example of a compatible XML data feed.
 
   <!-- price -->
   <xs:element name="price" type="xs:decimal" />
+
+  <!-- vat -->
+  <xs:element name="vat" type="xs:decimal" />
 
   <!-- category -->
   <xs:element name="category">
@@ -822,6 +843,7 @@ The XML excerpt below is an example of a compatible XML data feed.
                     </xs:element>
 
                     <!-- optional fields -->
+                    <xs:element ref="vat" minOccurs="0"/>
                     <xs:element ref="description"  minOccurs="0"/>
                     <xs:element ref="additional_image"  minOccurs="0"/>
                     <xs:element ref="ean"  minOccurs="0"/>
