@@ -171,6 +171,7 @@ ImageBot v1".
 [Additional Image Link](#additional-image-link)        | String  | <span class="mono">400</span>  | Όχι<b><sup>1</sup></b>| `https://www.someurl.com/images/322/front_view.jpg`
 [Category Name](#category-name)                        | String  | <span class="mono">250</span>  | Ναι         | `Κινητά τηλέφωνα`
 [Price](#price)                                        | Decimal | <span class="mono">- (έως 2 δεκαδικά ψηφία)</span>    | Ναι         | `23.22`
+[VAT Rate](#vat-rate)                                  | Decimal | <span class="mono">- (έως 2 δεκαδικά ψηφία)</span>    | Όχι         | `24.00`
 [Availability](#availability)                          | String  | <span class="mono">60</span>   | Ναι         | `Σε 2 μέρες`
 [Manufacturer](#manufacturer)                          | String  | <span class="mono">100</span>  | Ναι         | `Samsung`
 [MPN / ISBN](#mpn--isbn)                               | String  | <span class="mono">80</span>   | Ναι         | `GF322234`
@@ -181,6 +182,7 @@ ImageBot v1".
 [Shipping Costs](#shipping-costs)                      | Decimal | <span class="mono">-</span>    | Όχι         | `3.22`
 [Color](#color)                                        | String  | <span class="mono">100</span>  | Όχι<b><sup>3</sup></b>| `Μαύρο`
 [Description](#description)                            | String  | <span class="mono">1000</span> | Όχι<b><sup>4</sup></b>| `Σετ 3 τρόλεϊ. Οι βαλίτσες διαθέτουν 4 διπλές ρόδες και κλειδαριά με συνδυασμό. Με δυο ανατομικές λαβές, μια στο επάνω μέρος και μια στο πλάι. Διαθέτουν εσωτερικό χώρισμα και θήκες οργάνωσης. Βαλίτσα 70 cm: Διαστάσεις 48 x 70 x 28 cm, Βάρος 4,8 Kg, Χωρητικότητα 94lt. Βαλίτσα 60 cm: Διαστάσεις 41 x 58 x 25 cm, Βάρος 4,1 Kg, Χωρητικότητα 60lt. Βαλίτσα Καμπίνας: Διαστάσεις 35 x 55 x 20 cm, Βάρος 2,7 Kg, Χωρητικότητα 38lt. Υλικό: Light weight ABS και μηχανισμός αλουμινίου.`
+[Quantity](#quantity)                                  | Integer | <span class="mono">8</span>    | Όχι | `10`
 
 <small><b><sup>1</sup></b> Υποχρεωτικό για τις κατηγορίες μόδας όπου υπάρχουν νούμερα, επιπρόσθετες εικόνες</small><br />
 <small><b><sup>2</sup></b> Υποχρεωτικό για τα καταστήματα που χρησιμοποιούν κανόνες βάρους για τον υπολογισμό των μεταφορικών τους</small><br />
@@ -380,6 +382,22 @@ thumbnail.
   εφαρμογής.
 
 > Το πεδίο τιμής μπορεί να δεχτεί μέχρι 2 δεκαδικά ψηφία.
+
+#### VAT Rate
+
+Στο πεδίο αυτό μπορείτε να συμπληρώσετε τον συντελεστή Φ.Π.Α. του προϊόντος ως ποσοστό.
+
+> Αυτό το πεδίο δέχεται τιμές στο διάστημα μεταξύ του `1` και του `100`, ή ίση του `0`.
+
+> Το πεδίο συντελεστή Φ.Π.Α. μπορεί να δεχτεί μέχρι 2 δεκαδικά ψηφία.
+
+##### Example
+
+~~~ xml
+<name>Σετ 3 Βαλίτσες BENZI Μπλε BZ5581</name>
+<price>150.0</price>
+<vat>24.0</vat>
+~~~
 
 
 #### Availability
@@ -591,6 +609,28 @@ To χρώμα του προϊόντος. Το πεδίο χρώματος λει
 </description>
 ~~~
 
+#### Quantity
+
+Στο πεδίο αυτό μπορείτε να συμπληρώσετε την ποσότητα του προϊόντος που έχετε διαθέσιμη για πώληση μέσω του Skroutz.
+
+> Το πεδίο δέχεται ακέραιες τιμές μεγαλύτερες ή ίσες του `0` και μικρότερες του `10000000`.
+
+> Αν το προϊόν δεν είναι διαθέσιμο, τότε η ενδεδειγμένη τιμή είναι `0`.
+
+##### Example
+
+~~~ xml
+<name>Σετ 3 Βαλίτσες BENZI Μπλε BZ5581</name>
+<quantity>10</quantity>
+~~~
+
+Σε προϊόντα που περιέχουν μεγέθη, συνιστάται η πόσοτητα να είναι το άθροισμα των διαθέσιμων μεγεθών.
+Παράδειγμα, αν έχουμε 10 τεμάχια Medium, 15 τεμάχια Large και 5 τεμάχια XLarge:
+
+~~~xml
+<size>M, L, XL</size>
+<quantity>30</quantity>
+~~~
 
 <% if settings.feed_validator_domain.present? %>
 ## Data Feed Validator
@@ -638,6 +678,7 @@ To χρώμα του προϊόντος. Το πεδίο χρώματος λει
         <additionalimage><![CDATA[https://www.mywebstore.gr/product/322233/front.jpg]]></additionalimage>
         <category><![CDATA[Αθλητικά > Sneakers]]></category>
         <price_with_vat>30.00</price_with_vat>
+        <vat>24.00</vat>
         <manufacturer><![CDATA[Converse]]></manufacturer>
         <mpn>M7652C</mpn>
         <ean>886952780692</ean>
@@ -653,6 +694,7 @@ To χρώμα του προϊόντος. Το πεδίο χρώματος λει
           αντιολισθητική σόλα από καουτσούκ. Αποτελεί ιδανικό κομμάτι για
           casual και μη εμφανίσεις.
         </description>
+        <quantity>10</quantity>
       </product>
       ...
       ...
@@ -718,6 +760,9 @@ To χρώμα του προϊόντος. Το πεδίο χρώματος λει
 
   <!-- price -->
   <xs:element name="price" type="xs:decimal" />
+
+  <!-- vat -->
+  <xs:element name="vat" type="xs:decimal" />
 
   <!-- category -->
   <xs:element name="category">
@@ -798,6 +843,9 @@ To χρώμα του προϊόντος. Το πεδίο χρώματος λει
     </xs:simpleType>
   </xs:element>
 
+  <!-- quantity -->
+  <xs:element name="quantity" type="xs:integer" />
+
   <!-- basic structure -->
   <xs:element name="storedata">
     <xs:complexType>
@@ -836,6 +884,7 @@ To χρώμα του προϊόντος. Το πεδίο χρώματος λει
                     </xs:element>
 
                     <!-- optional fields -->
+                    <xs:element ref="vat" minOccurs="0"/>
                     <xs:element ref="description"  minOccurs="0"/>
                     <xs:element ref="additional_image"  minOccurs="0"/>
                     <xs:element ref="ean"  minOccurs="0"/>
@@ -843,6 +892,7 @@ To χρώμα του προϊόντος. Το πεδίο χρώματος λει
                     <xs:element ref="weight" minOccurs="0"/>
                     <xs:element ref="shipping"  minOccurs="0"/>
                     <xs:element ref="color"  minOccurs="0"/>
+                    <xs:element ref="quantity" minOccurs="0"/>
 
                   </xs:all>
 
