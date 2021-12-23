@@ -50,7 +50,7 @@ Replace your old Analytics Tracking Script with the new one.
   (function(a,b,c,d,e,f,g){a[e]= a[e] || function(){
     (a[e].q = a[e].q || []).push(arguments);};f=b.createElement(c);f.async=true;
     f.src=d;g=b.getElementsByTagName(c)[0];g.parentNode.insertBefore(f,g);
-  })(window,document,'script','https://<%=settings.analytics_domain%>/analytics.min.js','sa');
+  })(window,document,'script','https://<%=settings.analytics_domain%>/skroutza.min.js','sa');
 
   sa('session', 'connect', 'SA-XXXX-YYYY');  // Connect your Account.
 </script>
@@ -62,7 +62,7 @@ Replace your old Analytics Tracking Script with the new one.
 (function(a,b,c,d,e,f,g){<span style="color: red; font-weight: bold">a['<%=flavor.capitalize%>AnalyticsObject']=e;</span>a[e]= a[e] || function(){
   (a[e].q = a[e].q || []).push(arguments);};f=b.createElement(c);f.async=true;
   f.src=d;g=b.getElementsByTagName(c)[0];g.parentNode.insertBefore(f,g);
-})(window,document,'script','https://<%=settings.analytics_domain%>/analytics.min.js','<span style="color: red; font-weight: bold"><%=flavor%>_analytics</span>');
+})(window,document,'script','https://<%=settings.analytics_domain%>/skroutza.min.js','<span style="color: red; font-weight: bold"><%=flavor%>_analytics</span>');
 
 <span style="color: red; font-weight: bold"><%=flavor%>_analytics</span>('session', 'connect', 'SA-XXXX-YYYY');  // Connect your Account.
 </pre>

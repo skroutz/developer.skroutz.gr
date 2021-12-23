@@ -2,7 +2,7 @@ site_name: 'skroutz'
 domain: 'skroutz.gr'
 full_company_name: 'Skroutz S.A.'
 
-analytics_domain: 'analytics.skroutz.gr'
+analytics_domain: 'skroutza.skroutz.gr'
 api_domain: 'api.skroutz.gr'
 developer_domain: 'developer.skroutz.gr'
 engineering_blog_domain: 'engineering.skroutz.gr'
