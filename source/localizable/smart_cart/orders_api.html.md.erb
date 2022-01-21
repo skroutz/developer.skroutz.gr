@@ -123,6 +123,31 @@ curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/orders/19112
   -d '{ "rejection_reason_other": "Our store is closed for personal reasons" }'
 </pre>
 
+### Upload receipt/invoice
+
+To upload the receipt/invoice of the order, you need to set the `invoice_file` param with the contents of the document.
+
+<pre class="terminal">
+  POST /merchants/ecommerce/orders/:code/invoices
+</pre>
+
+#### Example
+<pre class="terminal">
+curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/orders/191128-1234567/invoices \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Content-Type: multipart/form-data' \
+  -H 'Authorization: Bearer your_access_token_here' \
+  -F 'invoice_file=@/path/to/invoice.pdf'
+</pre>
+
+Only one file is allowed per order. If the file is already uploaded, it will by replaced by the new file in a subsequent submission.
+
+<blockquote>
+  <p>
+    Allowed file types are: pdf/png/jpg. The maximum file size is 7MB.
+  </p>
+</blockquote>
+
 ## Error handling
 
 In case of errors, the response will have a representative HTTP status code
