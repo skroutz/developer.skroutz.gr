@@ -24,3 +24,30 @@
   src: font-url("Ubuntu-Mono-Bold.woff2") format("woff2"),
        font-url("Ubuntu-Mono-Bold.woff") format("woff");
 }
+
+// Open Sans Font
+// --------------------------------------------------
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-style: normal;
+  src: font-url("Open-Sans-Light.woff2") format("woff2"),
+       font-url("Open-Sans-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-style: normal;
+  src: font-url("Open-Sans.woff2") format("woff2"),
+       font-url("Open-Sans.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-style: normal;
+  src: font-url("Open-Sans-Bold.woff2") format("woff2"),
+       font-url("Open-Sans-Bold.woff") format("woff");
+}
