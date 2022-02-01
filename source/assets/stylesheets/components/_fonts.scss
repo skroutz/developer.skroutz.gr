@@ -1,0 +1,26 @@
+// Ubuntu Font
+// --------------------------------------------------
+
+@font-face {
+  font-family: "Ubuntu";
+  font-weight: 300;
+  font-style: normal;
+  src: font-url("Ubuntu-Light.woff2") format("woff2"),
+       font-url("Ubuntu-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Ubuntu Mono";
+  font-weight: 400;
+  font-style: normal;
+  src: font-url("Ubuntu-Mono.woff2") format("woff2"),
+       font-url("Ubuntu-Mono.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Ubuntu Mono";
+  font-weight: 700;
+  font-style: normal;
+  src: font-url("Ubuntu-Mono-Bold.woff2") format("woff2"),
+       font-url("Ubuntu-Mono-Bold.woff") format("woff");
+}

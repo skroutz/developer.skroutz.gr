@@ -19,8 +19,8 @@ $font-size-xlarge:      ceil(($app-font-size * 1.5)) !default; // ~18px
 $app-font-open:         'Open Sans' !default;
 
 //** Ubuntu Font
-$app-font-ubuntu:       'Ubuntu' !default;
-$app-font-ubuntu-mono:  'Ubuntu Mono' !default;
+$app-font-ubuntu:       "Ubuntu" !default;
+$app-font-ubuntu-mono:  "Ubuntu Mono" !default;
 
 $line-height-xlarge:    1.25 !default;
 
@@ -895,4 +895,3 @@ $page-header-border-color:    $gray-lighter !default;
 $dl-horizontal-offset:        $component-offset-horizontal !default;
 //** Horizontal line color.
 $hr-border:                   $gray-lighter !default;
-
