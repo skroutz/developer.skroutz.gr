@@ -17,6 +17,7 @@ Name         | Type   | Value | Description
 `dispatch_until` | Date String in format<br> `YYYY-MM-DDTHH:MM:SS+HH:M` | | Order maximum dispatch date
 `express` | Boolean | | Whether the order is marked as express delivery
 `gift_wrap` | Boolean | | Whether gift wrap was requested
+`rejection_info` | Object | | [Rejection info](#rejection-info) (available for orders rejected with `other` reason)
 `accept_options` | Object | | [Accept options](#accept-options) (available for orders with state `"open"`)
 `reject_options` | Object | | [Reject options](#reject-options) (available for orders with state `"open"`)
 
@@ -73,6 +74,13 @@ Name                                                      | Type   | Description
 `invoice_details.vat_exclusion_representative.id_number`  | String | Provided ID document number (last 5 digits)
 `invoice_details.vat_exclusion_representative.otp`        | String | Provided representative one-time password
 
+#### Rejection info
+
+Name                                                       | Type    | Description
+---------------------------------------------------------- | ------- | ------------------------------------------------
+`rejection_info.reason`                                    | String  | The rejection reason text
+`rejection_info.actor`                                     | String  | The actor who performed the rejection. Possible values: `skroutz`, `merchant`
+
 #### Order line items array
 
 Name                              | Type      | Description
@@ -88,6 +96,8 @@ Name                              | Type      | Description
 `line_items[_].island_vat_discount_applied` | Boolean  | VAT discount applied (could be `true` for [invoice](#invoice-details) orders, billed to customers in [5 specific Greek islands](http://elib.aade.gr/elib/view?d=/gr/ap/2021/A_1150/))
 `line_items[_].ean`             | String  | EAN code of product (optional)
 `line_items[_].extra_info`      | String  | Additional information for item, eg. color preference or prescription details for contact lenses (optional) [webhook example](../webhook/#example-9-with-extrainfo-in-lineitems)
+`line_items[_].rejection_reason` | String | Rejection reason (possible values: `limited_stock`, `no_stock`, `discontinuation`, `wrong_price`)
+`line_items[_].return_reason` | String | User return reason (possible values: `faulty`, `wrong_product`, `withdrawal`, `wrong_size`)
 
 #### Line item size
 
