@@ -108,6 +108,7 @@
     "expires_at": "2021-06-25T13:12:29+03:00",
     "dispatch_until": "2021-06-28T13:12:29+03:00",
     "express": false,
+    "gift_wrap": false
     "accept_options": {
       "number_of_parcels": [
         1
