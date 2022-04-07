@@ -92,6 +92,7 @@
     "expires_at": "2019-12-04T10:24:00+02:00",
     "dispatch_until": "2019-12-04T18:00:00+02:00",
     "express": false,
+    "gift_wrap": false
     "accept_options": {
       "number_of_parcels": [
         1
