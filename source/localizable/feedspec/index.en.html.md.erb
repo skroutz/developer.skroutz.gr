@@ -839,7 +839,9 @@ A unique EAN is allocated to each separate retail product.
 <% end %>
 
 
-## XML Example
+## XML Examples
+
+### Simple XML
 
 The XML excerpt below is an example of a compatible XML data feed.
 
@@ -880,12 +882,78 @@ The XML excerpt below is an example of a compatible XML data feed.
 </mywebstore>
 ~~~
 
+### XML with Size Variations
 
-## XSD
+The XML excerpt below is an example of a compatible XML with variations data feed.
 
 ~~~ xml
-<?xml version="2.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="https://www.w3.org/2001/XMLSchema">
+<?xml version="1.0" encoding="UTF-8"?>
+<mywebstore>
+   <created_at>2010-04-08 12:32</created_at>
+   <products>
+      <product>
+        <id>322233</id>
+        <name><![CDATA[Converse All Star Chuck Taylor Ox]]></name>
+        <link><![CDATA[https://www.mywebstore.co.uk/product/322233]]></link>
+        <image><![CDATA[https://www.mywebstore.co.uk/product/322233.jpg]]></image>
+        <additionalimage><![CDATA[https://www.mywebstore.co.uk/product/322233/front.jpg]]></additionalimage>
+        <category><![CDATA[Outdor > Sneakers]]></category>
+        <price_with_vat>30.00</price_with_vat>
+        <vat>24.00</vat>
+        <manufacturer><![CDATA[Converse]]></manufacturer>
+        <mpn>M7652C</mpn>
+        <ean>886952780692</ean>
+        <instock>N</instock>
+        <availability>Delivery 1 to 3 days</availability>
+        <size>43,45</size>
+        <weight>2000</weight>
+        <color>White</color>
+        <description>
+          The Chuck Taylor All Star is one of the most iconic sneakers
+          of all ages. It is a unique design with a classic and comfortable
+          fit, in white color, with durable non-slip exterior rubber sole.
+          It is an ideal piece for all kinds of appearances.
+        </description>
+        <quantity>10</quantity>
+        <variations>
+          <variation>
+            <variationid>322233.43</variationid>
+            <link><![CDATA[https://www.mywebstore.co.uk/product/322233]]></link>
+            <availability>Delivery 1 to 3 days</availability>
+            <manufacturersku>M7652C</manufacturersku>
+            <ean>886952780692</ean>
+            <price_with_vat>33.00</price_with_vat>
+            <size>43</size>
+            <quantity>6</quantity>
+          </variation>
+          <variation>
+            <variationid>322233.45</variationid>
+            <link><![CDATA[https://www.mywebstore.co.uk/product/322233]]></link>
+            <availability>Delivery 1 to 3 days</availability>
+            <manufacturersku>M7652C</manufacturersku>
+            <ean>886952780692</ean>
+            <price_with_vat>30.00</price_with_vat>
+            <size>45</size>
+            <quantity>4</quantity>
+          </variation>
+          ...
+          ...
+          ...
+        </variations>
+      </product>
+      ...
+      ...
+      ...
+   </products>
+</mywebstore>
+~~~
+
+## XSDs
+
+### Simple XSD
+
+~~~ xml
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
   <!-- required elements -->
   <!-- created at -->
@@ -1052,18 +1120,20 @@ The XML excerpt below is an example of a compatible XML data feed.
                     <xs:element ref="availability" />
                     <xs:element ref="instock" />
 
-                    <!-- description -->
-                    <xs:element name="description">
-                      <xs:simpleType>
-                        <xs:restriction base="xs:string">
-                          <xs:maxLength value="XXXXX" />
-                        </xs:restriction>
-                      </xs:simpleType>
-                    </xs:element>
-
                     <!-- optional fields -->
                     <xs:element ref="vat" minOccurs="0"/>
-                    <xs:element ref="description"  minOccurs="0"/>
+
+                    <!-- description -->
+                    <xs:element name="description">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="value" type="xs:string" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+
                     <xs:element ref="additional_image"  minOccurs="0"/>
                     <xs:element ref="ean"  minOccurs="0"/>
                     <xs:element ref="size"  minOccurs="0"/>
@@ -1071,6 +1141,245 @@ The XML excerpt below is an example of a compatible XML data feed.
                     <xs:element ref="shipping"  minOccurs="0"/>
                     <xs:element ref="color"  minOccurs="0"/>
                     <xs:element ref="quantity" minOccurs="0"/>
+
+                  </xs:all>
+
+                </xs:complexType>
+              </xs:element>
+              <!-- end product -->
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      <!-- end products -->
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+~~~
+
+### XSD with Size Variations
+
+~~~ xml
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- required elements -->
+  <!-- created at -->
+  <xs:element name="created_at" type="xs:dateTime" />
+
+  <!-- unique id -->
+  <xs:element name="uid">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:maxLength value="200" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <!-- name -->
+  <xs:element name="name">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:maxLength value="300" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <!-- link -->
+  <xs:element name="link">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:maxLength value="400" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <!-- image -->
+  <xs:element name="image">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:maxLength value="400" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <!-- price -->
+  <xs:element name="price" type="xs:decimal" />
+
+  <!-- category -->
+  <xs:element name="category">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:maxLength value="300" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <!-- manufacturer -->
+  <xs:element name="manufacturer">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:maxLength value="100" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <!-- manufacturer part number -->
+  <xs:element name="mpn">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:maxLength value="100" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <!-- availability -->
+  <xs:element name="availability">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:maxLength value="100" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <!-- instock -->
+  <xs:element name="instock">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="Y" />
+        <xs:enumeration value="N" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <!-- optional elements -->
+  <!-- vat -->
+  <xs:element name="vat" type="xs:decimal" />
+
+  <!-- additional image -->
+  <xs:element name="additional_image">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:maxLength value="400" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <!-- ean -->
+  <xs:element name="ean">
+    <xs:simpleType>
+      <xs:restriction base="xs:integer">
+        <xs:totalDigits value="13" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <!-- size -->
+  <xs:element name="size">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:maxLength value="100" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <!-- weight -->
+  <xs:element name="weight" type="xs:decimal" />
+
+  <!-- shipping -->
+  <xs:element name="shipping" type="xs:decimal" />
+
+  <!-- color -->
+  <xs:element name="color">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:maxLength value="50" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <!-- quantity -->
+  <xs:element name="quantity" type="xs:integer" />
+
+  <!-- basic structure -->
+  <xs:element name="storedata">
+    <xs:complexType>
+      <xs:sequence>
+        <!-- created at -->
+        <xs:element ref="created_at" minOccurs="0" />
+
+        <!-- products -->
+        <xs:element name="products">
+          <xs:complexType>
+            <xs:sequence>
+              <!-- product -->
+              <xs:element name="product" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:all>
+
+                    <!-- required fields -->
+                    <xs:element ref="uid"/>
+                    <xs:element ref="name"/>
+                    <xs:element ref="link"/>
+                    <xs:element ref="image"/>
+                    <xs:element ref="price"/>
+                    <xs:element ref="category"/>
+                    <xs:element ref="manufacturer" />
+                    <xs:element ref="mpn" />
+                    <xs:element ref="availability" />
+                    <xs:element ref="instock" />
+
+                    <!-- optional fields -->
+                    <xs:element ref="vat" minOccurs="0"/>
+
+                    <!-- description -->
+                    <xs:element name="description">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="value" type="xs:string" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+
+                    <xs:element ref="additional_image"  minOccurs="0"/>
+                    <xs:element ref="ean"  minOccurs="0"/>
+                    <xs:element ref="size"  minOccurs="0"/>
+                    <xs:element ref="weight" minOccurs="0"/>
+                    <xs:element ref="shipping"  minOccurs="0"/>
+                    <xs:element ref="color"  minOccurs="0"/>
+                    <xs:element ref="quantity" minOccurs="0"/>
+
+                    <!-- size variations -->
+                    <xs:element name="variations">
+                      <xs:complexType>
+                        <xs:sequence>
+
+                          <!-- size variation -->
+                          <xs:element name="variation" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+
+                                <!-- required fields -->
+                                <xs:element type="xs:string" name="variationid"/>
+                                <xs:element type="xs:string" name="availability"/>
+                                <xs:element type="xs:string" name="size"/>
+                                <xs:element type="xs:integer" name="quantity"/>
+
+                                <!-- optional fields -->
+                                <xs:element type="xs:string" name="link"/>
+                                <xs:element type="xs:string" name="manufacturersku"/>
+                                <xs:element type="xs:integer" name="ean"/>
+                                <xs:element type="xs:decimal" name="price_with_vat"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <!-- end size variation -->
+
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <!-- end size variations -->
 
                   </xs:all>
 
