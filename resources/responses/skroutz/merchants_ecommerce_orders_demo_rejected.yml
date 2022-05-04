@@ -87,6 +87,7 @@
     "dispatch_until": "2021-06-28T13:11:58+03:00",
     "express": false,
     "gift_wrap": false,
+    "fulfilled_by_skroutz": false,
     "rejection_info": {
       "reason": "Το κατάστημά μας είναι κλειστό για προσωπικούς λόγους",
       "actor": "merchant"

@@ -88,6 +88,7 @@
     "expires_at": "2021-06-25T13:11:41+03:00",
     "dispatch_until": "2021-06-28T13:11:41+03:00",
     "express": false,
-    "gift_wrap": false
+    "gift_wrap": false,
+    "fulfilled_by_skroutz": false
   }
 }'
