@@ -32,8 +32,10 @@ Name            | Type   | Required | Description
 `revenue`       | String | Yes      | The total revenue or grand total of the order. This value must include shipping and tax costs. Any additional payment cost should be excluded.
 `shipping`      | String | Yes      | The total shipping cost of the order. Any additional payment cost should be excluded.
 `tax`           | String | Yes      | The total tax of the order.
-`paid_by`       | String | No       | The payment method type of the order. The recommended payment method types are described in the table <%= link_to 'below', '', anchor: 'recommended-payment-method-types' %>.
-`paid_by_descr` | String | No       | The description of payment method of the order that explains the payment method type (free text).
+`paid_by`       | String | No<b><sup>1</sup></b> | The payment method type of the order. The recommended payment method types are described in the table <%= link_to 'below', '', anchor: 'recommended-payment-method-types' %>.
+`paid_by_descr` | String | No<b><sup>1</sup></b> | The description of payment method of the order that explains the payment method type (free text).
+
+<small><b><sup>1</sup></b> Required for shops that have products in Technology categories</small><br />
 
 > ##### Note
 > Make sure **not** to include any cash on delivery (COD) costs in either `revenue` or `shipping`.
@@ -55,6 +57,9 @@ Type               | Description (Examples)
 ##### Example
 
 <%= render_code_from_file 'analytics/order_beacon' %>
+
+> ##### Note
+> The `paid_by` & `paid_by_descr` fields are required for shops that have products in Technology categories.
 
 ### addItem
 The `addItem` command adds a new Ecommerce item object.
