@@ -240,6 +240,16 @@ A new order including an item with VAT exclusion based on “​Άρθρο 39α�
 
 <%= render_recording :merchants_ecommerce_orders_demo_invoice39a %>
 
+#### DEMO-FBS
+
+An already-accepted order without a courier voucher that will be fulfilled by Skroutz. Trying to accept it would return an error.
+
+<pre class="terminal">
+  GET /merchants/ecommerce/orders/DEMO-FBS
+</pre>
+
+<%= render_recording :merchants_ecommerce_orders_demo_fbs %>
+
 ## Order object attributes appendix
 
 > The order object returned retrieving a single order via the API is the same as
