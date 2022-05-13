@@ -99,6 +99,7 @@ Name                              | Type      | Description
 `line_items[_].extra_info`      | String  | Additional information for item, eg. color preference or prescription details for contact lenses (optional) [webhook example](../webhook/#example-9-with-extrainfo-in-lineitems)
 `line_items[_].rejection_reason` | String | Rejection reason (possible values: `limited_stock`, `no_stock`, `discontinuation`, `wrong_price`)
 `line_items[_].return_reason` | String | User return reason (possible values: `faulty`, `wrong_product`, `withdrawal`, `wrong_size`)
+`line_items[_].serial_numbers` | String | Serial numbers for item, concatenated by ',', e.g. `SN12345,SN56789`
 
 #### Line item size
 
