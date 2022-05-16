@@ -123,6 +123,7 @@ kinds of Webhook requests** for testing. In the following examples, `:code` shou
 - `DEMO-REJECTED`
 - `DEMO-INVOICE`
 - `DEMO-INVOICE39A`
+- `DEMO-FBS`
 
 An order creation or order update event should be received at the webhook url of the shop, depending on the request action.
 Sending any of the following requests should request in a successful response (`200 OK`):
@@ -212,7 +213,8 @@ Would send a Webhook request payload just like if the order was cancelled by the
         "total_price": 20.80,
         "price_includes_vat": true,
         "island_vat_discount_applied": false,
-        "ean": "1234567890123"
+        "ean": "1234567890123",
+        "serial_numbers": null
       },
       {
         "id": "l39vKqxqh2",
@@ -222,7 +224,8 @@ Would send a Webhook request payload just like if the order was cancelled by the
         "unit_price": 25,
         "total_price": 25,
         "price_includes_vat": true,
-        "island_vat_discount_applied": false
+        "island_vat_discount_applied": false,
+        "serial_numbers": null
       }
     ],
     "created_at": "2019-11-28T13:24:37+02:00",
@@ -230,6 +233,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
     "dispatch_until": "2019-12-04T18:00:00+02:00",
     "express": false,
     "gift_wrap": false,
+    "fulfilled_by_skroutz": false,
     "accept_options": {
       "number_of_parcels": [
         1
@@ -337,7 +341,8 @@ Would send a Webhook request payload just like if the order was cancelled by the
         "total_price": 35.98,
         "price_includes_vat": true,
         "island_vat_discount_applied": false,
-        "ean": "1234567890123"
+        "ean": "1234567890123",
+        "serial_numbers": null
       },
       {
         "id": "l39vKqzpll",
@@ -347,7 +352,8 @@ Would send a Webhook request payload just like if the order was cancelled by the
         "unit_price": 25,
         "total_price": 25,
         "price_includes_vat": true,
-        "island_vat_discount_applied": false
+        "island_vat_discount_applied": false,
+        "serial_numbers": null
       }
     ],
     "created_at": "2019-11-28T13:24:37+02:00",
@@ -355,6 +361,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
     "dispatch_until": "2019-12-04T18:00:00+02:00",
     "express": false,
     "gift_wrap": false,
+    "fulfilled_by_skroutz": false,
     "accept_options": {
       "number_of_parcels": [
         1
@@ -457,7 +464,8 @@ Would send a Webhook request payload just like if the order was cancelled by the
         "total_price": 20.80,
         "price_includes_vat": true,
         "island_vat_discount_applied": false,
-        "ean": "1234567890123"
+        "ean": "1234567890123",
+        "serial_numbers": null
       },
       {
         "id": "l39vKqzpll",
@@ -467,14 +475,16 @@ Would send a Webhook request payload just like if the order was cancelled by the
         "unit_price": 25,
         "total_price": 25,
         "price_includes_vat": true,
-        "island_vat_discount_applied": false
+        "island_vat_discount_applied": false,
+        "serial_numbers": null
       }
     ],
     "created_at": "2019-10-29T10:39:23+02:00",
     "expires_at": "2019-10-29T16:39:23+02:00",
     "dispatch_until": "2019-10-30T15:00:00+02:00"
     "express": false,
-    "gift_wrap": false
+    "gift_wrap": false,
+    "fulfilled_by_skroutz": false
   },
   "changes": {
     "state": {
@@ -511,6 +521,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
     "comments": "Παράδοση στο γραφείο",
     "express": false,
     "gift_wrap": false,
+    "fulfilled_by_skroutz": false,
     "courier": "ACS",
     "courier_voucher": null,
     "courier_tracking_codes": [],
@@ -524,7 +535,8 @@ Would send a Webhook request payload just like if the order was cancelled by the
         "total_price": 20.80,
         "price_includes_vat": true,
         "island_vat_discount_applied": false,
-        "ean": "1234567890123"
+        "ean": "1234567890123",
+        "serial_numbers": null
       },
       {
         "id": "l39vKqzpll",
@@ -534,7 +546,8 @@ Would send a Webhook request payload just like if the order was cancelled by the
         "unit_price": 25,
         "total_price": 25,
         "price_includes_vat": true,
-        "island_vat_discount_applied": false
+        "island_vat_discount_applied": false,
+        "serial_numbers": null
       }
     ],
     "created_at": "2019-10-29T10:39:23+02:00",
@@ -542,6 +555,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
     "dispatch_until": "2019-10-30T15:00:00+02:00",
     "express": false,
     "gift_wrap": false,
+    "fulfilled_by_skroutz": false,
     "accept_options": {
       "number_of_parcels": [
         1
@@ -654,7 +668,8 @@ Would send a Webhook request payload just like if the order was cancelled by the
         "total_price": 20.80,
         "price_includes_vat": true,
         "island_vat_discount_applied": false,
-        "ean": "1234567890123"
+        "ean": "1234567890123",
+        "serial_numbers": null
       },
       {
         "id": "l39vKqzpll",
@@ -664,14 +679,16 @@ Would send a Webhook request payload just like if the order was cancelled by the
         "unit_price": 25,
         "total_price": 25,
         "price_includes_vat": true,
-        "island_vat_discount_applied": false
+        "island_vat_discount_applied": false,
+        "serial_numbers": null
       }
     ],
     "created_at": "2019-10-29T10:39:23+02:00",
     "expires_at": "2019-10-29T16:39:23+02:00",
     "dispatch_until": "2019-10-30T15:00:00+02:00"
     "express": false,
-    "gift_wrap": false
+    "gift_wrap": false,
+    "fulfilled_by_skroutz": false
   },
   "changes": {
     "courier_voucher": {
@@ -726,6 +743,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
     "comments": "Παράδοση στο γραφείο",
     "express": false,
     "gift_wrap": false,
+    "fulfilled_by_skroutz": false,
     "courier": "ACS",
     "courier_voucher": null,
     "courier_tracking_codes": [],
@@ -739,7 +757,8 @@ Would send a Webhook request payload just like if the order was cancelled by the
         "total_price": 20.80,
         "price_includes_vat": true,
         "island_vat_discount_applied": false,
-        "ean": "1234567890123"
+        "ean": "1234567890123",
+        "serial_numbers": null
       },
       {
         "id": "l39vKqxqh2",
@@ -749,7 +768,8 @@ Would send a Webhook request payload just like if the order was cancelled by the
         "unit_price": 25,
         "total_price": 25,
         "price_includes_vat": true,
-        "island_vat_discount_applied": false
+        "island_vat_discount_applied": false,
+        "serial_numbers": null
       }
     ],
     "created_at": "2019-11-28T13:24:37+02:00",
@@ -757,6 +777,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
     "dispatch_until": "2019-12-04T18:00:00+02:00",
     "express": false,
     "gift_wrap": false,
+    "fulfilled_by_skroutz": false,
     "accept_options": {
       "number_of_parcels": [
         1
@@ -878,7 +899,8 @@ Would send a Webhook request payload just like if the order was cancelled by the
         "total_price": 200,
         "price_includes_vat": false,
         "island_vat_discount_applied": false,
-        "ean": "1234567890123"
+        "ean": "1234567890123",
+        "serial_numbers": null
       },
       {
         "id": "l39vKqxqh2",
@@ -888,7 +910,8 @@ Would send a Webhook request payload just like if the order was cancelled by the
         "unit_price": 25,
         "total_price": 25,
         "price_includes_vat": true,
-        "island_vat_discount_applied": false
+        "island_vat_discount_applied": false,
+        "serial_numbers": null
       }
     ],
     "created_at": "2019-11-28T13:24:37+02:00",
@@ -896,6 +919,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
     "dispatch_until": "2019-12-04T18:00:00+02:00",
     "express": false,
     "gift_wrap": false,
+    "fulfilled_by_skroutz": false,
     "accept_options": {
       "number_of_parcels": [
         1
@@ -1012,7 +1036,8 @@ Would send a Webhook request payload just like if the order was cancelled by the
         "total_price": 200,
         "price_includes_vat": true,
         "island_vat_discount_applied": true,
-        "ean": "1234567890123"
+        "ean": "1234567890123",
+        "serial_numbers": null
       },
       {
         "id": "l39vKqxqh2",
@@ -1022,7 +1047,8 @@ Would send a Webhook request payload just like if the order was cancelled by the
         "unit_price": 25,
         "total_price": 25,
         "price_includes_vat": true,
-        "island_vat_discount_applied": false
+        "island_vat_discount_applied": false,
+        "serial_numbers": null
       }
     ],
     "created_at": "2019-11-28T13:24:37+02:00",
@@ -1030,6 +1056,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
     "dispatch_until": "2019-12-04T18:00:00+02:00",
     "express": false,
     "gift_wrap": false,
+    "fulfilled_by_skroutz": false,
     "accept_options": {
       "number_of_parcels": [
         1
@@ -1132,7 +1159,8 @@ Would send a Webhook request payload just like if the order was cancelled by the
         "unit_price": 10.40,
         "total_price": 20.80,
         "price_includes_vat": true,
-        "island_vat_discount_applied": false
+        "island_vat_discount_applied": false,
+        "serial_numbers": null
       },
       {
         "id": "l39vKqxqh2",
@@ -1142,7 +1170,8 @@ Would send a Webhook request payload just like if the order was cancelled by the
         "unit_price": 25,
         "total_price": 25,
         "price_includes_vat": true,
-        "island_vat_discount_applied": false
+        "island_vat_discount_applied": false,
+        "serial_numbers": null
       }
     ],
     "created_at": "2019-11-28T13:24:37+02:00",
@@ -1150,6 +1179,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
     "dispatch_until": "2019-12-04T18:00:00+02:00",
     "express": false,
     "gift_wrap": false,
+    "fulfilled_by_skroutz": false,
     "accept_options": {
       "number_of_parcels": [
         1
@@ -1252,7 +1282,8 @@ Would send a Webhook request payload just like if the order was cancelled by the
         "total_price": 51,
         "price_includes_vat": true,
         "island_vat_discount_applied": false,
-        "extra_info": "Χρώμα: Πράσινο\nΒαθμοί SPH: -6.50"
+        "extra_info": "Χρώμα: Πράσινο\nΒαθμοί SPH: -6.50",
+        "serial_numbers": null
       }
     ],
     "created_at": "2019-11-28T13:24:37+02:00",
@@ -1260,6 +1291,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
     "dispatch_until": "2019-12-04T18:00:00+02:00",
     "express": false,
     "gift_wrap": false,
+    "fulfilled_by_skroutz": false,
     "accept_options": {
       "number_of_parcels": [
         1

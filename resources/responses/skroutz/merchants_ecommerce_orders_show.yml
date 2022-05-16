@@ -75,7 +75,8 @@
         "total_price": 200,
         "price_includes_vat": false,
         "island_vat_discount_applied": false,
-        "ean": "1234567890123"
+        "ean": "1234567890123",
+        "serial_numbers": null
       },
       {
         "id": "l39vKqxqh2",
@@ -85,14 +86,16 @@
         "unit_price": 25,
         "total_price": 25,
         "price_includes_vat": true,
-        "island_vat_discount_applied": false
+        "island_vat_discount_applied": false,
+        "serial_numbers": null
       }
     ],
     "created_at": "2019-11-28T13:24:37+02:00",
     "expires_at": "2019-12-04T10:24:00+02:00",
     "dispatch_until": "2019-12-04T18:00:00+02:00",
     "express": false,
-    "gift_wrap": false
+    "gift_wrap": false,
+    "fulfilled_by_skroutz": false,
     "accept_options": {
       "number_of_parcels": [
         1
