@@ -113,6 +113,7 @@
     "express": false,
     "gift_wrap": false,
     "fulfilled_by_skroutz": false,
+    "fbs_delivery_note": null,
     "accept_options": {
       "number_of_parcels": [
         1

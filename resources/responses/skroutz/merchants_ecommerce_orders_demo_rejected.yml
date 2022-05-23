@@ -91,6 +91,7 @@
     "express": false,
     "gift_wrap": false,
     "fulfilled_by_skroutz": false,
+    "fbs_delivery_note": null,
     "rejection_info": {
       "reason": "Το κατάστημά μας είναι κλειστό για προσωπικούς λόγους",
       "actor": "merchant"
