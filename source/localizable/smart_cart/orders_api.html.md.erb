@@ -250,6 +250,16 @@ An already-accepted order without a courier voucher that will be fulfilled by Sk
 
 <%= render_recording :merchants_ecommerce_orders_demo_fbs %>
 
+#### DEMO-FBS-DISPATCHED
+
+A dispatched order without a courier voucher that will be fulfilled by Skroutz. Delivery note included.
+
+<pre class="terminal">
+  GET /merchants/ecommerce/orders/DEMO-FBS-DISPATCHED
+</pre>
+
+<%= render_recording :merchants_ecommerce_orders_demo_fbs_dispatched %>
+
 ## Order object attributes appendix
 
 > The order object returned retrieving a single order via the API is the same as
