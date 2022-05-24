@@ -21,6 +21,9 @@ Name         | Type   | Value | Description
 `accept_options` | Object | | [Accept options](#accept-options) (available for orders with state `"open"`)
 `reject_options` | Object | | [Reject options](#reject-options) (available for orders with state `"open"`)
 `fulfilled_by_skroutz` | Boolean | | Whether the order is fulfilled by skroutz
+`pickup_window` | Object | | Selected [Pickup window](#pickup-window)
+`pickup_address` | String | | Pickup location address
+`number_of_parcels` | Integer | | Number of parcels
 
 #### Customer details
 
@@ -82,6 +85,13 @@ Name                                                       | Type    | Descripti
 `rejection_info.reason`                                    | String  | The rejection reason text
 `rejection_info.actor`                                     | String  | The actor who performed the rejection. Possible values: `skroutz`, `merchant`
 
+#### Pickup window
+
+Name                                                       | Type                                                 | Description
+---------------------------------------------------------- | ---------------------------------------------------- | ------------------------------------------------
+`pickup_window.from`                                       | Date String in format<br> `YYYY-MM-DDTHH:MM:SS+HH:M` | Pickup window starting date/time
+`pickup_window.to`                                         | Date String in format<br> `YYYY-MM-DDTHH:MM:SS+HH:M` | Pickup window ending date/time
+ 
 #### Order line items array
 
 Name                              | Type      | Description

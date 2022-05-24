@@ -110,6 +110,9 @@ Name           | Type   | Value | Description
 `dispatch_until` | Object | `{ "old": "2019-11-03T12:00:00+02:00", "new": "2019-11-04T18:00:00+02:00" }` | The order's current time until dispatching changes (optional)
 `courier_voucher` | Object | `{ "old": null, "new": "https://b.scdn.gr/path-to/voucher.pdf" }` | The order's shipment courier voucher URL (optional)
 `courier_tracking_codes` | Object | `{ "old": [], "new": ["123456789"] }` | The order's shipment courier tracking codes (optional)
+`pickup_window` | Object | `{ "old": null, "new: { from: "2019-11-02T15:00:00+02:00", "to": "2019-11-02T16:00:00+02:00" } }` | The order's shipment pickup window (optional). It is sent when the order is accepted.
+`number_of_parcels` | Integer | `{ "old": null, "new": 2 }` | The order's shipment number of parcels (optional). It is sent when the order is accepted.
+`pickup_address` | String | `{ "old": null, "new": "Πανεπιστημίου 2, Τ.Κ. 12345, Αθήνα, Αττική" }` | The order's pickup address (optional).
 
 > The order object included in webhook payload is the sames as the one when
 > retrieving a single order via the [orders API](/smart_cart/orders_api).
@@ -691,7 +694,10 @@ Would send a Webhook request payload just like if the order was cancelled by the
     "dispatch_until": "2019-10-30T15:00:00+02:00"
     "express": false,
     "gift_wrap": false,
-    "fulfilled_by_skroutz": false
+    "fulfilled_by_skroutz": false,
+    "pickup_window": { from: "2019-11-02T15:00:00+02:00", "to": "2019-11-02T16:00:00+02:00" },
+    "number_of_parcels": 1,
+    "pickup_address": "Πανεπιστημίου 2, Τ.Κ. 12345, Αθήνα, Αττική"
   },
   "changes": {
     "courier_voucher": {
