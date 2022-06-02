@@ -71,6 +71,7 @@ only the following URLs:
 
 Make sure that the <%= settings.site_name.capitalize %>Bot IPs have always access
 to the aforementioned URLs, without any rate limit.
+The xml link's domain does not matter.
 
 > ##### Note
 > It might be necessary to whitelist <%= settings.site_name.capitalize %>Bot’s
@@ -261,6 +262,8 @@ collection of products page.
 <url>https://www.mydomain.com/products/product.php?itemid=1&amp;amp;somevar=3</url>
 ~~~
 
+> In case you do not have an online shop, you should put dummy
+  links in valid URL format.
 
 #### Image Link
 
@@ -294,6 +297,8 @@ the image will be updated normally.
 <url><![CDATA[https://www.mydomain.com/photos/b&amp;b.jpg]]></url>
 ~~~
 
+> Image links must be publicly accessible, regardless of the domain in which
+  they are hosted.
 
 #### Additional Image Link
 
