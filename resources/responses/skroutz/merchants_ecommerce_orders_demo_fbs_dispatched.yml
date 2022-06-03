@@ -1,6 +1,6 @@
 ---
 :request:
-  :url: https://api.skroutz.gr/merchants/ecommerce/orders/DEMO-OPEN
+  :url: https://api.skroutz.gr/merchants/ecommerce/orders/DEMO-FBS-DISPATCHED
   :headers:
     :accept: application/vnd.skroutz+json; version=3.0
     :authorization: Bearer n4_92SD9EAEkwDfgiYZHiWwSdJlmA5q-_H3FQ6iYZ3jcMynhbpLEe3QvZxrvO0D-8ZYYD2n_wOBexdn9B0NYGQ==
@@ -26,8 +26,8 @@
     X-Cached: skroutz miss(0)
   :body: '{
   "order": {
-    "code": "DEMO-OPEN",
-    "state": "open",
+    "code": "DEMO-FBS-DISPATCHED",
+    "state": "dispatched",
     "customer": {
       "id": "user1234",
       "first_name": "John",
@@ -45,7 +45,9 @@
     "comments": "Παράδοση στο γραφείο",
     "courier": "CourierCenter",
     "courier_voucher": null,
-    "courier_tracking_codes": [],
+    "courier_tracking_codes": [
+      "123456789"
+    ],
     "line_items": [
       {
         "id": "Y5jVmgKmeX",
@@ -71,7 +73,7 @@
         "unit_price": 100,
         "total_price": 200,
         "price_includes_vat": true,
-        "serial_numbers": null
+        "serial_numbers": "SN12345,SN56789"
       },
       {
         "id": "ZvEKMxbxr1",
@@ -85,73 +87,12 @@
         "serial_numbers": null
       }
     ],
-    "created_at": "2021-06-24T13:08:30+03:00",
-    "expires_at": "2021-06-25T13:08:30+03:00",
-    "dispatch_until": "2021-06-28T13:08:30+03:00",
+    "created_at": "2021-06-24T13:11:41+03:00",
+    "expires_at": "2021-06-25T13:11:41+03:00",
+    "dispatch_until": "2021-06-28T13:11:41+03:00",
     "express": false,
     "gift_wrap": false,
-    "fulfilled_by_skroutz": false,
-    "fbs_delivery_note": null,
-    "accept_options": {
-      "number_of_parcels": [
-        1
-      ],
-      "pickup_location": [
-        {
-          "id": "Y5jVmgKmeX",
-          "label": "Πανεπιστημίου 2, Τ.Κ. 12345, Αθήνα, Αττική"
-        },
-        {
-          "id": "3XlV8ebjxm",
-          "label": "Σταδίου 1, Τ.Κ. 12345, Αθήνα, Αττική"
-        }
-      ],
-      "pickup_window": [
-        {
-          "id": 1,
-          "label": "15:00 - 18:00, Πέμ 24/06/21"
-        },
-        {
-          "id": 2,
-          "label": "10:00 - 12:00, Παρ 25/06/21"
-        },
-        {
-          "id": 3,
-          "label": "12:00 - 15:00, Παρ 25/06/21"
-        },
-        {
-          "id": 4,
-          "label": "15:00 - 18:00, Παρ 25/06/21"
-        },
-        {
-          "id": 5,
-          "label": "10:00 - 12:00, Δευ 28/06/21"
-        }
-      ]
-    },
-    "reject_options": {
-      "line_item_rejection_reasons": [
-        {
-          "id": 1,
-          "label": "Εκτός αποθέματος στο κατάστημα ή στον προμηθευτή",
-          "requires_available_quantity": false
-        },
-        {
-          "id": 2,
-          "label": "Λάθος καταχωρημένη τιμή(ες)",
-          "requires_available_quantity": false
-        },
-        {
-          "id": 4,
-          "label": "Περιορισμένα τεμάχια",
-          "requires_available_quantity": true
-        },
-        {
-          "id": 5,
-          "label": "To προϊόν καταργήθηκε",
-          "requires_available_quantity": false
-        }
-      ]
-    }
+    "fulfilled_by_skroutz": true,
+    "fbs_delivery_note: "ΤΛΑΠΟ0454022"
   }
 }'

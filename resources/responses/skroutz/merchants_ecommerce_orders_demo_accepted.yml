@@ -92,6 +92,7 @@
     "dispatch_until": "2021-06-28T13:11:41+03:00",
     "express": false,
     "gift_wrap": false,
-    "fulfilled_by_skroutz": false
+    "fulfilled_by_skroutz": false,
+    "fbs_delivery_note": null
   }
 }'

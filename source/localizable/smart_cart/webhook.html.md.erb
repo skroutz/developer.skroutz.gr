@@ -110,6 +110,7 @@ Name           | Type   | Value | Description
 `dispatch_until` | Object | `{ "old": "2019-11-03T12:00:00+02:00", "new": "2019-11-04T18:00:00+02:00" }` | The order's current time until dispatching changes (optional)
 `courier_voucher` | Object | `{ "old": null, "new": "https://b.scdn.gr/path-to/voucher.pdf" }` | The order's shipment courier voucher URL (optional)
 `courier_tracking_codes` | Object | `{ "old": [], "new": ["123456789"] }` | The order's shipment courier tracking codes (optional)
+`fbs_delivery_note` | Object | `{ "old": null, "new": "ΤΛΑΠΟ0454022" }` | The order's fulfilled by Skroutz warehouse delivery note (optional)
 `pickup_window` | Object | `{ "old": null, "new: { from: "2019-11-02T15:00:00+02:00", "to": "2019-11-02T16:00:00+02:00" } }` | The order's shipment pickup window (optional). It is sent when the order is accepted.
 `number_of_parcels` | Integer | `{ "old": null, "new": 2 }` | The order's shipment number of parcels (optional). It is sent when the order is accepted.
 `pickup_address` | String | `{ "old": null, "new": "Πανεπιστημίου 2, Τ.Κ. 12345, Αθήνα, Αττική" }` | The order's pickup address (optional).
@@ -130,6 +131,7 @@ kinds of Webhook requests** for testing. In the following examples, `:code` shou
 - `DEMO-INVOICE`
 - `DEMO-INVOICE39A`
 - `DEMO-FBS`
+- `DEMO-FBS-DISPATCHED`
 
 An order creation or order update event should be received at the webhook url of the shop, depending on the request action.
 Sending any of the following requests should request in a successful response (`200 OK`):
@@ -240,6 +242,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
     "express": false,
     "gift_wrap": false,
     "fulfilled_by_skroutz": false,
+    "fbs_delivery_note": null,
     "accept_options": {
       "number_of_parcels": [
         1
@@ -368,6 +371,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
     "express": false,
     "gift_wrap": false,
     "fulfilled_by_skroutz": false,
+    "fbs_delivery_note": null
     "accept_options": {
       "number_of_parcels": [
         1
@@ -490,7 +494,8 @@ Would send a Webhook request payload just like if the order was cancelled by the
     "dispatch_until": "2019-10-30T15:00:00+02:00"
     "express": false,
     "gift_wrap": false,
-    "fulfilled_by_skroutz": false
+    "fulfilled_by_skroutz": false,
+    "fbs_delivery_note": null
   },
   "changes": {
     "state": {
@@ -528,6 +533,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
     "express": false,
     "gift_wrap": false,
     "fulfilled_by_skroutz": false,
+    "fbs_delivery_note": null,
     "courier": "ACS",
     "courier_voucher": null,
     "courier_tracking_codes": [],
@@ -562,6 +568,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
     "express": false,
     "gift_wrap": false,
     "fulfilled_by_skroutz": false,
+    "fbs_delivery_note": null,
     "accept_options": {
       "number_of_parcels": [
         1
@@ -695,6 +702,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
     "express": false,
     "gift_wrap": false,
     "fulfilled_by_skroutz": false,
+    "fbs_delivery_note": null
     "pickup_window": { from: "2019-11-02T15:00:00+02:00", "to": "2019-11-02T16:00:00+02:00" },
     "number_of_parcels": 1,
     "pickup_address": "Πανεπιστημίου 2, Τ.Κ. 12345, Αθήνα, Αττική"
@@ -753,6 +761,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
     "express": false,
     "gift_wrap": false,
     "fulfilled_by_skroutz": false,
+    "fbs_delivery_note": null,
     "courier": "ACS",
     "courier_voucher": null,
     "courier_tracking_codes": [],
@@ -787,6 +796,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
     "express": false,
     "gift_wrap": false,
     "fulfilled_by_skroutz": false,
+    "fbs_delivery_note": null,
     "accept_options": {
       "number_of_parcels": [
         1
@@ -929,6 +939,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
     "express": false,
     "gift_wrap": false,
     "fulfilled_by_skroutz": false,
+    "fbs_delivery_note": null,
     "accept_options": {
       "number_of_parcels": [
         1
@@ -1066,6 +1077,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
     "express": false,
     "gift_wrap": false,
     "fulfilled_by_skroutz": false,
+    "fbs_delivery_note": null,
     "accept_options": {
       "number_of_parcels": [
         1
@@ -1189,6 +1201,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
     "express": false,
     "gift_wrap": false,
     "fulfilled_by_skroutz": false,
+    "fbs_delivery_note": null,
     "accept_options": {
       "number_of_parcels": [
         1
@@ -1301,6 +1314,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
     "express": false,
     "gift_wrap": false,
     "fulfilled_by_skroutz": false,
+    "fbs_delivery_note": null,
     "accept_options": {
       "number_of_parcels": [
         1
