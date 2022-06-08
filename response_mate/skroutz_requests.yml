@@ -2,8 +2,6 @@ default_headers: &default_headers
   accept: 'application/vnd.skroutz+json; version=3.2'
   authorization: "Bearer {{oauth_token}}"
 
-name: apiv3
-
 requests:
   -
     key: categories_index
