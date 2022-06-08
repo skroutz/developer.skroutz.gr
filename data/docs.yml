@@ -1,25 +1,3 @@
-apiv3:
-  base: '/api/v3/'
-  featured: true
-  request_form: true
-  icon: 'fa-code'
-  pages:
-    - { title: 'overview', url: '/api/v3/' }
-    - { title: 'libraries' }
-    - { title: 'changelog' }
-    - { title: 'category' }
-    - { title: 'sku' }
-    - { title: 'book', skip_flavors: ['alve', 'scrooge'] }
-    - { title: 'product' }
-    - { title: 'shop' }
-    - { title: 'manufacturer' }
-    - { title: 'search' }
-    - { title: 'flag' }
-    - { title: 'filter_groups' }
-    - { title: 'user' }
-    - { title: 'favorites' }
-    - { title: 'notifications' }
-
 feedspec:
   base: '/feedspec/'
   featured: true
@@ -31,15 +9,6 @@ csvspec:
   icon: 'fa-file-text-o'
   flavors:
     - scrooge
-
-authorization:
-  base: '/authorization/'
-  featured: false
-  icon: 'fa-lock'
-  pages:
-    - { title: 'overview', url: '/authorization/' }
-    - { title: 'permissions' }
-    - { title: 'flows' }
 
 analytics:
   base: '/analytics/'

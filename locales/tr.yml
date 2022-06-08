@@ -1,7 +1,6 @@
 tr:
   titles:
     index: "%{flavor} Documentation"
-    apiv3: 'API v3.2'
     feedspec: 'XML Feed'
     authorization: 'Authorization'
     analytics: 'Analytics'
@@ -17,30 +16,8 @@ tr:
   docs:
     index:
       view_doc: 'View Documentation'
-    apiv3:
-      short_description: 'The official %{flavor} API. Access the huge %{flavor} database and create beautiful apps.'
-      overview: 'Overview'
-      libraries: 'Libraries'
-      changelog: 'Changelog'
-      category: 'Category'
-      sku: 'SKU'
-      product: 'Product'
-      shop: 'Shop'
-      manufacturer: 'Manufacturer'
-      search: 'Search'
-      flag: 'Flag'
-      filter_groups: 'Filter Groups'
-      user: 'User Profile'
-      favorites: 'User Favorites'
-      notifications: 'User Notifications'
-      troubleshooting: 'Troubleshooting'
     feedspec:
       short_description: 'Integrate your eshop with %{flavor} and reach millions of consumers.'
-    authorization:
-      short_description: 'Learn how to ask for authorization and access user data using OAuth 2.0.'
-      overview: 'Overview'
-      permissions: 'Permissions'
-      flows: 'Flows'
     analytics:
       short_description: 'Integrate %{flavor} Analytics and find out powerful insights about your eshop.'
       overview: 'Overview'

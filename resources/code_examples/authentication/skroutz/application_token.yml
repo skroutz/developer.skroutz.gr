@@ -1,7 +1,0 @@
-:language: bash
-:code: |
-  curl -X POST https://www.skroutz.gr/oauth2/token\?\
-    client_id\=your_client_id\&\
-    client_secret\=your_client_secret\&\
-    grant_type\=client_credentials\&\
-    scope\=public

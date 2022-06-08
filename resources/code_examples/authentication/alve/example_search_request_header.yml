@@ -1,5 +1,0 @@
-:language: bash
-:code: |
-  curl -XGET https://api.alve.com/api/search\?q\=apple \
-    -H 'Accept: application/vnd.alve+json; version=3' \
-    -H 'Authorization: Bearer your_access_token_here'

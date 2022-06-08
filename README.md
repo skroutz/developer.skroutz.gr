@@ -26,16 +26,6 @@ bundle exec cap "flavor" deploy
 # "flavor" is one of skroutz, alve, scrooge
 ```
 
-## API Recordings
-
-Consult [response_mate](https://github.com/Zorbash/response_mate) for
-help with each command.
-
-We use a manifest that describes requests we need to have recorded.
-This file is not checked in git so you have to ask for it, shoot a
-mail at [api@skroutz.gr](mailto:api@skroutz.gr) to get it.
-
-
 ## License
 
 ![cc-by-4.0](https://licensebuttons.net/l/by/3.0/88x31.png)

@@ -34,7 +34,7 @@ page in merchant's panel (Merchants > Υπηρεσίες > Έξυπνο Καλά
 Pass in a valid **API token** in the `Authorization` header, prefixed with `Bearer `
 as in the following curl example.
 
-A specific `Accept` header is also required. For more information on API requests check the [API overview](/api/v3/).
+A specific `Accept` header is also required.
 
 <pre class="terminal">
 curl -X GET https://<%= settings.api_domain %>/merchants/ecommerce/orders/191128-1234567 \
@@ -180,8 +180,6 @@ also get a `422` HTTP status code (Unprocessable Entity), with the following bod
       }
   ]
 }', 'javascript' %>
-
-[More on API error handling](/api/v3/#error-handling)
 
 ## Test requests (sandbox)
 
