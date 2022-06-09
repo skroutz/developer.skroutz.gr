@@ -32,7 +32,7 @@ analytics:
 
 smart_cart:
   base: '/smart_cart/'
-  featured: false
+  featured: true
   icon: 'fa-shopping-cart'
   pages:
     - { title: 'overview', url: '/smart_cart/' }
@@ -43,7 +43,7 @@ smart_cart:
 
 cps_orders_api:
   base: '/cps_orders_api/'
-  featured: false
+  featured: true
   icon: 'fa-shopping-bag'
   flavors:
     - skroutz
