@@ -1,0 +1,120 @@
+---
+parent: smart_cart
+title: fbs_api
+---
+
+<%= partial 'partials/page_locales' %>
+
+# Fulfilled by Skroutz API <%= edit_link %>
+
+Fulfilled by Skroutz API allows Skroutz Merchants to retrieve information about
+the purchase orders and related products that are stored in Skroutz warehouses.
+
+<%= partial 'partials/toc' %>
+
+## Setup
+
+### Obtaining an API token
+
+In order to be able to use the API, you need to generate an **API token** from within Smart Cart settings
+page in merchant's panel (Merchants > Υπηρεσίες > Έξυπνο Καλάθι).
+
+> <i class="fa fa-exclamation-triangle"></i>
+> There can only be one active **API key** per shop at a certain time.
+> Creating a new API key will expire any previous one.
+
+### Authorization
+
+Pass in a valid **API token** in the `Authorization` header, prefixed with `Bearer `
+as in the following curl example.
+
+A specific `Accept` header is also required.
+
+<pre class="terminal">
+curl -X GET https://<%= settings.api_domain %>/merchants/ecommerce/fbs/purchase_orders \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Authorization: Bearer your_access_token_here'
+</pre>
+
+## Endpoints
+
+### Products
+
+To retrieve a shop's Fulfilled by Skroutz purchase orders.
+
+<pre class="terminal">
+  GET /merchants/ecommerce/fbs/products
+</pre>
+
+#### Example
+<pre class="terminal">
+curl -X GET https://<%= settings.api_domain %>/merchants/ecommerce/fbs/products \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Authorization: Bearer your_access_token_here'
+</pre>
+
+<%= render_recording :merchants_fbs_products_index %>
+
+### Purchase orders
+
+To retrieve a shop's Fulfilled by Skroutz purchase orders.
+
+<pre class="terminal">
+  GET /merchants/ecommerce/fbs/purchase_orders
+</pre>
+
+#### Example
+<pre class="terminal">
+curl -X GET https://<%= settings.api_domain %>/merchants/ecommerce/fbs/purchase_orders \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Authorization: Bearer your_access_token_here'
+</pre>
+
+<%= render_recording :merchants_fbs_purchase_orders_index %>
+
+### Purchase order line items
+
+To retrieve a Fulfilled by Skroutz purchase order line items
+
+<pre class="terminal">
+  GET /merchants/ecommerce/fbs/purchase_orders/:code/line_items
+</pre>
+
+#### Example
+<pre class="terminal">
+curl -X GET https://<%= settings.api_domain %>/merchants/ecommerce/fbs/purchase_orders/220623-4078-5820/line_items \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Authorization: Bearer your_access_token_here'
+</pre>
+
+<%= render_recording :merchants_fbs_purchase_orders_show %>
+
+## Error handling
+
+In case of errors, the response will have a representative HTTP status code
+in the `4xx` or `5xx` range. The body would contain an array of `errors`.
+
+For example, if you try to view a purchase order that belongs to another shop, you will
+get a `401` HTTP status code (Unauthorized), with the following body:
+
+<%= render_code '{
+  "errors": [
+      {
+          "code": "purchase_order_error",
+          "messages": [
+              "Invalid purchase order"
+          ]
+      }
+  ]
+}', 'javascript' %>
+
+If there is no purchase order with the provided code, you will
+get a `404` HTTP status code (Not Found), with the same body as above.
+
+## Purchase Order object attributes appendix
+
+<%= partial 'localizable/smart_cart/fbs_purchase_order_object' %>
+
+## Product object attributes appendix
+
+<%= partial 'localizable/smart_cart/fbs_product' %>
