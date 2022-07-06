@@ -40,6 +40,7 @@ en:
       short_description: 'Services for merchants integrations with %{flavor} Smart Cart orders.'
       overview: 'Overview'
       orders_api: 'Orders API'
+      fbs_api: 'Fulfilled by Skroutz API'
       webhook: 'Webhook'
     cps_orders_api:
       short_description: 'The API to control your CPS orders in %{flavor}.'
