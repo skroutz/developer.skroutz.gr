@@ -1,0 +1,19 @@
+#### Purchase Order object
+
+Name         | Type   | Description
+------------ | ------ | -----------------
+`code`       | String | Purchase Order code
+`received_at`| Date String in format<br> `YYYY-MM-DDTHH:MM:SS+HH:M` | Date the purchase order was received by Skroutz warehouses
+`created_at` | Date String in format<br> `YYYY-MM-DDTHH:MM:SS+HH:M` | Purchase Order creation date
+`expected_date` | Date String in format<br> `YYYY-MM-DD` | Date the purchase order is expected to be received by Skroutz warehouses
+
+
+#### Purchase Order Line Item Object
+
+Name                              | Type   | Description
+--------------------------------- | ------ | --------------------------------------------
+`product_id`                      | String | Unique product id
+`shop_uid`                        | String | Item id in shop
+`active`                          | Boolean| Product is available for purchase from Skroutz warehouses
+`expected_quantity`               | Integer| The quantity expected to be received by Skroutz warehouses
+`actual_quantity`                 | Integer| The quantity received by Skroutz warehouses
