@@ -629,8 +629,8 @@ Name                                                   | Type    | Length       
 [Variation Availability](#variation-availability)      | String  | <span class="mono">100</span>                        | Yes      |  No                     | `In 2 days`
 [Variation Size](#variation-size)                      | String  | <span class="mono">64</span>                         | Yes      |  No                     | `M`
 [Variation Quantity](#variation-quantity)              | Integer | <span class="mono">8</span>                          | Yes      |  No                     | `10`
+[Variation Price](#variation-price)                    | Decimal | <span class="mono">- (up to 2 decimal places)</span> | No       |  No                     | `23.22`
 [Variation Link](#variation-link)                      | String  | <span class="mono">2000</span>                       | No       |  Yes                    | `https://www.someurl.co.uk/products/322.html`
-[Variation Price](#variation-price)                    | Decimal | <span class="mono">- (up to 2 decimal places)</span> | No       |  Yes                    | `23.22`
 [Variation MPN](#variation-mpn)                        | String  | <span class="mono">80</span>                         | No       |  Yes                    | `GF322234`
 [Variation EAN / Barcode](#variation-ean--barcode)     | Integer | <span class="mono">80</span>                         | No       |  Yes                    | `9780471117094`
 
@@ -747,6 +747,23 @@ The quantity is the amount of items available for purchase via Skroutz.
 ~~~
 
 
+#### Variation Price
+
+It's the size variation's retail price **including V.A.T**.
+
+> The price of the size variation must apply to everyone without any special conditions
+(e.g. offers, discounts pending on location etc).
+
+> The price field accepts up to 2 decimal places.
+
+##### Example
+
+~~~ xml
+<price>23.22</price>
+<pricevat>23.22</pricevat>
+~~~
+
+
 #### Variation Link
 
 The URL that links to your shop's page for the specified size variation. It must be a
@@ -764,23 +781,6 @@ collection of products page.
 <url>https://www.mydomain.com/products/product.php?itemid=1</url>
 <url><![CDATA[https://www.mydomain.com/products/product.php?itemid=1&amp;somevar=3]]></url>
 <url>https://www.mydomain.com/products/product.php?itemid=1&amp;amp;somevar=3</url>
-~~~
-
-
-#### Variation Price
-
-It's the size variation's retail price **including V.A.T**.
-
-> The price of the size variation must apply to everyone without any special conditions
-(e.g. offers, discounts pending on location etc).
-
-> The price field accepts up to 2 decimal places.
-
-##### Example
-
-~~~ xml
-<price>23.22</price>
-<pricevat>23.22</pricevat>
 ~~~
 
 
