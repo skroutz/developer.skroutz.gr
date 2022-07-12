@@ -668,8 +668,8 @@ size variations (availability, size, quantity, link, price, mpn και ean).**
 [Variation Availability](#variation-availability)      | String  | <span class="mono">100</span>                        | Ναι         | Όχι                            | `Σε 2 μέρες`
 [Variation Size](#variation-size)                      | String  | <span class="mono">64</span>                         | Ναι         | Όχι                            | `M`
 [Variation Quantity](#variation-quantity)              | Integer | <span class="mono">8</span>                          | Ναι         | Όχι                            | `10`
+[Variation Price](#variation-price)                    | Decimal | <span class="mono">- (up to 2 decimal places)</span> | Όχι         | Όχι                            | `23.22`
 [Variation Link](#variation-link)                      | String  | <span class="mono">2000</span>                       | Όχι         | Ναι                            | `https://www.someurl.co.uk/products/322.html`
-[Variation Price](#variation-price)                    | Decimal | <span class="mono">- (up to 2 decimal places)</span> | Όχι         | Ναι                            | `23.22`
 [Variation MPN](#variation-mpn)                        | String  | <span class="mono">80</span>                         | Όχι         | Ναι                            | `GF322234`
 [Variation EAN / Barcode](#variation-ean--barcode)     | Integer | <span class="mono">80</span>                         | Όχι         | Ναι                            | `9780471117094`
 
@@ -796,6 +796,23 @@ To <%= settings.site_name.capitalize %> χρησιμοποιεί ένα προκ
 ~~~
 
 
+#### Variation Price
+
+Είναι η τιμή του size variation **με Φ.Π.Α.**.
+
+> Η τιμή θα πρέπει να είναι ίδια για όλους και να μην έχει προϋποθέσεις
+εφαρμογής.
+
+> Το πεδίο τιμής μπορεί να δεχτεί μέχρι 2 δεκαδικά ψηφία.
+
+##### Παράδειγμα
+
+~~~ xml
+<price>23.22</price>
+<pricevat>23.22</pricevat>
+~~~
+
+
 #### Variation Link
 
 Είναι ο σύνδεσμος που οδηγεί στη σελίδα του καταστήματός σας για το συγκεκριμένο
@@ -813,23 +830,6 @@ size variation. Θα πρέπει να είναι έγκυρος σύνδεσμ�
 <url>https://www.mydomain.com/products/product.php?itemid=1</url>
 <url><![CDATA[https://www.mydomain.com/products/product.php?itemid=1&amp;somevar=3]]></url>
 <url>https://www.mydomain.com/products/product.php?itemid=1&amp;amp;somevar=3</url>
-~~~
-
-
-#### Variation Price
-
-Είναι η τιμή του size variation **με Φ.Π.Α.**.
-
-> Η τιμή θα πρέπει να είναι ίδια για όλους και να μην έχει προϋποθέσεις
-εφαρμογής.
-
-> Το πεδίο τιμής μπορεί να δεχτεί μέχρι 2 δεκαδικά ψηφία.
-
-##### Παράδειγμα
-
-~~~ xml
-<price>23.22</price>
-<pricevat>23.22</pricevat>
 ~~~
 
 
