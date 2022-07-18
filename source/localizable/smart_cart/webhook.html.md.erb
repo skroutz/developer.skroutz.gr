@@ -203,6 +203,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
         "zip":"12345",
         "city":"Αθήνα",
         "region":"Αττικής",
+        "country_code": "GR",
         "pickup_from_collection_point": false
       }
     },
@@ -327,6 +328,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
         "zip":"12345",
         "city":"Αθήνα",
         "region":"Αττικής",
+        "country_code": "GR",
         "pickup_from_collection_point": false
       }
     },
@@ -456,6 +458,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
         "zip":"12345",
         "city":"Αθήνα",
         "region":"Αττικής",
+        "country_code": "GR",
         "pickup_from_collection_point": false
       }
     },
@@ -525,6 +528,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
         "zip":"12345",
         "city":"Αθήνα",
         "region":"Αττικής",
+        "country_code": "GR",
         "pickup_from_collection_point": false
       }
     },
@@ -663,6 +667,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
         "zip":"12345",
         "city":"Αθήνα",
         "region":"Αττικής",
+        "country_code": "GR",
         "pickup_from_collection_point": false
       }
     },
@@ -739,6 +744,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
         "zip":"12345",
         "city":"Αθήνα",
         "region":"Αττικής",
+        "country_code": "GR",
         "pickup_from_collection_point": false
       }
     },
@@ -881,6 +887,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
         "zip":"12345",
         "city":"Αθήνα",
         "region":"Αττικής",
+        "country_code": "GR",
         "pickup_from_collection_point": false
       }
     },
@@ -1024,6 +1031,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
         "zip":"12345",
         "city":"Αθήνα",
         "region":"Αττικής",
+        "country_code": "GR",
         "pickup_from_collection_point": false
       }
     },
@@ -1162,6 +1170,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
         "zip":"",
         "city":"",
         "region":"",
+        "country_code": "",
         "pickup_from_collection_point": true,
         "collection_point_address": "Κατάστημα ACS: ΠΕΤΡΟΥ ΡΑΛΛΗ 45, ΤΑΥΡΟΣ, 17778"
       }
@@ -1286,6 +1295,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
         "zip":"12345",
         "city":"Αθήνα",
         "region":"Αττικής",
+        "country_code": "GR",
         "pickup_from_collection_point": false
       }
     },
@@ -1305,6 +1315,131 @@ Would send a Webhook request payload just like if the order was cancelled by the
         "price_includes_vat": true,
         "island_vat_discount_applied": false,
         "extra_info": "Χρώμα: Πράσινο\nΒαθμοί SPH: -6.50",
+        "serial_numbers": null
+      }
+    ],
+    "created_at": "2019-11-28T13:24:37+02:00",
+    "expires_at": "2019-12-04T10:24:00+02:00",
+    "dispatch_until": "2019-12-04T18:00:00+02:00",
+    "express": false,
+    "gift_wrap": false,
+    "fulfilled_by_skroutz": false,
+    "fbs_delivery_note": null,
+    "accept_options": {
+      "number_of_parcels": [
+        1
+      ],
+      "pickup_location": [
+        {
+          "id": "YlpD0KROym",
+          "label": "Πανεπιστημίου 2, Τ.Κ. 12345, Αθήνα, Αττική"
+        },
+        {
+          "id": "onpL6DXG4l",
+          "label": "Σταδίου 1, Τ.Κ. 12345, Αθήνα, Αττική"
+        },
+        {
+          "id": "wgO1N22OaQ",
+          "label": "Κρήτης 50, Τ.Κ. 73100, Χανιά, Χανιά"
+        }
+      ],
+      "pickup_window": [
+        {
+          "id": 1,
+          "label": "15:00 - 18:00, Τρί 03/12/19"
+        },
+        {
+          "id": 2,
+          "label": "10:00 - 12:00, Τετ 04/12/19"
+        },
+        {
+          "id": 3,
+          "label": "12:00 - 15:00, Τετ 04/12/19"
+        },
+        {
+          "id": 4,
+          "label": "15:00 - 18:00, Τετ 04/12/19"
+        }
+      ]
+    },
+    "reject_options": {
+      "line_item_rejection_reasons": [
+        {
+          "id": 1,
+          "label": "Εκτός αποθέματος στο κατάστημα ή στον προμηθευτή",
+          "requires_available_quantity": false
+        },
+        {
+          "id": 2,
+          "label": "Λάθος καταχωρημένη τιμή(ες)",
+          "requires_available_quantity": false
+        },
+        {
+          "id": 4,
+          "label": "Περιορισμένα τεμάχια",
+          "requires_available_quantity": true
+        },
+        {
+          "id": 5,
+          "label": "To προϊόν καταργήθηκε",
+          "requires_available_quantity": false
+        }
+      ]
+    }
+  }
+}
+~~~
+
+#### Example 11 (shipped to Cyprus)
+
+~~~ json
+{
+  "event_type": "new_order",
+  "event_time": "2019-11-28T13:24:37+02:00",
+  "order": {
+    "code": "191029-5130474",
+    "state": "open",
+    "customer": {
+      "id": "PA4oqvpz8x",
+      "first_name": "John",
+      "last_name": "Doe",
+      "address":{
+        "street_name":"Αρτέμιδος",
+        "street_number":"4",
+        "zip":"6031",
+        "city":"Λάρνακα",
+        "region":"Λάρνακας",
+        "country_code": "CY",
+        "pickup_from_collection_point": false
+      }
+    },
+    "invoice": false,
+    "comments": "Παράδοση στο γραφείο",
+    "courier": "DHL",
+    "courier_voucher": null,
+    "courier_tracking_codes": [],
+    "line_items": [
+      {
+        "id": "l39vKqxqwe",
+        "shop_uid": "100",
+        "product_name": "L'Oreal Professionel Salon Steam Pod V2 White",
+        "quantity": 2,
+        "unit_price": 10.40,
+        "total_price": 20.80,
+        "price_includes_vat": true,
+        "island_vat_discount_applied": false,
+        "ean": "1234567890123",
+        "serial_numbers": null
+      },
+      {
+        "id": "l39vKqxqh2",
+        "shop_uid": "10",
+        "product_name": "Paul Mitchell Ultimate Color Repair 200ml",
+        "quantity": 1,
+        "unit_price": 25,
+        "total_price": 25,
+        "price_includes_vat": true,
+        "island_vat_discount_applied": false,
         "serial_numbers": null
       }
     ],
