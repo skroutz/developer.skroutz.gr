@@ -2,6 +2,7 @@ require 'lib/code_example_helper'
 require 'lib/document_helper'
 require 'lib/page_navigation_helper'
 require 'lib/response_mate_helper'
+require 'lib/flavor_helper'
 require 'uglifier'
 
 # Layouts
@@ -64,23 +65,12 @@ helpers CodeExampleHelper
 helpers ResponseMateHelper
 helpers PageNavigationHelper
 helpers DocumentHelper
+helpers FlavorHelper
+
+# make FlavorHelper be available to the config context
+include FlavorHelper
 
 helpers do
-  # Returns the current environment flavor
-  #
-  # @example Run Middleman for Skroutz
-  #   FLAVOR=skroutz bundle exec middleman server
-  #   flavor #=> 'skroutz'
-  #
-  # @example Build website for Alve
-  #   FLAVOR=alve bundle exec middleman build
-  #   flavor #=> 'alve'
-  #
-  # @return [String] the current flavor
-  def flavor
-    ENV['FLAVOR'] || (req.present? && req.params['flavor']) || 'skroutz'
-  end
-
   # Shorthand for data[flavor]
   #
   # @return [String] Data of the current flavor
