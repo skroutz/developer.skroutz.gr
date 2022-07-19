@@ -38,6 +38,7 @@
         "zip":"12345",
         "city":"Αθήνα",
         "region":"Αττικής",
+        "country_code": "GR",
         "pickup_from_collection_point": false
       }
     },
