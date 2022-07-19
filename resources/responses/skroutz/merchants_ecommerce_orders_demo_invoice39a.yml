@@ -70,12 +70,14 @@
       {
         "id": "Y5jVmgKmeX",
         "shop_uid": "405753",
+        "shop_variation_uid": "40575312-14",
         "product_name": "Adidas Perormance Badge of Sport Swimsuit PS/GS",
         "quantity": 2,
         "size": {
           "label": "Ηλικία",
           "value": "14 χρονών",
-          "shop_value": "12-14"
+          "shop_value": "12-14",
+          "shop_variation_uid": "40575312-14"
         },
         "unit_price": 17.99,
         "total_price": 35.98,

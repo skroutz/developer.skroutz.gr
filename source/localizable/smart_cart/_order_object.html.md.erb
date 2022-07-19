@@ -100,6 +100,7 @@ Name                              | Type      | Description
 --------------------------------- | --------- | ------------------------------------------------
 `line_items[_].id`              | String  | Unique item id
 `line_items[_].shop_uid`        | String  | Item id in shop
+`line_items[_].shop_variation_uid` | String | Variation ID in shop (optional for items with size)
 `line_items[_].product_name`    | String  | Item product name
 `line_items[_].quantity`        | Integer | Item quantity
 `line_items[_].size`            | Object  | [Item size values (optional)](#line-item-size)
@@ -120,6 +121,7 @@ Name                              | Type   | Value | Description
 `line_items[_].size.label`        | String | `Νούμερο`, `Μέγεθος`, `Ηλικία` |Item size label
 `line_items[_].size.value`        | String |    |Item size value
 `line_items[_].size.shop_value`   | String |    |Item original size as provided by the shop
+`line_items[_].size.shop_variation_uid` | String | | Variation ID in shop for an item
 
 #### Accept options
 
