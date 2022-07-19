@@ -27,6 +27,7 @@ set :markdown, layout_engine: :erb, toc_levels: [2, 3]
 
 # Assets
 set :css_dir, 'assets/stylesheets'
+set :sass_assets_paths, ['source/assets/stylesheets']
 set :js_dir, 'assets/javascripts'
 set :images_dir, 'assets/images'
 set :fonts_dir, 'assets/fonts'
