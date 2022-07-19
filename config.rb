@@ -17,9 +17,6 @@ I18n.enforce_available_locales = false  # Silence I18n deprecation warnings
 # Pretty URLs
 activate :directory_indexes
 
-# Relative URLs
-set :relative_links, true
-
 # Syntax Highlight
 activate :syntax, line_numbers: false
 
