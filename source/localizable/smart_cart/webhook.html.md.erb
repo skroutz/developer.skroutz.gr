@@ -90,7 +90,7 @@ event notification is sent for the following cases:
 * When an order is **cancelled** (either by the user or our support team).
 * When an order is **extended** (allowing more time to handle the order).
 * When an order's courier voucher is **created** (for the associated shipment).
-* **From 5/7/2021 onwards**: When an order's **[state](/smart_cart/orders_api#order-object-attributes-appendix) is changed** (either by user, our support team, or the merchant)
+* **From 5/7/2021 onwards**: When an order's **state changes** to one of the following states `[:accepted, :rejected, :expired, :dispatched, :cancelled, :partially_returned, :returned]` (either by the user, our support team, or the merchant)
 
 #### Request payload
 
