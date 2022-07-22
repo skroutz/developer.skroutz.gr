@@ -30,7 +30,7 @@ Name         | Type   | Value | Description
 
 Name                              | Type   | Description
 --------------------------------- | ------ | --------------------------------------------
-`customer.id`                     | String |Unique customer id
+`customer.id`                     | String |Unique customer ID
 `customer.first_name`             | String |First name
 `customer.last_name`              | String |Last name
 `customer.address`                | Object |[Customer shipping address](#customer-shipping-address)
@@ -98,8 +98,9 @@ Name                                                       | Type               
 
 Name                              | Type      | Description
 --------------------------------- | --------- | ------------------------------------------------
-`line_items[_].id`              | String  | Unique item id
-`line_items[_].shop_uid`        | String  | Item id in shop
+`line_items[_].id`              | String  | Unique item ID
+`line_items[_].shop_uid`        | String  | Item ID in shop
+`line_items[_].shop_variation_uid` | String | Variation ID in shop (optional for items with size)
 `line_items[_].product_name`    | String  | Item product name
 `line_items[_].quantity`        | Integer | Item quantity
 `line_items[_].size`            | Object  | [Item size values (optional)](#line-item-size)
@@ -120,6 +121,7 @@ Name                              | Type   | Value | Description
 `line_items[_].size.label`        | String | `Νούμερο`, `Μέγεθος`, `Ηλικία` |Item size label
 `line_items[_].size.value`        | String |    |Item size value
 `line_items[_].size.shop_value`   | String |    |Item original size as provided by the shop
+`line_items[_].size.shop_variation_uid` | String | | Variation ID in shop for an item
 
 #### Accept options
 
@@ -166,7 +168,7 @@ Name                                         | Type   | Description
 
 #### Reject option: Line item rejection reason
 
-Available reasons to post along line_item ids when
+Available reasons to post along line_item IDs when
 [rejecting a single order](/smart_cart/orders_api/#reject-a-single-order) (use `id`).
 
 Name                                                       | Type    | Description
