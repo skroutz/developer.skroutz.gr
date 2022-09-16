@@ -17,3 +17,23 @@ Name                              | Type   | Description
 `active`                          | Boolean| Product is available for purchase from Skroutz warehouses
 `expected_quantity`               | Integer| The quantity expected to be received by Skroutz warehouses
 `actual_quantity`                 | Integer| The quantity received by Skroutz warehouses
+
+#### Purchase Order creation options
+
+These are valid values to POST to the corresponding keys when
+[creating a new Purchase Order](/smart_cart/fbs_api/#create-a-new-purchase-order).
+
+Name                              | Type   | Example     | Description
+--------------------------------- | ------ | ----------- | --------------------------------------------------
+`new_purchase_order.expected_date`    | Date String in format<br> `YYYY-MM-DD` | "2022-09-22" | Date the Purchase Order is expected to reach the Skroutz warehouses
+`new_purchase_order.line_items`       | Array  |             | The Purchase Order line items
+
+#### Purchase Order creation options: Line items
+
+Name                              | Type   | Example     | Description
+--------------------------------- | ------ | ----------- | --------------------------------------------------
+`line_item.product_uid`           | String | "52781"     | Unique product id
+`line_item.expected_quantity`     | Integer|       8     | The quantity of this product that the Skroutz warehouse will receive
+`line_item.keep_serial_numbers`   | Boolean|     true    | Product requires serial numbers for each unit sold
+`line_item.has_expiration_date`   | Boolean|     true    | Product has expiration date
+`line_item.storage_conditions`    | Integer|     2       | Product storage conditions (possible values: 0 for dry, 1 for air conditioned, 2 for refrigirated, 3 for frozen)
