@@ -84,6 +84,16 @@
         "requires_additional_comment": false
       },
       {
+        "name": "invoice_39a",
+        "description": "Παραγγελία με τιμολόγιο 39Α",
+        "requires_additional_comment": false
+      },
+      {
+        "name": "reduced_vat",
+        "description": "Παραγγελία με καθεστώς μειωμένου Φ.Π.Α",
+        "requires_additional_comment": false
+      },
+      {
         "name": "other",
         "description": "Άλλο",
         "requires_additional_comment": true
