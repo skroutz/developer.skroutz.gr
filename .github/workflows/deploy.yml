@@ -1,0 +1,17 @@
+name: Deploy
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - deploy
+
+jobs:
+  hello:
+    name: Hello
+    runs-on: [ self-hosted ]
+
+    steps:
+      - name: Echo
+        run: echo "Hello!"
+
