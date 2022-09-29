@@ -4,9 +4,9 @@ source 'https://rubygems.org'
 gem 'bootstrap-sass', '~> 3.4.1'
 gem 'font-awesome-middleman', '~> 4.5.0'
 gem 'jquery-middleman', '~> 3.0.4'
-gem 'middleman', '~> 3.3'
+gem 'middleman', '~> 3.4'
 gem 'middleman-syntax', '~> 2.0.0'
-gem 'json', '~> 1.8.6'
+gem 'json', '~> 2.6.2'
 gem 'rack', '~> 1.6.11'
 
 # API Helpers
