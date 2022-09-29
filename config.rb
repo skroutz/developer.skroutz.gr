@@ -53,9 +53,6 @@ configure :build do
 
   # Minify JS
   activate :minify_javascript, compressor: Uglifier.new
-
-  # GZip
-  activate :gzip
 end
 
 # Helpers
