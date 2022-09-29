@@ -1,3 +1,0 @@
-set :flavor, 'some_flavor'
-
-set :deploy_to, "/var/sites/developer.some_flavor.tld"
