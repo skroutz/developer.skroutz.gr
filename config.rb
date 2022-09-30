@@ -2,6 +2,7 @@ require 'lib/code_example_helper'
 require 'lib/document_helper'
 require 'lib/page_navigation_helper'
 require 'lib/response_mate_helper'
+require 'lib/flavor_helper'
 require 'uglifier'
 
 # Layouts
@@ -16,9 +17,6 @@ I18n.enforce_available_locales = false  # Silence I18n deprecation warnings
 # Pretty URLs
 activate :directory_indexes
 
-# Relative URLs
-set :relative_links, true
-
 # Syntax Highlight
 activate :syntax, line_numbers: false
 
@@ -29,6 +27,7 @@ set :markdown, layout_engine: :erb, toc_levels: [2, 3]
 
 # Assets
 set :css_dir, 'assets/stylesheets'
+set :sass_assets_paths, ['source/assets/stylesheets']
 set :js_dir, 'assets/javascripts'
 set :images_dir, 'assets/images'
 set :fonts_dir, 'assets/fonts'
@@ -54,9 +53,6 @@ configure :build do
 
   # Minify JS
   activate :minify_javascript, compressor: Uglifier.new
-
-  # GZip
-  activate :gzip
 end
 
 # Helpers
@@ -64,23 +60,12 @@ helpers CodeExampleHelper
 helpers ResponseMateHelper
 helpers PageNavigationHelper
 helpers DocumentHelper
+helpers FlavorHelper
+
+# make FlavorHelper be available to the config context
+include FlavorHelper
 
 helpers do
-  # Returns the current environment flavor
-  #
-  # @example Run Middleman for Skroutz
-  #   FLAVOR=skroutz bundle exec middleman server
-  #   flavor #=> 'skroutz'
-  #
-  # @example Build website for Alve
-  #   FLAVOR=alve bundle exec middleman build
-  #   flavor #=> 'alve'
-  #
-  # @return [String] the current flavor
-  def flavor
-    ENV['FLAVOR'] || (req.present? && req.params['flavor']) || 'skroutz'
-  end
-
   # Shorthand for data[flavor]
   #
   # @return [String] Data of the current flavor

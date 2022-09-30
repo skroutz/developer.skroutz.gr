@@ -6,12 +6,52 @@ on:
     branches:
       - deploy
 
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
 jobs:
-  hello:
-    name: Hello
-    runs-on: [ self-hosted ]
+  build:
+    name: Build
+    runs-on: [ ubuntu-latest ]
 
     steps:
-      - name: Echo
-        run: echo "Hello!"
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v2
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '2.7'
+          bundler-cache: true
+          cache-version: 0
+      - name: Build
+        run: bundle exec middleman build --verbose
+        env:
+          FLAVOR: skroutz
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: build/
+  deploy:
+    name: Deploy
+    needs: build
+
+    permissions:
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment originates from an appropriate source
+
+    # Deploy to the github-pages environment
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    # Specify runner + deployment step
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
 

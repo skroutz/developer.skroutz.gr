@@ -17,7 +17,7 @@
 @import 'components/typography';
 
 // Iconic Fonts
-@import 'font-awesome';
+@import 'font-awesome/font-awesome';
 @import 'components/font-devs';
 
 // Buttons
@@ -52,7 +52,7 @@
 
 // Example Code Blocks & Syntax Highlight
 @import 'components/example-code';
-@import 'syntax_highlight/default';
+@import 'syntax_highlight';
 
 // Swiftype Search
 @import 'components/swiftype';

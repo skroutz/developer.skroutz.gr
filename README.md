@@ -19,12 +19,7 @@ The following steps will get you started
 
 ## Deploy
 
-If you have deploy rights you may:
-
-```bash
-bundle exec cap "flavor" deploy
-# "flavor" is one of skroutz, alve, scrooge
-```
+Deployment is handled automatic on push.
 
 ## License
 
