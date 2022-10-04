@@ -56,7 +56,9 @@ curl -X GET https://<%= settings.api_domain %>/merchants/ecommerce/fbs/products 
 
 <%= render_recording :merchants_fbs_products_index %>
 
-### Retrieve a purchase order
+### Purchase Orders
+
+#### Retrieve a purchase order
 
 To retrieve a shop's Fulfilled by Skroutz purchase orders.
 
@@ -64,7 +66,7 @@ To retrieve a shop's Fulfilled by Skroutz purchase orders.
   GET /merchants/ecommerce/fbs/purchase_orders
 </pre>
 
-#### Example
+##### Example
 <pre class="terminal">
 curl -X GET https://<%= settings.api_domain %>/merchants/ecommerce/fbs/purchase_orders \
   -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
@@ -73,7 +75,7 @@ curl -X GET https://<%= settings.api_domain %>/merchants/ecommerce/fbs/purchase_
 
 <%= render_recording :merchants_fbs_purchase_orders_index %>
 
-### Create a new purchase order
+#### Create a new purchase order
 
 To retrieve a shop's Fulfilled by Skroutz purchase orders.
 
@@ -81,7 +83,7 @@ To retrieve a shop's Fulfilled by Skroutz purchase orders.
   POST /merchants/ecommerce/fbs/purchase_orders
 </pre>
 
-#### Example
+##### Example
 <pre class="terminal">
 curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/fbs/purchase_orders \
   -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
@@ -93,7 +95,7 @@ curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/fbs/purchase
 
 More info about the order creation options can be found in the [appendix](#purchase-order-creation-options).
 
-### Purchase order line items
+#### Purchase order line items
 
 To retrieve a Fulfilled by Skroutz purchase order line items
 
@@ -101,7 +103,7 @@ To retrieve a Fulfilled by Skroutz purchase order line items
   GET /merchants/ecommerce/fbs/purchase_orders/:code/line_items
 </pre>
 
-#### Example
+##### Example
 <pre class="terminal">
 curl -X GET https://<%= settings.api_domain %>/merchants/ecommerce/fbs/purchase_orders/220623-4078-5820/line_items \
   -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
