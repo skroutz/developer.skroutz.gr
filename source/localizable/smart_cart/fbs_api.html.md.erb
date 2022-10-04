@@ -9,7 +9,8 @@ title: fbs_api
 
 Fulfilled by Skroutz API allows Skroutz Merchants to retrieve information about
 the purchase orders and related products that are stored in Skroutz warehouses,
-as well as create new purchase orders.
+as well as create new purchase orders. Moreover, a merchant may access their related
+Fullfilled by Skroutz suppliers and create new or update existing ones.
 
 <%= partial 'partials/toc' %>
 
@@ -73,7 +74,7 @@ curl -X GET https://<%= settings.api_domain %>/merchants/ecommerce/fbs/purchase_
   -H 'Authorization: Bearer your_access_token_here'
 </pre>
 
-<%= render_recording :merchants_fbs_purchase_orders_index %>
+<%= render_recording :merchants_fbs_suppliers_index %>
 
 #### Create a new purchase order.
 
@@ -112,6 +113,64 @@ curl -X GET https://<%= settings.api_domain %>/merchants/ecommerce/fbs/purchase_
 
 <%= render_recording :merchants_fbs_purchase_orders_show %>
 
+### Suppliers
+
+#### Retrieve shop suppliers
+
+To retrieve a list with the shop's Fulfilled by Skroutz suppliers.
+
+<pre class="terminal">
+  GET /merchants/ecommerce/fbs/suppliers
+</pre>
+
+##### Example
+<pre class="terminal">
+curl -X GET https://<%= settings.api_domain %>/merchants/ecommerce/fbs/suppliers \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Authorization: Bearer your_access_token_here'
+</pre>
+
+<%= render_recording :merchants_fbs_suppliers_index %>
+
+#### Create shop supplier
+
+To create a new Fulfilled by Skroutz supplier.
+
+<pre class="terminal">
+  POST /merchants/ecommerce/fbs/suppliers
+</pre>
+
+##### Example
+<pre class="terminal">
+curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/fbs/suppliers \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Authorization: Bearer your_access_token_here' \
+  -d '{ "id": "xjvKD5Xr51", "code": "supplier_code", "supplier_name": "supplier_name", "address": "supplier_address", "city": "Athens", "area": "Attica", "zip_code": "42200", "phone": "1234567890", "tax_number": "1234567890", "email": "info@randomsupplier.gr" }'
+</pre>
+
+<%= render_recording :merchants_fbs_suppliers_create %>
+
+#### Update shop supplier
+
+To update a new Fulfilled by Skroutz supplier. Only the values to be updated should be provided.
+The rest of the fields will remain unchanged.
+
+<pre class="terminal">
+  PATCH /merchants/ecommerce/fbs/suppliers/:supplier_id
+</pre>
+
+##### Example
+<pre class="terminal">
+curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/fbs/suppliers/abcdefgh \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Authorization: Bearer your_access_token_here' \
+  -d '{ "address": "Another Address", "email": "newmail@newmail.gr" }'
+</pre>
+
+<%= render_recording :merchants_fbs_suppliers_update %>
+
+More info about the supplier creation and update options can be found in the [appendix](#supplier-creationupdate-options).
+
 ## Error handling
 
 In case of errors, the response will have a representative HTTP status code
@@ -141,3 +200,7 @@ get a `404` HTTP status code (Not Found), with the same body as above.
 ## Product object attributes appendix
 
 <%= partial 'localizable/smart_cart/fbs_product' %>
+
+## Supplier object attributes appendix
+
+<%= partial 'localizable/smart_cart/fbs_supplier_object' %>
