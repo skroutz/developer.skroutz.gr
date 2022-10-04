@@ -26,7 +26,8 @@ These are valid values to POST to the corresponding keys when
 Name                              | Type   | Example     | Description
 --------------------------------- | ------ | ----------- | --------------------------------------------------
 `new_purchase_order.expected_date`    | Date String in format<br> `YYYY-MM-DD` | "2022-09-22" | Date the Purchase Order is expected to reach the Skroutz warehouses
-`new_purchase_order.line_items`       | Array  |             | The Purchase Order line items
+`new_purchase_order.supplier_id`      | String | "abs30220" | The supplier ID. Can be fetched from the [list of the shop's suppliers](/smart_cart/fbs_api/#retrieve-shop-suppliers)
+`new_purchase_order.line_items`       | Array  |            | The Purchase Order line items
 
 #### Purchase Order creation options: Line items
 

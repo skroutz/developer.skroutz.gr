@@ -89,7 +89,7 @@ To create a new Fulfilled by Skroutz purchase order
 curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/fbs/purchase_orders \
   -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
   -H 'Authorization: Bearer your_access_token_here' \
-  -d '{ "expected_date": "2022-09-22", "line_items": [ { "product_uid": "52781", "expected_quantity": 8, "keep_serial_numbers": true, "has_expiration_date": false, "storage_conditions": "2" } ] }'
+  -d '{ "expected_date": "2022-09-22", supplier_id: "z0VGVY3M1m", "line_items": [ { "product_uid": "52781", "expected_quantity": 8, "keep_serial_numbers": true, "has_expiration_date": false, "storage_conditions": "2" } ] }'
 </pre>
 
 <%= render_recording :merchants_fbs_purchase_orders_create %>
