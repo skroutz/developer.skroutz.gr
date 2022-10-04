@@ -75,9 +75,9 @@ curl -X GET https://<%= settings.api_domain %>/merchants/ecommerce/fbs/purchase_
 
 <%= render_recording :merchants_fbs_purchase_orders_index %>
 
-#### Create a new purchase order
+#### Create a new purchase order.
 
-To retrieve a shop's Fulfilled by Skroutz purchase orders.
+To create a new Fulfilled by Skroutz purchase order
 
 <pre class="terminal">
   POST /merchants/ecommerce/fbs/purchase_orders
@@ -87,7 +87,7 @@ To retrieve a shop's Fulfilled by Skroutz purchase orders.
 <pre class="terminal">
 curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/fbs/purchase_orders \
   -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
-  -H 'Authorization: Bearer your_access_token_here'
+  -H 'Authorization: Bearer your_access_token_here' \
   -d '{ "expected_date": "2022-09-22", "line_items": [ { "product_uid": "52781", "expected_quantity": 8, "keep_serial_numbers": true, "has_expiration_date": false, "storage_conditions": "2" } ] }'
 </pre>
 
