@@ -1,19 +1,13 @@
 ---
 :request:
-  :url: https://api.skroutz.gr/merchants/ecommerce/fbs/purchase_orders
+  :url: https://api.skroutz.gr/merchants/ecommerce/fbs/suppliers
   :headers:
     :accept: application/vnd.skroutz+json; version=3.0
     :authorization: Bearer xWmjOaQmNgLt3dVIYBGkWVWhbrcdg4XfYqS3Jb1dMVHvGIBJcPuzVQYjH-XKenxsZgFW8DSgc9f2fI_MBVBHNw==
   :params:
-    :expected_date: "2022-09-22"
-    :supplier_id: "z0VGVY3M1m"
-    :line_items:
-      - :product_uid: "52781"
-        :expected_quantity: 9
-        :keep_serial_numbers: true
-        :has_expiration_date: true
-        :storage_conditions: 1
-  :verb: :post
+    :address: "Another Address"
+    :email: "newmail@newmail.gr"
+  :verb: :patch
 :response:
   :status: 200
   :headers:

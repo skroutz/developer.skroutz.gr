@@ -1,0 +1,31 @@
+#### Supplier object
+
+Name         | Type   | Description
+------------ | ------ | -----------------
+`id`         | String | Supplier id
+`code`       | String | Supplier code
+`name`       | String | Supplier name
+`address`    | String | Supplier address
+`city`       | String | Supplier City
+`area`       | String | Supplier Area
+`zip_code`   | String | Supplier Zip Code
+`phone`      | String | Supplier Phone
+`tax_number` | String | Supplier Tax Number
+`email`      | String | Supplier Email
+
+#### Supplier creation/update options
+
+These are valid values to POST to the corresponding keys when creating or updating fbs suppliers.
+
+Name                              | Type   | Example     | Description
+--------------------------------- | ------ | ----------- | --------------------------------------------------
+`new_supplier.id`                 | String | "abs30220"              | The supplier ID. Can be fetched from the [list of the shop's suppliers](/smart_cart/fbs_api/#retrieve-shop-suppliers)
+`new_supplier.code`               | String | "a_code"                | Unique Supplier Code
+`new_supplier.name`               | String | "a_name"                | Supplier Name
+`new_supplier.address`            | String | "Adamantos 4 Lykavittos"| Supplier Address
+`new_supplier.city`               | String | "Athens"                | Supplier City
+`new_supplier.area`               | String | "Attica"                | Supplier Area
+`new_supplier.zip_code`           | String | "88888"                 | Supplier Zip Code
+`new_supplier.phone`              | String | "2101234567"            | Supplier Phone
+`new_supplier.tax_number`         | String | "1234567890"            | Supplier Tax Number
+`new_supplier.email`              | String | "mail@suppliermail.gr"  | Supplier Email
