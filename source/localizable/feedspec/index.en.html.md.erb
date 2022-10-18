@@ -377,7 +377,17 @@ This product's shipping availability as used throughout your shop.
 <%= settings.site_name.capitalize %> uses a fixed set of availability
 descriptions that will be crosslinked to the ones provided in your feed.
 
-Available
+In Stock
+: refers to products that are available for
+  <%= link_to 'Express delivery',
+              'https://merchants.skroutz.gr/merchants/support/guidelines/express_delivery',
+              target: '_blank' %>.
+  The label `Express delivery` appears when the related shop has the service enabled in
+  <%= settings.site_name.capitalize %> and the product fulfills the service criteria. In any case,
+  the product appears as `Available` and should be delivered to your customer within the defined
+  schedule.
+
+Available from 1 to 3 days
 : refers to products that are immediately available to your shop or are immediately
   available for shipping from the warehouse or/and the supplier. In any case,
   the products can be delivered to your customer within 1 to 3 days.
@@ -666,7 +676,17 @@ This size variation's shipping availability as used throughout your shop.
 <%= settings.site_name.capitalize %> uses a fixed set of availability
 descriptions that will be crosslinked to the ones provided in your feed.
 
-Available
+In Stock
+: refers to size variations that are available for
+<%= link_to 'Express delivery',
+            'https://merchants.skroutz.gr/merchants/support/guidelines/express_delivery',
+            target: '_blank' %>.
+The label `Express delivery` appears when the related shop has the service enabled in
+<%= settings.site_name.capitalize %> and the product fulfills the service criteria. In any case,
+the product appears as `Available` and should be delivered to your customer within the defined
+schedule.
+
+Available from 1 to 3 days
 : refers to size variations that are immediately available to your shop or are immediately
   available for shipping from the warehouse or/and the supplier. In any case,
   the products can be delivered to your customer within 1 to 3 days.
