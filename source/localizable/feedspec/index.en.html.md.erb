@@ -372,7 +372,7 @@ It's the product's VAT rate.
 
 #### Availability
 
-This product's shipping availability as used throughout your shop.
+This field describes the shipping availability as used throughout your shop.
 
 <%= settings.site_name.capitalize %> uses a fixed set of availability
 descriptions that will be crosslinked to the ones provided in your feed.
@@ -383,20 +383,30 @@ In Stock
               'https://merchants.skroutz.gr/merchants/support/guidelines/express_delivery',
               target: '_blank' %>.
   The label `Express delivery` appears when the related shop has the service enabled in
-  <%= settings.site_name.capitalize %> and the product fulfills the service criteria. In any case,
-  the product appears as `Available` and should be delivered to your customer within the defined
-  schedule.
+  <%= settings.site_name.capitalize %> and the product fulfills the service criteria.<br/>
+  When the service is not enabled, then the related products will be presented to
+  <%= settings.site_name.capitalize %> with the `Available` indication.<br/>
+  Any products you don't need to offer in "Express delivery", they should be marked with one of the
+  following availabilities.
 
 Available from 1 to 3 days
-: refers to products that are immediately available to your shop or are immediately
-  available for shipping from the warehouse or/and the supplier. In any case,
-  the products can be delivered to your customer within 1 to 3 days.
+: refers to products that are available to the shop or for shipping from the warehouse or the
+  supplier and can be delivered to your customer within the specified days.
 
 Available from 4 to 10 days
-: refers to products that can be delivered to your customer within 4 to 10 days.
+: refers to products that are not available to the shop and can be delivered within the specified
+  days.
 
 Available up to 30 days
-: refers to products that can be delivered to your customer within 30 days.
+: refers to products that are not in stock and can be delivered only upon order. In any case, the
+  delivery time could not exceed 30 days, which is the maximum limit set by the legislation on
+  e-commerce and distance sales.
+
+##### Example
+
+~~~ xml
+<availability>In stock</availability>
+~~~
 
 
 #### Manufacturer
@@ -671,7 +681,7 @@ duplication.
 
 #### Variation Availability
 
-This size variation's shipping availability as used throughout your shop.
+This field describes the shipping availability as used throughout your shop.
 
 <%= settings.site_name.capitalize %> uses a fixed set of availability
 descriptions that will be crosslinked to the ones provided in your feed.
@@ -682,25 +692,29 @@ In Stock
             'https://merchants.skroutz.gr/merchants/support/guidelines/express_delivery',
             target: '_blank' %>.
 The label `Express delivery` appears when the related shop has the service enabled in
-<%= settings.site_name.capitalize %> and the product fulfills the service criteria. In any case,
-the product appears as `Available` and should be delivered to your customer within the defined
-schedule.
+<%= settings.site_name.capitalize %> and the product fulfills the service criteria.<br/>
+When the service is not enabled, then the related products will be presented to
+<%= settings.site_name.capitalize %> with the `Available` indication.<br/>
+Any products you don't need to offer in "Express delivery", they should be marked with one of the
+following availabilities.
 
 Available from 1 to 3 days
-: refers to size variations that are immediately available to your shop or are immediately
-  available for shipping from the warehouse or/and the supplier. In any case,
-  the products can be delivered to your customer within 1 to 3 days.
+: refers to size variations that are available to the shop or for shipping from the
+warehouse or the supplier and can be delivered to your customer within the specified days.
 
 Available from 4 to 10 days
-: refers to size variations that can be delivered to your customer within 4 to 10 days.
+: refers to size variations that are not available to the shop and can be delivered within the
+specified days.
 
 Available up to 30 days
-: refers to size variations that can be delivered to your customer within 30 days.
+: refers to size variations that are not in stock and can be delivered only upon order. In any case,
+the delivery time could not exceed 30 days, which is the maximum limit set by the legislation on
+e-commerce and distance sales.
 
 ##### Example
 
 ~~~ xml
-<availability>4 to 10 days</availability>
+<availability>In Stock</availability>
 ~~~
 
 
