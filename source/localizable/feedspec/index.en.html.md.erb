@@ -174,7 +174,7 @@ Name                                                   | Type    | Length       
 [EAN / Barcode](#ean--barcode)                         | Integer | <span class="mono">13</span>   | No       | `9780471117094`
 [Size](#size)                                          | String  | <span class="mono">500</span>  | No<b><sup>1</sup></b>| `4,4.5,5-6,6 1/2`
 [Weight](#weight)                                      | Decimal | <span class="mono">-</span>    | No<b><sup>2</sup></b>| `3200`
-[InStock](#instock)                                    | List    | <span class="mono">-</span>    | No       | `Y`
+[InStock](#instock)<br/><span class="label label-warning">Deprecated</span> | List    | <span class="mono">-</span>    | No       | `Y`
 [Shipping Costs](#shipping-costs)                      | Decimal | <span class="mono">-</span>    | No       | `3.22`
 [Color](#color)                                        | String  | <span class="mono">100</span>  | No<b><sup>3</sup></b>| `Black`
 [Description](#description)                            | String  | <span class="mono">1000</span> | No<b><sup>4</sup></b>| `SAMSUNG Galaxy A70 as a phablet features 6.7 inch display that affords you a vivid and different visual experience. 4 cameras, 32.0MP + 5.0MP + 8.0MP rear camera + 32.0MP front camera, you can enjoy images with 1080 x 2400 high resolution. It comes with most of the features we've come to expect from a phablet, including 6GB RAM 128GB ROM storage equipped with Android Snapdragon 675 and 4500mAh big capacity battery that you can play games faster.`
@@ -524,7 +524,10 @@ or
 <% end %>
 
 
-#### InStock
+<h4 id="instock">InStock
+  <span class="label label-warning">Deprecated</span>
+  <a href="#instock" class="permalink"></a>
+</h4>
 
 Stock status of the product
 
@@ -901,7 +904,6 @@ The XML excerpt below is an example of a compatible XML data feed.
         <manufacturer><![CDATA[Converse]]></manufacturer>
         <mpn>M7652C</mpn>
         <ean>886952780692</ean>
-        <instock>N</instock>
         <availability>Delivery 1 to 3 days</availability>
         <size>5.5,6</size>
         <weight>2000</weight>
@@ -942,7 +944,6 @@ The XML excerpt below is an example of a compatible XML with variations data fee
         <manufacturer><![CDATA[Converse]]></manufacturer>
         <mpn>M7652C</mpn>
         <ean>886952780692</ean>
-        <instock>N</instock>
         <availability>Delivery 1 to 3 days</availability>
         <size>43,45</size>
         <weight>2000</weight>
@@ -1085,7 +1086,7 @@ The XML excerpt below is an example of a compatible XML with variations data fee
     </xs:simpleType>
   </xs:element>
 
-  <!-- instock -->
+  <!-- instock [deprecated] -->
   <xs:element name="instock">
     <xs:simpleType>
       <xs:restriction base="xs:string">
@@ -1280,7 +1281,7 @@ The XML excerpt below is an example of a compatible XML with variations data fee
     </xs:simpleType>
   </xs:element>
 
-  <!-- instock -->
+  <!-- instock [deprecated] -->
   <xs:element name="instock">
     <xs:simpleType>
       <xs:restriction base="xs:string">
