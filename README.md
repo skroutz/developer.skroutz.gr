@@ -19,7 +19,7 @@ The following steps will get you started
 
 ## Deploy
 
-Deployment is handled automatic on push.
+Deployment is handled automatically on push.
 
 ## License
 
