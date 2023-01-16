@@ -258,6 +258,16 @@ A dispatched order without a courier voucher that will be fulfilled by Skroutz. 
 
 <%= render_recording :merchants_ecommerce_orders_demo_fbs_dispatched %>
 
+#### DEMO-STORE-PICKUP
+
+An open order without a courier or courier voucher that will be picked up by the user at the store.
+
+<pre class="terminal">
+  GET /merchants/ecommerce/orders/DEMO-STORE-PICKUP
+</pre>
+
+<%= render_recording :merchants_ecommerce_orders_demo_store_pickup %>
+
 ## Order object attributes appendix
 
 > The order object returned retrieving a single order via the API is the same as
