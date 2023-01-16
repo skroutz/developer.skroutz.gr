@@ -96,6 +96,7 @@
     "express": false,
     "gift_wrap": false,
     "fulfilled_by_skroutz": true,
-    "fbs_delivery_note: "ΤΛΑΠΟ0454022"
+    "fbs_delivery_note": "ΤΛΑΠΟ0454022",
+    "store_pickup": false
   }
 }'
