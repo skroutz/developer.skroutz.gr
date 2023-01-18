@@ -1,6 +1,6 @@
 ---
 :request:
-  :url: https://api.skroutz.gr/merchants/ecommerce/orders/DEMO-FBS
+  :url: https://api.skroutz.gr/merchants/ecommerce/orders/DEMO-STORE-PICKUP
   :headers:
     :accept: application/vnd.skroutz+json; version=3.0
     :authorization: Bearer n4_92SD9EAEkwDfgiYZHiWwSdJlmA5q-_H3FQ6iYZ3jcMynhbpLEe3QvZxrvO0D-8ZYYD2n_wOBexdn9B0NYGQ==
@@ -26,8 +26,8 @@
     X-Cached: skroutz miss(0)
   :body: '{
   "order": {
-    "code": "DEMO-FBS",
-    "state": "accepted",
+    "code": "DEMO-STORE-PICKUP",
+    "state": "open",
     "customer": {
       "id": "user1234",
       "first_name": "John",
@@ -44,11 +44,9 @@
     },
     "invoice": false,
     "comments": "Παράδοση στο γραφείο",
-    "courier": "CourierCenter",
+    "courier": null,
     "courier_voucher": null,
-    "courier_tracking_codes": [
-      "123456789"
-    ],
+    "courier_tracking_codes": [],
     "line_items": [
       {
         "id": "Y5jVmgKmeX",
@@ -67,36 +65,51 @@
         "price_includes_vat": true,
         "ean": "1234567890123",
         "serial_numbers": null
-      },
-      {
-        "id": "3XlV8ebjxm",
-        "shop_uid": "10",
-        "product_name": "Smartphone 123",
-        "quantity": 2,
-        "unit_price": 100,
-        "total_price": 200,
-        "price_includes_vat": true,
-        "serial_numbers": "SN12345,SN56789"
-      },
-      {
-        "id": "ZvEKMxbxr1",
-        "shop_uid": "768",
-        "product_name": "AIR OPTIX COLORS MHNIAIOI",
-        "quantity": 2,
-        "unit_price": 25.5,
-        "total_price": 51,
-        "price_includes_vat": true,
-        "extra_info": "Χρώμα: Πράσινο\\nΒαθμοί SPH: -6.50",
-        "serial_numbers": null
       }
     ],
-    "created_at": "2021-06-24T13:11:41+03:00",
-    "expires_at": "2021-06-25T13:11:41+03:00",
-    "dispatch_until": "2021-06-28T13:11:41+03:00",
+    "created_at": "2021-06-24T13:08:30+03:00",
+    "expires_at": "2021-06-25T13:08:30+03:00",
+    "dispatch_until": null,
     "express": false,
     "gift_wrap": false,
-    "fulfilled_by_skroutz": true,
+    "fulfilled_by_skroutz": false,
     "fbs_delivery_note": null,
-    "store_pickup": false
+    "store_pickup": true,
+    "accept_options": {
+      "number_of_parcels": [
+        1
+      ],
+      "pickup_location": [
+        {
+          "id": "Y5jVmgKmeX",
+          "label": "Πανεπιστημίου 2, Τ.Κ. 12345, Αθήνα, Αττική"
+        }
+      ],
+      "pickup_window": []
+    },
+    "reject_options": {
+      "line_item_rejection_reasons": [
+        {
+          "id": 1,
+          "label": "Εκτός αποθέματος στο κατάστημα ή στον προμηθευτή",
+          "requires_available_quantity": false
+        },
+        {
+          "id": 2,
+          "label": "Λάθος καταχωρημένη τιμή(ες)",
+          "requires_available_quantity": false
+        },
+        {
+          "id": 4,
+          "label": "Περιορισμένα τεμάχια",
+          "requires_available_quantity": true
+        },
+        {
+          "id": 5,
+          "label": "To προϊόν καταργήθηκε",
+          "requires_available_quantity": false
+        }
+      ]
+    }
   }
 }'

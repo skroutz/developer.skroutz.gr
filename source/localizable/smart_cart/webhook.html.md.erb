@@ -132,6 +132,7 @@ kinds of Webhook requests** for testing. In the following examples, `:code` shou
 - `DEMO-INVOICE39A`
 - `DEMO-FBS`
 - `DEMO-FBS-DISPATCHED`
+- `DEMO-STORE-PICKUP`
 
 An order creation or order update event should be received at the webhook url of the shop, depending on the request action.
 Sending any of the following requests should request in a successful response (`200 OK`):
@@ -243,6 +244,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
     "express": false,
     "gift_wrap": false,
     "fulfilled_by_skroutz": false,
+    "store_pickup": false,
     "fbs_delivery_note": null,
     "accept_options": {
       "number_of_parcels": [
@@ -375,6 +377,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
     "express": false,
     "gift_wrap": false,
     "fulfilled_by_skroutz": false,
+    "store_pickup": false,
     "fbs_delivery_note": null
     "accept_options": {
       "number_of_parcels": [
@@ -500,6 +503,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
     "express": false,
     "gift_wrap": false,
     "fulfilled_by_skroutz": false,
+    "store_pickup": false,
     "fbs_delivery_note": null
   },
   "changes": {
@@ -539,6 +543,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
     "express": false,
     "gift_wrap": false,
     "fulfilled_by_skroutz": false,
+    "store_pickup": false,
     "fbs_delivery_note": null,
     "courier": "ACS",
     "courier_voucher": null,
@@ -574,6 +579,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
     "express": false,
     "gift_wrap": false,
     "fulfilled_by_skroutz": false,
+    "store_pickup": false,
     "fbs_delivery_note": null,
     "accept_options": {
       "number_of_parcels": [
@@ -709,6 +715,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
     "express": false,
     "gift_wrap": false,
     "fulfilled_by_skroutz": false,
+    "store_pickup": false,
     "fbs_delivery_note": null
     "pickup_window": { from: "2019-11-02T15:00:00+02:00", "to": "2019-11-02T16:00:00+02:00" },
     "number_of_parcels": 1,
@@ -769,6 +776,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
     "express": false,
     "gift_wrap": false,
     "fulfilled_by_skroutz": false,
+    "store_pickup": false,
     "fbs_delivery_note": null,
     "courier": "ACS",
     "courier_voucher": null,
@@ -804,6 +812,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
     "express": false,
     "gift_wrap": false,
     "fulfilled_by_skroutz": false,
+    "store_pickup": false,
     "fbs_delivery_note": null,
     "accept_options": {
       "number_of_parcels": [
@@ -948,6 +957,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
     "express": false,
     "gift_wrap": false,
     "fulfilled_by_skroutz": false,
+    "store_pickup": false,
     "fbs_delivery_note": null,
     "accept_options": {
       "number_of_parcels": [
@@ -1087,6 +1097,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
     "express": false,
     "gift_wrap": false,
     "fulfilled_by_skroutz": false,
+    "store_pickup": false,
     "fbs_delivery_note": null,
     "accept_options": {
       "number_of_parcels": [
@@ -1212,6 +1223,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
     "express": false,
     "gift_wrap": false,
     "fulfilled_by_skroutz": false,
+    "store_pickup": false,
     "fbs_delivery_note": null,
     "accept_options": {
       "number_of_parcels": [
@@ -1326,6 +1338,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
     "express": false,
     "gift_wrap": false,
     "fulfilled_by_skroutz": false,
+    "store_pickup": false,
     "fbs_delivery_note": null,
     "accept_options": {
       "number_of_parcels": [
@@ -1451,6 +1464,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
     "express": false,
     "gift_wrap": false,
     "fulfilled_by_skroutz": false,
+    "store_pickup": false,
     "fbs_delivery_note": null,
     "accept_options": {
       "number_of_parcels": [
