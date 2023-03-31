@@ -32,6 +32,8 @@
       "id": "user1234",
       "first_name": "John",
       "last_name": "Doe",
+      "phone": "2109999999",
+      "mobile": "(+30) 6999999999",
       "address": {
         "street_name": "Πανεπιστημίου",
         "street_number": "4",
