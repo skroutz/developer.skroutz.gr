@@ -163,7 +163,7 @@ The rest of the fields will remain unchanged.
 
 ##### Example
 <pre class="terminal">
-curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/fbs/suppliers/abcdefgh \
+curl -X PATCH https://<%= settings.api_domain %>/merchants/ecommerce/fbs/suppliers/abcdefgh \
   -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
   -H 'Content-Type: application/json; charset=utf-8' \
   -H 'Authorization: Bearer your_access_token_here' \
