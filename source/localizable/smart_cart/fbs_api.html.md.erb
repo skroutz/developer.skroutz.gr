@@ -147,7 +147,7 @@ curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/fbs/supplier
   -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
   -H 'Content-Type: application/json; charset=utf-8' \
   -H 'Authorization: Bearer your_access_token_here' \
-  -d '{ "id": "xjvKD5Xr51", "code": "supplier_code", "supplier_name": "supplier_name", "address": "supplier_address", "city": "Athens", "area": "Attica", "zip_code": "42200", "phone": "1234567890", "tax_number": "1234567890", "email": "info@randomsupplier.gr" }'
+  -d '{ "id": "xjvKD5Xr51", "code": "supplier_code", "name": "supplier_name", "address": "supplier_address", "city": "Athens", "area": "Attica", "zip_code": "42200", "phone": "1234567890", "tax_number": "1234567890", "email": "info@randomsupplier.gr" }'
 </pre>
 
 <%= render_recording :merchants_fbs_suppliers_create %>
