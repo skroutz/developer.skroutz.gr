@@ -88,6 +88,7 @@ To create a new Fulfilled by Skroutz purchase order
 <pre class="terminal">
 curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/fbs/purchase_orders \
   -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Content-Type: application/json; charset=utf-8' \
   -H 'Authorization: Bearer your_access_token_here' \
   -d '{ "expected_date": "2022-09-22", supplier_id: "z0VGVY3M1m", "line_items": [ { "product_uid": "52781", "expected_quantity": 8, "keep_serial_numbers": true, "has_expiration_date": false, "storage_conditions": "2" } ] }'
 </pre>
@@ -144,6 +145,7 @@ To create a new Fulfilled by Skroutz supplier.
 <pre class="terminal">
 curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/fbs/suppliers \
   -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Content-Type: application/json; charset=utf-8' \
   -H 'Authorization: Bearer your_access_token_here' \
   -d '{ "id": "xjvKD5Xr51", "code": "supplier_code", "supplier_name": "supplier_name", "address": "supplier_address", "city": "Athens", "area": "Attica", "zip_code": "42200", "phone": "1234567890", "tax_number": "1234567890", "email": "info@randomsupplier.gr" }'
 </pre>
@@ -163,6 +165,7 @@ The rest of the fields will remain unchanged.
 <pre class="terminal">
 curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/fbs/suppliers/abcdefgh \
   -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Content-Type: application/json; charset=utf-8' \
   -H 'Authorization: Bearer your_access_token_here' \
   -d '{ "address": "Another Address", "email": "newmail@newmail.gr" }'
 </pre>
