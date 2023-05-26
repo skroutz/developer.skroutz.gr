@@ -176,14 +176,14 @@ ImageBot v1".
 [Availability](#availability)                          | String  | <span class="mono">60</span>   | Ναι         | `Σε 2 μέρες`
 [Manufacturer](#manufacturer)                          | String  | <span class="mono">100</span>  | Ναι         | `Samsung`
 [MPN / ISBN](#mpn--isbn)                               | String  | <span class="mono">80</span>   | Ναι         | `GF322234`
-[EAN / Barcode](#ean--barcode)                         | Integer | <span class="mono">13</span>   | Όχι         | `9780471117094`
+[EAN / Barcode](#ean--barcode)                         | Integer | <span class="mono">13</span>   | Ναι         | `9780471117094`
 [Size](#size)                                          | String  | <span class="mono">500</span>  | Όχι<b><sup>1</sup></b>| `36,37,38 1/2,40,44`
 [Weight](#weight)                                      | Decimal | <span class="mono">-</span>    | Όχι<b><sup>2</sup></b>| `3200`
 [InStock](#instock)<br/><span class="label label-warning">Deprecated</span> | List    | <span class="mono">-</span>    | Όχι         | `Y`
 [Shipping Costs](#shipping-costs)                      | Decimal | <span class="mono">-</span>    | Όχι         | `3.22`
 [Color](#color)                                        | String  | <span class="mono">100</span>  | Όχι<b><sup>3</sup></b>| `Μαύρο`
 [Description](#description)                            | String  | <span class="mono">1000</span> | Όχι<b><sup>4</sup></b>| `Σετ 3 τρόλεϊ. Οι βαλίτσες διαθέτουν 4 διπλές ρόδες και κλειδαριά με συνδυασμό. Με δυο ανατομικές λαβές, μια στο επάνω μέρος και μια στο πλάι. Διαθέτουν εσωτερικό χώρισμα και θήκες οργάνωσης. Βαλίτσα 70 cm: Διαστάσεις 48 x 70 x 28 cm, Βάρος 4,8 Kg, Χωρητικότητα 94lt. Βαλίτσα 60 cm: Διαστάσεις 41 x 58 x 25 cm, Βάρος 4,1 Kg, Χωρητικότητα 60lt. Βαλίτσα Καμπίνας: Διαστάσεις 35 x 55 x 20 cm, Βάρος 2,7 Kg, Χωρητικότητα 38lt. Υλικό: Light weight ABS και μηχανισμός αλουμινίου.`
-[Quantity](#quantity)                                  | Integer | <span class="mono">8</span>    | Όχι | `10`
+[Quantity](#quantity)                                  | Integer | <span class="mono">8</span>    | Ναι | `10`
 [Size Variations](#size-variation)                     | Embedded XML Element | <span class="mono">-</span> | Όχι<b><sup>5</sup></b> | `<variations>`<br />&nbsp;&nbsp;`<variation>...</variation>`<br />&nbsp;&nbsp;`<variation>...</variation>`<br />`</variations>`
 
 <small><b><sup>1</sup></b> Υποχρεωτικό για τις κατηγορίες μόδας όπου υπάρχουν νούμερα, επιπρόσθετες εικόνες</small><br />
@@ -473,9 +473,7 @@ To <%= settings.site_name.capitalize %> χρησιμοποιεί ένα προκ
 Χρησιμοποιείται για την ταυτοποίηση των προϊόντων σε περίπτωση που αυτό δεν
 είναι εμφανές από το μοντέλο.
 
-> Το πεδίο αυτό είναι υποχρεωτικό για τις κατηγορίες όπου ο κωδικός του
-  κατασκευαστή είναι σημαντικός για την αναγνώριση και ταξινόμηση του προϊόντος
-  (π.χ. Τηλεοράσεις, Κινητά τηλέφωνα, Ρολόγια Χειρός, Αθλητικά Παπούτσια κτλ)
+> Το πεδίο αυτό είναι υποχρεωτικό για όλες τις κατηγορίες.
 
 Αν το προϊόν είναι **βιβλίο**, το πεδίο αυτό είναι υποχρεωτικό και πρέπει να
 περιέχει τον αριθμό **ISBN** του βιβλίου.
@@ -489,9 +487,8 @@ To <%= settings.site_name.capitalize %> χρησιμοποιεί ένα προκ
 ([EAN](https://en.wikipedia.org/wiki/International_Article_Number_(EAN)))
 που χρησιμοποιείται για την ταυτοποίηση των προϊόντων λιανικής.
 
-> Αυτό το πεδίο είναι προαιρετικό αλλά συνιστάται για τις κατηγορίες με
-προϊόντα που είναι του ίδιου είδους αλλά έχουν διαφοροποιήσεις στο βάρος, χρώμα κτλ.
-Ένα μοναδικό EAN χρησιμοποιείται για κάθε ξεχωριστό προϊόν.
+> Αυτό το πεδίο είναι υποχρεωτικό για όλες τις κατηγορίες.
+Ένα μοναδικό **EAN** χρησιμοποιείται για κάθε ξεχωριστό προϊόν.
 
 #### Size
 
@@ -637,7 +634,9 @@ To χρώμα του προϊόντος. Το πεδίο χρώματος λει
 
 #### Quantity
 
-Στο πεδίο αυτό μπορείτε να συμπληρώσετε την ποσότητα του προϊόντος που έχετε διαθέσιμη για πώληση μέσω του Skroutz.
+Το πεδίο αυτό είναι υποχρεωτικό για όλες τις κατηγορίες. Στο πεδίο θα πρέπει να
+συμπληρώσετε την ποσότητα του προϊόντος που έχετε διαθέσιμη για πώληση μέσω του
+Skroutz.
 
 > Το πεδίο δέχεται ακέραιες τιμές μεγαλύτερες ή ίσες του `0` και μικρότερες του `10000000`.
 

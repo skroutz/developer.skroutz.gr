@@ -173,14 +173,14 @@ Name                                                   | Type    | Length       
 [Availability](#availability)                          | String  | <span class="mono">60</span>   | Yes      | `In 2 days`
 [Manufacturer](#manufacturer)                          | String  | <span class="mono">100</span>  | Yes      | `Samsung`
 [MPN / ISBN](#mpn--isbn)                               | String  | <span class="mono">80</span>   | Yes      | `GF322234`
-[EAN / Barcode](#ean--barcode)                         | Integer | <span class="mono">13</span>   | No       | `9780471117094`
+[EAN / Barcode](#ean--barcode)                         | Integer | <span class="mono">13</span>   | Yes       | `9780471117094`
 [Size](#size)                                          | String  | <span class="mono">500</span>  | No<b><sup>1</sup></b>| `4,4.5,5-6,6 1/2`
 [Weight](#weight)                                      | Decimal | <span class="mono">-</span>    | No<b><sup>2</sup></b>| `3200`
 [InStock](#instock)<br/><span class="label label-warning">Deprecated</span> | List    | <span class="mono">-</span>    | No       | `Y`
 [Shipping Costs](#shipping-costs)                      | Decimal | <span class="mono">-</span>    | No       | `3.22`
 [Color](#color)                                        | String  | <span class="mono">100</span>  | No<b><sup>3</sup></b>| `Black`
 [Description](#description)                            | String  | <span class="mono">1000</span> | No<b><sup>4</sup></b>| `SAMSUNG Galaxy A70 as a phablet features 6.7 inch display that affords you a vivid and different visual experience. 4 cameras, 32.0MP + 5.0MP + 8.0MP rear camera + 32.0MP front camera, you can enjoy images with 1080 x 2400 high resolution. It comes with most of the features we've come to expect from a phablet, including 6GB RAM 128GB ROM storage equipped with Android Snapdragon 675 and 4500mAh big capacity battery that you can play games faster.`
-[Quantity](#quantity)                                  | Integer | <span class="mono">8</span>    | No | `10`
+[Quantity](#quantity)                                  | Integer | <span class="mono">8</span>    | Yes | `10`
 [Size Variations](#size-variation-attributes)          | Embedded XML Element | <span class="mono">-</span> | No<b><sup>5</sup></b> | `<variations>`<br />&nbsp;&nbsp;`<variation>...</variation>`<br />&nbsp;&nbsp;`<variation>...</variation>`<br />`</variations>`
 
 <small><b><sup>1</sup></b> Required by all fashion items with sizes, additional images</small><br />
@@ -430,9 +430,7 @@ accessories.
 The unique manufacturer identifier of the product. It is used to identify a
 product and classify it.
 
-> This attribute is required for categories where the Manufacturer Product Number
-is required to identify a product with different configurations (e.g. storage,
-color, etc)
+> This attribute is required for all categories.
 
 If the product is a **Book** then this field must include the `ISBN` of the book.
 
@@ -445,8 +443,7 @@ The international article number
 ([EAN](https://en.wikipedia.org/wiki/International_Article_Number_(EAN)))
 used for the identification of retail products.
 
-> This attribute is optional but is strongly recommended for categories where
-retail products have the same product brand but variations in weight, colour etc.
+> This attribute is required for all categories
 A unique EAN is allocated to each separate retail product.
 
 
@@ -608,7 +605,7 @@ important information about the specifications and usage of the product.
 
 The quantity is the amount of items available for purchase via Skroutz.
 
-> The quantity field only accepts integer values greater or equal to `0` and less or equal to `10000000`.
+> The quantity field is required for all categories and only accepts integer values greater or equal to `0` and less or equal to `10000000`.
 
 > If the product is out of stock, the indicated value should be `0`.
 
