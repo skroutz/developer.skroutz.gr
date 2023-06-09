@@ -182,15 +182,14 @@ ImageBot v1".
 [InStock](#instock)<br/><span class="label label-warning">Deprecated</span> | List    | <span class="mono">-</span>    | Όχι         | `Y`
 [Shipping Costs](#shipping-costs)                      | Decimal | <span class="mono">-</span>    | Όχι         | `3.22`
 [Color](#color)                                        | String  | <span class="mono">100</span>  | Όχι<b><sup>3</sup></b>| `Μαύρο`
-[Description](#description)                            | String  | <span class="mono">1000</span> | Όχι<b><sup>4</sup></b>| `Σετ 3 τρόλεϊ. Οι βαλίτσες διαθέτουν 4 διπλές ρόδες και κλειδαριά με συνδυασμό. Με δυο ανατομικές λαβές, μια στο επάνω μέρος και μια στο πλάι. Διαθέτουν εσωτερικό χώρισμα και θήκες οργάνωσης. Βαλίτσα 70 cm: Διαστάσεις 48 x 70 x 28 cm, Βάρος 4,8 Kg, Χωρητικότητα 94lt. Βαλίτσα 60 cm: Διαστάσεις 41 x 58 x 25 cm, Βάρος 4,1 Kg, Χωρητικότητα 60lt. Βαλίτσα Καμπίνας: Διαστάσεις 35 x 55 x 20 cm, Βάρος 2,7 Kg, Χωρητικότητα 38lt. Υλικό: Light weight ABS και μηχανισμός αλουμινίου.`
+[Description](#description)                            | String  | <span class="mono">1000</span> | Ναι | `Σετ 3 τρόλεϊ. Οι βαλίτσες διαθέτουν 4 διπλές ρόδες και κλειδαριά με συνδυασμό. Με δυο ανατομικές λαβές, μια στο επάνω μέρος και μια στο πλάι. Διαθέτουν εσωτερικό χώρισμα και θήκες οργάνωσης. Βαλίτσα 70 cm: Διαστάσεις 48 x 70 x 28 cm, Βάρος 4,8 Kg, Χωρητικότητα 94lt. Βαλίτσα 60 cm: Διαστάσεις 41 x 58 x 25 cm, Βάρος 4,1 Kg, Χωρητικότητα 60lt. Βαλίτσα Καμπίνας: Διαστάσεις 35 x 55 x 20 cm, Βάρος 2,7 Kg, Χωρητικότητα 38lt. Υλικό: Light weight ABS και μηχανισμός αλουμινίου.`
 [Quantity](#quantity)                                  | Integer | <span class="mono">8</span>    | Ναι | `10`
-[Size Variations](#size-variation)                     | Embedded XML Element | <span class="mono">-</span> | Όχι<b><sup>5</sup></b> | `<variations>`<br />&nbsp;&nbsp;`<variation>...</variation>`<br />&nbsp;&nbsp;`<variation>...</variation>`<br />`</variations>`
+[Size Variations](#size-variation)                     | Embedded XML Element | <span class="mono">-</span> | Όχι<b><sup>4</sup></b> | `<variations>`<br />&nbsp;&nbsp;`<variation>...</variation>`<br />&nbsp;&nbsp;`<variation>...</variation>`<br />`</variations>`
 
 <small><b><sup>1</sup></b> Υποχρεωτικό για τις κατηγορίες μόδας όπου υπάρχουν νούμερα, επιπρόσθετες εικόνες</small><br />
 <small><b><sup>2</sup></b> Υποχρεωτικό για τα καταστήματα που χρησιμοποιούν κανόνες βάρους για τον υπολογισμό των μεταφορικών τους</small><br />
 <small><b><sup>3</sup></b> Υποχρεωτικό για όλες τις κατηγορίες μόδας</small><br />
-<small><b><sup>4</sup></b> Υποχρεωτικό για όλα τα προϊόντα</small><br />
-<small><b><sup>5</sup></b> Προτείνεται για όλα τα προϊόντα όπου τα νούμερα είναι υποχρεωτικά</small>
+<small><b><sup>4</sup></b> Προτείνεται για όλα τα προϊόντα όπου τα νούμερα είναι υποχρεωτικά</small>
 
 
 #### Unique ID
@@ -614,10 +613,9 @@ To χρώμα του προϊόντος. Το πεδίο χρώματος λει
 
 #### Description
 
-Στο πεδίο αυτό μπορείτε να συμπληρώσετε επιπρόσθετα χαρακτηριστικά και πληροφορίες
-για τη χρήση του προϊόντος.
-
-Το πεδίο είναι προαιρετικό αλλά συνιστάται η χρήση του.
+Το πεδίο αυτό είναι υποχρεωτικό για όλες τις κατηγορίες. Στο πεδίο αυτό μπορείτε
+να συμπληρώσετε επιπρόσθετα χαρακτηριστικά και πληροφορίες για τη χρήση του
+προϊόντος.
 
 ##### Παράδειγμα
 
