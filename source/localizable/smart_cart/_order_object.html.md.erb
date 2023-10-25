@@ -117,6 +117,7 @@ Name                              | Type      | Description
 `line_items[_].commission_rate` | Double  | Commission rate as percentage, e.g. `8.34`
 `line_items[_].island_vat_discount_applied` | Boolean  | VAT discount applied (could be `true` for [invoice](#invoice-details) orders, billed to customers in [5 specific Greek islands](http://elib.aade.gr/elib/view?d=/gr/ap/2021/A_1150/))
 `line_items[_].ean`             | String  | EAN code of product (optional)
+`line_items[_].mpn`             | String  | MPN code of product (optional)
 `line_items[_].extra_info`      | String  | Additional information for item, eg. color preference or prescription details for contact lenses (optional) [webhook example](../webhook/#example-9-with-extrainfo-in-lineitems)
 `line_items[_].rejection_reason` | String | Rejection reason (possible values: `limited_stock`, `no_stock`, `discontinuation`, `wrong_price`)
 `line_items[_].return_reason` | String | User return reason (possible values: `faulty`, `wrong_product`, `withdrawal`, `wrong_size`)
@@ -131,6 +132,7 @@ Name                              | Type   | Value | Description
 `line_items[_].size.shop_value`   | String |    |Item original size as provided by the shop
 `line_items[_].size.shop_variation_uid` | String | | Variation ID in shop for an item
 `line_items[_].size.ean`          | String | | EAN code of variation
+`line_items[_].size.mpn`          | String | | MPN code of variation
 
 #### Accept options
 
