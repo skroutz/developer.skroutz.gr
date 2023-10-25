@@ -112,6 +112,8 @@ Name                              | Type      | Description
 `line_items[_].unit_price`      | Double  | Price per item in euros
 `line_items[_].total_price`     | Double  | Total item price in euros: `unit_price` * `quantity`
 `line_items[_].price_includes_vat` | Boolean  | Price includes VAT (could be `false` for [invoice](#invoice-details) with VAT exclusion)
+`line_items[_].commission`      | Double  | Commission in euros: `total_price` * (`commission_rate`/100)
+`line_items[_].commission_rate` | Double  | Commission rate as percentage, e.g. `8.34`
 `line_items[_].island_vat_discount_applied` | Boolean  | VAT discount applied (could be `true` for [invoice](#invoice-details) orders, billed to customers in [5 specific Greek islands](http://elib.aade.gr/elib/view?d=/gr/ap/2021/A_1150/))
 `line_items[_].ean`             | String  | EAN code of product (optional)
 `line_items[_].extra_info`      | String  | Additional information for item, eg. color preference or prescription details for contact lenses (optional) [webhook example](../webhook/#example-9-with-extrainfo-in-lineitems)
