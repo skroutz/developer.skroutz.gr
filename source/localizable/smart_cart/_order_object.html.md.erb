@@ -122,6 +122,7 @@ Name                              | Type      | Description
 `line_items[_].rejection_reason` | String | Rejection reason (possible values: `limited_stock`, `no_stock`, `discontinuation`, `wrong_price`)
 `line_items[_].return_reason` | String | User return reason (possible values: `faulty`, `wrong_product`, `withdrawal`, `wrong_size`)
 `line_items[_].serial_numbers` | String | Serial numbers for item, concatenated by ',', e.g. `SN12345,SN56789`
+`line_items[_].tags` | Array | A list of tags that characterize the line item (optional). Supported tags: `["plus_deal"]`
 
 #### Line item size
 
