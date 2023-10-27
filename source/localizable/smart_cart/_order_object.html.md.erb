@@ -24,6 +24,7 @@ Name         | Type   | Value | Description
 `fbs_delivery_note` | String | | Order's delivery note from warehouse for orders that are fulfilled by Skroutz
 `store_pickup` | Boolean | | Whether the order will be picked up by the user at the store
 `shipping_cost` | Double | | The order's shipping cost in euros (only available for FBM (Fulfilled By Merchant) orders)
+`commission`  | Double | | Order's total commission in euros
 `pickup_window` | Object | | Selected [Pickup window](#pickup-window)
 `pickup_address` | String | | Pickup location address
 `number_of_parcels` | Integer | | Number of parcels
@@ -112,12 +113,16 @@ Name                              | Type      | Description
 `line_items[_].unit_price`      | Double  | Price per item in euros
 `line_items[_].total_price`     | Double  | Total item price in euros: `unit_price` * `quantity`
 `line_items[_].price_includes_vat` | Boolean  | Price includes VAT (could be `false` for [invoice](#invoice-details) with VAT exclusion)
+`line_items[_].commission`      | Double  | Commission in euros: `total_price` * (`commission_rate`/100)
+`line_items[_].commission_rate` | Double  | Commission rate as percentage, e.g. `8.34`
 `line_items[_].island_vat_discount_applied` | Boolean  | VAT discount applied (could be `true` for [invoice](#invoice-details) orders, billed to customers in [5 specific Greek islands](http://elib.aade.gr/elib/view?d=/gr/ap/2021/A_1150/))
 `line_items[_].ean`             | String  | EAN code of product (optional)
+`line_items[_].mpn`             | String  | MPN code of product (optional)
 `line_items[_].extra_info`      | String  | Additional information for item, eg. color preference or prescription details for contact lenses (optional) [webhook example](../webhook/#example-9-with-extrainfo-in-lineitems)
 `line_items[_].rejection_reason` | String | Rejection reason (possible values: `limited_stock`, `no_stock`, `discontinuation`, `wrong_price`)
 `line_items[_].return_reason` | String | User return reason (possible values: `faulty`, `wrong_product`, `withdrawal`, `wrong_size`)
 `line_items[_].serial_numbers` | String | Serial numbers for item, concatenated by ',', e.g. `SN12345,SN56789`
+`line_items[_].tags` | Array | A list of tags that characterize the line item (optional). Supported tags: `["plus_deal"]`
 
 #### Line item size
 
@@ -128,6 +133,7 @@ Name                              | Type   | Value | Description
 `line_items[_].size.shop_value`   | String |    |Item original size as provided by the shop
 `line_items[_].size.shop_variation_uid` | String | | Variation ID in shop for an item
 `line_items[_].size.ean`          | String | | EAN code of variation
+`line_items[_].size.mpn`          | String | | MPN code of variation
 
 #### Accept options
 
