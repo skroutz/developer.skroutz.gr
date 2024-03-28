@@ -63,6 +63,9 @@ issuing "accept" or "reject" requests for the order, respectively.
 
 To accept an order you need to provide the `pickup_location` and the `pickup_window` which are required. You can also specify `number_of_parcels` which is optional with a default value of `1` if missing.
 
+> <i class="fa fa-exclamation-triangle"></i>
+> Express orders cannot be accepted via the API. An automated mechanism will handle the order acceptance.
+
 The available param values used are provided in `accept_options` when retrieving a single order.
 
 <pre class="terminal">
