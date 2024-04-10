@@ -65,7 +65,8 @@
         "total_price": 35.98,
         "price_includes_vat": true,
         "ean": "1234567890123",
-        "serial_numbers": null
+        "serial_numbers": null,
+        "tags": ["plus_deal", "price_optimizer"]
       },
       {
         "id": "3XlV8ebjxm",
@@ -75,7 +76,8 @@
         "unit_price": 100,
         "total_price": 200,
         "price_includes_vat": true,
-        "serial_numbers": null
+        "serial_numbers": null,
+        "tags": ["coupon_deal"]
       },
       {
         "id": "ZvEKMxbxr1",
@@ -86,7 +88,8 @@
         "total_price": 51,
         "price_includes_vat": true,
         "extra_info": "Χρώμα: Πράσινο\\nΒαθμοί SPH: -6.50",
-        "serial_numbers": null
+        "serial_numbers": null,
+        "tags": ["two_plus_deal"]
       }
     ],
     "created_at": "2021-06-24T13:08:30+03:00",
