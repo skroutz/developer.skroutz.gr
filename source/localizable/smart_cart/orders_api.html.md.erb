@@ -151,6 +151,32 @@ Only one file is allowed per order. If the file is already uploaded, it will by 
   </p>
 </blockquote>
 
+### Update tracking details (FBM only)
+To allow shipment tracking, you need to provide the `courier` and `tracking_code` for each order shipment.
+
+> <i class="fa fa-exclamation-triangle"></i>
+> This endpoint is available only for FBM (Fulfilled By Merchant) orders
+>
+> <i class="fa fa-exclamation-triangle"></i>
+>The existing API endpoint is limited to updating tracking details only for orders shipped to customers and does not currently support return orders.
+>These should be still handled through merchants panel for the time being.
+
+<pre class="terminal">
+  POST /merchants/ecommerce/orders/:code/tracking_details
+</pre>
+
+
+<%= render_recording :merchants_ecommerce_orders_tracking_details %>
+
+<pre class="terminal">
+curl -X POST https://api.skroutz.gr/merchants/ecommerce/orders/191128-1234567/tracking_details \
+  -H 'Accept: application/vnd.skroutz+json; version=3.0' \
+  -H 'Content-Type: application/json; charset=utf-8' \
+  -H 'Authorization: Bearer your_access_token_here' \
+  -d '{ "tracking_details": [ { "courier":"acs", "tracking_code":"224085551" } ] }'
+</pre>
+
+
 ## Error handling
 
 In case of errors, the response will have a representative HTTP status code
