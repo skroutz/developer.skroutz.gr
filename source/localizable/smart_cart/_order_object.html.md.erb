@@ -81,10 +81,43 @@ Name                                     | Type   | Description
 
 Name                                                      | Type   | Description
 --------------------------------------------------------- | ------ | ------------------------------------------------
-`invoice_details.vat_exclusion_representative.id_type`    | String | Provided ID document type
+`invoice_details.vat_exclusion_representative.id_type`    | String | [Provided ID document type](#provided-id-document-type)
 `invoice_details.vat_exclusion_representative.id_number`  | String | Provided ID document number (last 5 digits)
 `invoice_details.vat_exclusion_representative.otp`        | String | Provided representative one-time password
 `invoice_details.vat_exclusion_representative.mobile`     | String | Representative's mobile phone number
+
+#### Provided ID document type
+
+All possible id_type values regarding the [Vat exclusion representative](#vat-exclusion-representative):
+
+id_type                                                   | Description
+--------------------------------------------------------- | ------------------------------------------------
+`none`                                                    | None
+`police_id`                                               | Police id
+`greek_army`                                              | Greek army
+`navy`                                                    | Navy
+`air_force`                                               | Air force
+`greek_police`                                            | Greek police
+`coast_guard`                                             | Coast guard
+`fire_service`                                            | Fire service
+`passport`                                                | Passport
+`center_for_foreigners`                                   | Center for foreigners
+`individual_client`                                       | Individual client
+`limited_duration_permit`                                 | Residence permit of limited duration
+`european_union_id`                                       | European Union id
+`non_indigenous_id`                                       | Non-indigenous id
+`same_descent_id`                                         | Same-descent id
+`usa_social_security_number`                              | U.S.A. Social security number
+`special_id_for_refugee_under_recognition`                | Special id for refugee under recognition
+`political_fugitive_special_id`                           | Special id for political fugitive
+`free_fugitive_permit`                                    | Residence permit for fugitive free of charge
+`humanitarian_refugee_special_id`                         | Humanitarian refugee special id
+`foreigner_birth_certificate`                             | Birth certificate of foreigner
+`non_european_union_id`                                   | Non European Union id
+`greek_rural_police`                                      | Greek rural police
+`international_protection_applicant_id`                   | International protection applicant id
+`third_country_permit_no_passport`                        | Third country residence permit without a passport
+`international_protection_permit`                         | International protection residence permit/beneficiary
 
 #### Rejection info
 
