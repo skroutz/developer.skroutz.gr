@@ -33,4 +33,4 @@
     X-Origin: lb2
     X-Cache: MISS
     X-Cached: skroutz miss(0)
-  :body: '{"success":true}'
+  :body: '{"success":true, "code":"220623-4078-5820"}'
