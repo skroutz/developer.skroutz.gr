@@ -98,6 +98,7 @@
     "gift_wrap": false,
     "fulfilled_by_skroutz": false,
     "fbs_delivery_note": null,
+    "fbs_delivery_note_url": null,
     "store_pickup": false
   }
 }'

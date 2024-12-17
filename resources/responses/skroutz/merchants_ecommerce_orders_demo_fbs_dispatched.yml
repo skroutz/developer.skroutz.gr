@@ -98,6 +98,7 @@
     "gift_wrap": false,
     "fulfilled_by_skroutz": true,
     "fbs_delivery_note": "ΤΛΑΠΟ0454022",
+    "fbs_delivery_note_url": "https://statics.scdn.gr/merchants/samples/fbs_delivery_note.pdf",
     "store_pickup": false
   }
 }'
