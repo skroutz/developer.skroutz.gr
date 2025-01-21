@@ -102,3 +102,8 @@ en:
     oss:
       encourage: 'Many components of %{flavor} are built with Open Source Software. We %{heart} OSS and try to give back as much as we can.'
       github: '%{flavor} on GitHub'
+
+  callout:
+    title: 'Earn the Skroutz Expert badge and expand your customer base'
+    description: 'Sign up today for the Skroutz Experts program and gain access to training, support, and resources that will help your clients succeed!'
+    cta: 'Learn More'

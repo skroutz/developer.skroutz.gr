@@ -1,0 +1,10 @@
+<%= partial 'partials/callout',
+            :locals => {
+              css: "callout-orange",
+              image: "skroutz_expert.svg",
+              title: t('callout.title'),
+              description: t('callout.description'),
+              action: link_to(t('callout.cta'),
+                              'https://merchants.skroutz.gr/merchants/experts',
+                              class: "btn btn-neutral-inverse text-sm",
+                              target: "_blank")} %>
