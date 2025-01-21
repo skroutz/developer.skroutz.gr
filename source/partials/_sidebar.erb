@@ -25,8 +25,8 @@
     <ul class="nav nav-sidebar">
     <% data.docs.each do |key, doc| %>
 
-      <%# Skip Doc if not supported for current flavor %>
-      <% next if doc.flavors.present? && !doc.flavors.include?(flavor) %>
+      <%# Skip Doc if not supported for current flavor or is external link %>
+      <% next if (doc.flavors.present? && !doc.flavors.include?(flavor)) || doc.external %>
 
       <li>
         <%# without sub-menu %>

@@ -79,5 +79,6 @@ skroutz_experts:
   base: "https://merchants.skroutz.gr/merchants/experts"
   featured: true
   icon: 'fa-user-circle'
+  external: true
   flavors:
     - skroutz
