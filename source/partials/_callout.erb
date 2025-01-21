@@ -1,0 +1,18 @@
+<section class="callout callout-one-line <%= css %>">
+  <div class="callout-img-container">
+    <%= image_tag(image, class: 'callout-img', loading: 'lazy', alt: '')%>
+  </div>
+  <div class="callout-main">
+    <div class="callout-content">
+      <h2 class='callout-title'><%= title %></h2>
+      <div class='callout-description'>
+        <%= description %>
+      </div>
+    </div>
+    <% if action.present? %>
+      <div class="callout-action">
+        <%= action %>
+      </div>
+    <% end %>
+  </div>
+</section>
