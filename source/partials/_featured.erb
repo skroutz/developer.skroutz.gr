@@ -3,7 +3,7 @@
     <div class="row text-center">
       <% featured.each_with_index do |(key, doc), index| %>
         <div class="col-xs-12 col-sm-4 col-md-2 <%= featured_offset(featured.size) if index.zero? %>">
-          <% link_to doc.base do %>
+          <% link_to doc.base, target: doc.external ? '_blank' : '_self'  do %>
             <i class="<%= doc.icon %>"></i>
             <span><%= t("titles.#{key}", flavor: settings.site_name.titleize) %></span>
           <% end %>

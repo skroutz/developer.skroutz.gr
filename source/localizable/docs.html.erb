@@ -6,8 +6,8 @@ title: docs
 
 <div class="row">
   <% data.docs.each do |key, doc| %>
-    <%# Skip Doc if not supported for current flavor %>
-    <% next unless flavored?(doc) %>
+    <%# Skip Doc if not supported for current flavor or is external link %>
+    <% next if !flavored?(doc) || doc.external %>
 
     <div class="panel-doc-wrapper">
       <div class="panel-doc">

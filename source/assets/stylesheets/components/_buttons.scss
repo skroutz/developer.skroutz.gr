@@ -46,6 +46,10 @@
   @include button-variant-inverse($brand-primary, $app-clr-white, transparent, $brand-primary);
 }
 
+.btn-neutral-inverse {
+  @include button-variant-inverse($gray, $app-clr-white, transparent, $gray);
+}
+
 // Button :: Size :: Extra Large
 .btn-xlg {
   @include button-size($padding-large-vertical + 5, $padding-large-horizontal + 20, $font-size-xlarge, $line-height-xlarge, $border-radius-base);

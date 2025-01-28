@@ -13,6 +13,7 @@ el:
     guides: 'Guides'
     extra: 'Looking for something else?'
     support: 'Support'
+    skroutz_experts: 'Skroutz Experts'
 
   docs:
     index:
@@ -92,3 +93,8 @@ el:
     oss:
       encourage: 'Many components of %{flavor} are built with Open Source Software. We %{heart} OSS and try to give back as much as we can.'
       github: '%{flavor} on GitHub'
+
+  callout:
+    title: 'Απόκτησε το σήμα Skroutz Expert και διεύρυνε το πελατολόγιό σου'
+    description: 'Εγγράψου σήμερα στο πρόγραμμα Skroutz Experts και απόκτησε πρόσβαση σε εκπαίδευση, υποστήριξη και πόρους που θα βοηθήσουν στην επιτυχία των πελατών σου!'
+    cta: 'Μάθετε περισσότερα'

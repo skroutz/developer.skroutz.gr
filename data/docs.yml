@@ -74,3 +74,11 @@ partner_sku_reviews:
   pages:
     - { title: 'overview', url: '/partner_sku_reviews/' }
     - { title: 'wordpress_widgets' }
+
+skroutz_experts:
+  base: "https://merchants.skroutz.gr/merchants/experts"
+  featured: true
+  icon: 'fa-user-circle'
+  external: true
+  flavors:
+    - skroutz
