@@ -40,6 +40,7 @@ Name                              | Type   | Description
 `customer.address`                | Object |[Customer shipping address](#customer-shipping-address)
 `customer.phone`                  | String |Phone number (only available for FBM (Fulfilled By Merchant) orders or orders with invoice.)
 `customer.mobile`                 | String |Mobile phone number (only available for FBM (Fulfilled By Merchant) orders or orders with invoice.)
+`customer.skroutz_plus_user`      | Boolean | Indicates whether the customer is a Skroutz Plus user
 
 #### Customer shipping address
 
@@ -53,6 +54,7 @@ Name                                            | Type    | Description
 `customer.address.country_code`                 | String  | Address country code
 `customer.address.pickup_from_collection_point` | Boolean | Pickup from collection point
 `customer.address.collection_point_address`     | String  | Collection point address (available when pickup address is a collection point)
+`customer.address.comments`                     | String  | User's comments regarding the address
 
 #### Invoice details
 
