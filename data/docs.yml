@@ -49,14 +49,6 @@ cps_orders_api:
   flavors:
     - skroutz
 
-order_stash:
-  base: '/order_stash/'
-  featured: true
-  icon: 'fa-shopping-basket'
-  flavors:
-    - skroutz
-    - alve
-
 partner_badge:
   base: '/partner_badge/'
   featured: true
