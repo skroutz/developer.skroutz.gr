@@ -6,7 +6,6 @@ el:
     analytics: 'Analytics'
     smart_cart: 'Marketplace'
     cps_orders_api: 'CPS Παραγγελίες'
-    partner_sku_reviews: '%{flavor} Product Reviews'
     docs: 'Developer Documentation'
     guides: 'Guides'
     extra: 'Looking for something else?'
@@ -39,10 +38,6 @@ el:
       webhook: 'Webhook'
     cps_orders_api:
       short_description: 'The API to control your CPS orders in %{flavor}.'
-    partner_sku_reviews:
-      short_description: 'Display product-related %{flavor} content in your website, such as user reviews and ratings.'
-      overview: 'Overview'
-      wordpress_widgets: 'Wordpress Widgets'
 
   lang:
     el: 'Ελληνικά'
