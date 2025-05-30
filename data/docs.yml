@@ -49,14 +49,6 @@ cps_orders_api:
   flavors:
     - skroutz
 
-partner_badge:
-  base: '/partner_badge/'
-  featured: true
-  icon: 'fa-trophy'
-  flavors:
-    - skroutz
-    - alve
-
 partner_sku_reviews:
   base: '/partner_sku_reviews/'
   featured: true

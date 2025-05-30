@@ -5,7 +5,6 @@ tr:
     authorization: 'Authorization'
     analytics: 'Analytics'
     smart_cart: 'Smart Cart'
-    partner_badge: 'Partner Badge'
     partner_sku_reviews: '%{flavor} Product Reviews'
     docs: 'Developer Documentation'
     guides: 'Guides'
@@ -36,8 +35,6 @@ tr:
       overview: 'Overview'
       orders_api: 'Orders API'
       webhook: 'Webhook'
-    partner_badge:
-      short_description: 'A mark of trust and a quality indicator powered by %{flavor}.'
     partner_sku_reviews:
       short_description: 'Display product-related %{flavor} content in your website, such as user reviews and ratings.'
       overview: 'Overview'

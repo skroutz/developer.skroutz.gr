@@ -7,7 +7,6 @@ en:
     analytics: 'Analytics'
     smart_cart: 'Marketplace'
     cps_orders_api: 'CPS Orders'
-    partner_badge: 'Partner Badge'
     partner_sku_reviews: '%{flavor} Product Reviews'
     docs: 'Developer Documentation'
     guides: 'Guides'
@@ -44,8 +43,6 @@ en:
       webhook: 'Webhook'
     cps_orders_api:
       short_description: 'The API to control your CPS orders in %{flavor}.'
-    partner_badge:
-      short_description: 'A mark of trust and a quality indicator powered by %{flavor}.'
     partner_sku_reviews:
       short_description: 'Display product-related %{flavor} content in your website, such as user reviews and ratings.'
       overview: 'Overview'
