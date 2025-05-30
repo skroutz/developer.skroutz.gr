@@ -49,16 +49,6 @@ cps_orders_api:
   flavors:
     - skroutz
 
-partner_sku_reviews:
-  base: '/partner_sku_reviews/'
-  featured: true
-  icon: 'fa-comments'
-  flavors:
-    - skroutz
-  pages:
-    - { title: 'overview', url: '/partner_sku_reviews/' }
-    - { title: 'wordpress_widgets' }
-
 skroutz_experts:
   base: "https://merchants.skroutz.gr/merchants/experts"
   featured: true
