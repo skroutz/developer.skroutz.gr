@@ -49,32 +49,6 @@ cps_orders_api:
   flavors:
     - skroutz
 
-order_stash:
-  base: '/order_stash/'
-  featured: true
-  icon: 'fa-shopping-basket'
-  flavors:
-    - skroutz
-    - alve
-
-partner_badge:
-  base: '/partner_badge/'
-  featured: true
-  icon: 'fa-trophy'
-  flavors:
-    - skroutz
-    - alve
-
-partner_sku_reviews:
-  base: '/partner_sku_reviews/'
-  featured: true
-  icon: 'fa-comments'
-  flavors:
-    - skroutz
-  pages:
-    - { title: 'overview', url: '/partner_sku_reviews/' }
-    - { title: 'wordpress_widgets' }
-
 skroutz_experts:
   base: "https://merchants.skroutz.gr/merchants/experts"
   featured: true
