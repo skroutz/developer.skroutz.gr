@@ -43,6 +43,7 @@
       }
     },
     "invoice": false,
+    "uploaded_invoice_file": null,
     "comments": "Παράδοση στο γραφείο",
     "courier": "CourierCenter",
     "courier_voucher": null,

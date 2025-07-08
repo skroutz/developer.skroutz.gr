@@ -43,6 +43,7 @@
       }
     },
     "invoice": false,
+    "uploaded_invoice_file": "https://b.scdn.gr/path-to/invoice-file-name.pdf",
     "comments": "Παράδοση στο γραφείο",
     "courier": "CourierCenter",
     "courier_voucher": "https://skroutz.gr/merchants/sample_vouchers/courier_center.pdf",

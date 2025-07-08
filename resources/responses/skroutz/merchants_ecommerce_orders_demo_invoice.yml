@@ -45,6 +45,7 @@
       }
     },
     "invoice": true,
+    "uploaded_invoice_file": null,
     "invoice_details": {
       "company": "ACME",
       "profession": "Internet Services",

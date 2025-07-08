@@ -6,6 +6,7 @@ Name         | Type   | Value | Description
 `state`      | String | `open`, `accepted`, `rejected`, `cancelled`, `expired`,<br> `dispatched`, `delivered`, `partially_returned`, `returned`, `for_return`, `partially_delivered` | Order state
 `customer`   | Object | | [Customer details](#customer-details)
 `invoice`        | Boolean | | Invoice requested
+`uploaded_invoice_file` | String | | URL of the invoice file uploaded by the merchant
 `invoice_details` | Object | | [Invoice details](#invoice-details) (available when invoice is requested)
 `comments`   | String | | Order comments
 `courier`    | String | `Skroutz Last Mile`, `ACS`, `Speedex`, `Elta`, `EasyMail`, `DHL`, `Dpd`, `Diakinisis`, `Delatolas`, `Beinoglou`, `Geniki Taxydromiki` | Order's shipment courier
