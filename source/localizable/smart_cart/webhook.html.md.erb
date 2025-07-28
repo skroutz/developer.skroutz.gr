@@ -25,6 +25,17 @@ by the merchant from within
 [Smart Cart settings](https://<%= settings.merchants_domain %>/merchants/account/shop/ecommerce_details)
 page in merchant's panel (Merchants > Services > [Skroutz Marketplace](https://<%= settings.merchants_domain %>/merchants/account/shop/ecommerce_details)).
 
+Webhook requests are sent to your specified URL from the following IPv4 addresses:
+
+* **3.72.204.195/32**
+* **3.67.183.221/32**
+* **3.73.204.153/32**
+* **63.34.193.172/32**
+* **54.195.53.34/32**
+* **108.129.50.199/32**
+
+Please ensure these IPs are whitelisted in your firewall or security tools to prevent webhook delivery failures.
+
 > <i class="fa fa-exclamation-triangle"></i>
 > The **webhook URL should match the shop's domain** and it should follow secure **HTTP (HTTPS)**
 
