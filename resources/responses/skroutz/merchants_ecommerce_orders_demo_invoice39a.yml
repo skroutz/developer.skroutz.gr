@@ -125,6 +125,8 @@
     "fulfilled_by_skroutz": false,
     "fbs_delivery_note": null,
     "fbs_delivery_note_url": null,
+    "paid_by_user": true,
+    "payment_method": "card",
     "store_pickup": false,
     "accept_options": {
       "number_of_parcels": [
