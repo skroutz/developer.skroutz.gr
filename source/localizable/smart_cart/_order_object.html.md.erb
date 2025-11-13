@@ -1,178 +1,180 @@
 #### Order object
 
-Name         | Type   | Value | Description
------------- | ------ | ----- | -----------------
-`code`       | String | | Order code
-`state`      | String | `open`, `accepted`, `rejected`, `cancelled`, `expired`,<br> `dispatched`, `delivered`, `partially_returned`, `returned`, `for_return`, `partially_delivered` | Order state
-`customer`   | Object | | [Customer details](#customer-details)
-`invoice`        | Boolean | | Invoice requested
-`uploaded_invoice_file` | String | | URL of the invoice file uploaded by the merchant
-`invoice_details` | Object | | [Invoice details](#invoice-details) (available when invoice is requested)
-`comments`   | String | | Order comments
-`courier`    | String | `Skroutz Last Mile`, `ACS`, `Speedex`, `Elta`, `EasyMail`, `DHL`, `Dpd`, `Diakinisis`, `Delatolas`, `OB Streem`, `Geniki Taxydromiki` | Order's shipment courier
-`courier_voucher` | String | | Order's shipment courier voucher URL
-`courier_tracking_codes` | Array | | Order's shipment courier tracking codes
-`line_items` | Array |  | [Order line items (products)](#order-line-items-array)
-`created_at` | Date String in format<br> `YYYY-MM-DDTHH:MM:SS+HH:M` | | Order creation date
-`expires_at` | Date String in format<br> `YYYY-MM-DDTHH:MM:SS+HH:M` | | Order expiration date
-`dispatch_until` | Date String in format<br> `YYYY-MM-DDTHH:MM:SS+HH:M` | | Order maximum dispatch date
-`express` | Boolean | | Whether the order is marked as express delivery
-`gift_wrap` | Boolean | | Whether gift wrap was requested
-`rejection_info` | Object | | [Rejection info](#rejection-info) (available for orders rejected with `other` reason)
-`accept_options` | Object | | [Accept options](#accept-options) (available for orders with state `"open"`)
-`reject_options` | Object | | [Reject options](#reject-options) (available for orders with state `"open"`)
-`fulfilled_by_skroutz` | Boolean | | Whether the order is fulfilled by skroutz
-`fbs_delivery_note` | String | | Order's delivery note from warehouse for orders that are fulfilled by Skroutz
-`fbs_delivery_note_url` | String | | Order's digital delivery note PDF url from warehouse for orders that are fulfilled by Skroutz
-`store_pickup` | Boolean | | Whether the order will be picked up by the user at the store
-`shipping_cost` | Double | | The order's shipping cost in euros (only available for FBM (Fulfilled By Merchant) orders)
-`commission`  | Double | | Order's total commission in euros
-`pickup_window` | Object | | Selected [Pickup window](#pickup-window)
-`pickup_address` | String | | Pickup location address
-`number_of_parcels` | Integer | | Number of parcels
-`custom` | Array | `GIFT-WRAP`, `RETURN-FROM-SERVICE`, `RETURN-AS-IS` | Additional order info, `GIFT-WRAP` when gift wrap is requested, `RETURN-FROM-SERVICE` order is created to return items after service check is completed, `RETURN-AS-IS` order is created to return back to the user the same items you received as return, DO NOT send new items
+| Name                     | Type                                                 | Value                                                                                                                                                        | Description                                                                                                                                                                                                                                                                      |
+|--------------------------|------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `code`                   | String                                               |                                                                                                                                                              | Order code                                                                                                                                                                                                                                                                       |
+| `state`                  | String                                               | `open`, `accepted`, `rejected`, `cancelled`, `expired`,<br> `dispatched`, `delivered`, `partially_returned`, `returned`, `for_return`, `partially_delivered` | Order state                                                                                                                                                                                                                                                                      |
+| `customer`               | Object                                               |                                                                                                                                                              | [Customer details](#customer-details)                                                                                                                                                                                                                                            |
+| `invoice`                | Boolean                                              |                                                                                                                                                              | Invoice requested                                                                                                                                                                                                                                                                |
+| `uploaded_invoice_file`  | String                                               |                                                                                                                                                              | URL of the invoice file uploaded by the merchant                                                                                                                                                                                                                                 |
+| `invoice_details`        | Object                                               |                                                                                                                                                              | [Invoice details](#invoice-details) (available when invoice is requested)                                                                                                                                                                                                        |
+| `comments`               | String                                               |                                                                                                                                                              | Order comments                                                                                                                                                                                                                                                                   |
+| `courier`                | String                                               | `Skroutz Last Mile`, `ACS`, `Speedex`, `Elta`, `EasyMail`, `DHL`, `Dpd`, `Diakinisis`, `Delatolas`, `OB Streem`, `Geniki Taxydromiki`                        | Order's shipment courier                                                                                                                                                                                                                                                         |
+| `courier_voucher`        | String                                               |                                                                                                                                                              | Order's shipment courier voucher URL                                                                                                                                                                                                                                             |
+| `courier_tracking_codes` | Array                                                |                                                                                                                                                              | Order's shipment courier tracking codes                                                                                                                                                                                                                                          |
+| `line_items`             | Array                                                |                                                                                                                                                              | [Order line items (products)](#order-line-items-array)                                                                                                                                                                                                                           |
+| `created_at`             | Date String in format<br> `YYYY-MM-DDTHH:MM:SS+HH:M` |                                                                                                                                                              | Order creation date                                                                                                                                                                                                                                                              |
+| `expires_at`             | Date String in format<br> `YYYY-MM-DDTHH:MM:SS+HH:M` |                                                                                                                                                              | Order expiration date                                                                                                                                                                                                                                                            |
+| `dispatch_until`         | Date String in format<br> `YYYY-MM-DDTHH:MM:SS+HH:M` |                                                                                                                                                              | Order maximum dispatch date                                                                                                                                                                                                                                                      |
+| `express`                | Boolean                                              |                                                                                                                                                              | Whether the order is marked as express delivery                                                                                                                                                                                                                                  |
+| `gift_wrap`              | Boolean                                              |                                                                                                                                                              | Whether gift wrap was requested                                                                                                                                                                                                                                                  |
+| `rejection_info`         | Object                                               |                                                                                                                                                              | [Rejection info](#rejection-info) (available for orders rejected with `other` reason)                                                                                                                                                                                            |
+| `accept_options`         | Object                                               |                                                                                                                                                              | [Accept options](#accept-options) (available for orders with state `"open"`)                                                                                                                                                                                                     |
+| `reject_options`         | Object                                               |                                                                                                                                                              | [Reject options](#reject-options) (available for orders with state `"open"`)                                                                                                                                                                                                     |
+| `fulfilled_by_skroutz`   | Boolean                                              |                                                                                                                                                              | Whether the order is fulfilled by skroutz                                                                                                                                                                                                                                        |
+| `fbs_delivery_note`      | String                                               |                                                                                                                                                              | Order's delivery note from warehouse for orders that are fulfilled by Skroutz                                                                                                                                                                                                    |
+| `fbs_delivery_note_url`  | String                                               |                                                                                                                                                              | Order's digital delivery note PDF url from warehouse for orders that are fulfilled by Skroutz                                                                                                                                                                                    |
+| `store_pickup`           | Boolean                                              |                                                                                                                                                              | Whether the order will be picked up by the user at the store                                                                                                                                                                                                                     |
+| `shipping_cost`          | Double                                               |                                                                                                                                                              | The order's shipping cost in euros (only available for FBM (Fulfilled By Merchant) orders)                                                                                                                                                                                       |
+| `commission`             | Double                                               |                                                                                                                                                              | Order's total commission in euros                                                                                                                                                                                                                                                |
+| `pickup_window`          | Object                                               |                                                                                                                                                              | Selected [Pickup window](#pickup-window)                                                                                                                                                                                                                                         |
+| `pickup_address`         | String                                               |                                                                                                                                                              | Pickup location address                                                                                                                                                                                                                                                          |
+| `number_of_parcels`      | Integer                                              |                                                                                                                                                              | Number of parcels                                                                                                                                                                                                                                                                |
+| `custom`                 | Array                                                | `GIFT-WRAP`, `RETURN-FROM-SERVICE`, `RETURN-AS-IS`                                                                                                           | Additional order info, `GIFT-WRAP` when gift wrap is requested, `RETURN-FROM-SERVICE` order is created to return items after service check is completed, `RETURN-AS-IS` order is created to return back to the user the same items you received as return, DO NOT send new items |
+| `payment_method`         | String                                               | `card`, `cash_on_delivery`, `loan`, `bank_transfer`, `iris`, `wallet`, `edenred`, `revolut`                                                                  | Payment method selected by the customer                                                                                                                                                                                                                                          |
+| `paid_by_user `          | Boolean                                              |                                                                                                                                                              | Whether the payment has been completed successfully by the customer before assigning the order to the shop. (`false` for Cash on Delivery orders)                                                                                                                                |
 
 #### Customer details
 
-Name                              | Type   | Description
---------------------------------- | ------ | --------------------------------------------
-`customer.id`                     | String |Unique customer ID
-`customer.first_name`             | String |First name
-`customer.last_name`              | String |Last name
-`customer.address`                | Object |[Customer shipping address](#customer-shipping-address)
-`customer.phone`                  | String |Phone number (only available for FBM (Fulfilled By Merchant) orders or orders with invoice.)
-`customer.mobile`                 | String |Mobile phone number (only available for FBM (Fulfilled By Merchant) orders or orders with invoice.)
-`customer.skroutz_plus_user`      | Boolean | Indicates whether the customer is a Skroutz Plus user
+| Name                         | Type    | Description                                                                                         |
+|------------------------------|---------|-----------------------------------------------------------------------------------------------------|
+| `customer.id`                | String  | Unique customer ID                                                                                  |
+| `customer.first_name`        | String  | First name                                                                                          |
+| `customer.last_name`         | String  | Last name                                                                                           |
+| `customer.address`           | Object  | [Customer shipping address](#customer-shipping-address)                                             |
+| `customer.phone`             | String  | Phone number (only available for FBM (Fulfilled By Merchant) orders or orders with invoice.)        |
+| `customer.mobile`            | String  | Mobile phone number (only available for FBM (Fulfilled By Merchant) orders or orders with invoice.) |
+| `customer.skroutz_plus_user` | Boolean | Indicates whether the customer is a Skroutz Plus user                                               |
 
 #### Customer shipping address
 
-Name                                            | Type    | Description
------------------------------------------------ | ------- | --------------------------------------------
-`customer.address.street_name`                  | String  | Address street
-`customer.address.street_number`                | String  | Address number
-`customer.address.zip`                          | String  | Address postal code
-`customer.address.city`                         | String  | Address city
-`customer.address.region`                       | String  | Address region
-`customer.address.country_code`                 | String  | Address country code
-`customer.address.pickup_from_collection_point` | Boolean | Pickup from collection point
-`customer.address.collection_point_address`     | String  | Collection point address (available when pickup address is a collection point)
-`customer.address.comments`                     | String  | User's comments regarding the address
+| Name                                            | Type    | Description                                                                    |
+|-------------------------------------------------|---------|--------------------------------------------------------------------------------|
+| `customer.address.street_name`                  | String  | Address street                                                                 |
+| `customer.address.street_number`                | String  | Address number                                                                 |
+| `customer.address.zip`                          | String  | Address postal code                                                            |
+| `customer.address.city`                         | String  | Address city                                                                   |
+| `customer.address.region`                       | String  | Address region                                                                 |
+| `customer.address.country_code`                 | String  | Address country code                                                           |
+| `customer.address.pickup_from_collection_point` | Boolean | Pickup from collection point                                                   |
+| `customer.address.collection_point_address`     | String  | Collection point address (available when pickup address is a collection point) |
+| `customer.address.comments`                     | String  | User's comments regarding the address                                          |
 
 #### Invoice details
 
 This attribute is present only when a user requests an invoice for the order.
 
-Name                                           | Type    | Description
----------------------------------------------- | ------- | ------------------------------------------------
-`invoice_details.company`                      | String  | Company's name
-`invoice_details.profession`                   | String  | Company's profession
-`invoice_details.vat_number`                   | String  | Company's VAT number
-`invoice_details.doy`                          | String  | Company's public economic service
-`invoice_details.address`                      | Object  | [Billing address](#billing-address)
-`invoice_details.vat_exclusion_requested`      | Boolean | VAT exclusion requested ([Υπηρεσία άρθρου 39α](https://www.aade.gr/epiheiriseis/forologikes-ypiresies/fpa/yperesia-arthroy-39a) or EU cross-border B2B VAT exemption)
-`invoice_details.vat_exclusion_representative` | Object  | [39α representative details](#vat-exclusion-representative) (when VAT exclusion is requested for 39α orders)
+| Name                                           | Type    | Description                                                                                                                                                           |
+|------------------------------------------------|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `invoice_details.company`                      | String  | Company's name                                                                                                                                                        |
+| `invoice_details.profession`                   | String  | Company's profession                                                                                                                                                  |
+| `invoice_details.vat_number`                   | String  | Company's VAT number                                                                                                                                                  |
+| `invoice_details.doy`                          | String  | Company's public economic service                                                                                                                                     |
+| `invoice_details.address`                      | Object  | [Billing address](#billing-address)                                                                                                                                   |
+| `invoice_details.vat_exclusion_requested`      | Boolean | VAT exclusion requested ([Υπηρεσία άρθρου 39α](https://www.aade.gr/epiheiriseis/forologikes-ypiresies/fpa/yperesia-arthroy-39a) or EU cross-border B2B VAT exemption) |
+| `invoice_details.vat_exclusion_representative` | Object  | [39α representative details](#vat-exclusion-representative) (when VAT exclusion is requested for 39α orders)                                                          |
 
 #### Billing address
 
-Name                                     | Type   | Description
----------------------------------------- | ------ | --------------------------------------------
-`invoice_details.address.street_name`    | String | Address street
-`invoice_details.address.street_number`  | String | Address number
-`invoice_details.address.zip`            | String | Address postal code
-`invoice_details.address.city`           | String | Address city
-`invoice_details.address.region`         | String | Address region
+| Name                                    | Type   | Description         |
+|-----------------------------------------|--------|---------------------|
+| `invoice_details.address.street_name`   | String | Address street      |
+| `invoice_details.address.street_number` | String | Address number      |
+| `invoice_details.address.zip`           | String | Address postal code |
+| `invoice_details.address.city`          | String | Address city        |
+| `invoice_details.address.region`        | String | Address region      |
 
 #### Vat exclusion representative
 
-Name                                                      | Type   | Description
---------------------------------------------------------- | ------ | ------------------------------------------------
-`invoice_details.vat_exclusion_representative.id_type`    | String | [Provided ID document type](#provided-id-document-type)
-`invoice_details.vat_exclusion_representative.id_number`  | String | Provided ID document number (last 5 digits)
-`invoice_details.vat_exclusion_representative.otp`        | String | Provided representative one-time password
-`invoice_details.vat_exclusion_representative.mobile`     | String | Representative's mobile phone number
+| Name                                                     | Type   | Description                                             |
+|----------------------------------------------------------|--------|---------------------------------------------------------|
+| `invoice_details.vat_exclusion_representative.id_type`   | String | [Provided ID document type](#provided-id-document-type) |
+| `invoice_details.vat_exclusion_representative.id_number` | String | Provided ID document number (last 5 digits)             |
+| `invoice_details.vat_exclusion_representative.otp`       | String | Provided representative one-time password               |
+| `invoice_details.vat_exclusion_representative.mobile`    | String | Representative's mobile phone number                    |
 
 #### Provided ID document type
 
 All possible id_type values regarding the [Vat exclusion representative](#vat-exclusion-representative):
 
-ID (Provided by AADE)  | Skroutz value
-----------------------|------------------------------------------------------
- 1                    | ΑΤ Αστυνομική Ταυτότητα
- 2                    | ΕΣ Ελληνικός Στρατός
- 3                    | ΠΝ Πολεμικό Ναυτικό
- 4                    | ΠΑ Πολεμική Αεροπορία
- 5                    | ΕΑ Ελληνική Αστυνομία
- 6                    | ΛΣ Λιμενικό Σώμα
- 7                    | ΠΣ Πυροσβεστικό Σώμα
- 8                    | Διαβατήριο
- 9                    | ΚΑ Κέντρο Αλλοδαπών
- 11                   | Εντολέας ΦΠ
- 12                   | ΚΠ Κάρτα Παραμονής Περιορισμένης Χρονικής Διάρκειας
- 13                   | Ταυτότητα Ευρωπαϊκής Ένωσης
- 14                   | Ταυτότητα Ανιθαγενή (Ν.139/1975)
- 15                   | Ταυτότητα Ομογενούς
- 16                   | Αριθμός Κοινωνικής Ασφάλισης Η.Π.Α.
- 17                   | ΕΔΤ Πολιτικού Πρόσφυγα Υπό Αναγνώριση
- 18                   | Ειδικό Δελτίο Πολιτικού Φυγάδα
- 19                   | Άδεια Παραμονής Πρόσφυγα Ατελώς
- 20                   | Ειδικό Δελτίο Πρόσφυγα Ανθρωπιστικού Καθεστώτος
- 22                   | Πιστοποιητικό γέννησης αλλοδαπού
- 23                   | Ταυτότητα Χώρας Εκτός Ευωπαϊκής Ένωσης
- 24                   | ΑΓ Ελληνική Αγροφυλακή
- 25                   | Δελτίο Αιτούντος Διεθνή Προστασία
- 26                   | Άδεια Διαμονής Υπηκόου Τρίτης Χώρας Χωρίς Διαβατήριο
- 27                   | Άδεια Διαμονής/Δικαιούχος Διεθνούς Προστασίας
+| ID (Provided by AADE) | Skroutz value                                        |
+|-----------------------|------------------------------------------------------|
+| 1                     | ΑΤ Αστυνομική Ταυτότητα                              |
+| 2                     | ΕΣ Ελληνικός Στρατός                                 |
+| 3                     | ΠΝ Πολεμικό Ναυτικό                                  |
+| 4                     | ΠΑ Πολεμική Αεροπορία                                |
+| 5                     | ΕΑ Ελληνική Αστυνομία                                |
+| 6                     | ΛΣ Λιμενικό Σώμα                                     |
+| 7                     | ΠΣ Πυροσβεστικό Σώμα                                 |
+| 8                     | Διαβατήριο                                           |
+| 9                     | ΚΑ Κέντρο Αλλοδαπών                                  |
+| 11                    | Εντολέας ΦΠ                                          |
+| 12                    | ΚΠ Κάρτα Παραμονής Περιορισμένης Χρονικής Διάρκειας  |
+| 13                    | Ταυτότητα Ευρωπαϊκής Ένωσης                          |
+| 14                    | Ταυτότητα Ανιθαγενή (Ν.139/1975)                     |
+| 15                    | Ταυτότητα Ομογενούς                                  |
+| 16                    | Αριθμός Κοινωνικής Ασφάλισης Η.Π.Α.                  |
+| 17                    | ΕΔΤ Πολιτικού Πρόσφυγα Υπό Αναγνώριση                |
+| 18                    | Ειδικό Δελτίο Πολιτικού Φυγάδα                       |
+| 19                    | Άδεια Παραμονής Πρόσφυγα Ατελώς                      |
+| 20                    | Ειδικό Δελτίο Πρόσφυγα Ανθρωπιστικού Καθεστώτος      |
+| 22                    | Πιστοποιητικό γέννησης αλλοδαπού                     |
+| 23                    | Ταυτότητα Χώρας Εκτός Ευωπαϊκής Ένωσης               |
+| 24                    | ΑΓ Ελληνική Αγροφυλακή                               |
+| 25                    | Δελτίο Αιτούντος Διεθνή Προστασία                    |
+| 26                    | Άδεια Διαμονής Υπηκόου Τρίτης Χώρας Χωρίς Διαβατήριο |
+| 27                    | Άδεια Διαμονής/Δικαιούχος Διεθνούς Προστασίας        |
 
 #### Rejection info
 
-Name                                                       | Type    | Description
----------------------------------------------------------- | ------- | ------------------------------------------------
-`rejection_info.reason`                                    | String  | The rejection reason text
-`rejection_info.actor`                                     | String  | The actor who performed the rejection. Possible values: `skroutz`, `merchant`
+| Name                    | Type   | Description                                                                   |
+|-------------------------|--------|-------------------------------------------------------------------------------|
+| `rejection_info.reason` | String | The rejection reason text                                                     |
+| `rejection_info.actor`  | String | The actor who performed the rejection. Possible values: `skroutz`, `merchant` |
 
 #### Pickup window
 
-Name                                                       | Type                                                 | Description
----------------------------------------------------------- | ---------------------------------------------------- | ------------------------------------------------
-`pickup_window.from`                                       | Date String in format<br> `YYYY-MM-DDTHH:MM:SS+HH:M` | Pickup window starting date/time
-`pickup_window.to`                                         | Date String in format<br> `YYYY-MM-DDTHH:MM:SS+HH:M` | Pickup window ending date/time
+| Name                 | Type                                                 | Description                      |
+|----------------------|------------------------------------------------------|----------------------------------|
+| `pickup_window.from` | Date String in format<br> `YYYY-MM-DDTHH:MM:SS+HH:M` | Pickup window starting date/time |
+| `pickup_window.to`   | Date String in format<br> `YYYY-MM-DDTHH:MM:SS+HH:M` | Pickup window ending date/time   |
 
 #### Order line items array
 
-Name                              | Type      | Description
---------------------------------- | --------- | ------------------------------------------------
-`line_items[_].id`              | String  | Unique item ID
-`line_items[_].shop_uid`        | String  | Item ID in shop
-`line_items[_].shop_variation_uid` | String | Variation ID in shop (optional for items with size)
-`line_items[_].product_name`    | String  | Item product name
-`line_items[_].quantity`        | Integer | Item quantity
-`line_items[_].size`            | Object  | [Item size values (optional)](#line-item-size)
-`line_items[_].unit_price`      | Double  | Price per item in euros
-`line_items[_].total_price`     | Double  | Total item price in euros: `unit_price` * `quantity`
-`line_items[_].price_includes_vat` | Boolean  | Price includes VAT (could be `false` for [invoice](#invoice-details) with VAT exclusion)
-`line_items[_].commission`      | Double  | Commission in euros: `total_price` * (`commission_rate`/100)
-`line_items[_].commission_rate` | Double  | Commission rate as percentage, e.g. `8.34`
-`line_items[_].island_vat_discount_applied` | Boolean  | VAT discount applied (could be `true` for [invoice](#invoice-details) orders, billed to customers in [5 specific Greek islands](http://elib.aade.gr/elib/view?d=/gr/ap/2021/A_1150/))
-`line_items[_].ean`             | String  | EAN code of product (optional)
-`line_items[_].mpn`             | String  | MPN code of product (optional)
-`line_items[_].extra_info`      | String  | Additional information for item, eg. color preference or prescription details for contact lenses (optional) [webhook example](../webhook/#example-9-with-extrainfo-in-lineitems)
-`line_items[_].rejection_reason` | String | Rejection reason (possible values: `limited_stock`, `no_stock`, `discontinuation`, `wrong_price`, `content_mistake`)
-`line_items[_].return_reason` | String | User return reason (possible values: `faulty`, `wrong_product`, `withdrawal`, `wrong_size`)
-`line_items[_].serial_numbers` | String | Serial numbers for item, concatenated by ',', e.g. `SN12345,SN56789`
-`line_items[_].tags` | Array | A list of tags that characterize the line item (optional). Supported tags: `["plus_deal", "coupon_deal", "two_plus_deal", "price_optimizer", "cc_installments"]`
-`line_items[_].readjusted_vat` | Boolean | Whether the VAT has been readjusted for this line item (only applies to international orders)
-`line_items[_].vat_ratio` | Double | The VAT ratio for this line item
+| Name                                        | Type    | Description                                                                                                                                                                           |
+|---------------------------------------------|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `line_items[_].id`                          | String  | Unique item ID                                                                                                                                                                        |
+| `line_items[_].shop_uid`                    | String  | Item ID in shop                                                                                                                                                                       |
+| `line_items[_].shop_variation_uid`          | String  | Variation ID in shop (optional for items with size)                                                                                                                                   |
+| `line_items[_].product_name`                | String  | Item product name                                                                                                                                                                     |
+| `line_items[_].quantity`                    | Integer | Item quantity                                                                                                                                                                         |
+| `line_items[_].size`                        | Object  | [Item size values (optional)](#line-item-size)                                                                                                                                        |
+| `line_items[_].unit_price`                  | Double  | Price per item in euros                                                                                                                                                               |
+| `line_items[_].total_price`                 | Double  | Total item price in euros: `unit_price` * `quantity`                                                                                                                                  |
+| `line_items[_].price_includes_vat`          | Boolean | Price includes VAT (could be `false` for [invoice](#invoice-details) with VAT exclusion)                                                                                              |
+| `line_items[_].commission`                  | Double  | Commission in euros: `total_price` * (`commission_rate`/100)                                                                                                                          |
+| `line_items[_].commission_rate`             | Double  | Commission rate as percentage, e.g. `8.34`                                                                                                                                            |
+| `line_items[_].island_vat_discount_applied` | Boolean | VAT discount applied (could be `true` for [invoice](#invoice-details) orders, billed to customers in [5 specific Greek islands](http://elib.aade.gr/elib/view?d=/gr/ap/2021/A_1150/)) |
+| `line_items[_].ean`                         | String  | EAN code of product (optional)                                                                                                                                                        |
+| `line_items[_].mpn`                         | String  | MPN code of product (optional)                                                                                                                                                        |
+| `line_items[_].extra_info`                  | String  | Additional information for item, eg. color preference or prescription details for contact lenses (optional) [webhook example](../webhook/#example-9-with-extrainfo-in-lineitems)      |
+| `line_items[_].rejection_reason`            | String  | Rejection reason (possible values: `limited_stock`, `no_stock`, `discontinuation`, `wrong_price`, `content_mistake`)                                                                  |
+| `line_items[_].return_reason`               | String  | User return reason (possible values: `faulty`, `wrong_product`, `withdrawal`, `wrong_size`)                                                                                           |
+| `line_items[_].serial_numbers`              | String  | Serial numbers for item, concatenated by ',', e.g. `SN12345,SN56789`                                                                                                                  |
+| `line_items[_].tags`                        | Array   | A list of tags that characterize the line item (optional). Supported tags: `["plus_deal", "coupon_deal", "two_plus_deal", "price_optimizer", "cc_installments"]`                      |
+| `line_items[_].readjusted_vat`              | Boolean | Whether the VAT has been readjusted for this line item (only applies to international orders)                                                                                         |
+| `line_items[_].vat_ratio`                   | Double  | The VAT ratio for this line item                                                                                                                                                      |
 
 #### Line item size
 
-Name                              | Type   | Value | Description
---------------------------------- | ------ | ----- | --------------------------------------------
-`line_items[_].size.label`        | String | `Νούμερο`, `Μέγεθος`, `Ηλικία` |Item size label
-`line_items[_].size.value`        | String |    |Item size value
-`line_items[_].size.shop_value`   | String |    |Item original size as provided by the shop
-`line_items[_].size.shop_variation_uid` | String | | Variation ID in shop for an item
-`line_items[_].size.ean`          | String | | EAN code of variation
-`line_items[_].size.mpn`          | String | | MPN code of variation
+| Name                                    | Type   | Value                          | Description                                |
+|-----------------------------------------|--------|--------------------------------|--------------------------------------------|
+| `line_items[_].size.label`              | String | `Νούμερο`, `Μέγεθος`, `Ηλικία` | Item size label                            |
+| `line_items[_].size.value`              | String |                                | Item size value                            |
+| `line_items[_].size.shop_value`         | String |                                | Item original size as provided by the shop |
+| `line_items[_].size.shop_variation_uid` | String |                                | Variation ID in shop for an item           |
+| `line_items[_].size.ean`                | String |                                | EAN code of variation                      |
+| `line_items[_].size.mpn`                | String |                                | MPN code of variation                      |
 
 #### Accept options
 
@@ -180,31 +182,31 @@ These are valid values to POST to the corresponding keys when
 [accepting a single order](/smart_cart/orders_api/#accept-a-single-order)
 (only available for orders with state `"open"`).
 
-Name                              | Type   | Example     | Description
---------------------------------- | ------ | ----------- | --------------------------------------------------
-`accept_options.number_of_parcels`| Array  | `[1, 2, 3]` | Valid values to post on `number_of_parcels`
-`accept_options.pickup_location`  | Array  |             | [Pickup location](#accept-option-pickup-location)
-`accept_options.pickup_window`    | Array  |             | [Pickup window](#accept-option-pickup-window)
+| Name                               | Type  | Example     | Description                                       |
+|------------------------------------|-------|-------------|---------------------------------------------------|
+| `accept_options.number_of_parcels` | Array | `[1, 2, 3]` | Valid values to post on `number_of_parcels`       |
+| `accept_options.pickup_location`   | Array |             | [Pickup location](#accept-option-pickup-location) |
+| `accept_options.pickup_window`     | Array |             | [Pickup window](#accept-option-pickup-window)     |
 
 #### Accept option: Pickup location
 
 Valid pickup locations to post when
 [accepting a single order](/smart_cart/orders_api/#accept-a-single-order) (use `id`).
 
-Name                    | Type    | Description
------------------------ | ------- | -------------------------
-`pickup_location.id`    | String  | The location ID to use
-`pickup_location.label` | String  | A human readable address
+| Name                    | Type   | Description              |
+|-------------------------|--------|--------------------------|
+| `pickup_location.id`    | String | The location ID to use   |
+| `pickup_location.label` | String | A human readable address |
 
 #### Accept option: Pickup window
 
 Valid pickup windows to post when
 [accepting a single order](/smart_cart/orders_api/#accept-a-single-order) (use `id`).
 
-Name                    | Type    | Description
------------------------ | ------- | ----------------------------
-`pickup_window.id`      | Integer | The pickup window ID to use
-`pickup_window.label`   | String  | A human readable time range
+| Name                  | Type    | Description                 |
+|-----------------------|---------|-----------------------------|
+| `pickup_window.id`    | Integer | The pickup window ID to use |
+| `pickup_window.label` | String  | A human readable time range |
 
 
 #### Reject options
@@ -213,35 +215,35 @@ These are possible values to POST to the corresponding keys when
 [rejecting a single order](/smart_cart/orders_api/#reject-a-single-order)
 (only available for orders with state `"open"`).
 
-Name                                         | Type   | Description
--------------------------------------------- | ------ | ------------------------------------------------------------------------
-`reject_options.line_item_rejection_reasons` | Array  | [Line item rejection reason](#reject-option-line-item-rejection-reason)
+| Name                                         | Type  | Description                                                             |
+|----------------------------------------------|-------|-------------------------------------------------------------------------|
+| `reject_options.line_item_rejection_reasons` | Array | [Line item rejection reason](#reject-option-line-item-rejection-reason) |
 
 #### Reject option: Line item rejection reason
 
 Available reasons to post along line_item IDs when
 [rejecting a single order](/smart_cart/orders_api/#reject-a-single-order) (use `id`).
 
-Name                                                       | Type    | Description
----------------------------------------------------------- | ------- | ------------------------------------------------
-`line_item_rejection_reason.id`                            | Integer | The rejection reason ID to use
-`line_item_rejection_reason.label`                         | String  | A human readable label
-`line_item_rejection_reason.requires_available_quantity`   | Boolean | Whether or not `available_quantity` is required
+| Name                                                     | Type    | Description                                     |
+|----------------------------------------------------------|---------|-------------------------------------------------|
+| `line_item_rejection_reason.id`                          | Integer | The rejection reason ID to use                  |
+| `line_item_rejection_reason.label`                       | String  | A human readable label                          |
+| `line_item_rejection_reason.requires_available_quantity` | Boolean | Whether or not `available_quantity` is required |
 
 Possible values
 
-ID    | Label                                              | Requires Available Quantity
------ |----------------------------------------------------| ----------------------------
-`1`   | `Εκτός αποθέματος στο κατάστημα ή στον προμηθευτή` | False
-`2`   | `Λάθος καταχωρημένη τιμή(ες)`                      | False
-`4`   | `Περιορισμένα τεμάχια`                             | True
-`5`   | `To προϊόν καταργήθηκε`                            | False
-`6`   | `Λάθος ταξινόμηση προϊόντος`                       | False
+| ID  | Label                                              | Requires Available Quantity |
+|-----|----------------------------------------------------|-----------------------------|
+| `1` | `Εκτός αποθέματος στο κατάστημα ή στον προμηθευτή` | False                       |
+| `2` | `Λάθος καταχωρημένη τιμή(ες)`                      | False                       |
+| `4` | `Περιορισμένα τεμάχια`                             | True                        |
+| `5` | `To προϊόν καταργήθηκε`                            | False                       |
+| `6` | `Λάθος ταξινόμηση προϊόντος`                       | False                       |
 
 
 #### Tracking details option: Courier
 These are the possible courier values when [updating tracking details](/smart_cart/orders_api/#update-tracking-details-fbm-only)
 
-Name         | Type   | Value |
------------- | ------ | ----- |
-`courier`      | String | `acs`, `dhl`, `geniki_taxydromiki`, `dpd`, `gls`
+| Name      | Type   | Value                                            |
+|-----------|--------|--------------------------------------------------|
+| `courier` | String | `acs`, `dhl`, `geniki_taxydromiki`, `dpd`, `gls` |
