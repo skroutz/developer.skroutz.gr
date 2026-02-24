@@ -1,0 +1,18 @@
+#### Product object
+
+Name                     | Type    | Required | Description
+------------------------ | ------- | -------- | -----------------
+`product_id`             | String  | Yes      | The unique identifier of the product
+`quantity`               | Integer | Yes      | Available quantity of the product
+`enabled`                | Boolean | Yes      | Whether the product is available for purchase
+`price`                  | Integer | Yes      | Product price in cents (e.g., 1050 for €10.50)
+`variations`             | Array   | No       | Array of [product variation objects](#variation-object)
+
+#### Variation object
+
+Name                     | Type    | Required | Description
+------------------------ | ------- | -------- | -----------------
+`variation_id`           | String  | Yes      | The unique identifier of the variation
+`quantity`               | Integer | Yes      | Available quantity of the variation
+`enabled`                | Boolean | Yes      | Whether the variation is available for purchase
+`price`                  | Integer | Yes      | Variation price in cents (e.g., 1050 for €10.50)
