@@ -1,7 +1,7 @@
 el:
   titles:
     index: "%{flavor} Documentation"
-    feedspec: 'XML Feed'
+    xml_feed: "XML Feed"
     authorization: 'Authorization'
     analytics: 'Analytics'
     smart_cart: 'Marketplace'
@@ -14,9 +14,9 @@ el:
 
   docs:
     index:
-      view_doc: 'View Documentation'
-    feedspec:
-      short_description: 'Integrate your eshop with %{flavor} and reach millions of consumers.'
+      view_doc: "View Documentation"
+    xml_feed:
+      short_description: "Integrate your eshop with %{flavor} and reach millions of consumers."
     analytics:
       short_description: 'Integrate %{flavor} Analytics and find out powerful insights about your eshop.'
       overview: 'Overview'

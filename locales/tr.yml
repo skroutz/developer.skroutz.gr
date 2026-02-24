@@ -1,10 +1,10 @@
 tr:
   titles:
     index: "%{flavor} Documentation"
-    feedspec: 'XML Feed'
     authorization: 'Authorization'
     analytics: 'Analytics'
     smart_cart: 'Smart Cart'
+    products: 'Products'
     docs: 'Developer Documentation'
     guides: 'Guides'
     extra: 'Looking for something else?'
@@ -14,8 +14,11 @@ tr:
   docs:
     index:
       view_doc: 'View Documentation'
-    feedspec:
+    products:
       short_description: 'Integrate your eshop with %{flavor} and reach millions of consumers.'
+      overview: 'Overview'
+      xml_feed: 'XML Feed'
+      api: 'API'
     analytics:
       short_description: 'Integrate %{flavor} Analytics and find out powerful insights about your eshop.'
       overview: 'Overview'
