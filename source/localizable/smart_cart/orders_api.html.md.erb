@@ -10,6 +10,11 @@ title: orders_api
 > <i class="fa fa-exclamation-triangle"></i>
 > **Important update:** From 5/7/2021 onwards, more order state updates will be sent via Webhook requests. [Read more](/smart_cart/webhook#webhook-events)
 
+> <i class="fa fa-exclamation-triangle"></i>
+> **Breaking change for enrolled shops:** Starting from 30/03/2026, for shops enrolled in the mandatory "Set as Ready" program,
+> downloading the voucher will no longer automatically mark the order as ready.
+> You must explicitly call the `set_as_ready` endpoint. [Read more](#mark-order-as-ready-for-dispatch-set-as-ready)
+
 Orders API allows Skroutz Merchants to perform actions on their Smart Cart orders,
 such as accepting or rejecting an order.
 
@@ -151,6 +156,172 @@ Only one file is allowed per order. If the file is already uploaded, it will by 
   </p>
 </blockquote>
 
+### Mark order as ready for dispatch (Set as Ready)
+
+For shops with `set_as_ready_required: true` in the [order response](#retrieve-a-single-order),
+the courier Skroutz Last Mile (SLM) will only pick up orders that have been explicitly marked as ready for dispatch.
+This applies only to orders shipped via Skroutz Last Mile.
+
+| Before | After (for enrolled shops) |
+| ------ | -------------------------- |
+| Downloading the voucher via API automatically marks the order as ready for dispatch | Downloading the voucher only downloads the voucher |
+| No explicit "ready" signal needed | You must call `POST /merchants/ecommerce/orders/:code/set_as_ready` to mark the order as ready |
+| N/A | You can call `POST /merchants/ecommerce/orders/:code/set_as_not_ready` to undo (if order hasn't been picked up) |
+
+**Shops not enrolled** (default behavior): No changes. Voucher download continues to auto-mark as ready.
+
+Marking an order as ready:
+
+* Marks the order as ready for pickup by the courier
+* Triggers auto-reschedule to an earlier pickup window (if available)
+* Notifies the courier (SLM) that the order is ready for shipping
+
+**Prerequisites:**
+
+* Order must be in `accepted` state
+* Order must not already be marked as ready
+* Order must be shipped via Skroutz Last Mile (SLM)
+* Order must be a core marketplace order (not FBM, not FBS, not store pickup)
+
+<pre class="terminal">
+  POST /merchants/ecommerce/orders/:code/set_as_ready
+</pre>
+
+No request body required.
+
+#### Example
+<pre class="terminal">
+curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/orders/260225-123456/set_as_ready \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Authorization: Bearer your_access_token_here'
+</pre>
+
+#### Success Response
+
+<pre class="terminal">
+HTTP/1.1 200 OK
+Content-Type: application/json
+</pre>
+
+<%= render_code '{
+  "success": true
+}', 'javascript' %>
+
+#### Error Responses
+
+**Order not found:**
+
+<pre class="terminal">
+HTTP/1.1 404 Not Found
+</pre>
+
+<%= render_code '{
+  "errors": [
+    {
+      "code": "order_error",
+      "messages": [
+        "Order not found"
+      ]
+    }
+  ]
+}', 'javascript' %>
+
+**Order not eligible** (wrong state, already ready, etc.):
+
+<pre class="terminal">
+HTTP/1.1 422 Unprocessable Entity
+</pre>
+
+<%= render_code '{
+  "errors": [
+    {
+      "code": "order_error",
+      "messages": [
+        "Order is not eligible to be marked as ready"
+      ]
+    }
+  ]
+}', 'javascript' %>
+
+---
+
+### Mark order as not ready
+
+Undo a previous set-as-ready action. This:
+
+* Removes the ready-for-dispatch status from the order
+* Notifies the courier (SLM) that the order is no longer ready
+* Attempts to reschedule the pickup back to the original date (if possible)
+
+**Prerequisites:**
+
+* Order must be in `accepted` state
+* Order must have been previously marked as ready
+* Order must be shipped via Skroutz Last Mile (SLM)
+* Order must not have been picked up yet
+
+<pre class="terminal">
+  POST /merchants/ecommerce/orders/:code/set_as_not_ready
+</pre>
+
+No request body required.
+
+#### Example
+<pre class="terminal">
+curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/orders/260225-123456/set_as_not_ready \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Authorization: Bearer your_access_token_here'
+</pre>
+
+#### Success Response
+
+<pre class="terminal">
+HTTP/1.1 200 OK
+Content-Type: application/json
+</pre>
+
+<%= render_code '{
+  "success": true
+}', 'javascript' %>
+
+#### Error Responses
+
+**Order not found:**
+
+<pre class="terminal">
+HTTP/1.1 404 Not Found
+</pre>
+
+<%= render_code '{
+  "errors": [
+    {
+      "code": "order_error",
+      "messages": [
+        "Order not found"
+      ]
+    }
+  ]
+}', 'javascript' %>
+
+**Order not eligible for undo** (not marked as ready, already picked up, etc.):
+
+<pre class="terminal">
+HTTP/1.1 422 Unprocessable Entity
+</pre>
+
+<%= render_code '{
+  "errors": [
+    {
+      "code": "order_error",
+      "messages": [
+        "Order is not eligible for undo"
+      ]
+    }
+  ]
+}', 'javascript' %>
+
+---
+
 ### Update tracking details (FBM only)
 To allow shipment tracking, you need to provide the `courier` and `tracking_code` for each order shipment.
 
@@ -209,6 +380,110 @@ also get a `422` HTTP status code (Unprocessable Entity), with the following bod
       }
   ]
 }', 'javascript' %>
+
+## Set as Ready integration flow
+
+This section describes the recommended integration flow for shops enrolled in the
+"Set as Ready" program. Read this before testing with the [sandbox](#test-requests-sandbox).
+
+### Updated order response fields
+
+The order response includes two new fields related to Set as Ready:
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| `set_as_ready_required` | Boolean | `true` if the shop requires explicit set-as-ready (voucher download does not auto-mark as ready). `false` for shops with default behavior. |
+| `is_ready_for_dispatch` | Boolean | `true` if the order has been marked as ready for dispatch. `false` otherwise. |
+
+#### Example: enrolled shop, order not yet ready
+
+~~~ json
+{
+  "order": {
+    "code": "260225-123456",
+    "state": "accepted",
+    "set_as_ready_required": true,
+    "is_ready_for_dispatch": false,
+    "courier": "Skroutz Last Mile",
+    "courier_voucher": "https://b.scdn.gr/path-to/voucher.pdf",
+    "pickup_window": {
+      "from": "2026-02-27T09:00:00+02:00",
+      "to": "2026-02-27T12:00:00+02:00"
+    }
+  }
+}
+~~~
+
+#### Example: enrolled shop, order marked as ready
+
+~~~ json
+{
+  "order": {
+    "code": "260225-123456",
+    "state": "accepted",
+    "set_as_ready_required": true,
+    "is_ready_for_dispatch": true,
+    "courier": "Skroutz Last Mile",
+    "courier_voucher": "https://b.scdn.gr/path-to/voucher.pdf",
+    "pickup_window": {
+      "from": "2026-02-26T15:00:00+02:00",
+      "to": "2026-02-26T18:00:00+02:00"
+    }
+  }
+}
+~~~
+
+> In the example above, the `pickup_window` changed because the early set-as-ready
+> triggered an auto-reschedule to an earlier date.
+
+### For shops with `set_as_ready_required: true`
+
+<pre>
+1. Receive order (webhook or polling)
+2. Accept order        → POST /merchants/ecommerce/orders/:code/accept
+3. Download voucher    → GET  &lt;courier_voucher URL from order response&gt;
+4. Prepare the package
+5. Mark as ready       → POST /merchants/ecommerce/orders/:code/set_as_ready
+6. Courier picks up
+</pre>
+
+> <i class="fa fa-exclamation-triangle"></i>
+> Steps 3 and 5 are now independent. You can download the voucher at any time,
+> but the courier will only schedule a pickup after step 5.
+
+### For shops with `set_as_ready_required: false` (default)
+
+No changes needed. The existing flow continues to work:
+
+<pre>
+1. Receive order
+2. Accept order        → POST /merchants/ecommerce/orders/:code/accept
+3. Download voucher    → GET  &lt;courier_voucher URL from order response&gt;
+                         (auto-marks as ready)
+4. Courier picks up
+</pre>
+
+### Tips for faster pickups
+
+* Mark orders as ready as soon as they are physically prepared — don't wait for the pickup day
+* If you mark as ready before 21:00 the day before the scheduled pickup, the system may reschedule to an earlier pickup window
+* The earlier you mark as ready, the more likely an earlier pickup slot is available
+
+### FAQ
+
+**Q: What happens if I don't call `set_as_ready`?**
+A: The courier will skip your stop. The order will not be picked up.
+
+**Q: Can I still download the voucher without calling `set_as_ready`?**
+A: Yes. Voucher download and set-as-ready are independent actions.
+
+**Q: What happens if I call `set_as_not_ready`?**
+A: The order is no longer considered ready. The system will attempt to move the pickup back to the
+original scheduled date. If that's no longer possible (e.g., the date has passed), the current
+pickup schedule remains.
+
+**Q: Does this affect orders shipped with couriers other than Skroutz Last Mile?**
+A: No. This only applies to orders shipped via Skroutz Last Mile (SLM).
 
 ## Test requests (sandbox)
 
