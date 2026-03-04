@@ -1,0 +1,63 @@
+---
+parent: products
+title: overview
+---
+
+# Overview <%= edit_link %>
+
+There are currently two ways for Merchants to manage their product catalog on <%= settings.site_name %>,
+the [XML Feed](/products/xml_feed) and the [Products API](/products/api).
+
+<%= partial 'partials/toc' %>
+
+## XML Feed
+
+XML Feed allows you to submit your entire product catalog to <%= settings.site_name %> through an XML file.
+Our system periodically fetches and processes your XML to update your product listings.
+
+[XML Feed documentation](/products/xml_feed)
+
+## Products API
+
+Products API allows Skroutz Merchants to update their product inventory (availability, price, and quantity)
+in bulk.
+
+> <i class="fa fa-exclamation-triangle"></i>
+> Products API is designed for inventory updates and is not intended for creating new products.
+
+[Products API documentation](/products/api)
+
+## Use cases
+
+Both [XML Feed](/products/xml_feed) and [Products API](/products/api) can be enabled and
+used separately. For a complete product management solution though, we recommend implementing both,
+since XML Feed can be utilized for full catalog updates and the Products API can be used to make
+real-time inventory and price adjustments.
+
+#### Initial catalog setup
+
+<pre>
+— You prepare your product catalog
+← [XML Feed] Your XML file is submitted to <%= settings.site_name %>
+  — <%= settings.site_name %> processes the XML and creates your product listings
+</pre>
+
+#### Real-time inventory updates
+
+<pre>
+— A product sells out in your store
+← [Products API] Your system issues a batch update to disable the product
+  — <%= settings.site_name %> updates the product availability immediately
+    — Product is marked as unavailable on <%= settings.site_name %>
+</pre>
+
+#### Combining both methods
+
+<pre>
+— Daily scheduled catalog update
+← [XML Feed] Your complete catalog is synchronized via XML
+  — <%= settings.site_name %> processes full catalog updates
+    — Throughout the day, stock changes
+    ← [Products API] Real-time updates for price and quantity changes
+      — <%= settings.site_name %> reflects current availability instantly
+</pre>

@@ -1,12 +1,12 @@
 en:
   titles:
     index: "%{flavor} Documentation"
-    feedspec: 'XML Feed'
     csvspec: 'CSV Feed'
     authorization: 'Authorization'
     analytics: 'Analytics'
     smart_cart: 'Marketplace'
     cps_orders_api: 'CPS Orders'
+    products: 'Products'
     docs: 'Developer Documentation'
     guides: 'Guides'
     contribute: 'Contributing'
@@ -17,8 +17,11 @@ en:
   docs:
     index:
       view_doc: 'View Documentation'
-    feedspec:
+    products:
       short_description: 'Integrate your eshop with %{flavor} and reach millions of consumers.'
+      overview: 'Overview'
+      xml_feed: 'XML Feed'
+      api: 'API'
     csvspec:
       short_description: 'Integrate your eshop with %{flavor} and reach millions of consumers.'
     analytics:

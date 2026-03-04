@@ -1,7 +1,13 @@
-feedspec:
-  base: '/feedspec/'
+products:
+  base: "/products/"
   featured: true
-  icon: 'fa-file-text-o'
+  icon: "fa-cube"
+  pages:
+    - { title: "overview", url: "/products/" }
+    - { title: "xml_feed" }
+    - { title: "api" }
+  flavors:
+    - skroutz
 
 csvspec:
   base: '/csvspec/'
@@ -10,35 +16,34 @@ csvspec:
   flavors:
     - scrooge
 
-analytics:
-  base: '/analytics/'
+smart_cart:
+  base: "/smart_cart/"
   featured: true
-  icon: 'fa-bar-chart-o'
+  icon: "fa-shopping-cart"
   pages:
-    - { title: 'overview', url: '/analytics/' }
-    - { title: 'how_it_works' }
-    - { title: 'settings' }
-    - { title: 'ecommerce' }
-    - { title: 'libraries' }
-    - { title: 'examples' }
-    - { title: 'faq' }
-    - { title: 'new_script_migration_guide' }
-    - { title: 'privacy_policy', skip_flavors: ['alve', 'scrooge'] }
-    - { title: 'cps_privacy_policy', skip_flavors: ['alve', 'scrooge'] }
-    - { title: 'lawfulness_of_processing', skip_flavors: ['alve', 'scrooge'] }
+    - { title: "overview", url: "/smart_cart/" }
+    - { title: "orders_api" }
+    - { title: "fbs_api" }
+    - { title: "webhook" }
   flavors:
     - skroutz
-    - alve
 
-smart_cart:
-  base: '/smart_cart/'
+analytics:
+  base: "/analytics/"
   featured: true
-  icon: 'fa-shopping-cart'
+  icon: "fa-bar-chart-o"
   pages:
-    - { title: 'overview', url: '/smart_cart/' }
-    - { title: 'orders_api'}
-    - { title: 'fbs_api'}
-    - { title: 'webhook'}
+    - { title: "overview", url: "/analytics/" }
+    - { title: "how_it_works" }
+    - { title: "settings" }
+    - { title: "ecommerce" }
+    - { title: "libraries" }
+    - { title: "examples" }
+    - { title: "faq" }
+    - { title: "new_script_migration_guide" }
+    - { title: "privacy_policy", skip_flavors: ["alve", "scrooge"] }
+    - { title: "cps_privacy_policy", skip_flavors: ["alve", "scrooge"] }
+    - { title: "lawfulness_of_processing", skip_flavors: ["alve", "scrooge"] }
   flavors:
     - skroutz
 

@@ -9,6 +9,9 @@ require 'uglifier'
 page 'index.html', layout: false
 page '404.html', layout: false
 
+# Redirects
+redirect 'feedspec/index.html', to: '/products/xml_feed/'
+
 
 # Localization
 activate :i18n, langs: [:en, :el, :tr]

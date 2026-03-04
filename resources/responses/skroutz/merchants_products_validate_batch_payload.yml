@@ -1,0 +1,34 @@
+---
+:request:
+  :verb: :post
+  :url: https://api.skroutz.gr/merchants/products/validate_batch_payload
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3.0
+    :authorization: Bearer xWmjOaQmNgLt3dVIYBGkWVWhbrcdg4XfYqS3Jb1dMVHvGIBJcPuzVQYjH-XKenxsZgFW8DSgc9f2fI_MBVBHNw==
+  :params:
+    :data:
+      :product_id: ABC123
+      :quantity: 10
+      :enabled: true
+      :price: 2999
+:response:
+  :status: 200
+  :headers:
+    Date: Mon, 24 Feb 2025 10:15:00 GMT
+    Connection: keep-alive
+    Content-Length: 65
+    Server: h2o (Debian)
+    Content-Type: application/json; charset=utf-8
+    X-Meta-Client-Id: 27951bdf06a65ea4
+    Cache-Control: no-cache
+    X-Request-Id: 989369835
+    X-Runtime: 0.018234
+    X-App: as103_ssl
+    X-Varnish: 989369835
+    Age: 0
+    Via: 1.1 varnish (Varnish/5.0)
+    X-Origin: lb2
+    X-Cache: MISS
+    X-Cached: skroutz miss(0)
+  :body: '{"success":true,"message":"All validations passed successfully."}'
+:created_at: 2025-02-24 12:15:00.000000000 +02:00

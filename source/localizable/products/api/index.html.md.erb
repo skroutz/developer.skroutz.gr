@@ -1,0 +1,235 @@
+---
+title: api
+parent: products
+---
+
+# Products API <%= edit_link %>
+
+Products API allows Skroutz Merchants to update their product inventory (availability, price, and quantity) 
+in bulk.
+
+> <i class="fa fa-exclamation-triangle"></i>
+> Products API is designed for inventory updates and is not intended for creating new products.
+
+<%= partial 'partials/toc' %>
+
+## Setup
+
+### Obtaining an API token
+
+In order to be able to use the API, you need to generate an **API token** from within Products settings
+page in Merchants Panel (Merchants > Προϊόντα > Ανανεώσεις προϊόντων).
+
+> <i class="fa fa-exclamation-triangle"></i>
+> There can only be one active **API key** per shop at a certain time.
+> Creating a new API key will expire any previous one.
+
+### Authorization
+
+Pass in a valid **API token** in the `Authorization` header, prefixed with `Bearer `
+as in the following curl example.
+
+A specific `Accept` header is also required.
+
+<pre class="terminal">
+curl -X POST https://<%= settings.api_domain %>/merchants/products/batch \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Authorization: Bearer your_access_token_here' \
+  -H 'Content-Type: application/json; charset=utf-8'
+</pre>
+
+## Endpoints
+
+
+### Batch update products
+
+Update multiple products and their variations in a single request. You can update availability (enabled), 
+price, and quantity for up to **500 products** per request.
+
+<pre class="terminal">
+  POST /merchants/products/batch
+</pre>
+
+Each product must include all required fields as described in the [Product object attributes appendix](#product-object-attributes-appendix).
+
+<%= render_recording :merchants_products_batch %>
+
+#### Request Parameters
+
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `data` | Array | Yes | Array of [product update objects](#product-object) |
+
+##### Example Request
+
+<pre class="terminal">
+curl -X POST https://<%= settings.api_domain %>/merchants/products/batch \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Content-Type: application/json; charset=utf-8' \
+  -H 'Authorization: Bearer your_access_token_here' \
+  -d '{
+    "data": [
+      {
+        "product_id": "ABC123",
+        "quantity": 10,
+        "enabled": true,
+        "price": 2999
+      },
+      {
+        "product_id": "DEF456",
+        "quantity": 5,
+        "enabled": true,
+        "price": 4999,
+        "variations": [
+          {
+            "variation_id": "DEF456-SMALL",
+            "quantity": 3,
+            "enabled": true,
+            "price": 4999
+          },
+          {
+            "variation_id": "DEF456-LARGE",
+            "quantity": 2,
+            "enabled": true,
+            "price": 5499
+          }
+        ]
+      }
+    ]
+  }'
+</pre>
+
+
+### Validate batch payload
+
+Validate a batch update payload without actually performing the update. This endpoint performs all 
+validation checks that the batch endpoint does, but doesn't modify any data.
+
+<pre class="terminal">
+  POST /merchants/products/validate_batch_payload
+</pre>
+
+<%= render_recording :merchants_products_validate_batch_payload %>
+
+#### Request Parameters
+
+The request parameters are identical to the [batch update](#batch-update-products) endpoint.
+
+##### Example
+
+<pre class="terminal">
+curl -X POST https://<%= settings.api_domain %>/merchants/products/validate_batch_payload \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Content-Type: application/json; charset=utf-8' \
+  -H 'Authorization: Bearer your_access_token_here' \
+  -d '{
+    "data": [
+      {
+        "product_id": "ABC123",
+        "quantity": 10,
+        "enabled": true,
+        "price": 2999
+      }
+    ]
+  }'
+</pre>
+
+
+## Error handling
+
+In case of errors, the response will have a representative HTTP status code
+in the `4xx` range. The body would contain an array of `errors`.
+
+#### Invalid Format (400 Bad Request)
+
+When the request payload format is invalid:
+
+<%= render_code '{
+  "errors": [
+    {
+      "code": "invalid_format",
+      "messages": [
+        "Expected an array of product updates."
+      ]
+    }
+  ]
+}', 'javascript' %>
+
+#### Missing Required Fields (400 Bad Request)
+
+When required fields are missing:
+
+<%= render_code '{
+  "errors": [
+    {
+      "code": "invalid_format",
+      "messages": [
+        "Missing required field \'product_id\'",
+        "Product ABC123: Missing required field \'quantity\'"
+      ]
+    }
+  ]
+}', 'javascript' %>
+
+#### Invalid Field Types (400 Bad Request)
+
+When field types don't match expected types:
+
+<%= render_code '{
+  "errors": [
+    {
+      "code": "invalid_format",
+      "messages": [
+        "Product ABC123: Field \'price\' has invalid type",
+        "Variation DEF456-RED: Field \'enabled\' has invalid type"
+      ]
+    }
+  ]
+}', 'javascript' %>
+
+#### Batch Size Exceeded (400 Bad Request)
+
+When the batch contains more than 500 products:
+
+<%= render_code '{
+  "errors": [
+    {
+      "code": "invalid_batch_size",
+      "messages": [
+        "Batch size exceeds the maximum limit of 500."
+      ]
+    }
+  ]
+}', 'javascript' %>
+
+#### Invalid Shop State (422 Unprocessable Entity)
+
+When the shop is in a state that prevents updates:
+
+<%= render_code '{
+  "errors": [
+    {
+      "code": "invalid_shop_state",
+      "messages": [
+        "Shop is not in a valid state to perform this action."
+      ]
+    }
+  ]
+}', 'javascript' %>
+
+Or when the shop's XML is being processed:
+
+<%= render_code '{
+  "errors": [
+    {
+      "code": "invalid_shop_state",
+      "messages": [
+        "We are currently scanning your XML. Please try again later."
+      ]
+    }
+  ]
+}', 'javascript' %>
+
+## Product object attributes appendix
+
+<%= partial 'localizable/products/api/product_object' %>
