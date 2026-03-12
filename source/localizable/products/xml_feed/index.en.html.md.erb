@@ -510,6 +510,10 @@ forward slash. (/) e.g.
 > Products that are identified by sizes and the size information is not provided
 will **not** be classified.
 
+> The **Size** field is intended exclusively for clothing, footwear, and other products with standard sizing.
+  It should **not** be used for other parameters, such as dimensions, colors, or other special features.
+
+
 #### Weight
 
 <% if flavor == 'alve' %>
@@ -658,7 +662,10 @@ The table below summarizes the size variation attributes recognized by
 <%= settings.site_name.capitalize %>:
 
 <div class="alert alert-danger">
-  <p>Currently, size variations can only be used in products that have size as a required field.</p>
+  <p>Currently, size variations can only be used in products that have size as a required field.
+     Size variations are exclusively for items available in multiple sizes,
+     do not use this field to denote variations in dimensions, colors, or other technical specifications.
+  </p>
 </div>
 
 <div class="alert alert-danger">
