@@ -73,8 +73,10 @@ This attribute is present only when a user requests an invoice for the order.
 | `invoice_details.vat_number`                   | String  | Company's VAT number                                                                                                                                                  |
 | `invoice_details.doy`                          | String  | Company's public economic service                                                                                                                                     |
 | `invoice_details.address`                      | Object  | [Billing address](#billing-address)                                                                                                                                   |
-| `invoice_details.vat_exclusion_requested`      | Boolean | VAT exclusion requested ([Υπηρεσία άρθρου 39α](https://www.aade.gr/epiheiriseis/forologikes-ypiresies/fpa/yperesia-arthroy-39a) or EU cross-border B2B VAT exemption) |
-| `invoice_details.vat_exclusion_representative` | Object  | [39α representative details](#vat-exclusion-representative) (when VAT exclusion is requested for 39α orders)                                                          |
+| `invoice_details.vat_exclusion_requested`           | Boolean       | VAT exclusion requested ([Υπηρεσία άρθρου 39α](https://www.aade.gr/epiheiriseis/forologikes-ypiresies/fpa/yperesia-arthroy-39a) or EU cross-border B2B VAT exemption) |
+| `invoice_details.vat_exclusion_verification_method` | String        | How the VAT exclusion was verified (present when VAT exclusion is requested for 39α orders). Possible values: `"service"`, `"documents"` |
+| `invoice_details.vat_exclusion_documents`           | Array(String) | URLs of uploaded VAT exclusion documents (present when `vat_exclusion_verification_method` is `"documents"`) |
+| `invoice_details.vat_exclusion_representative`      | Object        | [39α representative details](#vat-exclusion-representative) (present when `vat_exclusion_verification_method` is `"service"`) |
 
 #### Billing address
 
