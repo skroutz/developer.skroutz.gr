@@ -44,6 +44,7 @@
     },
     "invoice": false,
     "uploaded_invoice_file": null,
+    "invoice_document": "receipt",
     "comments": "Παράδοση στο γραφείο",
     "courier": null,
     "courier_voucher": null,
@@ -81,6 +82,7 @@
     "paid_by_user": true,
     "payment_method": "card",
     "store_pickup": true,
+    "fees": {},
     "accept_options": {
       "number_of_parcels": [
         1

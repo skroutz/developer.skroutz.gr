@@ -44,6 +44,7 @@
     },
     "invoice": false,
     "uploaded_invoice_file": null,
+    "invoice_document": "receipt",
     "comments": "Παράδοση στο γραφείο",
     "courier": "CourierCenter",
     "courier_voucher": null,
@@ -102,6 +103,7 @@
     "fbs_delivery_note_url": "https://statics.scdn.gr/merchants/samples/fbs_delivery_note.pdf",
     "paid_by_user": true,
     "payment_method": "card",
-    "store_pickup": false
+    "store_pickup": false,
+    "fees": {}
   }
 }'

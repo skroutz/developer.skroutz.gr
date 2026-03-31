@@ -44,6 +44,7 @@
     },
     "invoice": false,
     "uploaded_invoice_file": null,
+    "invoice_document": "receipt",
     "comments": "Παράδοση στο γραφείο",
     "courier": "CourierCenter",
     "courier_voucher": null,
@@ -141,6 +142,7 @@
         }
       ]
     },
+    "fees": {},
     "reject_options": {
       "line_item_rejection_reasons": [
         {

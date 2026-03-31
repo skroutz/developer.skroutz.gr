@@ -542,6 +542,16 @@ A new order including an item with VAT exclusion based on “​Άρθρο 39α�
 
 <%= render_recording :merchants_ecommerce_orders_demo_invoice39a %>
 
+#### DEMO-INVOICE-VIES
+
+An open order where a VIES invoice is requested (EU cross-border B2B transaction with VAT exclusion).
+
+<pre class="terminal">
+  GET /merchants/ecommerce/orders/DEMO-INVOICE-VIES
+</pre>
+
+<%= render_recording :merchants_ecommerce_orders_demo_invoice_vies %>
+
 #### DEMO-FBS
 
 An already-accepted order without a courier voucher that will be fulfilled by Skroutz. Trying to accept it would return an error.
@@ -571,6 +581,37 @@ An open order without a courier or courier voucher that will be picked up by the
 </pre>
 
 <%= render_recording :merchants_ecommerce_orders_demo_store_pickup %>
+
+#### DEMO-FEES
+
+An open order that includes a fee breakdown (handling fee, Skroutz loyalty points discount, and installments fee).
+
+<pre class="terminal">
+  GET /merchants/ecommerce/orders/DEMO-FEES
+</pre>
+
+<%= render_recording :merchants_ecommerce_orders_demo_fees %>
+
+#### DEMO-REPLACEMENT
+
+An accepted order that is a replacement for a previously returned item.
+
+<pre class="terminal">
+  GET /merchants/ecommerce/orders/DEMO-REPLACEMENT
+</pre>
+
+<%= render_recording :merchants_ecommerce_orders_demo_replacement %>
+
+#### DEMO-REPLACED
+
+An open order that was replaced by a newer order (i.e. the original order in a return/replacement flow).
+
+<pre class="terminal">
+  GET /merchants/ecommerce/orders/DEMO-REPLACED
+</pre>
+
+<%= render_recording :merchants_ecommerce_orders_demo_replaced %>
+
 
 ## Order object attributes appendix
 

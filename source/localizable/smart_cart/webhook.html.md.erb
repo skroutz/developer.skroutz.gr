@@ -137,6 +137,12 @@ Name           | Type   | Value | Description
 > The order object included in webhook payload is the sames as the one when
 > retrieving a single order via the [orders API](/smart_cart/orders_api).
 
+> Field behavior notes:
+> - `invoice_document` is always present with one of: `receipt`, `invoice`, `invoice_39a`, `invoice_vies`
+> - `fees` is always present as an object (`{}` when no fees apply)
+> - Fee sub-fields are present only when their values are positive
+> - `replacements` and `replaced` are omitted entirely when not applicable
+
 <%= partial 'localizable/smart_cart/order_object' %>
 
 ## Test requests (sandbox)
@@ -152,6 +158,10 @@ kinds of Webhook requests** for testing. In the following examples, `:code` shou
 - `DEMO-FBS`
 - `DEMO-FBS-DISPATCHED`
 - `DEMO-STORE-PICKUP`
+- `DEMO-FEES`
+- `DEMO-REPLACEMENT`
+- `DEMO-REPLACED`
+- `DEMO-INVOICE-VIES`
 
 An order creation or order update event should be received at the webhook url of the shop, depending on the request action.
 Sending any of the following requests should request in a successful response (`200 OK`):
@@ -1820,3 +1830,408 @@ Would send a Webhook request payload just like if the order was cancelled by the
   }
 }
 ~~~
+
+#### Example 12 (with fees)
+
+~~~ json
+{
+  "event_type": "new_order",
+  "event_time": "2021-06-24T13:08:30+03:00",
+  "order": {
+    "code": "191029-5130474",
+    "state": "accepted",
+    "customer": {
+      "id": "PA4oqvpz8x",
+      "first_name": "John",
+      "last_name": "Doe",
+      "address": {
+        "street_name": "Πανεπιστημίου",
+        "street_number": "4",
+        "zip": "12345",
+        "city": "Αθήνα",
+        "region": "Αττικής",
+        "country_code": "GR",
+        "pickup_from_collection_point": false
+      }
+    },
+    "invoice": false,
+    "invoice_details": null,
+    "invoice_document": "receipt",
+    "uploaded_invoice_file": null,
+    "comments": "Παράδοση στο γραφείο",
+    "courier": "ACS",
+    "courier_voucher": null,
+    "courier_tracking_codes": [],
+    "line_items": [
+      {
+        "id": "l39vKqxqwe",
+        "shop_uid": "100",
+        "product_name": "L'Oreal Professionel Salon Steam Pod V2 White",
+        "quantity": 1,
+        "unit_price": 10.40,
+        "total_price": 10.40,
+        "price_includes_vat": true,
+        "commission": 0.87,
+        "commission_rate": 8.34,
+        "island_vat_discount_applied": false,
+        "ean": "1234567890123",
+        "serial_numbers": null,
+        "tags": ["cc_installments"]
+      }
+    ],
+    "created_at": "2021-06-24T13:08:30+03:00",
+    "expires_at": "2021-06-25T13:08:30+03:00",
+    "dispatch_until": "2021-06-28T13:08:30+03:00",
+    "express": false,
+    "gift_wrap": false,
+    "fulfilled_by_skroutz": false,
+    "store_pickup": false,
+    "fbs_delivery_note": null,
+    "fbs_delivery_note_url": null,
+    "commission": 0.87,
+    "fees": {
+      "handling_fee": 1.50,
+      "skroutz_coins_fee": 2.00,
+      "installments_fee": 3.50
+    },
+    "fulfillment_mode": "core"
+  }
+}
+~~~
+
+#### Example 13 (replacements)
+
+~~~ json
+{
+  "event_type": "new_order",
+  "event_time": "2021-06-24T13:08:30+03:00",
+  "order": {
+    "code": "191029-5130474",
+    "state": "accepted",
+    "customer": {
+      "id": "PA4oqvpz8x",
+      "first_name": "John",
+      "last_name": "Doe",
+      "address": {
+        "street_name": "Πανεπιστημίου",
+        "street_number": "4",
+        "zip": "12345",
+        "city": "Αθήνα",
+        "region": "Αττικής",
+        "country_code": "GR",
+        "pickup_from_collection_point": false
+      }
+    },
+    "invoice": false,
+    "invoice_details": null,
+    "invoice_document": "receipt",
+    "uploaded_invoice_file": null,
+    "comments": "",
+    "courier": "ACS",
+    "courier_voucher": null,
+    "courier_tracking_codes": [],
+    "line_items": [
+      {
+        "id": "l39vKqxqwe",
+        "shop_uid": "100",
+        "product_name": "L'Oreal Professionel Salon Steam Pod V2 White",
+        "quantity": 1,
+        "unit_price": 10.40,
+        "total_price": 10.40,
+        "price_includes_vat": true,
+        "commission": 0.87,
+        "commission_rate": 8.34,
+        "island_vat_discount_applied": false,
+        "ean": "1234567890123",
+        "serial_numbers": null
+      }
+    ],
+    "created_at": "2021-06-24T13:08:30+03:00",
+    "expires_at": "2021-06-25T13:08:30+03:00",
+    "dispatch_until": "2021-06-28T13:08:30+03:00",
+    "express": false,
+    "gift_wrap": false,
+    "fulfilled_by_skroutz": false,
+    "store_pickup": false,
+    "fbs_delivery_note": null,
+    "fbs_delivery_note_url": null,
+    "fees": {},
+    "replacements": [
+      {
+        "code": "DEMO-REPLACEMENT-1",
+        "type": "from_service"
+      }
+    ]
+  }
+}
+~~~
+
+#### Example 14 (replaced)
+
+~~~ json
+{
+  "event_type": "new_order",
+  "event_time": "2021-06-24T13:08:30+03:00",
+  "order": {
+    "code": "191029-5130474",
+    "state": "accepted",
+    "customer": {
+      "id": "PA4oqvpz8x",
+      "first_name": "John",
+      "last_name": "Doe",
+      "address": {
+        "street_name": "Πανεπιστημίου",
+        "street_number": "4",
+        "zip": "12345",
+        "city": "Αθήνα",
+        "region": "Αττικής",
+        "country_code": "GR",
+        "pickup_from_collection_point": false
+      }
+    },
+    "invoice": false,
+    "invoice_details": null,
+    "invoice_document": "receipt",
+    "uploaded_invoice_file": null,
+    "comments": "",
+    "courier": "ACS",
+    "courier_voucher": null,
+    "courier_tracking_codes": [],
+    "line_items": [
+      {
+        "id": "l39vKqxqwe",
+        "shop_uid": "100",
+        "product_name": "L'Oreal Professionel Salon Steam Pod V2 White",
+        "quantity": 1,
+        "unit_price": 10.40,
+        "total_price": 10.40,
+        "price_includes_vat": true,
+        "commission": 0.87,
+        "commission_rate": 8.34,
+        "island_vat_discount_applied": false,
+        "ean": "1234567890123",
+        "serial_numbers": null
+      }
+    ],
+    "created_at": "2021-06-24T13:08:30+03:00",
+    "expires_at": "2021-06-25T13:08:30+03:00",
+    "dispatch_until": "2021-06-28T13:08:30+03:00",
+    "express": false,
+    "gift_wrap": false,
+    "fulfilled_by_skroutz": false,
+    "store_pickup": false,
+    "fbs_delivery_note": null,
+    "fbs_delivery_note_url": null,
+    "fees": {},
+    "replaced": "ORIGINAL-ABC123"
+  }
+}
+~~~
+
+#### Example 15 (VIES invoice)
+
+~~~ json
+{
+  "event_type": "new_order",
+  "event_time": "2021-06-24T13:08:30+03:00",
+  "order": {
+    "code": "191029-5130474",
+    "state": "accepted",
+    "customer": {
+      "id": "PA4oqvpz8x",
+      "first_name": "John",
+      "last_name": "Doe",
+      "phone": "2109999999",
+      "mobile": "(+30) 6999999999",
+      "address": {
+        "street_name": "Πανεπιστημίου",
+        "street_number": "4",
+        "zip": "12345",
+        "city": "Αθήνα",
+        "region": "Αττικής",
+        "country_code": "GR",
+        "pickup_from_collection_point": false
+      }
+    },
+    "invoice": true,
+    "invoice_details": {
+      "company": "ACME EU",
+      "profession": "Internet Services",
+      "vat_number": "DE111119191",
+      "doy": "ΙΒ Αθηνών",
+      "address": {
+        "street_name": "Πανεπιστημίου",
+        "street_number": "4",
+        "zip": "12345",
+        "city": "Αθήνα",
+        "region": "Αττικής"
+      },
+      "vat_exclusion_requested": true
+    },
+    "invoice_document": "invoice_vies",
+    "uploaded_invoice_file": null,
+    "comments": "Παράδοση στο γραφείο",
+    "courier": "ACS",
+    "courier_voucher": null,
+    "courier_tracking_codes": [],
+    "line_items": [
+      {
+        "id": "l39vKqxqwe",
+        "shop_uid": "100",
+        "product_name": "Smartphone 123",
+        "quantity": 2,
+        "unit_price": 100,
+        "total_price": 200,
+        "price_includes_vat": false,
+        "commission": 16.68,
+        "commission_rate": 8.34,
+        "island_vat_discount_applied": false,
+        "ean": "1234567890123",
+        "serial_numbers": null
+      }
+    ],
+    "created_at": "2021-06-24T13:08:30+03:00",
+    "expires_at": "2021-06-25T13:08:30+03:00",
+    "dispatch_until": "2021-06-28T13:08:30+03:00",
+    "express": false,
+    "gift_wrap": false,
+    "fulfilled_by_skroutz": false,
+    "store_pickup": false,
+    "fbs_delivery_note": null,
+    "fbs_delivery_note_url": null
+  }
+}
+~~~
+
+~~~ json
+{
+  "event_type": "new_order",
+  "event_time": "2019-11-28T13:24:37+02:00",
+  "order": {
+    "code": "191029-5130474",
+    "state": "open",
+    "customer": {
+      "id": "PA4oqvpz8x",
+      "first_name": "John",
+      "last_name": "Doe",
+      "address":{
+        "street_name":"Αρτέμιδος",
+        "street_number":"4",
+        "zip":"6031",
+        "city":"Λάρνακα",
+        "region":"Λάρνακας",
+        "country_code": "CY",
+        "pickup_from_collection_point": false
+      }
+    },
+    "invoice": false,
+    "uploaded_invoice_file": null,
+    "comments": "Παράδοση στο γραφείο",
+    "courier": "DHL",
+    "courier_voucher": null,
+    "courier_tracking_codes": [],
+    "line_items": [
+      {
+        "id": "l39vKqxqwe",
+        "shop_uid": "100",
+        "product_name": "L'Oreal Professionel Salon Steam Pod V2 White",
+        "quantity": 2,
+        "unit_price": 10.40,
+        "total_price": 20.80,
+        "price_includes_vat": true,
+        "commission": 1.73,
+        "commission_rate": 8.34,
+        "island_vat_discount_applied": false,
+        "ean": "1234567890123",
+        "mpn": "JA-1059",
+        "serial_numbers": null
+      },
+      {
+        "id": "l39vKqxqh2",
+        "shop_uid": "10",
+        "product_name": "Paul Mitchell Ultimate Color Repair 200ml",
+        "quantity": 1,
+        "unit_price": 25,
+        "total_price": 25,
+        "price_includes_vat": true,
+        "commission": 2.32,
+        "commission_rate": 9.28,
+        "island_vat_discount_applied": false,
+        "serial_numbers": null
+      }
+    ],
+    "created_at": "2019-11-28T13:24:37+02:00",
+    "expires_at": "2019-12-04T10:24:00+02:00",
+    "dispatch_until": "2019-12-04T18:00:00+02:00",
+    "express": false,
+    "gift_wrap": false,
+    "fulfilled_by_skroutz": false,
+    "store_pickup": false,
+    "commission": 4.05
+    "fbs_delivery_note": null,
+    "fbs_delivery_note_url": null,
+    "accept_options": {
+      "number_of_parcels": [
+        1
+      ],
+      "pickup_location": [
+        {
+          "id": "YlpD0KROym",
+          "label": "Πανεπιστημίου 2, Τ.Κ. 12345, Αθήνα, Αττική"
+        },
+        {
+          "id": "onpL6DXG4l",
+          "label": "Σταδίου 1, Τ.Κ. 12345, Αθήνα, Αττική"
+        },
+        {
+          "id": "wgO1N22OaQ",
+          "label": "Κρήτης 50, Τ.Κ. 73100, Χανιά, Χανιά"
+        }
+      ],
+      "pickup_window": [
+        {
+          "id": 1,
+          "label": "15:00 - 18:00, Τρί 03/12/19"
+        },
+        {
+          "id": 2,
+          "label": "10:00 - 12:00, Τετ 04/12/19"
+        },
+        {
+          "id": 3,
+          "label": "12:00 - 15:00, Τετ 04/12/19"
+        },
+        {
+          "id": 4,
+          "label": "15:00 - 18:00, Τετ 04/12/19"
+        }
+      ]
+    },
+    "reject_options": {
+      "line_item_rejection_reasons": [
+        {
+          "id": 1,
+          "label": "Εκτός αποθέματος στο κατάστημα ή στον προμηθευτή",
+          "requires_available_quantity": false
+        },
+        {
+          "id": 2,
+          "label": "Λάθος καταχωρημένη τιμή(ες)",
+          "requires_available_quantity": false
+        },
+        {
+          "id": 4,
+          "label": "Περιορισμένα τεμάχια",
+          "requires_available_quantity": true
+        },
+        {
+          "id": 5,
+          "label": "To προϊόν καταργήθηκε",
+          "requires_available_quantity": false
+        }
+      ]
+    }
+  }
+}
+~~~
+

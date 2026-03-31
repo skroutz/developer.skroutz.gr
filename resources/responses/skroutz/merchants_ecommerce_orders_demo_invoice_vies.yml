@@ -1,6 +1,6 @@
 ---
 :request:
-  :url: https://api.skroutz.gr/merchants/ecommerce/orders/DEMO-ACCEPTED
+  :url: https://api.skroutz.gr/merchants/ecommerce/orders/DEMO-INVOICE-VIES
   :headers:
     :accept: application/vnd.skroutz+json; version=3.0
     :authorization: Bearer n4_92SD9EAEkwDfgiYZHiWwSdJlmA5q-_H3FQ6iYZ3jcMynhbpLEe3QvZxrvO0D-8ZYYD2n_wOBexdn9B0NYGQ==
@@ -26,12 +26,14 @@
     X-Cached: skroutz miss(0)
   :body: '{
   "order": {
-    "code": "DEMO-ACCEPTED",
+    "code": "DEMO-INVOICE-VIES",
     "state": "accepted",
     "customer": {
       "id": "user1234",
       "first_name": "John",
       "last_name": "Doe",
+      "phone": "2109999999",
+      "mobile": "(+30) 6999999999",
       "address": {
         "street_name": "Πανεπιστημίου",
         "street_number": "4",
@@ -42,32 +44,39 @@
         "pickup_from_collection_point": false
       }
     },
-    "invoice": false,
-    "uploaded_invoice_file": "https://b.scdn.gr/path-to/invoice-file-name.pdf",
-    "invoice_document": "receipt",
+    "invoice": true,
+    "uploaded_invoice_file": null,
+    "invoice_document": "invoice_vies",
+    "invoice_details": {
+      "company": "ACME EU",
+      "profession": "Internet Services",
+      "vat_number": "DE111119191",
+      "doy": "ΙΒ Αθηνών",
+      "address": {
+        "street_name": "Πανεπιστημίου",
+        "street_number": "4",
+        "zip": "12345",
+        "city": "Αθήνα",
+        "region": "Αττικής"
+      },
+      "vat_exclusion_requested": true
+    },
     "comments": "Παράδοση στο γραφείο",
     "courier": "CourierCenter",
-    "courier_voucher": "https://skroutz.gr/merchants/sample_vouchers/courier_center.pdf",
-    "courier_tracking_codes": [
-      "123456789"
-    ],
+    "courier_voucher": null,
+    "courier_tracking_codes": [],
     "line_items": [
       {
         "id": "Y5jVmgKmeX",
         "shop_uid": "405753",
-        "shop_variation_uid": "40575312-14",
-        "product_name": "Adidas Perormance Badge of Sport Swimsuit PS/GS",
+        "product_name": "Adidas Performance Badge of Sport Swimsuit",
         "quantity": 2,
-        "size": {
-          "label": "Ηλικία",
-          "value": "14 χρονών",
-          "shop_value": "12-14",
-          "shop_variation_uid": "40575312-14",
-          "ean": "1234567890321"
-        },
         "unit_price": 17.99,
         "total_price": 35.98,
-        "price_includes_vat": true,
+        "price_includes_vat": false,
+        "commission": 3.00,
+        "commission_rate": 8.34,
+        "island_vat_discount_applied": false,
         "ean": "1234567890123",
         "serial_numbers": null
       },
@@ -75,34 +84,26 @@
         "id": "3XlV8ebjxm",
         "shop_uid": "10",
         "product_name": "Smartphone 123",
-        "quantity": 2,
+        "quantity": 1,
         "unit_price": 100,
-        "total_price": 200,
-        "price_includes_vat": true,
-        "serial_numbers": null
-      },
-      {
-        "id": "ZvEKMxbxr1",
-        "shop_uid": "768",
-        "product_name": "AIR OPTIX COLORS MHNIAIOI",
-        "quantity": 2,
-        "unit_price": 25.5,
-        "total_price": 51,
-        "price_includes_vat": true,
-        "extra_info": "Χρώμα: Πράσινο\\nΒαθμοί SPH: -6.50",
+        "total_price": 100,
+        "price_includes_vat": false,
+        "commission": 9.28,
+        "commission_rate": 9.28,
+        "island_vat_discount_applied": false,
         "serial_numbers": null
       }
     ],
-    "created_at": "2021-06-24T13:11:41+03:00",
-    "expires_at": "2021-06-25T13:11:41+03:00",
-    "dispatch_until": "2021-06-28T13:11:41+03:00",
+    "created_at": "2021-06-24T13:08:30+03:00",
+    "expires_at": "2021-06-25T13:08:30+03:00",
+    "dispatch_until": "2021-06-28T13:08:30+03:00",
     "express": false,
     "gift_wrap": false,
     "fulfilled_by_skroutz": false,
     "fbs_delivery_note": null,
     "fbs_delivery_note_url": null,
-    "paid_by_user": true,
-    "payment_method": "card",
-    "store_pickup": false
+    "store_pickup": false,
+    "commission": 12.28,
+    "fees": {}
   }
 }'
