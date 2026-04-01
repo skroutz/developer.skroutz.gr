@@ -612,6 +612,16 @@ An open order that was replaced by a newer order (i.e. the original order in a r
 
 <%= render_recording :merchants_ecommerce_orders_demo_replaced %>
 
+#### DEMO-RETURN
+
+An accepted order that includes return tracking info (`returns` array with `return_uuid` and `tracking_ids` per item).
+
+<pre class="terminal">
+  GET /merchants/ecommerce/orders/DEMO-RETURN
+</pre>
+
+<%= render_recording :merchants_ecommerce_orders_demo_return %>
+
 
 ## Order object attributes appendix
 
