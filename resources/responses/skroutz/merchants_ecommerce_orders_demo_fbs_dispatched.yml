@@ -104,6 +104,8 @@
     "paid_by_user": true,
     "payment_method": "card",
     "store_pickup": false,
-    "fees": {}
+    "fees": {
+      "fbs_fee": 1.20
+    }
   }
 }'
