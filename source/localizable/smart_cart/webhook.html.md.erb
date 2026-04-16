@@ -1899,7 +1899,72 @@ Would send a Webhook request payload just like if the order was cancelled by the
 }
 ~~~
 
-#### Example 14 (replacements)
+#### Example 14 (FBS order with fulfillment fee)
+
+~~~ json
+{
+  "event_type": "new_order",
+  "event_time": "2021-06-24T13:08:30+03:00",
+  "order": {
+    "code": "191029-5130474",
+    "state": "accepted",
+    "customer": {
+      "id": "PA4oqvpz8x",
+      "first_name": "John",
+      "last_name": "Doe",
+      "address": {
+        "street_name": "Πανεπιστημίου",
+        "street_number": "4",
+        "zip": "12345",
+        "city": "Αθήνα",
+        "region": "Αττικής",
+        "country_code": "GR",
+        "pickup_from_collection_point": false
+      }
+    },
+    "invoice": false,
+    "invoice_details": null,
+    "invoice_document": "receipt",
+    "uploaded_invoice_file": null,
+    "comments": "Παράδοση στο γραφείο",
+    "courier": null,
+    "courier_voucher": null,
+    "courier_tracking_codes": [],
+    "line_items": [
+      {
+        "id": "l39vKqxqwe",
+        "shop_uid": "100",
+        "product_name": "L'Oreal Professionel Salon Steam Pod V2 White",
+        "quantity": 1,
+        "unit_price": 10.40,
+        "total_price": 10.40,
+        "price_includes_vat": true,
+        "commission": 0.87,
+        "commission_rate": 8.34,
+        "island_vat_discount_applied": false,
+        "ean": "1234567890123",
+        "serial_numbers": null,
+        "tags": []
+      }
+    ],
+    "created_at": "2021-06-24T13:08:30+03:00",
+    "expires_at": "2021-06-25T13:08:30+03:00",
+    "dispatch_until": "2021-06-28T13:08:30+03:00",
+    "express": false,
+    "gift_wrap": false,
+    "fulfilled_by_skroutz": true,
+    "store_pickup": false,
+    "fbs_delivery_note": null,
+    "fbs_delivery_note_url": null,
+    "commission": 0.87,
+    "fees": {
+      "fbs_fee": 1.20
+    }
+  }
+}
+~~~
+
+#### Example 15 (replacements)
 
 ~~~ json
 {
@@ -1966,7 +2031,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
 }
 ~~~
 
-#### Example 15 (replaced)
+#### Example 16 (replaced)
 
 ~~~ json
 {
@@ -2028,7 +2093,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
 }
 ~~~
 
-#### Example 16 (VIES invoice)
+#### Example 17 (VIES invoice)
 
 ~~~ json
 {
@@ -2103,7 +2168,7 @@ Would send a Webhook request payload just like if the order was cancelled by the
 }
 ~~~
 
-#### Example 17 (Return with Tracking ids)
+#### Example 18 (Return with Tracking ids)
 ~~~ json
 {
     "order": {
