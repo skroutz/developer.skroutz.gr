@@ -198,6 +198,11 @@ Name                                                   | Type    | Length       
 [Description](#description)                            | String  | <span class="mono">10000</span> | Yes | `SAMSUNG Galaxy A70 as a phablet features 6.7 inch display that affords you a vivid and different visual experience. 4 cameras, 32.0MP + 5.0MP + 8.0MP rear camera + 32.0MP front camera, you can enjoy images with 1080 x 2400 high resolution. It comes with most of the features we've come to expect from a phablet, including 6GB RAM 128GB ROM storage equipped with Android Snapdragon 675 and 4500mAh big capacity battery that you can play games faster.`
 [Quantity](#quantity)                                  | Integer | <span class="mono">8</span>    | Yes | `10`
 [Wholesale Price](#wholesale-price)                    | Decimal | <span class="mono">- (up to 2 decimal places)</span> | No | `12.50`
+[Season](#season)                                      | String  | <span class="mono">100</span>  | No | `winter`
+[Size Fit](#size-fit)                                   | String  | <span class="mono">100</span>  | No | `regular`
+[Outlet](#outlet)                                      | String  | <span class="mono">1</span>    | No | `Y`
+[Author](#author)                                      | String  | <span class="mono">255</span>  | No | `J.K. Rowling`
+[Expiration Date](#expiration-date)                    | String  | <span class="mono">255</span>  | No | `2026-12-31`
 [Size Variations](#size-variation-attributes)          | Embedded XML Element | <span class="mono">-</span> | No<b><sup>4</sup></b> | `<variations>`<br />&nbsp;&nbsp;`<variation>...</variation>`<br />&nbsp;&nbsp;`<variation>...</variation>`<br />`</variations>`
 
 <small><b><sup>1</sup></b> Required by all fashion items with sizes, additional images</small><br />
@@ -669,6 +674,80 @@ The price at which the product is purchased from the distributor.
 ~~~
 
 
+#### Season
+
+The season associated with the product. Useful for fashion and seasonal items.
+
+> Allowed values: `winter`, `spring`, `summer`, `autumn`.
+> Greek equivalents are also accepted: `χειμώνας`, `άνοιξη`, `καλοκαίρι`, `φθινόπωρο`. Values are case-insensitive.
+
+##### Example
+
+~~~ xml
+<name>SAMSUNG Galaxy A70 4G Smartphone 6GB RAM 128GB ROM - Black</name>
+<season>winter</season>
+~~~
+
+
+#### Size Fit
+
+The fit type of the product. Applicable to fashion/apparel items.
+
+> Allowed values: `slim`, `regular`, `wide`.
+> Greek equivalents are also accepted: `στενή`, `κανονική`, `φαρδιά`. Values are case-insensitive.
+
+##### Example
+
+~~~ xml
+<name>SAMSUNG Galaxy A70 4G Smartphone 6GB RAM 128GB ROM - Black</name>
+<size_fit>regular</size_fit>
+~~~
+
+
+#### Outlet
+
+Indicates whether the product is an outlet item.
+
+> Allowed values: `Y`, `N`, `Yes`, `No`. Values are case-insensitive.
+
+> The outlet field can also be set at the variation level inside `<variation>` elements.
+
+##### Example
+
+~~~ xml
+<name>SAMSUNG Galaxy A70 4G Smartphone 6GB RAM 128GB ROM - Black</name>
+<outlet>Y</outlet>
+~~~
+
+
+#### Author
+
+The author of the product. Useful for books and publications.
+
+> Maximum length: 255 characters.
+
+##### Example
+
+~~~ xml
+<name>Harry Potter and the Philosopher's Stone</name>
+<author>J.K. Rowling</author>
+~~~
+
+
+#### Expiration Date
+
+The expiration date of the product. Useful for perishable goods, cosmetics, and supplements.
+
+> Maximum length: 255 characters. Recommended format: `YYYY-MM-DD`.
+
+##### Example
+
+~~~ xml
+<name>Organic Face Cream 50ml</name>
+<expiration_date>2026-12-31</expiration_date>
+~~~
+
+
 ### Size Variation Attributes
 
 "Size variations" are an enhancement to the current XML feed, that introduces new nodes (children)
@@ -704,6 +783,7 @@ Name                                                   | Type    | Length       
 [Variation Link](#variation-link)                      | String  | <span class="mono">2000</span>                       | No       |  Yes                    | `https://www.someurl.co.uk/products/322.html`
 [Variation MPN](#variation-mpn)                        | String  | <span class="mono">80</span>                         | No       |  Yes                    | `GF322234`
 [Variation EAN / Barcode](#variation-ean--barcode)     | Integer | <span class="mono">80</span>                         | No       |  Yes                    | `9780471117094`
+[Variation Outlet](#variation-outlet)                  | String  | <span class="mono">1</span>                          | No       |  No                     | `Y`
 
 <small><b><sup>1</sup></b> It is recommended to include beta fields in the XML feed. However, their values
 will not be initially used and will be overridden by their respective product attributes. Also these
@@ -907,6 +987,26 @@ A unique EAN is allocated to each separate retail product.
 ~~~
 
 
+#### Variation Outlet
+
+Indicates whether this specific variation is an outlet item. This overrides the product-level
+outlet value for the given variation.
+
+> Allowed values: `Y`, `N`, `Yes`, `No`. Values are case-insensitive.
+
+##### Example
+
+~~~ xml
+<variation>
+  <variationid>322233.43</variationid>
+  <availability>Delivery 1 to 3 days</availability>
+  <size>43</size>
+  <quantity>6</quantity>
+  <outlet>Y</outlet>
+</variation>
+~~~
+
+
 <% if settings.feed_validator_domain.present? %>
 ## Data Feed Validator
 <div class="row">
@@ -954,6 +1054,11 @@ The XML excerpt below is an example of a compatible XML data feed.
         <price_with_vat>30.00</price_with_vat>
         <vat>24.00</vat>
         <wholesale_price>20.00</wholesale_price>
+        <season>winter</season>
+        <size_fit>regular</size_fit>
+        <outlet>Y</outlet>
+        <author>J.K. Rowling</author>
+        <expiration_date>2026-12-31</expiration_date>
         <manufacturer><![CDATA[Converse]]></manufacturer>
         <mpn>M7652C</mpn>
         <ean>886952780692</ean>
@@ -995,6 +1100,11 @@ The XML excerpt below is an example of a compatible XML with variations data fee
         <price_with_vat>30.00</price_with_vat>
         <vat>24.00</vat>
         <wholesale_price>20.00</wholesale_price>
+        <season>winter</season>
+        <size_fit>regular</size_fit>
+        <outlet>Y</outlet>
+        <author>J.K. Rowling</author>
+        <expiration_date>2026-12-31</expiration_date>
         <manufacturer><![CDATA[Converse]]></manufacturer>
         <mpn>M7652C</mpn>
         <ean>886952780692</ean>
@@ -1019,6 +1129,7 @@ The XML excerpt below is an example of a compatible XML with variations data fee
             <price_with_vat>33.00</price_with_vat>
             <size>43</size>
             <quantity>6</quantity>
+            <outlet>Y</outlet>
           </variation>
           <variation>
             <variationid>322233.45</variationid>
@@ -1029,6 +1140,7 @@ The XML excerpt below is an example of a compatible XML with variations data fee
             <price_with_vat>30.00</price_with_vat>
             <size>45</size>
             <quantity>4</quantity>
+            <outlet>N</outlet>
           </variation>
           ...
           ...
@@ -1239,6 +1351,11 @@ The XML excerpt below is an example of a compatible XML with variations data fee
                     <xs:element ref="color"  minOccurs="0"/>
                     <xs:element ref="quantity" minOccurs="0"/>
                     <xs:element ref="wholesale_price" minOccurs="0"/>
+                    <xs:element ref="season" minOccurs="0"/>
+                    <xs:element ref="size_fit" minOccurs="0"/>
+                    <xs:element ref="outlet" minOccurs="0"/>
+                    <xs:element ref="author" minOccurs="0"/>
+                    <xs:element ref="expiration_date" minOccurs="0"/>
 
                   </xs:all>
 
@@ -1401,6 +1518,57 @@ The XML excerpt below is an example of a compatible XML with variations data fee
   <!-- wholesale_price -->
   <xs:element name="wholesale_price" type="xs:decimal" />
 
+  <!-- season -->
+  <xs:element name="season">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="winter" />
+        <xs:enumeration value="spring" />
+        <xs:enumeration value="summer" />
+        <xs:enumeration value="autumn" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <!-- size_fit -->
+  <xs:element name="size_fit">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="στενή" />
+        <xs:enumeration value="κανονική" />
+        <xs:enumeration value="φαρδιά" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <!-- outlet -->
+  <xs:element name="outlet">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="Y" />
+        <xs:enumeration value="N" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <!-- author -->
+  <xs:element name="author">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:maxLength value="255" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <!-- expiration_date -->
+  <xs:element name="expiration_date">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:maxLength value="255" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
   <!-- basic structure -->
   <xs:element name="storedata">
     <xs:complexType>
@@ -1451,6 +1619,11 @@ The XML excerpt below is an example of a compatible XML with variations data fee
                     <xs:element ref="color"  minOccurs="0"/>
                     <xs:element ref="quantity" minOccurs="0"/>
                     <xs:element ref="wholesale_price" minOccurs="0"/>
+                    <xs:element ref="season" minOccurs="0"/>
+                    <xs:element ref="size_fit" minOccurs="0"/>
+                    <xs:element ref="outlet" minOccurs="0"/>
+                    <xs:element ref="author" minOccurs="0"/>
+                    <xs:element ref="expiration_date" minOccurs="0"/>
 
                     <!-- size variations -->
                     <xs:element name="variations">
@@ -1473,6 +1646,7 @@ The XML excerpt below is an example of a compatible XML with variations data fee
                                 <xs:element type="xs:string" name="manufacturersku"/>
                                 <xs:element type="xs:integer" name="ean"/>
                                 <xs:element type="xs:decimal" name="price_with_vat"/>
+                                <xs:element ref="outlet" minOccurs="0"/>
                               </xs:sequence>
                             </xs:complexType>
                           </xs:element>
