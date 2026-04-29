@@ -106,7 +106,7 @@ Validate a batch update payload without actually performing the update. This end
 validation checks that the batch endpoint does, but doesn't modify any data.
 
 <pre class="terminal">
-  POST /merchants/products/validate_batch_payload
+  POST /merchants/products/batch/validations
 </pre>
 
 <%= render_recording :merchants_products_validate_batch_payload %>
@@ -118,7 +118,7 @@ The request parameters are identical to the [batch update](#batch-update-product
 ##### Example
 
 <pre class="terminal">
-curl -X POST https://<%= settings.api_domain %>/merchants/products/validate_batch_payload \
+curl -X POST https://<%= settings.api_domain %>/merchants/products/batch/validations \
   -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
   -H 'Content-Type: application/json; charset=utf-8' \
   -H 'Authorization: Bearer your_access_token_here' \
