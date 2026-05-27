@@ -80,9 +80,10 @@
     "payment_method": "card",
     "store_pickup": false,
     "fees": {
-      "handling_fee": 1.50,
-      "skroutz_coins_fee": 2.00,
-      "installments_fee": 3.50
+      "handling_fee": 1.5,
+      "skroutz_coins_fee": 2.0,
+      "installments_fee": 3.5,
+      "plus_user_fee": 1.0
     },
   }
 }'
