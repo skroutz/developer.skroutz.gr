@@ -204,6 +204,8 @@ Name                                                   | Type    | Length       
 [Author](#author)                                      | String  | <span class="mono">255</span>  | No | `J.K. Rowling`
 [Expiration Date](#expiration-date)                    | String  | <span class="mono">255</span>  | No | `2026-12-31`
 [Country of Origin](#country-of-origin)                | String  | <span class="mono">255</span>  | No | `Greece`
+[Number of Packages](#number-of-packages)              | Integer | <span class="mono">8</span>    | No | `5`
+[Packaging Dimensions](#packaging-dimensions)          | String  | <span class="mono">255</span>  | No | `5x5x5, 10x10x15`
 [Size Variations](#size-variation-attributes)          | Embedded XML Element | <span class="mono">-</span> | No<b><sup>4</sup></b> | `<variations>`<br />&nbsp;&nbsp;`<variation>...</variation>`<br />&nbsp;&nbsp;`<variation>...</variation>`<br />`</variations>`
 
 <small><b><sup>1</sup></b> Required by all fashion items with sizes, additional images</small><br />
@@ -760,6 +762,34 @@ The country where the product was manufactured.
 ~~~ xml
 <name>Extra Virgin Olive Oil 500ml</name>
 <country_of_origin>Greece</country_of_origin>
+~~~
+
+
+#### Number of Packages
+
+The number of packages included with the product.
+
+> The value must be a non-negative integer.
+
+##### Example
+
+~~~ xml
+<name>Extra Virgin Olive Oil 500ml</name>
+<number_of_packages>5</number_of_packages>
+~~~
+
+
+#### Packaging Dimensions
+
+The dimensions of the product packaging. If there are multiple packages, provide a comma-separated list.
+
+> Maximum length: 255 characters.
+
+##### Example
+
+~~~ xml
+<name>Extra Virgin Olive Oil 500ml</name>
+<packaging_dimensions>5x5x5, 10x10x15</packaging_dimensions>
 ~~~
 
 
