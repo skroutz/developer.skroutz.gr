@@ -1,0 +1,55 @@
+#### Return object
+
+Name                   | Type              | Values | Description
+----------------------- | ----------------- | ------ | -----------
+`return_code`          | String            | | Return Code
+`state`                | String            | `pending_merchant_review`, `returning`, `pending_physical_review`, `returned`, `rejected`, `expired`, `cancelled` | Current lifecycle state of the return. One of the [return states](#return-states).
+`order_code`           | String            | | The code of the order this return belongs to
+`created_at`           | Date String in format<br> `YYYY-MM-DDTHH:MM:SSZ` | | Return creation date
+`courier_tracking_ids` | Array of Strings  | (Optional) | Deduplicated tracking IDs across current shipments
+`courier`              | String            | (Optional) | Human-readable name of the courier (e.g. `ACS`)
+`returning_address`    | Object            | (Optional) | [Returning address](#returning-address) — the address the merchant should receive the return at
+`return_line_items`    | Array             | | [Return line items](#return-line-items) — the products being returned
+
+`courier_tracking_ids`, `courier` and `returning_address` are omitted entirely (not sent as `null`)
+when not applicable — e.g. virtual returns with no shipment.
+
+#### Return states
+
+The `state` field is one of the following string values:
+
+State                     | Description
+------------------------- | ---------------------------------------------------------------------------------------
+`pending_merchant_review` | The customer submitted a return request and the merchant needs to review it.
+`returning`               | The package is in transit back to the merchant.
+`pending_physical_review` | The package arrived at the merchant and must perform physical inspection.
+`returned`                | The package was delivered back to the merchant.
+`rejected`                | The return was rejected.
+`expired`                 | The merchant never responded to the return request within the deadline.
+`cancelled`               | The return was cancelled.
+
+#### Returning address
+
+Present only when the return has a shipment.
+
+Name                               | Type   | Description
+----------------------------------- | ------ | -----------
+`returning_address.street_name`    | String | Street/road name
+`returning_address.street_number`  | String | Building number
+`returning_address.zip`            | String | Postal code
+`returning_address.city`           | String | City
+`returning_address.region`         | String | Region/state
+`returning_address.country_code`   | String | Country code (e.g. `GR`)
+
+#### Return line items
+
+Each element of the `return_line_items` array represents one product line being returned.
+
+Name                 | Type             | Values | Description
+--------------------- | ---------------- | ------ | -----------
+`id`                 | String           | | ID of the order line item being returned
+`product_name`       | String           | | Product display name
+`returning_quantity` | Integer          | | How many units of this product the customer is returning
+`return_reason`      | String           | `faulty`, `wrong_product`, `withdrawal`, `damaged_product`, `expired_product`, `authenticity_doubt`, `delivery_issues`, `other` (Optional) | Reason the customer selected
+`user_comment`       | String           | (Optional) | Free-text comment left by the customer explaining the return
+`user_photos`        | Array of Strings | (Optional) | Full URLs of photos uploaded by the customer as evidence

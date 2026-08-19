@@ -25,7 +25,8 @@ smart_cart:
     - { title: "orders_api" }
     - { title: "returns_api" }
     - { title: "fbs_api" }
-    - { title: "webhook" }
+    - { title: "orders_webhook" }
+    - { title: "returns_webhook" }
   flavors:
     - skroutz
 

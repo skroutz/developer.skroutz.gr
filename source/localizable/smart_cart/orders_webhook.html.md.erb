@@ -1,14 +1,14 @@
 ---
 parent: smart_cart
-title: webhook
+title: orders_webhook
 ---
 
 <%= partial 'partials/page_locales' %>
 
-# Webhook <%= edit_link %>
+# Webhook Orders <%= edit_link %>
 
 > <i class="fa fa-exclamation-triangle"></i>
-> **Important update:** From 5/7/2021 onwards, more order state updates will be sent via Webhook requests. [Read more](/smart_cart/webhook#webhook-events)
+> **Important update:** From 5/7/2021 onwards, more order state updates will be sent via Webhook requests. [Read more](/smart_cart/orders_webhook#webhook-events)
 
 Smart Cart webhook allows Skroutz Merchants to automatically receive order details to their
 platform when a new Smart Cart order is placed or an existing one is updated.
@@ -27,23 +27,7 @@ page in merchant's panel (Merchants > Services > [Skroutz Marketplace](https://<
 
 Webhook requests are sent to your specified URL from the following IP ranges:
 
-**IPv4:**
-
-* **185.6.76.0/22**
-* **3.73.204.153/32**
-* **3.72.204.195/32**
-* **3.67.183.221/32**
-* **63.34.193.172/32**
-* **54.195.53.34/32**
-* **108.129.50.199/32**
-
-**IPv6:**
-
-* **2a03:e40::/32**
-
-Please ensure these IPs are whitelisted in your firewall or security tools to prevent webhook delivery failures.
-
-> You can also access the IP ranges in [JSON format](/ip_ranges.json) for programmatic consumption.
+<%= partial 'partials/webhook_ip_ranges' %>
 
 > <i class="fa fa-exclamation-triangle"></i>
 > The **webhook URL should match the shop's domain** and it should follow secure **HTTP (HTTPS)**

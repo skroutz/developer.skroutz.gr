@@ -36,7 +36,8 @@ tr:
       short_description: 'Services for merchant integrations with %{flavor} Smart Cart orders.'
       overview: 'Overview'
       orders_api: 'Orders API'
-      webhook: 'Webhook'
+      orders_webhook: 'Webhook Orders'
+      returns_webhook: 'Webhook Returns'
       returns_api: 'Returns API'
 
   lang:

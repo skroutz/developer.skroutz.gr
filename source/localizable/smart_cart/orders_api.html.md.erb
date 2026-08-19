@@ -8,7 +8,7 @@ title: orders_api
 # Orders API <%= edit_link %>
 
 > <i class="fa fa-exclamation-triangle"></i>
-> **Important update:** From 5/7/2021 onwards, more order state updates will be sent via Webhook requests. [Read more](/smart_cart/webhook#webhook-events)
+> **Important update:** From 5/7/2021 onwards, more order state updates will be sent via Webhook requests. [Read more](/smart_cart/orders_webhook#webhook-events)
 
 > <i class="fa fa-exclamation-triangle"></i>
 > **Breaking change for enrolled shops:** Starting from 30/03/2026, for shops enrolled in the mandatory "Set as Ready" program,
@@ -50,7 +50,7 @@ curl -X GET https://<%= settings.api_domain %>/merchants/ecommerce/orders/191128
 ## Endpoints
 
 All endpoints require the order `code` as a URL parameter. This is available in all incoming order
-[Webhook](/smart_cart/webhook) events, as well as the merchants' panel.
+[Webhook](/smart_cart/orders_webhook) events, as well as the merchants' panel.
 
 ### Retrieve a single order
 
@@ -626,6 +626,6 @@ An accepted order that includes return tracking info (`returns` array with `retu
 ## Order object attributes appendix
 
 > The order object returned retrieving a single order via the API is the same as
-> in [webhook events](/smart_cart/webhook) about a new/updated order.
+> in [webhook events](/smart_cart/orders_webhook) about a new/updated order.
 
 <%= partial 'localizable/smart_cart/order_object' %>

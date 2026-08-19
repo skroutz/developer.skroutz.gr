@@ -12,6 +12,8 @@ page '404.html', layout: false
 # Redirects
 redirect 'feedspec/index.html', to: '/products/xml_feed/'
 redirect 'el/feedspec/index.html', to: '/el/products/xml_feed/'
+redirect 'smart_cart/webhook/index.html', to: '/smart_cart/orders_webhook/'
+redirect 'el/smart_cart/webhook/index.html', to: '/el/smart_cart/orders_webhook/'
 
 
 # Localization

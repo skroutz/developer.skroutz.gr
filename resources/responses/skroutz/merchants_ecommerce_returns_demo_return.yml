@@ -27,7 +27,7 @@
   :body: '{
   "return": {
     "return_code": "DEMO-RETURN",
-    "state": "pending",
+    "state": "returning",
     "order_code": "DEMO-OPEN",
     "created_at": "2026-01-01T10:00:00Z",
     "courier_tracking_ids": [

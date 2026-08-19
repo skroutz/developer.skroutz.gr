@@ -1,0 +1,290 @@
+---
+parent: smart_cart
+title: returns_webhook
+---
+
+<%= partial 'partials/page_locales' %>
+
+# Webhook Returns <%= edit_link %>
+
+Webhook Returns allows Skroutz Merchants to automatically receive return details to their
+platform when a new return is created or an existing one is updated (its state or logistics
+change), so the merchant's own system can stay in sync without polling the [Returns API](/smart_cart/returns_api).
+
+> <i class="fa fa-exclamation-triangle"></i>
+> Webhook Returns is currently **under development** .
+
+<%= partial 'partials/toc' %>
+
+## Setup
+
+In order to be able to use the webhook, a **return webhook URL** should be registered
+by the merchant from within
+[Smart Cart settings](https://<%= settings.merchants_domain %>/merchants/account/shop/ecommerce_details)
+page in merchant's panel (Merchants > Services > [Skroutz Marketplace](https://<%= settings.merchants_domain %>/merchants/account/shop/ecommerce_details)).
+
+> <i class="fa fa-exclamation-triangle"></i>
+> Registering a URL alone does not enable delivery — the **return webhook** must also be
+> explicitly turned on from the same settings page. Both are required before any request is sent.
+
+Webhook Returns requests are sent from the same infrastructure as
+[Webhook Orders](/smart_cart/orders_webhook#setup) requests, so the same IP ranges apply:
+
+<%= partial 'partials/webhook_ip_ranges' %>
+
+> <i class="fa fa-exclamation-triangle"></i>
+> The **webhook URL should match the shop's domain** and it should follow secure **HTTP (HTTPS)**
+
+##### Webhook URL example
+
+Shop URL | Webhook URL
+-------- | ----------
+`https://shop.gr` | `https://shop.gr/smart_cart_returns`
+
+## Webhook requests
+
+An HTTP `POST` request is sent to the predefined return webhook URL once an event has been triggered.
+
+### The anatomy of a request
+
+##### Request
+<pre class="terminal">
+POST {webhook_url}
+</pre>
+
+##### Request headers
+
+Header         | Value
+-------------- | -----
+`Content-Type` | `application/json; charset=utf-8`
+`User-Agent`   | `Skroutz OrderNotifier v1` (shared with [Webhook Orders](/smart_cart/orders_webhook#the-anatomy-of-a-request))
+
+> <i class="fa fa-exclamation-triangle"></i>
+> Since the `User-Agent` value is shared with [Webhook Orders](/smart_cart/orders_webhook), it cannot
+> be used to distinguish order from return notifications. Use the `event_type` field in the request
+> body instead.
+
+##### Expected request response
+
+<pre class="terminal">
+200
+</pre>
+
+## Webhook events
+
+The available webhook events for which a request is performed are:
+
+* **return created** events
+* **return updated** events
+
+### Return created
+
+A **return created** webhook request (`merchant_return_created`) is triggered once, right after a
+return is first placed.
+
+### Return updated
+
+A **return updated** webhook request (`merchant_return_updated`) is triggered whenever:
+
+* The return's **state changes** (e.g. approved by the merchant, marked as returning, returned,
+  rejected, expired or cancelled). If the update also makes shipment information newly available —
+  for example when the return transitions into the `returning` state — the payload additionally
+  carries the `courier` and `returning_address` fields.
+* The return's **courier is reassigned** on an existing return shipment.
+* The return's **courier tracking IDs become available**.
+
+> <i class="fa fa-exclamation-triangle"></i>
+> A **return updated** request is only sent once a **return created** request has already been
+> delivered for that same return and webhook URL. In practice, if you enable the return webhook
+> (or change its URL) *after* a return already exists, that return will not receive update events
+> until a fresh **return created** event has been recorded against the new URL.
+
+#### Request payload
+
+Name         | Type   | Value | Description
+------------ | ------ | ----- | ------------------
+`event_type` | String | `merchant_return_created`, `merchant_return_updated` | Return event type
+`event_time` | Date String in format<br> `YYYY-MM-DDTHH:MM:SSZ` | | Event creation time
+`return`     | Object |  | [Return details](#return-object)
+`changes`    | Object |  | [Return changes with old and new values (optional)](#return-changes-object)
+
+<%= partial 'localizable/smart_cart/return_object' %>
+
+#### Return changes object
+
+Only present on **return updated** requests, and only includes the keys that actually changed.
+
+Field                  | Shape          | Notes
+----------------------- | -------------- | -----
+`state`                | `{ old, new }` | Raw state values, see [return object](#return-object)
+`courier`              | `{ old, new }` | Human-readable courier name; `old` can be `null` when courier info first becomes available
+`returning_address`    | `{ old, new }` | Same shape as [returning address](#returning-address)
+`courier_tracking_ids` | `{ old, new }` | Only included when a `new` value is actually present
+
+## Payload Examples
+
+#### Example 1 (return created)
+
+~~~ json
+{
+  "event_type": "merchant_return_created",
+  "event_time": "2026-08-18T09:12:03Z",
+  "return": {
+    "return_code": "R-111111-1111111",
+    "state": "pending_merchant_review",
+    "order_code": "48213907",
+    "created_at": "2026-08-18T09:12:03Z",
+    "return_line_items": [
+      {
+        "id": "gY6oNzr8jp",
+        "product_name": "Apple iPhone 15 128GB",
+        "returning_quantity": 1,
+        "return_reason": "wrong_product",
+        "user_comment": "Ordered black, received white.",
+        "user_photos": [
+          "https://api.skroutz.gr/assets/returns/photo_1.jpg"
+        ]
+      }
+    ]
+  }
+}
+~~~
+
+#### Example 2 (return updated - shipment info newly available)
+
+~~~ json
+{
+  "event_type": "merchant_return_updated",
+  "event_time": "2026-08-19T10:00:00Z",
+  "return": {
+    "return_code": "R-111111-1111111",
+    "state": "returning",
+    "order_code": "48213907",
+    "created_at": "2026-08-18T09:12:03Z",
+    "courier": "ACS",
+    "returning_address": {
+      "street_name": "Ermou",
+      "street_number": "12",
+      "zip": "10563",
+      "city": "Athens",
+      "region": "Attica",
+      "country_code": "GR"
+    },
+    "return_line_items": [
+      { "id": "gY6oNzr8jp", "product_name": "Apple iPhone 15 128GB", "returning_quantity": 1 }
+    ]
+  },
+  "changes": {
+    "state": { "old": "pending_merchant_review", "new": "returning" },
+    "courier": { "old": null, "new": "ACS" },
+    "returning_address": {
+      "old": null,
+      "new": {
+        "street_name": "Ermou",
+        "street_number": "12",
+        "zip": "10563",
+        "city": "Athens",
+        "region": "Attica",
+        "country_code": "GR"
+      }
+    }
+  }
+}
+~~~
+
+#### Example 3 (return updated - courier tracking IDs become available)
+
+~~~ json
+{
+  "event_type": "merchant_return_updated",
+  "event_time": "2026-08-19T11:30:00Z",
+  "return": {
+    "return_code": "R-111111-1111111",
+    "state": "returning",
+    "order_code": "48213907",
+    "created_at": "2026-08-18T09:12:03Z",
+    "courier": "ACS",
+    "courier_tracking_ids": ["ACS1234567890"],
+    "returning_address": {
+      "street_name": "Ermou",
+      "street_number": "12",
+      "zip": "10563",
+      "city": "Athens",
+      "region": "Attica",
+      "country_code": "GR"
+    },
+    "return_line_items": [
+      { "id": "gY6oNzr8jp", "product_name": "Apple iPhone 15 128GB", "returning_quantity": 1 }
+    ]
+  },
+  "changes": {
+    "courier_tracking_ids": { "old": null, "new": ["ACS1234567890"] }
+  }
+}
+~~~
+
+#### Example 4 (return updated - courier reassignment)
+
+~~~ json
+{
+  "event_type": "merchant_return_updated",
+  "event_time": "2026-08-19T12:30:00Z",
+  "return": {
+    "return_code": "R-111111-1111111",
+    "state": "returning",
+    "order_code": "48213907",
+    "created_at": "2026-08-18T09:12:03Z",
+    "courier": "Speedex",
+    "courier_tracking_ids": ["ACS1234567890"],
+    "returning_address": {
+      "street_name": "Ermou",
+      "street_number": "12",
+      "zip": "10563",
+      "city": "Athens",
+      "region": "Attica",
+      "country_code": "GR"
+    },
+    "return_line_items": [
+      { "id": "gY6oNzr8jp", "product_name": "Apple iPhone 15 128GB", "returning_quantity": 1 }
+    ]
+  },
+  "changes": {
+    "courier": { "old": "ACS", "new": "Speedex" }
+  }
+}
+~~~
+
+#### Example 5 (return updated - plain state change)
+
+~~~ json
+{
+  "event_type": "merchant_return_updated",
+  "event_time": "2026-08-19T14:03:11Z",
+  "return": {
+    "return_code": "R-111111-1111111",
+    "state": "returned",
+    "order_code": "48213907",
+    "created_at": "2026-08-18T09:12:03Z",
+    "courier": "Speedex",
+    "courier_tracking_ids": ["ACS1234567890"],
+    "returning_address": {
+      "street_name": "Ermou",
+      "street_number": "12",
+      "zip": "10563",
+      "city": "Athens",
+      "region": "Attica",
+      "country_code": "GR"
+    },
+    "return_line_items": [
+      {
+        "id": "gY6oNzr8jp",
+        "product_name": "Apple iPhone 15 128GB",
+        "returning_quantity": 1
+      }
+    ]
+  },
+  "changes": {
+    "state": { "old": "returning", "new": "returned" }
+  }
+}
+~~~
