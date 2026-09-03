@@ -1,0 +1,28 @@
+---
+:request:
+  :verb: :get
+  :url: https://api.skroutz.gr/merchants/products/batch/6a9810dcd4ff840001bf0f32/status
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3.0
+    :authorization: "Bearer your_access_token_here"
+:response:
+  :status: 200
+  :headers:
+    Date: Mon, 02 Sep 2026 12:04:44 GMT
+    Connection: keep-alive
+    Content-Length: 456
+    Server: h2o (Debian)
+    Content-Type: application/json; charset=utf-8
+    X-Meta-Client-Id: 27951bdf06a65ea4
+    Cache-Control: no-cache
+    X-Request-Id: 989369836
+    X-Runtime: 0.015234
+    X-App: as103_ssl
+    X-Varnish: 989369836
+    Age: 0
+    Via: 1.1 varnish (Varnish/5.0)
+    X-Origin: lb2
+    X-Cache: MISS
+    X-Cached: skroutz miss(0)
+  :body: '{"id":"6a9810dcd4ff840001bf0f32","status":"completed","created_at":"2026-09-02T15:04:44+03:00","results":[{"product_id":"ABC","status":"success","message":null,"executed_at":"2026-09-02T15:04:44+03:00","variations":[{"variation_id":"ABC-SMALL","status":"success","message":null,"executed_at":"2026-09-02T15:04:44+03:00"},{"variation_id":"ABC-LARGE","status":"no_change","message":null,"executed_at":"2026-09-02T15:04:44+03:00"}]}]}'
+:created_at: 2026-09-02 15:04:44.000000000 +03:00
