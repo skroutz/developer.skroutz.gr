@@ -43,5 +43,5 @@
     X-Origin: lb2
     X-Cache: MISS
     X-Cached: skroutz miss(0)
-  :body: '{"success":true}'
+  :body: '{"success":true,"id":"6a9810dcd4ff840001bf0f32"}'
 :created_at: 2025-02-24 12:15:00.000000000 +02:00

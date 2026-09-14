@@ -52,6 +52,10 @@ price, and quantity for up to **500 products** per request.
 
 Each product must include all required fields as described in the [Product object attributes appendix](#product-object-attributes-appendix).
 
+The update of each product (and its variations) is processed asynchronously. The response returns immediately
+with an `id` that identifies the batch request, which you can use to poll the
+[batch status endpoint](#batch-status) for the outcome of each product and variation.
+
 <%= render_recording :merchants_products_batch %>
 
 #### Request Parameters
@@ -59,6 +63,13 @@ Each product must include all required fields as described in the [Product objec
 | Parameter | Type | Required | Description |
 |-----------|------|----------|-------------|
 | `data` | Array | Yes | Array of [product update objects](#product-object) |
+
+#### Response Parameters
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `success` | Boolean | Whether the batch request was accepted |
+| `id` | String | Identifier of the batch request, used to query the [batch status endpoint](#batch-status) |
 
 ##### Example Request
 
@@ -133,6 +144,63 @@ curl -X POST https://<%= settings.api_domain %>/merchants/products/batch/validat
     ]
   }'
 </pre>
+
+
+### Batch status
+
+Query the status of a previously submitted [batch update](#batch-update-products), including the outcome
+of each product and, where applicable, each of its variations.
+
+<pre class="terminal">
+  GET /merchants/products/batch/:id/status
+</pre>
+
+`:id` is the batch request `id` returned by the [batch update](#batch-update-products) endpoint. 
+An unknown or malformed `id` will result in a `404 Not Found`.
+
+<%= render_recording :merchants_products_batch_status %>
+
+#### Response Parameters
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `id` | String | Identifier of the batch request |
+| `status` | String | `in_progress` while any product is still pending, `completed` otherwise. The `completed` status, means that every product update has been processed successfully or not. |
+| `created_at` | String | When the batch request was submitted |
+| `results` | Array | One entry per product in the batch, see below |
+
+##### Result object
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `product_id` | String | The product's identifier, as submitted in the batch request |
+| `status` | String | `in_progress`, `success`, `no_change`, or `failure` |
+| `message` | String | Present when `status` is `failure`, describes the reason the update failed |
+| `executed_at` | String | When the product update was executed, `null` while `in_progress` |
+| `variations` | Array | One entry per variation declared for this product, with the same shape as a result object (`variation_id` instead of `product_id`, no nested `variations`) |
+
+##### Example
+
+<pre class="terminal">
+curl -X GET https://<%= settings.api_domain %>/merchants/products/batch/6a9810dcd4ff840001bf0f32/status \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Authorization: Bearer your_access_token_here'
+</pre>
+
+#### Batch Not Found (404 Not Found)
+
+When the `id` doesn't match a batch request for the authenticated shop:
+
+<%= render_code '{
+  "errors": [
+    {
+      "code": "not_found",
+      "messages": [
+        "Batch not found."
+      ]
+    }
+  ]
+}', 'javascript' %>
 
 
 ## Error handling
