@@ -46,6 +46,7 @@
     "return_line_items": [
       {
         "id": "demo-rli-1",
+        "ean": "1234567890123",
         "product_name": "Demo return item",
         "returning_quantity": 1,
         "return_reason": "damaged_product",
