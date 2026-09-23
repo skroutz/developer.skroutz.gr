@@ -428,6 +428,95 @@ curl -X POST https://api.skroutz.gr/merchants/ecommerce/orders/191128-1234567/tr
 </pre>
 
 
+### Request the voucher for a preorder (early dispatch)
+
+When a preorder order has been accepted and you receive the product earlier than the
+scheduled shipment creation date, you can request the courier voucher manually. This
+is the same action available through the **"Create voucher now"** button in the merchants'
+panel: it creates the voucher for the shipment.
+
+The pickup location and pickup window are derived server-side, so no request body is
+required.
+
+> <i class="fa fa-exclamation-triangle"></i>
+> This endpoint is available only for **preorder** orders.
+
+> <i class="fa fa-exclamation-triangle"></i>
+> A successful response only means the request was accepted. The voucher is generated
+> asynchronously by the courier and is **not** returned in the response body. Once it is
+> ready, it is delivered through the [order webhook](/smart_cart/orders_webhook) (as an
+> `order_updated` event carrying the `courier_voucher`), and it is also available on the
+> [order](#retrieve-a-single-order) via its `courier_voucher` attribute.
+
+**Prerequisites:**
+
+* Order must be in `accepted` state
+* Order must be a preorder
+* Order must not already have a voucher (shipment)
+* A pickup location must be configured for the shop
+* A pickup window must be currently available
+
+<pre class="terminal">
+  POST /merchants/ecommerce/orders/:code/request_voucher
+</pre>
+
+No request body required.
+
+#### Example
+<pre class="terminal">
+curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/orders/191128-1234567/request_voucher \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Authorization: Bearer your_access_token_here'
+</pre>
+
+#### Success Response
+
+<pre class="terminal">
+HTTP/1.1 200 OK
+Content-Type: application/json
+</pre>
+
+<%= render_code '{
+  "success": true
+}', 'javascript' %>
+
+#### Error Responses
+
+**Order not found:**
+
+<pre class="terminal">
+HTTP/1.1 404 Not Found
+</pre>
+
+<%= render_code '{
+  "errors": [
+    {
+      "code": "order_error",
+      "messages": [
+        "Order not found"
+      ]
+    }
+  ]
+}', 'javascript' %>
+
+**Order not eligible** (not an accepted preorder, or a voucher already exists):
+
+<pre class="terminal">
+HTTP/1.1 422 Unprocessable Entity
+</pre>
+
+<%= render_code '{
+  "errors": [
+    {
+      "code": "order_error",
+      "messages": [
+        "Cannot request voucher: order is not an accepted preorder without a voucher."
+      ]
+    }
+  ]
+}', 'javascript' %>
+
+
 ## Error handling
 
 In case of errors, the response will have a representative HTTP status code
