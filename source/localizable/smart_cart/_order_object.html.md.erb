@@ -22,6 +22,8 @@
 | `rejection_info`         | Object                                               |                                                                                                                                                              | [Rejection info](#rejection-info) (available for orders rejected with `other` reason)                                                                                                                                                                                            |
 | `accept_options`         | Object                                               |                                                                                                                                                              | [Accept options](#accept-options) (available for orders with state `"open"`)                                                                                                                                                                                                     |
 | `reject_options`         | Object                                               |                                                                                                                                                              | [Reject options](#reject-options) (available for orders with state `"open"`)                                                                                                                                                                                                     |
+| `reschedule_options`     | Array                                                |                                                                                                                                                              | [Reschedule options](#reschedule-options) (only included when the order is fetched with `?action_options=1`)                                                                                                                                                                     |
+| `relocate_options`       | Array                                                |                                                                                                                                                              | [Relocate options](#relocate-options) (only included when the order is fetched with `?action_options=1`)                                                                                                                                                                         |
 | `fulfilled_by_skroutz`   | Boolean                                              |                                                                                                                                                              | Whether the order is fulfilled by skroutz                                                                                                                                                                                                                                        |
 | `fbs_delivery_note`      | String                                               |                                                                                                                                                              | Order's delivery note from warehouse for orders that are fulfilled by Skroutz                                                                                                                                                                                                    |
 | `fbs_delivery_note_url`  | String                                               |                                                                                                                                                              | Order's digital delivery note PDF url from warehouse for orders that are fulfilled by Skroutz                                                                                                                                                                                    |
@@ -300,6 +302,31 @@ Possible values
 | `4` | `Περιορισμένα τεμάχια`                             | True                        |
 | `5` | `To προϊόν καταργήθηκε`                            | False                       |
 | `6` | `Λάθος ταξινόμηση προϊόντος`                       | False                       |
+
+
+#### Reschedule options
+
+Available pickup dates to post when
+[rescheduling a single order's pickup](/smart_cart/orders_api/#reschedule-a-single-orders-pickup)
+(use `date`). Only included when the order is fetched with `?action_options=1`, and empty when the
+order cannot be rescheduled.
+
+| Name                       | Type   | Example        | Description                                                                    |
+|----------------------------|--------|----------------|--------------------------------------------------------------------------------|
+| `reschedule_options[].date`  | String | `2026-09-25`   | An `YYYY-MM-DD` date to post as `reschedule_date`                              |
+| `reschedule_options[].label` | String | `Fri 25/09/26` | A human readable date, localized to the shop's language (do not parse it)      |
+
+#### Relocate options
+
+Available pickup locations to post when
+[relocating a single order's pickup](/smart_cart/orders_api/#relocate-a-single-orders-pickup)
+(use `id`). Only included when the order is fetched with `?action_options=1`, and empty when the
+order cannot be relocated. The order's current pickup location is excluded from the list.
+
+| Name                        | Type   | Description                                     |
+|-----------------------------|--------|-------------------------------------------------|
+| `relocate_options[].id`     | String | The location ID (hashid) to post as `pickup_location` |
+| `relocate_options[].label`  | String | A human readable address                        |
 
 
 #### Tracking details option: Courier

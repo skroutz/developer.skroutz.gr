@@ -58,8 +58,17 @@ When an order is in a state that can be accepted or rejected, `accept_options` a
 attributes are included in the response, providing all the available options for
 issuing "accept" or "reject" requests for the order, respectively.
 
+Pass `action_options=1` as a query parameter to additionally include `reschedule_options` and
+`relocate_options` in the response. These list the currently available pickup dates the order can be
+[rescheduled](#reschedule-a-single-orders-pickup) to, and the pickup locations it can be
+[relocated](#relocate-a-single-orders-pickup) to. They are omitted by default because they are
+time-sensitive: available reschedule dates shrink as time passes and an order can become ineligible,
+so you should always fetch the order (with `action_options=1`) right before issuing a reschedule or
+relocate request, and use a value from that fresh response.
+
 <pre class="terminal">
   GET /merchants/ecommerce/orders/:code
+  GET /merchants/ecommerce/orders/:code?action_options=1
 </pre>
 
 <%= render_recording :merchants_ecommerce_orders_show %>
@@ -87,6 +96,151 @@ curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/orders/19112
   -H 'Authorization: Bearer your_access_token_here' \
   -d '{ "pickup_location": "YlpD0KROym", "pickup_window": 2, "number_of_parcels": 1 }'
 </pre>
+
+### Reschedule a single order's pickup
+
+Changes the pickup **date** of an accepted order.
+
+Retrieve the order with [`?action_options=1`](#retrieve-a-single-order) and read `reschedule_options`.
+Send one of the returned `date` values (an `YYYY-MM-DD` string) as the `reschedule_date` param.
+
+> <i class="fa fa-exclamation-triangle"></i>
+> Available dates are time-sensitive. Always fetch the order right before rescheduling and send a
+> `date` from that fresh `reschedule_options` list. A date that is no longer available is rejected
+> (rather than silently applied to a different date).
+
+<pre class="terminal">
+  POST /merchants/ecommerce/orders/:code/reschedule_pickup
+</pre>
+
+#### Example
+<pre class="terminal">
+curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/orders/191128-1234567/reschedule_pickup \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Content-Type: application/json; charset=utf-8' \
+  -H 'Authorization: Bearer your_access_token_here' \
+  -d '{ "reschedule_date": "2026-09-25" }'
+</pre>
+
+#### Success Response
+
+<pre class="terminal">
+HTTP/1.1 200 OK
+Content-Type: application/json
+</pre>
+
+<%= render_code '{
+  "success": true
+}', 'javascript' %>
+
+#### Error Responses
+
+**Invalid or no longer available date** (missing, malformed, or not in `reschedule_options` — re-fetch and retry):
+
+<pre class="terminal">
+HTTP/1.1 422 Unprocessable Entity
+</pre>
+
+<%= render_code '{
+  "errors": [
+    {
+      "code": "reschedule_date",
+      "messages": [
+        "Invalid reschedule date"
+      ]
+    }
+  ]
+}', 'javascript' %>
+
+**Order not eligible for rescheduling** (e.g. fulfilled by Skroutz, fulfilled by merchant, store pickup, express). The `messages` describe the specific reason:
+
+<pre class="terminal">
+HTTP/1.1 422 Unprocessable Entity
+</pre>
+
+<%= render_code '{
+  "errors": [
+    {
+      "code": "order_status",
+      "messages": [
+        "Order rescheduling is not supported for \"Fulfilled by Skroutz\" orders."
+      ]
+    }
+  ]
+}', 'javascript' %>
+
+### Relocate a single order's pickup
+
+Changes the pickup **location** of an accepted order, keeping the current pickup date/slot. The
+courier is re-selected for the new location automatically, and a new voucher may be issued.
+
+Retrieve the order with [`?action_options=1`](#retrieve-a-single-order) and read `relocate_options`.
+Send one of the returned location `id` values as the `pickup_location` param. The order's current
+location is excluded from the list.
+
+> <i class="fa fa-exclamation-triangle"></i>
+> Available only for orders that have more than one pickup location configured for the shop and are
+> not fulfilled by Skroutz/merchant, store pickup or express.
+
+<pre class="terminal">
+  POST /merchants/ecommerce/orders/:code/relocate_pickup
+</pre>
+
+#### Example
+<pre class="terminal">
+curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/orders/191128-1234567/relocate_pickup \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Content-Type: application/json; charset=utf-8' \
+  -H 'Authorization: Bearer your_access_token_here' \
+  -d '{ "pickup_location": "YlpD0KROym" }'
+</pre>
+
+#### Success Response
+
+<pre class="terminal">
+HTTP/1.1 200 OK
+Content-Type: application/json
+</pre>
+
+<%= render_code '{
+  "success": true
+}', 'javascript' %>
+
+#### Error Responses
+
+**Invalid pickup location** (missing, not one of the shop's locations, or the order's current location):
+
+<pre class="terminal">
+HTTP/1.1 422 Unprocessable Entity
+</pre>
+
+<%= render_code '{
+  "errors": [
+    {
+      "code": "pickup_location",
+      "messages": [
+        "Invalid pickup location"
+      ]
+    }
+  ]
+}', 'javascript' %>
+
+**Order not eligible for relocation** (e.g. single pickup location, fulfilled by Skroutz/merchant, express). The `messages` describe the specific reason:
+
+<pre class="terminal">
+HTTP/1.1 422 Unprocessable Entity
+</pre>
+
+<%= render_code '{
+  "errors": [
+    {
+      "code": "order_status",
+      "messages": [
+        "Pickup relocation is not supported for this order."
+      ]
+    }
+  ]
+}', 'javascript' %>
 
 ### Reject a single order
 
