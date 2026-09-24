@@ -73,6 +73,15 @@ relocate request, and use a value from that fresh response.
 
 <%= render_recording :merchants_ecommerce_orders_show %>
 
+#### Example: including reschedule/relocate options
+
+<%= render_recording :merchants_ecommerce_orders_show_action_options %>
+
+With `action_options=1`, an accepted order additionally carries the two option lists
+(`reschedule_options` and `relocate_options`; only the relevant attributes are shown above).
+Both lists are empty (`[]`) when the order cannot be rescheduled/relocated, and both are omitted
+entirely when `action_options=1` is not passed.
+
 ### Accept a single order
 
 To accept an order you need to provide the `pickup_location` and the `pickup_window` which are required. You can also specify `number_of_parcels` which is optional with a default value of `1` if missing.
@@ -113,6 +122,8 @@ Send one of the returned `date` values (an `YYYY-MM-DD` string) as the `reschedu
   POST /merchants/ecommerce/orders/:code/reschedule_pickup
 </pre>
 
+<%= render_recording :merchants_ecommerce_orders_reschedule_pickup %>
+
 #### Example
 <pre class="terminal">
 curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/orders/191128-1234567/reschedule_pickup \
@@ -121,17 +132,6 @@ curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/orders/19112
   -H 'Authorization: Bearer your_access_token_here' \
   -d '{ "reschedule_date": "2026-09-25" }'
 </pre>
-
-#### Success Response
-
-<pre class="terminal">
-HTTP/1.1 200 OK
-Content-Type: application/json
-</pre>
-
-<%= render_code '{
-  "success": true
-}', 'javascript' %>
 
 #### Error Responses
 
@@ -186,25 +186,16 @@ location is excluded from the list.
   POST /merchants/ecommerce/orders/:code/relocate_pickup
 </pre>
 
+<%= render_recording :merchants_ecommerce_orders_relocate_pickup %>
+
 #### Example
 <pre class="terminal">
 curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/orders/191128-1234567/relocate_pickup \
   -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
   -H 'Content-Type: application/json; charset=utf-8' \
   -H 'Authorization: Bearer your_access_token_here' \
-  -d '{ "pickup_location": "YlpD0KROym" }'
+  -d '{ "pickup_location": "m8O6n3eO6j" }'
 </pre>
-
-#### Success Response
-
-<pre class="terminal">
-HTTP/1.1 200 OK
-Content-Type: application/json
-</pre>
-
-<%= render_code '{
-  "success": true
-}', 'javascript' %>
 
 #### Error Responses
 
