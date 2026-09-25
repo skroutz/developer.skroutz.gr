@@ -93,6 +93,7 @@ event notification is sent for the following cases:
 * When an order's courier voucher is **created** (for the associated shipment).
 * **From 5/7/2021 onwards**: When an order's **state changes** to one of the following states `[:accepted, :rejected, :expired, :dispatched, :cancelled, :partially_returned, :returned]` (either by the user, our support team, or the merchant)
 * When an order is **rescheduled** (changing the scheduled `pickup_window`).
+* When an order is **marked as ready for dispatch**, or that mark is **undone** (see [Set as Ready integration flow](/smart_cart/orders_api#set-as-ready-integration-flow)).
 
 #### Request payload
 
@@ -118,6 +119,7 @@ Name           | Type   | Value | Description
 `pickup_window` | Object | `{ "old": null, "new: { from: "2019-11-02T15:00:00+02:00", "to": "2019-11-02T16:00:00+02:00" } }` | The order's shipment pickup window (optional). It is sent when the order is accepted.
 `number_of_parcels` | Integer | `{ "old": null, "new": 2 }` | The order's shipment number of parcels (optional). It is sent when the order is accepted.
 `pickup_address` | String | `{ "old": null, "new": "Πανεπιστημίου 2, Τ.Κ. 12345, Αθήνα, Αττική" }` | The order's pickup address (optional).
+`is_ready_for_dispatch` | Boolean | `{ "old": false, "new": true }` | Whether the order is marked as ready for dispatch (optional). It is sent when the order is marked as ready for dispatch (`false` → `true`) or when that mark is undone (`true` → `false`).
 
 > The order object included in webhook payload is the sames as the one when
 > retrieving a single order via the [orders API](/smart_cart/orders_api).
@@ -2285,5 +2287,84 @@ Would send a Webhook request payload just like if the order was cancelled by the
             }
         ]
     }
+}
+~~~
+
+#### Example 19 (marked as ready for dispatch)
+
+~~~ json
+{
+  "event_type": "order_updated",
+  "event_time": "2026-02-25T17:20:41+02:00",
+  "order": {
+    "code": "260225-123456",
+    "state": "accepted",
+    "customer": {
+      "id": "PA4oqvpz8x",
+      "first_name": "John",
+      "last_name": "Doe",
+      "address":{
+        "street_name":"Πανεπιστημίου",
+        "street_number":"4",
+        "floor":"1ος όροφος",
+        "zip":"12345",
+        "city":"Αθήνα",
+        "region":"Αττικής",
+        "country_code": "GR",
+        "pickup_from_collection_point": false
+      }
+    },
+    "invoice": false,
+    "invoice_document": "receipt",
+    "uploaded_invoice_file": null,
+    "comments": "Παράδοση στο γραφείο",
+    "courier": "Skroutz Last Mile",
+    "courier_voucher": "https://b.scdn.gr/path-to/voucher.pdf",
+    "courier_tracking_codes": ["123456789"],
+    "line_items": [
+      {
+        "id": "l39vpqzZ1l",
+        "shop_uid": "100",
+        "product_name": "L'Oreal Professionel Salon Steam Pod V2 White",
+        "quantity": 2,
+        "unit_price": 10.40,
+        "total_price": 20.80,
+        "price_includes_vat": true,
+        "commission": 1.73,
+        "commission_rate": 8.34,
+        "island_vat_discount_applied": false,
+        "ean": "1234567890123",
+        "mpn": "JA-1059",
+        "serial_numbers": null
+      }
+    ],
+    "created_at": "2026-02-25T10:39:23+02:00",
+    "expires_at": "2026-02-25T16:39:23+02:00",
+    "dispatch_until": "2026-02-27T15:00:00+02:00",
+    "express": false,
+    "gift_wrap": false,
+    "fulfilled_by_skroutz": false,
+    "store_pickup": false,
+    "commission": 1.73,
+    "fbs_delivery_note": null,
+    "fbs_delivery_note_url": null,
+    "paid_by_user": true,
+    "payment_method": "card",
+    "set_as_ready_required": true,
+    "is_ready_for_dispatch": true,
+    "pickup_window": {
+      "from": "2026-02-27T09:00:00+02:00",
+      "to": "2026-02-27T12:00:00+02:00"
+    },
+    "number_of_parcels": 1,
+    "pickup_address": "Πανεπιστημίου 2, Τ.Κ. 12345, Αθήνα, Αττική",
+    "fees": {}
+  },
+  "changes": {
+    "is_ready_for_dispatch": {
+      "old": false,
+      "new": true
+    }
+  }
 }
 ~~~

@@ -632,6 +632,26 @@ No changes needed. The existing flow continues to work:
 4. Courier picks up
 </pre>
 
+### Webhook notifications
+
+If you have a [webhook](/smart_cart/orders_webhook) set up, an `order_updated` request is sent
+whenever an order is marked as ready for dispatch or that mark is undone, with the
+`is_ready_for_dispatch` change in its `changes` object:
+
+~~~ json
+{
+  "event_type": "order_updated",
+  "changes": {
+    "is_ready_for_dispatch": {
+      "old": false,
+      "new": true
+    }
+  }
+}
+~~~
+
+See the [webhook documentation](/smart_cart/orders_webhook#order-changes-object) for the full payload.
+
 ### Tips for faster pickups
 
 * Mark orders as ready as soon as they are physically prepared — don't wait for the pickup day
