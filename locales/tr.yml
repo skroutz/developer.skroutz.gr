@@ -39,6 +39,7 @@ tr:
       orders_webhook: 'Webhook Orders'
       returns_webhook: 'Webhook Returns'
       returns_api: 'Returns API'
+      merchant_return_request_review: 'Merchant Return Request Review (MRRR)'
 
   lang:
     el: 'Ελληνικά'

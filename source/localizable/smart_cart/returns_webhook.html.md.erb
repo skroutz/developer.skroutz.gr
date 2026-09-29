@@ -14,6 +14,10 @@ change), so the merchant's own system can stay in sync without polling the [Retu
 > <i class="fa fa-exclamation-triangle"></i>
 > Webhook Returns is currently **under development** .
 
+> When a return's `state` is `pending_merchant_review`, the payload also includes a
+> `review_options` list describing what the merchant can do next — see
+> [Merchant Return Request Review (MRRR)](/smart_cart/merchant_return_request_review).
+
 <%= partial 'partials/toc' %>
 
 ## Setup
