@@ -10,7 +10,7 @@ Name                   | Type              | Values | Description
 `courier`              | String            | (Optional) | Human-readable name of the courier (e.g. `ACS`)
 `returning_address`    | Object            | (Optional) | [Returning address](#returning-address) — the address the merchant should receive the return at
 `return_line_items`    | Array             | | [Return line items](#return-line-items) — the products being returned
-`review_options`       | Array             | (Optional) | Present only while `state` is `pending_merchant_review` — see [Merchant Return Request Review (MRRR)](/smart_cart/merchant_return_request_review#review-options)
+`review_options`       | Array             | (Optional) | Present only while `state` is `pending_merchant_review` — see [Review options](/smart_cart/returns_api#review-options)
 
 `courier_tracking_ids`, `courier`, `returning_address` and `review_options` are omitted entirely
 (not sent as `null`) when not applicable — e.g. virtual returns with no shipment, or a return

@@ -9,11 +9,13 @@ title: returns_api
 
 Returns API allows Skroutz Merchants to retrieve and manage their returns.
 
-> For returns that are `pending_merchant_review` and need the merchant's own judgment before
-> Skroutz can proceed, see [Merchant Return Request Review (MRRR)](/smart_cart/merchant_return_request_review).
-
 > <i class="fa fa-exclamation-triangle"></i>
 > Returns API is currently **under development**.
+
+Some returns need the merchant's own judgment before Skroutz can proceed — a **return
+request review**, or **MRRR**. While one is pending, the merchant must **approve** it,
+**reject** it with a reason, or (for a missing item) tell us they're **sending the missing
+part** instead. See [Review options](#review-options) below.
 
 <%= partial 'partials/toc' %>
 
@@ -42,6 +44,78 @@ curl -X GET https://<%= settings.api_domain %>/merchants/ecommerce/returns/R-111
   -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
   -H 'Authorization: Bearer your_access_token_here'
 </pre>
+
+## Review options
+
+API-integrated merchants learn a return needs their attention the same way they learn about
+any other return: a `merchant_return_created` or `merchant_return_updated`
+[webhook](/smart_cart/returns_webhook). When a return is pending merchant review, that
+webhook's payload includes a `review_options` list — every option currently valid for this
+specific return — which the merchant's system uses to build its own review UI and to know
+what to submit back.
+
+There is no separate "what should I do" endpoint: `review_options` is only delivered via the
+webhook payload (and via [`GET /merchants/ecommerce/returns/:return_code`](#retrieve-a-single-return),
+which returns the exact same shape, for whenever a client needs to re-fetch a return's current
+state instead of waiting on a webhook).
+
+`review_options` is present only while the return's `state` is `pending_merchant_review`, as
+part of the [return object](#return-object-attributes-appendix). It's a
+flat list — no nesting — of every option currently valid for **this** return; which ones appear
+depends on why the customer requested the return.
+
+Every entry always carries an `option` field. Every **reject**-kind entry (every option except
+`approve` and `send_missing_part`) also always carries both of the following, explicitly `true`
+or `false`:
+
+Name | Type | Description
+---- | ---- | -----------
+`comment_required` | Boolean | A non-blank `comment` must be submitted with this option
+`supports_proposed_part_url_required` | Boolean | A `proposed_part_url` may be submitted alongside this option
+
+#### Example 1 (faulty-product return)
+
+The merchant can approve, or reject with one of the four listed reasons.
+
+<%= render_code '{
+  "review_options": [
+    { "option": "approve" },
+    { "option": "contact_manufacturer", "comment_required": true, "supports_proposed_part_url_required": false },
+    { "option": "resolved_via_customer_communication", "comment_required": false, "supports_proposed_part_url_required": false },
+    { "option": "usability_suggestions", "comment_required": true, "supports_proposed_part_url_required": false },
+    { "option": "not_faulty", "comment_required": true, "supports_proposed_part_url_required": false }
+  ]
+}', 'javascript' %>
+
+#### Example 2 (missing-part return)
+
+`send_missing_part` only appears when the line item isn't fulfilled by Skroutz cargo.
+
+<%= render_code '{
+  "review_options": [
+    { "option": "approve" },
+    { "option": "send_missing_part" },
+    { "option": "resolved_via_customer_communication", "comment_required": false, "supports_proposed_part_url_required": false },
+    { "option": "part_not_included", "comment_required": true, "supports_proposed_part_url_required": true },
+    { "option": "incorrect_skroutz_content", "comment_required": true, "supports_proposed_part_url_required": false }
+  ]
+}', 'javascript' %>
+
+#### Example 3 (withdrawal-policy return)
+
+Only ever these two options; `comment_required` is `false` here because a canned comment is
+filled in automatically.
+
+<%= render_code '{
+  "review_options": [
+    { "option": "approve" },
+    { "option": "out_of_policy_withdrawal", "comment_required": false, "supports_proposed_part_url_required": false }
+  ]
+}', 'javascript' %>
+
+> `incorrect_skroutz_content` is the external name for what is stored internally as a
+> "not missing part" rejection reason (Skroutz's own catalog data was wrong, not the
+> merchant's fault) — send exactly the string shown in `review_options`, not any internal name.
 
 ## Endpoints
 
@@ -95,6 +169,61 @@ curl -X GET https://<%= settings.api_domain %>/merchants/ecommerce/returns/R-111
   }
 }', 'javascript' %>
 
+### Review a return
+
+To resolve a return that is `pending_merchant_review`, provide the `option` from that return's
+current [`review_options`](#review-options). A `comment` is required when that option's
+`comment_required` is `true`. You can also specify `proposed_part_url`, which is only used
+when the option's `supports_proposed_part_url_required` is `true`; it's silently dropped
+otherwise.
+
+<pre class="terminal">
+  POST /merchants/ecommerce/returns/:return_code/review
+</pre>
+
+Approving, rejecting, and sending the missing part are the same underlying decision — you can
+only do one of them once. After a successful call:
+
+* `state` moves off `pending_merchant_review` — to `returning` on approve, `rejected` on
+  reject; `send_missing_part` cancels the return itself, since the customer is getting the
+  missing part directly rather than a replacement/refund through the return.
+* The next `merchant_return_updated` [webhook](/smart_cart/returns_webhook) reflects that change.
+* `review_options` disappears from the payload — there is nothing left to resolve.
+
+> <i class="fa fa-exclamation-triangle"></i>
+> Unlike the equivalent action in the Merchants panel, `send_missing_part` here does **not**
+> create a replacement delivery — it only cancels the return and emails the customer. The panel
+> creates that delivery through a separate, much larger form (courier, pickup slot, parcel
+> count, pickup address, weight, item description); the API has no equivalent input for that
+> today, so a merchant using this endpoint is expected to arrange the missing part's delivery
+> to the customer outside of this call.
+
+#### Example 1 (rejecting a faulty return)
+
+<pre class="terminal">
+curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/returns/R-111111-1111111/review \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Content-Type: application/json; charset=utf-8' \
+  -H 'Authorization: Bearer your_access_token_here' \
+  -d '{ "option": "not_faulty", "comment": "The product works within its stated specifications." }'
+</pre>
+
+#### Example 2 (approving a withdrawal return)
+
+<pre class="terminal">
+curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/returns/R-111111-1111112/review \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Content-Type: application/json; charset=utf-8' \
+  -H 'Authorization: Bearer your_access_token_here' \
+  -d '{ "option": "approve" }'
+</pre>
+
+#### Response
+
+<%= render_code '{
+  "success": true
+}', 'javascript' %>
+
 ## Error handling
 
 In case of errors, the response will have a representative HTTP status code
@@ -113,6 +242,26 @@ you will get a `404` HTTP status code (Not Found):
     }
   ]
 }', 'javascript' %>
+
+If you submit an invalid or stale `option` to [review a return](#review-a-return), you will
+get a `422` HTTP status code (Unprocessable Entity), with the following body:
+
+<%= render_code '{
+  "errors": [
+    {
+      "code": "option",
+      "messages": [
+        "Invalid or missing option."
+      ]
+    }
+  ]
+}', 'javascript' %>
+
+`code` is `option`, `comment`, or `return_status` — for an invalid/stale option, a missing
+required comment, or the return having moved out of `pending_merchant_review` in the meantime,
+respectively. If the option itself was valid but the decision still failed a model-level check
+(e.g. a `comment` over 1000 characters), `code` names the failing attribute instead (e.g.
+`rejection_comment_sanitized`).
 
 ## Test requests (sandbox)
 

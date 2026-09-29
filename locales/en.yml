@@ -45,7 +45,6 @@ en:
       orders_webhook: 'Webhook Orders'
       returns_webhook: 'Webhook Returns'
       returns_api: 'Returns API'
-      merchant_return_request_review: 'Merchant Return Request Review (MRRR)'
     cps_orders_api:
       short_description: 'The API to control your CPS orders in %{flavor}.'
 

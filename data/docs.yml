@@ -24,7 +24,6 @@ smart_cart:
     - { title: "overview", url: "/smart_cart/" }
     - { title: "orders_api" }
     - { title: "returns_api" }
-    - { title: "merchant_return_request_review" }
     - { title: "fbs_api" }
     - { title: "orders_webhook" }
     - { title: "returns_webhook" }
