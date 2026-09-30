@@ -3,16 +3,19 @@
 Name                   | Type              | Values | Description
 ----------------------- | ----------------- | ------ | -----------
 `return_code`          | String            | | Return Code
-`state`                | String            | `pending_merchant_review`, `returning`, `pending_physical_review`, `returned`, `rejected`, `expired`, `cancelled` | Current lifecycle state of the return. One of the [return states](#return-states).
+`state`                | String            | `pending_merchant_review`, `returning`, `pending_physical_review`, `pending_service_inspection`, `returned`, `rejected`, `expired`, `cancelled` | Current lifecycle state of the return. One of the [return states](#return-states).
 `order_code`           | String            | | The code of the order this return belongs to
 `created_at`           | Date String in format<br> `YYYY-MM-DDTHH:MM:SSZ` | | Return creation date
 `courier_tracking_ids` | Array of Strings  | (Optional) | Deduplicated tracking IDs across current shipments
 `courier`              | String            | (Optional) | Human-readable name of the courier (e.g. `ACS`)
 `returning_address`    | Object            | (Optional) | [Returning address](#returning-address) — the address the merchant should receive the return at
 `return_line_items`    | Array             | | [Return line items](#return-line-items) — the products being returned
+`review_options`       | Array             | (Optional) | Present only while `state` is `pending_merchant_review` — see [Review options](/smart_cart/returns_api#review-options)
+`service_request`      | Object            | (Optional) | Present only while `state` is `pending_service_inspection` — see [Service status](/smart_cart/returns_api#service-status)
 
-`courier_tracking_ids`, `courier` and `returning_address` are omitted entirely (not sent as `null`)
-when not applicable — e.g. virtual returns with no shipment.
+`courier_tracking_ids`, `courier`, `returning_address`, `review_options` and `service_request` are
+omitted entirely (not sent as `null`) when not applicable — e.g. virtual returns with no shipment,
+or a return that isn't awaiting merchant review or service status.
 
 #### Return states
 
@@ -20,10 +23,11 @@ The `state` field is one of the following string values:
 
 State                     | Description
 ------------------------- | ---------------------------------------------------------------------------------------
-`pending_merchant_review` | The customer submitted a return request and the merchant needs to review it.
-`returning`               | The package is in transit back to the merchant.
-`pending_physical_review` | The package arrived at the merchant and must perform physical inspection.
-`returned`                | The package was delivered back to the merchant.
+`pending_merchant_review`   | The customer submitted a return request and the merchant needs to review it.
+`returning`                 | The package is in transit back to the merchant.
+`pending_physical_review`   | The package arrived at the merchant and must perform physical inspection.
+`pending_service_inspection` | The item needs a physical service inspection (repair, replacement or refund) and the merchant must report the outcome — see [Service status](/smart_cart/returns_api#service-status).
+`returned`                  | The package was delivered back to the merchant.
 `rejected`                | The return was rejected.
 `expired`                 | The merchant never responded to the return request within the deadline.
 `cancelled`               | The return was cancelled.

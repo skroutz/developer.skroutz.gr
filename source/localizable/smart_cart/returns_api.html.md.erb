@@ -12,6 +12,15 @@ Returns API allows Skroutz Merchants to retrieve and manage their returns.
 > <i class="fa fa-exclamation-triangle"></i>
 > Returns API is currently **under development**.
 
+Some returns need the merchant's own judgment before Skroutz can proceed — a **return
+request review**, or **MRRR**. While one is pending, the merchant must **approve** it,
+**reject** it with a reason, or (for a missing item) tell us they're **sending the missing
+part** instead. See [Review options](#review-options) below.
+
+Other returns need the merchant to physically inspect the returned item and report back a
+**service status** — repair it, replace it, refund it, or deny the claim. While one is
+pending, the merchant must submit that outcome. See [Service status](#service-status) below.
+
 <%= partial 'partials/toc' %>
 
 ## Setup
@@ -39,6 +48,166 @@ curl -X GET https://<%= settings.api_domain %>/merchants/ecommerce/returns/R-111
   -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
   -H 'Authorization: Bearer your_access_token_here'
 </pre>
+
+## Review options
+
+API-integrated merchants learn a return needs their attention the same way they learn about
+any other return: a `merchant_return_created` or `merchant_return_updated`
+[webhook](/smart_cart/returns_webhook). When a return is pending merchant review, that
+webhook's payload includes a `review_options` list — every option currently valid for this
+specific return — which the merchant's system uses to build its own review UI and to know
+what to submit back.
+
+There is no separate "what should I do" endpoint: `review_options` is only delivered via the
+webhook payload (and via [`GET /merchants/ecommerce/returns/:return_code`](#retrieve-a-single-return),
+which returns the exact same shape, for whenever a client needs to re-fetch a return's current
+state instead of waiting on a webhook).
+
+`review_options` is present only while the return's `state` is `pending_merchant_review`, as
+part of the [return object](#return-object-attributes-appendix). It's a
+flat list — no nesting — of every option currently valid for **this** return; which ones appear
+depends on why the customer requested the return.
+
+Every entry always carries an `option` field. Every **reject**-kind entry (every option except
+`approve` and `send_missing_part`) also always carries both of the following, explicitly `true`
+or `false`:
+
+Name | Type | Description
+---- | ---- | -----------
+`comment_required` | Boolean | A non-blank `comment` must be submitted with this option
+`supports_proposed_part_url_required` | Boolean | A `proposed_part_url` may be submitted alongside this option
+
+#### Example 1 (faulty-product return)
+
+The merchant can approve, or reject with one of the four listed reasons.
+
+<%= render_code '{
+  "review_options": [
+    { "option": "approve" },
+    { "option": "contact_manufacturer", "comment_required": true, "supports_proposed_part_url_required": false },
+    { "option": "resolved_via_customer_communication", "comment_required": false, "supports_proposed_part_url_required": false },
+    { "option": "usability_suggestions", "comment_required": true, "supports_proposed_part_url_required": false },
+    { "option": "not_faulty", "comment_required": true, "supports_proposed_part_url_required": false }
+  ]
+}', 'javascript' %>
+
+#### Example 2 (missing-part return)
+
+`send_missing_part` only appears when the line item isn't fulfilled by Skroutz cargo.
+
+<%= render_code '{
+  "review_options": [
+    { "option": "approve" },
+    { "option": "send_missing_part" },
+    { "option": "resolved_via_customer_communication", "comment_required": false, "supports_proposed_part_url_required": false },
+    { "option": "part_not_included", "comment_required": true, "supports_proposed_part_url_required": true },
+    { "option": "incorrect_skroutz_content", "comment_required": true, "supports_proposed_part_url_required": false }
+  ]
+}', 'javascript' %>
+
+#### Example 3 (withdrawal-policy return)
+
+Only ever these two options; `comment_required` is `false` here because a canned comment is
+filled in automatically.
+
+<%= render_code '{
+  "review_options": [
+    { "option": "approve" },
+    { "option": "out_of_policy_withdrawal", "comment_required": false, "supports_proposed_part_url_required": false }
+  ]
+}', 'javascript' %>
+
+> `incorrect_skroutz_content` is the external name for what is stored internally as a
+> "not missing part" rejection reason (Skroutz's own catalog data was wrong, not the
+> merchant's fault) — send exactly the string shown in `review_options`, not any internal name.
+
+## Service status
+
+Like [review options](#review-options), a return needing a service status is announced the same
+way as any other return update: a `merchant_return_created` or `merchant_return_updated`
+[webhook](/smart_cart/returns_webhook). When a return is pending service inspection, that
+webhook's payload includes a `service_request` object describing what the merchant can currently
+submit, which the merchant's system uses to build its own service form and to know what to
+submit back.
+
+There is no separate "what should I do" endpoint: `service_request` is only delivered via the
+webhook payload (and via [`GET /merchants/ecommerce/returns/:return_code`](#retrieve-a-single-return),
+which returns the exact same shape, for whenever a client needs to re-fetch a return's current
+state instead of waiting on a webhook).
+
+`service_request` is present only while the return's `state` is `pending_service_inspection`, as
+part of the [return object](#return-object-attributes-appendix).
+
+Name                    | Type    | Description
+------------------------ | ------- | -----------
+`service_request_id`    | Integer | ID to submit the outcome against — see [Submit a service status](#submit-a-service-status)
+`service_options`       | Object  | What the merchant can currently submit — see below
+
+`service_options` always carries an `additional_information_to_the_customer` object (a comment
+and/or additional files may always be attached, regardless of the chosen option) and an `options`
+array — every service outcome currently valid for **this** return. Which ones appear depends on
+the returned item:
+
+Name                                                       | Type    | Description
+------------------------------------------------------------ | ------- | -----------
+`options`                                                    | Array   | Every service outcome currently valid for this return — see below
+`additional_information_to_the_customer.comment_optional`    | Boolean | A `comment` may optionally be submitted
+`additional_information_to_the_customer.file_optional`       | Boolean | Additional files may optionally be submitted alongside the report file, via `additional_attachments`
+
+Each element of `options` always carries an `option` field, matching the convention used by
+[`review_options`](#review-options). `service_report_file_required` and
+`in_stock_answer_required` are only present (and only ever `true`) when submitting that
+particular option requires a `service_report_file` / `in_stock` value respectively — both are
+omitted entirely (never sent as `false`) otherwise:
+
+Name                            | Type    | Description
+--------------------------------- | ------- | -----------
+`option`                         | String  | The value to submit back as `option` — see [Submit a service status](#submit-a-service-status)
+`service_report_file_required`   | Boolean | (Optional) A `service_report_file` must be submitted with this option
+`in_stock_answer_required`       | Boolean | (Optional) An `in_stock` value must be submitted with this option
+
+#### Example 1 (normal faulty item)
+
+<%= render_code '{
+  "service_request_id": 4821,
+  "service_options": {
+    "options": [
+      { "option": "under_warranty_repairable", "service_report_file_required": true },
+      { "option": "under_warranty_unrepairable", "in_stock_answer_required": true },
+      { "option": "no_warranty_repairable", "service_report_file_required": true },
+      { "option": "no_warranty_unrepairable", "service_report_file_required": true },
+      { "option": "unconfirmed", "service_report_file_required": true }
+    ],
+    "additional_information_to_the_customer": {
+      "comment_optional": true,
+      "file_optional": true
+    }
+  }
+}', 'javascript' %>
+
+#### Example 2 (early-returned item with a refund already requested)
+
+`under_warranty_refund` replaces the two `under_warranty_*` options above; `unconfirmed` is
+always available regardless of the item.
+
+<%= render_code '{
+  "service_request_id": 4822,
+  "service_options": {
+    "options": [
+      { "option": "under_warranty_refund" },
+      { "option": "no_warranty_repairable", "service_report_file_required": true },
+      { "option": "no_warranty_unrepairable", "service_report_file_required": true },
+      { "option": "unconfirmed", "service_report_file_required": true }
+    ],
+    "additional_information_to_the_customer": {
+      "comment_optional": true,
+      "file_optional": true
+    }
+  }
+}', 'javascript' %>
+
+> `unconfirmed` means the merchant is denying the claim — the item isn't actually faulty, or
+> isn't covered — rather than repairing, replacing or refunding it.
 
 ## Endpoints
 
@@ -92,6 +261,130 @@ curl -X GET https://<%= settings.api_domain %>/merchants/ecommerce/returns/R-111
   }
 }', 'javascript' %>
 
+### Review a return
+
+To resolve a return that is `pending_merchant_review`, provide the `option` from that return's
+current [`review_options`](#review-options). A `comment` is required when that option's
+`comment_required` is `true`. You can also specify `proposed_part_url`, which is only used
+when the option's `supports_proposed_part_url_required` is `true`; it's silently dropped
+otherwise.
+
+<pre class="terminal">
+  POST /merchants/ecommerce/returns/:return_code/review
+</pre>
+
+Approving, rejecting, and sending the missing part are the same underlying decision — you can
+only do one of them once. After a successful call:
+
+* `state` moves off `pending_merchant_review` — to `returning` on approve, `rejected` on
+  reject; `send_missing_part` cancels the return itself, since the customer is getting the
+  missing part directly rather than a replacement/refund through the return.
+* The next `merchant_return_updated` [webhook](/smart_cart/returns_webhook) reflects that change.
+* `review_options` disappears from the payload — there is nothing left to resolve.
+
+> <i class="fa fa-exclamation-triangle"></i>
+> Unlike the equivalent action in the Merchants panel, `send_missing_part` here does **not**
+> create a replacement delivery — it only cancels the return and emails the customer. The panel
+> creates that delivery through a separate, much larger form (courier, pickup slot, parcel
+> count, pickup address, weight, item description); the API has no equivalent input for that
+> today, so a merchant using this endpoint is expected to arrange the missing part's delivery
+> to the customer outside of this call.
+
+#### Example 1 (rejecting a faulty return)
+
+<pre class="terminal">
+curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/returns/R-111111-1111111/review \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Content-Type: application/json; charset=utf-8' \
+  -H 'Authorization: Bearer your_access_token_here' \
+  -d '{ "option": "not_faulty", "comment": "The product works within its stated specifications." }'
+</pre>
+
+#### Example 2 (approving a withdrawal return)
+
+<pre class="terminal">
+curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/returns/R-111111-1111112/review \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Content-Type: application/json; charset=utf-8' \
+  -H 'Authorization: Bearer your_access_token_here' \
+  -d '{ "option": "approve" }'
+</pre>
+
+#### Response
+
+<%= render_code '{
+  "success": true
+}', 'javascript' %>
+
+### Submit a service status
+
+To resolve a return that is `pending_service_inspection`, provide the `option` value from that
+return's current [`service_options.options`](#service-status) as `option`.
+`service_report_file` (a PDF report) and `in_stock` are each required exactly when that option's
+`service_report_file_required` / `in_stock_answer_required` was `true`; submitting them when not
+required, or omitting them when required, is rejected. `comment` and up to five
+`additional_attachments` may always optionally be attached.
+
+<pre class="terminal">
+  POST /merchants/ecommerce/returns/:return_code/service_requests/:service_request_id
+</pre>
+
+After a successful call:
+
+* `state` moves off `pending_service_inspection` — typically to `returned`.
+* The next `merchant_return_updated` [webhook](/smart_cart/returns_webhook) reflects that change.
+* `service_request` disappears from the payload — there is nothing left to resolve.
+* The response body carries the resolved outcome as `service_request_outcome`.
+
+#### Example (free repair under warranty)
+
+<pre class="terminal">
+curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/returns/R-111111-1111111/service_requests/4821 \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Authorization: Bearer your_access_token_here' \
+  -F 'option=under_warranty_repairable' \
+  -F 'in_stock=true' \
+  -F 'service_report_file=@service_report.pdf'
+</pre>
+
+#### Response
+
+<%= render_code '{
+  "return": {
+    "return_code": "R-111111-1111111",
+    "state": "returned",
+    "order_code": "DEMO-OPEN",
+    "created_at": "2026-01-01T10:00:00Z",
+    "return_line_items": [
+      {
+        "id": "DEMO-ITEM-1",
+        "ean": "1234567890123",
+        "product_name": "Demo Product",
+        "returning_quantity": 1
+      }
+    ]
+  },
+  "service_request_outcome": {
+    "state": "repaired",
+    "confirmed": true,
+    "under_warranty": true,
+    "repairable": true
+  }
+}', 'javascript' %>
+
+`service_request_outcome` reflects the resolved [outcome](#service-status):
+
+Name             | Type    | Description
+----------------- | ------- | -----------
+`state`          | String  | `repaired`, `replaced`, `refunded`, `manually_handled` or `unrepaired`
+`confirmed`      | Boolean | Whether the claim was accepted as valid
+`under_warranty` | Boolean | Whether it was handled as an in-warranty claim
+`repairable`     | Boolean | Whether the item was/could be repaired
+
+> <i class="fa fa-exclamation-triangle"></i>
+> `service_request_id` is a plain integer, not the same kind of opaque ID used for
+> `return_line_items[].id` — send it back exactly as received in `service_options`.
+
 ## Error handling
 
 In case of errors, the response will have a representative HTTP status code
@@ -110,6 +403,47 @@ you will get a `404` HTTP status code (Not Found):
     }
   ]
 }', 'javascript' %>
+
+If you submit an invalid or stale `option` to [review a return](#review-a-return), you will
+get a `422` HTTP status code (Unprocessable Entity), with the following body:
+
+<%= render_code '{
+  "errors": [
+    {
+      "code": "option",
+      "messages": [
+        "Invalid or missing option."
+      ]
+    }
+  ]
+}', 'javascript' %>
+
+`code` is `option`, `comment`, or `return_status` — for an invalid/stale option, a missing
+required comment, or the return having moved out of `pending_merchant_review` in the meantime,
+respectively. If the option itself was valid but the decision still failed a model-level check
+(e.g. a `comment` over 1000 characters), `code` names the failing attribute instead (e.g.
+`rejection_comment_sanitized`).
+
+If you submit an invalid `option` to [submit a service status](#submit-a-service-status)
+— not currently one of the `option`s in `service_options.options` — or omit a `service_report_file` /
+`in_stock` value that option required, you will get a `422` HTTP status code (Unprocessable
+Entity), with a single combined message under `code: "service_request_error"`:
+
+<%= render_code '{
+  "errors": [
+    {
+      "code": "service_request_error",
+      "messages": [
+        "Report file δεν πρέπει να είναι κενό"
+      ]
+    }
+  ]
+}', 'javascript' %>
+
+If the `service_request_id` doesn't exist, doesn't belong to this return, or was already
+resolved (by you or concurrently by someone else), you get a `404` with `code: "service_request_error"`
+and the message `"Service request not found"` — the same as an unknown/foreign `return_code`
+gets you `code: "return_error"` with `"Return not found"`.
 
 ## Test requests (sandbox)
 
