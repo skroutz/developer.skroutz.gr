@@ -12,6 +12,11 @@ Returns API allows Skroutz Merchants to retrieve and manage their returns.
 > <i class="fa fa-exclamation-triangle"></i>
 > Returns API is currently **under development**.
 
+Some returns need the merchant's own judgment before Skroutz can proceed — a **return request
+review**, or **MRRR**. While one is pending, the merchant must **approve** it, **reject** it with
+a reason, or (for a missing item) tell us they're **sending the missing part** instead. See
+[Review options](#review-options) below.
+
 <%= partial 'partials/toc' %>
 
 ## Setup
@@ -41,6 +46,9 @@ curl -X GET https://<%= settings.api_domain %>/merchants/ecommerce/returns/R-111
 </pre>
 
 ## Endpoints
+
+All endpoints require the return `return_code` as a URL parameter. This is available in all
+incoming return [Webhook](/smart_cart/returns_webhook) events, as well as the merchants' panel.
 
 ### Retrieve a single return
 
@@ -92,10 +100,214 @@ curl -X GET https://<%= settings.api_domain %>/merchants/ecommerce/returns/R-111
   }
 }', 'javascript' %>
 
+### Review options
+
+When a return's `state` is `pending_merchant_review`, the return object includes a
+`review_options` list. Each element represents one action the merchant can take on this return —
+use it to present the available actions and to know what to submit back to the
+[review endpoint](#review-a-return).
+
+Which options appear depends on why the customer requested the return — see the three cases
+below. For where `review_options` sits in the full response, see the
+[return object](#return-object-attributes-appendix).
+
+Return reason | Category
+------------- | --------
+`withdrawal` | [Withdrawal-policy return](#withdrawal-policy-return)
+`missing_part` | [Missing-part return](#missing-part-return)
+`faulty` | [Faulty-product return](#faulty-product-return)
+
+Every other `return_reason` skips merchant review entirely.
+
+#### Faulty-product return
+
+<%= render_code '{
+  "review_options": [
+    { "option": "approve" },
+    { "option": "contact_manufacturer", "comment_required": true },
+    { "option": "resolved_via_customer_communication", "comment_required": false },
+    { "option": "usability_suggestions", "comment_required": true },
+    { "option": "not_faulty", "comment_required": true }
+  ]
+}', 'javascript' %>
+
+Option | Meaning
+------ | -------
+`approve` | accepts the return as a genuinely faulty product
+`contact_manufacturer` | reject: this is a manufacturer/service-provider warranty issue, not something the merchant handles directly
+`resolved_via_customer_communication` | reject: the merchant already sorted it out directly with the customer (no comment required)
+`usability_suggestions` | reject: the product was used in a way that affected its own function/operation
+`not_faulty` | reject: the product isn't actually defective; it operates within its stated specifications
+
+#### Missing-part return
+
+<%= render_code '{
+  "review_options": [
+    { "option": "approve" },
+    { "option": "send_missing_part" },
+    { "option": "resolved_via_customer_communication", "comment_required": false },
+    { "option": "part_not_included", "comment_required": true, "support_proposed_part_url": true },
+    { "option": "incorrect_skroutz_content", "comment_required": true }
+  ]
+}', 'javascript' %>
+
+Option | Meaning
+------ | -------
+`approve` | accepts the return (refund/replacement go through the normal return flow)
+`send_missing_part` | the merchant will ship the missing part directly to the customer instead — this cancels the return itself rather than rejecting it; only offered when the line item isn't fulfilled by Skroutz cargo
+`resolved_via_customer_communication` | reject: the merchant already sorted it out directly with the customer (no comment required)
+`part_not_included` | reject: the product was delivered complete as described, nothing is actually missing; may optionally include `proposed_part_url` pointing the customer at the correct part
+`incorrect_skroutz_content` | reject, but only updates the return request review and leaves the return request itself pending — Skroutz's own catalog data was wrong (a missing part was listed in content that isn't actually included), not the merchant's fault, and needs a correction on the product page
+
+#### Withdrawal-policy return
+
+<%= render_code '{
+  "review_options": [
+    { "option": "approve" },
+    { "option": "out_of_policy_withdrawal", "comment_required": false }
+  ]
+}', 'javascript' %>
+
+Option | Meaning
+------ | -------
+`approve` | accepts the withdrawal
+`out_of_policy_withdrawal` | reject: the withdrawal falls outside what's allowed (e.g. past the return window, or the item is no longer in its original unopened condition); `comment_required` is `false` because a canned comment is filled in automatically
+
+Only ever these two options for a withdrawal return, regardless of which specific
+withdrawal/wrong-size scenario triggered the review — wrong-size reviews follow the same
+withdrawal policy and render the same way.
+
+#### Option fields
+
+Each entry in `review_options` has the following fields:
+
+Field | Type | Description
+----- | ---- | -----------
+`option` | String | the action to submit back to the [review endpoint](#review-a-return)
+`comment_required` | Boolean | `true` if a non-blank `comment` must be submitted with this option, `false` if optional
+`support_proposed_part_url` | Boolean | present, and only ever `true`, on `part_not_included` — the only option a `proposed_part_url` may be submitted alongside. Omitted on every other option
+
+### Review a return
+
+Resolve a return that is `pending_merchant_review` by submitting one of the options from that
+return's current [`review_options`](#review-options).
+
+**Prerequisites:**
+
+* Return must be in `pending_merchant_review` state
+* `option` must be one of the values currently listed in the return's `review_options`
+
+<pre class="terminal">
+  POST /merchants/ecommerce/returns/:return_code/review
+</pre>
+
+To resolve a return you need to provide `option`, which must be one of the strings from this
+return's current `review_options`. A `comment` is also required when that option's
+`comment_required` is `true`. You can also specify `proposed_part_url`, which is only used when
+the option's `support_proposed_part_url` is `true`; it's silently dropped otherwise.
+
+Approving, rejecting, and sending the missing part are the same underlying decision — you can
+only do one of them once. After a successful call, `state` moves off `pending_merchant_review`
+(to `returning` on approve, `rejected` on reject; `send_missing_part` cancels the return itself,
+since the customer is getting the missing part directly rather than a replacement/refund through
+the return), the next `merchant_return_updated` [webhook](/smart_cart/returns_webhook) reflects
+that, and `review_options` disappears from the payload — there is nothing left to resolve.
+
+#### Example: rejecting a faulty return
+
+<pre class="terminal">
+curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/returns/R-111111-1111111/review \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Content-Type: application/json; charset=utf-8' \
+  -H 'Authorization: Bearer your_access_token_here' \
+  -d '{ "option": "not_faulty", "comment": "The product works within its stated specifications." }'
+</pre>
+
+#### Example: approving a withdrawal return
+
+<pre class="terminal">
+curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/returns/R-111111-1111112/review \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Content-Type: application/json; charset=utf-8' \
+  -H 'Authorization: Bearer your_access_token_here' \
+  -d '{ "option": "approve" }'
+</pre>
+
+#### Success Response
+
+<pre class="terminal">
+HTTP/1.1 200 OK
+Content-Type: application/json
+</pre>
+
+<%= render_code '{
+  "success": true
+}', 'javascript' %>
+
+#### Error Responses
+
+**Invalid or missing option** (not one of this return's current `review_options`, or the return
+has since moved on):
+
+<pre class="terminal">
+HTTP/1.1 422 Unprocessable Entity
+</pre>
+
+<%= render_code '{
+  "errors": [
+    {
+      "code": "option",
+      "messages": [
+        "Invalid or missing option."
+      ]
+    }
+  ]
+}', 'javascript' %>
+
+**Missing required comment** (the option's `comment_required` is `true` and `comment` was blank
+or missing):
+
+<pre class="terminal">
+HTTP/1.1 422 Unprocessable Entity
+</pre>
+
+<%= render_code '{
+  "errors": [
+    {
+      "code": "comment",
+      "messages": [
+        "Comment is required for this option."
+      ]
+    }
+  ]
+}', 'javascript' %>
+
+**Return no longer pending review** (its `state` moved out of `pending_merchant_review` in the
+meantime):
+
+<pre class="terminal">
+HTTP/1.1 422 Unprocessable Entity
+</pre>
+
+<%= render_code '{
+  "errors": [
+    {
+      "code": "return_status",
+      "messages": [
+        "Return is not pending merchant review."
+      ]
+    }
+  ]
+}', 'javascript' %>
+
+If the option itself was valid but the decision still fails a model-level check (e.g. a
+`comment` over 1000 characters), `code` names the failing attribute instead (e.g.
+`rejection_comment_sanitized`).
+
 ## Error handling
 
 In case of errors, the response will have a representative HTTP status code
-in the `4xx` range. The body would contain an array of `errors`.
+in the `4xx` or `5xx` range. The body would contain an array of `errors`.
 
 For example, if the requested return code does not exist (or does not belong to your shop),
 you will get a `404` HTTP status code (Not Found):
@@ -113,21 +325,168 @@ you will get a `404` HTTP status code (Not Found):
 
 ## Test requests (sandbox)
 
-The following d​emo return code​ is available on production for testing reasons.
+The following three d​emo return codes​ are available on production for testing reasons — one
+for each [review options](#review-options) case. They work against any shop's own API token,
+with both `GET` and `POST .../review`.
 
-> It is safe to issue requests for the following demo return code multiple times for testing,
-> since it does not reference any real data.
+> It is safe to issue requests for the following demo return codes multiple times for testing,
+> since they do not reference any real data. `GET` always returns the fixed `review_options`
+> shown below for that case. `POST .../review` accepts any option from that same list (and
+> validates `comment` the same way a real return would), but always just responds with
+> `{ "success": true }` without changing any data — nothing is persisted, so the same demo code
+> can be posted to repeatedly.
+
+Return code | Case
+----------- | ----
+`DEMO-RETURN` | faulty-product
+`DEMO-RETURN-MISSING-PART` | missing-part
+`DEMO-RETURN-WITHDRAWAL` | withdrawal-policy
 
 #### DEMO-RETURN
 
-A demo return with a single returning line item, courier tracking ids and a returning address.
+A demo return pending merchant review for a faulty product.
 
 <pre class="terminal">
   GET /merchants/ecommerce/returns/DEMO-RETURN
 </pre>
 
-<%= render_recording :merchants_ecommerce_returns_demo_return %>
+<%= render_code '{
+  "return": {
+    "return_code": "DEMO-RETURN",
+    "state": "pending_merchant_review",
+    "order_code": "DEMO-OPEN",
+    "created_at": "2026-01-01T10:00:00Z",
+    "return_line_items": [
+      {
+        "id": "DEMO-ITEM-1",
+        "ean": "1234567890123",
+        "product_name": "Demo Product",
+        "returning_quantity": 1,
+        "return_reason": "other",
+        "user_comment": "This is a demo comment explaining the return.",
+        "user_photos": [
+          "https://a.scdn.gr/demo/return_photo_1.jpg"
+        ]
+      }
+    ],
+    "review_options": [
+      { "option": "approve" },
+      { "option": "contact_manufacturer", "comment_required": true },
+      { "option": "resolved_via_customer_communication", "comment_required": false },
+      { "option": "usability_suggestions", "comment_required": true },
+      { "option": "not_faulty", "comment_required": true }
+    ]
+  }
+}', 'javascript' %>
+
+<pre class="terminal">
+curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/returns/DEMO-RETURN/review \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Content-Type: application/json; charset=utf-8' \
+  -H 'Authorization: Bearer your_access_token_here' \
+  -d '{ "option": "not_faulty", "comment": "The product works within its stated specifications." }'
+</pre>
+
+<%= render_code '{
+  "success": true
+}', 'javascript' %>
+
+#### DEMO-RETURN-MISSING-PART
+
+A demo return pending merchant review for a missing part.
+
+<pre class="terminal">
+  GET /merchants/ecommerce/returns/DEMO-RETURN-MISSING-PART
+</pre>
+
+<%= render_code '{
+  "return": {
+    "return_code": "DEMO-RETURN-MISSING-PART",
+    "state": "pending_merchant_review",
+    "order_code": "DEMO-OPEN",
+    "created_at": "2026-01-01T10:00:00Z",
+    "return_line_items": [
+      {
+        "id": "DEMO-ITEM-1",
+        "ean": "1234567890123",
+        "product_name": "Demo Product",
+        "returning_quantity": 1,
+        "return_reason": "missing_part",
+        "user_comment": "A part is missing from the box.",
+        "user_photos": [
+          "https://a.scdn.gr/demo/return_photo_1.jpg"
+        ]
+      }
+    ],
+    "review_options": [
+      { "option": "approve" },
+      { "option": "send_missing_part" },
+      { "option": "resolved_via_customer_communication", "comment_required": false },
+      { "option": "part_not_included", "comment_required": true, "support_proposed_part_url": true },
+      { "option": "incorrect_skroutz_content", "comment_required": true }
+    ]
+  }
+}', 'javascript' %>
+
+<pre class="terminal">
+curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/returns/DEMO-RETURN-MISSING-PART/review \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Content-Type: application/json; charset=utf-8' \
+  -H 'Authorization: Bearer your_access_token_here' \
+  -d '{ "option": "send_missing_part" }'
+</pre>
+
+<%= render_code '{
+  "success": true
+}', 'javascript' %>
+
+#### DEMO-RETURN-WITHDRAWAL
+
+A demo return pending merchant review for a withdrawal.
+
+<pre class="terminal">
+  GET /merchants/ecommerce/returns/DEMO-RETURN-WITHDRAWAL
+</pre>
+
+<%= render_code '{
+  "return": {
+    "return_code": "DEMO-RETURN-WITHDRAWAL",
+    "state": "pending_merchant_review",
+    "order_code": "DEMO-OPEN",
+    "created_at": "2026-01-01T10:00:00Z",
+    "return_line_items": [
+      {
+        "id": "DEMO-ITEM-1",
+        "ean": "1234567890123",
+        "product_name": "Demo Product",
+        "returning_quantity": 1,
+        "return_reason": "withdrawal",
+        "user_comment": "Changed my mind.",
+        "user_photos": []
+      }
+    ],
+    "review_options": [
+      { "option": "approve" },
+      { "option": "out_of_policy_withdrawal", "comment_required": false }
+    ]
+  }
+}', 'javascript' %>
+
+<pre class="terminal">
+curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/returns/DEMO-RETURN-WITHDRAWAL/review \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Content-Type: application/json; charset=utf-8' \
+  -H 'Authorization: Bearer your_access_token_here' \
+  -d '{ "option": "approve" }'
+</pre>
+
+<%= render_code '{
+  "success": true
+}', 'javascript' %>
 
 ## Return object attributes appendix
+
+> The return object returned retrieving a single return via the API is the same as
+> in [webhook events](/smart_cart/returns_webhook) about a new/updated return.
 
 <%= partial 'localizable/smart_cart/return_object' %>

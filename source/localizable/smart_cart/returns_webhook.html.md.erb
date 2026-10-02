@@ -14,6 +14,11 @@ change), so the merchant's own system can stay in sync without polling the [Retu
 > <i class="fa fa-exclamation-triangle"></i>
 > Webhook Returns is currently **under development** .
 
+> <i class="fa fa-exclamation-triangle"></i>
+> When a return's `state` is `pending_merchant_review`, the payload's `return` object also
+> includes a `review_options` list describing what the merchant can do next — see
+> [Review options](/smart_cart/returns_api#review-options).
+
 <%= partial 'partials/toc' %>
 
 ## Setup
@@ -44,6 +49,16 @@ Shop URL | Webhook URL
 ## Webhook requests
 
 An HTTP `POST` request is sent to the predefined return webhook URL once an event has been triggered.
+
+### Handling failures / retries
+
+There is no request signing on Webhook Returns — authenticity rests on the webhook URL itself
+being private, so treat it as a secret.
+
+Unlike [Webhook Orders](/smart_cart/orders_webhook#handling-failures--retries), a failed delivery
+(a non-`200` response, or a timeout) is **not** retried automatically. Every attempt's outcome —
+status code, duration and timestamp — is still recorded on Skroutz's side, so support can look up
+what was (or wasn't) delivered to your URL.
 
 ### The anatomy of a request
 
@@ -80,15 +95,21 @@ The available webhook events for which a request is performed are:
 ### Return created
 
 A **return created** webhook request (`merchant_return_created`) is triggered once, right after a
-return is first placed.
+return is first placed. If the return needs the merchant's own judgment before Skroutz can
+proceed, it's created directly in the `pending_merchant_review` state, and the payload's `return`
+object carries a `review_options` list — see [Review options](/smart_cart/returns_api#review-options).
 
 ### Return updated
 
 A **return updated** webhook request (`merchant_return_updated`) is triggered whenever:
 
-* The return's **state changes** (e.g. approved by the merchant, marked as returning, returned,
-  rejected, expired or cancelled). If the update also makes shipment information newly available —
-  for example when the return transitions into the `returning` state — the payload additionally
+* The return's **state changes** (e.g. moved into `pending_merchant_review` for the merchant to
+  review, approved by the merchant, marked as returning, returned, rejected, expired or
+  cancelled). If the update moves the return into `pending_merchant_review`, the payload's
+  `return` object gains a `review_options` list; once the merchant
+  [resolves the review](/smart_cart/returns_api#review-a-return), the update that follows no
+  longer carries one. If the update instead makes shipment information newly available — for
+  example when the return transitions into the `returning` state — the payload additionally
   carries the `courier` and `returning_address` fields.
 * The return's **courier is reassigned** on an existing return shipment.
 * The return's **courier tracking IDs become available**.
@@ -98,6 +119,37 @@ A **return updated** webhook request (`merchant_return_updated`) is triggered wh
 > delivered for that same return and webhook URL. In practice, if you enable the return webhook
 > (or change its URL) *after* a return already exists, that return will not receive update events
 > until a fresh **return created** event has been recorded against the new URL.
+
+#### Merchant review resolution
+
+When the merchant [resolves a pending review](/smart_cart/returns_api#review-a-return), the next
+**return updated** request reflects the outcome in `changes.state`, and `review_options` is gone
+from the `return` object — there's nothing left to resolve.
+
+`option` submitted | `state.old` | `state.new`
+------------------- | ----------- | -----------
+`approve` | `pending_merchant_review` | `returning`
+any reject-kind option (e.g. `not_faulty`, `out_of_policy_withdrawal`) | `pending_merchant_review` | `rejected`
+`send_missing_part` | `pending_merchant_review` | `cancelled`
+
+`state.old` is always `pending_merchant_review` here — a review can only be resolved from that
+state.
+
+See [Example 3](#payload-examples) below.
+
+#### Review options
+
+While a return's `state` is `pending_merchant_review`, the payload's `return` object includes a
+`review_options` list — the actions the merchant can take on this return. The full set of options
+per return reason is documented in [Review options](/smart_cart/returns_api#review-options).
+
+Each entry has:
+
+Field | Type | Description
+----- | ---- | -----------
+`option` | String | the action to submit back via the [review endpoint](/smart_cart/returns_api#review-a-return)
+`comment_required` | Boolean | `true` if a non-blank `comment` must be submitted with this option, `false` if optional
+`support_proposed_part_url` | Boolean | present, and only ever `true`, on `part_not_included` — the only option a `proposed_part_url` may be submitted alongside. Omitted on every other option
 
 #### Request payload
 
@@ -121,9 +173,16 @@ Field                  | Shape          | Notes
 `returning_address`    | `{ old, new }` | Same shape as [returning address](#returning-address)
 `courier_tracking_ids` | `{ old, new }` | Only included when a `new` value is actually present
 
+> `review_options` is not tracked in `changes` — its appearance or disappearance is implied by
+> the `state` change into or out of `pending_merchant_review` (see
+> [Review options](/smart_cart/returns_api#review-options)).
+
 ## Payload Examples
 
 #### Example 1 (return created)
+
+A straightforward return that doesn't need merchant review — a virtual return with no shipment,
+so `courier`, `courier_tracking_ids` and `returning_address` are all omitted.
 
 ~~~ json
 {
@@ -131,7 +190,7 @@ Field                  | Shape          | Notes
   "event_time": "2026-08-18T09:12:03Z",
   "return": {
     "return_code": "R-111111-1111111",
-    "state": "pending_merchant_review",
+    "state": "returning",
     "order_code": "48213907",
     "created_at": "2026-08-18T09:12:03Z",
     "return_line_items": [
@@ -151,7 +210,73 @@ Field                  | Shape          | Notes
 }
 ~~~
 
-#### Example 2 (return updated - shipment info newly available)
+#### Example 2 (return created - pending merchant review)
+
+This return needs the merchant's own judgment, so it's created directly in
+`pending_merchant_review` and the payload carries a `review_options` list — here, the
+faulty-product case (see [Review options](/smart_cart/returns_api#review-options)).
+
+~~~ json
+{
+  "event_type": "merchant_return_created",
+  "event_time": "2026-08-20T09:00:00Z",
+  "return": {
+    "return_code": "R-111111-1111113",
+    "state": "pending_merchant_review",
+    "order_code": "48213908",
+    "created_at": "2026-08-20T09:00:00Z",
+    "return_line_items": [
+      {
+        "id": "qZ3nKp9rLm",
+        "ean": "1234567890124",
+        "product_name": "Apple AirPods Pro 2nd Gen",
+        "returning_quantity": 1,
+        "return_reason": "other",
+        "user_comment": "Right earbud has no sound.",
+        "user_photos": []
+      }
+    ],
+    "review_options": [
+      { "option": "approve" },
+      { "option": "contact_manufacturer", "comment_required": true },
+      { "option": "resolved_via_customer_communication", "comment_required": false },
+      { "option": "usability_suggestions", "comment_required": true },
+      { "option": "not_faulty", "comment_required": true }
+    ]
+  }
+}
+~~~
+
+#### Example 3 (return updated - resolved via merchant review)
+
+~~~ json
+{
+  "event_type": "merchant_return_updated",
+  "event_time": "2026-08-20T09:15:00Z",
+  "return": {
+    "return_code": "R-111111-1111113",
+    "state": "rejected",
+    "order_code": "48213908",
+    "created_at": "2026-08-20T09:00:00Z",
+    "return_line_items": [
+      {
+        "id": "qZ3nKp9rLm",
+        "ean": "1234567890124",
+        "product_name": "Apple AirPods Pro 2nd Gen",
+        "returning_quantity": 1,
+        "return_reason": "other",
+        "user_comment": "Right earbud has no sound.",
+        "user_photos": []
+      }
+    ]
+  },
+  "changes": {
+    "state": { "old": "pending_merchant_review", "new": "rejected" }
+  }
+}
+~~~
+
+#### Example 4 (return updated - shipment info newly available)
 
 ~~~ json
 {
@@ -193,7 +318,7 @@ Field                  | Shape          | Notes
 }
 ~~~
 
-#### Example 3 (return updated - courier tracking IDs become available)
+#### Example 5 (return updated - courier tracking IDs become available)
 
 ~~~ json
 {
@@ -224,7 +349,7 @@ Field                  | Shape          | Notes
 }
 ~~~
 
-#### Example 4 (return updated - courier reassignment)
+#### Example 6 (return updated - courier reassignment)
 
 ~~~ json
 {
@@ -255,7 +380,7 @@ Field                  | Shape          | Notes
 }
 ~~~
 
-#### Example 5 (return updated - plain state change)
+#### Example 7 (return updated - plain state change)
 
 ~~~ json
 {
