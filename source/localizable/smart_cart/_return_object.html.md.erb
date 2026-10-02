@@ -10,9 +10,11 @@ Name                   | Type              | Values | Description
 `courier`              | String            | (Optional) | Human-readable name of the courier (e.g. `ACS`)
 `returning_address`    | Object            | (Optional) | [Returning address](#returning-address) — the address the merchant should receive the return at
 `return_line_items`    | Array             | | [Return line items](#return-line-items) — the products being returned
+`review_options`       | Array             | (Optional) | Present only while `state` is `pending_merchant_review` — see [Review options](/smart_cart/returns_api#review-options)
 
-`courier_tracking_ids`, `courier` and `returning_address` are omitted entirely (not sent as `null`)
-when not applicable — e.g. virtual returns with no shipment.
+`courier_tracking_ids`, `courier`, `returning_address` and `review_options` are omitted entirely
+(not sent as `null`) when not applicable — e.g. virtual returns with no shipment, or a return
+that isn't awaiting merchant review.
 
 #### Return states
 
@@ -51,6 +53,6 @@ Name                 | Type             | Values | Description
 `ean`                | String           | | EAN code of the product being returned
 `product_name`       | String           | | Product display name
 `returning_quantity` | Integer          | | How many units of this product the customer is returning
-`return_reason`      | String           | `faulty`, `wrong_product`, `withdrawal`, `damaged_product`, `expired_product`, `authenticity_doubt`, `delivery_issues`, `other` (Optional) | Reason the customer selected
+`return_reason`      | String           | `faulty`, `wrong_product`, `withdrawal`, `damaged_product`, `expired_product`, `authenticity_doubt`, `delivery_issues`, `missing_part`, `other` (Optional) | Reason the customer selected
 `user_comment`       | String           | (Optional) | Free-text comment left by the customer explaining the return
 `user_photos`        | Array of Strings | (Optional) | Full URLs of photos uploaded by the customer as evidence
