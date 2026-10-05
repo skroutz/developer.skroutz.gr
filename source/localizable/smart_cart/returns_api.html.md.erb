@@ -146,7 +146,8 @@ where `physical_review_options` sits in the full response, see the
         {
           "option": "wrong_product_returned",
           "comment_required": true,
-          "product_images_required": false,
+          "product_images_required": true,
+          "packaging_images_required": false,
           "at_fault_option_required": true
         },
         {
@@ -187,7 +188,8 @@ Option | Meaning
 `product_misclassified` | the product's Skroutz catalog listing was itself misclassified
 
 `delayed_return`, `item_sent` and `product_misclassified` only ever appear in place of the standard
-set above, for the specific line items they apply to. They never appear alongside it.
+set above, for the specific line items they apply to. They never appear alongside it. None of the
+three require a comment, and none require images.
 
 #### Option fields
 
@@ -196,9 +198,9 @@ Each entry in `physical_review_options.review_items` has the following fields:
 Field | Type | Description
 ----- | ---- | -----------
 `option` | String | the condition to submit back to the [physical review endpoint](#submit-a-physical-review) for one or more line items
-`comment_required` | Boolean | `true` if a non-blank `comment` must be submitted for a line item using this option, `false` if optional
-`product_images_required` | Boolean | `true` if at least one product photo must be submitted for a line item using this option. Omitted entirely on options that never offer a product photo upload at all (`good`, `return_not_received`)
-`packaging_images_required` | Boolean | `true` if at least one packaging photo must be submitted for a line item using this option. Omitted entirely on options that never offer a packaging photo upload at all (`good`, `return_not_received`, `wrong_product_returned`)
+`comment_required` | Boolean | `true` if a non-blank `comment` must be submitted for a line item using this option, `false` if optional (`good`, `return_not_received`, `item_sent`, `product_misclassified`)
+`product_images_required` | Boolean | `true` if at least one product photo must be submitted for a line item using this option. Omitted entirely on options that never require either kind of image (`good`, `return_not_received`, `item_sent`, `product_misclassified`, `delayed_return`)
+`packaging_images_required` | Boolean | `true` if at least one packaging photo must be submitted for a line item using this option. Omitted under the same conditions as `product_images_required`
 `at_fault_option_required` | Boolean | present, and only ever `true`, on every option except `good`. An `at_fault` value must be submitted for a line item using this option
 
 ### Submit a physical review
