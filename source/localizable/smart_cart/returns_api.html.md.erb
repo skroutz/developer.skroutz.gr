@@ -347,10 +347,10 @@ you will get a `404` HTTP status code (Not Found):
 
 ## Test requests (sandbox)
 
-The following d​emo return code​ is available on production for testing reasons.
+The following d​emo return codes​ are available on production for testing reasons.
 
-> It is safe to issue requests for the following demo return code multiple times for testing,
-> since it does not reference any real data.
+> It is safe to issue requests for the following demo return codes multiple times for testing,
+> since they do not reference any real data.
 
 #### DEMO-RETURN
 
@@ -361,6 +361,69 @@ A demo return with a single returning line item, courier tracking ids and a retu
 </pre>
 
 <%= render_recording :merchants_ecommerce_returns_demo_return %>
+
+#### DEMO-RETURN-PHYSICAL-REVIEW
+
+A demo return eligible for a physical review, carrying a `physical_review_options` list.
+
+<pre class="terminal">
+  GET /merchants/ecommerce/returns/DEMO-RETURN-PHYSICAL-REVIEW
+</pre>
+
+<%= render_code '{
+  "return": {
+    "return_code": "DEMO-RETURN-PHYSICAL-REVIEW",
+    "state": "pending_physical_review",
+    "order_code": "DEMO-OPEN",
+    "created_at": "2026-01-01T10:00:00Z",
+    "return_line_items": [
+      {
+        "id": "demo-rli-1",
+        "ean": "1234567890123",
+        "product_name": "Demo return item",
+        "returning_quantity": 1,
+        "return_reason": "damaged_product",
+        "user_comment": "This is a demo customer comment about the return.",
+        "user_photos": [
+          "https://demo.scdn.gr/ds/ecommerce/return_request_line_item_images/demo-img-1.jpeg"
+        ]
+      }
+    ],
+    "physical_review_options": {
+      "review_items": [
+        { "option": "good", "comment_required": false },
+        {
+          "option": "damaged_product",
+          "comment_required": true,
+          "product_images_required": true,
+          "packaging_images_required": true,
+          "at_fault_option_required": true
+        },
+        {
+          "option": "return_not_received",
+          "comment_required": false,
+          "at_fault_option_required": true
+        }
+      ]
+    }
+  }
+}', 'javascript' %>
+
+> `POST .../physical_review` accepts any `option` from the list above (no field validation is
+> performed against it), but always just responds with `{ "success": true }` without changing any
+> data — nothing is persisted, so the same demo code can be posted to repeatedly.
+
+<pre class="terminal">
+curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/returns/DEMO-RETURN-PHYSICAL-REVIEW/physical_review \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Authorization: Bearer your_access_token_here' \
+  -F 'review_items[0][line_item_id]=demo-rli-1' \
+  -F 'review_items[0][reason]=damaged_product'
+</pre>
+
+<%= render_code '{
+  "success": true
+}', 'javascript' %>
 
 ## Return object attributes appendix
 
