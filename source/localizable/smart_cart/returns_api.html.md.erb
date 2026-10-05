@@ -12,6 +12,12 @@ Returns API allows Skroutz Merchants to retrieve and manage their returns.
 > <i class="fa fa-exclamation-triangle"></i>
 > Returns API is currently **under development**.
 
+Returns that are sent back to you, or cancelled before they shipped, may need you to physically
+inspect the product's condition before Skroutz can proceed with compensation. While one is pending,
+the return carries a `physical_review_options` list describing what you can report. Submit your
+findings to the [physical review endpoint](#submit-a-physical-review). See
+[Physical review options](#physical-review-options) below.
+
 <%= partial 'partials/toc' %>
 
 ## Setup
@@ -92,6 +98,268 @@ curl -X GET https://<%= settings.api_domain %>/merchants/ecommerce/returns/R-111
   }
 }', 'javascript' %>
 
+### Physical review options
+
+When a return needs you to physically inspect the returned (or cancelled) product's condition, the
+return object includes a `physical_review_options` list. Each element represents one condition you
+can report for this return's line items. Use it to present the available options, and to know what
+is expected when you submit them to the [physical review endpoint](#submit-a-physical-review). For
+where `physical_review_options` sits in the full response, see the
+[return object](#return-object-attributes-appendix).
+
+<%= render_code '{
+  "return": {
+    "return_code": "R-111111-1111111",
+    "state": "pending_physical_review",
+    "order_code": "48213907",
+    "created_at": "2026-08-18T09:12:03Z",
+    "return_line_items": [
+      {
+        "id": "gY6oNzr8jp",
+        "ean": "1234567890123",
+        "product_name": "Apple iPhone 15 128GB",
+        "returning_quantity": 1,
+        "return_reason": "damaged_product",
+        "user_comment": "Screen arrived cracked.",
+        "user_photos": [
+          "https://api.skroutz.gr/assets/returns/photo_1.jpg"
+        ]
+      }
+    ],
+    "physical_review_options": {
+      "review_items": [
+        { "option": "good", "comment_required": false },
+        {
+          "option": "damaged_product",
+          "comment_required": true,
+          "product_images_required": true,
+          "packaging_images_required": true,
+          "at_fault_option_required": true
+        },
+        {
+          "option": "damaged_packaging",
+          "comment_required": true,
+          "product_images_required": true,
+          "packaging_images_required": true,
+          "at_fault_option_required": true
+        },
+        {
+          "option": "wrong_product_returned",
+          "comment_required": true,
+          "product_images_required": true,
+          "packaging_images_required": false,
+          "at_fault_option_required": true
+        },
+        {
+          "option": "partially_damaged_product",
+          "comment_required": true,
+          "product_images_required": true,
+          "packaging_images_required": true,
+          "at_fault_option_required": true
+        },
+        {
+          "option": "return_not_received",
+          "comment_required": false,
+          "at_fault_option_required": true
+        },
+        {
+          "option": "return_received_incomplete",
+          "comment_required": true,
+          "product_images_required": true,
+          "packaging_images_required": true,
+          "at_fault_option_required": true
+        }
+      ]
+    }
+  }
+}', 'javascript' %>
+
+Option | Meaning
+------ | -------
+`good` | the product (and its packaging) arrived back in good condition
+`damaged_product` | the product itself is damaged
+`damaged_packaging` | the packaging is damaged (the product itself may be fine)
+`wrong_product_returned` | the customer sent back a different product than the one they ordered
+`partially_damaged_product` | the product is only partially damaged
+`return_not_received` | the item never actually arrived back at you
+`return_received_incomplete` | fewer units were returned than the customer claimed
+`delayed_return` | the return shipment arrived later than expected
+`item_sent` | you're reporting that the item was in fact sent to the customer
+`product_misclassified` | the product's Skroutz catalog listing was itself misclassified
+
+`delayed_return`, `item_sent` and `product_misclassified` only ever appear in place of the standard
+set above, for the specific line items they apply to. They never appear alongside it. None of the
+three require a comment, and none require images.
+
+#### Option fields
+
+Each entry in `physical_review_options.review_items` has the following fields:
+
+Field | Type | Description
+----- | ---- | -----------
+`option` | String | the condition to submit back to the [physical review endpoint](#submit-a-physical-review) for one or more line items
+`comment_required` | Boolean | `true` if a non-blank `comment` must be submitted for a line item using this option, `false` if optional (`good`, `return_not_received`, `item_sent`, `product_misclassified`)
+`product_images_required` | Boolean | `true` if at least one product photo must be submitted for a line item using this option. Omitted entirely on options that never require either kind of image (`good`, `return_not_received`, `item_sent`, `product_misclassified`, `delayed_return`)
+`packaging_images_required` | Boolean | `true` if at least one packaging photo must be submitted for a line item using this option. Omitted under the same conditions as `product_images_required`
+`at_fault_option_required` | Boolean | present, and only ever `true`, on every option except `good`. An `at_fault` value must be submitted for a line item using this option
+
+### Submit a physical review
+
+Report the condition of this return's line items by submitting, for each one, a `reason` set to one
+of the `option` values from that return's current [`physical_review_options`](#physical-review-options).
+
+**Prerequisites:**
+
+* The return must currently be eligible for a physical review (see
+  [Physical review options](#physical-review-options))
+* Each submitted `reason` must be one of the `option` values currently listed in the return's
+  `physical_review_options`
+
+<pre class="terminal">
+  POST /merchants/ecommerce/returns/:return_code/physical_review
+</pre>
+
+#### Request body
+
+Request body | Type | Description
+------------ | ---- | -----------
+`review_items` | Array | One entry per line item being reported. See below
+`return_reason_dispute` | Object | (Optional). See [Disputing the return reason](#disputing-the-return-reason)
+
+The merchants panel always submits every line item on the return, defaulting unselected ones to
+`good`. This endpoint only records a decision for the line items you actually include in
+`review_items`, so include every line item you want a decision recorded for, even ones in good
+condition.
+
+Each element of `review_items`:
+
+Field | Type | Description
+----- | ---- | -----------
+`line_item_id` | String | ID of the line item being reported (the same `id` value from [return line items](#return-line-items))
+`reason` | String | (Optional) One of the `option` values from this return's `physical_review_options`. Omit it, or send `good`, to report the item as being in good condition
+`quantity` | Integer | (Optional) How many units to report under this `reason`. Defaults to the line item's full remaining eligible quantity when omitted
+`comment` | String | Required when the chosen option's `comment_required` is `true`
+`at_fault` | String | `customer` or `courier`. Required when the chosen option's `at_fault_option_required` is `true`
+`product_images` | Array of Files | Product photos, sent as `multipart/form-data` (PNG/JPG/JPEG, 7MB per file). Required when the chosen option's `product_images_required` is `true`
+`packaging_images` | Array of Files | Packaging photos, same constraints as `product_images`. Required when the chosen option's `packaging_images_required` is `true`
+
+#### Disputing the return reason
+
+For a limited subset of returns, you may optionally dispute the return reason the customer
+selected, in addition to reporting the items' condition. This is the same question the merchants
+panel asks as *"Is the return reason that the user selected correct?"*. Agreeing with it (or
+omitting `return_reason_dispute` entirely) requires nothing further. Disputing it excludes this
+return from your operational statistics.
+
+Field | Type | Description
+----- | ---- | -----------
+`accepted` | Boolean | `true` if the customer's return reason is correct. No dispute is recorded, and `reason`/`comment` are ignored. `false` to dispute it
+`reason` | String | Required when `accepted` is `false`. One of `withdrawal`, `wrong_size`, `content_mistake`, `damaged_courier_fault`
+`comment` | String | Required when `accepted` is `false`. Free-text explanation of why you disagree with the customer's reason
+
+#### Example: reporting a damaged product
+
+<pre class="terminal">
+curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/returns/R-111111-1111111/physical_review \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Authorization: Bearer your_access_token_here' \
+  -F 'review_items[0][line_item_id]=gY6oNzr8jp' \
+  -F 'review_items[0][reason]=damaged_product' \
+  -F 'review_items[0][at_fault]=courier' \
+  -F 'review_items[0][comment]=Arrived with a cracked screen' \
+  -F 'review_items[0][quantity]=1' \
+  -F 'review_items[0][product_images][]=@product_photo.jpg' \
+  -F 'review_items[0][packaging_images][]=@packaging_photo.jpg'
+</pre>
+
+#### Success Response
+
+<pre class="terminal">
+HTTP/1.1 200 OK
+Content-Type: application/json
+</pre>
+
+<%= render_code '{
+  "success": true
+}', 'javascript' %>
+
+#### Error Responses
+
+**Return not found** (same as [retrieving a single return](#error-handling)):
+
+<pre class="terminal">
+HTTP/1.1 404 Not Found
+</pre>
+
+**Return not eligible for a physical review:**
+
+<pre class="terminal">
+HTTP/1.1 422 Unprocessable Entity
+</pre>
+
+<%= render_code '{
+  "errors": [
+    {
+      "code": "return_status",
+      "messages": [
+        "The order is not eligible for physical review because of its current state."
+      ]
+    }
+  ]
+}', 'javascript' %>
+
+The message varies with why the return isn't eligible right now, e.g. an ongoing service
+inspection, an undelivered return shipment, or an existing pending physical review for the same
+return.
+
+**A `line_item_id` doesn't belong to this return** (unknown, malformed, or belonging to a different
+order or return of yours):
+
+<%= render_code '{
+  "errors": [
+    {
+      "code": "review_items[0].line_item_id",
+      "messages": ["is invalid"]
+    }
+  ]
+}', 'javascript' %>
+
+**A required field is missing for a line item** (one `code`/`messages` entry per missing field,
+indexed by the item's position in `review_items`):
+
+<%= render_code '{
+  "errors": [
+    {
+      "code": "review_items[0].comment",
+      "messages": ["is required"]
+    },
+    {
+      "code": "review_items[0].at_fault",
+      "messages": ["is required"]
+    }
+  ]
+}', 'javascript' %>
+
+`code` is one of `review_items[N].line_item_id`, `review_items[N].comment`,
+`review_items[N].quantity`, `review_items[N].at_fault`, `review_items[N].product_images` or
+`review_items[N].packaging_images`, following the requirements listed in
+[Option fields](#option-fields) for that item's chosen `reason`.
+
+**Missing return reason dispute fields** (only when `return_reason_dispute.accepted` is `false`):
+
+<%= render_code '{
+  "errors": [
+    {
+      "code": "return_reason_dispute.reason",
+      "messages": ["is required"]
+    },
+    {
+      "code": "return_reason_dispute.comment",
+      "messages": ["is required"]
+    }
+  ]
+}', 'javascript' %>
+
 ## Error handling
 
 In case of errors, the response will have a representative HTTP status code
@@ -113,10 +381,10 @@ you will get a `404` HTTP status code (Not Found):
 
 ## Test requests (sandbox)
 
-The following d​emo return code​ is available on production for testing reasons.
+The following d​emo return codes​ are available on production for testing reasons.
 
-> It is safe to issue requests for the following demo return code multiple times for testing,
-> since it does not reference any real data.
+> It is safe to issue requests for the following demo return codes multiple times for testing,
+> since they do not reference any real data.
 
 #### DEMO-RETURN
 
@@ -127,6 +395,80 @@ A demo return with a single returning line item, courier tracking ids and a retu
 </pre>
 
 <%= render_recording :merchants_ecommerce_returns_demo_return %>
+
+#### DEMO-RETURN-PHYSICAL-REVIEW
+
+A demo return eligible for a physical review, carrying a `physical_review_options` list.
+
+<pre class="terminal">
+  GET /merchants/ecommerce/returns/DEMO-RETURN-PHYSICAL-REVIEW
+</pre>
+
+<%= render_code '{
+  "return": {
+    "return_code": "DEMO-RETURN-PHYSICAL-REVIEW",
+    "state": "pending_physical_review",
+    "order_code": "DEMO-OPEN",
+    "created_at": "2026-01-01T10:00:00Z",
+    "courier_tracking_ids": ["DEMO-RET-TRACK-1", "DEMO-RET-TRACK-2"],
+    "courier": "ACS",
+    "returning_address": {
+      "street_name": "Demo Shop",
+      "street_number": "7",
+      "zip": "18531",
+      "city": "Piraeus",
+      "region": "Attica",
+      "country_code": "GR"
+    },
+    "return_line_items": [
+      {
+        "id": "demo-rli-1",
+        "ean": "1234567890123",
+        "product_name": "Demo return item",
+        "returning_quantity": 1,
+        "return_reason": "damaged_product",
+        "user_comment": "Demo customer comment about the return",
+        "user_photos": [
+          "https://demo.scdn.gr/ds/ecommerce/return_request_line_item_images/demo-img-1.jpeg",
+          "https://demo.scdn.gr/ds/ecommerce/return_request_line_item_images/demo-img-2.jpeg"
+        ]
+      }
+    ],
+    "physical_review_options": {
+      "review_items": [
+        { "option": "good", "comment_required": false },
+        {
+          "option": "damaged_product",
+          "comment_required": true,
+          "product_images_required": true,
+          "packaging_images_required": true,
+          "at_fault_option_required": true
+        },
+        {
+          "option": "return_not_received",
+          "comment_required": false,
+          "at_fault_option_required": true
+        }
+      ]
+    }
+  }
+}', 'javascript' %>
+
+> `POST .../physical_review` accepts any `option` from the list above (no field validation is
+> performed against it), but always just responds with `{ "success": true }` without changing any
+> data. Nothing is persisted, so the same demo code can be posted to repeatedly.
+
+<pre class="terminal">
+curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/returns/DEMO-RETURN-PHYSICAL-REVIEW/physical_review \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Authorization: Bearer your_access_token_here' \
+  -F 'review_items[0][line_item_id]=demo-rli-1' \
+  -F 'review_items[0][reason]=damaged_product'
+</pre>
+
+<%= render_code '{
+  "success": true
+}', 'javascript' %>
 
 ## Return object attributes appendix
 

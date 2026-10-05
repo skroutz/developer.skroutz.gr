@@ -14,6 +14,11 @@ change), so the merchant's own system can stay in sync without polling the [Retu
 > <i class="fa fa-exclamation-triangle"></i>
 > Webhook Returns is currently **under development** .
 
+> <i class="fa fa-exclamation-triangle"></i>
+> While a return needs the merchant to physically inspect the product's condition, the payload's
+> `return` object also includes a `physical_review_options` list describing what can be reported.
+> See [Physical review options](/smart_cart/returns_api#physical-review-options).
+
 <%= partial 'partials/toc' %>
 
 ## Setup
@@ -89,7 +94,10 @@ A **return updated** webhook request (`merchant_return_updated`) is triggered wh
 * The return's **state changes** (e.g. approved by the merchant, marked as returning, returned,
   rejected, expired or cancelled). If the update also makes shipment information newly available —
   for example when the return transitions into the `returning` state — the payload additionally
-  carries the `courier` and `returning_address` fields.
+  carries the `courier` and `returning_address` fields. If the update makes the return newly
+  eligible for a physical review, the payload's `return` object gains a `physical_review_options`
+  list; once the merchant submits one (or the return stops being eligible for any other reason),
+  the update that follows no longer carries it.
 * The return's **courier is reassigned** on an existing return shipment.
 * The return's **courier tracking IDs become available**.
 
@@ -98,6 +106,13 @@ A **return updated** webhook request (`merchant_return_updated`) is triggered wh
 > delivered for that same return and webhook URL. In practice, if you enable the return webhook
 > (or change its URL) *after* a return already exists, that return will not receive update events
 > until a fresh **return created** event has been recorded against the new URL.
+
+#### Physical review options
+
+While the payload's `return` object carries `physical_review_options`, it has the same shape
+documented in [Physical review options](/smart_cart/returns_api#physical-review-options). Submit
+your findings to the [physical review endpoint](/smart_cart/returns_api#submit-a-physical-review),
+the same way you would for a return fetched through the [Returns API](/smart_cart/returns_api).
 
 #### Request payload
 
@@ -120,6 +135,9 @@ Field                  | Shape          | Notes
 `courier`              | `{ old, new }` | Human-readable courier name; `old` can be `null` when courier info first becomes available
 `returning_address`    | `{ old, new }` | Same shape as [returning address](#returning-address)
 `courier_tracking_ids` | `{ old, new }` | Only included when a `new` value is actually present
+
+> `physical_review_options` is not tracked in `changes`. Check for its presence or absence on the
+> `return` object itself.
 
 ## Payload Examples
 
@@ -287,6 +305,90 @@ Field                  | Shape          | Notes
   },
   "changes": {
     "state": { "old": "returning", "new": "returned" }
+  }
+}
+~~~
+
+#### Example 6 (return updated - became eligible for a physical review)
+
+~~~ json
+{
+  "event_type": "merchant_return_updated",
+  "event_time": "2026-08-19T15:00:00Z",
+  "return": {
+    "return_code": "R-111111-1111111",
+    "state": "pending_physical_review",
+    "order_code": "48213907",
+    "created_at": "2026-08-18T09:12:03Z",
+    "courier": "Speedex",
+    "courier_tracking_ids": ["ACS1234567890"],
+    "returning_address": {
+      "street_name": "Ermou",
+      "street_number": "12",
+      "zip": "10563",
+      "city": "Athens",
+      "region": "Attica",
+      "country_code": "GR"
+    },
+    "return_line_items": [
+      {
+        "id": "gY6oNzr8jp",
+        "ean": "1234567890123",
+        "product_name": "Apple iPhone 15 128GB",
+        "returning_quantity": 1
+      }
+    ],
+    "physical_review_options": {
+      "review_items": [
+        { "option": "good", "comment_required": false },
+        {
+          "option": "damaged_product",
+          "comment_required": true,
+          "product_images_required": true,
+          "packaging_images_required": true,
+          "at_fault_option_required": true
+        }
+      ]
+    }
+  },
+  "changes": {
+    "state": { "old": "returned", "new": "pending_physical_review" }
+  }
+}
+~~~
+
+#### Example 7 (return updated - physical review submitted)
+
+~~~ json
+{
+  "event_type": "merchant_return_updated",
+  "event_time": "2026-08-19T16:30:00Z",
+  "return": {
+    "return_code": "R-111111-1111111",
+    "state": "returned",
+    "order_code": "48213907",
+    "created_at": "2026-08-18T09:12:03Z",
+    "courier": "Speedex",
+    "courier_tracking_ids": ["ACS1234567890"],
+    "returning_address": {
+      "street_name": "Ermou",
+      "street_number": "12",
+      "zip": "10563",
+      "city": "Athens",
+      "region": "Attica",
+      "country_code": "GR"
+    },
+    "return_line_items": [
+      {
+        "id": "gY6oNzr8jp",
+        "ean": "1234567890123",
+        "product_name": "Apple iPhone 15 128GB",
+        "returning_quantity": 1
+      }
+    ]
+  },
+  "changes": {
+    "state": { "old": "pending_physical_review", "new": "returned" }
   }
 }
 ~~~
