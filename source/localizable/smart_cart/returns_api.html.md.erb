@@ -108,49 +108,68 @@ where `physical_review_options` sits in the full response, see the
 [return object](#return-object-attributes-appendix).
 
 <%= render_code '{
-  "physical_review_options": {
-    "review_items": [
-      { "option": "good", "comment_required": false },
+  "return": {
+    "return_code": "R-111111-1111111",
+    "state": "pending_physical_review",
+    "order_code": "48213907",
+    "created_at": "2026-08-18T09:12:03Z",
+    "return_line_items": [
       {
-        "option": "damaged_product",
-        "comment_required": true,
-        "product_images_required": true,
-        "packaging_images_required": true,
-        "at_fault_option_required": true
-      },
-      {
-        "option": "damaged_packaging",
-        "comment_required": true,
-        "product_images_required": true,
-        "packaging_images_required": true,
-        "at_fault_option_required": true
-      },
-      {
-        "option": "wrong_product_returned",
-        "comment_required": true,
-        "product_images_required": false,
-        "at_fault_option_required": true
-      },
-      {
-        "option": "partially_damaged_product",
-        "comment_required": true,
-        "product_images_required": true,
-        "packaging_images_required": true,
-        "at_fault_option_required": true
-      },
-      {
-        "option": "return_not_received",
-        "comment_required": false,
-        "at_fault_option_required": true
-      },
-      {
-        "option": "return_received_incomplete",
-        "comment_required": true,
-        "product_images_required": true,
-        "packaging_images_required": true,
-        "at_fault_option_required": true
+        "id": "gY6oNzr8jp",
+        "ean": "1234567890123",
+        "product_name": "Apple iPhone 15 128GB",
+        "returning_quantity": 1,
+        "return_reason": "damaged_product",
+        "user_comment": "Screen arrived cracked.",
+        "user_photos": [
+          "https://api.skroutz.gr/assets/returns/photo_1.jpg"
+        ]
       }
-    ]
+    ],
+    "physical_review_options": {
+      "review_items": [
+        { "option": "good", "comment_required": false },
+        {
+          "option": "damaged_product",
+          "comment_required": true,
+          "product_images_required": true,
+          "packaging_images_required": true,
+          "at_fault_option_required": true
+        },
+        {
+          "option": "damaged_packaging",
+          "comment_required": true,
+          "product_images_required": true,
+          "packaging_images_required": true,
+          "at_fault_option_required": true
+        },
+        {
+          "option": "wrong_product_returned",
+          "comment_required": true,
+          "product_images_required": false,
+          "at_fault_option_required": true
+        },
+        {
+          "option": "partially_damaged_product",
+          "comment_required": true,
+          "product_images_required": true,
+          "packaging_images_required": true,
+          "at_fault_option_required": true
+        },
+        {
+          "option": "return_not_received",
+          "comment_required": false,
+          "at_fault_option_required": true
+        },
+        {
+          "option": "return_received_incomplete",
+          "comment_required": true,
+          "product_images_required": true,
+          "packaging_images_required": true,
+          "at_fault_option_required": true
+        }
+      ]
+    }
   }
 }', 'javascript' %>
 
