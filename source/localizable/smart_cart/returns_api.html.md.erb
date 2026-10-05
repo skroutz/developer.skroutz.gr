@@ -12,9 +12,9 @@ Returns API allows Skroutz Merchants to retrieve and manage their returns.
 > <i class="fa fa-exclamation-triangle"></i>
 > Returns API is currently **under development**.
 
-Some returns — items sent back to you, or cancelled before they shipped — need you to physically
+Returns that are sent back to you, or cancelled before they shipped, may need you to physically
 inspect the product's condition before Skroutz can proceed with compensation. While one is pending,
-the return carries a `physical_review_options` list describing what you can report; submit your
+the return carries a `physical_review_options` list describing what you can report. Submit your
 findings to the [physical review endpoint](#submit-a-physical-review). See
 [Physical review options](#physical-review-options) below.
 
@@ -102,7 +102,7 @@ curl -X GET https://<%= settings.api_domain %>/merchants/ecommerce/returns/R-111
 
 When a return needs you to physically inspect the returned (or cancelled) product's condition, the
 return object includes a `physical_review_options` list. Each element represents one condition you
-can report for this return's line items — use it to present the available options and to know what
+can report for this return's line items. Use it to present the available options, and to know what
 is expected when you submit them to the [physical review endpoint](#submit-a-physical-review). For
 where `physical_review_options` sits in the full response, see the
 [return object](#return-object-attributes-appendix).
@@ -187,7 +187,7 @@ Option | Meaning
 `product_misclassified` | the product's Skroutz catalog listing was itself misclassified
 
 `delayed_return`, `item_sent` and `product_misclassified` only ever appear in place of the standard
-set above, for the specific line items they apply to — never alongside it.
+set above, for the specific line items they apply to. They never appear alongside it.
 
 #### Option fields
 
@@ -199,12 +199,12 @@ Field | Type | Description
 `comment_required` | Boolean | `true` if a non-blank `comment` must be submitted for a line item using this option, `false` if optional
 `product_images_required` | Boolean | `true` if at least one product photo must be submitted for a line item using this option. Omitted entirely on options that never offer a product photo upload at all (`good`, `return_not_received`)
 `packaging_images_required` | Boolean | `true` if at least one packaging photo must be submitted for a line item using this option. Omitted entirely on options that never offer a packaging photo upload at all (`good`, `return_not_received`, `wrong_product_returned`)
-`at_fault_option_required` | Boolean | present, and only ever `true`, on every option except `good` — an `at_fault` value must be submitted for a line item using this option
+`at_fault_option_required` | Boolean | present, and only ever `true`, on every option except `good`. An `at_fault` value must be submitted for a line item using this option
 
 ### Submit a physical review
 
-Report the condition of this return's line items by submitting, for each one, an `option` from
-that return's current [`physical_review_options`](#physical-review-options).
+Report the condition of this return's line items by submitting, for each one, a `reason` set to one
+of the `option` values from that return's current [`physical_review_options`](#physical-review-options).
 
 **Prerequisites:**
 
@@ -221,13 +221,13 @@ that return's current [`physical_review_options`](#physical-review-options).
 
 Request body | Type | Description
 ------------ | ---- | -----------
-`review_items` | Array | One entry per line item being reported — see below
-`return_reason_dispute` | Object | (Optional) — see [Disputing the return reason](#disputing-the-return-reason)
+`review_items` | Array | One entry per line item being reported. See below
+`return_reason_dispute` | Object | (Optional). See [Disputing the return reason](#disputing-the-return-reason)
 
-Unlike the merchants panel (which always submits every line item on the return, defaulting
-unselected ones to `good`), this endpoint only records a decision for the line items you actually
-include in `review_items` — include every line item you want a decision recorded for, even ones in
-good condition.
+The merchants panel always submits every line item on the return, defaulting unselected ones to
+`good`. This endpoint only records a decision for the line items you actually include in
+`review_items`, so include every line item you want a decision recorded for, even ones in good
+condition.
 
 Each element of `review_items`:
 
@@ -238,22 +238,22 @@ Field | Type | Description
 `quantity` | Integer | (Optional) How many units to report under this `reason`. Defaults to the line item's full remaining eligible quantity when omitted
 `comment` | String | Required when the chosen option's `comment_required` is `true`
 `at_fault` | String | `customer` or `courier`. Required when the chosen option's `at_fault_option_required` is `true`
-`product_images` | Array of Files | Product photos, sent as `multipart/form-data` (up to 5 files, PNG/JPG/JPEG, 7MB per file). Required when the chosen option's `product_images_required` is `true`
+`product_images` | Array of Files | Product photos, sent as `multipart/form-data` (PNG/JPG/JPEG, 7MB per file). Required when the chosen option's `product_images_required` is `true`
 `packaging_images` | Array of Files | Packaging photos, same constraints as `product_images`. Required when the chosen option's `packaging_images_required` is `true`
 
 #### Disputing the return reason
 
 For a limited subset of returns, you may optionally dispute the return reason the customer
-selected, in addition to reporting the items' condition — the same question the merchants panel
-asks as *"Is the return reason that the user selected correct?"*. Agreeing with it (or omitting
-`return_reason_dispute` entirely) requires nothing further. Disputing it excludes this return from
-your operational statistics.
+selected, in addition to reporting the items' condition. This is the same question the merchants
+panel asks as *"Is the return reason that the user selected correct?"*. Agreeing with it (or
+omitting `return_reason_dispute` entirely) requires nothing further. Disputing it excludes this
+return from your operational statistics.
 
 Field | Type | Description
 ----- | ---- | -----------
-`accepted` | Boolean | `true` if the customer's return reason is correct — no dispute is recorded, and `reason`/`comment` are ignored. `false` to dispute it
+`accepted` | Boolean | `true` if the customer's return reason is correct. No dispute is recorded, and `reason`/`comment` are ignored. `false` to dispute it
 `reason` | String | Required when `accepted` is `false`. One of `withdrawal`, `wrong_size`, `content_mistake`, `damaged_courier_fault`
-`comment` | String | Required when `accepted` is `false` — free-text explanation of why you disagree with the customer's reason
+`comment` | String | Required when `accepted` is `false`. Free-text explanation of why you disagree with the customer's reason
 
 #### Example: reporting a damaged product
 
@@ -306,9 +306,21 @@ HTTP/1.1 422 Unprocessable Entity
   ]
 }', 'javascript' %>
 
-The message varies with why the return isn't eligible right now — e.g. an ongoing service
+The message varies with why the return isn't eligible right now, e.g. an ongoing service
 inspection, an undelivered return shipment, or an existing pending physical review for the same
 return.
+
+**A `line_item_id` doesn't belong to this return** (unknown, malformed, or belonging to a different
+order or return of yours):
+
+<%= render_code '{
+  "errors": [
+    {
+      "code": "review_items[0].line_item_id",
+      "messages": ["is invalid"]
+    }
+  ]
+}', 'javascript' %>
 
 **A required field is missing for a line item** (one `code`/`messages` entry per missing field,
 indexed by the item's position in `review_items`):
@@ -326,9 +338,10 @@ indexed by the item's position in `review_items`):
   ]
 }', 'javascript' %>
 
-`code` is one of `review_items[N].comment`, `review_items[N].quantity`, `review_items[N].at_fault`,
-`review_items[N].product_images` or `review_items[N].packaging_images`, following the requirements
-listed in [Option fields](#option-fields) for that item's chosen `reason`.
+`code` is one of `review_items[N].line_item_id`, `review_items[N].comment`,
+`review_items[N].quantity`, `review_items[N].at_fault`, `review_items[N].product_images` or
+`review_items[N].packaging_images`, following the requirements listed in
+[Option fields](#option-fields) for that item's chosen `reason`.
 
 **Missing return reason dispute fields** (only when `return_reason_dispute.accepted` is `false`):
 
@@ -395,6 +408,16 @@ A demo return eligible for a physical review, carrying a `physical_review_option
     "state": "pending_physical_review",
     "order_code": "DEMO-OPEN",
     "created_at": "2026-01-01T10:00:00Z",
+    "courier_tracking_ids": ["DEMO-RET-TRACK-1", "DEMO-RET-TRACK-2"],
+    "courier": "ACS",
+    "returning_address": {
+      "street_name": "Demo Shop",
+      "street_number": "7",
+      "zip": "18531",
+      "city": "Piraeus",
+      "region": "Attica",
+      "country_code": "GR"
+    },
     "return_line_items": [
       {
         "id": "demo-rli-1",
@@ -402,9 +425,10 @@ A demo return eligible for a physical review, carrying a `physical_review_option
         "product_name": "Demo return item",
         "returning_quantity": 1,
         "return_reason": "damaged_product",
-        "user_comment": "This is a demo customer comment about the return.",
+        "user_comment": "Demo customer comment about the return",
         "user_photos": [
-          "https://demo.scdn.gr/ds/ecommerce/return_request_line_item_images/demo-img-1.jpeg"
+          "https://demo.scdn.gr/ds/ecommerce/return_request_line_item_images/demo-img-1.jpeg",
+          "https://demo.scdn.gr/ds/ecommerce/return_request_line_item_images/demo-img-2.jpeg"
         ]
       }
     ],
@@ -430,7 +454,7 @@ A demo return eligible for a physical review, carrying a `physical_review_option
 
 > `POST .../physical_review` accepts any `option` from the list above (no field validation is
 > performed against it), but always just responds with `{ "success": true }` without changing any
-> data — nothing is persisted, so the same demo code can be posted to repeatedly.
+> data. Nothing is persisted, so the same demo code can be posted to repeatedly.
 
 <pre class="terminal">
 curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/returns/DEMO-RETURN-PHYSICAL-REVIEW/physical_review \

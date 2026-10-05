@@ -3,18 +3,18 @@
 Name                   | Type              | Values | Description
 ----------------------- | ----------------- | ------ | -----------
 `return_code`          | String            | | Return Code
-`state`                | String            | `pending_merchant_review`, `returning`, `pending_physical_review`, `returned`, `rejected`, `expired`, `cancelled` | Current lifecycle state of the return. One of the [return states](#return-states).
+`state`                | String            | `pending_merchant_review`, `returning`, `pending_physical_review`, `pending_service_inspection`, `returned`, `rejected`, `expired`, `cancelled` | Current lifecycle state of the return. One of the [return states](#return-states).
 `order_code`           | String            | | The code of the order this return belongs to
 `created_at`           | Date String in format<br> `YYYY-MM-DDTHH:MM:SSZ` | | Return creation date
 `courier_tracking_ids` | Array of Strings  | (Optional) | Deduplicated tracking IDs across current shipments
 `courier`              | String            | (Optional) | Human-readable name of the courier (e.g. `ACS`)
-`returning_address`    | Object            | (Optional) | [Returning address](#returning-address) — the address the merchant should receive the return at
-`return_line_items`    | Array             | | [Return line items](#return-line-items) — the products being returned
+`returning_address`    | Object            | (Optional) | [Returning address](#returning-address) (the address the merchant should receive the return at)
+`return_line_items`    | Array             | | [Return line items](#return-line-items) (the products being returned)
 `physical_review_options` | Object         | (Optional) | Present only while this return needs a [physical review](/smart_cart/returns_api#physical-review-options) from the merchant
 
 `courier_tracking_ids`, `courier`, `returning_address` and `physical_review_options` are omitted
-entirely (not sent as `null`) when not applicable — e.g. virtual returns with no shipment, or a
-return that isn't currently eligible for a physical review.
+entirely (not sent as `null`) when not applicable (e.g. virtual returns with no shipment, or a
+return that isn't currently eligible for a physical review).
 
 #### Return states
 
@@ -25,6 +25,7 @@ State                     | Description
 `pending_merchant_review` | The customer submitted a return request and the merchant needs to review it.
 `returning`               | The package is in transit back to the merchant.
 `pending_physical_review` | The package arrived at the merchant and must perform physical inspection.
+`pending_service_inspection` | A service request on this return is awaiting the merchant's inspection report.
 `returned`                | The package was delivered back to the merchant.
 `rejected`                | The return was rejected.
 `expired`                 | The merchant never responded to the return request within the deadline.

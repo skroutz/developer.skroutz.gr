@@ -16,8 +16,8 @@ change), so the merchant's own system can stay in sync without polling the [Retu
 
 > <i class="fa fa-exclamation-triangle"></i>
 > While a return needs the merchant to physically inspect the product's condition, the payload's
-> `return` object also includes a `physical_review_options` list describing what can be reported —
-> see [Physical review options](/smart_cart/returns_api#physical-review-options).
+> `return` object also includes a `physical_review_options` list describing what can be reported.
+> See [Physical review options](/smart_cart/returns_api#physical-review-options).
 
 <%= partial 'partials/toc' %>
 
@@ -110,7 +110,7 @@ A **return updated** webhook request (`merchant_return_updated`) is triggered wh
 #### Physical review options
 
 While the payload's `return` object carries `physical_review_options`, it has the same shape
-documented in [Physical review options](/smart_cart/returns_api#physical-review-options) — submit
+documented in [Physical review options](/smart_cart/returns_api#physical-review-options). Submit
 your findings to the [physical review endpoint](/smart_cart/returns_api#submit-a-physical-review),
 the same way you would for a return fetched through the [Returns API](/smart_cart/returns_api).
 
@@ -136,7 +136,7 @@ Field                  | Shape          | Notes
 `returning_address`    | `{ old, new }` | Same shape as [returning address](#returning-address)
 `courier_tracking_ids` | `{ old, new }` | Only included when a `new` value is actually present
 
-> `physical_review_options` is not tracked in `changes` — check for its presence or absence on the
+> `physical_review_options` is not tracked in `changes`. Check for its presence or absence on the
 > `return` object itself.
 
 ## Payload Examples
