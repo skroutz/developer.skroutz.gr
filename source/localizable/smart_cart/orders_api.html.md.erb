@@ -91,6 +91,14 @@ To accept an order you need to provide the `pickup_location` and the `pickup_win
 
 The available param values used are provided in `accept_options` when retrieving a single order.
 
+Each entry of `accept_options.pickup_location` lists the pickup windows available for that
+location under `pickup_window`. Send the `pickup_location` together with the `id` of one of its own
+windows (e.g. `"20191204T1000-20191204T1200"`), since the available windows may differ per location.
+A window ID that isn't available for the given location is rejected with an `Invalid pickup window` error.
+
+Integer `pickup_window` IDs from the top-level `accept_options.pickup_window` list are still
+accepted.
+
 <pre class="terminal">
   POST /merchants/ecommerce/orders/:code/accept
 </pre>
@@ -103,7 +111,7 @@ curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/orders/19112
   -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
   -H 'Content-Type: application/json; charset=utf-8' \
   -H 'Authorization: Bearer your_access_token_here' \
-  -d '{ "pickup_location": "YlpD0KROym", "pickup_window": 2, "number_of_parcels": 1 }'
+  -d '{ "pickup_location": "YlpD0KROym", "pickup_window": "20191204T1000-20191204T1200", "number_of_parcels": 1 }'
 </pre>
 
 ### Reschedule a single order's pickup

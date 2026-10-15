@@ -256,14 +256,36 @@ These are valid values to POST to the corresponding keys when
 Valid pickup locations to post when
 [accepting a single order](/smart_cart/orders_api/#accept-a-single-order) (use `id`).
 
-| Name                    | Type   | Description              |
-|-------------------------|--------|--------------------------|
-| `pickup_location.id`    | String | The location ID to use   |
-| `pickup_location.label` | String | A human readable address |
+| Name                            | Type   | Description                                                                         |
+|---------------------------------|--------|-------------------------------------------------------------------------------------|
+| `pickup_location.id`            | String | The location ID to use                                                              |
+| `pickup_location.label`         | String | A human readable address                                                            |
+| `pickup_location.pickup_window` | Array  | [Pickup windows](#accept-option-location-pickup-window) available for this location |
+
+#### Accept option: Location pickup window
+
+Valid pickup windows to post together with the pickup location they are listed under, when
+[accepting a single order](/smart_cart/orders_api/#accept-a-single-order) (use `id`).
+
+The available pickup windows depend on the courier that serves each pickup location, so
+different locations may offer different windows. Always pick the window from the list of the
+location you are accepting the order at.
+
+| Name                  | Type   | Example                         | Description                 |
+|-----------------------|--------|---------------------------------|-----------------------------|
+| `pickup_window.id`    | String | `"20191204T1000-20191204T1200"` | The pickup window ID to use |
+| `pickup_window.label` | String | `"10:00 - 12:00, Τετ 04/12/19"` | A human readable time range |
+
+The `id` identifies the window by its start and end time (`YYYYMMDDTHHMM-YYYYMMDDTHHMM`, local
+Greek time), so it always refers to the same window, regardless of which other windows are available.
 
 #### Accept option: Pickup window
 
-Valid pickup windows to post when
+> <i class="fa fa-exclamation-triangle"></i>
+> Prefer the windows listed under each [pickup location](#accept-option-pickup-location).
+> This list is kept for existing integrations.
+
+Valid pickup windows if you have one pickup location, to post when
 [accepting a single order](/smart_cart/orders_api/#accept-a-single-order) (use `id`).
 
 | Name                  | Type    | Description                 |
