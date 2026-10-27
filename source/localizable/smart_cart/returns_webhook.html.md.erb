@@ -92,6 +92,13 @@ A **return updated** webhook request (`merchant_return_updated`) is triggered wh
   carries the `courier` and `returning_address` fields.
 * The return's **courier is reassigned** on an existing return shipment.
 * The return's **courier tracking IDs become available**.
+* The **deadline of the merchant's review changes**, e.g. it is extended after the merchant contacts
+  the customer from the merchant panel. The payload carries the new `review.expires_at`.
+
+While a return waits for the merchant's review, its payload carries the [`review`](#review) and the
+[`handle_options`](#handle-options) to [handle it](/smart_cart/returns_api#handle-a-return-waiting-for-review)
+with. Their delivery choices are those available when the request was sent, so a request retried later
+may list pickup windows that have passed: fetch the return for the current ones.
 
 > <i class="fa fa-exclamation-triangle"></i>
 > A **return updated** request is only sent once a **return created** request has already been
@@ -120,10 +127,11 @@ Field                  | Shape          | Notes
 `courier`              | `{ old, new }` | Human-readable courier name; `old` can be `null` when courier info first becomes available
 `returning_address`    | `{ old, new }` | Same shape as [returning address](#returning-address)
 `courier_tracking_ids` | `{ old, new }` | Only included when a `new` value is actually present
+`review_expires_at`    | `{ old, new }` | The review's deadline, as in [`review.expires_at`](#review)
 
 ## Payload Examples
 
-#### Example 1 (return created)
+#### Example 1 (return created - waiting for the merchant's review)
 
 ~~~ json
 {
@@ -141,11 +149,49 @@ Field                  | Shape          | Notes
         "product_name": "Apple iPhone 15 128GB",
         "returning_quantity": 1,
         "return_reason": "wrong_product",
-        "user_comment": "Ordered black, received white.",
+        "sub_reason": "missing_part",
+        "requested_compensation": "replace",
+        "user_comment": "The charging cable was not in the box.",
         "user_photos": [
           "https://api.skroutz.gr/assets/returns/photo_1.jpg"
+        ],
+        "user_videos": [
+          {
+            "id": "3f1c9a52d0e84b6f",
+            "url": "https://api.skroutz.gr/merchants/ecommerce/returns/R-111111-1111111/videos/3f1c9a52d0e84b6f",
+            "thumbnail_url": "https://api.skroutz.gr/merchants/ecommerce/returns/R-111111-1111111/videos/3f1c9a52d0e84b6f/thumbnail"
+          }
         ]
       }
+    ],
+    "review": {
+      "review_type": "missing_part",
+      "expires_at": "2026-08-19T18:00:00+03:00",
+      "holiday_auto_approval": false,
+      "customer_conversation_open": false
+    },
+    "handle_options": [
+      { "option": "approve" },
+      {
+        "option": "send_missing_part",
+        "delivery": {
+          "pickup_location": [
+            {
+              "id": "YlpD0KROym",
+              "label": "Πανεπιστημίου 2, Τ.Κ. 10564, Αθήνα, Αττική",
+              "pickup_window": [
+                { "id": "20260819T1000-20260819T1400", "label": "10:00 - 14:00, Τετ 19/08/26" },
+                { "id": "20260819T1500-20260819T1800", "label": "15:00 - 18:00, Τετ 19/08/26" }
+              ]
+            }
+          ],
+          "weight": { "min": 1, "max": 50 },
+          "number_of_parcels": [1, 2, 3]
+        }
+      },
+      { "option": "part_not_included", "comment_required": true, "supports_proposed_part_url": true },
+      { "option": "resolved_via_customer_communication", "comment_required": false },
+      { "option": "not_missing_part", "comment_required": true }
     ]
   }
 }
@@ -287,6 +333,47 @@ Field                  | Shape          | Notes
   },
   "changes": {
     "state": { "old": "returning", "new": "returned" }
+  }
+}
+~~~
+
+#### Example 6 (return updated - review deadline extended)
+
+The `handle_options` are shortened here; they are the same as in Example 1.
+
+~~~ json
+{
+  "event_type": "merchant_return_updated",
+  "event_time": "2026-08-18T11:30:00Z",
+  "return": {
+    "return_code": "R-111111-1111111",
+    "state": "pending_merchant_review",
+    "order_code": "48213907",
+    "created_at": "2026-08-18T09:12:03Z",
+    "return_line_items": [
+      {
+        "id": "gY6oNzr8jp",
+        "ean": "1234567890123",
+        "product_name": "Apple iPhone 15 128GB",
+        "returning_quantity": 1,
+        "return_reason": "wrong_product",
+        "sub_reason": "missing_part",
+        "requested_compensation": "replace"
+      }
+    ],
+    "review": {
+      "review_type": "missing_part",
+      "expires_at": "2026-08-20T18:00:00+03:00",
+      "holiday_auto_approval": false,
+      "customer_conversation_open": true
+    },
+    "handle_options": [
+      { "option": "approve" },
+      { "option": "part_not_included", "comment_required": true, "supports_proposed_part_url": true }
+    ]
+  },
+  "changes": {
+    "review_expires_at": { "old": "2026-08-19T18:00:00+03:00", "new": "2026-08-20T18:00:00+03:00" }
   }
 }
 ~~~
