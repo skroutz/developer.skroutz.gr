@@ -112,8 +112,8 @@ Option | Params
 A rejection reason, e.g. `not_faulty` | `comment`, required when the option's `comment_required` is `true`, up to 1000 characters. `proposed_part_url`, optional and only when the option's `supports_proposed_part_url` is `true`: a link on Skroutz to the part, e.g. when it is sold separately
 `send_missing_part` | See [Send the missing part](#send-the-missing-part)
 
-Every option resolves the review: afterwards the return moves on, and Skroutz sends a
-[return updated](/smart_cart/returns_webhook#return-updated) webhook.
+Every option resolves the review, so the return leaves `pending_merchant_review` (e.g. to `rejected`
+after a rejection) and Skroutz sends a [return updated](/smart_cart/returns_webhook#return-updated) webhook.
 
 #### Example: approve
 
@@ -141,7 +141,7 @@ curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/returns/R-11
 
 For a `missing_part` review, the merchant can send the missing part to the customer instead of
 receiving the product back. Skroutz creates an additional delivery of the part, at the shop's
-cost, and cancels the return.
+cost, and the return moves to `resolved_without_return`: the product is not returned.
 
 Pick the values from the option's [`delivery`](#delivery-options), as when
 [accepting an order](/smart_cart/orders_api#accept-a-single-order). All params are required.
