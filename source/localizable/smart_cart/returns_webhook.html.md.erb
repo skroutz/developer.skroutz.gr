@@ -100,6 +100,12 @@ While a return waits for the merchant's review, its payload carries the [`review
 with. Their delivery choices are those available when the request was sent, so a request retried later
 may list pickup windows that have passed: fetch the return for the current ones.
 
+While a return is in state `pending_service_inspection`, each line item waiting for the merchant's
+report carries an [`inspection`](#inspection) to
+[submit](/smart_cart/returns_api#submit-the-inspection-of-an-item). Submitting the inspection of one
+of several items does not change the return's state, so it sends no request: the submit response
+carries the updated return.
+
 > <i class="fa fa-exclamation-triangle"></i>
 > A **return updated** request is only sent once a **return created** request has already been
 > delivered for that same return and webhook URL. In practice, if you enable the return webhook
@@ -374,6 +380,55 @@ The `handle_options` are shortened here; they are the same as in Example 1.
   },
   "changes": {
     "review_expires_at": { "old": "2026-08-19T18:00:00+03:00", "new": "2026-08-20T18:00:00+03:00" }
+  }
+}
+~~~
+
+#### Example 7 (return updated - waiting for the merchant's inspection)
+
+~~~ json
+{
+  "event_type": "merchant_return_updated",
+  "event_time": "2026-08-21T09:00:00Z",
+  "return": {
+    "return_code": "R-111111-1111111",
+    "state": "pending_service_inspection",
+    "order_code": "48213907",
+    "created_at": "2026-08-18T09:12:03Z",
+    "courier": "ACS",
+    "courier_tracking_ids": ["ACS1234567890"],
+    "returning_address": {
+      "street_name": "Ermou",
+      "street_number": "12",
+      "zip": "10563",
+      "city": "Athens",
+      "region": "Attica",
+      "country_code": "GR"
+    },
+    "return_line_items": [
+      {
+        "id": "gY6oNzr8jp",
+        "ean": "1234567890123",
+        "product_name": "Apple iPad 10.9 64GB",
+        "returning_quantity": 1,
+        "return_reason": "faulty",
+        "requested_compensation": "repair",
+        "user_comment": "The tablet does not charge.",
+        "inspection": {
+          "expires_at": "2026-09-04T23:59:59+03:00",
+          "options": [
+            { "option": "under_warranty_repairable", "service_report_file_required": true, "in_stock_answer_required": false },
+            { "option": "under_warranty_unrepairable", "service_report_file_required": true, "in_stock_answer_required": true },
+            { "option": "no_warranty_repairable", "service_report_file_required": true, "in_stock_answer_required": false },
+            { "option": "no_warranty_unrepairable", "service_report_file_required": true, "in_stock_answer_required": false },
+            { "option": "unconfirmed", "service_report_file_required": true, "in_stock_answer_required": false }
+          ]
+        }
+      }
+    ]
+  },
+  "changes": {
+    "state": { "old": "returned", "new": "pending_service_inspection" }
   }
 }
 ~~~

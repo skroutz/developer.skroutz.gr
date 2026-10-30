@@ -1,0 +1,91 @@
+---
+:request:
+  :url: https://api.skroutz.gr/merchants/ecommerce/returns/DEMO-RETURN-INSPECTION
+  :headers:
+    :accept: application/vnd.skroutz+json; version=3.0
+    :authorization: Bearer n4_92SD9EAEkwDfgiYZHiWwSdJlmA5q-_H3FQ6iYZ3jcMynhbpLEe3QvZxrvO0D-8ZYYD2n_wOBexdn9B0NYGQ==
+  :verb: :get
+:response:
+  :status: 200
+  :headers:
+    Date: Thu, 24 Jun 2021 15:01:26 GMT
+    Connection: keep-alive
+    Content-Length: 1163
+    Server: h2o (Debian)
+    Content-Type: application/json; charset=utf-8
+    X-Meta-Client-Id: 27951bdf06a65ea4
+    Cache-Control: no-cache
+    X-Request-Id: 989369834
+    X-Runtime: 0.021923
+    X-App: as103_ssl
+    X-Varnish: 989369834
+    Age: 0
+    Via: 1.1 varnish (Varnish/5.0)
+    X-Origin: lb2
+    X-Cache: MISS
+    X-Cached: skroutz miss(0)
+  :body: '{
+  "return": {
+    "return_code": "DEMO-RETURN-INSPECTION",
+    "state": "pending_service_inspection",
+    "order_code": "DEMO-OPEN",
+    "created_at": "2026-01-01T10:00:00Z",
+    "courier_tracking_ids": [
+      "DEMO-RET-TRACK-1",
+      "DEMO-RET-TRACK-2"
+    ],
+    "courier": "ACS",
+    "returning_address": {
+      "street_name": "Demo Shop",
+      "street_number": "7",
+      "zip": "18531",
+      "city": "Piraeus",
+      "region": "Attica",
+      "country_code": "GR"
+    },
+    "return_line_items": [
+      {
+        "id": "demo-rli-1",
+        "ean": "1234567890123",
+        "product_name": "Demo return item",
+        "returning_quantity": 1,
+        "return_reason": "faulty",
+        "user_comment": "Demo customer comment about the return",
+        "user_photos": [
+          "https://demo.scdn.gr/ds/ecommerce/return_request_line_item_images/demo-img-1.jpeg",
+          "https://demo.scdn.gr/ds/ecommerce/return_request_line_item_images/demo-img-2.jpeg"
+        ],
+        "inspection": {
+          "expires_at": "2026-01-11T12:00:00+02:00",
+          "options": [
+            {
+              "option": "under_warranty_repairable",
+              "service_report_file_required": true,
+              "in_stock_answer_required": false
+            },
+            {
+              "option": "under_warranty_unrepairable",
+              "service_report_file_required": true,
+              "in_stock_answer_required": true
+            },
+            {
+              "option": "no_warranty_repairable",
+              "service_report_file_required": true,
+              "in_stock_answer_required": false
+            },
+            {
+              "option": "no_warranty_unrepairable",
+              "service_report_file_required": true,
+              "in_stock_answer_required": false
+            },
+            {
+              "option": "unconfirmed",
+              "service_report_file_required": true,
+              "in_stock_answer_required": false
+            }
+          ]
+        }
+      }
+    ]
+  }
+}'

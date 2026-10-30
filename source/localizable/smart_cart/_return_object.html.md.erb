@@ -32,7 +32,7 @@ State                     | Description
 `rejected`                | The return was rejected.
 `expired`                 | The merchant never responded to the return request within the deadline.
 `cancelled`               | The return was cancelled.
-`pending_service_inspection` | A technician or an authorised service is to inspect the product.
+`pending_service_inspection` | A technician or an authorised service is to inspect the product. Each item waiting for the merchant's report carries an [`inspection`](#inspection).
 `resolved_without_return` | The merchant sent the customer the missing part, so the product is not returned.
 
 #### Returning address
@@ -64,6 +64,7 @@ Name                 | Type             | Values | Description
 `user_comment`       | String           | (Optional) | Free-text comment left by the customer explaining the return
 `user_photos`        | Array of Strings | (Optional) | Full URLs of photos uploaded by the customer as evidence
 `user_videos`        | Array            | (Optional) | [Videos](#user-videos) uploaded by the customer as evidence
+`inspection`         | Object           | (Optional) | [Inspection](#inspection) — the technical inspection of this item, waiting for the merchant's report
 
 #### User videos
 
@@ -72,6 +73,34 @@ Name            | Type   | Description
 `id`            | String | The video ID
 `url`           | String | [Watch the video](/smart_cart/returns_api#watch-a-customer-video) (requires your API token)
 `thumbnail_url` | String | [The video's thumbnail](/smart_cart/returns_api#watch-a-customer-video) (requires your API token)
+
+#### Inspection
+
+Present on each line item whose technical inspection waits for the merchant's report, while the
+return is in state `pending_service_inspection`. A return with several faulty items carries one per
+item. It is omitted once the item's report is submitted.
+
+Name                                   | Type    | Description
+-------------------------------------- | ------- | -----------
+`inspection.expires_at`                | Date String in ISO 8601 format | Until when the merchant can [submit the inspection](/smart_cart/returns_api#submit-the-inspection-of-an-item)
+`inspection.options`                   | Array   | The [inspection options](#inspection-options) the merchant can submit for this item
+
+#### Inspection options
+
+Name                           | Type    | Description
+------------------------------ | ------- | -----------
+`option`                       | String  | The value to send as `option`
+`service_report_file_required` | Boolean | Whether `service_report_file` is required with this option
+`in_stock_answer_required`     | Boolean | Whether `in_stock` is required with this option
+
+Option | Meaning
+------ | -------
+`under_warranty_repairable` | Under warranty: the product is repaired for free
+`under_warranty_unrepairable` | Under warranty: the product cannot be repaired, so it is replaced, or refunded when the merchant has no stock (`in_stock: false`)
+`under_warranty_refund` | Under warranty: the customer is refunded. Offered instead of the two options above when the customer returned the product early and asked for a refund
+`no_warranty_repairable` | Out of warranty: the customer can pay for the repair
+`no_warranty_unrepairable` | Out of warranty: the product cannot be repaired, and a paid repair is not available
+`unconfirmed` | The product has no defect
 
 #### Review
 
