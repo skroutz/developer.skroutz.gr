@@ -14,14 +14,6 @@ change), so the merchant's own system can stay in sync without polling the [Retu
 > <i class="fa fa-exclamation-triangle"></i>
 > Webhook Returns is currently **under development** .
 
-> When a return's `state` is `pending_merchant_review`, the payload also includes a
-> `review_options` list describing what the merchant can do next — see
-> [Review options](/smart_cart/returns_api#review-options).
-
-> When a return's `state` is `pending_service_inspection`, the payload also includes a
-> `service_request` object describing what the merchant can currently submit — see
-> [Service status](/smart_cart/returns_api#service-status).
-
 <%= partial 'partials/toc' %>
 
 ## Setup
@@ -88,27 +80,25 @@ The available webhook events for which a request is performed are:
 ### Return created
 
 A **return created** webhook request (`merchant_return_created`) is triggered once, right after a
-return is first placed. If the return needs the merchant's own judgment before Skroutz can
-proceed, it's created directly in the `pending_merchant_review` state and the payload's `return`
-object carries a `review_options` list — see [Example 1](#example-1-return-created) and
-[Review options](/smart_cart/returns_api#review-options).
+return is first placed.
 
 ### Return updated
 
 A **return updated** webhook request (`merchant_return_updated`) is triggered whenever:
 
-* The return's **state changes** (e.g. escalated to `pending_merchant_review`, approved by the
-  merchant, marked as returning, returned, rejected, expired or cancelled). If the update moves
-  the return into `pending_merchant_review`, the payload's `return` object additionally carries a
-  `review_options` list — see [Example 6](#example-6-return-updated---escalated-to-merchant-review).
-  If the update instead moves the return into `pending_service_inspection`, the payload's `return`
-  object additionally carries a `service_request` object instead — see
-  [Example 7](#example-7-return-updated---needs-service-inspection). If the update instead makes
-  shipment information newly available — for example when the return transitions into the
-  `returning` state — the payload additionally carries the `courier` and `returning_address`
-  fields.
+* The return's **state changes** (e.g. approved by the merchant, marked as returning, returned,
+  rejected, expired or cancelled). If the update also makes shipment information newly available —
+  for example when the return transitions into the `returning` state — the payload additionally
+  carries the `courier` and `returning_address` fields.
 * The return's **courier is reassigned** on an existing return shipment.
 * The return's **courier tracking IDs become available**.
+* The **deadline of the merchant's review changes**, e.g. it is extended after the merchant contacts
+  the customer from the merchant panel. The payload carries the new `review.expires_at`.
+
+While a return waits for the merchant's review, its payload carries the [`review`](#review) and the
+[`handle_options`](#handle-options) to [handle it](/smart_cart/returns_api#handle-a-return-waiting-for-review)
+with. Their delivery choices are those available when the request was sent, so a request retried later
+may list pickup windows that have passed: fetch the return for the current ones.
 
 > <i class="fa fa-exclamation-triangle"></i>
 > A **return updated** request is only sent once a **return created** request has already been
@@ -137,15 +127,11 @@ Field                  | Shape          | Notes
 `courier`              | `{ old, new }` | Human-readable courier name; `old` can be `null` when courier info first becomes available
 `returning_address`    | `{ old, new }` | Same shape as [returning address](#returning-address)
 `courier_tracking_ids` | `{ old, new }` | Only included when a `new` value is actually present
-
-> `review_options` and `service_request` are not tracked in `changes` — their disappearance is
-> implied by the `state` change off `pending_merchant_review` / `pending_service_inspection` (see
-> [Review options](/smart_cart/returns_api#review-options) and
-> [Service status](/smart_cart/returns_api#service-status)).
+`review_expires_at`    | `{ old, new }` | The review's deadline, as in [`review.expires_at`](#review)
 
 ## Payload Examples
 
-#### Example 1 (return created)
+#### Example 1 (return created - waiting for the merchant's review)
 
 ~~~ json
 {
@@ -163,16 +149,49 @@ Field                  | Shape          | Notes
         "product_name": "Apple iPhone 15 128GB",
         "returning_quantity": 1,
         "return_reason": "wrong_product",
-        "user_comment": "Ordered black, received white.",
+        "sub_reason": "missing_part",
+        "requested_compensation": "replace",
+        "user_comment": "The charging cable was not in the box.",
         "user_photos": [
           "https://api.skroutz.gr/assets/returns/photo_1.jpg"
+        ],
+        "user_videos": [
+          {
+            "id": "3f1c9a52d0e84b6f",
+            "url": "https://api.skroutz.gr/merchants/ecommerce/returns/R-111111-1111111/videos/3f1c9a52d0e84b6f",
+            "thumbnail_url": "https://api.skroutz.gr/merchants/ecommerce/returns/R-111111-1111111/videos/3f1c9a52d0e84b6f/thumbnail"
+          }
         ]
       }
     ],
-    "review_options": [
+    "review": {
+      "review_type": "missing_part",
+      "expires_at": "2026-08-19T18:00:00+03:00",
+      "holiday_auto_approval": false,
+      "customer_conversation_open": false
+    },
+    "handle_options": [
       { "option": "approve" },
-      { "option": "resolved_via_customer_communication", "comment_required": false, "supports_proposed_part_url_required": false },
-      { "option": "incorrect_skroutz_content", "comment_required": true, "supports_proposed_part_url_required": false }
+      {
+        "option": "send_missing_part",
+        "delivery": {
+          "pickup_location": [
+            {
+              "id": "YlpD0KROym",
+              "label": "Πανεπιστημίου 2, Τ.Κ. 10564, Αθήνα, Αττική",
+              "pickup_window": [
+                { "id": "20260819T1000-20260819T1400", "label": "10:00 - 14:00, Τετ 19/08/26" },
+                { "id": "20260819T1500-20260819T1800", "label": "15:00 - 18:00, Τετ 19/08/26" }
+              ]
+            }
+          ],
+          "weight": { "min": 1, "max": 50 },
+          "number_of_parcels": [1, 2, 3]
+        }
+      },
+      { "option": "part_not_included", "comment_required": true, "supports_proposed_part_url": true },
+      { "option": "resolved_via_customer_communication", "comment_required": false },
+      { "option": "not_missing_part", "comment_required": true }
     ]
   }
 }
@@ -318,17 +337,14 @@ Field                  | Shape          | Notes
 }
 ~~~
 
-#### Example 6 (return updated - escalated to merchant review)
+#### Example 6 (return updated - review deadline extended)
 
-A return doesn't have to start out `pending_merchant_review` — here physical inspection of the
-returned item raises a dispute, so the return moves into `pending_merchant_review` and the
-payload's `return` object gains a `review_options` list (see
-[Review options](/smart_cart/returns_api#review-options)).
+The `handle_options` are shortened here; they are the same as in Example 1.
 
 ~~~ json
 {
   "event_type": "merchant_return_updated",
-  "event_time": "2026-08-20T09:00:00Z",
+  "event_time": "2026-08-18T11:30:00Z",
   "return": {
     "return_code": "R-111111-1111111",
     "state": "pending_merchant_review",
@@ -340,89 +356,24 @@ payload's `return` object gains a `review_options` list (see
         "ean": "1234567890123",
         "product_name": "Apple iPhone 15 128GB",
         "returning_quantity": 1,
-        "return_reason": "faulty",
-        "user_comment": "Screen flickers intermittently.",
-        "user_photos": [
-          "https://api.skroutz.gr/assets/returns/photo_1.jpg"
-        ]
+        "return_reason": "wrong_product",
+        "sub_reason": "missing_part",
+        "requested_compensation": "replace"
       }
     ],
-    "review_options": [
+    "review": {
+      "review_type": "missing_part",
+      "expires_at": "2026-08-20T18:00:00+03:00",
+      "holiday_auto_approval": false,
+      "customer_conversation_open": true
+    },
+    "handle_options": [
       { "option": "approve" },
-      { "option": "contact_manufacturer", "comment_required": true, "supports_proposed_part_url_required": false },
-      { "option": "resolved_via_customer_communication", "comment_required": false, "supports_proposed_part_url_required": false },
-      { "option": "usability_suggestions", "comment_required": true, "supports_proposed_part_url_required": false },
-      { "option": "not_faulty", "comment_required": true, "supports_proposed_part_url_required": false }
+      { "option": "part_not_included", "comment_required": true, "supports_proposed_part_url": true }
     ]
   },
   "changes": {
-    "state": { "old": "pending_physical_review", "new": "pending_merchant_review" }
-  }
-}
-~~~
-
-#### Example 7 (return updated - needs service inspection)
-
-Physical inspection found the item faulty and repairable/replaceable under warranty, so the
-return moves into `pending_service_inspection` and the payload's `return` object gains a
-`service_request` object (see [Service status](/smart_cart/returns_api#service-status)).
-
-~~~ json
-{
-  "event_type": "merchant_return_updated",
-  "event_time": "2026-08-21T09:00:00Z",
-  "return": {
-    "return_code": "R-111111-1111111",
-    "state": "pending_service_inspection",
-    "order_code": "48213907",
-    "created_at": "2026-08-18T09:12:03Z",
-    "return_line_items": [
-      { "id": "gY6oNzr8jp", "ean": "1234567890123", "product_name": "Apple iPhone 15 128GB", "returning_quantity": 1 }
-    ],
-    "service_request": {
-      "service_request_id": 4821,
-      "service_options": {
-        "options": [
-          { "option": "under_warranty_repairable", "service_report_file_required": true },
-          { "option": "under_warranty_unrepairable", "in_stock_answer_required": true },
-          { "option": "no_warranty_repairable", "service_report_file_required": true },
-          { "option": "no_warranty_unrepairable", "service_report_file_required": true },
-          { "option": "unconfirmed", "service_report_file_required": true }
-        ],
-        "additional_information_to_the_customer": {
-          "comment_optional": true,
-          "file_optional": true
-        }
-      }
-    }
-  },
-  "changes": {
-    "state": { "old": "pending_physical_review", "new": "pending_service_inspection" }
-  }
-}
-~~~
-
-#### Example 8 (return updated - service status resolved)
-
-The merchant submitted an outcome via
-[Submit a service status](/smart_cart/returns_api#submit-a-service-status); the return leaves
-`pending_service_inspection` and `service_request` disappears from the payload.
-
-~~~ json
-{
-  "event_type": "merchant_return_updated",
-  "event_time": "2026-08-21T11:45:00Z",
-  "return": {
-    "return_code": "R-111111-1111111",
-    "state": "returned",
-    "order_code": "48213907",
-    "created_at": "2026-08-18T09:12:03Z",
-    "return_line_items": [
-      { "id": "gY6oNzr8jp", "ean": "1234567890123", "product_name": "Apple iPhone 15 128GB", "returning_quantity": 1 }
-    ]
-  },
-  "changes": {
-    "state": { "old": "pending_service_inspection", "new": "returned" }
+    "review_expires_at": { "old": "2026-08-19T18:00:00+03:00", "new": "2026-08-20T18:00:00+03:00" }
   }
 }
 ~~~

@@ -3,19 +3,21 @@
 Name                   | Type              | Values | Description
 ----------------------- | ----------------- | ------ | -----------
 `return_code`          | String            | | Return Code
-`state`                | String            | `pending_merchant_review`, `returning`, `pending_physical_review`, `pending_service_inspection`, `returned`, `rejected`, `expired`, `cancelled` | Current lifecycle state of the return. One of the [return states](#return-states).
+`state`                | String            | `pending_merchant_review`, `returning`, `pending_physical_review`, `pending_service_inspection`, `returned`, `rejected`, `expired`, `cancelled`, `resolved_without_return` | Current lifecycle state of the return. One of the [return states](#return-states).
 `order_code`           | String            | | The code of the order this return belongs to
 `created_at`           | Date String in format<br> `YYYY-MM-DDTHH:MM:SSZ` | | Return creation date
 `courier_tracking_ids` | Array of Strings  | (Optional) | Deduplicated tracking IDs across current shipments
 `courier`              | String            | (Optional) | Human-readable name of the courier (e.g. `ACS`)
 `returning_address`    | Object            | (Optional) | [Returning address](#returning-address) — the address the merchant should receive the return at
 `return_line_items`    | Array             | | [Return line items](#return-line-items) — the products being returned
-`review_options`       | Array             | (Optional) | Present only while `state` is `pending_merchant_review` — see [Review options](/smart_cart/returns_api#review-options)
-`service_request`      | Object            | (Optional) | Present only while `state` is `pending_service_inspection` — see [Service status](/smart_cart/returns_api#service-status)
+`review`               | Object            | (Optional) | [Review](#review) — the review waiting for the merchant
+`handle_options`       | Array             | (Optional) | [Handle options](#handle-options) — the ways the merchant can handle the review
 
-`courier_tracking_ids`, `courier`, `returning_address`, `review_options` and `service_request` are
-omitted entirely (not sent as `null`) when not applicable — e.g. virtual returns with no shipment,
-or a return that isn't awaiting merchant review or service status.
+`courier_tracking_ids`, `courier` and `returning_address` are omitted entirely (not sent as `null`)
+when not applicable — e.g. virtual returns with no shipment.
+
+`review` and `handle_options` are present only while the return is in state `pending_merchant_review`
+and waits for the merchant's review. They are omitted once the review is handled or its deadline passes.
 
 #### Return states
 
@@ -23,14 +25,15 @@ The `state` field is one of the following string values:
 
 State                     | Description
 ------------------------- | ---------------------------------------------------------------------------------------
-`pending_merchant_review`   | The customer submitted a return request and the merchant needs to review it.
-`returning`                 | The package is in transit back to the merchant.
-`pending_physical_review`   | The package arrived at the merchant and must perform physical inspection.
-`pending_service_inspection` | The item needs a physical service inspection (repair, replacement or refund) and the merchant must report the outcome — see [Service status](/smart_cart/returns_api#service-status).
-`returned`                  | The package was delivered back to the merchant.
+`pending_merchant_review` | The customer submitted a return request and the merchant needs to review it.
+`returning`               | The package is in transit back to the merchant.
+`pending_physical_review` | The package arrived at the merchant and must perform physical inspection.
+`returned`                | The package was delivered back to the merchant.
 `rejected`                | The return was rejected.
 `expired`                 | The merchant never responded to the return request within the deadline.
 `cancelled`               | The return was cancelled.
+`pending_service_inspection` | A technician or an authorised service is to inspect the product.
+`resolved_without_return` | The merchant sent the customer the missing part, so the product is not returned.
 
 #### Returning address
 
@@ -56,5 +59,93 @@ Name                 | Type             | Values | Description
 `product_name`       | String           | | Product display name
 `returning_quantity` | Integer          | | How many units of this product the customer is returning
 `return_reason`      | String           | `faulty`, `wrong_product`, `withdrawal`, `damaged_product`, `expired_product`, `authenticity_doubt`, `delivery_issues`, `other` (Optional) | Reason the customer selected
+`sub_reason`         | String           | `different_product`, `missing_line_item`, `missing_part`, `wrong_delivered_size`, `content_mistake`, `damaged_courier_fault`, `damaged_merchant_fault` (Optional) | A more specific reason, e.g. `missing_part` for a `wrong_product` return
+`requested_compensation` | String       | `refund`, `replace`, `repair`, `gift_card`, `none`, `consolation_coupon` (Optional) | What the customer asked for
 `user_comment`       | String           | (Optional) | Free-text comment left by the customer explaining the return
 `user_photos`        | Array of Strings | (Optional) | Full URLs of photos uploaded by the customer as evidence
+`user_videos`        | Array            | (Optional) | [Videos](#user-videos) uploaded by the customer as evidence
+
+#### User videos
+
+Name            | Type   | Description
+--------------- | ------ | -----------
+`id`            | String | The video ID
+`url`           | String | [Watch the video](/smart_cart/returns_api#watch-a-customer-video) (requires your API token)
+`thumbnail_url` | String | [The video's thumbnail](/smart_cart/returns_api#watch-a-customer-video) (requires your API token)
+
+#### Review
+
+Present while the return waits for the merchant's review.
+
+Name                         | Type    | Values | Description
+---------------------------- | ------- | ------ | -----------
+`review_type`                | String  | `faulty`, `missing_part`, `out_of_policy_withdrawal`, `unopened_category_withdrawal`, `out_of_policy_wrong_size`, `unopened_category_wrong_size` | Why the return needs the merchant's review
+`expires_at`                 | Date String in ISO 8601 format | | Until when the merchant can handle the review. Afterwards Skroutz handles it, and the merchant may lose their right to compensation
+`holiday_auto_approval`      | Boolean | | Whether the withdrawal is out of policy only because of the holiday period, so Skroutz approves it when the deadline passes
+`customer_conversation_open` | Boolean | | Whether a conversation with the customer about the product is open in the merchant panel
+
+#### Handle options
+
+The options to send to [handle the return](/smart_cart/returns_api#handle-a-return-waiting-for-review):
+`approve`, then `send_missing_part`, then the rejection reasons. Each option resolves the review. Contacting the customer,
+which only extends the deadline, is available in the merchant panel only.
+
+Name                         | Type    | Description
+---------------------------- | ------- | -----------
+`option`                     | String  | The value to send as `option`: `approve`, `send_missing_part` or a [rejection reason](#rejection-reasons)
+`comment_required`           | Boolean | Rejection reasons only: whether `comment` is required
+`supports_proposed_part_url` | Boolean | Rejection reasons only, present only when `true`: whether `proposed_part_url` can be sent
+`delivery`                   | Object  | `send_missing_part` only: the [delivery options](#delivery-options)
+
+#### Rejection reasons
+
+Review type | Rejection reasons
+----------- | -----------------
+`faulty` | `contact_manufacturer` (not offered while the product is within the dead on arrival period), `usability_suggestions`, `not_faulty`, `resolved_via_customer_communication`
+`missing_part` | `part_not_included`, `not_missing_part`, `resolved_via_customer_communication`
+`out_of_policy_withdrawal`, `unopened_category_withdrawal`, `out_of_policy_wrong_size`, `unopened_category_wrong_size` | `out_of_policy_withdrawal`
+
+Option | Meaning
+------ | -------
+`approve` | The merchant accepts the return
+`send_missing_part` | The merchant sends the missing part to the customer with an additional delivery, at the shop's cost, and the product is not returned. Offered for `missing_part` reviews when the order can get an additional delivery, but not for a product the merchant delivered with their own cargo carrier
+`contact_manufacturer` | The customer needs to contact the manufacturer or the authorised service provider
+`usability_suggestions` | The product has been used in a way that affects how it works
+`not_faulty` | The product is not faulty: it works according to its specifications
+`part_not_included` | The product was delivered complete as described: no part is missing. The merchant can point the customer to the part on Skroutz, e.g. when it is sold separately, with `proposed_part_url`
+`not_missing_part` | The product page on Skroutz has wrong content that needs a correction
+`resolved_via_customer_communication` | The merchant already contacted the customer and the issue has been resolved
+`out_of_policy_withdrawal` | The withdrawal is outside the return policy
+
+#### Delivery options
+
+The choices for the missing part's delivery, named after the params of
+[`send_missing_part`](/smart_cart/returns_api#send-the-missing-part), as in an order's
+[accept options](/smart_cart/orders_api#accept-a-single-order).
+
+Name                         | Type   | Example | Description
+---------------------------- | ------ | ------- | -----------
+`delivery.pickup_location`   | Array  | | [Pickup locations](#delivery-option-pickup-location), the order's own first
+`delivery.weight`            | Object | `{ "min": 1, "max": 50 }` | Valid `weight` range, in whole kilos
+`delivery.number_of_parcels` | Array  | `[1, 2, 3]` | Valid values for `number_of_parcels`
+
+#### Delivery option: Pickup location
+
+Name                                  | Type   | Description
+------------------------------------- | ------ | -----------
+`pickup_location.id`                  | String | The location ID to send as `pickup_location`. The same IDs as in an order's accept options
+`pickup_location.label`               | String | A human readable address
+`pickup_location.pickup_window`       | Array  | [Pickup windows](#delivery-option-pickup-window) to send with `cargo: false`
+`pickup_location.cargo_pickup_window` | Array  | [Pickup windows](#delivery-option-pickup-window) to send with `cargo: true`. Present only for an order shipped as a cargo item
+
+#### Delivery option: Pickup window
+
+Name                  | Type   | Example                         | Description
+--------------------- | ------ | ------------------------------- | -----------
+`pickup_window.id`    | String | `"20261029T1000-20261029T1400"` | The pickup window ID to send as `pickup_window`
+`pickup_window.label` | String | `"10:00 - 14:00, Πέμ 29/10/26"` | A human readable time range
+
+As in an order's accept options, the `id` identifies the window by its start and end time
+(`YYYYMMDDTHHMM-YYYYMMDDTHHMM`, local Greek time). Each window books its own courier, so there is
+no courier to choose. The same `id` can appear in both lists of a location, so `cargo` tells which
+one you picked.

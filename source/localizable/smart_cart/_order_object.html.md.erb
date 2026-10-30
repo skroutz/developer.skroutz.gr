@@ -22,6 +22,8 @@
 | `rejection_info`         | Object                                               |                                                                                                                                                              | [Rejection info](#rejection-info) (available for orders rejected with `other` reason)                                                                                                                                                                                            |
 | `accept_options`         | Object                                               |                                                                                                                                                              | [Accept options](#accept-options) (available for orders with state `"open"`)                                                                                                                                                                                                     |
 | `reject_options`         | Object                                               |                                                                                                                                                              | [Reject options](#reject-options) (available for orders with state `"open"`)                                                                                                                                                                                                     |
+| `reschedule_options`     | Array                                                |                                                                                                                                                              | [Reschedule options](#reschedule-options) (only included when the order is fetched with `?action_options=1`)                                                                                                                                                                     |
+| `relocate_options`       | Array                                                |                                                                                                                                                              | [Relocate options](#relocate-options) (only included when the order is fetched with `?action_options=1`)                                                                                                                                                                         |
 | `fulfilled_by_skroutz`   | Boolean                                              |                                                                                                                                                              | Whether the order is fulfilled by skroutz                                                                                                                                                                                                                                        |
 | `fbs_delivery_note`      | String                                               |                                                                                                                                                              | Order's delivery note from warehouse for orders that are fulfilled by Skroutz                                                                                                                                                                                                    |
 | `fbs_delivery_note_url`  | String                                               |                                                                                                                                                              | Order's digital delivery note PDF url from warehouse for orders that are fulfilled by Skroutz                                                                                                                                                                                    |
@@ -254,14 +256,36 @@ These are valid values to POST to the corresponding keys when
 Valid pickup locations to post when
 [accepting a single order](/smart_cart/orders_api/#accept-a-single-order) (use `id`).
 
-| Name                    | Type   | Description              |
-|-------------------------|--------|--------------------------|
-| `pickup_location.id`    | String | The location ID to use   |
-| `pickup_location.label` | String | A human readable address |
+| Name                            | Type   | Description                                                                         |
+|---------------------------------|--------|-------------------------------------------------------------------------------------|
+| `pickup_location.id`            | String | The location ID to use                                                              |
+| `pickup_location.label`         | String | A human readable address                                                            |
+| `pickup_location.pickup_window` | Array  | [Pickup windows](#accept-option-location-pickup-window) available for this location |
+
+#### Accept option: Location pickup window
+
+Valid pickup windows to post together with the pickup location they are listed under, when
+[accepting a single order](/smart_cart/orders_api/#accept-a-single-order) (use `id`).
+
+The available pickup windows depend on the courier that serves each pickup location, so
+different locations may offer different windows. Always pick the window from the list of the
+location you are accepting the order at.
+
+| Name                  | Type   | Example                         | Description                 |
+|-----------------------|--------|---------------------------------|-----------------------------|
+| `pickup_window.id`    | String | `"20191204T1000-20191204T1200"` | The pickup window ID to use |
+| `pickup_window.label` | String | `"10:00 - 12:00, Τετ 04/12/19"` | A human readable time range |
+
+The `id` identifies the window by its start and end time (`YYYYMMDDTHHMM-YYYYMMDDTHHMM`, local
+Greek time), so it always refers to the same window, regardless of which other windows are available.
 
 #### Accept option: Pickup window
 
-Valid pickup windows to post when
+> <i class="fa fa-exclamation-triangle"></i>
+> Prefer the windows listed under each [pickup location](#accept-option-pickup-location).
+> This list is kept for existing integrations.
+
+Valid pickup windows if you have one pickup location, to post when
 [accepting a single order](/smart_cart/orders_api/#accept-a-single-order) (use `id`).
 
 | Name                  | Type    | Description                 |
@@ -300,6 +324,31 @@ Possible values
 | `4` | `Περιορισμένα τεμάχια`                             | True                        |
 | `5` | `To προϊόν καταργήθηκε`                            | False                       |
 | `6` | `Λάθος ταξινόμηση προϊόντος`                       | False                       |
+
+
+#### Reschedule options
+
+Available pickup dates to post when
+[rescheduling a single order's pickup](/smart_cart/orders_api/#reschedule-a-single-orders-pickup)
+(use `date`). Only included when the order is fetched with `?action_options=1`, and empty when the
+order cannot be rescheduled.
+
+| Name                       | Type   | Example        | Description                                                                    |
+|----------------------------|--------|----------------|--------------------------------------------------------------------------------|
+| `reschedule_options[].date`  | String | `2026-09-25`   | An `YYYY-MM-DD` date to post as `reschedule_date`                              |
+| `reschedule_options[].label` | String | `Fri 25/09/26` | A human readable date, localized to the shop's language (do not parse it)      |
+
+#### Relocate options
+
+Available pickup locations to post when
+[relocating a single order's pickup](/smart_cart/orders_api/#relocate-a-single-orders-pickup)
+(use `id`). Only included when the order is fetched with `?action_options=1`, and empty when the
+order cannot be relocated. The order's current pickup location is excluded from the list.
+
+| Name                        | Type   | Description                                     |
+|-----------------------------|--------|-------------------------------------------------|
+| `relocate_options[].id`     | String | The location ID (hashid) to post as `pickup_location` |
+| `relocate_options[].label`  | String | A human readable address                        |
 
 
 #### Tracking details option: Courier

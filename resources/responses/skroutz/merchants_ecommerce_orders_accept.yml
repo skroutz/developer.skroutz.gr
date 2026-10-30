@@ -8,7 +8,7 @@
   :params:
     :number_of_parcels: 1
     :pickup_location: YlpD0KROym
-    :pickup_window: 2
+    :pickup_window: 20191204T1000-20191204T1200
 :response:
   :status: 200
   :headers:
