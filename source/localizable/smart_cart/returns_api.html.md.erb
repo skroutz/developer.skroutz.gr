@@ -198,7 +198,7 @@ Status | Code | When
   ]
 }', 'javascript' %>
 
-### Submit the inspection of an item
+### Submit the service inspection of an item
 
 A faulty product the customer sent back for a technical inspection waits for the merchant's report.
 The return is in state `pending_service_inspection`, and each line item waiting for a report carries
@@ -209,7 +209,7 @@ Send the item's `id` as `item` and one of its `inspection.options` as `option`, 
 requires. Send it as `multipart/form-data`, since it carries files. The response is the updated return.
 
 <pre class="terminal">
-  POST /merchants/ecommerce/returns/:return_code/submit_inspection
+  POST /merchants/ecommerce/returns/:return_code/submit_service_inspection
 </pre>
 
 Param                      | Type    | Description
@@ -228,7 +228,7 @@ the return leaves `pending_service_inspection` (e.g. to `returned`) and Skroutz 
 #### Example: free repair under warranty
 
 <pre class="terminal">
-curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/returns/R-111111-1111111/submit_inspection \
+curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/returns/R-111111-1111111/submit_service_inspection \
   -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
   -H 'Authorization: Bearer your_access_token_here' \
   -F 'item=gY6oNzr8jp' \
@@ -242,7 +242,7 @@ curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/returns/R-11
 #### Example: replacement under warranty, out of stock
 
 <pre class="terminal">
-curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/returns/R-111111-1111111/submit_inspection \
+curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/returns/R-111111-1111111/submit_service_inspection \
   -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
   -H 'Authorization: Bearer your_access_token_here' \
   -F 'item=gY6oNzr8jp' \
@@ -371,7 +371,7 @@ carries an `inspection`.
 
 <pre class="terminal">
   GET /merchants/ecommerce/returns/DEMO-RETURN-INSPECTION
-  POST /merchants/ecommerce/returns/DEMO-RETURN-INSPECTION/submit_inspection
+  POST /merchants/ecommerce/returns/DEMO-RETURN-INSPECTION/submit_service_inspection
 </pre>
 
 Submitting any of its item's `inspection.options` answers with the same return, unchanged. The
