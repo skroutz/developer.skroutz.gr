@@ -66,6 +66,7 @@ relocate request, and use a value from that fresh response.
 <pre class="terminal">
   GET /merchants/ecommerce/orders/:code
   GET /merchants/ecommerce/orders/:code?action_options=1
+  GET /merchants/ecommerce/orders/:code?compensation_requests=1
 </pre>
 
 <%= render_recording :merchants_ecommerce_orders_show %>
@@ -78,6 +79,51 @@ With `action_options=1`, an accepted order additionally carries the two option l
 (`reschedule_options` and `relocate_options`; only the relevant attributes are shown above).
 Both lists are empty (`[]`) when the order cannot be rescheduled/relocated, and both are omitted
 entirely when `action_options=1` is not passed.
+
+#### Compensation requests on the order
+
+Pass `compensation_requests=1` as a query parameter to include the order's
+[compensation requests](#file-a-compensation-request) in `compensation_requests`, oldest first, under
+the id each request was filed with. Each carries its state and, for each line item, the amount once
+approved or the reason once rejected, as the merchants' panel shows them. The list is empty (`[]`) when
+the order has none. Without the parameter, and in order webhooks, the attribute is omitted.
+
+<pre class="terminal">
+  GET /merchants/ecommerce/orders/:code?compensation_requests=1
+</pre>
+
+<%= render_code '{
+  "order": {
+    "code": "191128-1234567",
+    "state": "returned",
+    "compensation_requests": [
+      {
+        "id": "xK3mPq7Lw2",
+        "state": "partially_approved",
+        "created_at": "2026-11-04T16:35:37+02:00",
+        "line_items": [
+          {
+            "id": "k9Qp2xR4mN",
+            "quantity": 2,
+            "reason": "damaged_packaging",
+            "state": "approved",
+            "compensation_amount": 25.0
+          },
+          {
+            "id": "7mWq1zT8bV",
+            "quantity": 1,
+            "reason": "damaged_product",
+            "state": "rejected",
+            "rejection_reason": "The photos show no damage"
+          }
+        ]
+      }
+    ]
+  }
+}', 'javascript' %>
+
+Only the relevant attributes are shown above. No webhook is sent when a request is decided: to learn
+the decision, retrieve the order with `compensation_requests=1`.
 
 ### Accept a single order
 
@@ -665,6 +711,187 @@ HTTP/1.1 422 Unprocessable Entity
     }
   ]
 }', 'javascript' %>
+
+
+### File a compensation request
+
+For an order that came back from the customer or the courier, you can ask Skroutz to compensate you for
+line items that were returned damaged, incomplete or wrong, or were never returned. This is the same
+action as the **compensation request** form in the merchants' panel, and it follows exactly the same
+rules. A successful call files the request; Skroutz then reviews it, as it does requests filed from the
+panel. You can follow it by [retrieving the order](#compensation-requests-on-the-order) with
+`compensation_requests=1`, or in the merchants' panel.
+
+<pre class="terminal">
+  POST /merchants/ecommerce/orders/:code/compensation_requests
+</pre>
+
+**When an order can be compensated:**
+
+* The order was returned (fully or partially), returned to sender, replaced, or cancelled after its
+  shipment had been picked up.
+* The request is filed within the compensation window. It is 7 working days from the delivery of the
+  return to you (30 days for FBS orders, 50 days for shops with an extended window), or 15 working days
+  from payment when the order has no return date. A return that is late becomes claimable as a
+  `delayed_return` 35 days after its pickup (45 days for cargo), for 7 working days.
+* Fulfilled by Merchant (FBM) orders generally cannot be compensated; the `not_eligible` message says so
+  when this applies.
+* The order has not already been fully compensated, and has no service request under inspection.
+* No condition review of the returned products is pending. Submit it from the merchants' panel first.
+* The shop is under its compensation cap, as shown in the merchants' panel.
+
+#### Request body
+
+Send the request as `multipart/form-data`, with one `line_items` entry per line item you want
+compensated. A request without files may also be sent as JSON. The entries may be sent as an array
+(`line_items[][id]`) or keyed by index (`line_items[0][id]`), as HTML forms send them.
+
+Name                                       | Type    | Description
+------------------------------------------ | ------- | -----------------------------------------------------------
+`line_items[_].id`                         | String  | The line item's `id`, as the [order](#retrieve-a-single-order) gives it. Required.
+`line_items[_].quantity`                   | Integer | From 1 up to the quantity still eligible for compensation. Required.
+`line_items[_].reason`                     | String  | One of the reasons below that the line item takes. Required.
+`line_items[_].at_fault`                   | String  | Who is at fault: `customer` or `courier`. Required by most reasons, see below.
+`line_items[_].comment`                    | String  | A description of the damage, up to 400 characters. Required by most reasons, see below.
+`line_items[_].product_images[]`           | File    | Photos of the product: PNG or JPEG files, up to 5, each up to 7 MB.
+`line_items[_].packaging_images[]`         | File    | Photos of the packaging: PNG or JPEG files, up to 5, each up to 7 MB.
+`line_items[_].technical_assessment_report`| File    | A technician's assessment of the damage: one PNG, JPEG or PDF file, up to 7 MB.
+
+A line item may appear only once in a request. Files are checked by their name and by their content,
+so a file must really be the type its name says.
+
+#### Reasons and the fields each one needs
+
+`id`, `quantity` and `reason` are always required. The other fields depend on the reason:
+
+Reason                       | At fault | Comment  | Product images | Packaging images | Technical report
+---------------------------- | -------- | -------- | -------------- | ---------------- | ----------------
+`damaged_product`            | required | required | required       | required         | required for products in categories eligible for service
+`damaged_packaging`          | required | required | required       | required         | ignored
+`partially_damaged_product`  | required | required | required       | required         | ignored
+`wrong_product_returned`     | required | required | required       | ignored          | ignored
+`return_received_incomplete` | required | required | required       | required         | ignored
+`return_not_received`        | required | optional | optional       | optional         | ignored
+`delayed_return`             | required | required | ignored        | ignored          | ignored
+`item_sent`                  | ignored  | optional | optional       | optional         | ignored
+`product_misclassified`      | ignored  | optional | optional       | optional         | ignored
+
+An ignored field is dropped without an error, so it is safe to send every field you have. An optional
+comment is kept when sent, and must still be up to 400 characters. A missing required field is refused
+with a `422` and the field's error code, for example `at_fault_required`.
+
+Which reasons a line item takes depends on the order:
+
+* A return that is late takes only `delayed_return`.
+* A delivery with a missing item takes only `item_sent` or `product_misclassified`.
+* Any other return takes `damaged_product`, `damaged_packaging`, `partially_damaged_product`,
+  `wrong_product_returned`, `return_received_incomplete` and `return_not_received`.
+
+An order may have several compensation requests. A line item can be claimed again in a later request
+until its eligible quantity runs out: what was returned (or not received), minus what earlier requests
+already claimed and what was already compensated.
+
+#### Example
+
+<pre class="terminal">
+curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/orders/191128-1234567/compensation_requests \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Content-Type: multipart/form-data' \
+  -H 'Authorization: Bearer your_access_token_here' \
+  -F 'line_items[0][id]=k9Qp2xR4mN' \
+  -F 'line_items[0][quantity]=1' \
+  -F 'line_items[0][reason]=damaged_packaging' \
+  -F 'line_items[0][at_fault]=courier' \
+  -F 'line_items[0][comment]=The box arrived crushed on one side' \
+  -F 'line_items[0][product_images][]=@/path/to/product.jpg' \
+  -F 'line_items[0][packaging_images][]=@/path/to/box.jpg'
+</pre>
+
+#### Success Response
+
+The response carries the id of the new compensation request. The order's
+[`compensation_requests`](#compensation-requests-on-the-order) list it under the same id.
+
+<pre class="terminal">
+HTTP/1.1 200 OK
+Content-Type: application/json
+</pre>
+
+<%= render_code '{
+  "success": true,
+  "compensation_request_id": "xK3mPq7Lw2"
+}', 'javascript' %>
+
+#### Error Responses
+
+The request is checked in this order: the shop and the order, then each line item. The first problem
+found is answered and nothing is filed. A line item's error message starts with the line item's id.
+
+HTTP | Code                                    | When
+---- | --------------------------------------- | ----------------------------------------------------------
+400  | `line_items`                            | No line items were sent
+404  | `order_error`                           | The order is not one of the shop's orders
+409  | `compensation_in_progress`              | Another compensation of the order is being processed at this moment; retry shortly
+413  | `file_too_large`                        | A file is over 7 MB
+415  | `invalid_file_type`                     | A file is not PNG or JPEG (PDF is also accepted for the technical report), by its name or its content
+422  | `not_eligible`                          | The order cannot be compensated; the message gives the reason
+422  | `compensation_cap_reached`              | The shop has reached its compensation cap
+422  | `pending_physical_review`               | The condition review of the returned products must be submitted first
+422  | `line_item_not_found`                   | An `id` that is not one of the order's line items, or a line item sent twice
+422  | `line_item_not_eligible`                | Nothing is left to compensate on the line item
+422  | `invalid_quantity`                      | The quantity is not a whole number from 1 to the eligible quantity
+422  | `invalid_reason`                        | A reason the line item does not take
+422  | `at_fault_required`                     | `at_fault` is missing, or not `customer` or `courier`
+422  | `comment_required`, `comment_too_long`  | The comment is missing, or over 400 characters
+422  | `product_images_required`, `packaging_images_required` | The reason needs photos that were not sent
+422  | `technical_assessment_report_required`  | A damaged product in a category eligible for service, without the report
+422  | `too_many_images`                       | More than 5 photos of a kind for a line item
+422  | `invalid`, `compensation_request_error` | An unexpected error; retry, and contact support if it persists
+429  |                                         | Too many requests (see [Rate limit](#rate-limit))
+
+**A line item error** (here, the comment is missing):
+
+<pre class="terminal">
+HTTP/1.1 422 Unprocessable Entity
+</pre>
+
+<%= render_code '{
+  "errors": [
+    {
+      "code": "comment_required",
+      "messages": [
+        "Line item k9Qp2xR4mN: You must describe the type of the damage for every selected product"
+      ]
+    }
+  ]
+}', 'javascript' %>
+
+**Another compensation of the order is in progress:**
+
+<pre class="terminal">
+HTTP/1.1 409 Conflict
+</pre>
+
+<%= render_code '{
+  "errors": [
+    {
+      "code": "compensation_in_progress",
+      "messages": [
+        "Another compensation of this order is in progress. Please try again in a moment."
+      ]
+    }
+  ]
+}', 'javascript' %>
+
+#### Rate limit
+
+You can file up to 20 compensation requests a minute with one API token. Past that, requests are
+refused with a `429 Too Many Requests` for 30 minutes. One request can carry several line items.
+
+#### Sandbox
+
+Compensation requests for the [demo orders](#test-requests-sandbox) answer `200 { "success": true }`
+without filing anything, and without a `compensation_request_id`.
 
 
 ## Error handling
