@@ -198,6 +198,184 @@ Status | Code | When
   ]
 }', 'javascript' %>
 
+### Submit the service inspection of an item
+
+A faulty product the customer sent back for a technical inspection waits for the merchant's report.
+The return is in state `pending_service_inspection`, and each line item waiting for a report carries
+an [`inspection`](#inspection) with its deadline and the [options](#inspection-options) it accepts.
+A return with several faulty items is inspected item by item.
+
+Send the item's `id` as `item` and one of its `inspection.options` as `option`, with what the option
+requires. Send it as `multipart/form-data`, since it carries files. The response is the updated return.
+
+<pre class="terminal">
+  POST /merchants/ecommerce/returns/:return_code/service_inspection
+</pre>
+
+Param                      | Type    | Description
+-------------------------- | ------- | -----------
+`item`                     | String  | The `id` of the line item
+`option`                   | String  | One of the item's `inspection.options`
+`service_report_file`      | File    | The service report, required when the option's `service_report_file_required` is `true`. PNG, JPEG, JPG or PDF, up to 7 MB
+`in_stock`                 | Boolean | `true` or `false`: whether you can send the customer a replacement. Required when the option's `in_stock_required` is `true`
+`comment`                  | String  | Optional, a comment to the customer, up to 400 characters
+`additional_attachments[]` | File    | Optional, up to 5 files for the customer, each PNG, JPEG, JPG or PDF, up to 7 MB. Send the param once per file, with `[]`
+
+The request answers `200` with the updated return once the result is applied. Once submitted, the
+item no longer carries an `inspection`. When no item waits for an inspection, the return leaves
+`pending_service_inspection` (e.g. to `returned`) and Skroutz sends a
+[return updated](/smart_cart/returns_webhook#return-updated) webhook.
+
+While the item's `inspection` carries a [`report_check`](#report-check), the service report is checked
+before the result is applied, and the request may answer `202` instead: see
+[When the service report is checked](#when-the-service-report-is-checked).
+
+#### Example: free repair under warranty
+
+<pre class="terminal">
+curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/returns/R-111111-1111111/service_inspection \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Authorization: Bearer your_access_token_here' \
+  -F 'item=gY6oNzr8jp' \
+  -F 'option=under_warranty_repairable' \
+  -F 'service_report_file=@service_report.pdf' \
+  -F 'comment=The charging port was replaced and the tablet tested for 2 hours.' \
+  -F 'additional_attachments[]=@photo_1.jpg' \
+  -F 'additional_attachments[]=@photo_2.jpg'
+</pre>
+
+#### Example: replacement under warranty, out of stock
+
+<pre class="terminal">
+curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/returns/R-111111-1111111/service_inspection \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Authorization: Bearer your_access_token_here' \
+  -F 'item=gY6oNzr8jp' \
+  -F 'option=under_warranty_unrepairable' \
+  -F 'in_stock=false' \
+  -F 'service_report_file=@service_report.pdf'
+</pre>
+
+#### Response
+
+<%= render_code '{
+  "return": {
+    "return_code": "R-111111-1111111",
+    "state": "returned",
+    "order_code": "48213907",
+    "created_at": "2026-08-18T09:12:03Z",
+    "return_line_items": [
+      {
+        "id": "gY6oNzr8jp",
+        "ean": "1234567890123",
+        "product_name": "Apple iPad 10.9 64GB",
+        "returning_quantity": 1,
+        "return_reason": "faulty",
+        "requested_compensation": "repair",
+        "user_comment": "The tablet does not charge."
+      }
+    ]
+  }
+}', 'javascript' %>
+
+#### When the service report is checked
+
+While the item's `inspection` carries a [`report_check`](#report-check), Skroutz checks the service
+report before it applies the result sent with it. The request stays the same, with two differences:
+
+* `service_report_file` is required on every request, whatever the option.
+* A report that has to be checked is checked after the request answers. The request answers `202`
+  with the return, its item's `report_check.state` now `checking`, and the result is applied once the
+  check ends.
+
+What the request does depends on the report sent and on the item's `report_check.state`:
+
+The report sent | Answer
+--------------- | ------
+Any report, while `checking` | `422` `inspection_state`
+The report the item already holds, when `invalid` | `422` `service_report_file`. It is not checked again
+The report the item already holds, when `valid` or `skipped` | `200`: the result is applied with it, without a new check
+Another report | `202`: the report is checked first. If the item takes no other report, `422` `service_report_file`: send the item's last report again
+
+The report the item already holds is recognised by its content, not by its file name. Reports
+uploaded from the merchant panel count too: a report checked there can be sent here with the
+result.
+
+After a `202`, the outcome reaches you with a
+[return updated](/smart_cart/returns_webhook#return-updated) webhook, or by retrieving the return:
+
+The check | What happens
+--------- | ------------
+The report is valid | The result is applied, as after a `200`
+The report is invalid | Nothing is applied. The webhook's `changes.inspection_report_check` goes from `checking` to `invalid`, and the item's `report_check` says what the report lacks. Send another report with the result
+
+Whenever the result was not applied, the webhook's `changes.inspection_report_check` carries the item's
+new `report_check.state`, and the [report check](#report-check) says what to send next.
+
+Requests that send a report are limited to 30 per 10 minutes, and answer `429` past that.
+
+##### Response when the report is checked first
+
+<pre class="terminal">
+  Status: 202 Accepted
+</pre>
+
+<%= render_code '{
+  "return": {
+    "return_code": "R-111111-1111111",
+    "state": "pending_service_inspection",
+    "order_code": "48213907",
+    "created_at": "2026-08-18T09:12:03Z",
+    "return_line_items": [
+      {
+        "id": "gY6oNzr8jp",
+        "ean": "1234567890123",
+        "product_name": "Apple iPad 10.9 64GB",
+        "returning_quantity": 1,
+        "return_reason": "faulty",
+        "requested_compensation": "repair",
+        "user_comment": "The tablet does not charge.",
+        "inspection": {
+          "expires_at": "2026-09-04T23:59:59+03:00",
+          "options": [
+            { "option": "under_warranty_repairable", "service_report_file_required": true, "in_stock_required": false },
+            { "option": "under_warranty_unrepairable", "service_report_file_required": true, "in_stock_required": true },
+            { "option": "no_warranty_repairable", "service_report_file_required": true, "in_stock_required": false },
+            { "option": "no_warranty_unrepairable", "service_report_file_required": true, "in_stock_required": false },
+            { "option": "unconfirmed", "service_report_file_required": true, "in_stock_required": false }
+          ],
+          "report_check": { "state": "checking" }
+        }
+      }
+    ]
+  }
+}', 'javascript' %>
+
+#### Inspection errors
+
+Status | Code | When
+------ | ---- | ----
+`400`  | `ParameterMissing` | `item` or `option` is missing
+`404`  | `return_error` | The return does not exist or does not belong to your shop
+`422`  | `item` | The return has no such item
+`422`  | `inspection_state` | The item is not waiting for your inspection: it has none, it was already submitted, or Skroutz handles it
+`422`  | `inspection_state` | A report of the item is being checked
+`422`  | `option` | The item does not offer this option
+`422`  | `service_report_file` | While the report is checked: no report was sent, the report sent was already found invalid, or the item takes no other report
+`422`  | The param's name, e.g. `in_stock`, `service_report_file`, `additional_attachments` | The param is missing or invalid
+`429`  |  | More than 30 requests with a report in 10 minutes
+
+<%= render_code '{
+  "errors": [
+    {
+      "code": "in_stock",
+      "messages": [
+        "must be answered for the selected service outcome"
+      ]
+    }
+  ]
+}', 'javascript' %>
+
 ### Watch a customer video
 
 The `url` and `thumbnail_url` of a line item's [`user_videos`](#user-videos) point to the
@@ -266,6 +444,21 @@ A demo return of a faulty product, waiting for the merchant's review, with its `
 Handling it with any of its `handle_options` answers with the same return, unchanged.
 
 <%= render_recording :merchants_ecommerce_returns_demo_return_review %>
+
+#### DEMO-RETURN-INSPECTION
+
+A demo return of a faulty product, waiting for the merchant's inspection. Its item, `demo-rli-1`,
+carries an `inspection`.
+
+<pre class="terminal">
+  GET /merchants/ecommerce/returns/DEMO-RETURN-INSPECTION
+  POST /merchants/ecommerce/returns/DEMO-RETURN-INSPECTION/service_inspection
+</pre>
+
+Submitting any of its item's `inspection.options` answers `200` with the same return, unchanged. The
+files are not stored, and its `inspection` has no `report_check`.
+
+<%= render_recording :merchants_ecommerce_returns_demo_return_inspection %>
 
 ## Return object attributes appendix
 
