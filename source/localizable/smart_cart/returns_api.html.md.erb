@@ -376,6 +376,196 @@ Status | Code | When
   ]
 }', 'javascript' %>
 
+### Submit the physical review of a return
+
+When the returned products are back at your shop, you report the condition each one came in: good, or
+with a problem. A problem opens a compensation request for the item, or, where the return's
+`customer_fault_outcome` is `return_to_customer` and the customer is at fault, sends the item back to
+the customer as it is. This is the same action as the **product condition** form in the merchants'
+panel, and it follows the same rules.
+
+A return that can be reviewed carries a [`physical_review`](#physical-review), and so does each of the
+line items the review covers. A return in state `pending_physical_review` holds the customer's refund
+until the review is submitted or its `deadline` passes (`refund_on_hold`). A `returned` return can be
+reviewed too, until its `deadline`. Once the review is submitted, or can no longer be, the return and
+its items carry no `physical_review`.
+
+A review is submitted once, for the whole return: send one `line_items` entry for **each** line item
+that carries a `physical_review`, each exactly once. Send it as `multipart/form-data` when it carries
+files; a review without files may be sent as JSON. The entries may be sent as an array
+(`line_items[][id]`) or keyed by index (`line_items[0][id]`). The response is the updated return.
+
+<pre class="terminal">
+  POST /merchants/ecommerce/returns/:return_code/physical_review
+</pre>
+
+Param                                       | Type    | Description
+------------------------------------------- | ------- | -----------
+`line_items[_].id`                          | String  | The `id` of the line item. Required
+`line_items[_].condition`                   | String  | `good` or `bad`. Required. A `good` item takes none of the params below
+`line_items[_].quantity`                    | Integer | For a `bad` item: how many units have the problem, from 1 up to the item's `physical_review.max_quantity`
+`line_items[_].reason`                      | String  | For a `bad` item: one of the item's `physical_review.reasons`
+`line_items[_].at_fault`                    | String  | For a `bad` item: who is at fault, `customer` or `courier`
+`line_items[_].comment`                     | String  | A description of the problem, up to 400 characters. Required when the reason's `comment_required` is `true`
+`line_items[_].product_images[]`            | File    | Photos of the product: PNG or JPEG files, up to 5, each up to 7 MB. Required when the reason's `product_images_required` is `true`
+`line_items[_].packaging_images[]`          | File    | Photos of the packaging: PNG or JPEG files, up to 5, each up to 7 MB. Required when the reason's `packaging_images_required` is `true`
+`line_items[_].technical_assessment_report` | File    | A technician's assessment of the damage: one PNG, JPEG or PDF file, up to 7 MB. Required when the reason's `technical_assessment_report_required` is `true`, unless the customer is at fault and `customer_fault_outcome` is `return_to_customer`
+`return_reason_correction[reason]`          | String  | Optional: the customer gave the wrong reason for the return. One of the return's `physical_review.return_reason_corrections`. The order is then left out of your shop's operational statistics
+`return_reason_correction[comment]`         | String  | Required with `return_reason_correction[reason]`, up to 1000 characters
+
+Files are checked by their name and by their content, so a file must really be the type its name says.
+
+The request answers `200` with the updated return once the review is submitted. When the review changes
+the return's state (`pending_physical_review` to `returned`), Skroutz also sends a
+[return updated](/smart_cart/returns_webhook#return-updated) webhook.
+
+While an item's `physical_review` carries a [`photo_check`](#photo-check), the photos of its problem are
+checked before the review is submitted, and the request may answer `202` instead: see
+[When the photos are checked](#when-the-photos-are-checked).
+
+An order that came back without reaching the customer has no return. For its products,
+[file a compensation request](/smart_cart/orders_api#file-a-compensation-request).
+
+#### Example: one item in good condition, one with a damaged box
+
+<pre class="terminal">
+curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/returns/R-111111-1111111/physical_review \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Authorization: Bearer your_access_token_here' \
+  -F 'line_items[0][id]=lJxAnkMeQ8' \
+  -F 'line_items[0][condition]=good' \
+  -F 'line_items[1][id]=G87DAPeR3B' \
+  -F 'line_items[1][condition]=bad' \
+  -F 'line_items[1][quantity]=1' \
+  -F 'line_items[1][reason]=damaged_packaging' \
+  -F 'line_items[1][at_fault]=courier' \
+  -F 'line_items[1][comment]=The box is crushed on one side.' \
+  -F 'line_items[1][product_images][]=@product_1.jpg' \
+  -F 'line_items[1][packaging_images][]=@packaging_1.jpg'
+</pre>
+
+#### Example: everything in good condition, with a corrected return reason
+
+<pre class="terminal">
+curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/returns/R-111111-1111111/physical_review \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: Bearer your_access_token_here' \
+  -d '{
+    "line_items": [{ "id": "lJxAnkMeQ8", "condition": "good" }],
+    "return_reason_correction": { "reason": "wrong_size", "comment": "The customer ordered the wrong size." }
+  }'
+</pre>
+
+#### When the photos are checked
+
+While an item's `physical_review` carries a [`photo_check`](#photo-check), Skroutz checks the photos of
+its problem before it submits the review sent with them. The request stays the same, with two
+differences:
+
+* A `bad` item whose photos are checked must carry both `product_images` and `packaging_images`,
+  whatever its reason requires.
+* Photos that have to be checked are checked after the request answers. The request answers `202`
+  with the return, the item's `photo_check.state` now `checking`, and the review is submitted once the
+  check ends. You do not send it again.
+
+What the request does depends on each checked item's `photo_check.state`:
+
+The item's `photo_check.state` | Answer
+------------------------------ | ------
+`checking` | `422` `physical_review_state`, until the check ends
+`valid` or `skipped` | `200`: the review is submitted with the photos already checked, whatever photos the request carries
+`not_started`, `reused` or `unusable` | `202`: the photos sent are checked first
+
+An item in good condition, and a problem with reason `return_not_received`, have no photos to check.
+
+After a `202`, the outcome reaches you with a
+[return updated](/smart_cart/returns_webhook#return-updated) webhook, or by retrieving the return:
+
+The check | What happens
+--------- | ------------
+The photos pass | The review is submitted as you sent it. The webhook carries `changes.state` when the return's state changes, otherwise `changes.physical_review_submission`
+The photos are refused | Nothing is submitted. The webhook's `changes.physical_review_photo_check` goes from `checking` to `reused` (the photos are the ones the customer sent with the return request) or `unusable` (the photos do not show the problem). Send the review again with other photos
+
+Requests that send photos are limited to 30 per 10 minutes, and answer `429` past that.
+
+##### Response when the photos are checked first
+
+<pre class="terminal">
+  Status: 202 Accepted
+</pre>
+
+<%= render_code '{
+  "return": {
+    "return_code": "R-111111-1111111",
+    "state": "pending_physical_review",
+    "order_code": "48213907",
+    "created_at": "2026-08-18T09:12:03Z",
+    "return_line_items": [
+      {
+        "id": "G87DAPeR3B",
+        "ean": "1234567890123",
+        "product_name": "Apple iPad 10.9 64GB",
+        "returning_quantity": 1,
+        "return_reason": "withdrawal",
+        "physical_review": {
+          "max_quantity": 1,
+          "reasons": [
+            { "reason": "damaged_product", "comment_required": true, "product_images_required": true, "packaging_images_required": true, "technical_assessment_report_required": true },
+            { "reason": "damaged_packaging", "comment_required": true, "product_images_required": true, "packaging_images_required": true, "technical_assessment_report_required": false },
+            { "reason": "partially_damaged_product", "comment_required": true, "product_images_required": true, "packaging_images_required": true, "technical_assessment_report_required": false },
+            { "reason": "wrong_product_returned", "comment_required": true, "product_images_required": true, "packaging_images_required": false, "technical_assessment_report_required": false },
+            { "reason": "return_received_incomplete", "comment_required": true, "product_images_required": true, "packaging_images_required": true, "technical_assessment_report_required": false },
+            { "reason": "return_not_received", "comment_required": false, "product_images_required": false, "packaging_images_required": false, "technical_assessment_report_required": false }
+          ],
+          "photo_check": { "state": "checking" }
+        }
+      }
+    ],
+    "physical_review": {
+      "deadline": "2026-08-27",
+      "refund_on_hold": true,
+      "conditions": ["good", "bad"],
+      "at_fault": ["customer", "courier"],
+      "customer_fault_outcome": "compensation_request",
+      "return_reason_corrections": []
+    }
+  }
+}', 'javascript' %>
+
+#### Physical review errors
+
+Every missing or invalid param of a request is answered at once, each under the param it is about, so
+you can correct them all before sending the files again.
+
+Status | Code | When
+------ | ---- | ----
+`400`  | `ParameterMissing` | `line_items` is missing
+`404`  | `return_error` | The return does not exist or does not belong to your shop
+`422`  | `line_items` | `line_items` is not exactly the line items that carry a `physical_review`, each once
+`422`  | `physical_review_state` | The return takes no review now: it was already submitted, its `deadline` passed, or the products are not back yet. The message says which
+`422`  | `physical_review_state` | The photos of an item are being checked
+`422`  | `line_items.<id>.<param>`, e.g. `line_items.G87DAPeR3B.reason` | The param of the line item with this `id` is missing or invalid
+`422`  | `return_reason_correction`, `return_reason_correction.reason`, `return_reason_correction.comment` | The order takes no correction, or its reason or comment is missing or invalid
+`429`  |  | More than 30 requests with photos in 10 minutes
+
+<%= render_code '{
+  "errors": [
+    {
+      "code": "line_items.G87DAPeR3B.quantity",
+      "messages": [
+        "Check the quantity with a problem."
+      ]
+    },
+    {
+      "code": "line_items.G87DAPeR3B.product_images",
+      "messages": [
+        "The file format should be .jpeg, .jpg, or .png"
+      ]
+    }
+  ]
+}', 'javascript' %>
+
 ### Watch a customer video
 
 The `url` and `thumbnail_url` of a line item's [`user_videos`](#user-videos) point to the
@@ -459,6 +649,55 @@ Submitting any of its item's `inspection.options` answers `200` with the same re
 files are not stored, and its `inspection` has no `report_check`.
 
 <%= render_recording :merchants_ecommerce_returns_demo_return_inspection %>
+
+#### DEMO-RETURN-PHYSICAL-REVIEW
+
+A demo return of a withdrawn product that is back at the shop, its refund waiting for the merchant's
+physical review. The return and its item, `demo-rli-1`, carry a `physical_review`.
+
+<pre class="terminal">
+  GET /merchants/ecommerce/returns/DEMO-RETURN-PHYSICAL-REVIEW
+  POST /merchants/ecommerce/returns/DEMO-RETURN-PHYSICAL-REVIEW/physical_review
+</pre>
+
+Submitting a review for its item answers `200` with the same return, unchanged. The files are not
+stored, and its item has no `photo_check`.
+
+<%= render_code '{
+  "return": {
+    "return_code": "DEMO-RETURN-PHYSICAL-REVIEW",
+    "state": "pending_physical_review",
+    "order_code": "DEMO-OPEN",
+    "created_at": "2026-01-01T10:00:00Z",
+    "return_line_items": [
+      {
+        "id": "demo-rli-1",
+        "ean": "1234567890123",
+        "product_name": "Demo return item",
+        "returning_quantity": 1,
+        "return_reason": "withdrawal",
+        "physical_review": {
+          "max_quantity": 1,
+          "reasons": [
+            { "reason": "damaged_product", "comment_required": true, "product_images_required": true, "packaging_images_required": true, "technical_assessment_report_required": false },
+            { "reason": "damaged_packaging", "comment_required": true, "product_images_required": true, "packaging_images_required": true, "technical_assessment_report_required": false }
+          ]
+        }
+      }
+    ],
+    "physical_review": {
+      "deadline": "2026-01-06",
+      "refund_on_hold": true,
+      "conditions": ["good", "bad"],
+      "at_fault": ["customer", "courier"],
+      "customer_fault_outcome": "compensation_request",
+      "return_reason_corrections": ["withdrawal", "wrong_size", "content_mistake", "damaged_courier_fault"]
+    }
+  }
+}', 'javascript' %>
+
+The example is shortened: the demo return also carries its courier and returning address, and its item
+lists every reason.
 
 ## Return object attributes appendix
 

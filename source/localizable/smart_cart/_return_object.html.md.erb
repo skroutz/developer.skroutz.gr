@@ -12,12 +12,16 @@ Name                   | Type              | Values | Description
 `return_line_items`    | Array             | | [Return line items](#return-line-items) — the products being returned
 `review`               | Object            | (Optional) | [Review](#review) — the review waiting for the merchant
 `handle_options`       | Array             | (Optional) | [Handle options](#handle-options) — the ways the merchant can handle the review
+`physical_review`      | Object            | (Optional) | [Physical review](#physical-review) — what the review of the returned products takes, while it can be submitted
 
 `courier_tracking_ids`, `courier` and `returning_address` are omitted entirely (not sent as `null`)
 when not applicable — e.g. virtual returns with no shipment.
 
 `review` and `handle_options` are present only while the return is in state `pending_merchant_review`
 and waits for the merchant's review. They are omitted once the review is handled or its deadline passes.
+
+`physical_review` is present only while the returned products are back at the shop and their
+[physical review](/smart_cart/returns_api#submit-the-physical-review-of-a-return) can be submitted.
 
 #### Return states
 
@@ -27,7 +31,7 @@ State                     | Description
 ------------------------- | ---------------------------------------------------------------------------------------
 `pending_merchant_review` | The customer submitted a return request and the merchant needs to review it.
 `returning`               | The package is in transit back to the merchant.
-`pending_physical_review` | The package arrived at the merchant and must perform physical inspection.
+`pending_physical_review` | The package arrived at the merchant, and the customer's refund waits for the merchant's [physical review](#physical-review).
 `returned`                | The package was delivered back to the merchant.
 `rejected`                | The return was rejected.
 `expired`                 | The merchant never responded to the return request within the deadline.
@@ -65,6 +69,7 @@ Name                 | Type             | Values | Description
 `user_photos`        | Array of Strings | (Optional) | Full URLs of photos uploaded by the customer as evidence
 `user_videos`        | Array            | (Optional) | [Videos](#user-videos) uploaded by the customer as evidence
 `inspection`         | Object           | (Optional) | [Inspection](#inspection) — the technical inspection of this item, waiting for the merchant's report
+`physical_review`    | Object           | (Optional) | [Item physical review](#item-physical-review) — what the physical review takes for this item
 
 #### User videos
 
@@ -124,6 +129,72 @@ State         | Description
 `invalid`     | The item's report was found invalid; `reason` and `missing_fields` say why. Send another report.
 `valid`       | The item's report passed the check. Send it again with the result to submit it.
 `skipped`     | The item's report is not checked. Send the item's last report again with the result to submit it.
+
+#### Physical review
+
+Present on the return while the review of the returned products can be
+[submitted](/smart_cart/returns_api#submit-the-physical-review-of-a-return): the products are back at
+the shop, no review was submitted yet, and its deadline has not passed.
+
+Name                        | Type             | Values | Description
+--------------------------- | ---------------- | ------ | -----------
+`deadline`                  | Date String in format `YYYY-MM-DD` | | The last day the review can be submitted. While `refund_on_hold` is `true`, the day the review expires and the refund goes ahead. Otherwise the last day of the order's [compensation window](/smart_cart/orders_api#file-a-compensation-request)
+`refund_on_hold`            | Boolean          | | Whether the customer's refund waits for this review. It is released when the review is submitted or the `deadline` passes
+`conditions`                | Array of Strings | `good`, `bad` | The values a line item's `condition` takes
+`at_fault`                  | Array of Strings | `customer`, `courier` | The values a line item's `at_fault` takes
+`customer_fault_outcome`    | String           | `compensation_request`, `return_to_customer` | What follows a problem the customer is at fault for: a compensation request opens, or the item is sent back to the customer as it is, which needs no technician's report
+`return_reason_corrections` | Array of Strings | `withdrawal`, `wrong_size`, `content_mistake`, `damaged_courier_fault` | The reasons `return_reason_correction[reason]` takes. Empty when the order takes no correction
+
+#### Item physical review
+
+Present on each line item the review covers. Send one `line_items` entry for each of them.
+
+Name           | Type    | Description
+-------------- | ------- | -----------
+`max_quantity` | Integer | The most units of this item that can be reported with a problem
+`reasons`      | Array   | The [reasons](#physical-review-reasons) a problem of this item can have
+`photo_check`  | Object  | (Optional) The [photo check](#photo-check): where the check of the photos of this item's problem stands. Present while Skroutz checks the photos of this item
+
+#### Physical review reasons
+
+Name                                   | Type    | Description
+-------------------------------------- | ------- | -----------
+`reason`                               | String  | The value to send as `reason`
+`comment_required`                     | Boolean | Whether `comment` is required with this reason
+`product_images_required`              | Boolean | Whether `product_images` are required with this reason
+`packaging_images_required`            | Boolean | Whether `packaging_images` are required with this reason
+`technical_assessment_report_required` | Boolean | Whether `technical_assessment_report` is required with this reason, for this item
+
+Reason | Meaning
+------ | -------
+`damaged_product` | The product came back damaged
+`damaged_packaging` | The packaging came back damaged
+`partially_damaged_product` | Part of the product came back damaged
+`wrong_product_returned` | Another product came back
+`return_received_incomplete` | The return came back with parts missing
+`return_not_received` | The product did not come back
+`delayed_return` | Only for a return that is late
+`item_sent`, `product_misclassified` | Only for an item the customer reported missing from the delivery
+
+#### Photo check
+
+Skroutz may check the photos of a problem before it submits the review sent with them: that they show
+the problem, and that they are not the photos the customer sent with the return request. While it does,
+the item's `physical_review` carries `photo_check`, and
+[submitting the review](/smart_cart/returns_api#when-the-photos-are-checked) works as described there.
+
+Name    | Type   | Values | Description
+------- | ------ | ------ | -----------
+`state` | String | `not_started`, `checking`, `valid`, `reused`, `unusable`, `skipped` | Where the check stands
+
+State         | Description
+------------- | -----------
+`not_started` | No photos of this item have been checked yet. Send them with the review.
+`checking`    | Photos of this item are being checked. A review is refused until the check ends.
+`valid`       | The item's photos passed the check. The review is submitted with them.
+`reused`      | The photos are the ones the customer sent with the return request. Send photos you took.
+`unusable`    | The photos do not show the problem. Send other photos.
+`skipped`     | The item's photos are not checked. The review is submitted with the photos already sent.
 
 #### Review
 
