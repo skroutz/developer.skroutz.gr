@@ -737,7 +737,8 @@ panel. You can follow it by [retrieving the order](#compensation-requests-on-the
 * Fulfilled by Merchant (FBM) orders generally cannot be compensated; the `not_eligible` message says so
   when this applies.
 * The order has not already been fully compensated, and has no service request under inspection.
-* No condition review of the returned products is pending. Submit it from the merchants' panel first.
+* No condition review of the returned products is pending. Submit it first, from the merchants' panel or
+  with the [Returns API](/smart_cart/returns_api#submit-the-physical-review-of-a-return).
 * The shop is under its compensation cap, as shown in the merchants' panel.
 
 #### Request body
