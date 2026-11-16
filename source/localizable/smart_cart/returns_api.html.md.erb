@@ -198,6 +198,54 @@ Status | Code | When
   ]
 }', 'javascript' %>
 
+### Confirm that a return arrived
+
+Once a return's products are back at your shop, confirm that they arrived, as **Set as returned to
+shop** does in the merchant's panel. The return is in state `returning`. The request takes no body,
+and the response is the updated return.
+
+<pre class="terminal">
+  POST /merchants/ecommerce/returns/:return_code/set_delivered
+</pre>
+
+When the return travels with a courier Skroutz booked, you can confirm it once the courier has picked
+it up from the customer, and confirming it marks its shipment delivered. A return of an order you
+ship without Skroutz tracking can be confirmed as soon as it is on its way back.
+
+The return then leaves `returning`: to `returned`, or to `pending_physical_review` or
+`pending_service_inspection` when its products wait for your review or inspection. Skroutz sends a
+[return updated](/smart_cart/returns_webhook#return-updated) webhook.
+
+#### Example
+
+<pre class="terminal">
+curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/returns/R-111111-1111111/set_delivered \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Authorization: Bearer your_access_token_here'
+</pre>
+
+#### Confirmation errors
+
+Status | Code | When
+------ | ---- | ----
+`404`  | `return_error` | The return does not exist or does not belong to your shop
+`422`  | `return_state` | `The return is not on its way back to you`: it is still waiting for your review, it was resolved without sending anything back, or it is a [demo return](#test-requests-sandbox)
+`422`  | `return_state` | `The return has not been picked up from the customer yet`
+`422`  | `return_state` | `The return is already delivered`
+`422`  | `return_state` | `The return cannot be marked as delivered`: for any other reason, e.g. it goes to a Fulfilled by Skroutz warehouse
+`422`  | `return_error` | `The return could not be marked as delivered`: an unexpected error. Try again later
+
+<%= render_code '{
+  "errors": [
+    {
+      "code": "return_state",
+      "messages": [
+        "The return has not been picked up from the customer yet"
+      ]
+    }
+  ]
+}', 'javascript' %>
+
 ### Submit the service inspection of an item
 
 A faulty product the customer sent back for a technical inspection waits for the merchant's report.
