@@ -91,6 +91,13 @@ event notification is sent for the following cases:
 * **From 5/7/2021 onwards**: When an order's **state changes** to one of the following states `[:accepted, :rejected, :expired, :dispatched, :cancelled, :partially_returned, :returned]` (either by the user, our support team, or the merchant)
 * When an order is **rescheduled** (changing the scheduled `pickup_window`).
 * When an order is **marked as ready for dispatch**, or that mark is **undone** (see [Set as Ready integration flow](/smart_cart/orders_api#set-as-ready-integration-flow)).
+* When the [physical review](/smart_cart/orders_api#submit-the-physical-review-of-a-cancelled-order) of a cancelled order **can be submitted** and no other update carried it (see below), or when a review whose photos were **checked** first was submitted or refused.
+
+While a cancelled order's physical review can be submitted, the payload's `order` carries the
+[`physical_review`](#physical-review) to
+[submit](/smart_cart/orders_api#submit-the-physical-review-of-a-cancelled-order), and each line
+item the review covers its own. The update for the order's cancellation usually carries it. When no
+update has, one with `changes.physical_review` announces the review, once.
 
 #### Request payload
 
@@ -117,9 +124,16 @@ Name           | Type   | Value | Description
 `number_of_parcels` | Integer | `{ "old": null, "new": 2 }` | The order's shipment number of parcels (optional). It is sent when the order is accepted.
 `pickup_address` | String | `{ "old": null, "new": "Πανεπιστημίου 2, Τ.Κ. 12345, Αθήνα, Αττική" }` | The order's pickup address (optional).
 `is_ready_for_dispatch` | Boolean | `{ "old": false, "new": true }` | Whether the order is marked as ready for dispatch (optional). It is sent when the order is marked as ready for dispatch (`false` → `true`) or when that mark is undone (`true` → `false`).
+`physical_review` | Object | `{ "old": null, "new": "open" }` | The order's [physical review](/smart_cart/orders_api#submit-the-physical-review-of-a-cancelled-order) can be submitted, and no earlier update carried its `physical_review` (optional). Sent once
+`physical_review_submission` | Object | `{ "old": "checking", "new": "submitted" }` | A physical review whose photos were [checked first](/smart_cart/returns_api#when-the-photos-are-checked) was submitted (optional). The order then carries no `physical_review`
+`physical_review_photo_check` | Object | `{ "item": "k9Qp2xR4mN", "old": "checking", "new": "reused" }` | The [photo check](/smart_cart/returns_api#photo-check) of an item ended without the review being submitted (optional). `item` is the line item's `id`; `old` and `new` are `photo_check.state` values. Send the review again with other photos
 
 > The order object included in webhook payload is the sames as the one when
-> retrieving a single order via the [orders API](/smart_cart/orders_api).
+> retrieving a single order via the [orders API](/smart_cart/orders_api), with its `physical_review`,
+> which the API only includes when asked for with `physical_review=1`.
+
+> The `event_time` of an update carrying `physical_review`, `physical_review_submission` or
+> `physical_review_photo_check` is the time of the event.
 
 > Field behavior notes:
 > - `invoice_document` is always present with one of: `receipt`, `invoice`, `invoice_39a`, `invoice_vies`

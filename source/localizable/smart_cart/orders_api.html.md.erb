@@ -67,6 +67,7 @@ relocate request, and use a value from that fresh response.
   GET /merchants/ecommerce/orders/:code
   GET /merchants/ecommerce/orders/:code?action_options=1
   GET /merchants/ecommerce/orders/:code?compensation_requests=1
+  GET /merchants/ecommerce/orders/:code?physical_review=1
 </pre>
 
 <%= render_recording :merchants_ecommerce_orders_show %>
@@ -124,6 +125,55 @@ the order has none. Without the parameter, and in order webhooks, the attribute 
 
 Only the relevant attributes are shown above. No webhook is sent when a request is decided: to learn
 the decision, retrieve the order with `compensation_requests=1`.
+
+#### Physical review of a cancelled order
+
+Pass `physical_review=1` as a query parameter to include the order's `physical_review`, while its
+[physical review](#submit-the-physical-review-of-a-cancelled-order) can be submitted. The order
+carries [what the review takes](#physical-review), and each line item the review covers carries
+[its own part](#line-item-physical-review). They are the same blocks a return carries for its review.
+Without the parameter the attribute is omitted. [Order webhooks](/smart_cart/orders_webhook) always
+carry it.
+
+<pre class="terminal">
+  GET /merchants/ecommerce/orders/:code?physical_review=1
+</pre>
+
+<%= render_code '{
+  "order": {
+    "code": "191128-1234567",
+    "state": "cancelled",
+    "line_items": [
+      {
+        "id": "k9Qp2xR4mN",
+        "product_name": "Apple iPad 10.9 64GB",
+        "quantity": 1,
+        "physical_review": {
+          "max_quantity": 1,
+          "reasons": [
+            { "reason": "damaged_product", "comment_required": true, "product_images_required": true, "packaging_images_required": true, "technical_assessment_report_required": false },
+            { "reason": "damaged_packaging", "comment_required": true, "product_images_required": true, "packaging_images_required": true, "technical_assessment_report_required": false },
+            { "reason": "wrong_product_returned", "comment_required": true, "product_images_required": true, "packaging_images_required": false, "technical_assessment_report_required": false },
+            { "reason": "partially_damaged_product", "comment_required": true, "product_images_required": true, "packaging_images_required": true, "technical_assessment_report_required": false },
+            { "reason": "return_not_received", "comment_required": false, "product_images_required": false, "packaging_images_required": false, "technical_assessment_report_required": false },
+            { "reason": "return_received_incomplete", "comment_required": true, "product_images_required": true, "packaging_images_required": true, "technical_assessment_report_required": false }
+          ],
+          "photo_check": { "state": "not_started" }
+        }
+      }
+    ],
+    "physical_review": {
+      "deadline": "2026-11-25",
+      "refund_on_hold": false,
+      "conditions": ["good", "bad"],
+      "at_fault": ["customer", "courier"],
+      "customer_fault_outcome": "compensation_request",
+      "return_reason_corrections": []
+    }
+  }
+}', 'javascript' %>
+
+Only the relevant attributes are shown above.
 
 ### Accept a single order
 
@@ -893,6 +943,104 @@ refused with a `429 Too Many Requests` for 30 minutes. One request can carry sev
 
 Compensation requests for the [demo orders](#test-requests-sandbox) answer `200 { "success": true }`
 without filing anything, and without a `compensation_request_id`.
+
+### Submit the physical review of a cancelled order
+
+When the products of a cancelled order are back at your shop, you report the condition each one came
+back in, good or with a problem, as you do for a
+[return's products](/smart_cart/returns_api#submit-the-physical-review-of-a-return). This is the same
+action as the **product condition** form of the order in the merchants' panel.
+
+<pre class="terminal">
+  POST /merchants/ecommerce/orders/:code/physical_review
+</pre>
+
+**When an order can be reviewed:** while it carries a
+[`physical_review`](#physical-review-of-a-cancelled-order), and so does each line item the review
+covers. Order webhooks always carry it; [retrieve the order](#retrieve-a-single-order) with
+`physical_review=1` to get it. Once the review is submitted, or can no longer be, the order and its
+items carry no `physical_review`. The products of an order that came back with a return are reviewed
+on the return, with the [Returns API](/smart_cart/returns_api#submit-the-physical-review-of-a-return).
+
+The request is the same as a return's: the same `line_items` entries, each with the `id` of one of the
+order's `line_items`, one for **each** line item that carries a `physical_review`, and the same
+optional `return_reason_correction`. See
+[the params of a return's review](/smart_cart/returns_api#submit-the-physical-review-of-a-return). Send
+it as `multipart/form-data` when it carries files; a review without files may be sent as JSON.
+
+The request answers `200` with the updated order once the review is submitted. The order's state does
+not change. While an item's `physical_review` carries a
+[`photo_check`](/smart_cart/returns_api#photo-check), the photos of its problem are checked first and
+the request may answer `202` instead, with the item's `photo_check.state` now `checking`, as
+[a return's review](/smart_cart/returns_api#when-the-photos-are-checked) does. The outcome then reaches
+you with an [order updated](/smart_cart/orders_webhook#order-updates) webhook, whose `changes` carry
+`physical_review_submission` once the review is submitted, or `physical_review_photo_check` when the
+photos were refused and nothing was submitted. Send the review again with other photos.
+
+Requests that send photos are limited to 30 per 10 minutes, and answer `429` past that.
+
+#### Example: everything in good condition
+
+<pre class="terminal">
+curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/orders/191128-1234567/physical_review \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: Bearer your_access_token_here' \
+  -d '{ "line_items": [{ "id": "k9Qp2xR4mN", "condition": "good" }] }'
+</pre>
+
+#### Example: a damaged box
+
+<pre class="terminal">
+curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/orders/191128-1234567/physical_review \
+  -H 'Accept: application/vnd.<%= settings.site_name %>+json; version=3.0' \
+  -H 'Authorization: Bearer your_access_token_here' \
+  -F 'line_items[0][id]=k9Qp2xR4mN' \
+  -F 'line_items[0][condition]=bad' \
+  -F 'line_items[0][quantity]=1' \
+  -F 'line_items[0][reason]=damaged_packaging' \
+  -F 'line_items[0][at_fault]=courier' \
+  -F 'line_items[0][comment]=The box is crushed on one side.' \
+  -F 'line_items[0][product_images][]=@product_1.jpg' \
+  -F 'line_items[0][packaging_images][]=@packaging_1.jpg'
+</pre>
+
+#### Physical review errors
+
+As for a return, every missing or invalid param of a request is answered at once, each under the param
+it is about.
+
+Status | Code | When
+------ | ---- | ----
+`400`  | `ParameterMissing` | `line_items` is missing
+`404`  | `order_error` | The order does not exist, does not belong to your shop, or is a [demo order](#test-requests-sandbox)
+`422`  | `line_items` | `line_items` is not exactly the line items that carry a `physical_review`, each once
+`422`  | `physical_review_state` | The order takes no physical review here, e.g. it was delivered
+`422`  | `physical_review_state` | The order's products came back with a return, reviewed on the return: `The products of this order came back with a return: review them with POST /returns/:return_code/physical_review`
+`422`  | `physical_review_state` | `The physical review of this order has already been submitted`
+`422`  | `physical_review_state` | `The photos of an item of this order are being checked`
+`422`  | `physical_review_state` | The order takes no review now for another reason, e.g. its compensation window has passed. The message says why
+`422`  | `line_items.<id>.<param>`, e.g. `line_items.k9Qp2xR4mN.reason` | The param of the line item with this `id` is missing or invalid
+`422`  | `return_reason_correction`, `return_reason_correction.reason`, `return_reason_correction.comment` | The order takes no correction, or its reason or comment is missing or invalid
+`422`  | `order_error` | `The physical review could not be submitted`: an unexpected error, and nothing was submitted. Try again later
+`429`  |  | More than 30 requests with photos in 10 minutes
+
+<%= render_code '{
+  "errors": [
+    {
+      "code": "line_items.k9Qp2xR4mN.at_fault",
+      "messages": [
+        "Choose who is at fault."
+      ]
+    },
+    {
+      "code": "return_reason_correction",
+      "messages": [
+        "The order does not negatively impact your operational statistics."
+      ]
+    }
+  ]
+}', 'javascript' %>
 
 
 ## Error handling
