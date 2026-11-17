@@ -40,6 +40,7 @@
 | `replaced`               | String                                               |                                                                                                                                                              | [Replaced suborder code](#replaced) (optional, omitted when this order is not a replacement)                                                                                                                                                                                     |
 | `returns`                | Array                                                |                                                                                                                                                              | [Return tracking info](#returns) (optional, omitted when no returns exist)                                                                                                                                                                                                       |
 | `compensation_requests`  | Array                                                |                                                                                                                                                              | [Compensation requests](#compensation-requests) (only included when the order is fetched with `?compensation_requests=1`)                                                                                                                                                                                      |
+| `physical_review`        | Object                                               |                                                                                                                                                              | [Physical review](#physical-review) — what the order's physical review takes (only included while it can be submitted, in webhooks or when the order is fetched with `?physical_review=1`) |
 | `custom`                 | String                                               | `[GIFT-WRAP]`, `[RETURN-FROM-SERVICE]`, `[RETURN-AS-IS]`                                                                                                     | Additional order info, `GIFT-WRAP` when gift wrap is requested, `RETURN-FROM-SERVICE` order is created to return items after service check is completed, `RETURN-AS-IS` order is created to return back to the user the same items you received as return, DO NOT send new items |
 | `payment_method`         | String                                               | `card`, `cash_on_delivery`, `loan`, `bank_transfer`, `iris`, `wallet`, `edenred`, `revolut`                                                                  | Payment method selected by the customer                                                                                                                                                                                                                                          |
 | `paid_by_user `          | Boolean                                              |                                                                                                                                                              | Whether the payment has been completed successfully by the customer before assigning the order to the shop. (`false` for Cash on Delivery orders)                                                                                                                                |
@@ -203,6 +204,29 @@ Name                                                    | Type    | Description
 `compensation_requests[_].line_items[_].compensation_amount` | Float | The amount approved for the whole quantity, in euros. Present only once approved
 `compensation_requests[_].line_items[_].rejection_reason`    | String | Why the line item was rejected. Present only once rejected
 
+#### Physical review
+
+Present while the order's
+[physical review](/smart_cart/orders_api#submit-the-physical-review-of-a-cancelled-order) can be
+submitted. Order webhooks always carry it; the API only when the order is fetched with
+`?physical_review=1`. It has the attributes of a [return's physical review](/smart_cart/returns_api#physical-review):
+
+Name                        | Type             | Values | Description
+--------------------------- | ---------------- | ------ | -----------
+`deadline`                  | Date String in format `YYYY-MM-DD` | | The last day the review can be submitted: the last day of the order's [compensation window](/smart_cart/orders_api#file-a-compensation-request)
+`refund_on_hold`            | Boolean          | | Always `false`: no refund waits for the review of an order
+`conditions`                | Array of Strings | `good`, `bad` | The values a line item's `condition` takes
+`at_fault`                  | Array of Strings | `customer`, `courier` | The values a line item's `at_fault` takes
+`customer_fault_outcome`    | String           | `compensation_request`, `return_to_customer` | What follows a problem the customer is at fault for, as for a return
+`return_reason_corrections` | Array of Strings | | The reasons `return_reason_correction[reason]` takes. Empty when the order takes no correction
+
+#### Line item physical review
+
+Present on each line item the review covers. Send one `line_items` entry for each of them. It has the
+attributes of a [return line item's](/smart_cart/returns_api#item-physical-review): `max_quantity`,
+the [`reasons`](/smart_cart/returns_api#physical-review-reasons), and, while Skroutz checks the photos
+of this item's problem, the [`photo_check`](/smart_cart/returns_api#photo-check).
+
 #### Invoice document
 
 The `invoice_document` field indicates the type of fiscal document associated with the order.
@@ -247,6 +271,7 @@ Value            | Description
 | `line_items[_].tags`                        | Array   | A list of tags that characterize the line item (optional). Supported tags: `["plus_deal", "coupon_deal", "two_plus_deal", "coupons", "price_optimizer", "cc_installments"]`                      |
 | `line_items[_].readjusted_vat`              | Boolean | Whether the VAT has been readjusted for this line item (only applies to international orders)                                                                                         |
 | `line_items[_].vat_ratio`                   | Double  | The VAT ratio for this line item                                                                                                                                                      |
+| `line_items[_].physical_review`             | Object  | [Line item physical review](#line-item-physical-review) (optional): what the physical review takes for this item, with the order's `physical_review` |
 
 #### Line item size
 
