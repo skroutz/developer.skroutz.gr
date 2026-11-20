@@ -103,6 +103,12 @@ Option | Meaning
 `no_warranty_unrepairable` | Out of warranty: the product cannot be repaired, and a paid repair is not available
 `unconfirmed` | The product has no defect
 
+The options that favour the customer, a replacement or a refund under warranty
+(`under_warranty_unrepairable`, `under_warranty_refund`), need no service report: their
+`service_report_file_required` is `false`. You may still send one: while the
+[report check](#report-check) is on, it is checked first. The other options require it. Always read
+`service_report_file_required` rather than relying on the option's name.
+
 #### Report check
 
 Skroutz may check the service report before it applies the result sent with it: that the file is a
@@ -121,9 +127,9 @@ State         | Description
 ------------- | -----------
 `not_started` | No report of this item has been checked yet.
 `checking`    | A report of this item is being checked. A submission is refused until the check ends.
-`invalid`     | The item's report was found invalid; `reason` and `missing_fields` say why. Send another report.
+`invalid`     | The item's last report was found invalid; `reason` and `missing_fields` say why. Send another report. A report sent with an option whose `service_report_file_required` is `false` is deleted once found invalid, and the state stays `invalid`: send the result again without a report, or with another one.
 `valid`       | The item's report passed the check. Send it again with the result to submit it.
-`skipped`     | The item's report is not checked. Send the item's last report again with the result to submit it.
+`skipped`     | The item's report is not checked. Send the item's last report again with the result to submit it. If its last report was deleted, sent with an option whose `service_report_file_required` is `false`, send the result again without a report.
 
 #### Review
 

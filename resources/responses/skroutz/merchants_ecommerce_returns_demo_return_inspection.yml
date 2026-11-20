@@ -65,7 +65,7 @@
             },
             {
               "option": "under_warranty_unrepairable",
-              "service_report_file_required": true,
+              "service_report_file_required": false,
               "in_stock_required": true
             },
             {
