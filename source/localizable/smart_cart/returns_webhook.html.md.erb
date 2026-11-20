@@ -112,6 +112,13 @@ carries the updated return. An inspection whose report is
 result is applied: a state change tells you it was applied, and `changes.inspection_report_check`
 that it was not.
 
+While the products of a return can be reviewed, its payload carries the
+[`physical_review`](#physical-review) to
+[submit](/smart_cart/returns_api#submit-the-physical-review-of-a-return). A review whose photos are
+[checked first](/smart_cart/returns_api#when-the-photos-are-checked) is answered before it is
+submitted: a state change or `changes.physical_review_submission` tells you it was submitted, and
+`changes.physical_review_photo_check` that it was not.
+
 > <i class="fa fa-exclamation-triangle"></i>
 > A **return updated** request is only sent once a **return created** request has already been
 > delivered for that same return and webhook URL. In practice, if you enable the return webhook
@@ -141,6 +148,9 @@ Field                  | Shape          | Notes
 `courier_tracking_ids` | `{ old, new }` | Only included when a `new` value is actually present
 `review_expires_at`    | `{ old, new }` | The review's deadline, as in [`review.expires_at`](#review)
 `inspection_report_check` | `{ item, old, new }` | The [report check](#report-check) of an item's inspection ended without the result being applied. `item` is the line item's `id`; `old` and `new` are `report_check.state` values
+`inspection_submission` | `{ item, old, new }` | An item's inspection whose report was checked first was applied without the return's state changing, e.g. while other items still wait. `item` is the line item's `id`; `old` is `checking` and `new` is `submitted`
+`physical_review_submission` | `{ old, new }` | A physical review whose photos were checked first was submitted without the return's state changing. `old` is `checking` and `new` is `submitted`
+`physical_review_photo_check` | `{ item, old, new }` | The [photo check](#photo-check) of an item ended without the review being submitted. `item` is the line item's `id`; `old` and `new` are `photo_check.state` values
 
 ## Payload Examples
 
