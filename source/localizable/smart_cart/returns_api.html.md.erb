@@ -278,7 +278,10 @@ While the item's `inspection` carries a [`report_check`](#report-check), the ser
 before the result is applied, and the request may answer `202` instead: see
 [When the service report is checked](#when-the-service-report-is-checked).
 
-#### Example: free repair under warranty
+#### Example: free repair under warranty, with a service report
+
+A repair needs a service report (its `service_report_file_required` is `true`), so this request
+sends one.
 
 <pre class="terminal">
 curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/returns/R-111111-1111111/service_inspection \
@@ -292,7 +295,10 @@ curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/returns/R-11
   -F 'additional_attachments[]=@photo_2.jpg'
 </pre>
 
-#### Example: replacement under warranty, out of stock
+#### Example: replacement under warranty, out of stock, without a service report
+
+A replacement needs no service report (its `service_report_file_required` is `false`), so this
+request sends none.
 
 <pre class="terminal">
 curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/returns/R-111111-1111111/service_inspection \
@@ -300,8 +306,7 @@ curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/returns/R-11
   -H 'Authorization: Bearer your_access_token_here' \
   -F 'item=gY6oNzr8jp' \
   -F 'option=under_warranty_unrepairable' \
-  -F 'in_stock=false' \
-  -F 'service_report_file=@service_report.pdf'
+  -F 'in_stock=false'
 </pre>
 
 #### Response
@@ -331,7 +336,10 @@ curl -X POST https://<%= settings.api_domain %>/merchants/ecommerce/returns/R-11
 While the item's `inspection` carries a [`report_check`](#report-check), Skroutz checks the service
 report before it applies the result sent with it. The request stays the same, with two differences:
 
-* `service_report_file` is required on every request, whatever the option.
+* `service_report_file` is required on every request, whatever the option, with one exception: an
+  option whose `service_report_file_required` is `false` can be sent without a report while the item
+  holds none. Once the item holds a report, sent here or uploaded from the merchant panel, the
+  result goes with that report.
 * A report that has to be checked is checked after the request answers. The request answers `202`
   with the return, its item's `report_check.state` now `checking`, and the result is applied once the
   check ends.
@@ -340,6 +348,7 @@ What the request does depends on the report sent and on the item's `report_check
 
 The report sent | Answer
 --------------- | ------
+No report, with an option whose `service_report_file_required` is `false`, while the item holds no report | `200`: the result is applied
 Any report, while `checking` | `422` `inspection_state`
 The report the item already holds, when `invalid` | `422` `service_report_file`. It is not checked again
 The report the item already holds, when `valid` or `skipped` | `200`: the result is applied with it, without a new check
@@ -356,6 +365,7 @@ The check | What happens
 --------- | ------------
 The report is valid | The result is applied, as after a `200`
 The report is invalid | Nothing is applied. The webhook's `changes.inspection_report_check` goes from `checking` to `invalid`, and the item's `report_check` says what the report lacks. Send another report with the result
+The report is invalid, sent with an option whose `service_report_file_required` is `false` | Nothing is applied, and the report is deleted with the attachments sent with it, so it never reaches the customer. The webhook's `changes.inspection_report_check` goes from `checking` to the item's new `report_check.state`, and the [report check](#report-check) says what to send next. Send the result again without a report, or with another one
 
 Whenever the result was not applied, the webhook's `changes.inspection_report_check` carries the item's
 new `report_check.state`, and the [report check](#report-check) says what to send next.
@@ -387,7 +397,7 @@ Requests that send a report are limited to 30 per 10 minutes, and answer `429` p
           "expires_at": "2026-09-04T23:59:59+03:00",
           "options": [
             { "option": "under_warranty_repairable", "service_report_file_required": true, "in_stock_required": false },
-            { "option": "under_warranty_unrepairable", "service_report_file_required": true, "in_stock_required": true },
+            { "option": "under_warranty_unrepairable", "service_report_file_required": false, "in_stock_required": true },
             { "option": "no_warranty_repairable", "service_report_file_required": true, "in_stock_required": false },
             { "option": "no_warranty_unrepairable", "service_report_file_required": true, "in_stock_required": false },
             { "option": "unconfirmed", "service_report_file_required": true, "in_stock_required": false }
@@ -409,7 +419,7 @@ Status | Code | When
 `422`  | `inspection_state` | The item is not waiting for your inspection: it has none, it was already submitted, or Skroutz handles it
 `422`  | `inspection_state` | A report of the item is being checked
 `422`  | `option` | The item does not offer this option
-`422`  | `service_report_file` | While the report is checked: no report was sent, the report sent was already found invalid, or the item takes no other report
+`422`  | `service_report_file` | While the report is checked: no report was sent, with an option that requires one or while the item holds a report; the report sent was already found invalid; or the item takes no other report
 `422`  | The param's name, e.g. `in_stock`, `service_report_file`, `additional_attachments` | The param is missing or invalid
 `429`  |  | More than 30 requests with a report in 10 minutes
 
